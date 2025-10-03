@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-02-001",
+      "question": "```javascript\nlet a = 5;\nlet b = a;\nb = 10;\nconsole.log(a);\n```",
+      "output": "```\n5\n```",
+      "explanation": "**Primitives are copied by value**. When `b = a`, a new copy of the value is created. Changing `b` doesn't affect `a`.\n\n**Visual representation:**\n```\na → 5 (original value)\nb → 5 (copy of value)\nb → 10 (reassigned, a unchanged)\n```"
+    },
+    {
+      "id": "output-001-02-002",
+      "question": "```javascript\nlet obj1 = { x: 1 };\nlet obj2 = obj1;\nobj2.x = 2;\nconsole.log(obj1.x);\n```",
+      "output": "```\n2\n```",
+      "explanation": "**Objects are copied by reference**. `obj2 = obj1` makes both variables reference the **same object** in memory. Modifying through `obj2` affects `obj1`.\n\n**Visual representation:**\n```\nobj1 → { x: 1 } ← obj2 (same object)\nobj2.x = 2\nobj1 → { x: 2 } ← obj2 (still same object)\n```"
+    },
+    {
+      "id": "output-001-02-003",
+      "question": "```javascript\nconsole.log(typeof 'hello');\nconsole.log(typeof 42);\nconsole.log(typeof true);\nconsole.log(typeof undefined);\n```",
+      "output": "```\nstring\nnumber\nboolean\nundefined\n```",
+      "explanation": "The `typeof` operator returns a **string** indicating the type of the operand. These are four of the primitive types in JavaScript:\n\n- `'hello'` → `'string'`\n- `42` → `'number'`\n- `true` → `'boolean'`\n- `undefined` → `'undefined'`"
+    },
+    {
+      "id": "output-001-02-004",
+      "question": "```javascript\nconsole.log(typeof null);\nconsole.log(typeof {});\nconsole.log(typeof []);\n```",
+      "output": "```\nobject\nobject\nobject\n```",
+      "explanation": "- `typeof null` returns `'object'` (**historical bug**)\n- Both objects `{}` and arrays `[]` are of type `'object'`\n- Arrays are a **special kind of object**\n\n⚠️ **Important:** Despite `typeof null === 'object'`, null is a primitive type!"
+    },
+    {
+      "id": "output-001-02-005",
+      "question": "```javascript\nlet str = 'hello';\nstr[0] = 'H';\nconsole.log(str);\n```",
+      "output": "```\nhello\n```",
+      "explanation": "Strings are **primitive and immutable**. Attempting to modify a character doesn't change the string (fails silently in non-strict mode).\n\n```javascript\n// In strict mode:\n'use strict';\nstr[0] = 'H'; // TypeError: Cannot assign to read only property\n```"
+    },
+    {
+      "id": "output-001-02-006",
+      "question": "```javascript\nlet arr = [1, 2, 3];\narr.push(4);\nconsole.log(arr);\n```",
+      "output": "```\n[1, 2, 3, 4]\n```",
+      "explanation": "Arrays are **objects (reference types)** and are **mutable**. The `push` method modifies the array in place by adding an element.\n\n**Key difference:** Unlike primitive strings, arrays can be modified directly."
+    },
+    {
+      "id": "output-001-02-007",
+      "question": "```javascript\nlet x = 5;\nfunction change(val) {\n  val = 10;\n}\nchange(x);\nconsole.log(x);\n```",
+      "output": "```\n5\n```",
+      "explanation": "**Primitives are passed by value**. The function receives a **copy** of `x`'s value. Changing `val` inside the function doesn't affect the original `x`.\n\n```javascript\n// What happens:\nchange(x)     // val = 5 (copy)\nval = 10      // only local copy changes\nconsole.log(x) // original unchanged\n```"
+    },
+    {
+      "id": "output-001-02-008",
+      "question": "```javascript\nlet obj = { a: 1 };\nfunction change(o) {\n  o.a = 2;\n}\nchange(obj);\nconsole.log(obj.a);\n```",
+      "output": "```\n2\n```",
+      "explanation": "Objects are **passed by reference** (technically, the reference is passed by value). Modifying properties through the parameter affects the **original object**.\n\n```javascript\n// Both 'obj' and 'o' reference the same object:\nobj → { a: 1 } ← o\no.a = 2\nobj → { a: 2 } ← o (same object modified)\n```"
+    },
+    {
+      "id": "output-001-02-009",
+      "question": "```javascript\nconsole.log(typeof function(){});\nconsole.log(typeof Symbol());\nconsole.log(typeof 10n);\n```",
+      "output": "```\nfunction\nsymbol\nbigint\n```",
+      "explanation": "Special cases in JavaScript's type system:\n\n- Functions have their own typeof result: `'function'`\n- Symbol primitive: `'symbol'`\n- BigInt primitive: `'bigint'`\n\n**Note:** Even though `typeof function(){}` returns `'function'`, functions are actually objects!"
+    },
+    {
+      "id": "output-001-02-010",
+      "question": "```javascript\nlet a = [1, 2, 3];\nlet b = a;\nb = [4, 5, 6];\nconsole.log(a);\n```",
+      "output": "```\n[1, 2, 3]\n```",
+      "explanation": "`b = a` makes both reference the **same array**. But `b = [4, 5, 6]` **reassigns** `b` to a new array. This doesn't affect `a`, which still references the original array.\n\n```javascript\na → [1,2,3] ← b  // initially same\nb → [4,5,6]      // b reassigned to new array\na → [1,2,3]      // a unchanged\n```"
+    },
+    {
+      "id": "output-001-02-011",
+      "question": "```javascript\nlet obj = { x: 1 };\nlet obj2 = obj;\nobj2 = { x: 2 };\nconsole.log(obj.x);\n```",
+      "output": "```\n1\n```",
+      "explanation": "Initially both reference the **same object**. But `obj2 = { x: 2 }` makes `obj2` reference a **new object**. `obj` still references the original object.\n\n```javascript\nobj → {x:1} ← obj2  // initially same\nobj2 → {x:2}        // obj2 points to new object\nobj → {x:1}         // obj unchanged\n```"
+    },
+    {
+      "id": "output-001-02-012",
+      "question": "```javascript\nconsole.log('5' + 3);\nconsole.log('5' - 3);\n```",
+      "output": "```\n53\n2\n```",
+      "explanation": "**Type coercion** behaves differently based on the operator:\n\n- `+` operator: Concatenates when a string is involved → `'5' + 3 = '53'`\n- `-` operator: Triggers numeric conversion → `'5'` becomes `5`, so `5 - 3 = 2`\n\n**Remember:** `+` is overloaded for both addition and concatenation!"
+    },
+    {
+      "id": "output-001-02-013",
+      "question": "```javascript\nlet num = new Number(5);\nconsole.log(typeof num);\nconsole.log(num === 5);\n```",
+      "output": "```\nobject\nfalse\n```",
+      "explanation": "`new Number()` creates a **Number object** (reference type), not a primitive.\n\n- It's an **object** wrapping the primitive `5`\n- `typeof` returns `'object'`\n- Strict equality `===` fails because it compares object vs primitive\n\n```javascript\n// Compare:\nlet primitive = 5;        // primitive number\nlet wrapper = new Number(5); // Number object\n```"
+    },
+    {
+      "id": "output-001-02-014",
+      "question": "```javascript\nlet str = 'hello';\nconsole.log(str.toUpperCase());\nconsole.log(typeof str);\n```",
+      "output": "```\nHELLO\nstring\n```",
+      "explanation": "**Autoboxing** in action! JavaScript temporarily:\n1. Wraps the primitive string in a String object\n2. Calls the method on the object\n3. Returns the result\n4. Discards the wrapper\n\n`str` remains a primitive throughout.\n\n```javascript\n// Behind the scenes:\nstr.toUpperCase()\n// becomes\nnew String(str).toUpperCase() // temporary object\n// then disposed\n```"
+    },
+    {
+      "id": "output-001-02-015",
+      "question": "```javascript\nconsole.log(typeof NaN);\nconsole.log(typeof Infinity);\nconsole.log(NaN === NaN);\n```",
+      "output": "```\nnumber\nnumber\nfalse\n```",
+      "explanation": "**Special numeric values:**\n\n- `NaN` (Not-a-Number) is of type `'number'` (ironic!)\n- `Infinity` is also of type `'number'`\n- **Uniquely**, `NaN` is not equal to itself by IEEE 754 specification\n\n```javascript\n// To check for NaN:\nNumber.isNaN(NaN)    // true ✅\nisNaN(NaN)           // true\nNaN === NaN          // false ⚠️\n```"
+    }
+  ]
+}

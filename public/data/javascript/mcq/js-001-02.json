@@ -1,0 +1,154 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-02-001",
+      "question": "How many primitive data types does JavaScript have?",
+      "options": ["5", "6", "7", "8"],
+      "correct_answer": 2,
+      "explanation": "JavaScript has **7 primitive types**: String, Number, BigInt, Boolean, Undefined, Null, and Symbol. All other types are objects (reference types)."
+    },
+    {
+      "id": "mcq-001-02-002",
+      "question": "Which of the following is NOT a primitive type?",
+      "options": ["Symbol", "Array", "BigInt", "Null"],
+      "correct_answer": 1,
+      "explanation": "**Array** is a reference type (object). Symbol, BigInt, and Null are all primitive types in JavaScript."
+    },
+    {
+      "id": "mcq-001-02-003",
+      "question": "What is the main difference between primitive and reference types?",
+      "options": [
+        "Primitives are mutable, references are immutable",
+        "Primitives are stored by value, references by reference",
+        "Primitives are slower than references",
+        "There is no difference"
+      ],
+      "correct_answer": 1,
+      "explanation": "**Primitive types** are stored directly by value and are immutable. **Reference types** store a reference (memory address) to the actual object, and the object itself can be mutated."
+    },
+    {
+      "id": "mcq-001-02-004",
+      "question": "What does typeof null return?",
+      "options": ["'null'", "'undefined'", "'object'", "'boolean'"],
+      "correct_answer": 2,
+      "explanation": "`typeof null` returns `'object'`, which is a **well-known bug** in JavaScript that has been kept for backward compatibility reasons. Null is actually a primitive type."
+    },
+    {
+      "id": "mcq-001-02-005",
+      "question": "Which statement is true about primitive values?",
+      "options": [
+        "They can be modified directly",
+        "They are immutable",
+        "They are stored in the heap",
+        "They are always truthy"
+      ],
+      "correct_answer": 1,
+      "explanation": "Primitive values are **immutable**, meaning once created, they cannot be changed. Operations on primitives create new values rather than modifying existing ones."
+    },
+    {
+      "id": "mcq-001-02-006",
+      "question": "What happens when you compare two objects with ===?",
+      "options": [
+        "It compares their values",
+        "It compares their references",
+        "It throws an error",
+        "It always returns false"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `===` operator compares **references** for objects, not their content. Two objects are only equal if they reference the same object in memory."
+    },
+    {
+      "id": "mcq-001-02-007",
+      "question": "Which method can convert a primitive string to a String object?",
+      "options": [
+        "String.prototype.valueOf()",
+        "new String()",
+        "String.parse()",
+        "String.create()"
+      ],
+      "correct_answer": 1,
+      "explanation": "Using the String constructor with `new` creates a String object wrapper around a primitive string: `new String('hello')` creates a String object."
+    },
+    {
+      "id": "mcq-001-02-008",
+      "question": "What is the result of: typeof undefined?",
+      "options": ["'undefined'", "'null'", "'object'", "undefined"],
+      "correct_answer": 0,
+      "explanation": "The `typeof` operator returns the **string** `'undefined'` when used on an undefined value. Note it returns a string, not the value undefined."
+    },
+    {
+      "id": "mcq-001-02-009",
+      "question": "Which is true about passing primitives to functions?",
+      "options": [
+        "They are passed by reference",
+        "They are passed by value",
+        "They cannot be passed",
+        "They are automatically converted to objects"
+      ],
+      "correct_answer": 1,
+      "explanation": "Primitive values are **passed by value** to functions, meaning a copy of the value is passed. Changes to the parameter inside the function don't affect the original value."
+    },
+    {
+      "id": "mcq-001-02-010",
+      "question": "What does the BigInt type allow you to do?",
+      "options": [
+        "Store very large strings",
+        "Store integers beyond Number.MAX_SAFE_INTEGER",
+        "Store floating point numbers with more precision",
+        "Store boolean arrays"
+      ],
+      "correct_answer": 1,
+      "explanation": "**BigInt** allows representation of integers larger than `2^53 - 1` (`Number.MAX_SAFE_INTEGER`). It's created using the `n` suffix (e.g., `123n`) or `BigInt()` constructor."
+    },
+    {
+      "id": "mcq-001-02-011",
+      "question": "How are objects stored in memory?",
+      "options": [
+        "Directly in the variable",
+        "Reference (pointer) in variable, object in heap",
+        "In the stack",
+        "In the global scope"
+      ],
+      "correct_answer": 1,
+      "explanation": "Objects are stored in **heap memory**, and the variable holds a **reference** (memory address) to that location. This is why multiple variables can reference the same object."
+    },
+    {
+      "id": "mcq-001-02-012",
+      "question": "What is 'autoboxing' in JavaScript?",
+      "options": [
+        "Automatic type conversion",
+        "Temporary wrapping of primitives in objects",
+        "Boxing values in arrays",
+        "Compressing data types"
+      ],
+      "correct_answer": 1,
+      "explanation": "**Autoboxing** is when JavaScript temporarily wraps a primitive value in its corresponding object wrapper to access methods, then discards the wrapper. Example: `'hello'.toUpperCase()`."
+    },
+    {
+      "id": "mcq-001-02-013",
+      "question": "Which of these is a reference type?",
+      "options": ["Symbol", "Function", "Boolean", "Undefined"],
+      "correct_answer": 1,
+      "explanation": "**Functions** are reference types (they are special objects). Symbol, Boolean, and Undefined are primitive types."
+    },
+    {
+      "id": "mcq-001-02-014",
+      "question": "What is the typeof operator's return type?",
+      "options": ["Object", "String", "Symbol", "Number"],
+      "correct_answer": 1,
+      "explanation": "The `typeof` operator always returns a **string** indicating the type of the operand. For example, `typeof 5` returns the string `'number'`."
+    },
+    {
+      "id": "mcq-001-02-015",
+      "question": "What happens when you modify a property of an object passed to a function?",
+      "options": [
+        "The original object is not affected",
+        "The original object is modified",
+        "A copy is automatically created",
+        "An error is thrown"
+      ],
+      "correct_answer": 1,
+      "explanation": "Objects are **passed by reference**, so modifying properties of the object parameter affects the original object. The reference is copied, but it points to the same object in memory."
+    }
+  ]
+}

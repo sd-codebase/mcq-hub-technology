@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-01-001",
+      "question": "```javascript\nconsole.log(a);\nvar a = 10;\n```",
+      "output": "```\nundefined\n```",
+      "explanation": "Due to **hoisting**, `var a` is moved to the top but the assignment stays in place. So `a` is declared but undefined when logged.\n\n**Behind the scenes:**\n```javascript\nvar a; // hoisted\nconsole.log(a); // undefined\na = 10; // assignment stays here\n```"
+    },
+    {
+      "id": "output-001-01-002",
+      "question": "```javascript\nconsole.log(b);\nlet b = 20;\n```",
+      "output": "```\nReferenceError: Cannot access 'b' before initialization\n```",
+      "explanation": "`let` variables are in the **Temporal Dead Zone** from the start of the block until the declaration is reached. Accessing them before declaration throws a ReferenceError."
+    },
+    {
+      "id": "output-001-01-003",
+      "question": "```javascript\nvar x = 1;\nif (true) {\n  var x = 2;\n}\nconsole.log(x);\n```",
+      "output": "```\n2\n```",
+      "explanation": "`var` is **function-scoped**, not block-scoped. The inner `var x = 2` redeclares and overwrites the outer `x` in the same scope."
+    },
+    {
+      "id": "output-001-01-004",
+      "question": "```javascript\nlet y = 1;\nif (true) {\n  let y = 2;\n}\nconsole.log(y);\n```",
+      "output": "```\n1\n```",
+      "explanation": "`let` is **block-scoped**. The inner `let y = 2` creates a new variable scoped only to the if block, so the outer `y` remains unchanged."
+    },
+    {
+      "id": "output-001-01-005",
+      "question": "```javascript\nconst obj = { name: 'John' };\nobj.name = 'Jane';\nconsole.log(obj.name);\n```",
+      "output": "```\nJane\n```",
+      "explanation": "`const` prevents **reassignment** of the variable, but the object's properties can still be modified. Only the reference is constant.\n\n**Key Point:** `const` doesn't make objects immutable!"
+    },
+    {
+      "id": "output-001-01-006",
+      "question": "```javascript\nconst obj = { name: 'John' };\nobj = { name: 'Jane' };\n```",
+      "output": "```\nTypeError: Assignment to constant variable\n```",
+      "explanation": "Attempting to **reassign** a `const` variable (changing what the variable points to) throws a TypeError."
+    },
+    {
+      "id": "output-001-01-007",
+      "question": "```javascript\nfor (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0);\n}\n```",
+      "output": "```\n3\n3\n3\n```",
+      "explanation": "`var` is **function-scoped**, so there's only one `i` shared across all iterations. By the time the setTimeout callbacks execute, the loop has finished and `i` is 3.\n\n**Classic closure problem with var!**"
+    },
+    {
+      "id": "output-001-01-008",
+      "question": "```javascript\nfor (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 0);\n}\n```",
+      "output": "```\n0\n1\n2\n```",
+      "explanation": "`let` is **block-scoped** and creates a new binding for each iteration, so each setTimeout callback captures its own unique value of `i`.\n\n**This is why let is preferred in loops!**"
+    },
+    {
+      "id": "output-001-01-009",
+      "question": "```javascript\nlet a;\nconsole.log(a);\na = 5;\nconsole.log(a);\n```",
+      "output": "```\nundefined\n5\n```",
+      "explanation": "`let` variables can be declared without initialization, defaulting to `undefined`. After assignment, the new value is logged."
+    },
+    {
+      "id": "output-001-01-010",
+      "question": "```javascript\nconst PI = 3.14;\nPI = 3.14159;\n```",
+      "output": "```\nTypeError: Assignment to constant variable\n```",
+      "explanation": "`const` variables **cannot be reassigned**. Any attempt to do so results in a TypeError."
+    },
+    {
+      "id": "output-001-01-011",
+      "question": "```javascript\nconsole.log(typeof undeclaredVar);\n```",
+      "output": "```\nundefined\n```",
+      "explanation": "Using `typeof` on an **undeclared variable** returns `'undefined'` rather than throwing a ReferenceError. This is a special case in JavaScript for safety."
+    },
+    {
+      "id": "output-001-01-012",
+      "question": "```javascript\nfunction test() {\n  console.log(x);\n  var x = 5;\n}\ntest();\n```",
+      "output": "```\nundefined\n```",
+      "explanation": "Inside the function, `var x` is **hoisted** to the top of the function scope, but the assignment remains in place, so `x` is undefined when logged."
+    },
+    {
+      "id": "output-001-01-013",
+      "question": "```javascript\nvar a = 1;\nvar a = 2;\nconsole.log(a);\n```",
+      "output": "```\n2\n```",
+      "explanation": "`var` allows **redeclaration** in the same scope. The second declaration overwrites the first, so `a` is 2."
+    },
+    {
+      "id": "output-001-01-014",
+      "question": "```javascript\nlet b = 1;\nlet b = 2;\nconsole.log(b);\n```",
+      "output": "```\nSyntaxError: Identifier 'b' has already been declared\n```",
+      "explanation": "`let` does **not allow redeclaration** in the same scope. This results in a SyntaxError at parse time."
+    },
+    {
+      "id": "output-001-01-015",
+      "question": "```javascript\nconst arr = [1, 2, 3];\narr = [4, 5, 6];\n```",
+      "output": "```\nTypeError: Assignment to constant variable\n```",
+      "explanation": "Attempting to **reassign** a `const` variable to a new array throws a TypeError. The variable reference cannot be changed."
+    }
+  ]
+}

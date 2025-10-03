@@ -1,0 +1,159 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-01-001",
+      "question": "Which keyword allows you to reassign a value to a variable?",
+      "options": [
+        "const",
+        "let",
+        "Both let and const",
+        "Neither let nor const"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `let` keyword declares a variable that can be reassigned. `const` declares a constant that cannot be reassigned after initialization."
+    },
+    {
+      "id": "mcq-001-01-002",
+      "question": "What is the scope of a variable declared with `var` inside a function?",
+      "options": [
+        "Global scope",
+        "Block scope",
+        "Function scope",
+        "Module scope"
+      ],
+      "correct_answer": 2,
+      "explanation": "Variables declared with `var` are **function-scoped**, meaning they are accessible throughout the entire function in which they are declared, regardless of block boundaries."
+    },
+    {
+      "id": "mcq-001-01-003",
+      "question": "What happens when you try to reassign a const variable?",
+      "options": [
+        "The value changes silently",
+        "A TypeError is thrown",
+        "A ReferenceError is thrown",
+        "The program terminates"
+      ],
+      "correct_answer": 1,
+      "explanation": "Attempting to reassign a `const` variable throws a **TypeError** because const creates a read-only reference to a value."
+    },
+    {
+      "id": "mcq-001-01-004",
+      "question": "Which of the following is true about the Temporal Dead Zone (TDZ)?",
+      "options": [
+        "It only applies to var variables",
+        "It's the time between entering scope and variable declaration for `let/const`",
+        "It's a memory optimization technique",
+        "It only occurs in strict mode"
+      ],
+      "correct_answer": 1,
+      "explanation": "The **Temporal Dead Zone** is the period between entering a scope and the actual declaration of `let`/`const` variables, during which accessing the variable results in a ReferenceError."
+    },
+    {
+      "id": "mcq-001-01-005",
+      "question": "What is the output of: `console.log(x); var x = 5;`",
+      "options": ["5", "undefined", "ReferenceError", "null"],
+      "correct_answer": 1,
+      "explanation": "Due to **hoisting**, `var` declarations are moved to the top of their scope, but the assignment stays in place. So `x` is declared but not yet assigned, resulting in `undefined`."
+    },
+    {
+      "id": "mcq-001-01-006",
+      "question": "Can you declare a const variable without initializing it?",
+      "options": [
+        "Yes, it will be undefined",
+        "No, it will throw a SyntaxError",
+        "Yes, but only in strict mode",
+        "Yes, but it will be null"
+      ],
+      "correct_answer": 1,
+      "explanation": "A `const` variable **must be initialized** at the time of declaration. Attempting to declare without initialization results in a `SyntaxError: Missing initializer in const declaration`."
+    },
+    {
+      "id": "mcq-001-01-007",
+      "question": "What scope do let and const have?",
+      "options": [
+        "Function scope",
+        "Global scope",
+        "Block scope",
+        "Module scope"
+      ],
+      "correct_answer": 2,
+      "explanation": "Both `let` and `const` are **block-scoped**, meaning they are only accessible within the block (denoted by `{}`) in which they are declared."
+    },
+    {
+      "id": "mcq-001-01-008",
+      "question": "Which variable declaration can be redeclared in the same scope?",
+      "options": ["let", "const", "var", "None of them"],
+      "correct_answer": 2,
+      "explanation": "Only `var` allows **redeclaration** in the same scope. Both `let` and `const` will throw a SyntaxError if you try to redeclare them in the same scope."
+    },
+    {
+      "id": "mcq-001-01-009",
+      "question": "What happens when you declare a variable without var, let, or const?",
+      "options": [
+        "It becomes block-scoped",
+        "It becomes a global variable (in non-strict mode)",
+        "It throws an error immediately",
+        "It becomes function-scoped"
+      ],
+      "correct_answer": 1,
+      "explanation": "In **non-strict mode**, omitting `var`/`let`/`const` creates a global variable. In **strict mode**, it throws a ReferenceError. This is considered bad practice."
+    },
+    {
+      "id": "mcq-001-01-010",
+      "question": "Can you modify the properties of an object declared with const?",
+      "options": [
+        "No, const makes everything immutable",
+        "Yes, const only prevents reassignment of the variable",
+        "Only in strict mode",
+        "Only primitive properties can be modified"
+      ],
+      "correct_answer": 1,
+      "explanation": "`const` prevents **reassignment** of the variable itself, but if the variable holds an object, the object's properties can still be modified. The reference is constant, not the object's contents."
+    },
+    {
+      "id": "mcq-001-01-011",
+      "question": "Which is the recommended variable declaration in modern JavaScript?",
+      "options": [
+        "var for everything",
+        "let for reassignable variables, const for constants",
+        "const for everything",
+        "var for global, let for local"
+      ],
+      "correct_answer": 1,
+      "explanation": "Modern JavaScript **best practice** is to use `const` by default for values that won't be reassigned, and `let` for variables that need to be reassigned. Avoid `var` due to its function-scoping and hoisting quirks."
+    },
+    {
+      "id": "mcq-001-01-012",
+      "question": "What is hoisting in JavaScript?",
+      "options": [
+        "Moving variables to a higher scope",
+        "Declaration moving to the top of the scope during compilation",
+        "Automatic memory optimization",
+        "Converting variables to global scope"
+      ],
+      "correct_answer": 1,
+      "explanation": "**Hoisting** is JavaScript's behavior of moving declarations (not initializations) to the top of their containing scope during the compilation phase, before code execution."
+    },
+    {
+      "id": "mcq-001-01-013",
+      "question": "What will: ```let x = 1; \n{ let x = 2; } \nconsole.log(x);``` output?",
+      "options": ["2", "1", "undefined", "ReferenceError"],
+      "correct_answer": 1,
+      "explanation": "The inner `let x = 2` creates a new **block-scoped** variable that shadows the outer `x` only within that block. After the block, the outer `x` (value 1) is logged."
+    },
+    {
+      "id": "mcq-001-01-014",
+      "question": "Which declaration is hoisted but not initialized?",
+      "options": ["var", "let", "const", "Both let and const"],
+      "correct_answer": 3,
+      "explanation": "Both `let` and `const` are hoisted but remain **uninitialized** in the Temporal Dead Zone until the declaration is reached. `var` is hoisted and initialized with `undefined`."
+    },
+    {
+      "id": "mcq-001-01-015",
+      "question": "What is the result of: ```const arr = [1,2,3]; arr.push(4); console.log(arr);```",
+      "options": ["TypeError", "[1, 2, 3, 4]", "[1, 2, 3]", "ReferenceError"],
+      "correct_answer": 1,
+      "explanation": "Even though `arr` is declared with `const`, the array itself is **mutable**. `const` prevents reassignment of `arr` to a different array, but allows modification of the array's contents."
+    }
+  ]
+}
