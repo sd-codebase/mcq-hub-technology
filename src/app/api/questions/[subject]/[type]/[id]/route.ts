@@ -1,13 +1,12 @@
 import { NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 
 export async function GET(
-  request: Request,
-  context: { params: { subject: string; type: string; id: string } }
+  request: NextRequest,
+  { params }: { params: Promise<{ subject: string; type: string; id: string }> }
 ) {
   try {
-    // Await the params object
-    const params = await Promise.resolve(context.params);
-    const { subject, type, id } = params;
+    const { subject, type, id } = await params;
 
     // Get the base URL from environment variables or default to localhost
     const baseUrl =
