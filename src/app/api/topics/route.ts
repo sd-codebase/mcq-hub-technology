@@ -3,10 +3,8 @@ import { NextResponse } from "next/server";
 export async function GET() {
   try {
     const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL ||
-      process.env.VERCEL_URL ||
-      "http://localhost:3000";
-    const subject = process.env.NEXT_PUBLIC_SUBJECT || "javascript";
+      process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL || "";
+    const subject = process.env.NEXT_PUBLIC_SUBJECT;
     const url = baseUrl.startsWith("http") ? baseUrl : `https://${baseUrl}`;
     // Always fetch topics.json for the subject
     const apiUrl = `${url}/data/${subject}/topics.json`;
