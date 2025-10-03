@@ -21,7 +21,7 @@ export default function TopicsList() {
 
   return (
     <div className="space-y-6">
-      {topics.map((topic) => (
+      {topics.map((topic, topicIndex) => (
         <div
           key={topic.id}
           className="bg-white rounded-lg shadow p-6 border border-gray-200"
@@ -30,16 +30,19 @@ export default function TopicsList() {
             className="text-lg font-bold mb-2"
             style={{ color: "var(--color-secondary)" }}
           >
-            {topic.topic}
+            {`${topicIndex + 1}. ${topic.topic}`}
           </h3>
           <div className="space-y-2">
-            {topic.subtopics.map((sub: any) => (
-              <div key={sub.id} className="mb-2">
+            {topic.subtopics.map((sub: any, subIndex: number) => (
+              <div
+                key={sub.id}
+                className="mb-4 p-3 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              >
                 <div
-                  className="font-medium text-base mb-1"
+                  className="font-medium text-base mb-2"
                   style={{ color: "var(--color-primary)" }}
                 >
-                  {sub.name}
+                  {`${topicIndex + 1}.${subIndex + 1} ${sub.name}`}
                 </div>
                 <SubtopicActions subtopic={sub} />
               </div>
