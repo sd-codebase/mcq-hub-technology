@@ -5,9 +5,9 @@ export async function GET() {
     const baseUrl =
       process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL || "";
     const subject = process.env.NEXT_PUBLIC_SUBJECT;
-    const url = baseUrl.startsWith("http") ? baseUrl : `https://${baseUrl}`;
+    // const url = baseUrl.startsWith("http") ? baseUrl : `https://${baseUrl}`;
     // Always fetch topics.json for the subject
-    const apiUrl = `${url}/data/${subject}/topics.json`;
+    const apiUrl = `${baseUrl}/data/${subject}/topics.json`;
     const resp = await fetch(apiUrl);
     if (!resp.ok) throw new Error("Failed to fetch topics file");
     const data = await resp.json();

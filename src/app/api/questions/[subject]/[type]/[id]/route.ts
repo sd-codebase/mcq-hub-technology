@@ -13,10 +13,10 @@ export async function GET(
       process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL || "";
 
     // Ensure the URL has the correct protocol
-    const url = baseUrl.startsWith("http") ? baseUrl : `https://${baseUrl}`;
+    // const url = baseUrl.startsWith("http") ? baseUrl : `https://${baseUrl}`;
 
     // Construct the URL to the JSON file
-    const fileUrl = `${url}/data/${subject}/${type}/${id}.json`;
+    const fileUrl = `${baseUrl}/data/${subject}/${type}/${id}.json`;
 
     // Fetch the JSON file
     const response = await fetch(fileUrl);
