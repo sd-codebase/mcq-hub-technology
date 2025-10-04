@@ -79,8 +79,8 @@ const subjects = [
   },
   {
     name: "Node.js",
-    icon: "/images/javascript.png",
-    link: "subjects/javascript/topics",
+    icon: "/images/nodejs.png",
+    link: "subjects/nodejs/topics",
     questions: "20,000",
   },
   // {
@@ -234,9 +234,13 @@ const SubjectsSection = () => (
                        transform hover:scale-105 transition duration-300 
                        shadow-xl border border-gray-700 cursor-pointer group"
             >
-              {/* Logo Placeholder - User mentioned they have the logos */}
-              <div className="h-15 mb-4 px-2 flex items-center justify-center bg-white rounded-lg shadow">
-                <img src={subject.icon} alt={subject.name} height={100} />
+              {/* Logo container with fixed dimensions */}
+              <div className="h-32 w-32 mb-4 p-4 flex items-center justify-center bg-white rounded-lg shadow">
+                <img
+                  src={subject.icon}
+                  alt={subject.name}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h4 className="mt-4 text-lg font-medium text-white group-hover:text-indigo-300">
                 {subject.name}

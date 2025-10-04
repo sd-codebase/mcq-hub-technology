@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Zap } from "./zap";
 
 export const Header = ({
@@ -7,17 +8,19 @@ export const Header = ({
 }) => (
   <header className="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-sm shadow-lg">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-      <div className="flex items-center">
-        <Zap className="h-6 w-6 text-indigo-400 mr-2" />
-        <div className="flex flex-col items-center">
-          <span className="text-2xl font-bold text-white tracking-tight -mb-1">
-            MCQ<span className="text-indigo-400">Hub</span>
-          </span>
-          <span className="text-[10px] font-medium text-gray-400 tracking-wider">
-            TECHOLOGY
-          </span>
+      <Link href="/">
+        <div className="flex items-center">
+          <Zap className="h-6 w-6 text-indigo-400 mr-2" />
+          <div className="flex flex-col items-center">
+            <span className="text-2xl font-bold text-white tracking-tight -mb-1">
+              MCQ<span className="text-indigo-400">Hub</span>
+            </span>
+            <span className="text-[10px] font-medium text-gray-400 tracking-wider">
+              TECHOLOGY
+            </span>
+          </div>
         </div>
-      </div>
+      </Link>
       <nav className="hidden md:flex space-x-8">
         {/* {["Subjects", "Features", "Pricing", "Start Test"].map((item) => (
           <a
