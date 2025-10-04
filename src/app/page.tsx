@@ -1,4 +1,5 @@
 import { Header } from "@/components/header";
+import { TechLogoGenerator } from "@/components/logo";
 import { Zap } from "@/components/zap";
 import Image from "next/image";
 import Link from "next/link";
@@ -66,35 +67,41 @@ const MessageCircleQuestion = ({ className }: { className?: string }) => (
 // Mock data for Subjects (replace with actual image URLs or SVG components later)
 const subjects = [
   {
+    logotext: "JS",
     name: "JavaScript",
-    icon: "/images/javascript.png",
     link: "subjects/javascript/topics",
     questions: "20,000",
   },
   {
+    logotext: "TS",
     name: "TypeScript",
-    icon: "/images/typescript.png",
     link: "subjects/typescript/topics",
     questions: "20,000",
   },
   {
-    name: "Node.js",
-    icon: "/images/nodejs.png",
+    logotext: "Node",
+    name: "NodeJS",
     link: "subjects/nodejs/topics",
     questions: "20,000",
   },
-  // {
-  //   name: "Python",
-  //   icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.5 15h-5v-5h-3V9.5h3v-3h2v3h2v2h-2v5z",
-  // },
-  // {
-  //   name: "React",
-  //   icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.8 14.4l-4.2-2.4 4.2-2.4 4.2 2.4-4.2 2.4z",
-  // },
-  // {
-  //   name: "SQL",
-  //   icon: "M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12zm2.5 0c0 4.41 3.59 8 8 8s8-3.59 8-8-3.59-8-8-8-8 3.59-8 8zm4 0a3.5 3.5 0 1 0 7 0 3.5 3.5 0 1 0-7 0z",
-  // },
+  {
+    logotext: "React",
+    name: "ReactJS",
+    link: "subjects/reactjs/topics",
+    questions: "20,000",
+  },
+  {
+    logotext: "Angular",
+    name: "Angular",
+    link: "subjects/angular/topics",
+    questions: "20,000",
+  },
+  {
+    logotext: "Vue",
+    name: "VueJS",
+    link: "subjects/vuejs/topics",
+    questions: "20,000",
+  },
 ];
 
 const Hero = () => (
@@ -235,12 +242,8 @@ const SubjectsSection = () => (
                        shadow-xl border border-gray-700 cursor-pointer group"
             >
               {/* Logo container with fixed dimensions */}
-              <div className="h-32 w-32 mb-4 p-4 flex items-center justify-center bg-white rounded-lg shadow">
-                <img
-                  src={subject.icon}
-                  alt={subject.name}
-                  className="w-full h-full object-contain"
-                />
+              <div>
+                <TechLogoGenerator text={subject.name} />
               </div>
               <h4 className="mt-4 text-lg font-medium text-white group-hover:text-indigo-300">
                 {subject.name}

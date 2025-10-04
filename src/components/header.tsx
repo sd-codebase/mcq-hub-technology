@@ -15,8 +15,8 @@ export const Header = ({
             <span className="text-2xl font-bold text-white tracking-tight -mb-1">
               MCQ<span className="text-indigo-400">Hub</span>
             </span>
-            <span className="text-[10px] font-medium text-gray-400 tracking-wider">
-              TECHOLOGY
+            <span className="text-[12px] font-medium text-gray-400 tracking-wider">
+              TECH SKILLS
             </span>
           </div>
         </div>

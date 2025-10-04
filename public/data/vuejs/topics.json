@@ -1,0 +1,711 @@
+{
+  "topics": [
+    {
+      "id": "vue-001",
+      "topic": "Introduction to Vue.js",
+      "subtopics": [
+        { "id": "vue-001-01", "name": "History and Evolution of Vue.js" },
+        {
+          "id": "vue-001-02",
+          "name": "Current Version Overview (Vue 3.x and Latest Features)"
+        },
+        { "id": "vue-001-03", "name": "Key Features and Benefits" },
+        {
+          "id": "vue-001-04",
+          "name": "Comparison with other Frameworks (React, Angular)"
+        },
+        { "id": "vue-001-05", "name": "Understanding the Vue Ecosystem" },
+        { "id": "vue-001-06", "name": "Official Documentation and Resources" },
+        { "id": "vue-001-07", "name": "Community and Support Channels" },
+        { "id": "vue-001-08", "name": "Popular Vue Use Cases" },
+        { "id": "vue-001-09", "name": "Project Structure Overview" },
+        { "id": "vue-001-10", "name": "Single-File Components (SFC)" },
+        { "id": "vue-001-11", "name": "Setup with CDN" },
+        { "id": "vue-001-12", "name": "Setup with NPM/Yarn" },
+        { "id": "vue-001-13", "name": "Using Vue CLI" },
+        { "id": "vue-001-14", "name": "Vite vs Vue CLI" },
+        { "id": "vue-001-15", "name": "Running the First Vue App" },
+        {
+          "id": "vue-001-16",
+          "name": "Understanding the Development Workflow"
+        },
+        { "id": "vue-001-17", "name": "Starter Templates" },
+        { "id": "vue-001-18", "name": "Browser DevTools for Vue" },
+        { "id": "vue-001-19", "name": "Basic Troubleshooting" },
+        { "id": "vue-001-20", "name": "Vue.js Release and Upgrade Guide" }
+      ]
+    },
+    {
+      "id": "vue-002",
+      "topic": "Vue Instance and Lifecycle",
+      "subtopics": [
+        { "id": "vue-002-01", "name": "Creating a Vue Instance" },
+        { "id": "vue-002-02", "name": "Instance Properties and Methods" },
+        { "id": "vue-002-03", "name": "The Root Component" },
+        { "id": "vue-002-04", "name": "Lifecycle Hooks Overview" },
+        { "id": "vue-002-05", "name": "beforeCreate & created" },
+        { "id": "vue-002-06", "name": "beforeMount & mounted" },
+        { "id": "vue-002-07", "name": "beforeUpdate & updated" },
+        { "id": "vue-002-08", "name": "beforeUnmount & unmounted" },
+        { "id": "vue-002-09", "name": "Accessing Lifecycle in Options API" },
+        {
+          "id": "vue-002-10",
+          "name": "Accessing Lifecycle in Composition API"
+        },
+        { "id": "vue-002-11", "name": "Destruction and Cleanup" },
+        { "id": "vue-002-12", "name": "Watching Lifecycle Events" },
+        { "id": "vue-002-13", "name": "Practical Lifecycle Use Cases" },
+        { "id": "vue-002-14", "name": "Debugging Lifecycle Issues" },
+        { "id": "vue-002-15", "name": "Async Operations in Lifecycle" },
+        { "id": "vue-002-16", "name": "Best Practices for Lifecycle Usage" },
+        { "id": "vue-002-17", "name": "Custom Lifecycle Hooks" },
+        { "id": "vue-002-18", "name": "Effect Scope in Vue 3" },
+        { "id": "vue-002-19", "name": "Legacy API Compatibility" },
+        { "id": "vue-002-20", "name": "Lifecycle and Testing" }
+      ]
+    },
+    {
+      "id": "vue-003",
+      "topic": "Template Syntax and Interpolation",
+      "subtopics": [
+        { "id": "vue-003-01", "name": "Text Interpolation" },
+        { "id": "vue-003-02", "name": "Raw HTML Binding" },
+        { "id": "vue-003-03", "name": "Attribute Bindings" },
+        { "id": "vue-003-04", "name": "JavaScript Expressions in Templates" },
+        { "id": "vue-003-05", "name": "Directive Syntax Overview" },
+        { "id": "vue-003-06", "name": "v-bind Directive" },
+        { "id": "vue-003-07", "name": "v-on Directive" },
+        { "id": "vue-003-08", "name": "Shorthand Syntaxes" },
+        { "id": "vue-003-09", "name": "Template Refs" },
+        {
+          "id": "vue-003-10",
+          "name": "Conditional Rendering (v-if, v-else, v-else-if)"
+        },
+        { "id": "vue-003-11", "name": "List Rendering (v-for)" },
+        { "id": "vue-003-12", "name": "Key Attribute in v-for" },
+        {
+          "id": "vue-003-13",
+          "name": "Using Computed Properties in Templates"
+        },
+        { "id": "vue-003-14", "name": "Using Methods in Templates" },
+        { "id": "vue-003-15", "name": "Scoped Slots" },
+        { "id": "vue-003-16", "name": "Dynamic Components" },
+        { "id": "vue-003-17", "name": "v-show vs v-if" },
+        { "id": "vue-003-18", "name": "Comments in Templates" },
+        { "id": "vue-003-19", "name": "White-space Management" },
+        { "id": "vue-003-20", "name": "Best Practices in Template Syntax" }
+      ]
+    },
+    {
+      "id": "vue-004",
+      "topic": "Reactivity and Data Binding",
+      "subtopics": [
+        { "id": "vue-004-01", "name": "Reactivity System Overview" },
+        { "id": "vue-004-02", "name": "Data Option in Options API" },
+        { "id": "vue-004-03", "name": "ref and reactive in Composition API" },
+        { "id": "vue-004-04", "name": "Computed Properties" },
+        { "id": "vue-004-05", "name": "Methods vs Computed" },
+        { "id": "vue-004-06", "name": "Watchers (watch & watchEffect)" },
+        { "id": "vue-004-07", "name": "Deep vs Shallow Watch" },
+        { "id": "vue-004-08", "name": "Binding Objects and Arrays" },
+        { "id": "vue-004-09", "name": "v-model for Two-Way Binding" },
+        { "id": "vue-004-10", "name": "Custom v-model" },
+        { "id": "vue-004-11", "name": "Multiple v-model Bindings" },
+        { "id": "vue-004-12", "name": "Reactivity Caveats" },
+        { "id": "vue-004-13", "name": "Effect Scope" },
+        { "id": "vue-004-14", "name": "Read-only and Shallow Reactive" },
+        { "id": "vue-004-15", "name": "Triggering Manual Updates" },
+        { "id": "vue-004-16", "name": "NextTick and DOM Updates" },
+        { "id": "vue-004-17", "name": "Reactivity in Nested Objects" },
+        { "id": "vue-004-18", "name": "Reactivity Transform (Experimental)" },
+        { "id": "vue-004-19", "name": "Proxy-based Reactivity" },
+        { "id": "vue-004-20", "name": "Best Practices for Reactive State" }
+      ]
+    },
+    {
+      "id": "vue-005",
+      "topic": "Components and Props",
+      "subtopics": [
+        { "id": "vue-005-01", "name": "What are Components?" },
+        {
+          "id": "vue-005-02",
+          "name": "Registering Components (Global and Local)"
+        },
+        { "id": "vue-005-03", "name": "Component Naming Conventions" },
+        { "id": "vue-005-04", "name": "Props Basics" },
+        { "id": "vue-005-05", "name": "Prop Validation" },
+        { "id": "vue-005-06", "name": "Default Props" },
+        { "id": "vue-005-07", "name": "Passing Data to Child Components" },
+        { "id": "vue-005-08", "name": "Emitting Events to Parent" },
+        { "id": "vue-005-09", "name": "Component Slots" },
+        { "id": "vue-005-10", "name": "Named Slots" },
+        { "id": "vue-005-11", "name": "Scoped Slots" },
+        { "id": "vue-005-12", "name": "Dynamic & Async Components" },
+        { "id": "vue-005-13", "name": "Functional Components" },
+        { "id": "vue-005-14", "name": "Inheriting Attributes" },
+        { "id": "vue-005-15", "name": "Provide/Inject API" },
+        { "id": "vue-005-16", "name": "Component Communication Patterns" },
+        { "id": "vue-005-17", "name": "Parent-Child Hierarchy" },
+        {
+          "id": "vue-005-18",
+          "name": "Component Styles (scoped, module, etc.)"
+        },
+        { "id": "vue-005-19", "name": "Extending and Composing Components" },
+        { "id": "vue-005-20", "name": "Best Practices in Component Design" }
+      ]
+    },
+    {
+      "id": "vue-006",
+      "topic": "Directives in Vue.js",
+      "subtopics": [
+        { "id": "vue-006-01", "name": "What are Directives?" },
+        {
+          "id": "vue-006-02",
+          "name": "Core Directives (v-if, v-for, v-show, v-bind, v-on)"
+        },
+        { "id": "vue-006-03", "name": "Modifiers in Directives" },
+        { "id": "vue-006-04", "name": "v-model Directive" },
+        { "id": "vue-006-05", "name": "v-pre, v-cloak, v-once" },
+        { "id": "vue-006-06", "name": "Custom Directives" },
+        { "id": "vue-006-07", "name": "Directive Hooks" },
+        { "id": "vue-006-08", "name": "Passing Arguments to Directives" },
+        { "id": "vue-006-09", "name": "Dynamic Arguments" },
+        { "id": "vue-006-10", "name": "Directive Lifecycle" },
+        { "id": "vue-006-11", "name": "Best Practices for Custom Directives" },
+        { "id": "vue-006-12", "name": "Directives vs Methods" },
+        { "id": "vue-006-13", "name": "Directives in Composition API" },
+        { "id": "vue-006-14", "name": "Directives and Accessibility" },
+        { "id": "vue-006-15", "name": "Testing Custom Directives" },
+        { "id": "vue-006-16", "name": "Reusable Directives" },
+        { "id": "vue-006-17", "name": "Third Party Directives" },
+        { "id": "vue-006-18", "name": "Performance Considerations" },
+        { "id": "vue-006-19", "name": "Directive Naming Conventions" },
+        { "id": "vue-006-20", "name": "Common Directive Patterns" }
+      ]
+    },
+    {
+      "id": "vue-007",
+      "topic": "Event Handling",
+      "subtopics": [
+        { "id": "vue-007-01", "name": "Event Binding (v-on)" },
+        { "id": "vue-007-02", "name": "Listening to Native DOM Events" },
+        { "id": "vue-007-03", "name": "Event Modifiers" },
+        { "id": "vue-007-04", "name": "Key Modifiers" },
+        { "id": "vue-007-05", "name": "Mouse and Touch Event Handling" },
+        { "id": "vue-007-06", "name": "Custom Events" },
+        { "id": "vue-007-07", "name": "Event Propagation" },
+        { "id": "vue-007-08", "name": "Emitting Events from Child Components" },
+        { "id": "vue-007-09", "name": "Event Bus Pattern (Legacy)" },
+        { "id": "vue-007-10", "name": "Event Handling in Composition API" },
+        { "id": "vue-007-11", "name": "Handling Asynchronous Events" },
+        { "id": "vue-007-12", "name": "Event Debouncing and Throttling" },
+        { "id": "vue-007-13", "name": "Event Listeners Cleanup" },
+        { "id": "vue-007-14", "name": "Event Handling Best Practices" },
+        { "id": "vue-007-15", "name": "Testing Event Handling" },
+        { "id": "vue-007-16", "name": "Accessibility and Event Handling" },
+        { "id": "vue-007-17", "name": "Event Handling in Vue 2 vs Vue 3" },
+        { "id": "vue-007-18", "name": "Global Event Listeners" },
+        { "id": "vue-007-19", "name": "Dynamic Event Names" },
+        { "id": "vue-007-20", "name": "Common Event Handling Patterns" }
+      ]
+    },
+    {
+      "id": "vue-008",
+      "topic": "Forms and Input Handling",
+      "subtopics": [
+        { "id": "vue-008-01", "name": "Form Basics in Vue" },
+        { "id": "vue-008-02", "name": "Input Bindings with v-model" },
+        { "id": "vue-008-03", "name": "Customizing v-model" },
+        { "id": "vue-008-04", "name": "Modifiers with v-model" },
+        { "id": "vue-008-05", "name": "Handling Checkbox and Radio Inputs" },
+        { "id": "vue-008-06", "name": "Select Dropdowns" },
+        { "id": "vue-008-07", "name": "Textarea and ContentEditable" },
+        { "id": "vue-008-08", "name": "Form Validation (Basic)" },
+        {
+          "id": "vue-008-09",
+          "name": "Form Validation Libraries (Vuelidate, vee-validate)"
+        },
+        { "id": "vue-008-10", "name": "Custom Form Validation" },
+        { "id": "vue-008-11", "name": "Handling Form Submission" },
+        { "id": "vue-008-12", "name": "Resetting Forms" },
+        { "id": "vue-008-13", "name": "Dynamic Forms" },
+        { "id": "vue-008-14", "name": "Input Components" },
+        { "id": "vue-008-15", "name": "Accessibility in Forms" },
+        { "id": "vue-008-16", "name": "Handling Multiple Input Types" },
+        { "id": "vue-008-17", "name": "Error Handling in Forms" },
+        { "id": "vue-008-18", "name": "Form State Management" },
+        { "id": "vue-008-19", "name": "Forms in SFCs" },
+        { "id": "vue-008-20", "name": "Testing Forms" }
+      ]
+    },
+    {
+      "id": "vue-009",
+      "topic": "Routing with Vue Router",
+      "subtopics": [
+        { "id": "vue-009-01", "name": "What is Vue Router?" },
+        { "id": "vue-009-02", "name": "Installing and Setting Up Vue Router" },
+        { "id": "vue-009-03", "name": "Configuring Routes" },
+        { "id": "vue-009-04", "name": "Dynamic Route Matching" },
+        { "id": "vue-009-05", "name": "Nested Routes" },
+        { "id": "vue-009-06", "name": "Route Params and Props" },
+        { "id": "vue-009-07", "name": "Programmatic Navigation" },
+        { "id": "vue-009-08", "name": "Named Routes and Named Views" },
+        { "id": "vue-009-09", "name": "Redirects and Aliases" },
+        {
+          "id": "vue-009-10",
+          "name": "Navigation Guards (Global, Per-Route, In-Component)"
+        },
+        { "id": "vue-009-11", "name": "Lazy Loading Routes" },
+        { "id": "vue-009-12", "name": "Scroll Behavior" },
+        { "id": "vue-009-13", "name": "Route Meta Fields" },
+        { "id": "vue-009-14", "name": "Transitions between Routes" },
+        { "id": "vue-009-15", "name": "Handling 404 and Catch-all Routes" },
+        { "id": "vue-009-16", "name": "History Modes (Hash vs History)" },
+        { "id": "vue-009-17", "name": "Nested Router-View" },
+        { "id": "vue-009-18", "name": "Accessing Route Information" },
+        { "id": "vue-009-19", "name": "Testing Routing" },
+        { "id": "vue-009-20", "name": "Best Practices for Routing" }
+      ]
+    },
+    {
+      "id": "vue-010",
+      "topic": "State Management with Pinia (and Vuex Legacy)",
+      "subtopics": [
+        { "id": "vue-010-01", "name": "Introduction to State Management" },
+        { "id": "vue-010-02", "name": "What is Pinia?" },
+        { "id": "vue-010-03", "name": "Comparing Pinia and Vuex" },
+        { "id": "vue-010-04", "name": "Installing and Setting up Pinia" },
+        { "id": "vue-010-05", "name": "Defining a Store in Pinia" },
+        { "id": "vue-010-06", "name": "Using State, Getters, and Actions" },
+        { "id": "vue-010-07", "name": "Modular Stores in Pinia" },
+        { "id": "vue-010-08", "name": "Using Pinia with Composition API" },
+        { "id": "vue-010-09", "name": "Persistence (with plugins)" },
+        { "id": "vue-010-10", "name": "Migration from Vuex to Pinia" },
+        { "id": "vue-010-11", "name": "Using Vuex (Legacy)" },
+        { "id": "vue-010-12", "name": "Vuex Store Structure" },
+        { "id": "vue-010-13", "name": "Mutations and Actions in Vuex" },
+        { "id": "vue-010-14", "name": "Getters in Vuex" },
+        { "id": "vue-010-15", "name": "Modules in Vuex" },
+        { "id": "vue-010-16", "name": "Best Practices in State Management" },
+        { "id": "vue-010-17", "name": "Testing Pinia Stores" },
+        { "id": "vue-010-18", "name": "Testing Vuex Stores" },
+        { "id": "vue-010-19", "name": "Debugging State" },
+        { "id": "vue-010-20", "name": "Community State Plugins" }
+      ]
+    },
+    {
+      "id": "vue-011",
+      "topic": "Composition API",
+      "subtopics": [
+        { "id": "vue-011-01", "name": "What is the Composition API?" },
+        { "id": "vue-011-02", "name": "Setup Function" },
+        { "id": "vue-011-03", "name": "ref and reactive" },
+        { "id": "vue-011-04", "name": "Computed and Watch" },
+        { "id": "vue-011-05", "name": "Lifecycle Hooks in Composition API" },
+        { "id": "vue-011-06", "name": "Using Provide/Inject" },
+        { "id": "vue-011-07", "name": "Composables (Reusable Logic)" },
+        { "id": "vue-011-08", "name": "Props and Emits in Setup" },
+        { "id": "vue-011-09", "name": "Template Refs in Composition API" },
+        { "id": "vue-011-10", "name": "Using Plugins with Composition API" },
+        { "id": "vue-011-11", "name": "TypeScript and Composition API" },
+        { "id": "vue-011-12", "name": "Script Setup Syntax" },
+        { "id": "vue-011-13", "name": "Migration from Options API" },
+        { "id": "vue-011-14", "name": "Best Practices for Composables" },
+        { "id": "vue-011-15", "name": "Using WatchEffect" },
+        { "id": "vue-011-16", "name": "Limitations and Caveats" },
+        { "id": "vue-011-17", "name": "Testing Composition API Logic" },
+        { "id": "vue-011-18", "name": "Advanced Composables Patterns" },
+        { "id": "vue-011-19", "name": "Code Splitting with Composables" },
+        { "id": "vue-011-20", "name": "Community Composables Libraries" }
+      ]
+    },
+    {
+      "id": "vue-012",
+      "topic": "Options API",
+      "subtopics": [
+        { "id": "vue-012-01", "name": "What is the Options API?" },
+        { "id": "vue-012-02", "name": "Data Option" },
+        { "id": "vue-012-03", "name": "Methods Option" },
+        { "id": "vue-012-04", "name": "Computed Option" },
+        { "id": "vue-012-05", "name": "Watch Option" },
+        { "id": "vue-012-06", "name": "Props Option" },
+        { "id": "vue-012-07", "name": "Emits Option" },
+        { "id": "vue-012-08", "name": "Mixins" },
+        { "id": "vue-012-09", "name": "Extends and Inheritance" },
+        { "id": "vue-012-10", "name": "Lifecycle Hooks in Options API" },
+        { "id": "vue-012-11", "name": "Using Provide/Inject" },
+        { "id": "vue-012-12", "name": "Template Refs in Options API" },
+        { "id": "vue-012-13", "name": "TypeScript and Options API" },
+        { "id": "vue-012-14", "name": "Migrating to Composition API" },
+        { "id": "vue-012-15", "name": "Mixins vs Composables" },
+        { "id": "vue-012-16", "name": "Testing Options API Logic" },
+        { "id": "vue-012-17", "name": "Limitations and Caveats" },
+        { "id": "vue-012-18", "name": "Code Organization in Options API" },
+        { "id": "vue-012-19", "name": "Community Mixins Libraries" },
+        { "id": "vue-012-20", "name": "Best Practices in Options API" }
+      ]
+    },
+    {
+      "id": "vue-013",
+      "topic": "Transitions and Animations",
+      "subtopics": [
+        { "id": "vue-013-01", "name": "Introduction to Transitions" },
+        { "id": "vue-013-02", "name": "Transition Wrapper Component" },
+        { "id": "vue-013-03", "name": "CSS Transitions" },
+        { "id": "vue-013-04", "name": "CSS Animations" },
+        { "id": "vue-013-05", "name": "JavaScript Hooks" },
+        { "id": "vue-013-06", "name": "Transition Modes" },
+        { "id": "vue-013-07", "name": "Transition Classes" },
+        { "id": "vue-013-08", "name": "Group Transitions" },
+        { "id": "vue-013-09", "name": "Dynamic Transitions" },
+        { "id": "vue-013-10", "name": "Animating with Vue and GSAP" },
+        { "id": "vue-013-11", "name": "Custom Animation Libraries" },
+        { "id": "vue-013-12", "name": "Entering and Leaving Transitions" },
+        { "id": "vue-013-13", "name": "State-based Animations" },
+        { "id": "vue-013-14", "name": "Transition Events" },
+        { "id": "vue-013-15", "name": "Staggering Animations" },
+        { "id": "vue-013-16", "name": "Performance Optimization" },
+        { "id": "vue-013-17", "name": "Accessibility in Animations" },
+        { "id": "vue-013-18", "name": "Testing Animations" },
+        { "id": "vue-013-19", "name": "Troubleshooting Transitions" },
+        { "id": "vue-013-20", "name": "Best Practices in Animations" }
+      ]
+    },
+    {
+      "id": "vue-014",
+      "topic": "Composition and Modularization",
+      "subtopics": [
+        { "id": "vue-014-01", "name": "Code Organization Strategies" },
+        { "id": "vue-014-02", "name": "Reusable Components" },
+        { "id": "vue-014-03", "name": "Composables" },
+        { "id": "vue-014-04", "name": "Mixins (Legacy)" },
+        { "id": "vue-014-05", "name": "Plugins" },
+        { "id": "vue-014-06", "name": "Extending Components" },
+        { "id": "vue-014-07", "name": "HOC Patterns" },
+        { "id": "vue-014-08", "name": "Provide/Inject Patterns" },
+        { "id": "vue-014-09", "name": "Component Libraries" },
+        { "id": "vue-014-10", "name": "Organizing Large Applications" },
+        { "id": "vue-014-11", "name": "Feature Modules" },
+        { "id": "vue-014-12", "name": "Directory Structure Best Practices" },
+        { "id": "vue-014-13", "name": "Global vs Local Registration" },
+        { "id": "vue-014-14", "name": "Using Third-party Composables" },
+        { "id": "vue-014-15", "name": "Code Splitting" },
+        { "id": "vue-014-16", "name": "Dynamic Imports" },
+        { "id": "vue-014-17", "name": "Managing Dependencies" },
+        { "id": "vue-014-18", "name": "Testing Modularized Code" },
+        { "id": "vue-014-19", "name": "Documentation of Modules" },
+        { "id": "vue-014-20", "name": "Refactoring for Modularity" }
+      ]
+    },
+    {
+      "id": "vue-015",
+      "topic": "Vue Plugins and Ecosystem",
+      "subtopics": [
+        { "id": "vue-015-01", "name": "What are Vue Plugins?" },
+        {
+          "id": "vue-015-02",
+          "name": "Popular Vue Plugins (Vue Router, Pinia, etc.)"
+        },
+        { "id": "vue-015-03", "name": "Installing and Using Plugins" },
+        { "id": "vue-015-04", "name": "Developing Custom Plugins" },
+        { "id": "vue-015-05", "name": "Plugin API" },
+        { "id": "vue-015-06", "name": "Global Properties with Plugins" },
+        { "id": "vue-015-07", "name": "Plugin Options and Configuration" },
+        { "id": "vue-015-08", "name": "Third-party Component Libraries" },
+        {
+          "id": "vue-015-09",
+          "name": "Internationalization Plugins (vue-i18n)"
+        },
+        { "id": "vue-015-10", "name": "Form Libraries and Validation Plugins" },
+        {
+          "id": "vue-015-11",
+          "name": "UI Plugins (Vuetify, Element Plus, etc.)"
+        },
+        { "id": "vue-015-12", "name": "Animation Plugins" },
+        { "id": "vue-015-13", "name": "SEO and Meta Tag Plugins" },
+        { "id": "vue-015-14", "name": "Analytics Plugins" },
+        { "id": "vue-015-15", "name": "Plugins and SSR" },
+        { "id": "vue-015-16", "name": "Plugin Testing" },
+        { "id": "vue-015-17", "name": "Plugin Lifecycle" },
+        { "id": "vue-015-18", "name": "Plugin Performance" },
+        { "id": "vue-015-19", "name": "Best Practices for Plugins" },
+        { "id": "vue-015-20", "name": "Publishing Plugins" }
+      ]
+    },
+    {
+      "id": "vue-016",
+      "topic": "TypeScript with Vue.js",
+      "subtopics": [
+        { "id": "vue-016-01", "name": "Why TypeScript with Vue?" },
+        { "id": "vue-016-02", "name": "Setting up TypeScript in Vue" },
+        { "id": "vue-016-03", "name": "TypeScript Support in Vue SFCs" },
+        { "id": "vue-016-04", "name": "Type Inference and Annotations" },
+        { "id": "vue-016-05", "name": "Props and Emits Typing" },
+        { "id": "vue-016-06", "name": "Typing Refs and Reactive" },
+        { "id": "vue-016-07", "name": "Typing Computed and Watch" },
+        { "id": "vue-016-08", "name": "Component and Store Typing" },
+        { "id": "vue-016-09", "name": "TypeScript with Composition API" },
+        { "id": "vue-016-10", "name": "TypeScript with Options API" },
+        {
+          "id": "vue-016-11",
+          "name": "Using Vue CLI and Vite with TypeScript"
+        },
+        { "id": "vue-016-12", "name": "TypeScript Tooling (Volar, Vetur)" },
+        { "id": "vue-016-13", "name": "TypeScript with Vue Router" },
+        { "id": "vue-016-14", "name": "TypeScript with Pinia" },
+        { "id": "vue-016-15", "name": "TypeScript in Plugins" },
+        { "id": "vue-016-16", "name": "Advanced Types in Vue" },
+        { "id": "vue-016-17", "name": "TSX/JSX in Vue" },
+        { "id": "vue-016-18", "name": "Testing TypeScript Code" },
+        { "id": "vue-016-19", "name": "Type Safety Best Practices" },
+        {
+          "id": "vue-016-20",
+          "name": "Migration from JavaScript to TypeScript"
+        }
+      ]
+    },
+    {
+      "id": "vue-017",
+      "topic": "Testing Vue Applications",
+      "subtopics": [
+        { "id": "vue-017-01", "name": "Introduction to Testing in Vue" },
+        {
+          "id": "vue-017-02",
+          "name": "Types of Tests: Unit, Integration, E2E"
+        },
+        { "id": "vue-017-03", "name": "Vue Test Utils" },
+        { "id": "vue-017-04", "name": "Jest for Vue Testing" },
+        { "id": "vue-017-05", "name": "Vitest with Vue" },
+        { "id": "vue-017-06", "name": "Testing Library for Vue" },
+        { "id": "vue-017-07", "name": "Testing Components" },
+        { "id": "vue-017-08", "name": "Testing Props and Events" },
+        { "id": "vue-017-09", "name": "Testing Pinia Stores" },
+        { "id": "vue-017-10", "name": "Mocking and Stubs" },
+        { "id": "vue-017-11", "name": "Snapshot Testing" },
+        { "id": "vue-017-12", "name": "Testing Router" },
+        { "id": "vue-017-13", "name": "Testing Forms and Inputs" },
+        { "id": "vue-017-14", "name": "Testing Async Code" },
+        { "id": "vue-017-15", "name": "E2E Testing with Cypress" },
+        { "id": "vue-017-16", "name": "E2E Testing with Playwright" },
+        { "id": "vue-017-17", "name": "Test Coverage Tools" },
+        { "id": "vue-017-18", "name": "Continuous Integration and Testing" },
+        { "id": "vue-017-19", "name": "Debugging Tests" },
+        { "id": "vue-017-20", "name": "Best Practices in Testing" }
+      ]
+    },
+    {
+      "id": "vue-018",
+      "topic": "Vue CLI and Vite",
+      "subtopics": [
+        { "id": "vue-018-01", "name": "Introduction to Project Scaffolding" },
+        { "id": "vue-018-02", "name": "Vue CLI Overview" },
+        { "id": "vue-018-03", "name": "Vite Overview" },
+        { "id": "vue-018-04", "name": "Project Creation with Vue CLI" },
+        { "id": "vue-018-05", "name": "Project Creation with Vite" },
+        { "id": "vue-018-06", "name": "Configuring Vue CLI Projects" },
+        { "id": "vue-018-07", "name": "Configuring Vite Projects" },
+        { "id": "vue-018-08", "name": "Environment Variables" },
+        { "id": "vue-018-09", "name": "Customizing Build Process" },
+        { "id": "vue-018-10", "name": "Adding Plugins and Loaders" },
+        { "id": "vue-018-11", "name": "Optimizing Build Output" },
+        { "id": "vue-018-12", "name": "Hot Module Replacement (HMR)" },
+        { "id": "vue-018-13", "name": "Source Maps and Debugging" },
+        { "id": "vue-018-14", "name": "Legacy Support" },
+        { "id": "vue-018-15", "name": "Deploying Built Assets" },
+        { "id": "vue-018-16", "name": "Migrating from Vue CLI to Vite" },
+        { "id": "vue-018-17", "name": "Customizing Dev Server" },
+        { "id": "vue-018-18", "name": "Monorepo Support" },
+        { "id": "vue-018-19", "name": "Integrating with Testing Tools" },
+        { "id": "vue-018-20", "name": "Comparison and Best Practices" }
+      ]
+    },
+    {
+      "id": "vue-019",
+      "topic": "CSS and Styling in Vue.js",
+      "subtopics": [
+        { "id": "vue-019-01", "name": "Scoped CSS in SFCs" },
+        { "id": "vue-019-02", "name": "CSS Modules" },
+        { "id": "vue-019-03", "name": "Global Styles" },
+        { "id": "vue-019-04", "name": "Preprocessors (Sass, Less, Stylus)" },
+        { "id": "vue-019-05", "name": "Tailwind CSS with Vue" },
+        { "id": "vue-019-06", "name": "Using CSS-in-JS" },
+        { "id": "vue-019-07", "name": "Dynamic and Conditional Styles" },
+        { "id": "vue-019-08", "name": "Class and Style Bindings" },
+        { "id": "vue-019-09", "name": "Theming in Vue" },
+        { "id": "vue-019-10", "name": "BEM and Other Naming Conventions" },
+        { "id": "vue-019-11", "name": "Integrating UI Libraries" },
+        { "id": "vue-019-12", "name": "Responsive Design" },
+        { "id": "vue-019-13", "name": "CSS Variables in Vue" },
+        { "id": "vue-019-14", "name": "Shadow DOM and Vue" },
+        { "id": "vue-019-15", "name": "Accessibility and Styling" },
+        { "id": "vue-019-16", "name": "Testing Styles" },
+        { "id": "vue-019-17", "name": "Performance Optimization" },
+        { "id": "vue-019-18", "name": "Critical CSS" },
+        { "id": "vue-019-19", "name": "Linting CSS in Vue Projects" },
+        { "id": "vue-019-20", "name": "Best Practices in Styling" }
+      ]
+    },
+    {
+      "id": "vue-020",
+      "topic": "Performance Optimization",
+      "subtopics": [
+        { "id": "vue-020-01", "name": "Performance Overview" },
+        { "id": "vue-020-02", "name": "Code Splitting" },
+        { "id": "vue-020-03", "name": "Lazy Loading Components" },
+        { "id": "vue-020-04", "name": "Optimizing Computed Properties" },
+        { "id": "vue-020-05", "name": "Memoization Techniques" },
+        { "id": "vue-020-06", "name": "Virtual Scrolling" },
+        { "id": "vue-020-07", "name": "Optimizing v-for Rendering" },
+        { "id": "vue-020-08", "name": "Avoiding Unnecessary Renders" },
+        { "id": "vue-020-09", "name": "Optimizing Reactive State" },
+        { "id": "vue-020-10", "name": "Web Workers with Vue" },
+        { "id": "vue-020-11", "name": "Performance Profiling Tools" },
+        { "id": "vue-020-12", "name": "Bundle Size Analysis" },
+        { "id": "vue-020-13", "name": "Tree Shaking" },
+        { "id": "vue-020-14", "name": "Minification and Compression" },
+        { "id": "vue-020-15", "name": "Caching Strategies" },
+        { "id": "vue-020-16", "name": "SSR Performance Considerations" },
+        { "id": "vue-020-17", "name": "Optimizing Third-party Libraries" },
+        { "id": "vue-020-18", "name": "Code Splitting with Vite and Vue CLI" },
+        { "id": "vue-020-19", "name": "Mobile Performance Optimization" },
+        { "id": "vue-020-20", "name": "Best Practices in Performance" }
+      ]
+    },
+    {
+      "id": "vue-021",
+      "topic": "Server-Side Rendering (SSR) with Vue",
+      "subtopics": [
+        { "id": "vue-021-01", "name": "Introduction to SSR" },
+        { "id": "vue-021-02", "name": "Benefits and Drawbacks of SSR" },
+        { "id": "vue-021-03", "name": "Vue SSR Overview" },
+        { "id": "vue-021-04", "name": "Nuxt.js Introduction" },
+        { "id": "vue-021-05", "name": "Setting up SSR Projects" },
+        { "id": "vue-021-06", "name": "Rendering Lifecycle in SSR" },
+        { "id": "vue-021-07", "name": "SSR Routing" },
+        { "id": "vue-021-08", "name": "State Management in SSR" },
+        { "id": "vue-021-09", "name": "Hydration" },
+        { "id": "vue-021-10", "name": "API Calls in SSR" },
+        { "id": "vue-021-11", "name": "SEO Considerations" },
+        { "id": "vue-021-12", "name": "Caching in SSR" },
+        { "id": "vue-021-13", "name": "SSR Error Handling" },
+        { "id": "vue-021-14", "name": "SSR Deployment" },
+        { "id": "vue-021-15", "name": "Integrating SSR with Vite" },
+        { "id": "vue-021-16", "name": "Testing SSR Applications" },
+        { "id": "vue-021-17", "name": "Performance Optimization in SSR" },
+        { "id": "vue-021-18", "name": "Nuxt 3 Features" },
+        { "id": "vue-021-19", "name": "SSR Security Best Practices" },
+        { "id": "vue-021-20", "name": "Best Practices in SSR" }
+      ]
+    },
+    {
+      "id": "vue-022",
+      "topic": "PWA with Vue.js",
+      "subtopics": [
+        { "id": "vue-022-01", "name": "What is a PWA?" },
+        { "id": "vue-022-02", "name": "PWA Features Overview" },
+        { "id": "vue-022-03", "name": "PWA Plugin for Vue CLI" },
+        { "id": "vue-022-04", "name": "Service Workers" },
+        { "id": "vue-022-05", "name": "Web App Manifest" },
+        { "id": "vue-022-06", "name": "Caching Strategies" },
+        { "id": "vue-022-07", "name": "Offline Support" },
+        { "id": "vue-022-08", "name": "Push Notifications" },
+        { "id": "vue-022-09", "name": "Add to Home Screen" },
+        { "id": "vue-022-10", "name": "Testing PWA Features" },
+        { "id": "vue-022-11", "name": "Lighthouse Auditing" },
+        { "id": "vue-022-12", "name": "Manifest Configuration" },
+        { "id": "vue-022-13", "name": "PWA and Vite" },
+        { "id": "vue-022-14", "name": "PWA with Nuxt.js" },
+        { "id": "vue-022-15", "name": "Background Sync" },
+        { "id": "vue-022-16", "name": "Security in PWAs" },
+        { "id": "vue-022-17", "name": "Performance Optimization for PWAs" },
+        { "id": "vue-022-18", "name": "PWA Best Practices" },
+        { "id": "vue-022-19", "name": "Handling Updates in PWAs" },
+        { "id": "vue-022-20", "name": "Deploying PWAs" }
+      ]
+    },
+    {
+      "id": "vue-023",
+      "topic": "Internationalization (i18n)",
+      "subtopics": [
+        { "id": "vue-023-01", "name": "Introduction to Internationalization" },
+        { "id": "vue-023-02", "name": "vue-i18n Plugin" },
+        { "id": "vue-023-03", "name": "Setting up i18n in Vue" },
+        { "id": "vue-023-04", "name": "Locale Messages" },
+        { "id": "vue-023-05", "name": "Dynamic Locale Switching" },
+        { "id": "vue-023-06", "name": "Formatting Dates and Numbers" },
+        { "id": "vue-023-07", "name": "Pluralization" },
+        { "id": "vue-023-08", "name": "Fallback Locales" },
+        { "id": "vue-023-09", "name": "Lazy Loading Locales" },
+        { "id": "vue-023-10", "name": "i18n in Templates" },
+        { "id": "vue-023-11", "name": "i18n in Scripts" },
+        { "id": "vue-023-12", "name": "i18n in Components" },
+        { "id": "vue-023-13", "name": "i18n with Vue Router" },
+        { "id": "vue-023-14", "name": "Testing i18n Functionality" },
+        { "id": "vue-023-15", "name": "i18n in SSR and Nuxt.js" },
+        { "id": "vue-023-16", "name": "i18n Best Practices" },
+        { "id": "vue-023-17", "name": "Handling RTL Languages" },
+        { "id": "vue-023-18", "name": "Community i18n Libraries" },
+        { "id": "vue-023-19", "name": "Performance and i18n" },
+        { "id": "vue-023-20", "name": "Advanced i18n Patterns" }
+      ]
+    },
+    {
+      "id": "vue-024",
+      "topic": "Security in Vue.js Applications",
+      "subtopics": [
+        { "id": "vue-024-01", "name": "Common Security Issues in SPAs" },
+        { "id": "vue-024-02", "name": "Cross-Site Scripting (XSS)" },
+        { "id": "vue-024-03", "name": "Content Security Policy (CSP)" },
+        { "id": "vue-024-04", "name": "Sanitizing User Input" },
+        { "id": "vue-024-05", "name": "Safe HTML Binding" },
+        { "id": "vue-024-06", "name": "Securing Forms" },
+        { "id": "vue-024-07", "name": "Dependency Vulnerability Scanning" },
+        { "id": "vue-024-08", "name": "Best Practices for Secure Components" },
+        { "id": "vue-024-09", "name": "Managing Sensitive Data" },
+        { "id": "vue-024-10", "name": "Preventing CSRF in SPAs" },
+        { "id": "vue-024-11", "name": "Secure Routing Practices" },
+        { "id": "vue-024-12", "name": "Using HTTPS" },
+        { "id": "vue-024-13", "name": "Authentication Patterns Overview" },
+        { "id": "vue-024-14", "name": "Authorization Patterns Overview" },
+        { "id": "vue-024-15", "name": "Security Testing Tools" },
+        { "id": "vue-024-16", "name": "Security Headers" },
+        { "id": "vue-024-17", "name": "Secure Plugin Usage" },
+        { "id": "vue-024-18", "name": "Security in SSR Apps" },
+        { "id": "vue-024-19", "name": "Security in PWAs" },
+        { "id": "vue-024-20", "name": "Keeping Up with Security Advisories" }
+      ]
+    },
+    {
+      "id": "vue-025",
+      "topic": "Deployment and DevOps for Vue",
+      "subtopics": [
+        { "id": "vue-025-01", "name": "Build and Deployment Overview" },
+        {
+          "id": "vue-025-02",
+          "name": "Static Site Hosting (Netlify, Vercel, GitHub Pages)"
+        },
+        { "id": "vue-025-03", "name": "Traditional Hosting (Apache, Nginx)" },
+        {
+          "id": "vue-025-04",
+          "name": "CI/CD Pipelines (GitHub Actions, GitLab CI)"
+        },
+        { "id": "vue-025-05", "name": "Environment Variables in Deployment" },
+        { "id": "vue-025-06", "name": "Automated Testing in CI/CD" },
+        { "id": "vue-025-07", "name": "Deploying with Docker" },
+        { "id": "vue-025-08", "name": "Serverless Deployments" },
+        { "id": "vue-025-09", "name": "Monitoring Deployed Apps" },
+        { "id": "vue-025-10", "name": "Error Tracking and Logging" },
+        { "id": "vue-025-11", "name": "Rollback Strategies" },
+        { "id": "vue-025-12", "name": "Versioning and Releases" },
+        { "id": "vue-025-13", "name": "Performance Monitoring Tools" },
+        { "id": "vue-025-14", "name": "Automating Deployments" },
+        { "id": "vue-025-15", "name": "Deploying SSR and Nuxt.js Apps" },
+        { "id": "vue-025-16", "name": "Deploying PWAs" },
+        { "id": "vue-025-17", "name": "Securing the Deployment Pipeline" },
+        { "id": "vue-025-18", "name": "DNS and SSL Configuration" },
+        { "id": "vue-025-19", "name": "Cost Optimization" },
+        { "id": "vue-025-20", "name": "Best Practices in Deployment" }
+      ]
+    }
+  ]
+}

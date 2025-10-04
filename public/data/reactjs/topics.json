@@ -1,0 +1,720 @@
+{
+  "topics": [
+    {
+      "id": "react-001",
+      "topic": "Introduction to ReactJS",
+      "subtopics": [
+        { "id": "react-001-01", "name": "What is ReactJS?" },
+        { "id": "react-001-02", "name": "History and Evolution of React" },
+        { "id": "react-001-03", "name": "ReactJS vs Other Frameworks" },
+        { "id": "react-001-04", "name": "React's Popularity and Ecosystem" },
+        {
+          "id": "react-001-05",
+          "name": "React 18 and Beyond: Latest Features"
+        },
+        { "id": "react-001-06", "name": "React Core Principles" },
+        { "id": "react-001-07", "name": "Single Page Application (SPA)" },
+        { "id": "react-001-08", "name": "Declarative UI" },
+        { "id": "react-001-09", "name": "Component-Based Architecture" },
+        { "id": "react-001-10", "name": "Unidirectional Data Flow" },
+        { "id": "react-001-11", "name": "Virtual DOM" },
+        { "id": "react-001-12", "name": "JSX Overview" },
+        { "id": "react-001-13", "name": "React Official Documentation" },
+        { "id": "react-001-14", "name": "Major React Versions" },
+        { "id": "react-001-15", "name": "React Community & Support" },
+        { "id": "react-001-16", "name": "React Release Cycle" },
+        { "id": "react-001-17", "name": "React License and Open Source" },
+        { "id": "react-001-18", "name": "React Usage in Industry" },
+        { "id": "react-001-19", "name": "React Trends in 2025" },
+        { "id": "react-001-20", "name": "Setting Learning Goals" }
+      ]
+    },
+    {
+      "id": "react-002",
+      "topic": "Environment Setup",
+      "subtopics": [
+        { "id": "react-002-01", "name": "Node.js and npm Installation" },
+        {
+          "id": "react-002-02",
+          "name": "Creating a React App with Create React App (CRA)"
+        },
+        { "id": "react-002-03", "name": "Vite and Modern Alternatives" },
+        { "id": "react-002-04", "name": "Folder Structure Best Practices" },
+        { "id": "react-002-05", "name": "Package.json Fundamentals" },
+        { "id": "react-002-06", "name": "Installing Dependencies" },
+        { "id": "react-002-07", "name": "Running Development Server" },
+        { "id": "react-002-08", "name": "Using npm vs yarn vs pnpm" },
+        { "id": "react-002-09", "name": "Editor Setup (VS Code, Extensions)" },
+        { "id": "react-002-10", "name": "ESLint and Prettier Configuration" },
+        { "id": "react-002-11", "name": "Babel and Webpack Basics" },
+        { "id": "react-002-12", "name": "Environment Variables in React" },
+        { "id": "react-002-13", "name": "Setting up Source Control (Git)" },
+        { "id": "react-002-14", "name": "Project Initialization Scripts" },
+        { "id": "react-002-15", "name": "Using npx for React Apps" },
+        { "id": "react-002-16", "name": "Upgrading React Versions" },
+        { "id": "react-002-17", "name": "React DevTools Installation" },
+        { "id": "react-002-18", "name": "Cross-Platform Compatibility" },
+        { "id": "react-002-19", "name": "Troubleshooting Common Setup Issues" },
+        { "id": "react-002-20", "name": "Monorepos and Workspaces Overview" }
+      ]
+    },
+    {
+      "id": "react-003",
+      "topic": "JSX and Rendering Elements",
+      "subtopics": [
+        { "id": "react-003-01", "name": "Understanding JSX Syntax" },
+        { "id": "react-003-02", "name": "Embedding Expressions in JSX" },
+        { "id": "react-003-03", "name": "JSX Attributes and Props" },
+        { "id": "react-003-04", "name": "Rendering Elements" },
+        { "id": "react-003-05", "name": "React.createElement vs JSX" },
+        { "id": "react-003-06", "name": "JSX as Expressions" },
+        { "id": "react-003-07", "name": "Specifying Children with JSX" },
+        { "id": "react-003-08", "name": "JSX Gotchas (className, htmlFor)" },
+        { "id": "react-003-09", "name": "Fragments in JSX" },
+        { "id": "react-003-10", "name": "JSX Conditionals (ternaries, &&)" },
+        { "id": "react-003-11", "name": "JSX Loops (map, keys)" },
+        { "id": "react-003-12", "name": "JSX Comments" },
+        { "id": "react-003-13", "name": "Dynamic Attributes in JSX" },
+        { "id": "react-003-14", "name": "JSX Spread Operator" },
+        { "id": "react-003-15", "name": "JSX with TypeScript" },
+        { "id": "react-003-16", "name": "JSX Accessibility" },
+        { "id": "react-003-17", "name": "JSX and Styling" },
+        { "id": "react-003-18", "name": "JSX Restrictions" },
+        { "id": "react-003-19", "name": "Custom JSX Pragmas" },
+        { "id": "react-003-20", "name": "JSX Compilation Process" }
+      ]
+    },
+    {
+      "id": "react-004",
+      "topic": "React Components: Basics",
+      "subtopics": [
+        { "id": "react-004-01", "name": "What is a Component?" },
+        { "id": "react-004-02", "name": "Function Components" },
+        { "id": "react-004-03", "name": "Class Components" },
+        { "id": "react-004-04", "name": "Component Naming Conventions" },
+        { "id": "react-004-05", "name": "Props: Passing Data to Components" },
+        { "id": "react-004-06", "name": "Default Props" },
+        { "id": "react-004-07", "name": "Prop Types (with PropTypes)" },
+        { "id": "react-004-08", "name": "Prop Types with TypeScript" },
+        { "id": "react-004-09", "name": "Component Composition" },
+        { "id": "react-004-10", "name": "Children Prop" },
+        { "id": "react-004-11", "name": "Reusable Components" },
+        { "id": "react-004-12", "name": "Pure Components" },
+        { "id": "react-004-13", "name": "Stateless Components" },
+        { "id": "react-004-14", "name": "Stateful Components" },
+        { "id": "react-004-15", "name": "Component Lifecycle (Overview)" },
+        { "id": "react-004-16", "name": "Component Files and Modularization" },
+        { "id": "react-004-17", "name": "Component Export/Import" },
+        { "id": "react-004-18", "name": "Naming and Folder Structure" },
+        {
+          "id": "react-004-19",
+          "name": "Functional vs Class Components (When to Use)"
+        },
+        { "id": "react-004-20", "name": "Component Best Practices" }
+      ]
+    },
+    {
+      "id": "react-005",
+      "topic": "React Component Lifecycle",
+      "subtopics": [
+        { "id": "react-005-01", "name": "Component Lifecycle Phases" },
+        { "id": "react-005-02", "name": "Mounting Phase Methods" },
+        { "id": "react-005-03", "name": "Updating Phase Methods" },
+        { "id": "react-005-04", "name": "Unmounting Phase Methods" },
+        { "id": "react-005-05", "name": "Constructor and Initialization" },
+        { "id": "react-005-06", "name": "componentDidMount" },
+        { "id": "react-005-07", "name": "componentDidUpdate" },
+        { "id": "react-005-08", "name": "componentWillUnmount" },
+        { "id": "react-005-09", "name": "getDerivedStateFromProps" },
+        { "id": "react-005-10", "name": "shouldComponentUpdate" },
+        { "id": "react-005-11", "name": "getSnapshotBeforeUpdate" },
+        {
+          "id": "react-005-12",
+          "name": "Lifecycle in Function Components (Hooks)"
+        },
+        { "id": "react-005-13", "name": "useEffect as Lifecycle Replacement" },
+        { "id": "react-005-14", "name": "Cleanup Logic in useEffect" },
+        { "id": "react-005-15", "name": "Legacy Lifecycle Methods" },
+        { "id": "react-005-16", "name": "Lifecycle Pitfalls" },
+        { "id": "react-005-17", "name": "Debugging Lifecycle Issues" },
+        { "id": "react-005-18", "name": "Best Practices for Lifecycle" },
+        { "id": "react-005-19", "name": "Lifecycle and Performance" },
+        { "id": "react-005-20", "name": "Testing Lifecycle Methods" }
+      ]
+    },
+    {
+      "id": "react-006",
+      "topic": "State Management in React",
+      "subtopics": [
+        { "id": "react-006-01", "name": "What is State?" },
+        { "id": "react-006-02", "name": "useState Hook" },
+        { "id": "react-006-03", "name": "Setting Initial State" },
+        { "id": "react-006-04", "name": "Updating State" },
+        { "id": "react-006-05", "name": "Batching State Updates" },
+        { "id": "react-006-06", "name": "State as an Object" },
+        { "id": "react-006-07", "name": "State as a Function" },
+        { "id": "react-006-08", "name": "Lifting State Up" },
+        { "id": "react-006-09", "name": "useReducer Hook" },
+        { "id": "react-006-10", "name": "useState vs useReducer" },
+        { "id": "react-006-11", "name": "State in Class Components" },
+        { "id": "react-006-12", "name": "setState Asynchronous Nature" },
+        { "id": "react-006-13", "name": "Derived State" },
+        { "id": "react-006-14", "name": "Global vs Local State" },
+        { "id": "react-006-15", "name": "State Persistence" },
+        { "id": "react-006-16", "name": "State Immutability" },
+        { "id": "react-006-17", "name": "Avoiding State Mutation" },
+        { "id": "react-006-18", "name": "Debugging State Issues" },
+        { "id": "react-006-19", "name": "State and Performance" },
+        { "id": "react-006-20", "name": "Testing State Changes" }
+      ]
+    },
+    {
+      "id": "react-007",
+      "topic": "Handling Events in React",
+      "subtopics": [
+        { "id": "react-007-01", "name": "React Event System" },
+        { "id": "react-007-02", "name": "Handling Click Events" },
+        { "id": "react-007-03", "name": "Handling Input Events" },
+        { "id": "react-007-04", "name": "Event Binding in Class Components" },
+        { "id": "react-007-05", "name": "Using Arrow Functions in Events" },
+        { "id": "react-007-06", "name": "Event Object in React" },
+        { "id": "react-007-07", "name": "Synthetic Events" },
+        { "id": "react-007-08", "name": "Event Propagation" },
+        { "id": "react-007-09", "name": "Default Behavior Prevention" },
+        { "id": "react-007-10", "name": "Passing Arguments to Event Handlers" },
+        { "id": "react-007-11", "name": "Custom Events" },
+        { "id": "react-007-12", "name": "Event Delegation" },
+        { "id": "react-007-13", "name": "Keyboard and Form Events" },
+        { "id": "react-007-14", "name": "Focus and Blur Events" },
+        { "id": "react-007-15", "name": "Touch and Pointer Events" },
+        { "id": "react-007-16", "name": "Clipboard Events" },
+        { "id": "react-007-17", "name": "Event Pooling" },
+        { "id": "react-007-18", "name": "Accessibility with Events" },
+        { "id": "react-007-19", "name": "Testing Event Handlers" },
+        { "id": "react-007-20", "name": "Debugging Event Issues" }
+      ]
+    },
+    {
+      "id": "react-008",
+      "topic": "Conditional Rendering",
+      "subtopics": [
+        { "id": "react-008-01", "name": "What is Conditional Rendering?" },
+        { "id": "react-008-02", "name": "if-else in JSX (ternary, &&)" },
+        { "id": "react-008-03", "name": "Conditional Component Rendering" },
+        { "id": "react-008-04", "name": "Element Variables" },
+        { "id": "react-008-05", "name": "Inline If with Logical && Operator" },
+        {
+          "id": "react-008-06",
+          "name": "Preventing Component Rendering (null/false)"
+        },
+        { "id": "react-008-07", "name": "Guard Clauses in Render" },
+        { "id": "react-008-08", "name": "Short-circuit Evaluation" },
+        { "id": "react-008-09", "name": "Switch Case in Rendering" },
+        {
+          "id": "react-008-10",
+          "name": "Higher Order Components for Conditional UI"
+        },
+        { "id": "react-008-11", "name": "Render Props for Conditionals" },
+        { "id": "react-008-12", "name": "Conditional Styling" },
+        { "id": "react-008-13", "name": "Conditional Classes" },
+        { "id": "react-008-14", "name": "Conditional Animations" },
+        {
+          "id": "react-008-15",
+          "name": "Conditional Rendering with TypeScript"
+        },
+        {
+          "id": "react-008-16",
+          "name": "Conditional Rendering and Performance"
+        },
+        { "id": "react-008-17", "name": "Testing Conditionals" },
+        { "id": "react-008-18", "name": "Best Practices for Conditionals" },
+        { "id": "react-008-19", "name": "Conditional Rendering Patterns" },
+        { "id": "react-008-20", "name": "Debugging Conditional Rendering" }
+      ]
+    },
+    {
+      "id": "react-009",
+      "topic": "Lists and Keys",
+      "subtopics": [
+        { "id": "react-009-01", "name": "Rendering Lists with map" },
+        { "id": "react-009-02", "name": "Using Keys in Lists" },
+        { "id": "react-009-03", "name": "Unique Keys Requirement" },
+        { "id": "react-009-04", "name": "Index as Key: Pros and Cons" },
+        { "id": "react-009-05", "name": "Dynamic Lists" },
+        { "id": "react-009-06", "name": "Nested Lists" },
+        { "id": "react-009-07", "name": "Filtering and Mapping Data" },
+        { "id": "react-009-08", "name": "Sorting Lists" },
+        { "id": "react-009-09", "name": "Updating List Items" },
+        { "id": "react-009-10", "name": "Removing List Items" },
+        { "id": "react-009-11", "name": "Adding List Items" },
+        { "id": "react-009-12", "name": "Rendering Components in Lists" },
+        { "id": "react-009-13", "name": "Flat Lists and Sectioned Lists" },
+        { "id": "react-009-14", "name": "Performance with Large Lists" },
+        {
+          "id": "react-009-15",
+          "name": "List Virtualization (react-window, react-virtualized)"
+        },
+        { "id": "react-009-16", "name": "Keys and Re-rendering" },
+        { "id": "react-009-17", "name": "List Rendering Best Practices" },
+        { "id": "react-009-18", "name": "Testing List Rendering" },
+        { "id": "react-009-19", "name": "Lists with TypeScript" },
+        { "id": "react-009-20", "name": "Debugging List Issues" }
+      ]
+    },
+    {
+      "id": "react-010",
+      "topic": "Forms and Form Handling",
+      "subtopics": [
+        {
+          "id": "react-010-01",
+          "name": "Controlled vs Uncontrolled Components"
+        },
+        { "id": "react-010-02", "name": "Handling Input Fields" },
+        { "id": "react-010-03", "name": "Managing Form State" },
+        { "id": "react-010-04", "name": "Handling Checkboxes and Radios" },
+        { "id": "react-010-05", "name": "Handling Select Dropdowns" },
+        { "id": "react-010-06", "name": "Handling Textareas" },
+        { "id": "react-010-07", "name": "Form Submission Handling" },
+        { "id": "react-010-08", "name": "Validation in React Forms" },
+        { "id": "react-010-09", "name": "Client-side Validation Techniques" },
+        { "id": "react-010-10", "name": "Formik and Other Form Libraries" },
+        { "id": "react-010-11", "name": "Yup for Schema Validation" },
+        { "id": "react-010-12", "name": "React Hook Form Library" },
+        { "id": "react-010-13", "name": "Dynamic Form Fields" },
+        { "id": "react-010-14", "name": "Error Handling in Forms" },
+        { "id": "react-010-15", "name": "Form Reset and Clear" },
+        { "id": "react-010-16", "name": "Submitting Forms with Enter Key" },
+        { "id": "react-010-17", "name": "Accessibility in Forms" },
+        { "id": "react-010-18", "name": "Forms with TypeScript" },
+        { "id": "react-010-19", "name": "Testing Forms" },
+        { "id": "react-010-20", "name": "Best Practices for Forms" }
+      ]
+    },
+    {
+      "id": "react-011",
+      "topic": "React Hooks: Fundamentals",
+      "subtopics": [
+        { "id": "react-011-01", "name": "What are Hooks?" },
+        { "id": "react-011-02", "name": "Rules of Hooks" },
+        { "id": "react-011-03", "name": "useState Detailed" },
+        { "id": "react-011-04", "name": "useEffect Detailed" },
+        { "id": "react-011-05", "name": "useContext" },
+        { "id": "react-011-06", "name": "useRef" },
+        { "id": "react-011-07", "name": "useCallback" },
+        { "id": "react-011-08", "name": "useMemo" },
+        { "id": "react-011-09", "name": "useReducer" },
+        { "id": "react-011-10", "name": "useLayoutEffect" },
+        { "id": "react-011-11", "name": "useImperativeHandle" },
+        { "id": "react-011-12", "name": "Custom Hooks" },
+        { "id": "react-011-13", "name": "Hook Dependency Arrays" },
+        { "id": "react-011-14", "name": "Hooks in TypeScript" },
+        { "id": "react-011-15", "name": "Hooks Best Practices" },
+        { "id": "react-011-16", "name": "Avoiding Common Hook Pitfalls" },
+        { "id": "react-011-17", "name": "Testing Hooks" },
+        { "id": "react-011-18", "name": "React DevTools for Hooks" },
+        { "id": "react-011-19", "name": "Hooks vs Class Lifecycle" },
+        { "id": "react-011-20", "name": "Latest Additions to Hooks (2025)" }
+      ]
+    },
+    {
+      "id": "react-012",
+      "topic": "React Context API",
+      "subtopics": [
+        { "id": "react-012-01", "name": "What is Context?" },
+        { "id": "react-012-02", "name": "Creating Context" },
+        { "id": "react-012-03", "name": "Providing Context" },
+        { "id": "react-012-04", "name": "Consuming Context" },
+        { "id": "react-012-05", "name": "Nested Context Providers" },
+        { "id": "react-012-06", "name": "Context and useContext Hook" },
+        { "id": "react-012-07", "name": "Default Context Values" },
+        { "id": "react-012-08", "name": "Context Performance Considerations" },
+        { "id": "react-012-09", "name": "Context for Theming" },
+        { "id": "react-012-10", "name": "Context for Authentication" },
+        { "id": "react-012-11", "name": "Context vs Props Drilling" },
+        { "id": "react-012-12", "name": "Updating Context Values" },
+        { "id": "react-012-13", "name": "Context and TypeScript" },
+        { "id": "react-012-14", "name": "Context and Memoization" },
+        { "id": "react-012-15", "name": "Multiple Contexts" },
+        { "id": "react-012-16", "name": "Context Limitations" },
+        { "id": "react-012-17", "name": "Testing Context-based Components" },
+        { "id": "react-012-18", "name": "Context and Redux Comparison" },
+        { "id": "react-012-19", "name": "Context API Patterns" },
+        { "id": "react-012-20", "name": "Debugging Context Issues" }
+      ]
+    },
+    {
+      "id": "react-013",
+      "topic": "Styling in React",
+      "subtopics": [
+        { "id": "react-013-01", "name": "CSS in JS Overview" },
+        { "id": "react-013-02", "name": "Inline Styling in React" },
+        { "id": "react-013-03", "name": "CSS Modules" },
+        { "id": "react-013-04", "name": "Styled-components" },
+        { "id": "react-013-05", "name": "Emotion CSS-in-JS" },
+        { "id": "react-013-06", "name": "Global Styles in React" },
+        { "id": "react-013-07", "name": "Theme Providers" },
+        { "id": "react-013-08", "name": "Responsive Design in React" },
+        { "id": "react-013-09", "name": "Styled System and Utility Libraries" },
+        { "id": "react-013-10", "name": "Sass/SCSS with React" },
+        { "id": "react-013-11", "name": "Tailwind CSS Integration" },
+        { "id": "react-013-12", "name": "Material UI Styling" },
+        { "id": "react-013-13", "name": "Ant Design and Other UI Kits" },
+        { "id": "react-013-14", "name": "CSS Animations in React" },
+        { "id": "react-013-15", "name": "Classnames Utility" },
+        { "id": "react-013-16", "name": "Dynamic Styling" },
+        { "id": "react-013-17", "name": "Dark Mode Implementation" },
+        { "id": "react-013-18", "name": "Styled Props" },
+        { "id": "react-013-19", "name": "Testing Styled Components" },
+        { "id": "react-013-20", "name": "Best Practices for Styling" }
+      ]
+    },
+    {
+      "id": "react-014",
+      "topic": "React Routing",
+      "subtopics": [
+        { "id": "react-014-01", "name": "What is Routing?" },
+        { "id": "react-014-02", "name": "React Router v6 Overview" },
+        { "id": "react-014-03", "name": "Setting up React Router" },
+        { "id": "react-014-04", "name": "Route Configuration" },
+        { "id": "react-014-05", "name": "Nested Routes" },
+        { "id": "react-014-06", "name": "Route Parameters" },
+        { "id": "react-014-07", "name": "Query Parameters" },
+        { "id": "react-014-08", "name": "Redirects and Navigations" },
+        { "id": "react-014-09", "name": "useNavigate and useLocation Hooks" },
+        { "id": "react-014-10", "name": "Dynamic Routing" },
+        { "id": "react-014-11", "name": "Protected Routes" },
+        { "id": "react-014-12", "name": "Lazy Loaded Routes" },
+        { "id": "react-014-13", "name": "Route-based Code Splitting" },
+        { "id": "react-014-14", "name": "404 Pages and Fallbacks" },
+        { "id": "react-014-15", "name": "Linking with NavLink and Link" },
+        { "id": "react-014-16", "name": "Navigation Guards and Hooks" },
+        { "id": "react-014-17", "name": "BrowserRouter vs HashRouter" },
+        { "id": "react-014-18", "name": "MemoryRouter for Testing" },
+        { "id": "react-014-19", "name": "Testing Routes" },
+        { "id": "react-014-20", "name": "Migration from v5 to v6+" }
+      ]
+    },
+    {
+      "id": "react-015",
+      "topic": "Performance Optimization",
+      "subtopics": [
+        { "id": "react-015-01", "name": "React Rendering Performance" },
+        { "id": "react-015-02", "name": "Reconciliation Process" },
+        { "id": "react-015-03", "name": "React.memo and Memoization" },
+        {
+          "id": "react-015-04",
+          "name": "useMemo and useCallback for Optimization"
+        },
+        {
+          "id": "react-015-05",
+          "name": "PureComponent and shouldComponentUpdate"
+        },
+        { "id": "react-015-06", "name": "Avoiding Unnecessary Renders" },
+        { "id": "react-015-07", "name": "Virtualization for Large Lists" },
+        { "id": "react-015-08", "name": "Code Splitting and Lazy Loading" },
+        { "id": "react-015-09", "name": "React.lazy and Suspense" },
+        { "id": "react-015-10", "name": "Concurrent Mode (React 18+)" },
+        { "id": "react-015-11", "name": "useTransition (React 18+)" },
+        { "id": "react-015-12", "name": "useDeferredValue" },
+        { "id": "react-015-13", "name": "Data Fetching Strategies" },
+        { "id": "react-015-14", "name": "Batched Updates" },
+        { "id": "react-015-15", "name": "React Profiler" },
+        { "id": "react-015-16", "name": "Browser Performance Tools" },
+        { "id": "react-015-17", "name": "Image Optimization" },
+        { "id": "react-015-18", "name": "Avoiding Memory Leaks" },
+        { "id": "react-015-19", "name": "Performance Testing" },
+        {
+          "id": "react-015-20",
+          "name": "Best Practices for Optimized React Apps"
+        }
+      ]
+    },
+    {
+      "id": "react-016",
+      "topic": "React with TypeScript",
+      "subtopics": [
+        { "id": "react-016-01", "name": "Why TypeScript with React?" },
+        { "id": "react-016-02", "name": "Setting up TypeScript in React" },
+        { "id": "react-016-03", "name": "TypeScript Basics Recap" },
+        { "id": "react-016-04", "name": "Typing Props" },
+        { "id": "react-016-05", "name": "Typing State" },
+        { "id": "react-016-06", "name": "Typing Function Components" },
+        { "id": "react-016-07", "name": "Typing Class Components" },
+        { "id": "react-016-08", "name": "Using Generics in Components" },
+        { "id": "react-016-09", "name": "Typing useState and useReducer" },
+        { "id": "react-016-10", "name": "Typing useRef and useContext" },
+        { "id": "react-016-11", "name": "Type Inference in React" },
+        { "id": "react-016-12", "name": "Type Safety in Event Handlers" },
+        { "id": "react-016-13", "name": "Third-party TypeScript Types" },
+        { "id": "react-016-14", "name": "Migrating from JS to TS" },
+        { "id": "react-016-15", "name": "Best Practices with TypeScript" },
+        { "id": "react-016-16", "name": "TypeScript and Forms" },
+        { "id": "react-016-17", "name": "TypeScript and Context API" },
+        { "id": "react-016-18", "name": "TypeScript and Hooks" },
+        { "id": "react-016-19", "name": "Testing with TypeScript" },
+        { "id": "react-016-20", "name": "TypeScript in Modern React (2025+)" }
+      ]
+    },
+    {
+      "id": "react-017",
+      "topic": "React Testing",
+      "subtopics": [
+        { "id": "react-017-01", "name": "Why Test React Apps?" },
+        { "id": "react-017-02", "name": "Jest Testing Framework" },
+        { "id": "react-017-03", "name": "React Testing Library" },
+        { "id": "react-017-04", "name": "Enzyme (Legacy)" },
+        { "id": "react-017-05", "name": "Unit Testing Components" },
+        { "id": "react-017-06", "name": "Snapshot Testing" },
+        { "id": "react-017-07", "name": "Testing Hooks" },
+        { "id": "react-017-08", "name": "Testing Events" },
+        { "id": "react-017-09", "name": "Mocking Functions and Modules" },
+        { "id": "react-017-10", "name": "Integration Testing" },
+        {
+          "id": "react-017-11",
+          "name": "End-to-End Testing Tools (Cypress, Playwright)"
+        },
+        { "id": "react-017-12", "name": "Testing Async Logic" },
+        { "id": "react-017-13", "name": "Coverage Reporting" },
+        { "id": "react-017-14", "name": "Testing Error Boundaries" },
+        { "id": "react-017-15", "name": "CI/CD with Testing" },
+        { "id": "react-017-16", "name": "Testing Context and Providers" },
+        { "id": "react-017-17", "name": "Test-Driven Development in React" },
+        { "id": "react-017-18", "name": "Testing with TypeScript" },
+        { "id": "react-017-19", "name": "Debugging Failing Tests" },
+        { "id": "react-017-20", "name": "Testing Best Practices" }
+      ]
+    },
+    {
+      "id": "react-018",
+      "topic": "Error Handling in React",
+      "subtopics": [
+        { "id": "react-018-01", "name": "Types of Errors in React" },
+        { "id": "react-018-02", "name": "Error Boundaries" },
+        { "id": "react-018-03", "name": "Catching Errors in Components" },
+        { "id": "react-018-04", "name": "Try-Catch in Event Handlers" },
+        { "id": "react-018-05", "name": "Error Handling with Hooks" },
+        { "id": "react-018-06", "name": "Displaying Error Messages" },
+        { "id": "react-018-07", "name": "Global Error Handling" },
+        { "id": "react-018-08", "name": "Handling Errors in Async Operations" },
+        { "id": "react-018-09", "name": "Error Logging Tools" },
+        { "id": "react-018-10", "name": "Custom Error Components" },
+        { "id": "react-018-11", "name": "Fallback UI for Errors" },
+        { "id": "react-018-12", "name": "Testing Error Handling" },
+        { "id": "react-018-13", "name": "Error Handling in TypeScript" },
+        { "id": "react-018-14", "name": "Error Boundaries vs Try-Catch" },
+        { "id": "react-018-15", "name": "Unhandled Promise Rejections" },
+        { "id": "react-018-16", "name": "Error Handling Patterns" },
+        { "id": "react-018-17", "name": "Best Practices for Error Handling" },
+        { "id": "react-018-18", "name": "Debugging Error Boundaries" },
+        { "id": "react-018-19", "name": "Error Handling in Production" },
+        { "id": "react-018-20", "name": "Error Reporting Tools (Sentry, etc.)" }
+      ]
+    },
+    {
+      "id": "react-019",
+      "topic": "React Portals and Advanced Patterns",
+      "subtopics": [
+        { "id": "react-019-01", "name": "What are React Portals?" },
+        { "id": "react-019-02", "name": "Creating Portals" },
+        { "id": "react-019-03", "name": "Use Cases for Portals" },
+        { "id": "react-019-04", "name": "Modals and Tooltips with Portals" },
+        { "id": "react-019-05", "name": "Portal Event Bubbling" },
+        { "id": "react-019-06", "name": "Forwarding Refs" },
+        { "id": "react-019-07", "name": "Higher-Order Components (HOCs)" },
+        { "id": "react-019-08", "name": "Render Props Pattern" },
+        { "id": "react-019-09", "name": "Compound Component Pattern" },
+        {
+          "id": "react-019-10",
+          "name": "Controlled vs Uncontrolled Components"
+        },
+        { "id": "react-019-11", "name": "Provider Pattern" },
+        { "id": "react-019-12", "name": "Inversion of Control" },
+        { "id": "react-019-13", "name": "Reusing Logic with Hooks" },
+        { "id": "react-019-14", "name": "State Reducer Pattern" },
+        { "id": "react-019-15", "name": "Function as Child Pattern" },
+        { "id": "react-019-16", "name": "Custom Hooks for Advanced Patterns" },
+        { "id": "react-019-17", "name": "Testing Advanced Patterns" },
+        { "id": "react-019-18", "name": "Portals and Accessibility" },
+        { "id": "react-019-19", "name": "Performance with Advanced Patterns" },
+        { "id": "react-019-20", "name": "Best Practices for Advanced Patterns" }
+      ]
+    },
+    {
+      "id": "react-020",
+      "topic": "React Suspense and Concurrent Features",
+      "subtopics": [
+        { "id": "react-020-01", "name": "What is React Suspense?" },
+        { "id": "react-020-02", "name": "Suspense for Data Fetching" },
+        { "id": "react-020-03", "name": "React.lazy for Code Splitting" },
+        { "id": "react-020-04", "name": "Suspense Fallbacks" },
+        { "id": "react-020-05", "name": "Concurrent Features in React 18+" },
+        { "id": "react-020-06", "name": "useTransition Hook" },
+        { "id": "react-020-07", "name": "useDeferredValue Hook" },
+        { "id": "react-020-08", "name": "Concurrent Rendering" },
+        { "id": "react-020-09", "name": "startTransition API" },
+        { "id": "react-020-10", "name": "SuspenseList Component" },
+        { "id": "react-020-11", "name": "Error Boundaries with Suspense" },
+        { "id": "react-020-12", "name": "Server-side Rendering with Suspense" },
+        {
+          "id": "react-020-13",
+          "name": "Data Fetching Libraries (SWR, React Query)"
+        },
+        { "id": "react-020-14", "name": "Concurrent UI Patterns" },
+        { "id": "react-020-15", "name": "Suspense and Testing" },
+        { "id": "react-020-16", "name": "Suspense for Images and Assets" },
+        { "id": "react-020-17", "name": "Future of Suspense" },
+        { "id": "react-020-18", "name": "Suspense Limitations" },
+        { "id": "react-020-19", "name": "Debugging Suspense Issues" },
+        { "id": "react-020-20", "name": "Best Practices with Suspense" }
+      ]
+    },
+    {
+      "id": "react-021",
+      "topic": "Server-Side Rendering (SSR) & Static Site Generation (SSG)",
+      "subtopics": [
+        { "id": "react-021-01", "name": "What is SSR and SSG?" },
+        { "id": "react-021-02", "name": "Hydration in React" },
+        { "id": "react-021-03", "name": "ReactDOMServer API" },
+        { "id": "react-021-04", "name": "Next.js for SSR/SSG" },
+        { "id": "react-021-05", "name": "Frameworks: Gatsby, Remix" },
+        { "id": "react-021-06", "name": "Static Exporting" },
+        {
+          "id": "react-021-07",
+          "name": "Incremental Static Regeneration (ISR)"
+        },
+        { "id": "react-021-08", "name": "Data Fetching in SSR/SSG" },
+        { "id": "react-021-09", "name": "SSR/SSG and SEO" },
+        { "id": "react-021-10", "name": "Dynamic vs Static Rendering" },
+        { "id": "react-021-11", "name": "Code Splitting in SSR/SSG" },
+        { "id": "react-021-12", "name": "SSR/SSG and Performance" },
+        { "id": "react-021-13", "name": "SSR/SSG and Suspense" },
+        { "id": "react-021-14", "name": "SSR/SSG Deployment Basics" },
+        { "id": "react-021-15", "name": "SSR/SSG with TypeScript" },
+        { "id": "react-021-16", "name": "Testing SSR/SSG Apps" },
+        { "id": "react-021-17", "name": "SSR/SSG Best Practices" },
+        { "id": "react-021-18", "name": "SSR/SSG Security" },
+        { "id": "react-021-19", "name": "Debugging SSR/SSG Issues" },
+        { "id": "react-021-20", "name": "Future of SSR/SSG in React" }
+      ]
+    },
+    {
+      "id": "react-022",
+      "topic": "State Management Libraries",
+      "subtopics": [
+        { "id": "react-022-01", "name": "Why State Management Libraries?" },
+        { "id": "react-022-02", "name": "Redux: Core Concepts" },
+        { "id": "react-022-03", "name": "Redux Toolkit" },
+        { "id": "react-022-04", "name": "Redux vs Context API" },
+        { "id": "react-022-05", "name": "Zustand Overview" },
+        { "id": "react-022-06", "name": "Jotai Overview" },
+        { "id": "react-022-07", "name": "Recoil Overview" },
+        { "id": "react-022-08", "name": "MobX Overview" },
+        { "id": "react-022-09", "name": "Choosing the Right State Library" },
+        { "id": "react-022-10", "name": "Redux Thunk and Middleware" },
+        { "id": "react-022-11", "name": "Redux DevTools" },
+        { "id": "react-022-12", "name": "Global State Patterns" },
+        {
+          "id": "react-022-13",
+          "name": "Using State Libraries with TypeScript"
+        },
+        { "id": "react-022-14", "name": "Testing State Libraries" },
+        { "id": "react-022-15", "name": "Performance Considerations" },
+        { "id": "react-022-16", "name": "Persisting State" },
+        { "id": "react-022-17", "name": "State Library Best Practices" },
+        { "id": "react-022-18", "name": "State Library in Large Projects" },
+        { "id": "react-022-19", "name": "State Library Migration" },
+        { "id": "react-022-20", "name": "Debugging State Management" }
+      ]
+    },
+    {
+      "id": "react-023",
+      "topic": "React Animations",
+      "subtopics": [
+        { "id": "react-023-01", "name": "Why Animations in React?" },
+        { "id": "react-023-02", "name": "CSS Transitions in React" },
+        { "id": "react-023-03", "name": "React Transition Group" },
+        { "id": "react-023-04", "name": "React Spring" },
+        { "id": "react-023-05", "name": "Framer Motion" },
+        { "id": "react-023-06", "name": "Animation Triggers" },
+        { "id": "react-023-07", "name": "Animating Mount/Unmount" },
+        { "id": "react-023-08", "name": "Keyframes Animations" },
+        { "id": "react-023-09", "name": "SVG Animations" },
+        { "id": "react-023-10", "name": "Scroll-based Animations" },
+        { "id": "react-023-11", "name": "Performance and Animations" },
+        { "id": "react-023-12", "name": "Declarative Animations" },
+        { "id": "react-023-13", "name": "Animation Libraries Comparison" },
+        { "id": "react-023-14", "name": "Testing Animations" },
+        { "id": "react-023-15", "name": "Accessibility in Animations" },
+        { "id": "react-023-16", "name": "Animating Lists and Items" },
+        { "id": "react-023-17", "name": "Chained and Staggered Animations" },
+        { "id": "react-023-18", "name": "Animations in TypeScript" },
+        { "id": "react-023-19", "name": "Debugging Animation Issues" },
+        { "id": "react-023-20", "name": "Best Practices for Animations" }
+      ]
+    },
+    {
+      "id": "react-024",
+      "topic": "Accessibility (a11y) in React",
+      "subtopics": [
+        { "id": "react-024-01", "name": "What is Accessibility?" },
+        { "id": "react-024-02", "name": "ARIA Roles and Attributes" },
+        { "id": "react-024-03", "name": "Semantic HTML in React" },
+        { "id": "react-024-04", "name": "Keyboard Navigation" },
+        { "id": "react-024-05", "name": "Focus Management" },
+        { "id": "react-024-06", "name": "Screen Readers and React" },
+        { "id": "react-024-07", "name": "Accessible Forms" },
+        { "id": "react-024-08", "name": "Accessible Modals and Dialogs" },
+        {
+          "id": "react-024-09",
+          "name": "Color Contrast and Visual Accessibility"
+        },
+        { "id": "react-024-10", "name": "Accessible Animations" },
+        { "id": "react-024-11", "name": "Testing Accessibility" },
+        { "id": "react-024-12", "name": "Accessibility Linting Tools" },
+        { "id": "react-024-13", "name": "Accessibility and Routing" },
+        { "id": "react-024-14", "name": "Accessibility in Custom Components" },
+        { "id": "react-024-15", "name": "Accessibility in TypeScript" },
+        {
+          "id": "react-024-16",
+          "name": "Accessibility in Third-party Libraries"
+        },
+        { "id": "react-024-17", "name": "Progressive Enhancement" },
+        {
+          "id": "react-024-18",
+          "name": "Internationalization (i18n) and Accessibility"
+        },
+        { "id": "react-024-19", "name": "Accessibility Best Practices" },
+        { "id": "react-024-20", "name": "Accessibility in 2025+" }
+      ]
+    },
+    {
+      "id": "react-025",
+      "topic": "React Ecosystem and Advanced Tooling",
+      "subtopics": [
+        { "id": "react-025-01", "name": "React Developer Tools" },
+        { "id": "react-025-02", "name": "Storybook for UI Development" },
+        { "id": "react-025-03", "name": "Component Libraries Overview" },
+        { "id": "react-025-04", "name": "Monorepos with React" },
+        { "id": "react-025-05", "name": "Code Generators (Plop, Hygen)" },
+        { "id": "react-025-06", "name": "Linting and Code Quality" },
+        { "id": "react-025-07", "name": "Prettier for Code Formatting" },
+        { "id": "react-025-08", "name": "ESLint and Custom Rules" },
+        { "id": "react-025-09", "name": "Bundle Analysis Tools" },
+        {
+          "id": "react-025-10",
+          "name": "Modern Build Tools (Vite, Turbopack)"
+        },
+        { "id": "react-025-11", "name": "Module Federation" },
+        { "id": "react-025-12", "name": "Micro Frontends" },
+        { "id": "react-025-13", "name": "React and Web Components" },
+        { "id": "react-025-14", "name": "GitHub Copilot and AI Tools" },
+        { "id": "react-025-15", "name": "Integrating with DevOps Pipelines" },
+        { "id": "react-025-16", "name": "Testing Tooling Ecosystem" },
+        { "id": "react-025-17", "name": "Documentation Tools" },
+        { "id": "react-025-18", "name": "Performance Profiling Tools" },
+        { "id": "react-025-19", "name": "Static Analysis Tools" },
+        { "id": "react-025-20", "name": "Future Trends in React Tooling" }
+      ]
+    }
+  ]
+}
