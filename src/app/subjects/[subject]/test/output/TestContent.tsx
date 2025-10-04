@@ -59,7 +59,7 @@ export default function TestContent({ subject }: { subject: string }) {
   if (showResult)
     return (
       <div
-        className="max-w-4xl mx-auto p-8 mt-8 rounded-xl bg-gray-800 shadow-2xl"
+        className="max-w-4xl mx-auto p-8 rounded-xl bg-gray-800 shadow-2xl"
         style={{
           background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)",
         }}
@@ -68,7 +68,8 @@ export default function TestContent({ subject }: { subject: string }) {
           Test Complete! 🎉
         </h2>
         <div className="mb-6 text-xl text-gray-200">
-          Your score: <span className="text-indigo-400 font-bold">{score}</span> / {questions.length}
+          Your score: <span className="text-indigo-400 font-bold">{score}</span>{" "}
+          / {questions.length}
         </div>
         <div className="flex flex-wrap gap-4">
           <button
@@ -132,14 +133,18 @@ export default function TestContent({ subject }: { subject: string }) {
         {showExplanation && (
           <div className="space-y-4">
             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
-              <div className="text-indigo-700 font-semibold text-lg mb-3">Expected Output:</div>
+              <div className="text-indigo-700 font-semibold text-lg mb-3">
+                Expected Output:
+              </div>
               <div className="text-gray-800 font-mono bg-gray-50 p-3 rounded border border-gray-100">
                 <MDEditorRenderer value={q.output} />
               </div>
             </div>
 
             <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
-              <div className="text-indigo-700 font-semibold text-lg mb-3">Explanation:</div>
+              <div className="text-indigo-700 font-semibold text-lg mb-3">
+                Explanation:
+              </div>
               <div className="text-gray-700">
                 <MDEditorRenderer value={q.explanation} />
               </div>

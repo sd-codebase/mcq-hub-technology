@@ -8,7 +8,7 @@ export default async function Topics({
   const { subject } = await params;
 
   return (
-    <div className="min-h-[70vh] flex flex-col items-center justify-center max-w-3xl mx-auto p-4">
+    <div className="min-h-[70vh] flex flex-col items-center justify-center max-w-3xl mx-auto">
       <TopicsList subject={subject} />
     </div>
   );

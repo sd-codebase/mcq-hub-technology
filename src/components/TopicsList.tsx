@@ -21,7 +21,7 @@ export default function TopicsList({ subject }: { subject: string }) {
   if (error) return <div className="text-red-500">{error}</div>;
 
   return (
-    <div className="max-w-5xl mx-auto space-y-12 px-4 py-8">
+    <div className="max-w-5xl mx-auto space-y-12 px-4 ">
       {topics.map((topic, topicIndex) => (
         <div
           key={topic.id}

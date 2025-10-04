@@ -55,7 +55,7 @@ export default function InterviewTestContent({ subject }: { subject: string }) {
   if (showResult)
     return (
       <div
-        className="max-w-4xl mx-auto p-8 mt-8 rounded-xl bg-gray-800 shadow-2xl"
+        className="max-w-4xl mx-auto p-8 rounded-xl bg-gray-800 shadow-2xl"
         style={{
           background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)",
         }}
