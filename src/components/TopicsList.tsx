@@ -21,28 +21,27 @@ export default function TopicsList({ subject }: { subject: string }) {
   if (error) return <div className="text-red-500">{error}</div>;
 
   return (
-    <div className="space-y-6">
+    <div className="max-w-5xl mx-auto space-y-12 px-4 py-8">
       {topics.map((topic, topicIndex) => (
         <div
           key={topic.id}
-          className="bg-white rounded-lg shadow p-6 border border-gray-200"
+          className="bg-gray-800 rounded-xl shadow-2xl p-8 border border-gray-700"
+          style={{
+            background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)",
+          }}
         >
-          <h3
-            className="text-lg font-bold mb-2"
-            style={{ color: "var(--color-secondary)" }}
-          >
+          <h3 className="text-2xl font-bold mb-6 text-white">
             {`${topicIndex + 1}. ${topic.topic}`}
           </h3>
-          <div className="space-y-2">
+          <div className="space-y-6">
             {topic.subtopics.map((sub: any, subIndex: number) => (
               <div
                 key={sub.id}
-                className="mb-4 p-3 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                className="p-6 bg-gray-900/50 rounded-lg border border-gray-700/50 
+                         hover:border-indigo-500/30 transition-all duration-300
+                         hover:shadow-lg hover:shadow-indigo-500/10"
               >
-                <div
-                  className="font-medium text-base mb-2"
-                  style={{ color: "var(--color-primary)" }}
-                >
+                <div className="font-medium text-lg mb-3 text-gray-200">
                   {`${topicIndex + 1}.${subIndex + 1} ${sub.name}`}
                 </div>
                 <SubtopicActions subtopic={sub} subject={subject} />
