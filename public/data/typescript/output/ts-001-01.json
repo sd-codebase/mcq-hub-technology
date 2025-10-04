@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-01-001",
+      "question": "```typescript\nlet name: string = \"Alice\";\nconsole.log(typeof name);\n```",
+      "output": "```\nstring\n```",
+      "explanation": "The `typeof` operator returns the type of the value at runtime. Since `name` is assigned a string value \"Alice\", `typeof name` returns `\"string\"`."
+    },
+    {
+      "id": "output-001-01-002",
+      "question": "```typescript\nlet age: number = 25;\nlet price: number = 99.99;\nconsole.log(typeof age, typeof price);\n```",
+      "output": "```\nnumber number\n```",
+      "explanation": "In TypeScript (and JavaScript), both integers and floating-point numbers are of type `number`. There's no separate integer type."
+    },
+    {
+      "id": "output-001-01-003",
+      "question": "```typescript\nlet isActive: boolean = true;\nconsole.log(typeof isActive);\n```",
+      "output": "```\nboolean\n```",
+      "explanation": "The variable `isActive` is of type `boolean` and holds the value `true`. The `typeof` operator correctly identifies it as `\"boolean\"`."
+    },
+    {
+      "id": "output-001-01-004",
+      "question": "```typescript\nlet value: null = null;\nconsole.log(typeof value);\n```",
+      "output": "```\nobject\n```",
+      "explanation": "This is a well-known JavaScript quirk that TypeScript inherits. `typeof null` returns `\"object\"` due to a legacy bug in JavaScript that was never fixed for compatibility reasons."
+    },
+    {
+      "id": "output-001-01-005",
+      "question": "```typescript\nlet data: undefined = undefined;\nconsole.log(typeof data);\n```",
+      "output": "```\nundefined\n```",
+      "explanation": "The `typeof` operator correctly identifies `undefined` as `\"undefined\"`. This is the expected behavior for variables that are explicitly set to undefined."
+    },
+    {
+      "id": "output-001-01-006",
+      "question": "```typescript\nlet x: number = 10;\nlet y: string = \"10\";\nconsole.log(x === y);\n```",
+      "output": "```\nfalse\n```",
+      "explanation": "The strict equality operator `===` checks both value and type. Here, `x` is a number (10) and `y` is a string (\"10\"), so they are not strictly equal."
+    },
+    {
+      "id": "output-001-01-007",
+      "question": "```typescript\nlet flag: boolean;\nconsole.log(flag);\n```",
+      "output": "```\nundefined\n```",
+      "explanation": "When a variable is declared but not initialized, its value is `undefined` by default in TypeScript/JavaScript, even if it has a type annotation."
+    },
+    {
+      "id": "output-001-01-008",
+      "question": "```typescript\nlet num: number = NaN;\nconsole.log(typeof num);\n```",
+      "output": "```\nnumber\n```",
+      "explanation": "`NaN` (Not-a-Number) is actually of type `number` in JavaScript/TypeScript. Despite its name, it's a special numeric value representing an invalid number operation."
+    },
+    {
+      "id": "output-001-01-009",
+      "question": "```typescript\nlet infinity: number = Infinity;\nconsole.log(typeof infinity);\n```",
+      "output": "```\nnumber\n```",
+      "explanation": "`Infinity` is a valid number value in TypeScript/JavaScript. The `typeof` operator returns `\"number\"` for both positive and negative infinity."
+    },
+    {
+      "id": "output-001-01-010",
+      "question": "```typescript\nlet str: string = \"Hello\";\nlet num: number = 42;\nconsole.log(str + num);\n```",
+      "output": "```\nHello42\n```",
+      "explanation": "When using the `+` operator with a string and a number, JavaScript performs string concatenation. The number is converted to a string, resulting in \"Hello42\"."
+    },
+    {
+      "id": "output-001-01-011",
+      "question": "```typescript\nlet a: boolean = true;\nlet b: boolean = false;\nconsole.log(typeof (a && b));\n```",
+      "output": "```\nboolean\n```",
+      "explanation": "The logical AND operator `&&` returns a boolean value when both operands are booleans. Here, `true && false` evaluates to `false`, which is of type boolean."
+    },
+    {
+      "id": "output-001-01-012",
+      "question": "```typescript\nlet value = null;\nconsole.log(value === undefined);\n```",
+      "output": "```\nfalse\n```",
+      "explanation": "Using strict equality `===`, `null` and `undefined` are different. `null === undefined` returns `false`. However, `null == undefined` (loose equality) would return `true`."
+    },
+    {
+      "id": "output-001-01-013",
+      "question": "```typescript\nlet count: number = 0;\nconsole.log(Boolean(count));\n```",
+      "output": "```\nfalse\n```",
+      "explanation": "When converting numbers to boolean, `0` is considered falsy and converts to `false`. Non-zero numbers convert to `true`."
+    },
+    {
+      "id": "output-001-01-014",
+      "question": "```typescript\nlet empty: string = \"\";\nconsole.log(Boolean(empty));\n```",
+      "output": "```\nfalse\n```",
+      "explanation": "An empty string `\"\"` is a falsy value in JavaScript/TypeScript. When converted to boolean using `Boolean()`, it returns `false`."
+    },
+    {
+      "id": "output-001-01-015",
+      "question": "```typescript\nlet x: number = 5;\nlet y: number = 2;\nconsole.log(typeof (x / y));\n```",
+      "output": "```\nnumber\n```",
+      "explanation": "Division of two numbers always results in a number type, even if the result is a floating-point value. Here, `5 / 2` equals `2.5`, which is of type number."
+    },
+    {
+      "id": "output-001-01-016",
+      "question": "```typescript\nlet name: string = \"TypeScript\";\nconsole.log(name.length);\nconsole.log(typeof name.length);\n```",
+      "output": "```\n10\nnumber\n```",
+      "explanation": "The `length` property of a string returns the number of characters. \"TypeScript\" has 10 characters, and the length property is of type `number`."
+    },
+    {
+      "id": "output-001-01-017",
+      "question": "```typescript\nlet value: number | null = null;\nconsole.log(typeof value);\n```",
+      "output": "```\nobject\n```",
+      "explanation": "Even though the TypeScript type is `number | null`, at runtime the value is `null`, and `typeof null` returns `\"object\"` due to JavaScript's legacy behavior."
+    },
+    {
+      "id": "output-001-01-018",
+      "question": "```typescript\nlet flag: boolean = Boolean(1);\nconsole.log(flag);\n```",
+      "output": "```\ntrue\n```",
+      "explanation": "When converting numbers to boolean, any non-zero number is truthy. `Boolean(1)` returns `true`. Only `0`, `NaN`, `null`, `undefined`, and `\"\"` are falsy."
+    },
+    {
+      "id": "output-001-01-019",
+      "question": "```typescript\nlet a: string = \"5\";\nlet b: number = 5;\nconsole.log(a == b);\nconsole.log(a === b);\n```",
+      "output": "```\ntrue\nfalse\n```",
+      "explanation": "Loose equality `==` performs type coercion, so `\"5\" == 5` is `true`. Strict equality `===` checks both value and type without coercion, so `\"5\" === 5` is `false`."
+    },
+    {
+      "id": "output-001-01-020",
+      "question": "```typescript\nlet x: number = 10;\nlet y: string = String(x);\nconsole.log(typeof x);\nconsole.log(typeof y);\n```",
+      "output": "```\nnumber\nstring\n```",
+      "explanation": "`String(x)` converts the number `10` to the string `\"10\"`. The original variable `x` remains a number, while the new variable `y` is a string."
+    }
+  ]
+}

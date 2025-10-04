@@ -1,0 +1,204 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-01-001",
+      "question": "What is the correct way to declare a variable with string type annotation in TypeScript?",
+      "options": [
+        "let name: String = \"John\";",
+        "let name: string = \"John\";",
+        "let name = String(\"John\");",
+        "string name = \"John\";"
+      ],
+      "correct_answer": 1,
+      "explanation": "In TypeScript, primitive types are lowercase. The correct syntax is `let name: string = \"John\";`. `String` (uppercase) refers to the JavaScript String object wrapper, which is different from the primitive type."
+    },
+    {
+      "id": "mcq-001-01-002",
+      "question": "Which of the following is NOT a valid number type value in TypeScript?",
+      "options": ["42", "3.14", "NaN", "\"123\""],
+      "correct_answer": 3,
+      "explanation": "\"123\" is a string, not a number. In TypeScript, the number type includes integers, floating-point numbers, Infinity, -Infinity, and NaN, but not string representations of numbers."
+    },
+    {
+      "id": "mcq-001-01-003",
+      "question": "What will be the inferred type of the variable `let flag = true;`?",
+      "options": ["any", "Boolean", "boolean", "true"],
+      "correct_answer": 2,
+      "explanation": "TypeScript will infer the type as `boolean` (lowercase) when you initialize a variable with a boolean value. The primitive boolean type is always lowercase in TypeScript."
+    },
+    {
+      "id": "mcq-001-01-004",
+      "question": "What is the difference between `null` and `undefined` in TypeScript?",
+      "options": [
+        "They are exactly the same",
+        "null means 'no value', undefined means 'not yet assigned'",
+        "null is a number, undefined is a string",
+        "There is no difference in strict mode"
+      ],
+      "correct_answer": 1,
+      "explanation": "`null` represents an intentional absence of value, while `undefined` typically means a variable has been declared but not yet assigned a value. They are distinct types in TypeScript."
+    },
+    {
+      "id": "mcq-001-01-005",
+      "question": "Which statement is true about the `null` type in TypeScript?",
+      "options": [
+        "null is assignable to all types by default",
+        "null is only assignable to object types",
+        "null has its own type and is only assignable when strictNullChecks is false",
+        "null is not a valid TypeScript type"
+      ],
+      "correct_answer": 2,
+      "explanation": "In TypeScript, `null` has its own type. When `strictNullChecks` is enabled, `null` is only assignable to `null` and `any` types. When disabled, it's assignable to all types."
+    },
+    {
+      "id": "mcq-001-01-006",
+      "question": "What is the type of the variable in: `let value: number = 42;`?",
+      "options": ["any", "number", "42", "Number"],
+      "correct_answer": 1,
+      "explanation": "The variable `value` is explicitly annotated with the type `number`. This is the primitive number type in TypeScript (lowercase)."
+    },
+    {
+      "id": "mcq-001-01-007",
+      "question": "Which of the following type annotations is correct for a variable that can be either string or null?",
+      "options": [
+        "let name: string | null;",
+        "let name: string + null;",
+        "let name: string || null;",
+        "let name: string, null;"
+      ],
+      "correct_answer": 0,
+      "explanation": "The union type syntax using the pipe symbol `|` is correct: `string | null`. This allows the variable to hold either a string value or null."
+    },
+    {
+      "id": "mcq-001-01-008",
+      "question": "What will TypeScript infer as the type of: `let x;`?",
+      "options": ["undefined", "null", "any", "unknown"],
+      "correct_answer": 2,
+      "explanation": "When a variable is declared without initialization and without a type annotation, TypeScript infers its type as `any`, allowing it to hold any value."
+    },
+    {
+      "id": "mcq-001-01-009",
+      "question": "Which type annotation allows a variable to hold true, false, or null?",
+      "options": [
+        "boolean | null",
+        "Boolean | null",
+        "bool | null",
+        "true | false | null"
+      ],
+      "correct_answer": 0,
+      "explanation": "The correct union type is `boolean | null`, which allows the variable to be true, false, or null. The boolean primitive type (lowercase) is used in TypeScript."
+    },
+    {
+      "id": "mcq-001-01-010",
+      "question": "What is the result of `typeof null` in TypeScript?",
+      "options": ["\"null\"", "\"undefined\"", "\"object\"", "\"NULL\""],
+      "correct_answer": 2,
+      "explanation": "Due to a historical JavaScript quirk that TypeScript inherits, `typeof null` returns \"object\". This is a well-known JavaScript behavior that remains for backward compatibility."
+    },
+    {
+      "id": "mcq-001-01-011",
+      "question": "Which of these is the correct way to declare a variable that must be a number and cannot be null or undefined?",
+      "options": [
+        "let age: number;",
+        "let age: number = null;",
+        "let age!: number;",
+        "let age: number = 0;"
+      ],
+      "correct_answer": 3,
+      "explanation": "With `strictNullChecks` enabled, `let age: number = 0;` ensures the variable is initialized with a number value. Option 0 declares but doesn't initialize, which could be undefined. Option 3 initializes with a proper number value."
+    },
+    {
+      "id": "mcq-001-01-012",
+      "question": "What happens when you try to assign undefined to a variable typed as string with strictNullChecks enabled?",
+      "options": [
+        "It compiles successfully",
+        "It causes a compilation error",
+        "It converts undefined to an empty string",
+        "It causes a runtime error"
+      ],
+      "correct_answer": 1,
+      "explanation": "With `strictNullChecks` enabled, TypeScript will throw a compilation error because `undefined` is not assignable to type `string`. You would need to use `string | undefined` to allow undefined."
+    },
+    {
+      "id": "mcq-001-01-013",
+      "question": "Which statement correctly declares a boolean variable in TypeScript?",
+      "options": [
+        "boolean isActive = true;",
+        "let isActive: boolean = true;",
+        "let isActive: bool = true;",
+        "var isActive = Boolean(true);"
+      ],
+      "correct_answer": 1,
+      "explanation": "The correct TypeScript syntax is `let isActive: boolean = true;`. The type annotation uses lowercase `boolean`, and it follows TypeScript's variable declaration syntax."
+    },
+    {
+      "id": "mcq-001-01-014",
+      "question": "What is the type of a variable declared as: `let data: string | number | boolean;`?",
+      "options": ["any", "Union type", "Intersection type", "Tuple type"],
+      "correct_answer": 1,
+      "explanation": "This is a **union type**, indicated by the pipe `|` symbol. The variable can hold a value that is either a string, number, or boolean."
+    },
+    {
+      "id": "mcq-001-01-015",
+      "question": "Which value is NOT valid for a variable of type `number` in TypeScript?",
+      "options": ["Infinity", "-Infinity", "NaN", "null"],
+      "correct_answer": 3,
+      "explanation": "With `strictNullChecks` enabled, `null` is not assignable to type `number`. However, `Infinity`, `-Infinity`, and `NaN` are all valid number values in TypeScript."
+    },
+    {
+      "id": "mcq-001-01-016",
+      "question": "What does the following type annotation mean: `let value: null;`?",
+      "options": [
+        "value can be any type",
+        "value can only be null",
+        "value can be null or undefined",
+        "This is invalid syntax"
+      ],
+      "correct_answer": 1,
+      "explanation": "`let value: null;` means the variable can **only** hold the value `null`. This is a very restrictive type annotation that's rarely used in practice."
+    },
+    {
+      "id": "mcq-001-01-017",
+      "question": "How do you explicitly annotate a variable to accept undefined in TypeScript?",
+      "options": [
+        "let name: undefined;",
+        "let name: Undefined;",
+        "let name: void;",
+        "let name: null;"
+      ],
+      "correct_answer": 0,
+      "explanation": "The correct syntax is `let name: undefined;`, though this would only allow the value `undefined`. More commonly, you'd use `string | undefined` to allow both string and undefined values."
+    },
+    {
+      "id": "mcq-001-01-018",
+      "question": "What is true about primitive types in TypeScript?",
+      "options": [
+        "They should be written in uppercase (String, Number, Boolean)",
+        "They should be written in lowercase (string, number, boolean)",
+        "Uppercase and lowercase are interchangeable",
+        "TypeScript doesn't distinguish between them"
+      ],
+      "correct_answer": 1,
+      "explanation": "In TypeScript, primitive types should always be lowercase: `string`, `number`, `boolean`, `null`, `undefined`. Uppercase versions refer to JavaScript object wrapper types and should generally be avoided."
+    },
+    {
+      "id": "mcq-001-01-019",
+      "question": "Which of the following correctly represents a number type that can also be undefined?",
+      "options": [
+        "let count: number | undefined;",
+        "let count: number + undefined;",
+        "let count: number & undefined;",
+        "let count: number, undefined;"
+      ],
+      "correct_answer": 0,
+      "explanation": "The union type syntax `number | undefined` is correct. This allows the variable to hold either a number value or undefined. The pipe `|` operator is used for union types."
+    },
+    {
+      "id": "mcq-001-01-020",
+      "question": "What is the initial value of a declared but uninitialized variable in TypeScript?",
+      "options": ["null", "undefined", "0", "\"\" (empty string)"],
+      "correct_answer": 1,
+      "explanation": "In JavaScript and TypeScript, a variable that is declared but not initialized has the value `undefined`. This is the default value for uninitialized variables."
+    }
+  ]
+}
