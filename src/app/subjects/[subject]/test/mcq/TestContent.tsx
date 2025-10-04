@@ -110,37 +110,55 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
 
   if (showResult && !reviewMode)
     return (
-      <div className="max-w-xl mx-auto p-4">
-        <h2 className="text-2xl font-bold mb-4">Test Complete!</h2>
-        <div className="mb-2">
-          Your score: {score} / {questions.length}
+      <div
+        className="max-w-4xl mx-auto p-8 mt-8 rounded-xl bg-gray-800 shadow-2xl"
+        style={{
+          background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)",
+        }}
+      >
+        <h2 className="text-3xl font-bold mb-6 text-white">
+          Test Complete! 🎉
+        </h2>
+        <div className="mb-6 text-xl text-gray-200">
+          Your score: <span className="text-indigo-400 font-bold">{score}</span>{" "}
+          / {questions.length}
         </div>
-        <button
-          className="mt-4 px-4 py-2 rounded bg-blue-600 text-white font-semibold"
-          onClick={() => setReviewMode(true)}
-        >
-          Review Test
-        </button>
-        <button
-          className="mt-4 ml-2 px-4 py-2 rounded bg-gray-200 text-gray-800 font-semibold border border-gray-300"
-          onClick={() => {
-            setCurrent(0);
-            setScore(0);
-            setShowResult(false);
-            setTimer(MCQ_TIMER);
-            setUserAnswers([]);
-            setReviewMode(false);
-          }}
-        >
-          Restart
-        </button>
+        <div className="flex gap-4">
+          <button
+            className="px-6 py-3 rounded-full text-white font-semibold
+                     bg-gradient-to-r from-indigo-600 to-purple-600 
+                     hover:from-indigo-700 hover:to-purple-700
+                     transition-all duration-300 shadow-lg shadow-indigo-500/20
+                     transform hover:scale-105"
+            onClick={() => setReviewMode(true)}
+          >
+            Review Test
+          </button>
+          <button
+            className="px-6 py-3 rounded-full font-semibold
+                     bg-gray-900/50 text-gray-300 border border-gray-700
+                     hover:border-indigo-500/30 hover:text-white
+                     transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/10
+                     transform hover:scale-105"
+            onClick={() => {
+              setCurrent(0);
+              setScore(0);
+              setShowResult(false);
+              setTimer(MCQ_TIMER);
+              setUserAnswers([]);
+              setReviewMode(false);
+            }}
+          >
+            Restart
+          </button>
+        </div>
       </div>
     );
 
   if (showResult && reviewMode)
     return (
-      <div className="max-w-xl mx-auto p-4">
-        <h2 className="text-2xl font-bold mb-4">Review Answers</h2>
+      <div className="max-w-4xl mx-auto p-8 mt-8">
+        <h2 className="text-3xl font-bold mb-8 text-white">Review Answers</h2>
         <div className="space-y-8">
           {questions.map((q, idx) => {
             const userAns = userAnswers[idx];
@@ -148,42 +166,43 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
             return (
               <div
                 key={q.id}
-                className="bg-white rounded shadow p-4 border border-gray-200"
+                className="p-6 rounded-xl shadow-2xl border border-gray-700"
+                style={{
+                  background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)",
+                }}
               >
-                <div className="mb-2 text-base font-semibold text-gray-900">
+                <div className="mb-4 text-lg font-semibold text-gray-800 bg-white p-5 rounded-lg border border-gray-200 shadow-md">
                   Q{idx + 1}. <MDEditorRenderer value={q.question} />
                 </div>
-                <div className="mb-2">
+                <div className="space-y-3">
                   {q.options.map((opt: string, oidx: number) => (
                     <div
                       key={oidx}
-                      className={`px-3 py-1 rounded mb-1 border text-sm flex items-center gap-2
+                      className={`px-4 py-3 rounded-lg flex items-center gap-3 text-base
                         ${
                           oidx === q.correct_answer - 1
-                            ? "border-green-600 bg-green-50"
-                            : "border-gray-200"
-                        }
-                        ${
-                          userAns === oidx
-                            ? isCorrect
-                              ? "text-green-700 font-bold"
-                              : "text-red-700 font-bold"
-                            : "text-gray-900"
+                            ? "bg-green-50 border border-green-500 text-green-700"
+                            : userAns === oidx
+                            ? "bg-red-50 border border-red-500 text-red-700"
+                            : "bg-white border border-gray-200 text-gray-700"
                         }
                       `}
                     >
-                      <span>
+                      <span className="text-lg">
                         {oidx === q.correct_answer - 1
-                          ? "✔️"
+                          ? "✓"
                           : userAns === oidx
-                          ? "❌"
+                          ? "✗"
                           : ""}
                       </span>
                       <MDEditorRenderer value={opt} />
                     </div>
                   ))}
                 </div>
-                <div className="italic mt-3 text-gray-700">
+                <div className="mt-4 text-lg font-medium text-gray-800 bg-white p-5 rounded-lg border border-gray-200 shadow-md">
+                  <div className="text-indigo-400 font-semibold mb-2">
+                    Explanation:
+                  </div>
                   <MDEditorRenderer value={q.explanation} />
                 </div>
               </div>
@@ -191,7 +210,11 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
           })}
         </div>
         <button
-          className="mt-6 px-4 py-2 rounded bg-blue-600 text-white font-semibold"
+          className="mt-8 px-8 py-3 rounded-full text-white font-semibold
+                   bg-gradient-to-r from-indigo-600 to-purple-600 
+                   hover:from-indigo-700 hover:to-purple-700
+                   transition-all duration-300 shadow-lg shadow-indigo-500/20
+                   transform hover:scale-105"
           onClick={() => {
             setCurrent(0);
             setScore(0);
@@ -201,7 +224,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
             setReviewMode(false);
           }}
         >
-          Restart
+          Restart Test
         </button>
       </div>
     );
@@ -214,12 +237,17 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
   else barColor = "bg-red-500";
 
   return (
-    <div className="max-w-xl mx-auto p-4 bg-white rounded shadow mt-4 relative">
+    <div
+      className="max-w-4xl mx-auto p-8 rounded-xl mt-8 relative bg-gray-50 shadow-2xl"
+      style={{
+        background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)",
+      }}
+    >
       {showLoader && (
-        <div className="absolute inset-0 flex items-center justify-center bg-white/80 z-20 rounded">
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-900/80 z-20 rounded-xl backdrop-blur-sm">
           <div className="flex flex-col items-center">
             <svg
-              className="animate-spin h-10 w-10 text-blue-500 mb-2"
+              className="animate-spin h-12 w-12 text-indigo-400 mb-3"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -238,7 +266,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
                 d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
               ></path>
             </svg>
-            <span className="text-blue-600 font-semibold text-lg">
+            <span className="text-indigo-300 font-semibold text-lg">
               Loading next question...
             </span>
           </div>
@@ -253,31 +281,33 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
       />
 
       {/* Second row: progress bar and question count */}
-      <div className="flex items-center gap-4 mb-4">
-        <div className="flex-1 w-full h-3 rounded bg-gray-200 overflow-hidden">
+      <div className="flex items-center gap-4 mb-8">
+        <div className="flex-1 w-full h-4 rounded-full bg-gray-900/50 border border-gray-700/50 overflow-hidden">
           <div
-            className={`h-full transition-all duration-700 ease-in-out ${barColor}`}
+            className={`h-full transition-all duration-700 ease-in-out ${
+              percent < 80
+                ? "bg-gradient-to-r from-teal-500 to-green-500"
+                : percent < 90
+                ? "bg-gradient-to-r from-yellow-500 to-orange-500"
+                : "bg-gradient-to-r from-red-500 to-pink-500"
+            }`}
             style={{ width: `${percent}%` }}
           ></div>
         </div>
       </div>
 
-      <div className="text-xl font-bold mb-2 text-gray-900">
+      <div className="text-2xl font-bold mb-6 text-gray-800 bg-white p-6 rounded-lg border border-gray-200 shadow-md">
         <MDEditorRenderer value={q.question} />
       </div>
-      <div className="space-y-2 mb-4">
+      <div className="space-y-3 mb-6">
         {q.options.map((opt: string, idx: number) => (
           <button
             key={idx}
-            className={`block w-full text-left px-4 py-2 rounded border font-medium transition-colors ${
+            className={`block w-full text-left px-6 py-4 rounded-lg border font-medium transition-all duration-300 ${
               selected === idx
-                ? "bg-blue-100 border-blue-600 text-gray-900"
-                : "bg-white border-gray-200 hover:bg-gray-50 text-gray-900"
+                ? "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-lg"
+                : "bg-white border-gray-200 hover:border-indigo-300 text-gray-700 hover:shadow-md"
             }`}
-            style={{
-              borderColor:
-                selected === idx ? "var(--color-primary)" : undefined,
-            }}
             onClick={() => handleSelect(idx)}
             disabled={selected !== null}
           >
@@ -285,10 +315,13 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
           </button>
         ))}
       </div>
-      {/* No answer/explanation during test */}
       <button
-        className="mt-2 px-4 py-2 rounded bg-blue-600 text-white font-semibold"
-        style={{ background: "var(--color-primary)" }}
+        className={`mt-6 px-8 py-3 rounded-full text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105
+                   ${
+                     selected === null
+                       ? "bg-gray-700 cursor-not-allowed"
+                       : "bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg shadow-indigo-500/20"
+                   }`}
         onClick={handleNext}
         disabled={selected === null}
       >

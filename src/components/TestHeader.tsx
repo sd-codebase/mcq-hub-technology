@@ -16,7 +16,7 @@ export default function TestHeader({
       {/* Top row: topic, test type, question count */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
         <div
-          className="font-semibold text-base text-gray-800 truncate text-center w-full"
+          className="font-semibold text-base text-white truncate text-center w-full"
           title={subtopicName || ""}
         >
           {subtopicName}
