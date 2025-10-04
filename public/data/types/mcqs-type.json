@@ -1,0 +1,28 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-01-001",
+      "question": "Which keyword allows you to reassign a value to a variable?",
+      "options": [
+        "const",
+        "let",
+        "Both let and const",
+        "Neither let nor const"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `let` keyword declares a variable that can be reassigned. `const` declares a constant that cannot be reassigned after initialization."
+    },
+    {
+      "id": "mcq-001-01-002",
+      "question": "What is the scope of a variable declared with `var` inside a function?",
+      "options": [
+        "Global scope",
+        "Block scope",
+        "Function scope",
+        "Module scope"
+      ],
+      "correct_answer": 2,
+      "explanation": "Variables declared with `var` are **function-scoped**, meaning they are accessible throughout the entire function in which they are declared, regardless of block boundaries."
+    }
+  ]
+}

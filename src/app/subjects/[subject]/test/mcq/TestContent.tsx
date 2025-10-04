@@ -2,18 +2,18 @@
 import React, { useEffect, useState, useRef } from "react";
 import dynamic from "next/dynamic";
 const MDEditorRenderer = dynamic(
-  () => import("../../../components/MDEditorRenderer"),
+  () => import("../../../../../components/MDEditorRenderer"),
   { ssr: false }
 );
 import { useSearchParams } from "next/navigation";
-import TestHeader from "../../../components/TestHeader";
+import TestHeader from "../../../../../components/TestHeader";
 
 const MCQ_TIMER =
   typeof process !== "undefined" && process.env.NEXT_PUBLIC_MCQ_TIMER
     ? parseInt(process.env.NEXT_PUBLIC_MCQ_TIMER)
     : 60;
 
-export default function McqTestContentPage() {
+export default function McqTestContentPage({ subject }: { subject: string }) {
   const searchParams = useSearchParams();
   const subtopic = searchParams.get("subtopic");
   const subtopicName = decodeURIComponent(
@@ -33,11 +33,10 @@ export default function McqTestContentPage() {
   const [userAnswers, setUserAnswers] = useState<number[]>([]);
 
   useEffect(() => {
-    if (!subtopic) return;
+    if (!subtopic || !subject) return;
     setShowLoader(true);
     // Using the new API route structure
-    const subject = process.env.NEXT_PUBLIC_SUBJECT;
-    fetch(`/api/questions/${subject}/mcq/${subtopic}`)
+    fetch(`/api/${subject}/questions/mcq/${subtopic}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch questions");
         return res.json();
@@ -50,7 +49,7 @@ export default function McqTestContentPage() {
         setError("Failed to load questions.");
         setShowLoader(false);
       });
-  }, [subtopic]);
+  }, [subtopic, subject]);
 
   // Timer logic
   useEffect(() => {
@@ -75,7 +74,6 @@ export default function McqTestContentPage() {
         else setShowResult(true);
       }, 1000);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timer]);
 
   if (error) return <div className="text-red-500">{error}</div>;

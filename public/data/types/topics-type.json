@@ -1,0 +1,25 @@
+{
+  "topics": [
+    {
+      "id": "js-001",
+      "topic": "JavaScript Fundamentals",
+      "subtopics": [
+        {
+          "id": "js-001-01",
+          "name": "Variables and Constants (var, let, const)"
+        },
+        { "id": "js-001-02", "name": "Data Types (Primitive and Reference)" }
+      ]
+    },
+    {
+      "id": "js-002",
+      "topic": "Control Flow and Conditionals",
+      "subtopics": [
+        { "id": "js-002-01", "name": "If Statement" },
+        { "id": "js-002-02", "name": "If-Else Statement" },
+        { "id": "js-002-03", "name": "Else-If Chains" },
+        { "id": "js-002-04", "name": "Switch Statement" }
+      ]
+    }
+  ]
+}

@@ -4,18 +4,19 @@ import React, { useEffect, useState } from "react";
 
 import SubtopicActions from "./SubtopicActions";
 
-export default function TopicsList() {
+export default function TopicsList({ subject }: { subject: string }) {
   const [topics, setTopics] = useState<any[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/api/topics")
+    if (!subject) return;
+    fetch(`/api/${subject}/topics`)
       .then((res) => res.json())
       .then((data) => {
-        setTopics(data.javascript_syllabus || []);
+        setTopics(data.topics || []);
       })
       .catch(() => setError("Failed to load topics."));
-  }, []);
+  }, [subject]);
 
   if (error) return <div className="text-red-500">{error}</div>;
 
@@ -44,7 +45,7 @@ export default function TopicsList() {
                 >
                   {`${topicIndex + 1}.${subIndex + 1} ${sub.name}`}
                 </div>
-                <SubtopicActions subtopic={sub} />
+                <SubtopicActions subtopic={sub} subject={subject} />
               </div>
             ))}
           </div>

@@ -1,0 +1,28 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-01-001",
+      "question": "```javascript\nconsole.log(a);\nvar a = 10;\n```",
+      "output": "```\nundefined\n```",
+      "explanation": "Due to **hoisting**, `var a` is moved to the top but the assignment stays in place. So `a` is declared but undefined when logged.\n\n**Behind the scenes:**\n```javascript\nvar a; // hoisted\nconsole.log(a); // undefined\na = 10; // assignment stays here\n```"
+    },
+    {
+      "id": "output-001-01-002",
+      "question": "```javascript\nconsole.log(b);\nlet b = 20;\n```",
+      "output": "```\nReferenceError: Cannot access 'b' before initialization\n```",
+      "explanation": "`let` variables are in the **Temporal Dead Zone** from the start of the block until the declaration is reached. Accessing them before declaration throws a ReferenceError."
+    },
+    {
+      "id": "output-001-01-003",
+      "question": "```javascript\nvar x = 1;\nif (true) {\n  var x = 2;\n}\nconsole.log(x);\n```",
+      "output": "```\n2\n```",
+      "explanation": "`var` is **function-scoped**, not block-scoped. The inner `var x = 2` redeclares and overwrites the outer `x` in the same scope."
+    },
+    {
+      "id": "output-001-01-004",
+      "question": "```javascript\nlet y = 1;\nif (true) {\n  let y = 2;\n}\nconsole.log(y);\n```",
+      "output": "```\n1\n```",
+      "explanation": "`let` is **block-scoped**. The inner `let y = 2` creates a new variable scoped only to the if block, so the outer `y` remains unchanged."
+    }
+  ]
+}
