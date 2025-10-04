@@ -1,0 +1,1724 @@
+{
+  "topics": [
+    {
+      "id": "ts-001",
+      "topic": "TypeScript Type System Fundamentals",
+      "subtopics": [
+        {
+          "id": "ts-001-01",
+          "name": "Basic Types (string, number, boolean, null, undefined)"
+        },
+        {
+          "id": "ts-001-02",
+          "name": "Type Annotations and Type Inference"
+        },
+        {
+          "id": "ts-001-03",
+          "name": "Any, Unknown, and Never Types"
+        },
+        {
+          "id": "ts-001-04",
+          "name": "Void and Undefined Return Types"
+        },
+        {
+          "id": "ts-001-05",
+          "name": "Type Assertions and Type Casting"
+        },
+        {
+          "id": "ts-001-06",
+          "name": "Literal Types (String, Number, Boolean Literals)"
+        },
+        {
+          "id": "ts-001-07",
+          "name": "Union Types and Intersection Types"
+        },
+        {
+          "id": "ts-001-08",
+          "name": "Type Aliases and Custom Types"
+        },
+        {
+          "id": "ts-001-09",
+          "name": "BigInt and Symbol Types"
+        },
+        {
+          "id": "ts-001-10",
+          "name": "Enum Types (Numeric, String, Heterogeneous)"
+        },
+        {
+          "id": "ts-001-11",
+          "name": "Const Enums and Ambient Enums"
+        },
+        {
+          "id": "ts-001-12",
+          "name": "Type Widening and Narrowing"
+        },
+        {
+          "id": "ts-001-13",
+          "name": "Structural vs Nominal Typing"
+        },
+        {
+          "id": "ts-001-14",
+          "name": "Duck Typing and Type Compatibility"
+        },
+        {
+          "id": "ts-001-15",
+          "name": "Non-null Assertion Operator"
+        },
+        {
+          "id": "ts-001-16",
+          "name": "Optional Chaining and Nullish Coalescing"
+        },
+        {
+          "id": "ts-001-17",
+          "name": "Type Predicates and Type Guards"
+        },
+        {
+          "id": "ts-001-18",
+          "name": "Discriminated Unions"
+        },
+        {
+          "id": "ts-001-19",
+          "name": "Index Signatures and Dynamic Properties"
+        },
+        {
+          "id": "ts-001-20",
+          "name": "Template Literal Types"
+        }
+      ]
+    },
+    {
+      "id": "ts-002",
+      "topic": "Arrays and Tuples",
+      "subtopics": [
+        {
+          "id": "ts-002-01",
+          "name": "Array Type Annotations (Type[] and Array<Type>)"
+        },
+        {
+          "id": "ts-002-02",
+          "name": "Readonly Arrays and Const Assertions"
+        },
+        {
+          "id": "ts-002-03",
+          "name": "Tuple Types and Fixed-Length Arrays"
+        },
+        {
+          "id": "ts-002-04",
+          "name": "Optional Tuple Elements and Rest Elements"
+        },
+        {
+          "id": "ts-002-05",
+          "name": "Labeled Tuples and Tuple Destructuring"
+        },
+        {
+          "id": "ts-002-06",
+          "name": "Multi-dimensional Arrays"
+        },
+        {
+          "id": "ts-002-07",
+          "name": "Array Methods with Type Safety"
+        },
+        {
+          "id": "ts-002-08",
+          "name": "Generic Array Methods (map, filter, reduce)"
+        },
+        {
+          "id": "ts-002-09",
+          "name": "Array Spread and Rest Parameters"
+        },
+        {
+          "id": "ts-002-10",
+          "name": "Array Union and Intersection Types"
+        },
+        {
+          "id": "ts-002-11",
+          "name": "Typed Array Buffers and Views"
+        },
+        {
+          "id": "ts-002-12",
+          "name": "Readonly Tuple Types"
+        },
+        {
+          "id": "ts-002-13",
+          "name": "Variadic Tuple Types"
+        },
+        {
+          "id": "ts-002-14",
+          "name": "Array Type Inference in Functions"
+        },
+        {
+          "id": "ts-002-15",
+          "name": "Mixed Type Arrays"
+        },
+        {
+          "id": "ts-002-16",
+          "name": "Array as const Assertions"
+        },
+        {
+          "id": "ts-002-17",
+          "name": "Tuple Spread in Function Parameters"
+        },
+        {
+          "id": "ts-002-18",
+          "name": "Array Destructuring with Types"
+        },
+        {
+          "id": "ts-002-19",
+          "name": "Named Tuple Members"
+        },
+        {
+          "id": "ts-002-20",
+          "name": "Array Type Guards and Narrowing"
+        }
+      ]
+    },
+    {
+      "id": "ts-003",
+      "topic": "Functions and Function Types",
+      "subtopics": [
+        {
+          "id": "ts-003-01",
+          "name": "Function Type Annotations"
+        },
+        {
+          "id": "ts-003-02",
+          "name": "Optional and Default Parameters"
+        },
+        {
+          "id": "ts-003-03",
+          "name": "Rest Parameters with Types"
+        },
+        {
+          "id": "ts-003-04",
+          "name": "Function Return Type Annotations"
+        },
+        {
+          "id": "ts-003-05",
+          "name": "Arrow Functions and Type Inference"
+        },
+        {
+          "id": "ts-003-06",
+          "name": "Function Overloads and Signatures"
+        },
+        {
+          "id": "ts-003-07",
+          "name": "Call Signatures and Construct Signatures"
+        },
+        {
+          "id": "ts-003-08",
+          "name": "Generic Functions"
+        },
+        {
+          "id": "ts-003-09",
+          "name": "Contextual Typing in Functions"
+        },
+        {
+          "id": "ts-003-10",
+          "name": "This Parameter Types"
+        },
+        {
+          "id": "ts-003-11",
+          "name": "Function Type Expressions"
+        },
+        {
+          "id": "ts-003-12",
+          "name": "Void vs Undefined Return Types"
+        },
+        {
+          "id": "ts-003-13",
+          "name": "Never Returning Functions"
+        },
+        {
+          "id": "ts-003-14",
+          "name": "Async Function Return Types (Promise)"
+        },
+        {
+          "id": "ts-003-15",
+          "name": "Generator Functions and Iterator Types"
+        },
+        {
+          "id": "ts-003-16",
+          "name": "Higher-Order Functions with Types"
+        },
+        {
+          "id": "ts-003-17",
+          "name": "Callback Function Types"
+        },
+        {
+          "id": "ts-003-18",
+          "name": "Function Parameter Destructuring"
+        },
+        {
+          "id": "ts-003-19",
+          "name": "Abstract Method Signatures"
+        },
+        {
+          "id": "ts-003-20",
+          "name": "Function Type Compatibility"
+        }
+      ]
+    },
+    {
+      "id": "ts-004",
+      "topic": "Interfaces and Type Definitions",
+      "subtopics": [
+        {
+          "id": "ts-004-01",
+          "name": "Interface Declaration and Syntax"
+        },
+        {
+          "id": "ts-004-02",
+          "name": "Optional Properties in Interfaces"
+        },
+        {
+          "id": "ts-004-03",
+          "name": "Readonly Properties"
+        },
+        {
+          "id": "ts-004-04",
+          "name": "Interface Extension and Inheritance"
+        },
+        {
+          "id": "ts-004-05",
+          "name": "Implementing Multiple Interfaces"
+        },
+        {
+          "id": "ts-004-06",
+          "name": "Interface vs Type Alias"
+        },
+        {
+          "id": "ts-004-07",
+          "name": "Index Signatures in Interfaces"
+        },
+        {
+          "id": "ts-004-08",
+          "name": "Function Types in Interfaces"
+        },
+        {
+          "id": "ts-004-09",
+          "name": "Hybrid Types (Callable Interfaces)"
+        },
+        {
+          "id": "ts-004-10",
+          "name": "Interface Merging and Declaration Merging"
+        },
+        {
+          "id": "ts-004-11",
+          "name": "Generic Interfaces"
+        },
+        {
+          "id": "ts-004-12",
+          "name": "Extending Built-in Interfaces"
+        },
+        {
+          "id": "ts-004-13",
+          "name": "Nested Interfaces"
+        },
+        {
+          "id": "ts-004-14",
+          "name": "Interface Segregation Principles"
+        },
+        {
+          "id": "ts-004-15",
+          "name": "Mapped Types in Interfaces"
+        },
+        {
+          "id": "ts-004-16",
+          "name": "Conditional Properties"
+        },
+        {
+          "id": "ts-004-17",
+          "name": "Interface for Classes"
+        },
+        {
+          "id": "ts-004-18",
+          "name": "Abstract Interfaces"
+        },
+        {
+          "id": "ts-004-19",
+          "name": "Interface Excess Property Checks"
+        },
+        {
+          "id": "ts-004-20",
+          "name": "Readonly Arrays and Tuples in Interfaces"
+        }
+      ]
+    },
+    {
+      "id": "ts-005",
+      "topic": "Classes and Object-Oriented Programming",
+      "subtopics": [
+        {
+          "id": "ts-005-01",
+          "name": "Class Declaration and Constructor"
+        },
+        {
+          "id": "ts-005-02",
+          "name": "Public, Private, and Protected Modifiers"
+        },
+        {
+          "id": "ts-005-03",
+          "name": "Readonly Properties in Classes"
+        },
+        {
+          "id": "ts-005-04",
+          "name": "Parameter Properties"
+        },
+        {
+          "id": "ts-005-05",
+          "name": "Getters and Setters (Accessors)"
+        },
+        {
+          "id": "ts-005-06",
+          "name": "Static Members and Methods"
+        },
+        {
+          "id": "ts-005-07",
+          "name": "Abstract Classes and Methods"
+        },
+        {
+          "id": "ts-005-08",
+          "name": "Class Inheritance and Extension"
+        },
+        {
+          "id": "ts-005-09",
+          "name": "Method Overriding and Super Keyword"
+        },
+        {
+          "id": "ts-005-10",
+          "name": "Implementing Interfaces in Classes"
+        },
+        {
+          "id": "ts-005-11",
+          "name": "Generic Classes"
+        },
+        {
+          "id": "ts-005-12",
+          "name": "Class Expressions"
+        },
+        {
+          "id": "ts-005-13",
+          "name": "Constructor Overloading"
+        },
+        {
+          "id": "ts-005-14",
+          "name": "This Type in Classes"
+        },
+        {
+          "id": "ts-005-15",
+          "name": "Private Fields with # Syntax"
+        },
+        {
+          "id": "ts-005-16",
+          "name": "Static Blocks in Classes"
+        },
+        {
+          "id": "ts-005-17",
+          "name": "Class Decorators (Experimental)"
+        },
+        {
+          "id": "ts-005-18",
+          "name": "Mixins and Composition"
+        },
+        {
+          "id": "ts-005-19",
+          "name": "Class Type Checking"
+        },
+        {
+          "id": "ts-005-20",
+          "name": "Abstract Constructor Signatures"
+        }
+      ]
+    },
+    {
+      "id": "ts-006",
+      "topic": "Generics and Generic Constraints",
+      "subtopics": [
+        {
+          "id": "ts-006-01",
+          "name": "Generic Type Parameters"
+        },
+        {
+          "id": "ts-006-02",
+          "name": "Generic Functions"
+        },
+        {
+          "id": "ts-006-03",
+          "name": "Generic Interfaces"
+        },
+        {
+          "id": "ts-006-04",
+          "name": "Generic Classes"
+        },
+        {
+          "id": "ts-006-05",
+          "name": "Generic Constraints (extends keyword)"
+        },
+        {
+          "id": "ts-006-06",
+          "name": "Multiple Type Parameters"
+        },
+        {
+          "id": "ts-006-07",
+          "name": "Default Generic Types"
+        },
+        {
+          "id": "ts-006-08",
+          "name": "Generic Type Inference"
+        },
+        {
+          "id": "ts-006-09",
+          "name": "Constraining Generics with Keyof"
+        },
+        {
+          "id": "ts-006-10",
+          "name": "Generic Utility Functions"
+        },
+        {
+          "id": "ts-006-11",
+          "name": "Conditional Types with Generics"
+        },
+        {
+          "id": "ts-006-12",
+          "name": "Generic Type Aliases"
+        },
+        {
+          "id": "ts-006-13",
+          "name": "Variadic Generics"
+        },
+        {
+          "id": "ts-006-14",
+          "name": "Generic Rest Parameters"
+        },
+        {
+          "id": "ts-006-15",
+          "name": "Mapped Types with Generics"
+        },
+        {
+          "id": "ts-006-16",
+          "name": "Generic Factories and Constructors"
+        },
+        {
+          "id": "ts-006-17",
+          "name": "Covariance and Contravariance"
+        },
+        {
+          "id": "ts-006-18",
+          "name": "Generic Type Guards"
+        },
+        {
+          "id": "ts-006-19",
+          "name": "Higher-Kinded Types (Limitations)"
+        },
+        {
+          "id": "ts-006-20",
+          "name": "Generic Promise and Async Patterns"
+        }
+      ]
+    },
+    {
+      "id": "ts-007",
+      "topic": "Advanced Types and Type Manipulation",
+      "subtopics": [
+        {
+          "id": "ts-007-01",
+          "name": "Intersection Types"
+        },
+        {
+          "id": "ts-007-02",
+          "name": "Union Types"
+        },
+        {
+          "id": "ts-007-03",
+          "name": "Type Guards (typeof, instanceof)"
+        },
+        {
+          "id": "ts-007-04",
+          "name": "User-Defined Type Guards"
+        },
+        {
+          "id": "ts-007-05",
+          "name": "Type Narrowing Techniques"
+        },
+        {
+          "id": "ts-007-06",
+          "name": "Discriminated Unions (Tagged Unions)"
+        },
+        {
+          "id": "ts-007-07",
+          "name": "Exhaustiveness Checking"
+        },
+        {
+          "id": "ts-007-08",
+          "name": "Conditional Types"
+        },
+        {
+          "id": "ts-007-09",
+          "name": "Infer Keyword in Conditional Types"
+        },
+        {
+          "id": "ts-007-10",
+          "name": "Mapped Types"
+        },
+        {
+          "id": "ts-007-11",
+          "name": "Key Remapping in Mapped Types"
+        },
+        {
+          "id": "ts-007-12",
+          "name": "Template Literal Types"
+        },
+        {
+          "id": "ts-007-13",
+          "name": "Recursive Types"
+        },
+        {
+          "id": "ts-007-14",
+          "name": "Type Inference in Conditional Types"
+        },
+        {
+          "id": "ts-007-15",
+          "name": "Distributive Conditional Types"
+        },
+        {
+          "id": "ts-007-16",
+          "name": "Index Access Types"
+        },
+        {
+          "id": "ts-007-17",
+          "name": "Typeof Type Operator"
+        },
+        {
+          "id": "ts-007-18",
+          "name": "Keyof Type Operator"
+        },
+        {
+          "id": "ts-007-19",
+          "name": "Indexed Access Types with Keyof"
+        },
+        {
+          "id": "ts-007-20",
+          "name": "Type Manipulation with as const"
+        }
+      ]
+    },
+    {
+      "id": "ts-008",
+      "topic": "Utility Types",
+      "subtopics": [
+        {
+          "id": "ts-008-01",
+          "name": "Partial<T> - Make All Properties Optional"
+        },
+        {
+          "id": "ts-008-02",
+          "name": "Required<T> - Make All Properties Required"
+        },
+        {
+          "id": "ts-008-03",
+          "name": "Readonly<T> - Make All Properties Readonly"
+        },
+        {
+          "id": "ts-008-04",
+          "name": "Pick<T, K> - Select Subset of Properties"
+        },
+        {
+          "id": "ts-008-05",
+          "name": "Omit<T, K> - Remove Properties"
+        },
+        {
+          "id": "ts-008-06",
+          "name": "Record<K, T> - Create Object Type"
+        },
+        {
+          "id": "ts-008-07",
+          "name": "Exclude<T, U> - Exclude Union Members"
+        },
+        {
+          "id": "ts-008-08",
+          "name": "Extract<T, U> - Extract Union Members"
+        },
+        {
+          "id": "ts-008-09",
+          "name": "NonNullable<T> - Remove Null and Undefined"
+        },
+        {
+          "id": "ts-008-10",
+          "name": "ReturnType<T> - Extract Function Return Type"
+        },
+        {
+          "id": "ts-008-11",
+          "name": "Parameters<T> - Extract Function Parameters"
+        },
+        {
+          "id": "ts-008-12",
+          "name": "ConstructorParameters<T> - Extract Constructor Parameters"
+        },
+        {
+          "id": "ts-008-13",
+          "name": "InstanceType<T> - Extract Instance Type"
+        },
+        {
+          "id": "ts-008-14",
+          "name": "ThisParameterType<T> - Extract This Parameter"
+        },
+        {
+          "id": "ts-008-15",
+          "name": "OmitThisParameter<T> - Remove This Parameter"
+        },
+        {
+          "id": "ts-008-16",
+          "name": "ThisType<T> - This Context Marker"
+        },
+        {
+          "id": "ts-008-17",
+          "name": "Awaited<T> - Unwrap Promise Types"
+        },
+        {
+          "id": "ts-008-18",
+          "name": "Uppercase<T> - Convert to Uppercase"
+        },
+        {
+          "id": "ts-008-19",
+          "name": "Lowercase<T>, Capitalize<T>, Uncapitalize<T>"
+        },
+        {
+          "id": "ts-008-20",
+          "name": "Custom Utility Type Creation"
+        }
+      ]
+    },
+    {
+      "id": "ts-009",
+      "topic": "Modules and Namespaces",
+      "subtopics": [
+        {
+          "id": "ts-009-01",
+          "name": "ES6 Module Import and Export"
+        },
+        {
+          "id": "ts-009-02",
+          "name": "Default Exports and Named Exports"
+        },
+        {
+          "id": "ts-009-03",
+          "name": "Export Type and Import Type"
+        },
+        {
+          "id": "ts-009-04",
+          "name": "Re-exporting Modules"
+        },
+        {
+          "id": "ts-009-05",
+          "name": "Dynamic Imports and Code Splitting"
+        },
+        {
+          "id": "ts-009-06",
+          "name": "Namespace Declaration"
+        },
+        {
+          "id": "ts-009-07",
+          "name": "Nested Namespaces"
+        },
+        {
+          "id": "ts-009-08",
+          "name": "Namespace Aliases"
+        },
+        {
+          "id": "ts-009-09",
+          "name": "Module vs Namespace"
+        },
+        {
+          "id": "ts-009-10",
+          "name": "Ambient Modules"
+        },
+        {
+          "id": "ts-009-11",
+          "name": "Module Resolution Strategies"
+        },
+        {
+          "id": "ts-009-12",
+          "name": "Classic vs Node Module Resolution"
+        },
+        {
+          "id": "ts-009-13",
+          "name": "Path Mapping and Base URL"
+        },
+        {
+          "id": "ts-009-14",
+          "name": "Module Augmentation"
+        },
+        {
+          "id": "ts-009-15",
+          "name": "Global Augmentation"
+        },
+        {
+          "id": "ts-009-16",
+          "name": "CommonJS and AMD Compatibility"
+        },
+        {
+          "id": "ts-009-17",
+          "name": "ES Module Interop"
+        },
+        {
+          "id": "ts-009-18",
+          "name": "Barrel Exports (Index Files)"
+        },
+        {
+          "id": "ts-009-19",
+          "name": "Side Effect Imports"
+        },
+        {
+          "id": "ts-009-20",
+          "name": "Import Assertions and JSON Modules"
+        }
+      ]
+    },
+    {
+      "id": "ts-010",
+      "topic": "Declaration Files and Type Definitions",
+      "subtopics": [
+        {
+          "id": "ts-010-01",
+          "name": "What are Declaration Files (.d.ts)"
+        },
+        {
+          "id": "ts-010-02",
+          "name": "Creating Declaration Files"
+        },
+        {
+          "id": "ts-010-03",
+          "name": "Ambient Declarations (declare keyword)"
+        },
+        {
+          "id": "ts-010-04",
+          "name": "Declare Global Variables and Functions"
+        },
+        {
+          "id": "ts-010-05",
+          "name": "Declare Module for Third-party Libraries"
+        },
+        {
+          "id": "ts-010-06",
+          "name": "DefinitelyTyped and @types Packages"
+        },
+        {
+          "id": "ts-010-07",
+          "name": "Type Declaration File Structure"
+        },
+        {
+          "id": "ts-010-08",
+          "name": "Triple-Slash Directives"
+        },
+        {
+          "id": "ts-010-09",
+          "name": "Reference Types and Path"
+        },
+        {
+          "id": "ts-010-10",
+          "name": "Library Types and DOM Types"
+        },
+        {
+          "id": "ts-010-11",
+          "name": "Module Declaration Files"
+        },
+        {
+          "id": "ts-010-12",
+          "name": "Global Declaration Files"
+        },
+        {
+          "id": "ts-010-13",
+          "name": "UMD Module Declarations"
+        },
+        {
+          "id": "ts-010-14",
+          "name": "Plugin and Extension Declarations"
+        },
+        {
+          "id": "ts-010-15",
+          "name": "Consuming Declaration Files"
+        },
+        {
+          "id": "ts-010-16",
+          "name": "Publishing Type Declarations"
+        },
+        {
+          "id": "ts-010-17",
+          "name": "Declaration Merging in .d.ts Files"
+        },
+        {
+          "id": "ts-010-18",
+          "name": "Type-Only Imports and Exports"
+        },
+        {
+          "id": "ts-010-19",
+          "name": "Wildcard Module Declarations"
+        },
+        {
+          "id": "ts-010-20",
+          "name": "Auto-generating Declaration Files"
+        }
+      ]
+    },
+    {
+      "id": "ts-011",
+      "topic": "Decorators and Metadata",
+      "subtopics": [
+        {
+          "id": "ts-011-01",
+          "name": "Introduction to Decorators"
+        },
+        {
+          "id": "ts-011-02",
+          "name": "Enabling Experimental Decorators"
+        },
+        {
+          "id": "ts-011-03",
+          "name": "Class Decorators"
+        },
+        {
+          "id": "ts-011-04",
+          "name": "Method Decorators"
+        },
+        {
+          "id": "ts-011-05",
+          "name": "Property Decorators"
+        },
+        {
+          "id": "ts-011-06",
+          "name": "Parameter Decorators"
+        },
+        {
+          "id": "ts-011-07",
+          "name": "Accessor Decorators (Getter/Setter)"
+        },
+        {
+          "id": "ts-011-08",
+          "name": "Decorator Factories"
+        },
+        {
+          "id": "ts-011-09",
+          "name": "Decorator Composition and Order"
+        },
+        {
+          "id": "ts-011-10",
+          "name": "Decorator Evaluation Order"
+        },
+        {
+          "id": "ts-011-11",
+          "name": "Reflect Metadata API"
+        },
+        {
+          "id": "ts-011-12",
+          "name": "Metadata Keys and Values"
+        },
+        {
+          "id": "ts-011-13",
+          "name": "Design-time Type Metadata"
+        },
+        {
+          "id": "ts-011-14",
+          "name": "Custom Metadata Decorators"
+        },
+        {
+          "id": "ts-011-15",
+          "name": "Dependency Injection with Decorators"
+        },
+        {
+          "id": "ts-011-16",
+          "name": "Validation Decorators"
+        },
+        {
+          "id": "ts-011-17",
+          "name": "Stage 3 Decorator Proposal"
+        },
+        {
+          "id": "ts-011-18",
+          "name": "Legacy vs Modern Decorators"
+        },
+        {
+          "id": "ts-011-19",
+          "name": "Decorator Use Cases (Logging, Caching)"
+        },
+        {
+          "id": "ts-011-20",
+          "name": "Framework-specific Decorators (Angular, NestJS)"
+        }
+      ]
+    },
+    {
+      "id": "ts-012",
+      "topic": "Async Programming and Promises",
+      "subtopics": [
+        {
+          "id": "ts-012-01",
+          "name": "Promise Type Annotations"
+        },
+        {
+          "id": "ts-012-02",
+          "name": "Promise Generic Types"
+        },
+        {
+          "id": "ts-012-03",
+          "name": "Async/Await with TypeScript"
+        },
+        {
+          "id": "ts-012-04",
+          "name": "Return Types of Async Functions"
+        },
+        {
+          "id": "ts-012-05",
+          "name": "Error Handling in Async Code"
+        },
+        {
+          "id": "ts-012-06",
+          "name": "Promise.all with Type Inference"
+        },
+        {
+          "id": "ts-012-07",
+          "name": "Promise.race and Promise.any"
+        },
+        {
+          "id": "ts-012-08",
+          "name": "Promise.allSettled Type Handling"
+        },
+        {
+          "id": "ts-012-09",
+          "name": "Awaited Utility Type"
+        },
+        {
+          "id": "ts-012-10",
+          "name": "Callback Types vs Promise Types"
+        },
+        {
+          "id": "ts-012-11",
+          "name": "Promisify and Type Safety"
+        },
+        {
+          "id": "ts-012-12",
+          "name": "Observable and RxJS Types"
+        },
+        {
+          "id": "ts-012-13",
+          "name": "AsyncIterator and AsyncGenerator"
+        },
+        {
+          "id": "ts-012-14",
+          "name": "For-await-of Loops"
+        },
+        {
+          "id": "ts-012-15",
+          "name": "Async Function Overloads"
+        },
+        {
+          "id": "ts-012-16",
+          "name": "Deferred and Promise Wrappers"
+        },
+        {
+          "id": "ts-012-17",
+          "name": "Typed Event Emitters"
+        },
+        {
+          "id": "ts-012-18",
+          "name": "Async Generators with Types"
+        },
+        {
+          "id": "ts-012-19",
+          "name": "AbortController and Signal Types"
+        },
+        {
+          "id": "ts-012-20",
+          "name": "Async Error Type Handling"
+        }
+      ]
+    },
+    {
+      "id": "ts-013",
+      "topic": "Type Checking and Compiler Options",
+      "subtopics": [
+        {
+          "id": "ts-013-01",
+          "name": "tsconfig.json Configuration"
+        },
+        {
+          "id": "ts-013-02",
+          "name": "Compiler Options Overview"
+        },
+        {
+          "id": "ts-013-03",
+          "name": "Strict Mode and Strict Flags"
+        },
+        {
+          "id": "ts-013-04",
+          "name": "strictNullChecks Option"
+        },
+        {
+          "id": "ts-013-05",
+          "name": "strictFunctionTypes Option"
+        },
+        {
+          "id": "ts-013-06",
+          "name": "strictBindCallApply Option"
+        },
+        {
+          "id": "ts-013-07",
+          "name": "strictPropertyInitialization Option"
+        },
+        {
+          "id": "ts-013-08",
+          "name": "noImplicitAny and noImplicitThis"
+        },
+        {
+          "id": "ts-013-09",
+          "name": "alwaysStrict Option"
+        },
+        {
+          "id": "ts-013-10",
+          "name": "Target and Lib Options"
+        },
+        {
+          "id": "ts-013-11",
+          "name": "Module System Options (CommonJS, ES6, ESNext)"
+        },
+        {
+          "id": "ts-013-12",
+          "name": "Module Resolution Options"
+        },
+        {
+          "id": "ts-013-13",
+          "name": "Declaration and Source Map Generation"
+        },
+        {
+          "id": "ts-013-14",
+          "name": "outDir and rootDir Configuration"
+        },
+        {
+          "id": "ts-013-15",
+          "name": "Include, Exclude, and Files Options"
+        },
+        {
+          "id": "ts-013-16",
+          "name": "Type Checking for JavaScript Files"
+        },
+        {
+          "id": "ts-013-17",
+          "name": "allowJs and checkJs Options"
+        },
+        {
+          "id": "ts-013-18",
+          "name": "esModuleInterop and allowSyntheticDefaultImports"
+        },
+        {
+          "id": "ts-013-19",
+          "name": "skipLibCheck and forceConsistentCasingInFileNames"
+        },
+        {
+          "id": "ts-013-20",
+          "name": "Project References and Composite Projects"
+        }
+      ]
+    },
+    {
+      "id": "ts-014",
+      "topic": "Error Handling and Type Safety",
+      "subtopics": [
+        {
+          "id": "ts-014-01",
+          "name": "Try-Catch with Typed Errors"
+        },
+        {
+          "id": "ts-014-02",
+          "name": "Error Type Definitions"
+        },
+        {
+          "id": "ts-014-03",
+          "name": "Custom Error Classes"
+        },
+        {
+          "id": "ts-014-04",
+          "name": "Unknown Type for Caught Errors"
+        },
+        {
+          "id": "ts-014-05",
+          "name": "Error Type Guards"
+        },
+        {
+          "id": "ts-014-06",
+          "name": "Result and Either Types Pattern"
+        },
+        {
+          "id": "ts-014-07",
+          "name": "Option/Maybe Type Pattern"
+        },
+        {
+          "id": "ts-014-08",
+          "name": "Type-safe Error Boundaries"
+        },
+        {
+          "id": "ts-014-09",
+          "name": "Discriminated Union for Error States"
+        },
+        {
+          "id": "ts-014-10",
+          "name": "Null vs Undefined Error Handling"
+        },
+        {
+          "id": "ts-014-11",
+          "name": "Optional Chaining for Error Prevention"
+        },
+        {
+          "id": "ts-014-12",
+          "name": "Nullish Coalescing for Default Values"
+        },
+        {
+          "id": "ts-014-13",
+          "name": "Exhaustive Type Checking"
+        },
+        {
+          "id": "ts-014-14",
+          "name": "Compile-time vs Runtime Errors"
+        },
+        {
+          "id": "ts-014-15",
+          "name": "Type Assertions and Error Risks"
+        },
+        {
+          "id": "ts-014-16",
+          "name": "Validation Libraries (Zod, Yup) Integration"
+        },
+        {
+          "id": "ts-014-17",
+          "name": "Runtime Type Checking Strategies"
+        },
+        {
+          "id": "ts-014-18",
+          "name": "Error Recovery Patterns"
+        },
+        {
+          "id": "ts-014-19",
+          "name": "Type-safe API Error Handling"
+        },
+        {
+          "id": "ts-014-20",
+          "name": "Defensive Programming with Types"
+        }
+      ]
+    },
+    {
+      "id": "ts-015",
+      "topic": "TypeScript with React",
+      "subtopics": [
+        {
+          "id": "ts-015-01",
+          "name": "React Component Types (FC, ReactNode)"
+        },
+        {
+          "id": "ts-015-02",
+          "name": "Props Interface and Type Definitions"
+        },
+        {
+          "id": "ts-015-03",
+          "name": "Children Prop Types"
+        },
+        {
+          "id": "ts-015-04",
+          "name": "useState with TypeScript"
+        },
+        {
+          "id": "ts-015-05",
+          "name": "useEffect and Dependencies Typing"
+        },
+        {
+          "id": "ts-015-06",
+          "name": "useRef Type Annotations"
+        },
+        {
+          "id": "ts-015-07",
+          "name": "useContext with Typed Contexts"
+        },
+        {
+          "id": "ts-015-08",
+          "name": "useReducer with Action Types"
+        },
+        {
+          "id": "ts-015-09",
+          "name": "Custom Hooks with TypeScript"
+        },
+        {
+          "id": "ts-015-10",
+          "name": "Event Handler Types (onChange, onClick)"
+        },
+        {
+          "id": "ts-015-11",
+          "name": "Form Events and Input Types"
+        },
+        {
+          "id": "ts-015-12",
+          "name": "Generic Components"
+        },
+        {
+          "id": "ts-015-13",
+          "name": "Higher-Order Components (HOC) Types"
+        },
+        {
+          "id": "ts-015-14",
+          "name": "Render Props Pattern with Types"
+        },
+        {
+          "id": "ts-015-15",
+          "name": "React.memo and Component Memoization"
+        },
+        {
+          "id": "ts-015-16",
+          "name": "forwardRef with TypeScript"
+        },
+        {
+          "id": "ts-015-17",
+          "name": "Portal and Fragment Types"
+        },
+        {
+          "id": "ts-015-18",
+          "name": "CSS-in-JS Type Definitions"
+        },
+        {
+          "id": "ts-015-19",
+          "name": "React Router with TypeScript"
+        },
+        {
+          "id": "ts-015-20",
+          "name": "State Management Libraries (Redux, Zustand) Types"
+        }
+      ]
+    },
+    {
+      "id": "ts-016",
+      "topic": "TypeScript with Node.js and Backend",
+      "subtopics": [
+        {
+          "id": "ts-016-01",
+          "name": "Node.js Type Definitions (@types/node)"
+        },
+        {
+          "id": "ts-016-02",
+          "name": "Express.js with TypeScript"
+        },
+        {
+          "id": "ts-016-03",
+          "name": "Request and Response Types"
+        },
+        {
+          "id": "ts-016-04",
+          "name": "Middleware Type Definitions"
+        },
+        {
+          "id": "ts-016-05",
+          "name": "Route Handler Types"
+        },
+        {
+          "id": "ts-016-06",
+          "name": "File System (fs) Module Types"
+        },
+        {
+          "id": "ts-016-07",
+          "name": "Path Module Types"
+        },
+        {
+          "id": "ts-016-08",
+          "name": "HTTP and HTTPS Module Types"
+        },
+        {
+          "id": "ts-016-09",
+          "name": "Stream Types and Event Emitter"
+        },
+        {
+          "id": "ts-016-10",
+          "name": "Buffer and Binary Data Types"
+        },
+        {
+          "id": "ts-016-11",
+          "name": "Database Client Types (PostgreSQL, MongoDB)"
+        },
+        {
+          "id": "ts-016-12",
+          "name": "ORM Types (Prisma, TypeORM, Sequelize)"
+        },
+        {
+          "id": "ts-016-13",
+          "name": "Environment Variables and Process Types"
+        },
+        {
+          "id": "ts-016-14",
+          "name": "Authentication and JWT Types"
+        },
+        {
+          "id": "ts-016-15",
+          "name": "WebSocket Types"
+        },
+        {
+          "id": "ts-016-16",
+          "name": "GraphQL with TypeScript"
+        },
+        {
+          "id": "ts-016-17",
+          "name": "RESTful API Type Safety"
+        },
+        {
+          "id": "ts-016-18",
+          "name": "Testing Backend Code (Jest, Mocha) Types"
+        },
+        {
+          "id": "ts-016-19",
+          "name": "Dependency Injection in Node.js"
+        },
+        {
+          "id": "ts-016-20",
+          "name": "NestJS Framework and Decorators"
+        }
+      ]
+    },
+    {
+      "id": "ts-017",
+      "topic": "Testing with TypeScript",
+      "subtopics": [
+        {
+          "id": "ts-017-01",
+          "name": "Jest Configuration for TypeScript"
+        },
+        {
+          "id": "ts-017-02",
+          "name": "Test Function Types and Assertions"
+        },
+        {
+          "id": "ts-017-03",
+          "name": "Mock Types and Spy Types"
+        },
+        {
+          "id": "ts-017-04",
+          "name": "Type-safe Test Data Factories"
+        },
+        {
+          "id": "ts-017-05",
+          "name": "Testing Generic Functions"
+        },
+        {
+          "id": "ts-017-06",
+          "name": "Mocking Modules with Types"
+        },
+        {
+          "id": "ts-017-07",
+          "name": "React Testing Library with TypeScript"
+        },
+        {
+          "id": "ts-017-08",
+          "name": "Component Testing Types"
+        },
+        {
+          "id": "ts-017-09",
+          "name": "E2E Testing (Playwright, Cypress) Types"
+        },
+        {
+          "id": "ts-017-10",
+          "name": "Test Coverage and Type Coverage"
+        },
+        {
+          "id": "ts-017-11",
+          "name": "Mocha and Chai Type Definitions"
+        },
+        {
+          "id": "ts-017-12",
+          "name": "Vitest Configuration and Types"
+        },
+        {
+          "id": "ts-017-13",
+          "name": "Snapshot Testing with Types"
+        },
+        {
+          "id": "ts-017-14",
+          "name": "Testing Async Code with Types"
+        },
+        {
+          "id": "ts-017-15",
+          "name": "Testing Custom Hooks"
+        },
+        {
+          "id": "ts-017-16",
+          "name": "Type-safe Test Utilities"
+        },
+        {
+          "id": "ts-017-17",
+          "name": "Testing Type Guards and Narrowing"
+        },
+        {
+          "id": "ts-017-18",
+          "name": "Integration Testing with Types"
+        },
+        {
+          "id": "ts-017-19",
+          "name": "Testing Error Scenarios"
+        },
+        {
+          "id": "ts-017-20",
+          "name": "Type-driven Development (TDD)"
+        }
+      ]
+    },
+    {
+      "id": "ts-018",
+      "topic": "TypeScript Build Tools and Bundlers",
+      "subtopics": [
+        {
+          "id": "ts-018-01",
+          "name": "TypeScript Compiler (tsc) Usage"
+        },
+        {
+          "id": "ts-018-02",
+          "name": "Watch Mode and Incremental Compilation"
+        },
+        {
+          "id": "ts-018-03",
+          "name": "Webpack with TypeScript (ts-loader)"
+        },
+        {
+          "id": "ts-018-04",
+          "name": "Babel and TypeScript Integration"
+        },
+        {
+          "id": "ts-018-05",
+          "name": "Vite with TypeScript"
+        },
+        {
+          "id": "ts-018-06",
+          "name": "Rollup and TypeScript Plugin"
+        },
+        {
+          "id": "ts-018-07",
+          "name": "esbuild for Fast TypeScript Compilation"
+        },
+        {
+          "id": "ts-018-08",
+          "name": "Parcel Zero-Config with TypeScript"
+        },
+        {
+          "id": "ts-018-09",
+          "name": "SWC (Speedy Web Compiler) with TypeScript"
+        },
+        {
+          "id": "ts-018-10",
+          "name": "Source Maps Configuration"
+        },
+        {
+          "id": "ts-018-11",
+          "name": "Tree Shaking and Dead Code Elimination"
+        },
+        {
+          "id": "ts-018-12",
+          "name": "Code Splitting Strategies"
+        },
+        {
+          "id": "ts-018-13",
+          "name": "Build Optimization Techniques"
+        },
+        {
+          "id": "ts-018-14",
+          "name": "TypeScript Monorepo Setup (Lerna, Nx)"
+        },
+        {
+          "id": "ts-018-15",
+          "name": "Project References and Build Mode"
+        },
+        {
+          "id": "ts-018-16",
+          "name": "Environment-specific Builds"
+        },
+        {
+          "id": "ts-018-17",
+          "name": "Output Directory Structure"
+        },
+        {
+          "id": "ts-018-18",
+          "name": "Library Bundling and Distribution"
+        },
+        {
+          "id": "ts-018-19",
+          "name": "TypeScript with Next.js Build"
+        },
+        {
+          "id": "ts-018-20",
+          "name": "CI/CD Pipeline for TypeScript Projects"
+        }
+      ]
+    },
+    {
+      "id": "ts-019",
+      "topic": "TypeScript Best Practices and Design Patterns",
+      "subtopics": [
+        {
+          "id": "ts-019-01",
+          "name": "Code Organization and Project Structure"
+        },
+        {
+          "id": "ts-019-02",
+          "name": "Naming Conventions for Types and Interfaces"
+        },
+        {
+          "id": "ts-019-03",
+          "name": "When to Use Type vs Interface"
+        },
+        {
+          "id": "ts-019-04",
+          "name": "Avoiding any Type"
+        },
+        {
+          "id": "ts-019-05",
+          "name": "Leveraging Type Inference"
+        },
+        {
+          "id": "ts-019-06",
+          "name": "DRY Principle with Types"
+        },
+        {
+          "id": "ts-019-07",
+          "name": "SOLID Principles in TypeScript"
+        },
+        {
+          "id": "ts-019-08",
+          "name": "Singleton Pattern with TypeScript"
+        },
+        {
+          "id": "ts-019-09",
+          "name": "Factory Pattern with Types"
+        },
+        {
+          "id": "ts-019-10",
+          "name": "Builder Pattern Implementation"
+        },
+        {
+          "id": "ts-019-11",
+          "name": "Observer Pattern with Type Safety"
+        },
+        {
+          "id": "ts-019-12",
+          "name": "Strategy Pattern with Interfaces"
+        },
+        {
+          "id": "ts-019-13",
+          "name": "Dependency Injection Pattern"
+        },
+        {
+          "id": "ts-019-14",
+          "name": "Repository Pattern for Data Access"
+        },
+        {
+          "id": "ts-019-15",
+          "name": "Immutability and Readonly Patterns"
+        },
+        {
+          "id": "ts-019-16",
+          "name": "Functional Programming Patterns"
+        },
+        {
+          "id": "ts-019-17",
+          "name": "Error Handling Best Practices"
+        },
+        {
+          "id": "ts-019-18",
+          "name": "Performance Optimization Tips"
+        },
+        {
+          "id": "ts-019-19",
+          "name": "Code Documentation with TSDoc"
+        },
+        {
+          "id": "ts-019-20",
+          "name": "Migration from JavaScript to TypeScript"
+        }
+      ]
+    },
+    {
+      "id": "ts-020",
+      "topic": "Advanced TypeScript Features and Latest Updates",
+      "subtopics": [
+        {
+          "id": "ts-020-01",
+          "name": "TypeScript 5.0+ New Features Overview"
+        },
+        {
+          "id": "ts-020-02",
+          "name": "Const Type Parameters (5.0)"
+        },
+        {
+          "id": "ts-020-03",
+          "name": "Supporting Multiple Config Files (5.0)"
+        },
+        {
+          "id": "ts-020-04",
+          "name": "Enum Improvements and Performance"
+        },
+        {
+          "id": "ts-020-05",
+          "name": "Decorator Metadata (5.2)"
+        },
+        {
+          "id": "ts-020-06",
+          "name": "Using Declarations and Explicit Resource Management (5.2)"
+        },
+        {
+          "id": "ts-020-07",
+          "name": "Import Attributes (5.3)"
+        },
+        {
+          "id": "ts-020-08",
+          "name": "Resolution Mode in Import Types (5.3)"
+        },
+        {
+          "id": "ts-020-09",
+          "name": "Narrowing Improvements (5.4)"
+        },
+        {
+          "id": "ts-020-10",
+          "name": "NoInfer Utility Type (5.4)"
+        },
+        {
+          "id": "ts-020-11",
+          "name": "Type-Only Import/Export Syntax Enhancements"
+        },
+        {
+          "id": "ts-020-12",
+          "name": "Control Flow Analysis Improvements"
+        },
+        {
+          "id": "ts-020-13",
+          "name": "Template String Pattern Index Signatures"
+        },
+        {
+          "id": "ts-020-14",
+          "name": "Satisfies Operator for Type Checking (4.9+)"
+        },
+        {
+          "id": "ts-020-15",
+          "name": "Auto-Accessors in Classes"
+        },
+        {
+          "id": "ts-020-16",
+          "name": "Isolated Declarations Mode"
+        },
+        {
+          "id": "ts-020-17",
+          "name": "Performance Optimizations in Compiler"
+        },
+        {
+          "id": "ts-020-18",
+          "name": "JSDoc Improvements for Type Checking"
+        },
+        {
+          "id": "ts-020-19",
+          "name": "Future TypeScript Roadmap Features"
+        },
+        {
+          "id": "ts-020-20",
+          "name": "TypeScript Community and Resources"
+        }
+      ]
+    }
+  ]
+}

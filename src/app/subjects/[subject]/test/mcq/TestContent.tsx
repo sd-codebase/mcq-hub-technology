@@ -123,9 +123,9 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
           Your score: <span className="text-indigo-400 font-bold">{score}</span>{" "}
           / {questions.length}
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <button
-            className="px-6 py-3 rounded-full text-white font-semibold
+            className="px-6 py-3 rounded-full text-white font-semibold cursor-pointer
                      bg-gradient-to-r from-indigo-600 to-purple-600 
                      hover:from-indigo-700 hover:to-purple-700
                      transition-all duration-300 shadow-lg shadow-indigo-500/20
@@ -135,7 +135,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
             Review Test
           </button>
           <button
-            className="px-6 py-3 rounded-full font-semibold
+            className="px-6 py-3 rounded-full font-semibold cursor-pointer
                      bg-gray-900/50 text-gray-300 border border-gray-700
                      hover:border-indigo-500/30 hover:text-white
                      transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/10
@@ -151,6 +151,17 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
           >
             Restart
           </button>
+          <a
+            href={`/subjects/${subject}/topics`}
+            className="px-6 py-3 rounded-full font-semibold cursor-pointer
+                     bg-gradient-to-r from-teal-500 to-green-500
+                     hover:from-teal-600 hover:to-green-600
+                     text-white transition-all duration-300 
+                     shadow-lg shadow-teal-500/20
+                     transform hover:scale-105"
+          >
+            Choose New Topic
+          </a>
         </div>
       </div>
     );
@@ -199,33 +210,48 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
                     </div>
                   ))}
                 </div>
-                <div className="mt-4 text-lg font-medium text-gray-800 bg-white p-5 rounded-lg border border-gray-200 shadow-md">
-                  <div className="text-indigo-400 font-semibold mb-2">
+                <div className="mt-4 text-gray-700 bg-white p-5 rounded-lg border border-gray-200 shadow-md">
+                  <div className="text-indigo-700 font-semibold text-lg mb-3">
                     Explanation:
                   </div>
-                  <MDEditorRenderer value={q.explanation} />
+                  <div className="text-gray-800">
+                    <MDEditorRenderer value={q.explanation} />
+                  </div>
                 </div>
               </div>
             );
           })}
         </div>
-        <button
-          className="mt-8 px-8 py-3 rounded-full text-white font-semibold
-                   bg-gradient-to-r from-indigo-600 to-purple-600 
-                   hover:from-indigo-700 hover:to-purple-700
-                   transition-all duration-300 shadow-lg shadow-indigo-500/20
-                   transform hover:scale-105"
-          onClick={() => {
-            setCurrent(0);
-            setScore(0);
-            setShowResult(false);
-            setTimer(MCQ_TIMER);
-            setUserAnswers([]);
-            setReviewMode(false);
-          }}
-        >
-          Restart Test
-        </button>
+        <div className="flex gap-4 mt-8">
+          <button
+            className="px-8 py-3 rounded-full text-white font-semibold cursor-pointer
+                     bg-gradient-to-r from-indigo-600 to-purple-600 
+                     hover:from-indigo-700 hover:to-purple-700
+                     transition-all duration-300 shadow-lg shadow-indigo-500/20
+                     transform hover:scale-105"
+            onClick={() => {
+              setCurrent(0);
+              setScore(0);
+              setShowResult(false);
+              setTimer(MCQ_TIMER);
+              setUserAnswers([]);
+              setReviewMode(false);
+            }}
+          >
+            Restart Test
+          </button>
+          <a
+            href={`/subjects/${subject}/topics`}
+            className="px-8 py-3 rounded-full font-semibold cursor-pointer
+                     bg-gradient-to-r from-teal-500 to-green-500
+                     hover:from-teal-600 hover:to-green-600
+                     text-white transition-all duration-300 
+                     shadow-lg shadow-teal-500/20
+                     transform hover:scale-105"
+          >
+            Choose New Topic
+          </a>
+        </div>
       </div>
     );
 
@@ -303,10 +329,10 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
         {q.options.map((opt: string, idx: number) => (
           <button
             key={idx}
-            className={`block w-full text-left px-6 py-4 rounded-lg border font-medium transition-all duration-300 ${
+            className={`block w-full text-left px-6 py-4 rounded-lg border-2 font-medium transition-all duration-300 cursor-pointer ${
               selected === idx
-                ? "bg-indigo-50 border-indigo-500 text-indigo-700 shadow-lg"
-                : "bg-white border-gray-200 hover:border-indigo-300 text-gray-700 hover:shadow-md"
+                ? "bg-indigo-100 border-indigo-500 text-indigo-700 shadow-lg scale-[1.02] font-bold ring-2 ring-indigo-500/50 ring-offset-2"
+                : "bg-white border-gray-200 hover:border-indigo-300 text-gray-700 hover:shadow-md hover:scale-[1.01]"
             }`}
             onClick={() => handleSelect(idx)}
             disabled={selected !== null}
@@ -320,7 +346,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
                    ${
                      selected === null
                        ? "bg-gray-700 cursor-not-allowed"
-                       : "bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg shadow-indigo-500/20"
+                       : "bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-lg shadow-indigo-500/20 cursor-pointer"
                    }`}
         onClick={handleNext}
         disabled={selected === null}

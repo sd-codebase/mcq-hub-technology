@@ -6,11 +6,14 @@ const MDEditorRenderer = dynamic(
   { ssr: false }
 );
 import { useSearchParams } from "next/navigation";
+import TestHeader from "../../../../../components/TestHeader";
 
 export default function InterviewTestContent({ subject }: { subject: string }) {
   const searchParams = useSearchParams();
   const subtopic = searchParams.get("subtopic");
-  const topic = searchParams.get("topic");
+  const subtopicName = decodeURIComponent(
+    searchParams.get("subtopicName") || ""
+  );
 
   const [questions, setQuestions] = useState<any[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -51,58 +54,116 @@ export default function InterviewTestContent({ subject }: { subject: string }) {
 
   if (showResult)
     return (
-      <div className="max-w-xl mx-auto p-4">
-        <h2 className="text-2xl font-bold mb-4">Test Complete!</h2>
-        <div className="mb-2">
-          You completed {questions.length} interview questions.
+      <div
+        className="max-w-4xl mx-auto p-8 mt-8 rounded-xl bg-gray-800 shadow-2xl"
+        style={{
+          background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)",
+        }}
+      >
+        <h2 className="text-3xl font-bold mb-6 text-white">
+          Test Complete! 🎉
+        </h2>
+        <div className="mb-6 text-xl text-gray-200">
+          You completed all {questions.length} interview questions
         </div>
-        <button
-          className="mt-4 px-4 py-2 rounded bg-purple-600 text-white font-semibold"
-          onClick={() => {
-            setCurrent(0);
-            setShowResult(false);
-          }}
-        >
-          Restart
-        </button>
+        <div className="flex flex-wrap gap-4">
+          <button
+            className="px-6 py-3 rounded-full text-white font-semibold cursor-pointer
+                     bg-gradient-to-r from-indigo-600 to-purple-600 
+                     hover:from-indigo-700 hover:to-purple-700
+                     transition-all duration-300 shadow-lg shadow-indigo-500/20
+                     transform hover:scale-105"
+            onClick={() => {
+              setCurrent(0);
+              setShowResult(false);
+            }}
+          >
+            Restart Test
+          </button>
+          <a
+            href={`/subjects/${subject}/topics`}
+            className="px-6 py-3 rounded-full font-semibold cursor-pointer
+                     bg-gradient-to-r from-teal-500 to-green-500
+                     hover:from-teal-600 hover:to-green-600
+                     text-white transition-all duration-300 
+                     shadow-lg shadow-teal-500/20
+                     transform hover:scale-105"
+          >
+            Choose New Topic
+          </a>
+        </div>
       </div>
     );
 
   return (
-    <div className="max-w-xl mx-auto p-4">
-      <h2 className="text-xl font-bold mb-4">Interview Question</h2>
-      <div className="mb-2 font-medium">
+    <div
+      className="max-w-4xl mx-auto p-8 rounded-xl mt-8 relative bg-gray-50 shadow-2xl"
+      style={{
+        background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)",
+      }}
+    >
+      <TestHeader
+        subtopicName={subtopicName}
+        testType="Interview Questions"
+        currentQuestion={current + 1}
+        totalQuestions={questions.length}
+      />
+
+      <div className="text-2xl font-bold mb-6 text-gray-800 bg-white p-6 rounded-lg border border-gray-200 shadow-md">
         <MDEditorRenderer value={q.question} />
       </div>
+
       <textarea
-        className="w-full border px-3 py-2 rounded mb-2"
-        placeholder="Your answer..."
+        className="w-full border-2 px-6 py-4 rounded-lg mb-6 text-gray-700 bg-white shadow-md
+                 border-gray-200 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-500/50 focus:ring-offset-2
+                 transition-all duration-300"
+        placeholder="Write your answer here..."
         value={userAnswer}
         onChange={(e) => setUserAnswer(e.target.value)}
         disabled={showExplanation}
-        rows={4}
+        rows={6}
       />
+
       {showExplanation && (
-        <div className="mb-4 text-sm text-gray-700">
-          <div className="font-semibold">Sample Answer:</div>
-          <div className="bg-gray-50 rounded p-2 mb-1">
-            <MDEditorRenderer value={q.answer} />
+        <div className="space-y-6 mb-6">
+          <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
+            <div className="text-indigo-700 font-semibold text-lg mb-3">
+              Sample Answer:
+            </div>
+            <div className="text-gray-700">
+              <MDEditorRenderer value={q.answer} />
+            </div>
           </div>
-          <div className="italic mt-3">
-            <MDEditorRenderer value={q.explanation} />
+
+          <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
+            <div className="text-indigo-700 font-semibold text-lg mb-3">
+              Additional Notes:
+            </div>
+            <div className="text-gray-700">
+              <MDEditorRenderer value={q.explanation} />
+            </div>
           </div>
         </div>
       )}
+
       {!showExplanation ? (
         <button
-          className="mt-2 px-4 py-2 rounded bg-purple-600 text-white font-semibold"
+          className="px-8 py-3 rounded-full text-white font-semibold text-lg cursor-pointer
+                   bg-gradient-to-r from-indigo-600 to-purple-600 
+                   hover:from-indigo-700 hover:to-purple-700
+                   transition-all duration-300 shadow-lg shadow-indigo-500/20
+                   transform hover:scale-105"
           onClick={() => setShowExplanation(true)}
         >
           Show Answer
         </button>
       ) : (
         <button
-          className="mt-2 px-4 py-2 rounded bg-purple-600 text-white font-semibold"
+          className="px-8 py-3 rounded-full text-white font-semibold text-lg cursor-pointer
+                   bg-gradient-to-r from-indigo-600 to-purple-600 
+                   hover:from-indigo-700 hover:to-purple-700
+                   transition-all duration-300 shadow-lg shadow-indigo-500/20
+                   transform hover:scale-105"
           onClick={handleNext}
         >
           {current + 1 === questions.length ? "Finish" : "Next"}
