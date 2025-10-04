@@ -4,6 +4,7 @@ import { Zap } from "@/components/zap";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { subjects } from "./constants/subject";
 
 // --- Icon Imports (Using lucide-react approximations) ---
 const Code = ({ className }: { className?: string }) => (
@@ -63,46 +64,6 @@ const MessageCircleQuestion = ({ className }: { className?: string }) => (
     <path d="M12 18v.01"></path>
   </svg>
 );
-
-// Mock data for Subjects (replace with actual image URLs or SVG components later)
-const subjects = [
-  {
-    logotext: "JS",
-    name: "JavaScript",
-    link: "subjects/javascript/topics",
-    questions: "20,000",
-  },
-  {
-    logotext: "TS",
-    name: "TypeScript",
-    link: "subjects/typescript/topics",
-    questions: "20,000",
-  },
-  {
-    logotext: "Node",
-    name: "NodeJS",
-    link: "subjects/nodejs/topics",
-    questions: "20,000",
-  },
-  {
-    logotext: "React",
-    name: "ReactJS",
-    link: "subjects/reactjs/topics",
-    questions: "20,000",
-  },
-  {
-    logotext: "Angular",
-    name: "Angular",
-    link: "subjects/angular/topics",
-    questions: "20,000",
-  },
-  {
-    logotext: "Vue",
-    name: "VueJS",
-    link: "subjects/vuejs/topics",
-    questions: "20,000",
-  },
-];
 
 const Hero = () => (
   <section
@@ -301,30 +262,24 @@ const Footer = () => (
           </p>
         </div>
         <div className="space-x-6 text-sm">
-          <a
-            href="#about"
+          <Link
+            href="/about"
             className="text-gray-400 hover:text-indigo-400 transition duration-150"
           >
             About
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            href="/contact"
             className="text-gray-400 hover:text-indigo-400 transition duration-150"
           >
             Contact
-          </a>
-          <a
-            href="#privacy"
+          </Link>
+          <Link
+            href="/legal"
             className="text-gray-400 hover:text-indigo-400 transition duration-150"
           >
-            Privacy
-          </a>
-          <a
-            href="#terms"
-            className="text-gray-400 hover:text-indigo-400 transition duration-150"
-          >
-            Terms
-          </a>
+            Legal
+          </Link>
         </div>
       </div>
     </div>

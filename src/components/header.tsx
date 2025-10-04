@@ -35,12 +35,12 @@ export const Header = ({
       {hasStartTestButton && (
         <a
           href="#subjects"
-          className="hidden md:block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-lg shadow-indigo-500/50"
+          className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-lg shadow-indigo-500/50"
         >
           Start Free Test
         </a>
       )}
-      <button className="md:hidden text-white focus:outline-none">
+      {/* <button className="md:hidden text-white focus:outline-none">
         <svg
           className="h-6 w-6"
           fill="none"
@@ -55,7 +55,7 @@ export const Header = ({
             d="M4 6h16M4 12h16m-7 6h7"
           ></path>
         </svg>
-      </button>
+      </button> */}
     </div>
   </header>
 );
