@@ -1,0 +1,199 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-12-001",
+      "question": "Are HTML tags case sensitive?",
+      "options": ["Yes, always", "No, never", "Yes, in XHTML", "Only in HTML5"],
+      "correct_answer": 3,
+      "explanation": "In XHTML, tags are case sensitive and must be lowercase."
+    },
+    {
+      "id": "mcq-001-12-002",
+      "question": "Which version of HTML enforces case sensitivity in tag names?",
+      "options": ["HTML5", "HTML 4.01", "XHTML", "HTML 3.2"],
+      "correct_answer": 3,
+      "explanation": "XHTML is case sensitive and requires all tag names to be in lowercase."
+    },
+    {
+      "id": "mcq-001-12-003",
+      "question": "What will happen if you use uppercase tags in XHTML?",
+      "options": [
+        "They will be converted to lowercase automatically",
+        "Browsers will ignore those tags",
+        "Browsers may not render the page correctly",
+        "Nothing, XHTML is not strict about case"
+      ],
+      "correct_answer": 3,
+      "explanation": "Browsers may not render XHTML documents correctly if tags are not lowercase."
+    },
+    {
+      "id": "mcq-001-12-004",
+      "question": "Which of the following is the correct way to write a paragraph tag in XHTML?",
+      "options": ["`<P>`", "`<p>`", "`<Par>`", "`<para>`"],
+      "correct_answer": 2,
+      "explanation": "In XHTML, all tags must be written in lowercase like `<p>`."
+    },
+    {
+      "id": "mcq-001-12-005",
+      "question": "Is attribute case sensitivity enforced in HTML5?",
+      "options": [
+        "Yes, attributes must be lowercase",
+        "No, attribute names are not case sensitive in HTML5",
+        "Yes, only for global attributes",
+        "Only in the `<head>` section"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML5 is not case sensitive for attribute names, but lowercase is recommended."
+    },
+    {
+      "id": "mcq-001-12-006",
+      "question": "Which of the following is valid in both HTML5 and XHTML?",
+      "options": ["`<BR>`", "`<Br>`", "`<br>`", "`<br />`"],
+      "correct_answer": 3,
+      "explanation": "`<br>` is valid in HTML5 and `<br />` is preferred in XHTML, but `<br>` is valid in both."
+    },
+    {
+      "id": "mcq-001-12-007",
+      "question": "Which of these statements is TRUE about standard HTML (not XHTML)?",
+      "options": [
+        "Tags must always be uppercase",
+        "Tags must always be lowercase",
+        "Tags are not case sensitive",
+        "Attribute values are case sensitive"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML tags are not case sensitive, but lowercase is the standard convention."
+    },
+    {
+      "id": "mcq-001-12-008",
+      "question": "How does case sensitivity affect closing tags in XHTML?",
+      "options": [
+        "Closing tags can be any case",
+        "Closing tags must match the case of opening tags",
+        "Closing tags are not required",
+        "Closing tags must be uppercase"
+      ],
+      "correct_answer": 2,
+      "explanation": "In XHTML, closing tags must match the case of opening tags."
+    },
+    {
+      "id": "mcq-001-12-009",
+      "question": "Which will render correctly in HTML5?",
+      "options": ["`<DIV>`", "`<div>`", "`<Div>`", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "HTML5 is not case sensitive, so all will render, but lowercase `<div>` is best practice."
+    },
+    {
+      "id": "mcq-001-12-010",
+      "question": "Which of the following practices is recommended for writing HTML code?",
+      "options": [
+        "Using all uppercase tags",
+        "Using mixed case tags",
+        "Using all lowercase tags",
+        "Using random casing"
+      ],
+      "correct_answer": 3,
+      "explanation": "Using all lowercase tags is the recommended practice for compatibility and readability."
+    },
+    {
+      "id": "mcq-001-12-011",
+      "question": "In which of these scenarios does case sensitivity matter in HTML?",
+      "options": [
+        "Writing JavaScript inside `<script>` tags",
+        "Writing CSS in a `<style>` tag",
+        "Using XHTML served as `application/xhtml+xml`",
+        "Writing comments"
+      ],
+      "correct_answer": 3,
+      "explanation": "XHTML is case sensitive, especially when served as `application/xhtml+xml`."
+    },
+    {
+      "id": "mcq-001-12-012",
+      "question": "Which of these is a valid self-closing tag in XHTML?",
+      "options": ["`<br>`", "`<br/>`", "`<br />`", "`<br-/>`"],
+      "correct_answer": 3,
+      "explanation": "`<br />` is the correct self-closing tag syntax in XHTML."
+    },
+    {
+      "id": "mcq-001-12-013",
+      "question": "If you use `<IMG SRC=\"image.jpg\">` in XHTML, what will happen?",
+      "options": [
+        "It will display the image as normal",
+        "It will cause a validation error",
+        "It will be ignored by the browser",
+        "It will display a warning"
+      ],
+      "correct_answer": 2,
+      "explanation": "XHTML requires lowercase tag names and attributes, so uppercase will cause a validation error."
+    },
+    {
+      "id": "mcq-001-12-014",
+      "question": "Which attribute value is always case sensitive, even in HTML?",
+      "options": ["`id`", "`class`", "`style`", "None of the above"],
+      "correct_answer": 1,
+      "explanation": "The `id` attribute is case sensitive in CSS and JavaScript."
+    },
+    {
+      "id": "mcq-001-12-015",
+      "question": "How does case sensitivity impact custom data attributes (e.g., `data-info`)?",
+      "options": [
+        "They are always case sensitive",
+        "They are not case sensitive",
+        "They must be lowercase",
+        "They must be uppercase"
+      ],
+      "correct_answer": 3,
+      "explanation": "Custom data attributes should be lowercase for consistency and compatibility."
+    },
+    {
+      "id": "mcq-001-12-016",
+      "question": "Which of the following is a case-sensitive HTML attribute?",
+      "options": ["`lang`", "`id`", "`title`", "`class`"],
+      "correct_answer": 2,
+      "explanation": "The `id` attribute is case sensitive in selectors and scripting."
+    },
+    {
+      "id": "mcq-001-12-017",
+      "question": "Which doctype enforces strict case sensitivity for tags and attributes?",
+      "options": [
+        "`<!DOCTYPE html>`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\">`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\">`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2//EN\">`"
+      ],
+      "correct_answer": 3,
+      "explanation": "The XHTML doctype enforces strict case sensitivity."
+    },
+    {
+      "id": "mcq-001-12-018",
+      "question": "What is the effect of using uppercase attribute names in XHTML?",
+      "options": [
+        "The page will render normally",
+        "Browsers will ignore those attributes",
+        "Browsers may not render the page correctly",
+        "It is recommended for accessibility"
+      ],
+      "correct_answer": 3,
+      "explanation": "Browsers may not render XHTML pages correctly if attribute names are uppercase."
+    },
+    {
+      "id": "mcq-001-12-019",
+      "question": "Is HTML5 forgiving about case sensitivity in tag and attribute names?",
+      "options": [
+        "Yes, it is forgiving",
+        "No, it is not forgiving",
+        "Only in the `<body>` tag",
+        "Only for global attributes"
+      ],
+      "correct_answer": 1,
+      "explanation": "HTML5 is forgiving about case sensitivity, but lowercase is preferred."
+    },
+    {
+      "id": "mcq-001-12-020",
+      "question": "Which of the following is the best practice for naming HTML tags and attributes?",
+      "options": ["All uppercase", "All lowercase", "CamelCase", "Random case"],
+      "correct_answer": 2,
+      "explanation": "All lowercase is the best practice for tags and attributes in HTML."
+    }
+  ]
+}

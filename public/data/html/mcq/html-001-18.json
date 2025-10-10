@@ -1,0 +1,154 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-18-001",
+      "question": "Which of the following is NOT a web browser?",
+      "options": [
+        "Google Chrome",
+        "Mozilla Firefox",
+        "Adobe Photoshop",
+        "Microsoft Edge"
+      ],
+      "correct_answer": 3,
+      "explanation": "Adobe Photoshop is an image editing software, not a web browser."
+    },
+    {
+      "id": "mcq-001-18-002",
+      "question": "Which browser is developed by Apple?",
+      "options": ["Safari", "Firefox", "Edge", "Opera"],
+      "correct_answer": 1,
+      "explanation": "Safari is developed by Apple."
+    },
+    {
+      "id": "mcq-001-18-003",
+      "question": "Which browser was originally known as 'Phoenix'?",
+      "options": ["Internet Explorer", "Mozilla Firefox", "Opera", "Chrome"],
+      "correct_answer": 2,
+      "explanation": "Mozilla Firefox was originally called 'Phoenix'."
+    },
+    {
+      "id": "mcq-001-18-004",
+      "question": "Which browser is pre-installed on most Windows computers?",
+      "options": ["Safari", "Chrome", "Microsoft Edge", "Opera"],
+      "correct_answer": 3,
+      "explanation": "Microsoft Edge is the default browser on Windows."
+    },
+    {
+      "id": "mcq-001-18-005",
+      "question": "Which of the following browsers is open source?",
+      "options": [
+        "Internet Explorer",
+        "Safari",
+        "Mozilla Firefox",
+        "Microsoft Edge"
+      ],
+      "correct_answer": 3,
+      "explanation": "Mozilla Firefox is open source."
+    },
+    {
+      "id": "mcq-001-18-006",
+      "question": "Which browser is known for its speed and minimalist design, first released in 2008?",
+      "options": ["Opera", "Chrome", "Safari", "Internet Explorer"],
+      "correct_answer": 2,
+      "explanation": "Google Chrome is known for its speed and minimalist design."
+    },
+    {
+      "id": "mcq-001-18-007",
+      "question": "Which browser is based on the Chromium project?",
+      "options": ["Microsoft Edge", "Firefox", "Opera", "Both 1 and 3"],
+      "correct_answer": 4,
+      "explanation": "Both Microsoft Edge and Opera are based on Chromium."
+    },
+    {
+      "id": "mcq-001-18-008",
+      "question": "Which browser introduced 'tabbed browsing'?",
+      "options": ["Internet Explorer", "Opera", "Firefox", "Safari"],
+      "correct_answer": 2,
+      "explanation": "Opera was the first browser to introduce tabbed browsing."
+    },
+    {
+      "id": "mcq-001-18-009",
+      "question": "Which mobile browser comes pre-installed on Android devices?",
+      "options": ["Firefox", "Chrome", "Safari", "Edge"],
+      "correct_answer": 2,
+      "explanation": "Google Chrome comes pre-installed on most Android devices."
+    },
+    {
+      "id": "mcq-001-18-010",
+      "question": "Which browser is known for its focus on privacy and blocking trackers by default?",
+      "options": ["Safari", "Brave", "Internet Explorer", "Opera"],
+      "correct_answer": 2,
+      "explanation": "Brave is known for privacy and blocking trackers."
+    },
+    {
+      "id": "mcq-001-18-011",
+      "question": "Which browser is NOT available on Linux?",
+      "options": ["Firefox", "Chrome", "Safari", "Opera"],
+      "correct_answer": 3,
+      "explanation": "Safari is not officially available on Linux."
+    },
+    {
+      "id": "mcq-001-18-012",
+      "question": "Which of the following browsers uses the Gecko engine?",
+      "options": ["Firefox", "Edge", "Chrome", "Safari"],
+      "correct_answer": 1,
+      "explanation": "Firefox uses the Gecko engine."
+    },
+    {
+      "id": "mcq-001-18-013",
+      "question": "Which browser is developed by the non-profit Mozilla Foundation?",
+      "options": ["Chrome", "Edge", "Firefox", "Safari"],
+      "correct_answer": 3,
+      "explanation": "Firefox is developed by Mozilla Foundation."
+    },
+    {
+      "id": "mcq-001-18-014",
+      "question": "What is the default browser on macOS?",
+      "options": ["Chrome", "Safari", "Firefox", "Edge"],
+      "correct_answer": 2,
+      "explanation": "Safari is the default browser on macOS."
+    },
+    {
+      "id": "mcq-001-18-015",
+      "question": "Which browser was discontinued and replaced by Microsoft Edge?",
+      "options": ["Internet Explorer", "Firefox", "Opera", "Chrome"],
+      "correct_answer": 1,
+      "explanation": "Internet Explorer was discontinued and replaced by Edge."
+    },
+    {
+      "id": "mcq-001-18-016",
+      "question": "Which browser has a built-in VPN feature?",
+      "options": ["Chrome", "Opera", "Edge", "Firefox"],
+      "correct_answer": 2,
+      "explanation": "Opera has a built-in VPN."
+    },
+    {
+      "id": "mcq-001-18-017",
+      "question": "Which browser was the first to pass the Acid2 test?",
+      "options": ["Safari", "Firefox", "Opera", "Internet Explorer"],
+      "correct_answer": 3,
+      "explanation": "Opera was the first to pass the Acid2 test."
+    },
+    {
+      "id": "mcq-001-18-018",
+      "question": "Which browser integrates tightly with other Microsoft services?",
+      "options": ["Edge", "Safari", "Opera", "Chrome"],
+      "correct_answer": 1,
+      "explanation": "Microsoft Edge integrates with Microsoft services."
+    },
+    {
+      "id": "mcq-001-18-019",
+      "question": "Which browser is known for its fast release cycle and experimental features?",
+      "options": ["Firefox", "Chrome", "Edge", "Safari"],
+      "correct_answer": 2,
+      "explanation": "Chrome is known for a fast release cycle and experimental features."
+    },
+    {
+      "id": "mcq-001-18-020",
+      "question": "Which browser is also available as a mobile version on iOS devices?",
+      "options": ["Chrome", "Firefox", "Edge", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "Chrome, Firefox, and Edge are available as mobile browsers on iOS."
+    }
+  ]
+}

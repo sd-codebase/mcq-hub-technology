@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-08-001",
+      "question": "What is the difference between case sensitivity in HTML and XHTML?",
+      "answer": "HTML is not case sensitive for tag and attribute names, so `<DIV>` and `<div>` are equivalent. XHTML is case sensitive and requires all tag and attribute names to be lowercase.",
+      "explanation": "Browsers will render `<DIV>` or `<div>` the same in HTML, but XHTML parsers will throw errors if tags are not lowercase."
+    },
+    {
+      "id": "interview-001-08-002",
+      "question": "Are HTML attribute values case sensitive? Give an example.",
+      "answer": "In general, HTML attribute values are case sensitive when their meaning depends on case (like passwords or file names), but most attribute names and values (such as for `id`, `class`, and `type`) are not case sensitive.",
+      "explanation": "For example, `<input type=\"TEXT\">` is interpreted as `type=\"text\"` in HTML."
+    },
+    {
+      "id": "interview-001-08-003",
+      "question": "How does case sensitivity affect custom data attributes?",
+      "answer": "While HTML treats attribute names as case-insensitive, JavaScript expects custom data attributes (like `data-user`) to be lowercase. Accessing `data-User` in JavaScript as `dataset.user` will not work.",
+      "explanation": "For consistent behavior, always use lowercase for custom data attributes."
+    },
+    {
+      "id": "interview-001-08-004",
+      "question": "Can you use uppercase letters for HTML tag names in HTML5?",
+      "answer": "Yes, HTML5 allows tag names to be uppercase or lowercase, and browsers will interpret them the same way.",
+      "explanation": "However, using lowercase is best practice for readability and consistency."
+    },
+    {
+      "id": "interview-001-08-005",
+      "question": "How does case sensitivity in HTML affect CSS selectors?",
+      "answer": "HTML class and id attribute values are case sensitive in CSS selectors, even though HTML itself is not case sensitive.",
+      "explanation": "For example, `.MyClass` and `.myclass` are different selectors in CSS."
+    },
+    {
+      "id": "interview-001-08-006",
+      "question": "What happens if you use uppercase for the doctype declaration?",
+      "answer": "The doctype declaration is not case sensitive, so `<!DOCTYPE html>` and `<!DOCTYPE HTML>` are equivalent.",
+      "explanation": "Browsers will recognize both and render the page in standards mode."
+    },
+    {
+      "id": "interview-001-08-007",
+      "question": "Does the content inside HTML tags preserve case?",
+      "answer": "Yes, the text content between HTML tags preserves case and is displayed exactly as written.",
+      "explanation": "For example, `<p>Hello World</p>` will display 'Hello World' with the same capitalization."
+    },
+    {
+      "id": "interview-001-08-008",
+      "question": "Is the `id` attribute case sensitive in HTML? How about in JavaScript?",
+      "answer": "In HTML, `id` values are case sensitive. In JavaScript, methods like `getElementById` are also case sensitive.",
+      "explanation": "For example, `id=\"MyId\"` and `id=\"myid\"` are different."
+    },
+    {
+      "id": "interview-001-08-009",
+      "question": "How does case sensitivity affect HTML entities?",
+      "answer": "HTML named entities like `&amp;`, `&lt;`, and `&gt;` are not case sensitive, but it is best practice to use lowercase.",
+      "explanation": "`&AMP;` will still render as `&`, but lowercase improves readability."
+    },
+    {
+      "id": "interview-001-08-010",
+      "question": "What is the consequence of mixing cases in tag names and attributes in HTML?",
+      "answer": "Mixing cases in tag and attribute names is allowed in HTML, but can lead to confusion and is not recommended.",
+      "explanation": "Always using lowercase helps maintain code clarity and compatibility, especially when working with tools or frameworks that expect lowercase."
+    }
+  ]
+}

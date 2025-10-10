@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-05-001",
+      "question": "What is rendered by this code?\n\n```html\n<p class=\"greeting\">Hello, world!</p>\n```",
+      "output": "Hello, world!",
+      "explanation": "The `<p>` tag displays a paragraph. The `class` attribute adds a class to the element but does not affect visible output by itself."
+    },
+    {
+      "id": "output-001-05-002",
+      "question": "What does the browser show?\n\n```html\n<a href=\"https://example.com\" target=\"_blank\">Visit Example</a>\n```",
+      "output": "A clickable link with the text 'Visit Example'. Clicking it opens the link in a new tab.",
+      "explanation": "The `<a>` tag creates a hyperlink. The `target=\"_blank\"` attribute makes it open in a new tab."
+    },
+    {
+      "id": "output-001-05-003",
+      "question": "What happens when this is rendered?\n\n```html\n<img src=\"logo.png\" alt=\"Logo Image\" width=\"100\">\n```",
+      "output": "The image 'logo.png' is displayed at 100 pixels wide. If the image fails to load, 'Logo Image' is shown.",
+      "explanation": "The `<img>` tag displays an image. The `alt` attribute provides fallback text. The `width` attribute sets the image width."
+    },
+    {
+      "id": "output-001-05-004",
+      "question": "What will be visible?\n\n```html\n<input type=\"text\" value=\"Enter name\" required>\n```",
+      "output": "A text input box pre-filled with 'Enter name'.",
+      "explanation": "The `<input>` element creates a text box. The `required` attribute means the field must be filled before submitting a form, but doesn't change the appearance."
+    },
+    {
+      "id": "output-001-05-005",
+      "question": "What does this code render?\n\n```html\n<button disabled>Submit</button>\n```",
+      "output": "A button labeled 'Submit' that is grayed out and cannot be clicked.",
+      "explanation": "The `disabled` attribute makes the button unclickable and visually grayed out."
+    },
+    {
+      "id": "output-001-05-006",
+      "question": "What is displayed by the browser?\n\n```html\n<a href=\"#\" title=\"Home Page\">Home</a>\n```",
+      "output": "A clickable link labeled 'Home'. Hovering over it shows a tooltip 'Home Page'.",
+      "explanation": "The `title` attribute shows as a tooltip when the user hovers over the link."
+    },
+    {
+      "id": "output-001-05-007",
+      "question": "What do you see?\n\n```html\n<img src=\"cat.jpg\" alt=\"A cat\" style=\"border: 2px solid red;\">\n```",
+      "output": "The image 'cat.jpg' with a red border. If the image is missing, 'A cat' will show.",
+      "explanation": "The `style` attribute adds inline CSS, creating a red border."
+    },
+    {
+      "id": "output-001-05-008",
+      "question": "What is rendered?\n\n```html\n<input type=\"checkbox\" checked> Subscribe\n```",
+      "output": "A checked checkbox labeled 'Subscribe'.",
+      "explanation": "The `checked` attribute makes the checkbox selected by default."
+    },
+    {
+      "id": "output-001-05-009",
+      "question": "What is the output?\n\n```html\n<p id=\"msg\">Hello!</p>\n```",
+      "output": "Hello!",
+      "explanation": "The `<p>` tag displays 'Hello!'. The `id` attribute does not alter the appearance."
+    },
+    {
+      "id": "output-001-05-010",
+      "question": "What does the following display?\n\n```html\n<a href=\"mailto:admin@example.com\">Email us</a>\n```",
+      "output": "A clickable link 'Email us'. Clicking it opens the user's email client to send a message to admin@example.com.",
+      "explanation": "The `mailto:` in the `href` attribute creates an email link."
+    },
+    {
+      "id": "output-001-05-011",
+      "question": "What is shown?\n\n```html\n<input type=\"radio\" name=\"gender\" value=\"male\" checked> Male\n<input type=\"radio\" name=\"gender\" value=\"female\"> Female\n```",
+      "output": "Two radio buttons labeled 'Male' and 'Female', with 'Male' selected by default.",
+      "explanation": "Radio buttons with the same 'name' attribute are grouped; only one can be selected."
+    },
+    {
+      "id": "output-001-05-012",
+      "question": "What is rendered?\n\n```html\n<img src=\"notfound.jpg\" alt=\"Not found\">\n```",
+      "output": "If 'notfound.jpg' can't be loaded, the text 'Not found' is displayed.",
+      "explanation": "The `alt` attribute is shown if the image fails to load."
+    },
+    {
+      "id": "output-001-05-013",
+      "question": "What is seen in the browser?\n\n```html\n<button title=\"Click to submit\">Submit</button>\n```",
+      "output": "A button labeled 'Submit'. Hovering over it shows a tooltip 'Click to submit'.",
+      "explanation": "The `title` attribute displays as a tooltip on hover."
+    },
+    {
+      "id": "output-001-05-014",
+      "question": "What does this HTML render?\n\n```html\n<a href=\"#\" style=\"color: green;\">Green Link</a>\n```",
+      "output": "A link labeled 'Green Link' in green text.",
+      "explanation": "The `style` attribute applies inline CSS to change the link's color."
+    },
+    {
+      "id": "output-001-05-015",
+      "question": "What do you see?\n\n```html\n<input type=\"text\" placeholder=\"Type here\">\n```",
+      "output": "A text input box with light gray placeholder text 'Type here' until something is typed.",
+      "explanation": "The `placeholder` attribute shows temporary instructional text."
+    },
+    {
+      "id": "output-001-05-016",
+      "question": "What is rendered?\n\n```html\n<input type=\"password\" value=\"secret\">\n```",
+      "output": "A password input box with the value 'secret' displayed as dots or asterisks.",
+      "explanation": "The `type=\"password\"` masks the characters entered or pre-filled."
+    },
+    {
+      "id": "output-001-05-017",
+      "question": "What does the browser display?\n\n```html\n<input type=\"number\" min=\"1\" max=\"10\" value=\"5\">\n```",
+      "output": "A number input box with the value set to 5, and up/down arrows to adjust the value between 1 and 10.",
+      "explanation": "The `type=\"number\"` input allows only numbers within the specified min and max range."
+    },
+    {
+      "id": "output-001-05-018",
+      "question": "What is shown?\n\n```html\n<input type=\"email\" required>\n```",
+      "output": "An empty email input field. The user must enter a valid email before submitting a form.",
+      "explanation": "The `type=\"email\"` input checks for a valid email format. The `required` attribute prevents form submission if empty."
+    },
+    {
+      "id": "output-001-05-019",
+      "question": "What is the result?\n\n```html\n<input type=\"range\" min=\"0\" max=\"100\" value=\"50\">\n```",
+      "output": "A slider control set to the middle (value 50).",
+      "explanation": "The `type=\"range\"` input creates a slider with the specified range and initial value."
+    },
+    {
+      "id": "output-001-05-020",
+      "question": "What does this HTML render?\n\n```html\n<a href=\"https://example.com\" download>Download</a>\n```",
+      "output": "A link labeled 'Download'. Clicking it prompts the user to download the file instead of navigating to the URL.",
+      "explanation": "The `download` attribute makes the link trigger a download instead of opening the link."
+    }
+  ]
+}

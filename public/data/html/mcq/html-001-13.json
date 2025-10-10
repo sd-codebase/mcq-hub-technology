@@ -1,0 +1,209 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-13-001",
+      "question": "How does extra whitespace in HTML code affect the rendered output?",
+      "options": [
+        "It creates extra space in the browser",
+        "It is ignored by browsers",
+        "It causes errors",
+        "It increases load time"
+      ],
+      "correct_answer": 2,
+      "explanation": "Browsers ignore extra whitespace in HTML except inside preformatted text like `<pre>`."
+    },
+    {
+      "id": "mcq-001-13-002",
+      "question": "Which HTML tag preserves whitespace and line breaks in its content?",
+      "options": ["`<span>`", "`<pre>`", "`<div>`", "`<code>`"],
+      "correct_answer": 2,
+      "explanation": "`<pre>` preserves whitespace and line breaks as written in the HTML."
+    },
+    {
+      "id": "mcq-001-13-003",
+      "question": "If you add multiple spaces between words in an HTML paragraph, how many spaces are shown in the browser?",
+      "options": [
+        "Exactly as typed",
+        "One space",
+        "Two spaces",
+        "It depends on the browser"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML collapses consecutive whitespace into a single space."
+    },
+    {
+      "id": "mcq-001-13-004",
+      "question": "How can you force a line break in HTML?",
+      "options": [
+        "Using extra spaces",
+        "Using the `<lb>` tag",
+        "Using the `<br>` tag",
+        "Using the `<hr>` tag"
+      ],
+      "correct_answer": 3,
+      "explanation": "The `<br>` tag is used to force a line break."
+    },
+    {
+      "id": "mcq-001-13-005",
+      "question": "Which of the following tags is commonly used for preformatted text that preserves whitespace?",
+      "options": ["`<pre>`", "`<b>`", "`<code>`", "`<em>`"],
+      "correct_answer": 1,
+      "explanation": "The `<pre>` tag preserves both spaces and line breaks."
+    },
+    {
+      "id": "mcq-001-13-006",
+      "question": "What happens if you insert a tab character in an HTML document?",
+      "options": [
+        "It creates a tab in the browser",
+        "It is rendered as a single space",
+        "It causes an error",
+        "It creates extra space"
+      ],
+      "correct_answer": 2,
+      "explanation": "Tab characters are rendered as a single space in normal HTML flow."
+    },
+    {
+      "id": "mcq-001-13-007",
+      "question": "How can you add extra space between words or elements in HTML?",
+      "options": [
+        "By adding multiple spaces",
+        "By using `&nbsp;`",
+        "By adding the `<space>` tag",
+        "By using `<gap>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `&nbsp;` entity creates a non-breaking space."
+    },
+    {
+      "id": "mcq-001-13-008",
+      "question": "Which element is NOT affected by whitespace collapsing?",
+      "options": ["`<p>`", "`<pre>`", "`<span>`", "`<b>`"],
+      "correct_answer": 2,
+      "explanation": "`<pre>` preserves all whitespace, unlike other elements."
+    },
+    {
+      "id": "mcq-001-13-009",
+      "question": "Which of the following is TRUE about whitespace in HTML?",
+      "options": [
+        "Whitespace is always preserved exactly as written",
+        "Browsers ignore whitespace outside of tags except in `<pre>`",
+        "Whitespace causes validation errors",
+        "Whitespace is only ignored in `<body>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "Browsers collapse whitespace except inside `<pre>` and similar elements."
+    },
+    {
+      "id": "mcq-001-13-010",
+      "question": "How do you add a tab space that is always rendered in HTML?",
+      "options": [
+        "With `&tab;`",
+        "With `&nbsp;&nbsp;&nbsp;&nbsp;` (four non-breaking spaces)",
+        "With `\\t`",
+        "With `<tab>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "Multiple `&nbsp;` entities can be used to simulate a tab space."
+    },
+    {
+      "id": "mcq-001-13-011",
+      "question": "Which tag is best for displaying code samples with preserved formatting?",
+      "options": ["`<b>`", "`<span>`", "`<pre>`", "`<u>`"],
+      "correct_answer": 3,
+      "explanation": "`<pre>` is used for preformatted text, preserving spaces and line breaks."
+    },
+    {
+      "id": "mcq-001-13-012",
+      "question": "What is the effect of adding newlines in HTML source code?",
+      "options": [
+        "Each newline creates a visible line break",
+        "They are ignored, except in `<pre>`",
+        "They break the HTML",
+        "They are converted to `<br>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "Newlines in normal HTML flow are ignored, except inside `<pre>`."
+    },
+    {
+      "id": "mcq-001-13-013",
+      "question": "Which of the following is NOT a whitespace character in HTML?",
+      "options": ["Space", "Tab", "Newline", "`<gap>`"],
+      "correct_answer": 4,
+      "explanation": "`<gap>` is not a valid whitespace character or tag."
+    },
+    {
+      "id": "mcq-001-13-014",
+      "question": "How do you add a non-breaking space in HTML?",
+      "options": [
+        "By using the spacebar",
+        "By using `&nbsp;`",
+        "By using `<space>`",
+        "By using `--space--`"
+      ],
+      "correct_answer": 2,
+      "explanation": "Use the `&nbsp;` character entity for a non-breaking space."
+    },
+    {
+      "id": "mcq-001-13-015",
+      "question": "To preserve both whitespace and line breaks, which tag should you use?",
+      "options": ["`<code>`", "`<div>`", "`<pre>`", "`<p>`"],
+      "correct_answer": 3,
+      "explanation": "`<pre>` preserves both spaces and line breaks."
+    },
+    {
+      "id": "mcq-001-13-016",
+      "question": "Which of the following is NOT affected by whitespace collapsing?",
+      "options": ["`<pre>`", "`<p>`", "`<em>`", "`<strong>`"],
+      "correct_answer": 1,
+      "explanation": "`<pre>` does not collapse whitespace."
+    },
+    {
+      "id": "mcq-001-13-017",
+      "question": "What happens if you place spaces or tabs before and after tags in HTML?",
+      "options": [
+        "They are rendered as extra spaces",
+        "They are ignored",
+        "They break the document",
+        "They only appear in some browsers"
+      ],
+      "correct_answer": 2,
+      "explanation": "Spaces or tabs outside of tags are ignored by browsers."
+    },
+    {
+      "id": "mcq-001-13-018",
+      "question": "How do you ensure extra space between two elements remains visible?",
+      "options": [
+        "Use multiple spaces",
+        "Use `&nbsp;`",
+        "Use `<space>`",
+        "Use `<gap>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`&nbsp;` creates non-breaking spaces that are visible."
+    },
+    {
+      "id": "mcq-001-13-019",
+      "question": "What is the default behavior for whitespace between block elements like `<div>` and `<p>`?",
+      "options": [
+        "It is preserved",
+        "It is collapsed to a single space",
+        "It is ignored",
+        "It is turned into a line break"
+      ],
+      "correct_answer": 3,
+      "explanation": "Whitespace between block elements is ignored."
+    },
+    {
+      "id": "mcq-001-13-020",
+      "question": "Which of these will NOT create extra space in HTML content?",
+      "options": [
+        "Using `&nbsp;`",
+        "Using `<pre>`",
+        "Using multiple spacebar spaces in a paragraph",
+        "Using CSS `margin`"
+      ],
+      "correct_answer": 3,
+      "explanation": "Multiple spacebar spaces in normal flow are collapsed; use `&nbsp;` or `<pre>` to preserve them."
+    }
+  ]
+}

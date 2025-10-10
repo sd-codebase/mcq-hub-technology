@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-15-001",
+      "question": "What does this code display?\n\n```html\n<note>\n  <to>Tove</to>\n  <from>Jani</from>\n  <heading>Reminder</heading>\n  <body>Don't forget me this weekend!</body>\n</note>\n```",
+      "output": "Nothing visible in a browser by default.",
+      "explanation": "This is XML, not HTML. Browsers do not render XML tags visually unless styled or processed. The code demonstrates XML's custom tag structure."
+    },
+    {
+      "id": "output-001-15-002",
+      "question": "What is rendered?\n\n```html\n<html>\n  <data>\n    <name>John</name>\n  </data>\n</html>\n```",
+      "output": "Nothing special is displayed; browsers ignore unknown tags.",
+      "explanation": "Browsers don't render custom tags like <data> or <name> unless styled; only text content appears."
+    },
+    {
+      "id": "output-001-15-003",
+      "question": "What happens when you open this file as HTML?\n\n```html\n<message>\n  <sender>Jane</sender>\n  <text>Hello!</text>\n</message>\n```",
+      "output": "Nothing is displayed by default.",
+      "explanation": "Browsers do not display custom tags (like XML) without CSS or JS. Only HTML tags have default rendering."
+    },
+    {
+      "id": "output-001-15-004",
+      "question": "What is the output?\n\n```html\n<html><body><p>&lt;user&gt;data&lt;/user&gt;</p></body></html>\n```",
+      "output": "<user>data</user>",
+      "explanation": "Using HTML entities like &lt; and &gt; shows literal angle brackets and the tag as text."
+    },
+    {
+      "id": "output-001-15-005",
+      "question": "What does this HTML show?\n\n```html\n<p>&lt;person name=\"Alice\"&gt;Hello&lt;/person&gt;</p>\n```",
+      "output": "<person name=\"Alice\">Hello</person>",
+      "explanation": "HTML entities display literal XML tags as text, not as elements."
+    },
+    {
+      "id": "output-001-15-006",
+      "question": "What is the visible result?\n\n```html\n<note><to>Tove</to><from>Jani</from></note>\n```",
+      "output": "Nothing visible by default.",
+      "explanation": "These are custom XML tags. Browsers will not render them as visible content."
+    },
+    {
+      "id": "output-001-15-007",
+      "question": "What is rendered by this code?\n\n```html\n<p>&lt;note&gt;This is XML&lt;/note&gt;</p>\n```",
+      "output": "<note>This is XML</note>",
+      "explanation": "Entities are used to show XML tags as text."
+    },
+    {
+      "id": "output-001-15-008",
+      "question": "What happens with this snippet?\n\n```html\n<book>\n  <title>HTML &amp; XML</title>\n  <author>Author Name</author>\n</book>\n```",
+      "output": "Nothing appears in the browser.",
+      "explanation": "Browsers do not render XML tags unless explicitly handled."
+    },
+    {
+      "id": "output-001-15-009",
+      "question": "What does the browser show?\n\n```html\n<p>&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;</p>\n```",
+      "output": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+      "explanation": "The XML declaration is shown as text using entities."
+    },
+    {
+      "id": "output-001-15-010",
+      "question": "What is displayed?\n\n```html\n<p>HTML is for web pages. XML is for data.</p>\n```",
+      "output": "HTML is for web pages. XML is for data.",
+      "explanation": "This is plain text; it is displayed as a paragraph."
+    },
+    {
+      "id": "output-001-15-011",
+      "question": "What is output by this code?\n\n```html\n<p>&lt;note&gt;&lt;to&gt;A&lt;/to&gt;&lt;/note&gt;</p>\n```",
+      "output": "<note><to>A</to></note>",
+      "explanation": "Entities ensure the XML markup appears as text, not as elements."
+    },
+    {
+      "id": "output-001-15-012",
+      "question": "What happens if you use an unclosed XML tag in HTML?\n\n```html\n<data><item>Test</item></data\n```",
+      "output": "Rendering may break; the browser could ignore or misinterpret markup after the unclosed tag.",
+      "explanation": "Browsers are forgiving, but broken markup can cause unexpected layout issues."
+    },
+    {
+      "id": "output-001-15-013",
+      "question": "What is rendered?\n\n```html\n<p>&lt;item&gt;1&lt;/item&gt;&lt;item&gt;2&lt;/item&gt;</p>\n```",
+      "output": "<item>1</item><item>2</item>",
+      "explanation": "Entities render the XML tags as text."
+    },
+    {
+      "id": "output-001-15-014",
+      "question": "What does this code show?\n\n```html\n<data>\n  <name>Value</name>\n</data>\n```",
+      "output": "Nothing visible in the browser.",
+      "explanation": "Custom XML tags are not rendered by default in browsers."
+    },
+    {
+      "id": "output-001-15-015",
+      "question": "What is the output?\n\n```html\n<p>&lt;root&gt;&lt;child&gt;X&lt;/child&gt;&lt;/root&gt;</p>\n```",
+      "output": "<root><child>X</child></root>",
+      "explanation": "Entities display the XML as text."
+    },
+    {
+      "id": "output-001-15-016",
+      "question": "What is visible?\n\n```html\n<p>HTML is not case sensitive. XML is case sensitive.</p>\n```",
+      "output": "HTML is not case sensitive. XML is case sensitive.",
+      "explanation": "This is regular text and is displayed as written."
+    },
+    {
+      "id": "output-001-15-017",
+      "question": "What will the browser show?\n\n```html\n<p>XML allows custom tags. HTML uses predefined tags.</p>\n```",
+      "output": "XML allows custom tags. HTML uses predefined tags.",
+      "explanation": "Plain text is rendered normally."
+    },
+    {
+      "id": "output-001-15-018",
+      "question": "What does this code render?\n\n```html\n<p>&lt;html&gt;&lt;body&gt;HTML tags&lt;/body&gt;&lt;/html&gt;</p>\n```",
+      "output": "<html><body>HTML tags</body></html>",
+      "explanation": "Angle brackets are shown as text using entities."
+    },
+    {
+      "id": "output-001-15-019",
+      "question": "What is rendered?\n\n```html\n<person><name>Jane</name></person>\n```",
+      "output": "Nothing visible in the browser.",
+      "explanation": "Custom tags are ignored by browsers unless styled or processed."
+    },
+    {
+      "id": "output-001-15-020",
+      "question": "What is displayed?\n\n```html\n<p>This is HTML, not XML.</p>\n```",
+      "output": "This is HTML, not XML.",
+      "explanation": "This is plain text content, so it appears as a paragraph."
+    }
+  ]
+}

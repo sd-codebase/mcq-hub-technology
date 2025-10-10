@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-07-001",
+      "question": "What is the output of this HTML?\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n  <title>Test</title>\n</head>\n<body>\n  <p>Testing doctype.</p>\n</body>\n</html>\n```",
+      "output": "Testing doctype.",
+      "explanation": "`<!DOCTYPE html>` declares the document as HTML5. The browser displays the paragraph as normal text."
+    },
+    {
+      "id": "output-001-07-002",
+      "question": "What is shown when you remove the `<!DOCTYPE html>` line from an HTML document?\n\n```html\n<html>\n<body>\n<p>No doctype here.</p>\n</body>\n</html>\n```",
+      "output": "No doctype here.",
+      "explanation": "The paragraph is still displayed. However, the browser may render the page in 'quirks mode', potentially affecting layout and CSS."
+    },
+    {
+      "id": "output-001-07-003",
+      "question": "What is rendered?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<h1>Doctype Example</h1>\n</body>\n</html>\n```",
+      "output": "Doctype Example",
+      "explanation": "With the correct doctype, the heading is displayed as a large heading."
+    },
+    {
+      "id": "output-001-07-004",
+      "question": "What appears if you use the old HTML4 doctype?\n\n```html\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n<html>\n<body>\n<p>Old doctype</p>\n</body>\n</html>\n```",
+      "output": "Old doctype",
+      "explanation": "The page is displayed normally, but the browser may interpret it with older HTML4 rules."
+    },
+    {
+      "id": "output-001-07-005",
+      "question": "What is displayed in the browser?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<div>Valid HTML5 document</div>\n</body>\n</html>\n```",
+      "output": "Valid HTML5 document",
+      "explanation": "The div content is shown. The doctype ensures the document is rendered in standards mode."
+    },
+    {
+      "id": "output-001-07-006",
+      "question": "What happens if you put a comment before `<!DOCTYPE html>`?\n\n```html\n<!-- This is a comment -->\n<!DOCTYPE html>\n<html>\n<body>\n<p>Testing comment before doctype</p>\n</body>\n</html>\n```",
+      "output": "Testing comment before doctype",
+      "explanation": "The comment is ignored visually. However, some browsers may enter quirks mode if anything (even a comment) precedes the doctype."
+    },
+    {
+      "id": "output-001-07-007",
+      "question": "What does this HTML render?\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Title</title>\n</head>\n<body>\n<p>Content</p>\n</body>\n</html>\n```",
+      "output": "Content",
+      "explanation": "The page displays the paragraph 'Content'. The doctype ensures standards mode for HTML5."
+    },
+    {
+      "id": "output-001-07-008",
+      "question": "What do you see if you use an invalid doctype?\n\n```html\n<!DOCTYPE INVALID>\n<html>\n<body>\n<p>Invalid doctype</p>\n</body>\n</html>\n```",
+      "output": "Invalid doctype",
+      "explanation": "The content is still shown, but the browser may render the document in quirks mode due to an invalid doctype."
+    },
+    {
+      "id": "output-001-07-009",
+      "question": "What is displayed?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<p>Standard mode rendering</p>\n</body>\n</html>\n```",
+      "output": "Standard mode rendering",
+      "explanation": "With the HTML5 doctype, the browser renders the content using standard mode."
+    },
+    {
+      "id": "output-001-07-010",
+      "question": "What does the browser output for this code?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<h2>Page Heading</h2>\n</body>\n</html>\n```",
+      "output": "Page Heading",
+      "explanation": "The `<h2>` tag produces a medium-sized heading. The doctype ensures HTML5 standards mode."
+    },
+    {
+      "id": "output-001-07-011",
+      "question": "If you omit the doctype, what will the browser display?\n\n```html\n<html>\n<body>\n<p>No doctype present</p>\n</body>\n</html>\n```",
+      "output": "No doctype present",
+      "explanation": "The text is displayed. Omitting the doctype may cause the browser to switch to quirks mode, potentially impacting CSS/layout."
+    },
+    {
+      "id": "output-001-07-012",
+      "question": "What is rendered if you use an XHTML doctype?\n\n```html\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html>\n<body>\n<p>XHTML document</p>\n</body>\n</html>\n```",
+      "output": "XHTML document",
+      "explanation": "The content is displayed as usual. The browser may use stricter parsing rules for XHTML."
+    },
+    {
+      "id": "output-001-07-013",
+      "question": "What do you see with this code?\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head><meta charset=\"UTF-8\"></head>\n<body>\n<p>UTF-8 charset</p>\n</body>\n</html>\n```",
+      "output": "UTF-8 charset",
+      "explanation": "The browser renders the paragraph. The doctype and charset ensure correct standards and character encoding."
+    },
+    {
+      "id": "output-001-07-014",
+      "question": "What does the browser show?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<!-- Only content below -->\n<p>Only content below</p>\n</body>\n</html>\n```",
+      "output": "Only content below",
+      "explanation": "HTML comments are ignored. The doctype ensures correct rendering."
+    },
+    {
+      "id": "output-001-07-015",
+      "question": "What is the output of this document?\n\n```html\n<!DOCTYPE html>\n<html>\n<head><title>Doctype test</title></head>\n<body>\n<h3>Testing</h3>\n</body>\n</html>\n```",
+      "output": "Testing",
+      "explanation": "The heading 'Testing' is displayed. The doctype ensures the document is interpreted as HTML5."
+    },
+    {
+      "id": "output-001-07-016",
+      "question": "What is rendered if you use an uppercase doctype?\n\n```html\n<!DOCTYPE HTML>\n<html>\n<body>\n<p>Uppercase doctype</p>\n</body>\n</html>\n```",
+      "output": "Uppercase doctype",
+      "explanation": "HTML5 doctype is case-insensitive, so the content is displayed the same as with lowercase."
+    },
+    {
+      "id": "output-001-07-017",
+      "question": "What happens with extra spaces in the doctype?\n\n```html\n<!DOCTYPE    html >\n<html>\n<body>\n<p>Extra spaces in doctype</p>\n</body>\n</html>\n```",
+      "output": "Extra spaces in doctype",
+      "explanation": "Browsers are forgiving of extra whitespace in the doctype. The content displays normally."
+    },
+    {
+      "id": "output-001-07-018",
+      "question": "What is shown?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<h1>Valid Doctype</h1>\n<p>Standard mode</p>\n</body>\n</html>\n```",
+      "output": "Valid Doctype\nStandard mode",
+      "explanation": "A heading and paragraph are displayed. The doctype ensures standard rendering."
+    },
+    {
+      "id": "output-001-07-019",
+      "question": "What is the effect of putting whitespace before the doctype?\n\n```\n   <!DOCTYPE html>\n<html>\n<body>\n<p>Whitespace before doctype</p>\n</body>\n</html>\n```",
+      "output": "Whitespace before doctype",
+      "explanation": "Whitespace before the doctype may cause some browsers to enter quirks mode, but the content is still shown."
+    },
+    {
+      "id": "output-001-07-020",
+      "question": "What does this render?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<h2>Test</h2>\n<p>Document type declaration</p>\n</body>\n</html>\n```",
+      "output": "Test\nDocument type declaration",
+      "explanation": "The heading and paragraph are displayed, with doctype ensuring standard mode."
+    }
+  ]
+}

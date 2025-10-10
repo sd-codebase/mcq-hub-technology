@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-05-001",
+      "question": "What is the Document Type Declaration (`<!DOCTYPE html>`) and why is it important?",
+      "answer": "`<!DOCTYPE html>` is a declaration at the beginning of an HTML document that tells the browser to use HTML5 standards mode. It ensures that the browser renders the page consistently and according to the latest HTML specification.",
+      "explanation": "Without `<!DOCTYPE html>`, browsers may enter 'quirks mode', leading to inconsistent rendering and unexpected behavior across different browsers."
+    },
+    {
+      "id": "interview-001-05-002",
+      "question": "What would happen if you omit the `<!DOCTYPE html>` declaration in an HTML document?",
+      "answer": "If you omit `<!DOCTYPE html>`, browsers may render the page in 'quirks mode', which tries to mimic the behavior of very old browsers and can result in inconsistent or broken layouts.",
+      "explanation": "Quirks mode disables some modern features and CSS standards. Always use `<!DOCTYPE html>` for new projects."
+    },
+    {
+      "id": "interview-001-05-003",
+      "question": "How is the HTML5 doctype different from older doctypes like HTML 4.01 or XHTML?",
+      "answer": "HTML5 uses a very simple doctype: `<!DOCTYPE html>`, while older versions used much longer and more complex strings,\nlike:\n```html\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n```",
+      "explanation": "The simplified HTML5 doctype is easier to remember and ensures standards mode across all browsers."
+    },
+    {
+      "id": "interview-001-05-004",
+      "question": "Is the `<!DOCTYPE html>` declaration case-sensitive?",
+      "answer": "No, the doctype declaration is not case-sensitive. Both `<!DOCTYPE html>` and `<!DoCtYpE hTmL>` will work, but best practice is to use lowercase.",
+      "explanation": "Using lowercase improves readability and follows the convention in modern HTML."
+    },
+    {
+      "id": "interview-001-05-005",
+      "question": "Where should you place the `<!DOCTYPE html>` declaration in an HTML document?",
+      "answer": "The `<!DOCTYPE html>` declaration must be the very first line of the HTML document, before the `<html>` tag.",
+      "explanation": "Placing it elsewhere or after comments may cause the browser to use quirks mode."
+    },
+    {
+      "id": "interview-001-05-006",
+      "question": "How does the browser behave if there is whitespace or a comment before the `<!DOCTYPE html>`?",
+      "answer": "Some browsers may enter quirks mode if there is any whitespace, comment, or other content before the `<!DOCTYPE html>` declaration.",
+      "explanation": "To ensure standards mode, always place the doctype as the first line without any preceding characters."
+    },
+    {
+      "id": "interview-001-05-007",
+      "question": "Does the `<!DOCTYPE html>` tag produce any visible output on the page?",
+      "answer": "No, the doctype declaration is not rendered and does not produce any visible output.",
+      "explanation": "It only serves as an instruction to the browser about how to interpret the page."
+    },
+    {
+      "id": "interview-001-05-008",
+      "question": "Can you use `<!DOCTYPE html>` in XHTML documents?",
+      "answer": "No, XHTML documents require a different doctype declaration to ensure proper parsing as XML.",
+      "explanation": "XHTML doctypes look like:\n```html\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n```"
+    },
+    {
+      "id": "interview-001-05-009",
+      "question": "What is 'quirks mode' and 'standards mode' in the context of HTML rendering?",
+      "answer": "Quirks mode is a browser rendering mode that emulates the non-standard behavior of older browsers. Standards mode uses the latest HTML and CSS specifications for consistent, modern rendering.",
+      "explanation": "`<!DOCTYPE html>` ensures standards mode. Missing or incorrect doctypes can trigger quirks mode."
+    },
+    {
+      "id": "interview-001-05-010",
+      "question": "How can you check if your page is being rendered in standards mode?",
+      "answer": "You can use browser developer tools to inspect the page's rendering mode. Most browsers show 'Standards mode' or 'Quirks mode' in the inspector or console.",
+      "explanation": "Ensuring standards mode helps avoid bugs and ensures consistent page layout and behavior across browsers."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-07-001",
+      "question": "What is an HTML attribute and how is it used?",
+      "answer": "An HTML attribute provides additional information about an element and is written inside the opening tag. For example:\n\n```html\n<img src=\"logo.png\" alt=\"Logo\">\n```",
+      "explanation": "Attributes are always defined in the opening tag and usually come in name-value pairs, such as `src=\"logo.png\"`."
+    },
+    {
+      "id": "interview-001-07-002",
+      "question": "Give examples of common global attributes in HTML.",
+      "answer": "Common global attributes include `id`, `class`, `style`, `title`, `hidden`, and `data-*` attributes.",
+      "explanation": "Global attributes can be used on almost any HTML element to provide identification, styling, data storage, and more."
+    },
+    {
+      "id": "interview-001-07-003",
+      "question": "What is the purpose of the `id` attribute in HTML?",
+      "answer": "The `id` attribute uniquely identifies an element in the document. Example:\n\n```html\n<p id=\"intro\">Welcome!</p>\n```",
+      "explanation": "Each `id` value must be unique within the page. It is useful for linking, scripting, and styling."
+    },
+    {
+      "id": "interview-001-07-004",
+      "question": "How do you use the `class` attribute and what is its benefit?",
+      "answer": "The `class` attribute assigns one or more class names to an element. Example:\n\n```html\n<div class=\"box highlight\"></div>\n```",
+      "explanation": "Classes are used for CSS styling and JavaScript selection, allowing you to apply styles or behaviors to groups of elements."
+    },
+    {
+      "id": "interview-001-07-005",
+      "question": "How can you add inline CSS styling to an HTML element?",
+      "answer": "Use the `style` attribute within the element’s opening tag:\n\n```html\n<p style=\"color: blue; font-weight: bold;\">Styled text</p>\n```",
+      "explanation": "Inline styles override external and internal CSS but are less maintainable for large projects."
+    },
+    {
+      "id": "interview-001-07-006",
+      "question": "What are `data-*` attributes and how are they used?",
+      "answer": "`data-*` attributes store custom data on any HTML element. Example:\n\n```html\n<div data-user-id=\"123\" data-role=\"admin\"></div>\n```",
+      "explanation": "They are used to embed custom, non-visible data for scripts and applications without affecting layout or appearance."
+    },
+    {
+      "id": "interview-001-07-007",
+      "question": "Are HTML attribute names case sensitive?",
+      "answer": "No, HTML attribute names are not case sensitive. Both `CLASS` and `class` are treated the same by the browser.",
+      "explanation": "However, it's best practice to use lowercase for consistency and readability."
+    },
+    {
+      "id": "interview-001-07-008",
+      "question": "Can you use the same attribute multiple times on the same element? Why or why not?",
+      "answer": "No, you cannot use the same attribute more than once on a single element. The last occurrence will override previous ones.",
+      "explanation": "HTML parsers use the last value found, which can cause confusion and bugs."
+    },
+    {
+      "id": "interview-001-07-009",
+      "question": "How do boolean attributes work in HTML? Give an example.",
+      "answer": "Boolean attributes can be written with just the attribute name, without a value. Example:\n\n```html\n<input type=\"checkbox\" checked>\n```",
+      "explanation": "If the attribute is present, its value is true, otherwise it is false. Writing `checked=\"checked\"` is also valid."
+    },
+    {
+      "id": "interview-001-07-010",
+      "question": "How do you specify the target of a link using attributes?",
+      "answer": "Use the `target` attribute on the `<a>` tag to control where the link opens. Example:\n\n```html\n<a href=\"https://example.com\" target=\"_blank\">Open in new tab</a>\n```",
+      "explanation": "`_blank` opens the link in a new tab or window. Other values include `_self`, `_parent`, and `_top`."
+    }
+  ]
+}

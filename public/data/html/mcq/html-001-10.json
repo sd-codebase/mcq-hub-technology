@@ -1,0 +1,199 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-10-001",
+      "question": "Which tool is NOT typically used to edit HTML?",
+      "options": [
+        "Notepad++",
+        "Visual Studio Code",
+        "Microsoft Excel",
+        "Sublime Text"
+      ],
+      "correct_answer": 3,
+      "explanation": "Microsoft Excel is a spreadsheet program, not an HTML editor."
+    },
+    {
+      "id": "mcq-001-10-002",
+      "question": "Which of the following programs is specifically designed for web development?",
+      "options": [
+        "Adobe Dreamweaver",
+        "Adobe Photoshop",
+        "Microsoft Word",
+        "Blender"
+      ],
+      "correct_answer": 1,
+      "explanation": "Adobe Dreamweaver is a professional web development environment."
+    },
+    {
+      "id": "mcq-001-10-003",
+      "question": "Which of the following is a free, open-source HTML editor?",
+      "options": [
+        "Notepad++",
+        "Microsoft FrontPage",
+        "Adobe InDesign",
+        "AutoCAD"
+      ],
+      "correct_answer": 1,
+      "explanation": "Notepad++ is a free, open-source code editor suitable for HTML."
+    },
+    {
+      "id": "mcq-001-10-004",
+      "question": "Which HTML editor is cloud-based and can be used directly from a browser?",
+      "options": ["Sublime Text", "CodePen", "Notepad", "Brackets"],
+      "correct_answer": 2,
+      "explanation": "CodePen is a popular cloud-based HTML/CSS/JS editor."
+    },
+    {
+      "id": "mcq-001-10-005",
+      "question": "Which shortcut is commonly used to save a file in most HTML editors?",
+      "options": ["`Ctrl + S`", "`Ctrl + C`", "`Ctrl + X`", "`Ctrl + Z`"],
+      "correct_answer": 1,
+      "explanation": "`Ctrl + S` is the standard shortcut to save files."
+    },
+    {
+      "id": "mcq-001-10-006",
+      "question": "Which HTML editor is built into most operating systems?",
+      "options": [
+        "Notepad (Windows)",
+        "TextEdit (Mac)",
+        "Both Notepad and TextEdit",
+        "Microsoft Word"
+      ],
+      "correct_answer": 3,
+      "explanation": "Both Notepad and TextEdit are basic text editors included with Windows and Mac OS."
+    },
+    {
+      "id": "mcq-001-10-007",
+      "question": "Which feature is commonly found in advanced HTML editors?",
+      "options": [
+        "Syntax highlighting",
+        "Spell check only",
+        "Automatic web hosting",
+        "Spreadsheet calculations"
+      ],
+      "correct_answer": 1,
+      "explanation": "Syntax highlighting improves readability and is standard in advanced editors."
+    },
+    {
+      "id": "mcq-001-10-008",
+      "question": "Which editor allows real-time preview of HTML code as you type?",
+      "options": ["Notepad", "Vim", "CodePen", "Nano"],
+      "correct_answer": 3,
+      "explanation": "CodePen provides real-time previews for HTML, CSS, and JS."
+    },
+    {
+      "id": "mcq-001-10-009",
+      "question": "What is one advantage of using an HTML editor over a basic text editor?",
+      "options": [
+        "Better color printing",
+        "Syntax highlighting and code suggestions",
+        "Faster computer performance",
+        "Larger font sizes"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML editors often provide helpful features like syntax highlighting and code completion."
+    },
+    {
+      "id": "mcq-001-10-010",
+      "question": "What is 'Emmet' in the context of HTML editors?",
+      "options": [
+        "A color scheme",
+        "A code snippet plugin for writing HTML and CSS faster",
+        "A database tool",
+        "A browser extension"
+      ],
+      "correct_answer": 2,
+      "explanation": "Emmet is a plugin for expanding abbreviations into HTML/CSS code snippets."
+    },
+    {
+      "id": "mcq-001-10-011",
+      "question": "Which editor is well-known for its extensive plugin library for web development?",
+      "options": ["Vim", "Notepad++", "Sublime Text", "Nano"],
+      "correct_answer": 3,
+      "explanation": "Sublime Text is known for its rich ecosystem of plugins for web development."
+    },
+    {
+      "id": "mcq-001-10-012",
+      "question": "Which of the following editors is made by Microsoft and popular for HTML/CSS/JS coding?",
+      "options": ["Atom", "Sublime Text", "Visual Studio Code", "Brackets"],
+      "correct_answer": 3,
+      "explanation": "Visual Studio Code is a popular, free editor developed by Microsoft."
+    },
+    {
+      "id": "mcq-001-10-013",
+      "question": "Which feature helps in auto-completing tags in an HTML editor?",
+      "options": ["Linting", "Tag matching", "Auto-indentation", "Dark mode"],
+      "correct_answer": 2,
+      "explanation": "Tag matching or tag completion automatically closes opened HTML tags."
+    },
+    {
+      "id": "mcq-001-10-014",
+      "question": "Which of these editors is primarily used for collaborative online coding?",
+      "options": ["Visual Studio Code", "Sublime Text", "Repl.it", "Notepad"],
+      "correct_answer": 3,
+      "explanation": "Repl.it allows real-time, collaborative online coding."
+    },
+    {
+      "id": "mcq-001-10-015",
+      "question": "Which basic text editor is included with Windows and is often used for editing HTML?",
+      "options": ["Nano", "Notepad", "Gedit", "WordPad"],
+      "correct_answer": 2,
+      "explanation": "Notepad is a simple text editor that comes with Windows."
+    },
+    {
+      "id": "mcq-001-10-016",
+      "question": "What is one disadvantage of using a word processor like Microsoft Word for HTML editing?",
+      "options": [
+        "It saves files in plain text",
+        "It may add extra formatting or characters",
+        "It highlights code syntax",
+        "It previews HTML in real time"
+      ],
+      "correct_answer": 2,
+      "explanation": "Word processors often add hidden formatting, making them unsuitable for HTML editing."
+    },
+    {
+      "id": "mcq-001-10-017",
+      "question": "Which of the following is NOT a feature of Visual Studio Code?",
+      "options": [
+        "Integrated terminal",
+        "Live preview for HTML/CSS/JS",
+        "Spreadsheet calculations",
+        "Extensions marketplace"
+      ],
+      "correct_answer": 3,
+      "explanation": "Visual Studio Code does not support spreadsheet calculations."
+    },
+    {
+      "id": "mcq-001-10-018",
+      "question": "Which editor is known for its minimalism and speed?",
+      "options": ["Sublime Text", "NetBeans", "Eclipse", "Microsoft Word"],
+      "correct_answer": 1,
+      "explanation": "Sublime Text is known for being fast and lightweight."
+    },
+    {
+      "id": "mcq-001-10-019",
+      "question": "Which of the following editors is discontinued but was once used for WYSIWYG HTML editing?",
+      "options": [
+        "Adobe Dreamweaver",
+        "Microsoft FrontPage",
+        "Atom",
+        "Brackets"
+      ],
+      "correct_answer": 2,
+      "explanation": "Microsoft FrontPage was an early WYSIWYG editor, now discontinued."
+    },
+    {
+      "id": "mcq-001-10-020",
+      "question": "What is the main advantage of using an online HTML editor?",
+      "options": [
+        "You can code without installing any software",
+        "It requires a license fee",
+        "It always works offline",
+        "It has less syntax highlighting"
+      ],
+      "correct_answer": 1,
+      "explanation": "Online editors like CodePen and JSFiddle let you code directly in your browser without installation."
+    }
+  ]
+}

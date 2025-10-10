@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-19-001",
+      "question": "What is the output?\n\n```html\n<p>&#x1F600; Emoji</p>\n```",
+      "output": "😀 Emoji",
+      "explanation": "`&#x1F600;` is the hexadecimal code for the grinning face emoji."
+    },
+    {
+      "id": "output-001-19-002",
+      "question": "What does this code display?\n\n```html\n<p>&#128512; Emoji code</p>\n```",
+      "output": "😀 Emoji code",
+      "explanation": "`&#128512;` is the decimal numeric code for the grinning face emoji."
+    },
+    {
+      "id": "output-001-19-003",
+      "question": "What is rendered?\n\n```html\n<p>&#x1F4A9; Unicode poop emoji</p>\n```",
+      "output": "💩 Unicode poop emoji",
+      "explanation": "`&#x1F4A9;` is the hexadecimal code for the 'pile of poo' emoji."
+    },
+    {
+      "id": "output-001-19-004",
+      "question": "What does the browser show?\n\n```html\n<p>&#128525; Heart eyes</p>\n```",
+      "output": "😍 Heart eyes",
+      "explanation": "`&#128525;` is the decimal code for the heart eyes emoji."
+    },
+    {
+      "id": "output-001-19-005",
+      "question": "What is shown?\n\n```html\n<p>&#x1F44D; Thumbs up</p>\n```",
+      "output": "👍 Thumbs up",
+      "explanation": "`&#x1F44D;` is the hexadecimal Unicode for the thumbs up emoji."
+    },
+    {
+      "id": "output-001-19-006",
+      "question": "What is the output of this code?\n\n```html\n<p>&#x1F622; Sad face</p>\n```",
+      "output": "😢 Sad face",
+      "explanation": "`&#x1F622;` is the hexadecimal code for the crying face emoji."
+    },
+    {
+      "id": "output-001-19-007",
+      "question": "What does this display?\n\n```html\n<p>&#128578; Slightly smiling</p>\n```",
+      "output": "🙂 Slightly smiling",
+      "explanation": "`&#128578;` is the decimal code for the slightly smiling face emoji."
+    },
+    {
+      "id": "output-001-19-008",
+      "question": "What is rendered?\n\n```html\n<p>&#x1F609; Winking face</p>\n```",
+      "output": "😉 Winking face",
+      "explanation": "`&#x1F609;` is the hexadecimal Unicode for the winking face emoji."
+    },
+    {
+      "id": "output-001-19-009",
+      "question": "What does the browser show?\n\n```html\n<p>&#128077; Thumbs up</p>\n```",
+      "output": "👍 Thumbs up",
+      "explanation": "`&#128077;` is the decimal code for the thumbs up emoji."
+    },
+    {
+      "id": "output-001-19-010",
+      "question": "What is the output?\n\n```html\n<p>&#x1F60D; Heart eyes</p>\n```",
+      "output": "😍 Heart eyes",
+      "explanation": "`&#x1F60D;` is the hexadecimal code for the heart eyes emoji."
+    },
+    {
+      "id": "output-001-19-011",
+      "question": "What does this code render?\n\n```html\n<p>&#x1F618; Blowing a kiss</p>\n```",
+      "output": "😘 Blowing a kiss",
+      "explanation": "`&#x1F618;` is the hexadecimal code for the face blowing a kiss emoji."
+    },
+    {
+      "id": "output-001-19-012",
+      "question": "What is shown?\n\n```html\n<p>&#128521; Winking face</p>\n```",
+      "output": "😉 Winking face",
+      "explanation": "`&#128521;` is the decimal code for the winking face emoji."
+    },
+    {
+      "id": "output-001-19-013",
+      "question": "What is rendered?\n\n```html\n<p>&#x1F604; Smiling face with open mouth</p>\n```",
+      "output": "😄 Smiling face with open mouth",
+      "explanation": "`&#x1F604;` is the hexadecimal code for the smiling face with open mouth emoji."
+    },
+    {
+      "id": "output-001-19-014",
+      "question": "What does this HTML display?\n\n```html\n<p>&#128512; Grinning face</p>\n```",
+      "output": "😀 Grinning face",
+      "explanation": "`&#128512;` is the decimal code for the grinning face emoji."
+    },
+    {
+      "id": "output-001-19-015",
+      "question": "What does the browser show?\n\n```html\n<p>&#x1F603; Smiling face</p>\n```",
+      "output": "😃 Smiling face",
+      "explanation": "`&#x1F603;` is the hexadecimal code for the smiling face with open mouth emoji."
+    },
+    {
+      "id": "output-001-19-016",
+      "question": "What is the output?\n\n```html\n<p>&#x1F633; Flushed face</p>\n```",
+      "output": "😳 Flushed face",
+      "explanation": "`&#x1F633;` is the hexadecimal code for the flushed face emoji."
+    },
+    {
+      "id": "output-001-19-017",
+      "question": "What is rendered?\n\n```html\n<p>&#128528; Neutral face</p>\n```",
+      "output": "😐 Neutral face",
+      "explanation": "`&#128528;` is the decimal code for the neutral face emoji."
+    },
+    {
+      "id": "output-001-19-018",
+      "question": "What does the browser display?\n\n```html\n<p>&#x1F622; Crying face</p>\n```",
+      "output": "😢 Crying face",
+      "explanation": "`&#x1F622;` is the hexadecimal code for the crying face emoji."
+    },
+    {
+      "id": "output-001-19-019",
+      "question": "What does this HTML show?\n\n```html\n<p>&#128514; Laughing with tears</p>\n```",
+      "output": "😂 Laughing with tears",
+      "explanation": "`&#128514;` is the decimal code for the face with tears of joy emoji."
+    },
+    {
+      "id": "output-001-19-020",
+      "question": "What is displayed?\n\n```html\n<p>&#x1F609; Winking</p>\n```",
+      "output": "😉 Winking",
+      "explanation": "`&#x1F609;` is the hexadecimal code for the winking face emoji."
+    }
+  ]
+}

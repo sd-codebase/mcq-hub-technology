@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-16-001",
+      "question": "What is the output of this code?\n\n```html\n<p>5 &gt; 2</p>\n```",
+      "output": "5 > 2",
+      "explanation": "`&gt;` is the HTML entity for the greater-than symbol (>)."
+    },
+    {
+      "id": "output-001-16-002",
+      "question": "What is rendered by this HTML?\n\n```html\n<p>The price is &euro;50</p>\n```",
+      "output": "The price is €50",
+      "explanation": "`&euro;` is the HTML entity for the Euro currency symbol."
+    },
+    {
+      "id": "output-001-16-003",
+      "question": "What do you see in the browser for this code?\n\n```html\n<p>&copy; 2025 Example</p>\n```",
+      "output": "© 2025 Example",
+      "explanation": "`&copy;` is the HTML entity for the copyright symbol."
+    },
+    {
+      "id": "output-001-16-004",
+      "question": "What does the following code display?\n\n```html\n<p>Tom &amp; Jerry</p>\n```",
+      "output": "Tom & Jerry",
+      "explanation": "`&amp;` is the entity for the ampersand (&)."
+    },
+    {
+      "id": "output-001-16-005",
+      "question": "What is shown by this snippet?\n\n```html\n<p>Space&nbsp;&nbsp;Space</p>\n```",
+      "output": "Space  Space",
+      "explanation": "`&nbsp;` is a non-breaking space entity, so two spaces appear between the words."
+    },
+    {
+      "id": "output-001-16-006",
+      "question": "What is the output?\n\n```html\n<p>5 &lt; 10</p>\n```",
+      "output": "5 < 10",
+      "explanation": "`&lt;` is the HTML entity for the less-than symbol (<)."
+    },
+    {
+      "id": "output-001-16-007",
+      "question": "What will the browser display?\n\n```html\n<p>&reg; Registered</p>\n```",
+      "output": "® Registered",
+      "explanation": "`&reg;` is the HTML entity for the registered trademark symbol."
+    },
+    {
+      "id": "output-001-16-008",
+      "question": "What does this render?\n\n```html\n<p>&quot;Hello&quot; she said.</p>\n```",
+      "output": "\"Hello\" she said.",
+      "explanation": "`&quot;` is the double quote entity."
+    },
+    {
+      "id": "output-001-16-009",
+      "question": "What does the following produce?\n\n```html\n<p>Cost: 50&cent;</p>\n```",
+      "output": "Cost: 50¢",
+      "explanation": "`&cent;` is the cent sign entity."
+    },
+    {
+      "id": "output-001-16-010",
+      "question": "What is displayed?\n\n```html\n<p>Don&apos;t stop</p>\n```",
+      "output": "Don't stop",
+      "explanation": "`&apos;` is the apostrophe entity."
+    },
+    {
+      "id": "output-001-16-011",
+      "question": "What is rendered?\n\n```html\n<p>Dash: &mdash;</p>\n```",
+      "output": "Dash: —",
+      "explanation": "`&mdash;` is the em dash entity."
+    },
+    {
+      "id": "output-001-16-012",
+      "question": "What is shown by this code?\n\n```html\n<p>&trade; symbol</p>\n```",
+      "output": "™ symbol",
+      "explanation": "`&trade;` is the trademark symbol entity."
+    },
+    {
+      "id": "output-001-16-013",
+      "question": "What is the output?\n\n```html\n<p>3 &times; 4 = 12</p>\n```",
+      "output": "3 × 4 = 12",
+      "explanation": "`&times;` is the multiplication sign entity."
+    },
+    {
+      "id": "output-001-16-014",
+      "question": "What does this code show?\n\n```html\n<p>Temperature: 20&deg;C</p>\n```",
+      "output": "Temperature: 20°C",
+      "explanation": "`&deg;` is the degree symbol entity."
+    },
+    {
+      "id": "output-001-16-015",
+      "question": "What is rendered?\n\n```html\n<p>Section &sect;2</p>\n```",
+      "output": "Section §2",
+      "explanation": "`&sect;` is the section symbol entity."
+    },
+    {
+      "id": "output-001-16-016",
+      "question": "What is displayed?\n\n```html\n<p>&laquo;Quote&raquo;</p>\n```",
+      "output": "«Quote»",
+      "explanation": "`&laquo;` and `&raquo;` are left and right double angle quotation marks."
+    },
+    {
+      "id": "output-001-16-017",
+      "question": "What is rendered?\n\n```html\n<p>100&nbsp;m</p>\n```",
+      "output": "100 m",
+      "explanation": "`&nbsp;` is a non-breaking space."
+    },
+    {
+      "id": "output-001-16-018",
+      "question": "What does this HTML output?\n\n```html\n<p>&le; means less than or equal to</p>\n```",
+      "output": "≤ means less than or equal to",
+      "explanation": "`&le;` is the less-than-or-equal-to symbol."
+    },
+    {
+      "id": "output-001-16-019",
+      "question": "What does this code display?\n\n```html\n<p>&rsaquo; Right single angle</p>\n```",
+      "output": "› Right single angle",
+      "explanation": "`&rsaquo;` is the right single angle quotation mark."
+    },
+    {
+      "id": "output-001-16-020",
+      "question": "What is shown in the browser?\n\n```html\n<p>&bull; Bullet point</p>\n```",
+      "output": "• Bullet point",
+      "explanation": "`&bull;` is the bullet character entity."
+    }
+  ]
+}

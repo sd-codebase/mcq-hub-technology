@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-17-001",
+      "question": "What is the output for this code?\n\n```html\n<p>&#169; 2025 Example</p>\n```",
+      "output": "© 2025 Example",
+      "explanation": "`&#169;` is the numeric HTML entity for the copyright symbol."
+    },
+    {
+      "id": "output-001-17-002",
+      "question": "What is rendered by this snippet?\n\n```html\n<p>&#8364;100</p>\n```",
+      "output": "€100",
+      "explanation": "`&#8364;` is the numeric entity for the Euro symbol."
+    },
+    {
+      "id": "output-001-17-003",
+      "question": "What does this HTML display?\n\n```html\n<p>&#62; means greater than</p>\n```",
+      "output": "> means greater than",
+      "explanation": "`&#62;` is the numeric entity for the greater-than symbol."
+    },
+    {
+      "id": "output-001-17-004",
+      "question": "What is shown in the browser?\n\n```html\n<p>&#60;div&#62;Block&#60;/div&#62;</p>\n```",
+      "output": "<div>Block</div>",
+      "explanation": "The numeric entities `&#60;` and `&#62;` render as < and >, so the tag appears as text."
+    },
+    {
+      "id": "output-001-17-005",
+      "question": "What is rendered?\n\n```html\n<p>&#38; is the ampersand symbol</p>\n```",
+      "output": "& is the ampersand symbol",
+      "explanation": "`&#38;` is the numeric entity for the ampersand (&)."
+    },
+    {
+      "id": "output-001-17-006",
+      "question": "What does this code show?\n\n```html\n<p>&#34;Quote&#34;</p>\n```",
+      "output": "\"Quote\"",
+      "explanation": "`&#34;` is the numeric entity for the double quotation mark."
+    },
+    {
+      "id": "output-001-17-007",
+      "question": "What is the output of this HTML?\n\n```html\n<p>Use &#39;single quotes&#39; for emphasis.</p>\n```",
+      "output": "Use 'single quotes' for emphasis.",
+      "explanation": "`&#39;` is the numeric entity for the apostrophe or single quote."
+    },
+    {
+      "id": "output-001-17-008",
+      "question": "What is displayed in the browser?\n\n```html\n<p>&#35;1 in the list</p>\n```",
+      "output": "#1 in the list",
+      "explanation": "`&#35;` is the numeric entity for the hash/pound symbol."
+    },
+    {
+      "id": "output-001-17-009",
+      "question": "What is shown?\n\n```html\n<p>&#8212; Em dash</p>\n```",
+      "output": "— Em dash",
+      "explanation": "`&#8212;` is the numeric entity for the em dash (—)."
+    },
+    {
+      "id": "output-001-17-010",
+      "question": "What does the browser render?\n\n```html\n<p>&#8804; means less than or equal to</p>\n```",
+      "output": "≤ means less than or equal to",
+      "explanation": "`&#8804;` is the numeric entity for the ≤ symbol."
+    },
+    {
+      "id": "output-001-17-011",
+      "question": "What is rendered?\n\n```html\n<p>&#174; Registered</p>\n```",
+      "output": "® Registered",
+      "explanation": "`&#174;` is the numeric entity for the registered trademark symbol."
+    },
+    {
+      "id": "output-001-17-012",
+      "question": "What is shown by this HTML?\n\n```html\n<p>&#8482; Trademark</p>\n```",
+      "output": "™ Trademark",
+      "explanation": "`&#8482;` is the numeric entity for the trademark symbol."
+    },
+    {
+      "id": "output-001-17-013",
+      "question": "What is the output?\n\n```html\n<p>3 &#215; 7 = 21</p>\n```",
+      "output": "3 × 7 = 21",
+      "explanation": "`&#215;` is the numeric entity for the multiplication sign."
+    },
+    {
+      "id": "output-001-17-014",
+      "question": "What does this code display?\n\n```html\n<p>100&#160;m</p>\n```",
+      "output": "100 m",
+      "explanation": "`&#160;` is the numeric entity for a non-breaking space."
+    },
+    {
+      "id": "output-001-17-015",
+      "question": "What is rendered?\n\n```html\n<p>&#167; Law section</p>\n```",
+      "output": "§ Law section",
+      "explanation": "`&#167;` is the section sign."
+    },
+    {
+      "id": "output-001-17-016",
+      "question": "What is displayed?\n\n```html\n<p>&#8216;Left single quote&#8217;</p>\n```",
+      "output": "‘Left single quote’",
+      "explanation": "`&#8216;` and `&#8217;` are the left and right single quotation marks."
+    },
+    {
+      "id": "output-001-17-017",
+      "question": "What does this HTML show?\n\n```html\n<p>&#8594; Arrow symbol</p>\n```",
+      "output": "→ Arrow symbol",
+      "explanation": "`&#8594;` is the right arrow symbol."
+    },
+    {
+      "id": "output-001-17-018",
+      "question": "What is the result?\n\n```html\n<p>&#9679; Bullet point</p>\n```",
+      "output": "● Bullet point",
+      "explanation": "`&#9679;` is the numeric entity for a bullet character."
+    },
+    {
+      "id": "output-001-17-019",
+      "question": "What is the output?\n\n```html\n<p>&#8230; indicates ellipsis</p>\n```",
+      "output": "… indicates ellipsis",
+      "explanation": "`&#8230;` is the entity for the ellipsis (…) symbol."
+    },
+    {
+      "id": "output-001-17-020",
+      "question": "What does this code render?\n\n```html\n<p>&#8805; means greater than or equal to</p>\n```",
+      "output": "≥ means greater than or equal to",
+      "explanation": "`&#8805;` is the numeric entity for the ≥ symbol."
+    }
+  ]
+}

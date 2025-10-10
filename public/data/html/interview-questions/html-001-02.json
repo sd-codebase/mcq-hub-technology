@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-02-001",
+      "question": "What is the `<head>` element used for in an HTML document?",
+      "answer": "The `<head>` element contains meta-information about the HTML document, such as the title, character encoding, linked CSS files, scripts, and other metadata that is not displayed directly on the page.",
+      "explanation": "Everything inside `<head>` helps browsers and search engines process and render the page correctly, but does not appear as content to the user."
+    },
+    {
+      "id": "interview-001-02-002",
+      "question": "What does the `<title>` tag do and where should it be placed?",
+      "answer": "The `<title>` tag specifies the title of the HTML document. It should be placed inside the `<head>` section.",
+      "explanation": "The title appears in the browser tab and is important for SEO and accessibility."
+    },
+    {
+      "id": "interview-001-02-003",
+      "question": "How do you set the character encoding for an HTML document?",
+      "answer": "You set the character encoding using a `<meta charset=\"UTF-8\">` tag inside the `<head>` section.",
+      "explanation": "UTF-8 is the most common encoding and supports most characters and languages."
+    },
+    {
+      "id": "interview-001-02-004",
+      "question": "How do you add a description and author to your HTML page for search engines?",
+      "answer": "Use `<meta>` tags inside the `<head>` section:\n\n```html\n<meta name=\"description\" content=\"A sample web page.\">\n<meta name=\"author\" content=\"John Doe\">\n```",
+      "explanation": "Meta tags provide information for search engines and browsers, but are not shown to users."
+    },
+    {
+      "id": "interview-001-02-005",
+      "question": "How do you link an external CSS file in HTML?",
+      "answer": "Use the `<link>` tag inside the `<head>` section:\n\n```html\n<link rel=\"stylesheet\" href=\"styles.css\">\n```",
+      "explanation": "`<link>` tags are used to link external resources like stylesheets. The `rel` attribute defines the relationship."
+    },
+    {
+      "id": "interview-001-02-006",
+      "question": "How do you include a favicon in your HTML page?",
+      "answer": "Add this line inside `<head>`:\n\n```html\n<link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\">\n```",
+      "explanation": "The favicon is the small icon shown in browser tabs and bookmarks."
+    },
+    {
+      "id": "interview-001-02-007",
+      "question": "How do you link to an external JavaScript file in HTML?",
+      "answer": "Use the `<script src=\"script.js\"></script>` tag, typically placed at the end of `<body>` but can also be in `<head>` with the `defer` or `async` attribute.",
+      "explanation": "`defer` and `async` control when the script loads relative to HTML parsing."
+    },
+    {
+      "id": "interview-001-02-008",
+      "question": "What is the viewport meta tag and why is it important for responsive design?",
+      "answer": "The viewport meta tag controls layout on mobile browsers. Example:\n\n```html\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n```",
+      "explanation": "Without this tag, mobile browsers may render pages at desktop width, making them hard to read on small screens."
+    },
+    {
+      "id": "interview-001-02-009",
+      "question": "How do you prevent search engines from indexing a page?",
+      "answer": "Add this meta tag in the `<head>`:\n\n```html\n<meta name=\"robots\" content=\"noindex\">\n```",
+      "explanation": "This tells search engines not to include the page in their index, although some crawlers may ignore it."
+    },
+    {
+      "id": "interview-001-02-010",
+      "question": "How can you specify keywords for a web page?",
+      "answer": "Use the keywords meta tag inside `<head>`:\n\n```html\n<meta name=\"keywords\" content=\"HTML, web, coding, tutorial\">\n```",
+      "explanation": "This tag used to help with SEO, but most modern search engines do not use it for ranking anymore."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-05-001",
+      "question": "What is an HTML element?",
+      "options": [
+        "A type of web browser",
+        "A component defined by a start and end tag",
+        "A CSS property",
+        "A JavaScript function"
+      ],
+      "correct_answer": 2,
+      "explanation": "An HTML element consists of a start tag, content, and an end tag, for example: `<p>Hello</p>`."
+    },
+    {
+      "id": "mcq-001-05-002",
+      "question": "Which of the following is a valid HTML tag?",
+      "options": ["`<para>`", "`<img>`", "`<picturebox>`", "`<text>`"],
+      "correct_answer": 2,
+      "explanation": "`<img>` is a valid HTML tag used to embed images."
+    },
+    {
+      "id": "mcq-001-05-003",
+      "question": "What separates an HTML tag’s name from its attributes?",
+      "options": ["A comma", "A colon", "A space", "A period"],
+      "correct_answer": 3,
+      "explanation": "Attributes are separated from the tag name by a space, e.g., `<a href=\"...\">`."
+    },
+    {
+      "id": "mcq-001-05-004",
+      "question": "Which of these is a valid HTML attribute?",
+      "options": ["src", "alignText", "font-color", "css"],
+      "correct_answer": 1,
+      "explanation": "`src` is a valid attribute for tags like `<img>` and `<script>`."
+    },
+    {
+      "id": "mcq-001-05-005",
+      "question": "Which of the following is NOT a valid pairing of start and end tags?",
+      "options": ["`<div></div>`", "`<p></p>`", "`<img></img>`", "`<ul></ul>`"],
+      "correct_answer": 3,
+      "explanation": "`<img>` is a self-closing tag and does not require an end tag."
+    },
+    {
+      "id": "mcq-001-05-006",
+      "question": "Which of the following are considered empty elements in HTML?",
+      "options": ["`<br>`", "`<input>`", "`<img>`", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "All listed tags are empty elements and do not require closing tags."
+    },
+    {
+      "id": "mcq-001-05-007",
+      "question": "What is the difference between an HTML element and an HTML tag?",
+      "options": [
+        "They are the same thing",
+        "An element includes the start tag, content, and end tag; a tag is just the markup",
+        "A tag includes the content, an element does not",
+        "An element only refers to self-closing tags"
+      ],
+      "correct_answer": 2,
+      "explanation": "An HTML element includes the start tag, content, and end tag. The tag is just the markup itself."
+    },
+    {
+      "id": "mcq-001-05-008",
+      "question": "What is the correct syntax for an HTML attribute?",
+      "options": [
+        "`attribute = value`",
+        "`attribute: value;`",
+        "`attribute(value)`",
+        "`attribute - value`"
+      ],
+      "correct_answer": 1,
+      "explanation": "HTML attributes are written as `attribute=\"value\"` inside the tag."
+    },
+    {
+      "id": "mcq-001-05-009",
+      "question": "Which of the following is a correct example of an HTML element?",
+      "options": [
+        "`<h1>Hello World</h1>`",
+        "`<h1>Hello World>`",
+        "`<h1/Hello World/h1>`",
+        "`<h1:Hello World>`"
+      ],
+      "correct_answer": 1,
+      "explanation": "The correct syntax for an HTML element is `<h1>Hello World</h1>`."
+    },
+    {
+      "id": "mcq-001-05-010",
+      "question": "Which HTML tag is used to define a hyperlink?",
+      "options": ["`<href>`", "`<a>`", "`<link>`", "`<hyperlink>`"],
+      "correct_answer": 2,
+      "explanation": "The `<a>` tag is used to define hyperlinks in HTML."
+    },
+    {
+      "id": "mcq-001-05-011",
+      "question": "How do you add an image to a web page using HTML?",
+      "options": [
+        "`<image src=\"cat.jpg\">`",
+        "`<img src=\"cat.jpg\">`",
+        "`<pic src=\"cat.jpg\">`",
+        "`<src img=\"cat.jpg\">`"
+      ],
+      "correct_answer": 2,
+      "explanation": "The correct way is `<img src=\"cat.jpg\">`."
+    },
+    {
+      "id": "mcq-001-05-012",
+      "question": "Which attribute is required in the `<img>` tag for accessibility?",
+      "options": ["title", "alt", "desc", "name"],
+      "correct_answer": 2,
+      "explanation": "The `alt` attribute provides alternative text for images and is important for accessibility."
+    },
+    {
+      "id": "mcq-001-05-013",
+      "question": "What is the correct way to nest HTML elements?",
+      "options": [
+        "`<b><i>Text</b></i>`",
+        "`<b><i>Text</i></b>`",
+        "`<i><b>Text</i></b>`",
+        "`<b><i>Text<b></i>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML elements must be properly nested, like `<b><i>Text</i></b>`."
+    },
+    {
+      "id": "mcq-001-05-014",
+      "question": "Which tag is used to create a line break in HTML?",
+      "options": ["`<break>`", "`<br>`", "`<lb>`", "`<newline>`"],
+      "correct_answer": 2,
+      "explanation": "The `<br>` tag is used to insert a line break."
+    },
+    {
+      "id": "mcq-001-05-015",
+      "question": "Which tag is used to create a horizontal rule in HTML?",
+      "options": ["`<hr>`", "`<line>`", "`<horizontal>`", "`<rule>`"],
+      "correct_answer": 1,
+      "explanation": "The `<hr>` tag is used to create horizontal lines on an HTML page."
+    },
+    {
+      "id": "mcq-001-05-016",
+      "question": "What is the purpose of the `<title>` tag in HTML?",
+      "options": [
+        "To display a heading on the web page",
+        "To specify the title of the document shown in the browser tab",
+        "To create a tooltip for an image",
+        "To highlight text"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `<title>` tag sets the text shown in the browser's title bar or tab."
+    },
+    {
+      "id": "mcq-001-05-017",
+      "question": "Which tag is used to define the main content of the HTML document?",
+      "options": [
+        "`<main>`",
+        "`<body>`",
+        "`<content>`",
+        "Both `<main>` and `<body>`"
+      ],
+      "correct_answer": 4,
+      "explanation": "The `<body>` contains the main content, and `<main>` is a semantic element for the central content area."
+    },
+    {
+      "id": "mcq-001-05-018",
+      "question": "Which tag is used to define a list item?",
+      "options": ["`<ul>`", "`<li>`", "`<ol>`", "`<item>`"],
+      "correct_answer": 2,
+      "explanation": "The `<li>` tag defines a list item in both ordered and unordered lists."
+    },
+    {
+      "id": "mcq-001-05-019",
+      "question": "Which tag is used to define a table row?",
+      "options": ["`<row>`", "`<td>`", "`<tr>`", "`<table>`"],
+      "correct_answer": 3,
+      "explanation": "The `<tr>` tag is used to define a row in a table."
+    },
+    {
+      "id": "mcq-001-05-020",
+      "question": "Which tag is used to define a heading in HTML?",
+      "options": ["`<heading>`", "`<h1>`", "`<title>`", "`<head>`"],
+      "correct_answer": 2,
+      "explanation": "HTML provides six heading tags: `<h1>` to `<h6>`, with `<h1>` being the most important."
+    }
+  ]
+}

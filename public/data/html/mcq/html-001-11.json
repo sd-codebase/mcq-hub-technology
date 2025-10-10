@@ -1,0 +1,179 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-11-001",
+      "question": "Which of the following is a block-level element in HTML?",
+      "options": ["`<span>`", "`<div>`", "`<img>`", "`<a>`"],
+      "correct_answer": 2,
+      "explanation": "`<div>` is a block-level element, while `<span>`, `<img>`, and `<a>` are inline elements."
+    },
+    {
+      "id": "mcq-001-11-002",
+      "question": "Which element is inline by default?",
+      "options": ["`<section>`", "`<header>`", "`<span>`", "`<article>`"],
+      "correct_answer": 3,
+      "explanation": "`<span>` is an inline element."
+    },
+    {
+      "id": "mcq-001-11-003",
+      "question": "What happens when you place an inline element inside a block-level element?",
+      "options": [
+        "The browser throws an error",
+        "It is not allowed in HTML",
+        "It is valid and renders normally",
+        "It will convert the block element to inline"
+      ],
+      "correct_answer": 3,
+      "explanation": "It is valid to nest inline elements inside block-level elements."
+    },
+    {
+      "id": "mcq-001-11-004",
+      "question": "Which of these is NOT a block-level element?",
+      "options": ["`<p>`", "`<h1>`", "`<div>`", "`<em>`"],
+      "correct_answer": 4,
+      "explanation": "`<em>` is an inline element."
+    },
+    {
+      "id": "mcq-001-11-005",
+      "question": "Which block-level element is used to group HTML elements together?",
+      "options": ["`<section>`", "`<div>`", "`<span>`", "`<strong>`"],
+      "correct_answer": 2,
+      "explanation": "`<div>` is commonly used as a generic container for grouping elements."
+    },
+    {
+      "id": "mcq-001-11-006",
+      "question": "Which tag is used for grouping inline elements?",
+      "options": ["`<span>`", "`<ul>`", "`<div>`", "`<ol>`"],
+      "correct_answer": 1,
+      "explanation": "`<span>` is used to group inline elements."
+    },
+    {
+      "id": "mcq-001-11-007",
+      "question": "How is the display property related to block and inline elements?",
+      "options": [
+        "It has no effect",
+        "It can change an element from block to inline and vice versa",
+        "It only affects block elements",
+        "It is only for CSS"
+      ],
+      "correct_answer": 2,
+      "explanation": "You can use CSS `display` to change whether an element is block or inline."
+    },
+    {
+      "id": "mcq-001-11-008",
+      "question": "If a block-level element is placed inside an inline element, what usually happens?",
+      "options": [
+        "It is always rendered correctly",
+        "It may cause unexpected layout or validation errors",
+        "It is recommended by HTML standards",
+        "The inline element will be ignored"
+      ],
+      "correct_answer": 2,
+      "explanation": "This is invalid in HTML and may cause layout issues."
+    },
+    {
+      "id": "mcq-001-11-009",
+      "question": "Which element is always rendered on a new line?",
+      "options": ["`<span>`", "`<b>`", "`<div>`", "`<i>`"],
+      "correct_answer": 3,
+      "explanation": "`<div>` is a block-level element and always starts on a new line."
+    },
+    {
+      "id": "mcq-001-11-010",
+      "question": "Which of the following is TRUE about inline elements?",
+      "options": [
+        "They always start on a new line",
+        "They take up as much width as possible",
+        "They take up only as much width as necessary",
+        "They cannot be nested"
+      ],
+      "correct_answer": 3,
+      "explanation": "Inline elements only take up as much width as their content requires."
+    },
+    {
+      "id": "mcq-001-11-011",
+      "question": "Which of the following is a valid block-level element?",
+      "options": ["`<cite>`", "`<nav>`", "`<mark>`", "`<abbr>`"],
+      "correct_answer": 2,
+      "explanation": "`<nav>` is a block-level element."
+    },
+    {
+      "id": "mcq-001-11-012",
+      "question": "Which of the following is an inline element?",
+      "options": ["`<article>`", "`<aside>`", "`<code>`", "`<header>`"],
+      "correct_answer": 3,
+      "explanation": "`<code>` is an inline element."
+    },
+    {
+      "id": "mcq-001-11-013",
+      "question": "Which is a block-level element that represents a section of content?",
+      "options": ["`<aside>`", "`<span>`", "`<b>`", "`<i>`"],
+      "correct_answer": 1,
+      "explanation": "`<aside>` is a block-level element used for side content."
+    },
+    {
+      "id": "mcq-001-11-014",
+      "question": "What is the default display value for `<div>`?",
+      "options": ["`inline`", "`block`", "`inline-block`", "`none`"],
+      "correct_answer": 2,
+      "explanation": "`<div>` is rendered as a block element by default."
+    },
+    {
+      "id": "mcq-001-11-015",
+      "question": "Which inline element is used for emphasized text?",
+      "options": ["`<strong>`", "`<b>`", "`<em>`", "`<h1>`"],
+      "correct_answer": 3,
+      "explanation": "`<em>` is used for emphasized inline text."
+    },
+    {
+      "id": "mcq-001-11-016",
+      "question": "How do block-level elements generally behave?",
+      "options": [
+        "They only take as much width as their content",
+        "They stack vertically and take full available width",
+        "They cannot contain other elements",
+        "They are always centered"
+      ],
+      "correct_answer": 2,
+      "explanation": "Block-level elements stack vertically and take up the full width."
+    },
+    {
+      "id": "mcq-001-11-017",
+      "question": "Which of the following is NOT an inline element?",
+      "options": ["`<span>`", "`<a>`", "`<img>`", "`<section>`"],
+      "correct_answer": 4,
+      "explanation": "`<section>` is a block-level element."
+    },
+    {
+      "id": "mcq-001-11-018",
+      "question": "Can you change an element from block to inline using CSS?",
+      "options": [
+        "No, only HTML defines this",
+        "Yes, using the `display` property",
+        "No, only JavaScript can do this",
+        "Yes, using the `block` attribute"
+      ],
+      "correct_answer": 2,
+      "explanation": "The CSS `display` property can change an element's display type."
+    },
+    {
+      "id": "mcq-001-11-019",
+      "question": "Which element is best for marking up a short phrase within a paragraph?",
+      "options": ["`<div>`", "`<section>`", "`<span>`", "`<ul>`"],
+      "correct_answer": 3,
+      "explanation": "`<span>` is ideal for marking short phrases inline within text."
+    },
+    {
+      "id": "mcq-001-11-020",
+      "question": "Which of the following statements about block and inline elements is TRUE?",
+      "options": [
+        "All HTML elements are block-level",
+        "Block elements can contain inline elements",
+        "Inline elements can contain block elements",
+        "Inline elements always start on a new line"
+      ],
+      "correct_answer": 2,
+      "explanation": "Block-level elements can contain inline elements, but not vice versa."
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-01-001",
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyper Trainer Marking Language",
+        "Hyper Text Markup Language",
+        "Hyper Text Markdown Language",
+        "Home Tool Markup Language"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML stands for Hyper Text Markup Language, which is used to structure web pages."
+    },
+    {
+      "id": "mcq-001-01-002",
+      "question": "What is the main purpose of HTML?",
+      "options": [
+        "Add interactivity to web pages",
+        "Apply styles to web content",
+        "Structure the content of web pages",
+        "Store data on the server"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML is used to structure the content of web pages."
+    },
+    {
+      "id": "mcq-001-01-003",
+      "question": "Which of the following best describes HTML?",
+      "options": [
+        "A programming language",
+        "A markup language",
+        "A database language",
+        "A scripting language"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML is a markup language, not a programming or scripting language."
+    },
+    {
+      "id": "mcq-001-01-004",
+      "question": "Which of the following is the correct file extension for HTML files?",
+      "options": [".htm", ".html", ".xml", "Both .htm and .html"],
+      "correct_answer": 4,
+      "explanation": "HTML files commonly use .html or .htm extensions."
+    },
+    {
+      "id": "mcq-001-01-005",
+      "question": "Which of these statements is TRUE about HTML?",
+      "options": [
+        "HTML is case sensitive",
+        "HTML uses tags to structure content",
+        "HTML can directly access databases",
+        "HTML requires a compiler"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML uses tags to structure content."
+    },
+    {
+      "id": "mcq-001-01-006",
+      "question": "HTML is considered to be the _______ of a website.",
+      "options": ["Brain", "Skeleton", "Muscle", "Skin"],
+      "correct_answer": 2,
+      "explanation": "HTML provides the basic structure, like the skeleton of a body."
+    },
+    {
+      "id": "mcq-001-01-007",
+      "question": "Which type of language is HTML?",
+      "options": ["Procedural", "Markup", "Object-oriented", "Functional"],
+      "correct_answer": 2,
+      "explanation": "HTML is a markup language."
+    },
+    {
+      "id": "mcq-001-01-008",
+      "question": "HTML is read and rendered by which kind of software?",
+      "options": [
+        "Word Processors",
+        "Web Browsers",
+        "Compilers",
+        "Database Management Systems"
+      ],
+      "correct_answer": 2,
+      "explanation": "Web browsers read and render HTML."
+    },
+    {
+      "id": "mcq-001-01-009",
+      "question": "Which part of a web page does HTML NOT directly control?",
+      "options": ["Structure", "Content", "Styling", "Text"],
+      "correct_answer": 3,
+      "explanation": "Styling is typically controlled by CSS, not HTML."
+    },
+    {
+      "id": "mcq-001-01-010",
+      "question": "Who is considered the inventor of HTML?",
+      "options": [
+        "Bill Gates",
+        "Tim Berners-Lee",
+        "James Gosling",
+        "Brendan Eich"
+      ],
+      "correct_answer": 2,
+      "explanation": "Tim Berners-Lee invented HTML in 1991."
+    },
+    {
+      "id": "mcq-001-01-011",
+      "question": "Which of the following is NOT a feature of HTML?",
+      "options": [
+        "Defines headings and paragraphs",
+        "Handles user events",
+        "Creates hyperlinks",
+        "Embeds images"
+      ],
+      "correct_answer": 2,
+      "explanation": "Handling user events is a feature of JavaScript, not HTML."
+    },
+    {
+      "id": "mcq-001-01-012",
+      "question": "HTML documents are made up of _______.",
+      "options": ["Scripts", "Tags and Attributes", "Functions", "Variables"],
+      "correct_answer": 2,
+      "explanation": "HTML documents consist of tags and attributes."
+    },
+    {
+      "id": "mcq-001-01-013",
+      "question": "Which of the following is the correct way to start an HTML document?",
+      "options": ["`<html>`", "`<!DOCTYPE html>`", "`<body>`", "`<head>`"],
+      "correct_answer": 2,
+      "explanation": "Every HTML document should start with the <!DOCTYPE html> declaration."
+    },
+    {
+      "id": "mcq-001-01-014",
+      "question": "What is the output of an HTML file?",
+      "options": [
+        "A web page",
+        "A database",
+        "A compiled program",
+        "A spreadsheet"
+      ],
+      "correct_answer": 1,
+      "explanation": "HTML files result in web pages when rendered by browsers."
+    },
+    {
+      "id": "mcq-001-01-015",
+      "question": "Which of the following statements is FALSE about HTML?",
+      "options": [
+        "HTML can include images and videos",
+        "HTML can add interactivity to web pages",
+        "HTML structures web content",
+        "HTML is interpreted by browsers"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML by itself does not add interactivity; JavaScript does."
+    },
+    {
+      "id": "mcq-001-01-016",
+      "question": "HTML elements are enclosed within _______.",
+      "options": ["()", "[]", "<>", "{}"],
+      "correct_answer": 3,
+      "explanation": "HTML elements are enclosed within angle brackets."
+    },
+    {
+      "id": "mcq-001-01-017",
+      "question": "What is an HTML tag?",
+      "options": [
+        "A JavaScript function",
+        "A keyword used to define content",
+        "A CSS selector",
+        "A database field"
+      ],
+      "correct_answer": 2,
+      "explanation": "An HTML tag is a keyword in angle brackets used to define content."
+    },
+    {
+      "id": "mcq-001-01-018",
+      "question": "Which of these is a valid HTML comment?",
+      "options": [
+        "`// This is a comment`",
+        "`# This is a comment`",
+        "`<!-- This is a comment -->`",
+        "`/* This is a comment */`"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML comments are written as <!-- comment -->."
+    },
+    {
+      "id": "mcq-001-01-019",
+      "question": "Which version of HTML is considered the current standard (as of 2024)?",
+      "options": ["HTML 4.01", "XHTML", "HTML5/Living Standard", "SGML"],
+      "correct_answer": 3,
+      "explanation": "HTML5, now a living standard, is the current standard."
+    },
+    {
+      "id": "mcq-001-01-020",
+      "question": "Can HTML be used to create mobile-friendly web pages?",
+      "options": [
+        "Yes, with responsive design",
+        "No, only CSS can do that",
+        "Only with JavaScript",
+        "Only with Flash"
+      ],
+      "correct_answer": 1,
+      "explanation": "HTML, combined with responsive design techniques, supports mobile-friendly pages."
+    }
+  ]
+}

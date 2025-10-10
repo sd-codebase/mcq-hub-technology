@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-03-001",
+      "question": "What is the purpose of the `<body>` tag in an HTML document?",
+      "answer": "The `<body>` tag contains all the visible content of a web page, such as text, images, links, tables, lists, and forms.",
+      "explanation": "Everything you see rendered in the browser window is inside the `<body>` tag. Only one `<body>` element is allowed per HTML document."
+    },
+    {
+      "id": "interview-001-03-002",
+      "question": "How do you structure headings in the body of an HTML page?",
+      "answer": "Use heading tags `<h1>` to `<h6>` to define headings, with `<h1>` being the highest level and `<h6>` the lowest.\n\n```html\n<h1>Main Title</h1>\n<h2>Section</h2>\n<h3>Subsection</h3>\n```",
+      "explanation": "Headings help organize content and improve accessibility and SEO."
+    },
+    {
+      "id": "interview-001-03-003",
+      "question": "How do you create paragraphs and line breaks in the HTML body?",
+      "answer": "Use the `<p>` tag for paragraphs and the `<br>` tag for line breaks.\n\n```html\n<p>This is a paragraph.</p>\nThis is a line.<br>This is another line.\n```",
+      "explanation": "Paragraphs are block-level, while `<br>` creates an inline line break."
+    },
+    {
+      "id": "interview-001-03-004",
+      "question": "How do you display images in the HTML body?",
+      "answer": "Use the `<img>` tag with the `src` and `alt` attributes:\n\n```html\n<img src=\"logo.png\" alt=\"Company Logo\">\n```",
+      "explanation": "`<img>` is a self-closing tag. Always include `alt` for accessibility."
+    },
+    {
+      "id": "interview-001-03-005",
+      "question": "How do you add links to other pages or websites in the body?",
+      "answer": "Use the `<a>` tag with the `href` attribute:\n\n```html\n<a href=\"https://example.com\">Visit Example</a>\n```",
+      "explanation": "The linked text becomes clickable and navigates to the URL in `href`."
+    },
+    {
+      "id": "interview-001-03-006",
+      "question": "How do you create bulleted and numbered lists in the body?",
+      "answer": "Use `<ul>` for unordered (bulleted) lists and `<ol>` for ordered (numbered) lists. Each item goes in an `<li>` tag.\n\n```html\n<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>\n<ol>\n  <li>First</li>\n  <li>Second</li>\n</ol>\n```",
+      "explanation": "Lists help organize related items and improve readability."
+    },
+    {
+      "id": "interview-001-03-007",
+      "question": "How do you display tables in the HTML body?",
+      "answer": "Use the `<table>` tag, with rows defined by `<tr>`, headers by `<th>`, and cells by `<td>`:\n\n```html\n<table>\n  <tr><th>Name</th><th>Age</th></tr>\n  <tr><td>Alice</td><td>30</td></tr>\n</table>\n```",
+      "explanation": "Tables are used for tabular data, not for layout."
+    },
+    {
+      "id": "interview-001-03-008",
+      "question": "How do you include forms for user input in the body?",
+      "answer": "Use the `<form>` tag with various input elements:\n\n```html\n<form>\n  <label>Name: <input type=\"text\" name=\"username\"></label>\n  <input type=\"submit\" value=\"Submit\">\n</form>\n```",
+      "explanation": "Forms allow users to send data to a server."
+    },
+    {
+      "id": "interview-001-03-009",
+      "question": "How do you add multimedia elements (audio/video) to an HTML body?",
+      "answer": "Use the `<audio>` and `<video>` tags:\n\n```html\n<audio controls>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n</audio>\n<video controls width=\"320\" height=\"240\">\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>\n```",
+      "explanation": "The `controls` attribute adds play/pause buttons for users."
+    },
+    {
+      "id": "interview-001-03-010",
+      "question": "How do you organize page sections or group content for layout inside the body?",
+      "answer": "Use semantic tags like `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, and `<footer>` to group and organize content.",
+      "explanation": "Semantic tags improve accessibility, SEO, and code readability by clearly describing the purpose of each section."
+    }
+  ]
+}

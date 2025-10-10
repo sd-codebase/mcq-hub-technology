@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-16-001",
+      "question": "What is the purpose of the <script> tag in HTML?",
+      "answer": "The <script> tag is used to embed or reference executable JavaScript code within an HTML document. Scripts can be placed in the <head> or <body> sections.",
+      "explanation": "JavaScript code inside <script> tags is executed by the browser to provide interactivity and dynamic behavior."
+    },
+    {
+      "id": "interview-001-16-002",
+      "question": "How do you include an external JavaScript file in an HTML document?",
+      "answer": "Use the src attribute of the <script> tag:\n```html\n<script src=\"app.js\"></script>\n```",
+      "explanation": "This loads and executes the external JavaScript file. The script will run as if it were included in the HTML."
+    },
+    {
+      "id": "interview-001-16-003",
+      "question": "What is the difference between placing <script> in the <head> and at the end of <body>?",
+      "answer": "Placing <script> in the <head> can block page rendering until the script loads, while placing it at the end of <body> ensures the HTML content loads first, improving performance.",
+      "explanation": "For best performance, scripts that manipulate the DOM are often placed just before </body>."
+    },
+    {
+      "id": "interview-001-16-004",
+      "question": "What do the 'defer' and 'async' attributes do on <script> tags?",
+      "answer": "`defer` makes the script execute after the document has been parsed. `async` makes the script download and execute as soon as possible, without waiting for HTML parsing to finish.",
+      "explanation": "`defer` ensures scripts run in order after parsing; `async` runs scripts as soon as they load, possibly out of order."
+    },
+    {
+      "id": "interview-001-16-005",
+      "question": "How do you write an inline script in HTML?",
+      "answer": "Place JavaScript code directly inside <script> tags:\n```html\n<script>\n  alert('Hello!');\n</script>\n```",
+      "explanation": "This code is executed immediately when the parser reaches the <script> tag."
+    },
+    {
+      "id": "interview-001-16-006",
+      "question": "Can you have multiple <script> tags in a single HTML document?",
+      "answer": "Yes, you can include multiple <script> tags throughout the document. They will execute in the order they appear (unless async is used).",
+      "explanation": "This allows you to organize code or load scripts from different sources."
+    },
+    {
+      "id": "interview-001-16-007",
+      "question": "How do you comment code inside a <script> tag?",
+      "answer": "Use JavaScript comment syntax:\n- Single-line: // comment\n- Multi-line: /* comment */",
+      "explanation": "HTML comment syntax <!-- --> does not work inside <script> tags."
+    },
+    {
+      "id": "interview-001-16-008",
+      "question": "What happens if a <script src=\"...\"></script> tag is missing the src file?",
+      "answer": "If the file cannot be found, the browser throws a network error and the script does not execute. The rest of the page loads normally.",
+      "explanation": "Check browser DevTools for errors if scripts fail to load."
+    },
+    {
+      "id": "interview-001-16-009",
+      "question": "How do you prevent a script from executing until the page is fully loaded?",
+      "answer": "Wrap your code in a DOMContentLoaded event listener:\n```javascript\ndocument.addEventListener('DOMContentLoaded', function() {\n  // code here\n});\n```",
+      "explanation": "This ensures the code runs only after the document is fully parsed."
+    },
+    {
+      "id": "interview-001-16-010",
+      "question": "Is it possible to have both inline and external JavaScript on the same page?",
+      "answer": "Yes, you can use both inline <script> tags and external scripts within the same HTML document.",
+      "explanation": "This allows for flexible organization of JavaScript code and functionality."
+    }
+  ]
+}

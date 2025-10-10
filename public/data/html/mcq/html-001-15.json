@@ -1,0 +1,214 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-15-001",
+      "question": "What is a key difference between HTML and XML?",
+      "options": [
+        "HTML is stricter than XML",
+        "XML is used for web pages, HTML is not",
+        "HTML defines presentation, XML defines data",
+        "HTML requires closing tags for all elements"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML is for presentation/structure; XML is for data representation."
+    },
+    {
+      "id": "mcq-001-15-002",
+      "question": "Which of the following is TRUE about XML?",
+      "options": [
+        "XML tags are pre-defined like HTML",
+        "XML allows you to create custom tags",
+        "XML is only used in browsers",
+        "XML cannot be validated"
+      ],
+      "correct_answer": 2,
+      "explanation": "You can create your own custom tags in XML, but HTML tags are predefined."
+    },
+    {
+      "id": "mcq-001-15-003",
+      "question": "Which is more tolerant of errors, HTML or XML?",
+      "options": ["HTML", "XML", "Both are equally tolerant", "Neither"],
+      "correct_answer": 1,
+      "explanation": "HTML is more forgiving of syntax errors; XML is strict about syntax."
+    },
+    {
+      "id": "mcq-001-15-004",
+      "question": "Which of the following statements about XML is FALSE?",
+      "options": [
+        "XML can store and transport data",
+        "XML is case sensitive",
+        "XML tags must be properly nested",
+        "XML is used for styling web pages"
+      ],
+      "correct_answer": 4,
+      "explanation": "XML is not used for styling; it is used for data transport and storage."
+    },
+    {
+      "id": "mcq-001-15-005",
+      "question": "Which statement is TRUE regarding HTML?",
+      "options": [
+        "HTML can use custom tags defined by the user",
+        "HTML is case sensitive",
+        "HTML is not suitable for data storage",
+        "HTML can only be parsed by XML parsers"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML is not suitable for data storage; it is mainly for structuring content."
+    },
+    {
+      "id": "mcq-001-15-006",
+      "question": "Which of the following is a valid XML tag?",
+      "options": ["`<div>`", "`<customTag>`", "`<html>`", "`<body>`"],
+      "correct_answer": 2,
+      "explanation": "You can define custom tags like `<customTag>` in XML."
+    },
+    {
+      "id": "mcq-001-15-007",
+      "question": "What must all XML documents have?",
+      "options": [
+        "A root element",
+        "A `<body>` tag",
+        "A `<head>` tag",
+        "A DOCTYPE declaration"
+      ],
+      "correct_answer": 1,
+      "explanation": "All XML documents must have a single root element."
+    },
+    {
+      "id": "mcq-001-15-008",
+      "question": "Which of the following is NOT a requirement in XML?",
+      "options": [
+        "Proper nesting of elements",
+        "Closing all tags",
+        "Case sensitivity",
+        "Predefined tags"
+      ],
+      "correct_answer": 4,
+      "explanation": "XML does not have predefined tags; you define your own."
+    },
+    {
+      "id": "mcq-001-15-009",
+      "question": "Which of these is an example of an HTML void element?",
+      "options": ["`<div>`", "`<span>`", "`<img>`", "`<section>`"],
+      "correct_answer": 3,
+      "explanation": "`<img>` is a void (self-closing) element in HTML."
+    },
+    {
+      "id": "mcq-001-15-010",
+      "question": "What is the file extension for standard XML documents?",
+      "options": [".xml", ".html", ".xhtml", ".xm"],
+      "correct_answer": 1,
+      "explanation": "XML documents typically use the `.xml` extension."
+    },
+    {
+      "id": "mcq-001-15-011",
+      "question": "Which of the following is a primary use of XML?",
+      "options": [
+        "Structuring web pages",
+        "Styling web pages",
+        "Transporting data",
+        "Displaying images"
+      ],
+      "correct_answer": 3,
+      "explanation": "XML is mainly used to transport and store data."
+    },
+    {
+      "id": "mcq-001-15-012",
+      "question": "Which tag is valid in HTML but not in XML?",
+      "options": ["`<img>`", "`<custom>`", "`<tag>`", "`<element>`"],
+      "correct_answer": 1,
+      "explanation": "`<img>` is valid in HTML as a void element, but in XML it must be self-closed as `<img />`."
+    },
+    {
+      "id": "mcq-001-15-013",
+      "question": "How does an XML parser handle a missing closing tag?",
+      "options": [
+        "It ignores it",
+        "It tries to fix the error",
+        "It throws an error",
+        "It renders the content anyway"
+      ],
+      "correct_answer": 3,
+      "explanation": "XML parsers require all tags to be properly closed and will throw an error if not."
+    },
+    {
+      "id": "mcq-001-15-014",
+      "question": "Which declaration is recommended at the top of an XML file?",
+      "options": [
+        "`<!DOCTYPE html>`",
+        "`<?xml version=\"1.0\" encoding=\"UTF-8\"?>`",
+        "`<!-- XML File -->`",
+        "`<xml>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "XML files typically start with `<?xml version=\"1.0\" encoding=\"UTF-8\"?>`."
+    },
+    {
+      "id": "mcq-001-15-015",
+      "question": "Which of these is NOT a valid use of XML?",
+      "options": [
+        "RSS feeds",
+        "Configuration files",
+        "Web page structure",
+        "Data interchange"
+      ],
+      "correct_answer": 3,
+      "explanation": "Web page structure is the domain of HTML, not XML."
+    },
+    {
+      "id": "mcq-001-15-016",
+      "question": "Which of the following statements is TRUE?",
+      "options": [
+        "HTML is case sensitive",
+        "XML is not case sensitive",
+        "XML allows custom tags",
+        "HTML can transport data like XML"
+      ],
+      "correct_answer": 3,
+      "explanation": "XML allows you to create your own custom tags."
+    },
+    {
+      "id": "mcq-001-15-017",
+      "question": "Which of the following is NOT a difference between HTML and XML?",
+      "options": [
+        "HTML is for presentation, XML is for data",
+        "HTML tags are predefined, XML tags are user-defined",
+        "HTML and XML are both case sensitive",
+        "HTML is more error tolerant than XML"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML is not case sensitive, but XML is."
+    },
+    {
+      "id": "mcq-001-15-018",
+      "question": "Which of these is NOT required in HTML but is required in XML?",
+      "options": [
+        "Attributes must have values in quotes",
+        "Tags must be closed",
+        "A root element",
+        "Predefined tags"
+      ],
+      "correct_answer": 4,
+      "explanation": "Predefined tags are only required in HTML, not XML."
+    },
+    {
+      "id": "mcq-001-15-019",
+      "question": "Which of the following is used to style HTML content?",
+      "options": ["XML", "CSS", "XSL", "JavaScript"],
+      "correct_answer": 2,
+      "explanation": "CSS is used to style HTML. XSL can be used to transform or render XML."
+    },
+    {
+      "id": "mcq-001-15-020",
+      "question": "Which is a valid use case for XML?",
+      "options": [
+        "Defining HTML structure",
+        "Applying CSS styles",
+        "Transferring data between systems",
+        "Adding interactivity to web pages"
+      ],
+      "correct_answer": 3,
+      "explanation": "XML is used for transferring and storing data, not for styling or interactivity."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-17-001",
+      "question": "What are HTML forms and what are they used for?",
+      "answer": "HTML forms are sections of a web page that allow users to input data, which can then be sent to a server for processing. Forms are used for tasks like login, registration, search, feedback, and more.",
+      "explanation": "Forms use elements like `<input>`, `<textarea>`, `<select>`, and `<button>` to collect user input."
+    },
+    {
+      "id": "interview-001-17-002",
+      "question": "How do you create a basic HTML form?",
+      "answer": "Use the `<form>` element with input fields and a submit button:\n```html\n<form action=\"/submit\" method=\"post\">\n  <input type=\"text\" name=\"username\">\n  <input type=\"submit\" value=\"Submit\">\n</form>\n```",
+      "explanation": "The `action` attribute specifies where to send the form data, and `method` specifies how to send it (GET or POST)."
+    },
+    {
+      "id": "interview-001-17-003",
+      "question": "What is the difference between 'GET' and 'POST' methods in a form?",
+      "answer": "`GET` appends form data to the URL (visible in the address bar), while `POST` sends data in the request body (not visible in the URL).",
+      "explanation": "`GET` is used for retrieving data (queries), `POST` is used for sending sensitive or large amounts of data (e.g., login forms)."
+    },
+    {
+      "id": "interview-001-17-004",
+      "question": "How do you group related fields in a form?",
+      "answer": "Use the `<fieldset>` and `<legend>` elements:\n```html\n<fieldset>\n  <legend>Account Info</legend>\n  <input type=\"text\" name=\"username\">\n</fieldset>\n```",
+      "explanation": "`<fieldset>` groups related inputs, and `<legend>` provides a caption."
+    },
+    {
+      "id": "interview-001-17-005",
+      "question": "List and describe different types of `<input>` elements.",
+      "answer": "- `text`: Single-line text\n- `password`: Hidden characters for sensitive info\n- `email`: Validates email input\n- `number`: Numeric input\n- `checkbox`: On/off switch\n- `radio`: Select one from a group\n- `file`: File upload\n- `submit`: Submit form",
+      "explanation": "Each `type` provides a different input control suited to a particular kind of data."
+    },
+    {
+      "id": "interview-001-17-006",
+      "question": "How do you make a form input required?",
+      "answer": "Add the `required` attribute to the input element:\n```html\n<input type=\"text\" name=\"name\" required>\n```",
+      "explanation": "The browser will prevent form submission until the required field is filled."
+    },
+    {
+      "id": "interview-001-17-007",
+      "question": "How do you create a drop-down list in an HTML form?",
+      "answer": "Use the `<select>` and `<option>` elements:\n```html\n<select name=\"country\">\n  <option value=\"us\">USA</option>\n  <option value=\"ca\">Canada</option>\n</select>\n```",
+      "explanation": "The user can select one (or multiple, with `multiple` attribute) options."
+    },
+    {
+      "id": "interview-001-17-008",
+      "question": "How do you handle multi-line text input in a form?",
+      "answer": "Use the `<textarea>` element:\n```html\n<textarea name=\"message\" rows=\"4\" cols=\"30\"></textarea>\n```",
+      "explanation": "`<textarea>` allows users to enter multi-line text."
+    },
+    {
+      "id": "interview-001-17-009",
+      "question": "What is the purpose of the `label` element in forms?",
+      "answer": "The `<label>` element associates a text description with a form control. Clicking the label focuses or toggles the corresponding input.",
+      "explanation": "Use the `for` attribute to bind the label to an input, e.g., `<label for=\"email\">Email</label><input id=\"email\">`."
+    },
+    {
+      "id": "interview-001-17-010",
+      "question": "How do you disable a form input?",
+      "answer": "Add the `disabled` attribute to the input element:\n```html\n<input type=\"text\" disabled>\n```",
+      "explanation": "Disabled inputs cannot be interacted with or submitted."
+    }
+  ]
+}

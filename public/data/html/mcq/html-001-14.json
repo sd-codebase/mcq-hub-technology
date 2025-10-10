@@ -1,0 +1,244 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-14-001",
+      "question": "Which symbol is used for the copyright entity in HTML?",
+      "options": [
+        "`&copyright;`",
+        "`&cr;`",
+        "`&copy;`",
+        "`&cp;`"
+      ],
+      "correct_answer": 3,
+      "explanation": "The correct entity for copyright is `&copy;`."
+    },
+    {
+      "id": "mcq-001-14-002",
+      "question": "How do you write the less-than symbol (`<`) in HTML without it being interpreted as a tag?",
+      "options": [
+        "`&lt;`",
+        "`&less;`",
+        "`&ltg;`",
+        "`&lessthan;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `&lt;` entity displays the less-than symbol."
+    },
+    {
+      "id": "mcq-001-14-003",
+      "question": "Which entity would you use to display an ampersand (`&`) in HTML?",
+      "options": [
+        "`&amp;`",
+        "`&and;`",
+        "`&a;`",
+        "`&ampersand;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`&amp;` is the correct way to display an ampersand in HTML."
+    },
+    {
+      "id": "mcq-001-14-004",
+      "question": "What is the entity for a non-breaking space in HTML?",
+      "options": [
+        "`&space;`",
+        "`&nbsp;`",
+        "`&nbs;`",
+        "`&sp;`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`&nbsp;` is used for a non-breaking space."
+    },
+    {
+      "id": "mcq-001-14-005",
+      "question": "How would you display the greater-than symbol (`>`) in HTML?",
+      "options": [
+        "`&gt;`",
+        "`&greater;`",
+        "`&gtg;`",
+        "`&grt;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `&gt;` entity displays the greater-than symbol."
+    },
+    {
+      "id": "mcq-001-14-006",
+      "question": "Which of the following entities represents the registered trademark symbol?",
+      "options": [
+        "`&trd;`",
+        "`&reg;`",
+        "`&tm;`",
+        "`&rtr;`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`&reg;` displays the registered trademark symbol (®)."
+    },
+    {
+      "id": "mcq-001-14-007",
+      "question": "Which HTML entity is used for the Euro currency symbol (€)?",
+      "options": [
+        "`&euro;`",
+        "`&eu;`",
+        "`&eur;`",
+        "`&euros;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`&euro;` displays the Euro sign."
+    },
+    {
+      "id": "mcq-001-14-008",
+      "question": "To show a double quotation mark (`\"`) in HTML, which entity is correct?",
+      "options": [
+        "`&dq;`",
+        "`&quot;`",
+        "`&doubleq;`",
+        "`&dquot;`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`&quot;` is the right entity for a double quote."
+    },
+    {
+      "id": "mcq-001-14-009",
+      "question": "Which entity is used for a less common symbol such as the cent sign (¢)?",
+      "options": [
+        "`&cent;`",
+        "`&cnt;`",
+        "`&cents;`",
+        "`&centis;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`&cent;` displays the cent sign."
+    },
+    {
+      "id": "mcq-001-14-010",
+      "question": "If you want to show an apostrophe (`'`) in HTML, which entity can you use?",
+      "options": [
+        "`&apos;`",
+        "`&apo;`",
+        "`&quote;`",
+        "`&ap;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`&apos;` is the correct entity for an apostrophe."
+    },
+    {
+      "id": "mcq-001-14-011",
+      "question": "What does the entity `&mdash;` produce in HTML?",
+      "options": [
+        "An em dash (—)",
+        "A minus sign",
+        "A multiplication sign",
+        "A hyphen"
+      ],
+      "correct_answer": 1,
+      "explanation": "`&mdash;` produces an em dash (—)."
+    },
+    {
+      "id": "mcq-001-14-012",
+      "question": "Which of the following is the entity for the trademark symbol (™)?",
+      "options": [
+        "`&tm;`",
+        "`&trade;`",
+        "`&trademark;`",
+        "`&mark;`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`&trade;` is the correct entity for the trademark symbol."
+    },
+    {
+      "id": "mcq-001-14-013",
+      "question": "Which entity would you use for a copyright year like © 2025?",
+      "options": [
+        "`&copy; 2025`",
+        "`&copyright; 2025`",
+        "`© 2025`",
+        "All of the above"
+      ],
+      "correct_answer": 4,
+      "explanation": "All options will display © 2025, but `&copy; 2025` is standard and cross-browser safe."
+    },
+    {
+      "id": "mcq-001-14-014",
+      "question": "What is the purpose of using HTML entities?",
+      "options": [
+        "To increase page speed",
+        "To display reserved or special characters",
+        "To add JavaScript functionality",
+        "To define CSS rules"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML entities allow you to display reserved or special characters."
+    },
+    {
+      "id": "mcq-001-14-015",
+      "question": "Which entity is used for the multiplication sign (×)?",
+      "options": [
+        "`&x;`",
+        "`&times;`",
+        "`&mult;`",
+        "`&mul;`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`&times;` displays the multiplication sign."
+    },
+    {
+      "id": "mcq-001-14-016",
+      "question": "How do you display the British Pound symbol (£) in HTML?",
+      "options": [
+        "`&pound;`",
+        "`&lb;`",
+        "`&pd;`",
+        "`&sterling;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`&pound;` is the entity for the British Pound."
+    },
+    {
+      "id": "mcq-001-14-017",
+      "question": "Which of the following entities produces a single left angle quote («)?",
+      "options": [
+        "`&laquo;`",
+        "`&lsaquo;`",
+        "`&lt;`",
+        "`&lang;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`&laquo;` is the entity for the left-pointing double angle quotation mark («)."
+    },
+    {
+      "id": "mcq-001-14-018",
+      "question": "What is the correct entity for the degree symbol (°)?",
+      "options": [
+        "`&deg;`",
+        "`&degree;`",
+        "`&dg;`",
+        "`&degr;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`&deg;` is used to display a degree symbol."
+    },
+    {
+      "id": "mcq-001-14-019",
+      "question": "Which entity is used for the single right quotation mark (’)?",
+      "options": [
+        "`&rsquo;`",
+        "`&rquo;`",
+        "`&squote;`",
+        "`&apos;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`&rsquo;` is the right single quotation mark."
+    },
+    {
+      "id": "mcq-001-14-020",
+      "question": "How do you show the section symbol (§) in HTML?",
+      "options": [
+        "`&sect;`",
+        "`&section;`",
+        "`&sec;`",
+        "`&sgn;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`&sect;` displays the section symbol."
+    }
+  ]
+}

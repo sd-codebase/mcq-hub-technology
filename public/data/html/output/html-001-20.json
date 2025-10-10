@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-20-001",
+      "question": "What is displayed by this code?\n\n```html\n<p>This is plain text.</p>\n```",
+      "output": "This is plain text.",
+      "explanation": "Browsers render the text between <p> tags exactly as written."
+    },
+    {
+      "id": "output-001-20-002",
+      "question": "What is rendered by the browser?\n\n```html\n<p>&lt;b&gt;Not bold&lt;/b&gt;</p>\n```",
+      "output": "<b>Not bold</b>",
+      "explanation": "Using &lt; and &gt; displays the tag as literal text, not as an actual HTML element."
+    },
+    {
+      "id": "output-001-20-003",
+      "question": "What does this HTML show?\n\n```html\n<p>12345</p>\n```",
+      "output": "12345",
+      "explanation": "Plain numbers inside a paragraph tag are shown as-is."
+    },
+    {
+      "id": "output-001-20-004",
+      "question": "What is the output of this code?\n\n```html\n<p>Special chars: # @ $ % &amp; *</p>\n```",
+      "output": "Special chars: # @ $ % & *",
+      "explanation": "HTML displays most special characters directly; &amp; is shown as &."
+    },
+    {
+      "id": "output-001-20-005",
+      "question": "What is rendered?\n\n```html\n<p>Text with line<br>break</p>\n```",
+      "output": "Text with line\nbreak",
+      "explanation": "The <br> tag creates a line break in the displayed text."
+    },
+    {
+      "id": "output-001-20-006",
+      "question": "What is displayed?\n\n```html\n<p>1 + 2 = 3</p>\n```",
+      "output": "1 + 2 = 3",
+      "explanation": "The browser shows plain arithmetic as typed."
+    },
+    {
+      "id": "output-001-20-007",
+      "question": "What appears in the browser?\n\n```html\n<p>Hello, <b>world</b>!</p>\n```",
+      "output": "Hello, world! (with 'world' in bold)",
+      "explanation": "The <b> tag makes 'world' bold."
+    },
+    {
+      "id": "output-001-20-008",
+      "question": "What is shown?\n\n```html\n<p>Hi &amp; Bye</p>\n```",
+      "output": "Hi & Bye",
+      "explanation": "&amp; is the HTML entity for an ampersand (&)."
+    },
+    {
+      "id": "output-001-20-009",
+      "question": "What does this code render?\n\n```html\n<p>Plain <i>italic</i> text</p>\n```",
+      "output": "Plain italic text (with 'italic' in italics)",
+      "explanation": "The <i> tag makes 'italic' appear in italics."
+    },
+    {
+      "id": "output-001-20-010",
+      "question": "What is displayed by the browser?\n\n```html\n<p>2025-10-10</p>\n```",
+      "output": "2025-10-10",
+      "explanation": "Dates written as plain text are shown as-is in the browser."
+    },
+    {
+      "id": "output-001-20-011",
+      "question": "What is rendered in the browser?\n\n```html\n<p>Hello &gt; Hi</p>\n```",
+      "output": "Hello > Hi",
+      "explanation": "&gt; is the HTML entity for the greater-than symbol."
+    },
+    {
+      "id": "output-001-20-012",
+      "question": "What does this HTML output?\n\n```html\n<p>Simple sentence.</p>\n```",
+      "output": "Simple sentence.",
+      "explanation": "Text in <p> tags is shown as normal text."
+    },
+    {
+      "id": "output-001-20-013",
+      "question": "What do you see in the browser?\n\n```html\n<p>!@#$%^&amp;*</p>\n```",
+      "output": "!@#$%^&*",
+      "explanation": "HTML displays these special characters as written."
+    },
+    {
+      "id": "output-001-20-014",
+      "question": "What is the result?\n\n```html\n<p>Paragraph with numbers: 42, 3.14, 0</p>\n```",
+      "output": "Paragraph with numbers: 42, 3.14, 0",
+      "explanation": "Numbers and other plain text are displayed as-is."
+    },
+    {
+      "id": "output-001-20-015",
+      "question": "What is displayed?\n\n```html\n<p>The answer is &quot;yes&quot;.</p>\n```",
+      "output": "The answer is \"yes\".",
+      "explanation": "&quot; is the HTML entity for double quotes."
+    },
+    {
+      "id": "output-001-20-016",
+      "question": "What does the browser show?\n\n```html\n<p>Good morning!</p>\n```",
+      "output": "Good morning!",
+      "explanation": "This is plain text, shown as written."
+    },
+    {
+      "id": "output-001-20-017",
+      "question": "What is rendered?\n\n```html\n<p>10 &lt; 20</p>\n```",
+      "output": "10 < 20",
+      "explanation": "&lt; is the HTML entity for the less-than symbol."
+    },
+    {
+      "id": "output-001-20-018",
+      "question": "What is visible?\n\n```html\n<p>abc123</p>\n```",
+      "output": "abc123",
+      "explanation": "Letters and numbers are shown as typed."
+    },
+    {
+      "id": "output-001-20-019",
+      "question": "What is shown?\n\n```html\n<p>Empty paragraph:</p><p></p>\n```",
+      "output": "Empty paragraph:",
+      "explanation": "The first <p> displays text, the second is empty and shows nothing."
+    },
+    {
+      "id": "output-001-20-020",
+      "question": "What is the output?\n\n```html\n<p>End.</p>\n```",
+      "output": "End.",
+      "explanation": "Plain text is displayed as written inside the paragraph tag."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-11-001",
+      "question": "What does this code render?\n\n```html\n<div>Hello <span>World</span></div>\n```",
+      "output": "Hello World",
+      "explanation": "<div> is a block-level element (starts on a new line), while <span> is an inline element (does not start a new line). Both texts are displayed in sequence."
+    },
+    {
+      "id": "output-001-11-002",
+      "question": "What is the output of this HTML?\n\n```html\n<p>This is <b>bold</b> and <i>italic</i>.</p>\n```",
+      "output": "This is bold and italic. (The word 'bold' is bold, and 'italic' is italicized.)",
+      "explanation": "The <b> and <i> tags are inline elements that style text but do not break the flow or start new lines."
+    },
+    {
+      "id": "output-001-11-003",
+      "question": "What is displayed?\n\n```html\n<p>This is a <span style=\"color:red\">red word</span>.</p>\n```",
+      "output": "This is a red word. (Only 'red word' is colored red.)",
+      "explanation": "<span> is an inline element. The style only applies to the text inside the span."
+    },
+    {
+      "id": "output-001-11-004",
+      "question": "What will the browser show?\n\n```html\n<p>Line 1</p><p>Line 2</p>\n```",
+      "output": "Line 1\nLine 2",
+      "explanation": "Each <p> is a block-level element and starts on a new line."
+    },
+    {
+      "id": "output-001-11-005",
+      "question": "What is the effect of this code?\n\n```html\n<span>Hello</span> <span>World</span>\n```",
+      "output": "Hello World",
+      "explanation": "Both <span> elements are inline, so the text is displayed on the same line."
+    },
+    {
+      "id": "output-001-11-006",
+      "question": "What is rendered?\n\n```html\n<div>Box 1</div><div>Box 2</div>\n```",
+      "output": "Box 1\nBox 2",
+      "explanation": "Each <div> is a block-level element and starts on a new line."
+    },
+    {
+      "id": "output-001-11-007",
+      "question": "What happens if you nest block elements inside inline elements?\n\n```html\n<span><div>Test</div></span>\n```",
+      "output": "Test (but may not render as expected, and is invalid in HTML)",
+      "explanation": "Nesting block elements inside inline elements is not allowed and may cause unexpected behavior."
+    },
+    {
+      "id": "output-001-11-008",
+      "question": "What will this code display?\n\n```html\n<p><span>Inline</span> and <b>bold</b></p>\n```",
+      "output": "Inline and bold (all on one line, with 'bold' in bold)",
+      "explanation": "All are inline elements inside a block-level <p>."
+    },
+    {
+      "id": "output-001-11-009",
+      "question": "What is the output?\n\n```html\n<div style=\"display:inline\">A</div><div style=\"display:inline\">B</div>\n```",
+      "output": "AB",
+      "explanation": "Setting display:inline makes <div> elements behave like inline elements (no line break between them)."
+    },
+    {
+      "id": "output-001-11-010",
+      "question": "What does this render?\n\n```html\n<p><em>Emphasized</em> and <strong>strong</strong></p>\n```",
+      "output": "Emphasized and strong (with 'Emphasized' in italics and 'strong' in bold)",
+      "explanation": "<em> and <strong> are inline elements that style text."
+    },
+    {
+      "id": "output-001-11-011",
+      "question": "What happens here?\n\n```html\n<span style=\"display:block\">Block span</span>\n```",
+      "output": "Block span (on its own line)",
+      "explanation": "With display:block, the <span> acts as a block-level element and starts on a new line."
+    },
+    {
+      "id": "output-001-11-012",
+      "question": "What does this code show?\n\n```html\n<b>Bold</b><i>Italic</i><u>Underline</u>\n```",
+      "output": "BoldItalicUnderline",
+      "explanation": "All tags are inline, so the text appears on the same line with respective styles."
+    },
+    {
+      "id": "output-001-11-013",
+      "question": "What is rendered?\n\n```html\n<div>Block-level <span>and inline</span></div>\n```",
+      "output": "Block-level and inline",
+      "explanation": "The <span> is inside a <div>; both are displayed inline, but the whole line is a block."
+    },
+    {
+      "id": "output-001-11-014",
+      "question": "What happens?\n\n```html\n<span>First</span><br><span>Second</span>\n```",
+      "output": "First\nSecond",
+      "explanation": "<br> causes a line break between the two inline <span> elements."
+    },
+    {
+      "id": "output-001-11-015",
+      "question": "What is seen in the browser?\n\n```html\n<p>This is <code>code</code> in a paragraph.</p>\n```",
+      "output": "This is code in a paragraph. (with 'code' in monospace font)",
+      "explanation": "<code> is an inline element for code samples."
+    },
+    {
+      "id": "output-001-11-016",
+      "question": "What does this display?\n\n```html\n<p><a href=\"#\">Link</a> and <span>text</span></p>\n```",
+      "output": "Link and text (with 'Link' as a hyperlink)",
+      "explanation": "<a> and <span> are both inline, so appear on the same line."
+    },
+    {
+      "id": "output-001-11-017",
+      "question": "What renders here?\n\n```html\n<div><b>Bold block</b></div>\n```",
+      "output": "Bold block (on a new line, in bold)",
+      "explanation": "<div> is block-level, <b> is inline."
+    },
+    {
+      "id": "output-001-11-018",
+      "question": "What effect does this code have?\n\n```html\n<p>This is <mark>highlighted</mark> text.</p>\n```",
+      "output": "This is highlighted text. (with 'highlighted' in yellow background)",
+      "explanation": "<mark> is an inline element for highlighting."
+    },
+    {
+      "id": "output-001-11-019",
+      "question": "What is the output?\n\n```html\n<div style=\"display:inline-block\">A</div><div style=\"display:inline-block\">B</div>\n```",
+      "output": "AB",
+      "explanation": "display:inline-block allows <div> to remain on the same line but be sized like a block."
+    },
+    {
+      "id": "output-001-11-020",
+      "question": "What displays?\n\n```html\n<p>Text <img src=\"logo.png\" alt=\"logo\"> more text</p>\n```",
+      "output": "Text [image] more text",
+      "explanation": "<img> is inline; the image appears within the text flow."
+    }
+  ]
+}

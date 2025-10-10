@@ -1,0 +1,244 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-07-001",
+      "question": "What is the purpose of the `<!DOCTYPE>` declaration in HTML?",
+      "options": [
+        "To include JavaScript files",
+        "To define the document type and version of HTML",
+        "To add a comment in HTML",
+        "To declare variables"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `<!DOCTYPE>` declaration defines the HTML version and helps browsers render the page correctly."
+    },
+    {
+      "id": "mcq-001-07-002",
+      "question": "Which is the correct `<!DOCTYPE>` declaration for HTML5?",
+      "options": [
+        "`<!DOCTYPE html>`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\">`",
+        "`<!DOCTYPE XHTML>`",
+        "`<!DOCTYPE document>`"
+      ],
+      "correct_answer": 1,
+      "explanation": "HTML5 uses the simplified declaration: `<!DOCTYPE html>`."
+    },
+    {
+      "id": "mcq-001-07-003",
+      "question": "Where should the `<!DOCTYPE>` declaration appear in an HTML document?",
+      "options": [
+        "Inside the `<head>` section",
+        "After the `<body>` tag",
+        "At the very top of the document",
+        "Before the closing `</html>` tag"
+      ],
+      "correct_answer": 3,
+      "explanation": "The `<!DOCTYPE>` should be the very first line in an HTML document."
+    },
+    {
+      "id": "mcq-001-07-004",
+      "question": "What happens if you omit the `<!DOCTYPE>` declaration in HTML5?",
+      "options": [
+        "The page will not render at all",
+        "The browser will use quirks mode",
+        "The page will load faster",
+        "The browser will display an error"
+      ],
+      "correct_answer": 2,
+      "explanation": "Without `<!DOCTYPE>`, browsers may switch to quirks mode, rendering the page differently."
+    },
+    {
+      "id": "mcq-001-07-005",
+      "question": "Which `<!DOCTYPE>` declaration is used for HTML 4.01 Strict?",
+      "options": [
+        "`<!DOCTYPE html>`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\">`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\">`"
+      ],
+      "correct_answer": 2,
+      "explanation": "The strict version is: `<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\">`."
+    },
+    {
+      "id": "mcq-001-07-006",
+      "question": "Why is it important to use the correct `<!DOCTYPE>` declaration?",
+      "options": [
+        "To apply CSS styles",
+        "To ensure browsers render the page in standards mode",
+        "To enable JavaScript",
+        "To improve page load speed"
+      ],
+      "correct_answer": 2,
+      "explanation": "A correct `<!DOCTYPE>` ensures browsers use standards mode for rendering."
+    },
+    {
+      "id": "mcq-001-07-007",
+      "question": "Which `<!DOCTYPE>` is used for XHTML 1.0 Transitional?",
+      "options": [
+        "`<!DOCTYPE html>`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">`",
+        "`<!DOCTYPE HTML4>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "XHTML 1.0 Transitional uses: `<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" ...>`."
+    },
+    {
+      "id": "mcq-001-07-008",
+      "question": "Which of these is NOT a valid reason to include `<!DOCTYPE>`?",
+      "options": [
+        "To help browsers render the page using the correct standard",
+        "To specify HTML or XHTML version",
+        "To speed up website loading time",
+        "To avoid browser quirks mode"
+      ],
+      "correct_answer": 3,
+      "explanation": "`<!DOCTYPE>` does not affect loading time but helps with standards compliance."
+    },
+    {
+      "id": "mcq-001-07-009",
+      "question": "What will happen if the `<!DOCTYPE>` is placed inside the `<html>` tag?",
+      "options": [
+        "HTML will run faster",
+        "It will be ignored and page may render in quirks mode",
+        "The browser will show a syntax error",
+        "Nothing, it will work as normal"
+      ],
+      "correct_answer": 2,
+      "explanation": "`<!DOCTYPE>` must be at the top. If misplaced, browsers may ignore it and render in quirks mode."
+    },
+    {
+      "id": "mcq-001-07-010",
+      "question": "Which browsers require the `<!DOCTYPE>` declaration for standards mode rendering?",
+      "options": [
+        "Only Chrome",
+        "Only Internet Explorer",
+        "All modern browsers",
+        "Only Firefox and Safari"
+      ],
+      "correct_answer": 3,
+      "explanation": "All modern browsers use the `<!DOCTYPE>` declaration to trigger standards mode."
+    },
+    {
+      "id": "mcq-001-07-011",
+      "question": "Is the `<!DOCTYPE>` tag case sensitive in HTML5?",
+      "options": [
+        "Yes, it must be uppercase",
+        "No, it can be any case",
+        "It must be lowercase",
+        "It must match the browser's default case"
+      ],
+      "correct_answer": 2,
+      "explanation": "In HTML5, `<!DOCTYPE html>` is not case sensitive, but lowercase is recommended."
+    },
+    {
+      "id": "mcq-001-07-012",
+      "question": "What is the effect of using an incorrect or invalid `<!DOCTYPE>` declaration?",
+      "options": [
+        "The browser will always show a blank page",
+        "The browser may switch to quirks mode",
+        "The document will validate as HTML5",
+        "JavaScript will not work"
+      ],
+      "correct_answer": 2,
+      "explanation": "An invalid or incorrect `<!DOCTYPE>` may cause the browser to use quirks mode."
+    },
+    {
+      "id": "mcq-001-07-013",
+      "question": "Which `<!DOCTYPE>` declaration is used for XHTML 1.0 Strict?",
+      "options": [
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">`",
+        "`<!DOCTYPE html>`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\">`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\">`"
+      ],
+      "correct_answer": 1,
+      "explanation": "The correct `<!DOCTYPE>` for XHTML 1.0 Strict is: `<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" ...>`"
+    },
+    {
+      "id": "mcq-001-07-014",
+      "question": "Which `<!DOCTYPE>` is recommended for maximum compatibility with modern browsers?",
+      "options": [
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\">`",
+        "`<!DOCTYPE html>`",
+        "`<!DOCTYPE HTML4>`"
+      ],
+      "correct_answer": 3,
+      "explanation": "`<!DOCTYPE html>` is the recommended declaration for modern HTML5 and browser compatibility."
+    },
+    {
+      "id": "mcq-001-07-015",
+      "question": "What does the `DOCTYPE` keyword stand for?",
+      "options": [
+        "Document Type Declaration",
+        "Document Type Definition",
+        "Document Token",
+        "Document Template"
+      ],
+      "correct_answer": 1,
+      "explanation": "`DOCTYPE` stands for 'Document Type Declaration'."
+    },
+    {
+      "id": "mcq-001-07-016",
+      "question": "What is the primary function of the DTD referenced in some `<!DOCTYPE>` declarations?",
+      "options": [
+        "Define database tables",
+        "Provide rules for HTML structure and validation",
+        "Style web pages",
+        "Store cookies"
+      ],
+      "correct_answer": 2,
+      "explanation": "DTD (Document Type Definition) gives rules for HTML structure and helps with validation."
+    },
+    {
+      "id": "mcq-001-07-017",
+      "question": "Is the `<!DOCTYPE>` declaration required in HTML5?",
+      "options": [
+        "No, it is optional",
+        "Yes, it is required for standards mode",
+        "Yes, but only for Internet Explorer",
+        "No, only XML requires it"
+      ],
+      "correct_answer": 2,
+      "explanation": "`<!DOCTYPE>` is required in HTML5 to ensure standards mode."
+    },
+    {
+      "id": "mcq-001-07-018",
+      "question": "Which of the following is NOT a valid `<!DOCTYPE>` declaration?",
+      "options": [
+        "`<!DOCTYPE html>`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">`",
+        "`<!DOCTYPE xhtml>`",
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\">`"
+      ],
+      "correct_answer": 3,
+      "explanation": "`<!DOCTYPE xhtml>` is not a valid declaration."
+    },
+    {
+      "id": "mcq-001-07-019",
+      "question": "What does 'quirks mode' mean in browsers?",
+      "options": [
+        "It loads JavaScript faster",
+        "It uses the latest HTML5 features",
+        "It renders the page with legacy, non-standard behavior",
+        "It disables images"
+      ],
+      "correct_answer": 3,
+      "explanation": "Quirks mode causes browsers to render pages using legacy, non-standard rules."
+    },
+    {
+      "id": "mcq-001-07-020",
+      "question": "Which of the following best explains why `<!DOCTYPE>` is important for web development?",
+      "options": [
+        "It makes the CSS work faster",
+        "It tells browsers to render the page in standards mode",
+        "It makes the JavaScript execute sooner",
+        "It allows use of deprecated tags"
+      ],
+      "correct_answer": 2,
+      "explanation": "`<!DOCTYPE>` ensures browsers use standards mode for rendering your web page."
+    }
+  ]
+}

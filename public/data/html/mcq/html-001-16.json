@@ -1,0 +1,234 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-16-001",
+      "question": "What is the use of an HTML validator?",
+      "options": [
+        "To check spelling errors",
+        "To check CSS errors",
+        "To ensure HTML code follows standards",
+        "To create new tags"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML validators check for code errors and standards compliance."
+    },
+    {
+      "id": "mcq-001-16-002",
+      "question": "Which of the following is a popular online HTML validator?",
+      "options": [
+        "W3C Markup Validation Service",
+        "Google Chrome",
+        "Mozilla Firefox",
+        "Adobe Dreamweaver"
+      ],
+      "correct_answer": 1,
+      "explanation": "The 'W3C Markup Validation Service' is a widely used online HTML validator."
+    },
+    {
+      "id": "mcq-001-16-003",
+      "question": "What do HTML validators primarily check for?",
+      "options": [
+        "Syntax errors and invalid markup",
+        "Page load speed",
+        "Spelling mistakes",
+        "SEO ranking"
+      ],
+      "correct_answer": 1,
+      "explanation": "HTML validators primarily check for syntax errors and invalid markup."
+    },
+    {
+      "id": "mcq-001-16-004",
+      "question": "Which file extension should you use for HTML files to be properly validated?",
+      "options": [".txt", ".css", ".html", ".js"],
+      "correct_answer": 3,
+      "explanation": "HTML files should have a `.html` extension for proper validation."
+    },
+    {
+      "id": "mcq-001-16-005",
+      "question": "What does a validation error usually indicate?",
+      "options": [
+        "Your HTML is perfectly correct",
+        "There is an issue with your HTML code",
+        "The website is down",
+        "The browser cannot display the page"
+      ],
+      "correct_answer": 2,
+      "explanation": "A validation error indicates an issue or mistake in your HTML markup."
+    },
+    {
+      "id": "mcq-001-16-006",
+      "question": "What is the benefit of using an HTML validator?",
+      "options": [
+        "It guarantees your site will look the same in all browsers",
+        "It helps find and fix markup errors",
+        "It increases your website speed",
+        "It writes HTML code automatically"
+      ],
+      "correct_answer": 2,
+      "explanation": "An HTML validator helps find and fix markup errors."
+    },
+    {
+      "id": "mcq-001-16-007",
+      "question": "Which organization maintains the official HTML validator?",
+      "options": ["Mozilla", "Google", "W3C", "Microsoft"],
+      "correct_answer": 3,
+      "explanation": "The World Wide Web Consortium (W3C) maintains the official HTML validator."
+    },
+    {
+      "id": "mcq-001-16-008",
+      "question": "Can HTML validators check for accessibility issues?",
+      "options": [
+        "Yes, some can check basic accessibility",
+        "No, they only check JavaScript",
+        "No, they only check CSS",
+        "No, accessibility cannot be checked"
+      ],
+      "correct_answer": 1,
+      "explanation": "Some HTML validators provide basic accessibility checks."
+    },
+    {
+      "id": "mcq-001-16-009",
+      "question": "Which of the following is NOT checked by an HTML validator?",
+      "options": [
+        "Proper tag nesting",
+        "Valid attribute usage",
+        "Website traffic",
+        "Required closing tags"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML validators do not check website traffic."
+    },
+    {
+      "id": "mcq-001-16-010",
+      "question": "Why should you validate your HTML?",
+      "options": [
+        "To ensure it meets web standards and reduces browser compatibility issues",
+        "To speed up your website",
+        "To find CSS bugs",
+        "To write JavaScript faster"
+      ],
+      "correct_answer": 1,
+      "explanation": "Validation helps meet standards and ensures better browser compatibility."
+    },
+    {
+      "id": "mcq-001-16-011",
+      "question": "What type of message does a validator provide when it finds an issue?",
+      "options": [
+        "Warning or Error message",
+        "SEO report",
+        "Performance score",
+        "Screenshot of page"
+      ],
+      "correct_answer": 1,
+      "explanation": "Validators provide warnings or error messages for detected issues."
+    },
+    {
+      "id": "mcq-001-16-012",
+      "question": "Which of these is a valid input for an online HTML validator?",
+      "options": [
+        "A URL",
+        "File upload",
+        "Direct code paste",
+        "All of the above"
+      ],
+      "correct_answer": 4,
+      "explanation": "Online validators accept URLs, file uploads, or direct code paste."
+    },
+    {
+      "id": "mcq-001-16-013",
+      "question": "Which HTML tag must always be closed for validation to succeed?",
+      "options": [
+        "`<img>`",
+        "`<meta>`",
+        "`<br>`",
+        "All tags must be properly closed"
+      ],
+      "correct_answer": 4,
+      "explanation": "All tags must be properly closed for valid HTML."
+    },
+    {
+      "id": "mcq-001-16-014",
+      "question": "What is a common result of not validating your HTML?",
+      "options": [
+        "Consistent behavior in all browsers",
+        "Potential rendering issues or broken layouts",
+        "Faster page loads",
+        "Higher SEO ranking"
+      ],
+      "correct_answer": 2,
+      "explanation": "Invalid HTML can cause rendering issues or broken layouts."
+    },
+    {
+      "id": "mcq-001-16-015",
+      "question": "Can you validate HTML5 using the W3C validator?",
+      "options": [
+        "No, only HTML4 is supported",
+        "Yes, HTML5 is fully supported",
+        "Only XHTML is supported",
+        "Only CSS is validated"
+      ],
+      "correct_answer": 2,
+      "explanation": "The W3C validator fully supports HTML5."
+    },
+    {
+      "id": "mcq-001-16-016",
+      "question": "Which of the following is a typical validation warning?",
+      "options": [
+        "Missing `alt` attribute on `<img>` tag",
+        "Invalid JavaScript syntax",
+        "Slow page load time",
+        "Low-resolution images"
+      ],
+      "correct_answer": 1,
+      "explanation": "Validators will warn if required attributes like `alt` are missing."
+    },
+    {
+      "id": "mcq-001-16-017",
+      "question": "Where can you find the W3C HTML validator online?",
+      "options": [
+        "https://validator.w3.org/",
+        "https://html.com/",
+        "https://validator.google.com/",
+        "https://mozilla.org/validator"
+      ],
+      "correct_answer": 1,
+      "explanation": "The official validator is at https://validator.w3.org/."
+    },
+    {
+      "id": "mcq-001-16-018",
+      "question": "What is required for a self-closing tag to be valid in XHTML?",
+      "options": [
+        "Just omit the closing tag",
+        "Use a trailing slash like `<br />`",
+        "Use double closing tags",
+        "Put a space after the tag name"
+      ],
+      "correct_answer": 2,
+      "explanation": "Self-closing tags in XHTML require a trailing slash, e.g., `<br />`."
+    },
+    {
+      "id": "mcq-001-16-019",
+      "question": "What is the main focus of HTML validation?",
+      "options": [
+        "Design and layout",
+        "JavaScript performance",
+        "Syntax and structure",
+        "Image quality"
+      ],
+      "correct_answer": 3,
+      "explanation": "Validation checks the syntax and structure of HTML."
+    },
+    {
+      "id": "mcq-001-16-020",
+      "question": "Which is NOT provided by an HTML validator?",
+      "options": [
+        "Error reporting",
+        "Code suggestions",
+        "Performance optimization",
+        "Warnings for deprecated tags"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML validators do not optimize performance, but they do report errors and warnings."
+    }
+  ]
+}

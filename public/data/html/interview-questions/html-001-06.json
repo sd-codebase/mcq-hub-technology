@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-06-001",
+      "question": "What is the basic syntax for writing an HTML comment?",
+      "answer": "An HTML comment starts with `<!--` and ends with `-->`. Example:\n\n```html\n<!-- This is a comment -->\n```",
+      "explanation": "Comments are ignored by the browser and are not displayed on the page."
+    },
+    {
+      "id": "interview-001-06-002",
+      "question": "Can HTML comments be placed anywhere in a document?",
+      "answer": "Yes, comments can be placed almost anywhere in HTML, except inside tag names or attribute values.",
+      "explanation": "Placing comments inside elements, between elements, or before the doctype is valid, but not inside attribute values."
+    },
+    {
+      "id": "interview-001-06-003",
+      "question": "How do browsers treat content inside HTML comments?",
+      "answer": "Browsers ignore the content inside comments, so it is not rendered or displayed to users.",
+      "explanation": "Comments are used for documentation and are not part of the visible page."
+    },
+    {
+      "id": "interview-001-06-004",
+      "question": "Can HTML comments be used to 'hide' code? Give an example.",
+      "answer": "Yes, you can temporarily disable code by commenting it out:\n\n```html\n<!-- <h1>This heading is hidden</h1> -->\n<p>This is visible</p>\n```",
+      "explanation": "This is useful for debugging or removing code without deleting it permanently."
+    },
+    {
+      "id": "interview-001-06-005",
+      "question": "Is it possible to nest HTML comments?",
+      "answer": "No, HTML does not support nested comments. The first closing `-->` ends the comment.",
+      "explanation": "Attempting to nest comments can result in unexpected rendering or ignored code."
+    },
+    {
+      "id": "interview-001-06-006",
+      "question": "Can comments appear inside HTML tags or attributes?",
+      "answer": "No, comments cannot be placed inside tag names or attribute values. This will break the HTML.",
+      "explanation": "For example, `<a <!-- comment --> href=\"url\">` is invalid syntax."
+    },
+    {
+      "id": "interview-001-06-007",
+      "question": "How are multiline comments written in HTML?",
+      "answer": "Use a single opening `<!--` and closing `-->`, with content spanning multiple lines:\n\n```html\n<!--\nThis is a multiline\nHTML comment\n-->\n```",
+      "explanation": "There is no separate syntax for multiline comments; just place line breaks inside the comment."
+    },
+    {
+      "id": "interview-001-06-008",
+      "question": "Do HTML comments affect the performance or size of the final rendered page?",
+      "answer": "Comments increase the size of the HTML sent to the browser, but they are ignored during rendering. Excessive comments can slightly increase load time.",
+      "explanation": "It's good practice to remove unnecessary comments from production code to reduce file size."
+    },
+    {
+      "id": "interview-001-06-009",
+      "question": "Are comments visible to users in the browser?",
+      "answer": "No, comments are not visible on the rendered page, but they can be seen by viewing the page source.",
+      "explanation": "Anyone can see comments by right-clicking and selecting 'View Page Source' in the browser."
+    },
+    {
+      "id": "interview-001-06-010",
+      "question": "Why are comments important in HTML code?",
+      "answer": "Comments help explain the structure, purpose, or logic of the code for yourself and other developers who read it later.",
+      "explanation": "Well-commented code is easier to maintain, debug, and collaborate on."
+    }
+  ]
+}

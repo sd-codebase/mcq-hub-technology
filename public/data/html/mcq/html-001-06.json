@@ -1,0 +1,189 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-06-001",
+      "question": "Which of the following is a valid HTML attribute?",
+      "options": ["`src`", "`font`", "`text-align`", "`css`"],
+      "correct_answer": 1,
+      "explanation": "`src` is a valid attribute used in tags like `<img>` and `<script>` to specify the source file."
+    },
+    {
+      "id": "mcq-001-06-002",
+      "question": "How do you specify alternative text for an image in HTML?",
+      "options": [
+        "Using the `alt` attribute",
+        "Using the `title` attribute",
+        "Using the `caption` attribute",
+        "Using the `desc` attribute"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `alt` attribute provides alternative text for images, improving accessibility."
+    },
+    {
+      "id": "mcq-001-06-003",
+      "question": "Which of the following is the correct syntax to set the width of an image to 150 pixels?",
+      "options": [
+        "`<img width=\"150\">`",
+        "`<img length=\"150\">`",
+        "`<img pixels=\"150\">`",
+        "`<img size=\"150\">`"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `width` attribute sets the width of an image in pixels: `<img width=\"150\">`."
+    },
+    {
+      "id": "mcq-001-06-004",
+      "question": "Which attribute is used to open a link in a new browser tab?",
+      "options": ["`rel`", "`target=\"_blank\"`", "`newtab`", "`open`"],
+      "correct_answer": 2,
+      "explanation": "The `target=\"_blank\"` attribute opens a link in a new tab."
+    },
+    {
+      "id": "mcq-001-06-005",
+      "question": "What does the `href` attribute specify?",
+      "options": [
+        "The background color",
+        "The destination URL of a link",
+        "The source of an image",
+        "The font size"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `href` attribute specifies the URL for a hyperlink."
+    },
+    {
+      "id": "mcq-001-06-006",
+      "question": "Which attribute makes a form input field mandatory?",
+      "options": ["`required`", "`validate`", "`mandatory`", "`mustfill`"],
+      "correct_answer": 1,
+      "explanation": "The `required` attribute makes a form field mandatory."
+    },
+    {
+      "id": "mcq-001-06-007",
+      "question": "What is the use of the `id` attribute in HTML?",
+      "options": [
+        "To style an element with CSS",
+        "To uniquely identify an element",
+        "To link images",
+        "To specify image size"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `id` attribute uniquely identifies an element in the HTML document."
+    },
+    {
+      "id": "mcq-001-06-008",
+      "question": "How do you add a tooltip to an HTML element?",
+      "options": [
+        "Using the `title` attribute",
+        "Using the `alt` attribute",
+        "Using the `tooltip` attribute",
+        "Using the `info` attribute"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `title` attribute shows a tooltip when you hover over the element."
+    },
+    {
+      "id": "mcq-001-06-009",
+      "question": "Which attribute is used with `<input>` elements to specify the type of input?",
+      "options": ["`inputtype`", "`type`", "`input`", "`datatype`"],
+      "correct_answer": 2,
+      "explanation": "The `type` attribute specifies the kind of input, e.g., `<input type=\"text\">`."
+    },
+    {
+      "id": "mcq-001-06-010",
+      "question": "What is the purpose of the `class` attribute in HTML?",
+      "options": [
+        "To link CSS files",
+        "To group elements for styling or scripting",
+        "To define a heading",
+        "To create a form"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `class` attribute is used to group elements for CSS styling or JavaScript scripting."
+    },
+    {
+      "id": "mcq-001-06-011",
+      "question": "Which attribute is used in the `<form>` tag to define the page that will handle the form submission?",
+      "options": ["`destination`", "`action`", "`submit`", "`method`"],
+      "correct_answer": 2,
+      "explanation": "The `action` attribute defines where the form data will be sent upon submission."
+    },
+    {
+      "id": "mcq-001-06-012",
+      "question": "How do you specify that a checkbox should be checked by default?",
+      "options": [
+        "Add the `checked` attribute",
+        "Add the `selected` attribute",
+        "Set `value=\"true\"`",
+        "Set `default=\"checked\"`"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `checked` attribute makes the checkbox checked by default."
+    },
+    {
+      "id": "mcq-001-06-013",
+      "question": "Which attribute allows you to provide an advisory text for an image, shown when the image cannot be displayed?",
+      "options": ["`alt`", "`title`", "`desc`", "`info`"],
+      "correct_answer": 1,
+      "explanation": "The `alt` attribute displays alternative text if the image cannot be shown."
+    },
+    {
+      "id": "mcq-001-06-014",
+      "question": "Which of the following is NOT a global attribute?",
+      "options": ["`style`", "`class`", "`src`", "`id`"],
+      "correct_answer": 3,
+      "explanation": "`src` is not a global attribute, it is specific to certain tags like `<img>`."
+    },
+    {
+      "id": "mcq-001-06-015",
+      "question": "What does the `disabled` attribute do?",
+      "options": [
+        "Hides the element",
+        "Disables the element, making it unusable",
+        "Deletes the element",
+        "Changes the color of the element"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `disabled` attribute disables form elements, making them unusable."
+    },
+    {
+      "id": "mcq-001-06-016",
+      "question": "Which attribute is used to specify inline CSS styles?",
+      "options": ["`css`", "`style`", "`inline`", "`font`"],
+      "correct_answer": 2,
+      "explanation": "The `style` attribute is used for inline CSS."
+    },
+    {
+      "id": "mcq-001-06-017",
+      "question": "What is the value of the `target` attribute to open a link in the same window?",
+      "options": ["`_blank`", "`_self`", "`_parent`", "`_top`"],
+      "correct_answer": 2,
+      "explanation": "`_self` is the default and opens the link in the same window."
+    },
+    {
+      "id": "mcq-001-06-018",
+      "question": "Which attribute is used to group several `<input>` elements together in a form?",
+      "options": ["`group`", "`name`", "`class`", "`id`"],
+      "correct_answer": 2,
+      "explanation": "The `name` attribute groups radio buttons and checkboxes in forms."
+    },
+    {
+      "id": "mcq-001-06-019",
+      "question": "Which attribute would you use to specify the language of the document in the `<html>` tag?",
+      "options": ["`lang`", "`language`", "`locale`", "`xml:lang`"],
+      "correct_answer": 1,
+      "explanation": "The `lang` attribute specifies the language of the document, e.g., `<html lang=\"en\">`."
+    },
+    {
+      "id": "mcq-001-06-020",
+      "question": "Which of the following is the correct way to specify an attribute with no value?",
+      "options": [
+        "`<input required>`",
+        "`<input required=\"required\">`",
+        "Both are correct",
+        "Neither are correct"
+      ],
+      "correct_answer": 3,
+      "explanation": "In HTML5, both `<input required>` and `<input required=\"required\">` are valid."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-01-001",
+      "question": "What will be the output of the following HTML?\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n  <title>Test</title>\n</head>\n<body>\n  <p>Hello World!</p>\n</body>\n</html>\n```",
+      "output": "The browser will display: Hello World!",
+      "explanation": "This is a basic HTML structure. The `<p>` tag outputs 'Hello World!' on the web page."
+    },
+    {
+      "id": "output-001-01-002",
+      "question": "What is displayed by this code in a browser?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<h1>My First Heading</h1>\n<p>My first paragraph.</p>\n</body>\n</html>\n```",
+      "output": "A large heading 'My First Heading' and below it the text 'My first paragraph.'",
+      "explanation": "The `<h1>` tag displays a large heading. The `<p>` tag displays a paragraph below the heading."
+    },
+    {
+      "id": "output-001-01-003",
+      "question": "What will appear when you open this HTML file?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<p>This is a test.<br>This is on a new line.</p>\n</body>\n</html>\n```",
+      "output": "This is a test.\nThis is on a new line.",
+      "explanation": "The `<br>` tag causes a line break, so the second sentence appears on a new line."
+    },
+    {
+      "id": "output-001-01-004",
+      "question": "What will be rendered by this HTML snippet?\n\n```html\n<p><b>Bold</b> and <i>Italic</i></p>\n```",
+      "output": "Bold and Italic (with 'Bold' in bold and 'Italic' in italics)",
+      "explanation": "`<b>` makes text bold and `<i>` makes text italic within the paragraph."
+    },
+    {
+      "id": "output-001-01-005",
+      "question": "What does this code show in the browser?\n\n```html\n<p>Hello<!-- This is a comment -->World</p>\n```",
+      "output": "HelloWorld",
+      "explanation": "HTML comments (`<!-- ... -->`) are not displayed in the browser."
+    },
+    {
+      "id": "output-001-01-006",
+      "question": "What will the browser display?\n\n```html\n<p>2 &lt; 3 and 5 &gt; 4</p>\n```",
+      "output": "2 < 3 and 5 > 4",
+      "explanation": "`&lt;` and `&gt;` are HTML entities for '<' and '>'. They are shown as symbols in the browser."
+    },
+    {
+      "id": "output-001-01-007",
+      "question": "What happens when this HTML is rendered?\n\n```html\n<p>First line\nSecond line</p>\n```",
+      "output": "First line Second line",
+      "explanation": "Line breaks in HTML source code are ignored in normal flow, so both sentences appear on the same line."
+    },
+    {
+      "id": "output-001-01-008",
+      "question": "What does the following HTML output?\n\n```html\n<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>\n```",
+      "output": "A bulleted list with 'Apple' and 'Banana' as items.",
+      "explanation": "`<ul>` creates an unordered (bulleted) list; `<li>` defines each list item."
+    },
+    {
+      "id": "output-001-01-009",
+      "question": "What will be shown?\n\n```html\n<ol>\n  <li>One</li>\n  <li>Two</li>\n</ol>\n```",
+      "output": "A numbered list:\n1. One\n2. Two",
+      "explanation": "`<ol>` creates an ordered (numbered) list; `<li>` defines each item."
+    },
+    {
+      "id": "output-001-01-010",
+      "question": "What does this HTML render?\n\n```html\n<img src=\"logo.png\" alt=\"Logo\">\n```",
+      "output": "The image 'logo.png' (or, if not found, the text 'Logo')",
+      "explanation": "The `<img>` tag displays an image. If the image is missing, the 'alt' text is shown instead."
+    },
+    {
+      "id": "output-001-01-011",
+      "question": "What will the following code display?\n\n```html\n<p>&copy; 2025</p>\n```",
+      "output": "© 2025",
+      "explanation": "`&copy;` is the entity for the copyright symbol."
+    },
+    {
+      "id": "output-001-01-012",
+      "question": "What happens when this code is viewed in the browser?\n\n```html\n<p>Space&nbsp;&nbsp;Space</p>\n```",
+      "output": "Space  Space",
+      "explanation": "`&nbsp;` creates a non-breaking space. So there are two spaces between the words."
+    },
+    {
+      "id": "output-001-01-013",
+      "question": "What does this code display?\n\n```html\n<h3>This is a heading</h3>\n<p>This is a paragraph.</p>\n```",
+      "output": "A medium-sized heading 'This is a heading' and below it the paragraph 'This is a paragraph.'",
+      "explanation": "`<h3>` is a medium-sized heading. `<p>` is a paragraph."
+    },
+    {
+      "id": "output-001-01-014",
+      "question": "What is the output of this HTML?\n\n```html\n<pre>Line 1\n   Line 2\n      Line 3</pre>\n```",
+      "output": "Line 1\n   Line 2\n      Line 3",
+      "explanation": "`<pre>` preserves whitespace and line breaks, so the text appears as written."
+    },
+    {
+      "id": "output-001-01-015",
+      "question": "What will appear when this HTML is rendered?\n\n```html\n<a href=\"https://example.com\">Click here</a>\n```",
+      "output": "A clickable link with the text 'Click here'.",
+      "explanation": "`<a>` creates a hyperlink. The text inside is shown as clickable."
+    },
+    {
+      "id": "output-001-01-016",
+      "question": "What is the visible result of the following HTML?\n\n```html\n<b><i>Hello!</i></b>\n```",
+      "output": "Hello! (bold and italic)",
+      "explanation": "The text 'Hello!' will be both bold and italic."
+    },
+    {
+      "id": "output-001-01-017",
+      "question": "What does this code render?\n\n```html\n<h1>Heading</h1><h2>Subheading</h2>\n```",
+      "output": "A large heading 'Heading' and a slightly smaller heading 'Subheading' below it.",
+      "explanation": "`<h1>` is the largest heading, `<h2>` is the second largest."
+    },
+    {
+      "id": "output-001-01-018",
+      "question": "What will you see in the browser?\n\n```html\n<!-- This will not be displayed -->\n<p>Visible text</p>\n```",
+      "output": "Visible text",
+      "explanation": "Comments are ignored; only 'Visible text' appears."
+    },
+    {
+      "id": "output-001-01-019",
+      "question": "What is displayed for this code?\n\n```html\n<p>The price is &euro;50</p>\n```",
+      "output": "The price is €50",
+      "explanation": "`&euro;` is the HTML entity for the Euro symbol."
+    },
+    {
+      "id": "output-001-01-020",
+      "question": "What is rendered by this snippet?\n\n```html\n<p>5 &gt; 2</p>\n```",
+      "output": "5 > 2",
+      "explanation": "`&gt;` is the HTML entity for the greater-than symbol."
+    }
+  ]
+}

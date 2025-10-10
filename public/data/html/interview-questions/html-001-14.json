@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-14-001",
+      "question": "What is the difference between HTML5 and previous versions of HTML?",
+      "answer": "HTML5 introduced new semantic elements (like `<header>`, `<footer>`, `<nav>`, `<article>`, `<section>`), native support for audio and video, new input types, APIs for offline storage, geolocation, and graphics (Canvas, SVG), and dropped some older elements and attributes.",
+      "explanation": "HTML5 makes web development more powerful and standardized, improves accessibility, and reduces the need for plugins like Flash."
+    },
+    {
+      "id": "interview-001-14-002",
+      "question": "Name five new semantic elements introduced in HTML5.",
+      "answer": "`<header>`, `<footer>`, `<article>`, `<section>`, `<nav>`.",
+      "explanation": "These elements give structure and meaning to web pages, improving accessibility and SEO."
+    },
+    {
+      "id": "interview-001-14-003",
+      "question": "What are the new input types introduced in HTML5 forms?",
+      "answer": "HTML5 introduced input types like `email`, `url`, `tel`, `number`, `range`, `date`, `color`, and `search`.",
+      "explanation": "These types provide better validation and user experience, especially on mobile devices."
+    },
+    {
+      "id": "interview-001-14-004",
+      "question": "How do you embed video and audio in HTML5?",
+      "answer": "Use the `<video>` and `<audio>` tags:\n```html\n<video controls src=\"movie.mp4\"></video>\n<audio controls src=\"song.mp3\"></audio>\n```",
+      "explanation": "HTML5 provides native support for media playback without plugins."
+    },
+    {
+      "id": "interview-001-14-005",
+      "question": "What is the purpose of the `<canvas>` element in HTML5?",
+      "answer": "`<canvas>` is used to draw graphics, animations, and games directly in the browser using JavaScript.",
+      "explanation": "It provides a 2D drawing API and is widely used for dynamic visualizations."
+    },
+    {
+      "id": "interview-001-14-006",
+      "question": "Explain the difference between `<section>` and `<article>` in HTML5.",
+      "answer": "`<section>` is for grouping related content, typically with a heading. `<article>` is for self-contained, independent content that could stand alone (like a blog post).",
+      "explanation": "Use `<section>` for page structure, `<article>` for distributable content."
+    },
+    {
+      "id": "interview-001-14-007",
+      "question": "How does HTML5 handle browser compatibility for new features?",
+      "answer": "HTML5 provides fallback content inside elements like `<video>`, `<audio>`, and `<canvas>`. Developers can also use feature detection tools like Modernizr and polyfills.",
+      "explanation": "Fallbacks and polyfills ensure that users with older browsers still get a usable experience."
+    },
+    {
+      "id": "interview-001-14-008",
+      "question": "What is local storage in HTML5 and how does it differ from cookies?",
+      "answer": "Local storage allows web applications to store data in the browser persistently using `localStorage` and `sessionStorage` APIs. Unlike cookies, local storage data is not sent to the server with every request and can store more data (typically 5MB+).",
+      "explanation": "Local storage is useful for client-side data persistence, while cookies are mainly for server communication."
+    },
+    {
+      "id": "interview-001-14-009",
+      "question": "What is the `placeholder` attribute and how is it used in HTML5 forms?",
+      "answer": "The `placeholder` attribute displays hint text in an input field until the user enters a value:\n```html\n<input type=\"text\" placeholder=\"Enter your name\">\n```",
+      "explanation": "It improves usability by showing users what kind of input is expected."
+    },
+    {
+      "id": "interview-001-14-010",
+      "question": "How does the `<progress>` element work in HTML5?",
+      "answer": "The `<progress>` element displays the completion progress of a task:\n```html\n<progress value=\"70\" max=\"100\">70%</progress>\n```",
+      "explanation": "It provides a visual indicator of progress, such as for downloads or uploads."
+    }
+  ]
+}

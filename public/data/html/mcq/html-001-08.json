@@ -1,0 +1,229 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-08-001",
+      "question": "How are HTML comments written?",
+      "options": [
+        "`<!-- comment -->`",
+        "`// comment //`",
+        "`# comment #`",
+        "`/* comment */`"
+      ],
+      "correct_answer": 1,
+      "explanation": "HTML comments are written as `<!-- comment -->` and are not displayed in the browser."
+    },
+    {
+      "id": "mcq-001-08-002",
+      "question": "Where can HTML comments be placed?",
+      "options": [
+        "Only within the `<head>` section",
+        "Anywhere in the HTML document",
+        "Only within the `<body>` section",
+        "Only outside the `<html>` tag"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML comments can be placed anywhere in the HTML document."
+    },
+    {
+      "id": "mcq-001-08-003",
+      "question": "What is the main purpose of HTML comments?",
+      "options": [
+        "To display notes to users",
+        "To add code explanations for developers",
+        "To add styling",
+        "To execute JavaScript"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML comments are used to add notes or explanations for developers."
+    },
+    {
+      "id": "mcq-001-08-004",
+      "question": "Will content inside `<!-- comment -->` be rendered in the browser?",
+      "options": [
+        "Yes, as visible text",
+        "Yes, as a tooltip",
+        "No, it is not rendered",
+        "Only in Internet Explorer"
+      ],
+      "correct_answer": 3,
+      "explanation": "Content inside comments is not rendered by browsers."
+    },
+    {
+      "id": "mcq-001-08-005",
+      "question": "Which of the following is NOT a valid HTML comment?",
+      "options": [
+        "`<!-- This is a comment -->`",
+        "`<!--- Incorrect comment --->`",
+        "`<!--Another comment-->`",
+        "`<!-- -->`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`<!--- Incorrect comment --->` is not valid as the number of dashes is wrong."
+    },
+    {
+      "id": "mcq-001-08-006",
+      "question": "Can HTML comments be used to temporarily disable code?",
+      "options": [
+        "Yes, they can comment out code blocks",
+        "No, comments can only be used for text",
+        "Only for JavaScript code",
+        "Only for CSS code"
+      ],
+      "correct_answer": 1,
+      "explanation": "You can use HTML comments to temporarily disable or 'comment out' parts of your HTML."
+    },
+    {
+      "id": "mcq-001-08-007",
+      "question": "What happens if you nest HTML comments?",
+      "options": [
+        "Browsers will display an error",
+        "The inner comment will be ignored",
+        "It will close both comments",
+        "It is not officially supported"
+      ],
+      "correct_answer": 4,
+      "explanation": "HTML does not support nested comments; doing so may lead to unexpected results."
+    },
+    {
+      "id": "mcq-001-08-008",
+      "question": "Is the following a valid HTML comment? `<!-- <p>This is a paragraph.</p> -->`",
+      "options": ["Yes", "No", "Only in HTML5", "Only in XHTML"],
+      "correct_answer": 1,
+      "explanation": "Yes, you can comment out HTML elements like this."
+    },
+    {
+      "id": "mcq-001-08-009",
+      "question": "Can you use HTML comments for hiding scripts from old browsers?",
+      "options": ["Yes", "No", "Only for CSS", "Only for HTML5"],
+      "correct_answer": 1,
+      "explanation": "HTML comments were once used to hide scripts from browsers that did not support JavaScript."
+    },
+    {
+      "id": "mcq-001-08-010",
+      "question": "Which will display a comment in your HTML source code?",
+      "options": [
+        "`<!-- Display this as a comment -->`",
+        "`<comment>Display this</comment>`",
+        "`// Display this`",
+        "`/* Display this */`"
+      ],
+      "correct_answer": 1,
+      "explanation": "Only the `<!-- ... -->` format is correct for HTML comments."
+    },
+    {
+      "id": "mcq-001-08-011",
+      "question": "Can HTML comments contain other HTML tags?",
+      "options": [
+        "Yes, but they will not be rendered",
+        "No, it will cause an error",
+        "Only in the `<head>` section",
+        "Only in the `<body>` section"
+      ],
+      "correct_answer": 1,
+      "explanation": "HTML comments can contain tags, but those tags will be ignored and not rendered."
+    },
+    {
+      "id": "mcq-001-08-012",
+      "question": "Which shortcut usually adds a comment in many code editors?",
+      "options": [
+        "`Ctrl + /`",
+        "`Ctrl + C`",
+        "`Ctrl + Shift + N`",
+        "`Alt + Enter`"
+      ],
+      "correct_answer": 1,
+      "explanation": "Most editors use `Ctrl + /` to toggle comments."
+    },
+    {
+      "id": "mcq-001-08-013",
+      "question": "Can you place comments between attributes of an HTML tag?",
+      "options": [
+        "Yes, always",
+        "No, it will break the tag",
+        "Only if the attribute is data-*",
+        "Only in self-closing tags"
+      ],
+      "correct_answer": 2,
+      "explanation": "Comments inside a tag's attribute list will break the tag."
+    },
+    {
+      "id": "mcq-001-08-014",
+      "question": "Will the comment `<!--- comment --->` work as expected?",
+      "options": [
+        "Yes, it's valid",
+        "No, it has too many dashes",
+        "Yes, but only in HTML4",
+        "Yes, but only in the `<head>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML comments must begin with exactly `<!--` and end with exactly `-->`."
+    },
+    {
+      "id": "mcq-001-08-015",
+      "question": "Is `<!-->` a valid HTML comment?",
+      "options": ["Yes", "No", "Only for empty comments", "Only in XHTML"],
+      "correct_answer": 2,
+      "explanation": "`<!-->` is not a valid comment, it must end with `-->`."
+    },
+    {
+      "id": "mcq-001-08-016",
+      "question": "Are comments visible to users in the browser?",
+      "options": [
+        "Yes, always",
+        "Only in the developer tools",
+        "No, never",
+        "Only in the page title"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML comments are not visible to users, except in the page source or developer tools."
+    },
+    {
+      "id": "mcq-001-08-017",
+      "question": "Can comments be used to store code documentation in HTML?",
+      "options": [
+        "Yes, that's a best practice",
+        "No, they are only for hiding code",
+        "Only in external files",
+        "Only in CSS"
+      ],
+      "correct_answer": 1,
+      "explanation": "HTML comments are often used for code documentation and notes."
+    },
+    {
+      "id": "mcq-001-08-018",
+      "question": "Is there a limit to the length of an HTML comment?",
+      "options": [
+        "Yes, 100 characters",
+        "Yes, 255 characters",
+        "No, there is no practical limit",
+        "Yes, only one line"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML comments can be of any reasonable length."
+    },
+    {
+      "id": "mcq-001-08-019",
+      "question": "Which is the correct way to comment out a block of HTML code?",
+      "options": [
+        "`<!-- <p>This is a paragraph</p> -->`",
+        "`// <p>This is a paragraph</p> //`",
+        "`/* <p>This is a paragraph</p> */`",
+        "`<!--- <p>This is a paragraph</p> --->`"
+      ],
+      "correct_answer": 1,
+      "explanation": "Wrap the code in `<!-- ... -->` to comment it out."
+    },
+    {
+      "id": "mcq-001-08-020",
+      "question": "What is the main benefit of using comments in HTML?",
+      "options": [
+        "They improve SEO",
+        "They help organize code and add explanations",
+        "They are visible to all users",
+        "They speed up loading time"
+      ],
+      "correct_answer": 2,
+      "explanation": "Comments help developers understand and organize the code."
+    }
+  ]
+}

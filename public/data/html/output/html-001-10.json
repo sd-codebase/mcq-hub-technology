@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-10-001",
+      "question": "What does this code render?\n\n```html\n<input type=\"text\" value=\"Hello\">\n```",
+      "output": "A text input box with the value 'Hello' pre-filled.",
+      "explanation": "The `value` attribute sets the default text inside the input box."
+    },
+    {
+      "id": "output-001-10-002",
+      "question": "What is displayed in the browser?\n\n```html\n<textarea rows=\"2\" cols=\"10\">Sample text</textarea>\n```",
+      "output": "A multi-line text area with 'Sample text' inside.",
+      "explanation": "The `<textarea>` tag shows a scrollable text box. The initial value is the text between the tags."
+    },
+    {
+      "id": "output-001-10-003",
+      "question": "What will the following HTML show?\n\n```html\n<select>\n  <option>Red</option>\n  <option>Green</option>\n</select>\n```",
+      "output": "A dropdown menu with 'Red' and 'Green' as options.",
+      "explanation": "The `<select>` tag creates a dropdown (select) menu."
+    },
+    {
+      "id": "output-001-10-004",
+      "question": "What is visible after rendering this code?\n\n```html\n<button disabled>Click Me</button>\n```",
+      "output": "A grayed-out button labeled 'Click Me' that cannot be clicked.",
+      "explanation": "The `disabled` attribute makes the button unclickable and visually faded."
+    },
+    {
+      "id": "output-001-10-005",
+      "question": "What does this HTML output?\n\n```html\n<input type=\"checkbox\" checked> Subscribe\n```",
+      "output": "A checked checkbox labeled 'Subscribe'.",
+      "explanation": "The `checked` attribute makes the checkbox selected by default."
+    },
+    {
+      "id": "output-001-10-006",
+      "question": "What is rendered by this code?\n\n```html\n<input type=\"radio\" name=\"opt\" value=\"1\"> One\n<input type=\"radio\" name=\"opt\" value=\"2\" checked> Two\n```",
+      "output": "Two radio buttons labeled 'One' and 'Two', with 'Two' selected by default.",
+      "explanation": "Radio buttons with the same name are grouped, only one can be selected at a time."
+    },
+    {
+      "id": "output-001-10-007",
+      "question": "What is shown?\n\n```html\n<input type=\"submit\" value=\"Send\">\n```",
+      "output": "A button labeled 'Send'.",
+      "explanation": "The `type=\"submit\"` input creates a form submission button."
+    },
+    {
+      "id": "output-001-10-008",
+      "question": "What happens when you render this HTML?\n\n```html\n<input type=\"file\">\n```",
+      "output": "A file picker button that allows the user to select a file from their device.",
+      "explanation": "The `type=\"file\"` input is used for uploading files."
+    },
+    {
+      "id": "output-001-10-009",
+      "question": "What does this code display?\n\n```html\n<input type=\"range\" min=\"0\" max=\"100\" value=\"25\">\n```",
+      "output": "A slider set to 25 (with a range from 0 to 100).",
+      "explanation": "The `type=\"range\"` input shows a slider interface."
+    },
+    {
+      "id": "output-001-10-010",
+      "question": "What is rendered by the following HTML?\n\n```html\n<input type=\"color\" value=\"#ff0000\">\n```",
+      "output": "A color picker with the color red selected by default.",
+      "explanation": "The `type=\"color\"` input allows users to pick a color."
+    },
+    {
+      "id": "output-001-10-011",
+      "question": "What is visible in the browser?\n\n```html\n<input type=\"date\" value=\"2025-12-31\">\n```",
+      "output": "A date picker input with '2025-12-31' selected.",
+      "explanation": "The `type=\"date\"` input lets users select a date."
+    },
+    {
+      "id": "output-001-10-012",
+      "question": "What happens with this code?\n\n```html\n<form>\n  <input type=\"submit\" value=\"Go\">\n</form>\n```",
+      "output": "A 'Go' button that submits the form when clicked.",
+      "explanation": "The button submits the enclosing form."
+    },
+    {
+      "id": "output-001-10-013",
+      "question": "What is shown when you render this HTML?\n\n```html\n<input type=\"hidden\" value=\"42\">\n```",
+      "output": "Nothing is visible.",
+      "explanation": "`type=\"hidden\"` inputs are not displayed in the browser."
+    },
+    {
+      "id": "output-001-10-014",
+      "question": "What does this code render?\n\n```html\n<input type=\"email\" placeholder=\"Your email\">\n```",
+      "output": "An email input box with placeholder text 'Your email'.",
+      "explanation": "The placeholder attribute shows faint instructional text until the user types."
+    },
+    {
+      "id": "output-001-10-015",
+      "question": "What is the result of this code?\n\n```html\n<input type=\"number\" min=\"1\" max=\"5\" value=\"3\">\n```",
+      "output": "A number input box with value 3 and up/down arrows, allowing numbers between 1 and 5.",
+      "explanation": "The min and max attributes limit the allowed input values."
+    },
+    {
+      "id": "output-001-10-016",
+      "question": "What is displayed?\n\n```html\n<button style=\"color: blue;\">Blue Button</button>\n```",
+      "output": "A button labeled 'Blue Button' with blue text.",
+      "explanation": "The `style` attribute applies inline CSS, changing the button's text color."
+    },
+    {
+      "id": "output-001-10-017",
+      "question": "What is rendered?\n\n```html\n<input type=\"search\" placeholder=\"Search here\">\n```",
+      "output": "A search input box with the placeholder 'Search here'.",
+      "explanation": "The `type=\"search\"` input is styled for search fields."
+    },
+    {
+      "id": "output-001-10-018",
+      "question": "What happens when this HTML is rendered?\n\n```html\n<input type=\"reset\" value=\"Clear\">\n```",
+      "output": "A button labeled 'Clear' that, when clicked, resets the form inputs to their default values.",
+      "explanation": "`type=\"reset\"` creates a reset button for forms."
+    },
+    {
+      "id": "output-001-10-019",
+      "question": "What do you see in the browser?\n\n```html\n<input type=\"tel\" placeholder=\"Phone number\">\n```",
+      "output": "A telephone input box with placeholder text 'Phone number'.",
+      "explanation": "`type=\"tel\"` is for phone numbers and may show a numeric keypad on mobile devices."
+    },
+    {
+      "id": "output-001-10-020",
+      "question": "What is rendered?\n\n```html\n<input type=\"url\" placeholder=\"Website URL\">\n```",
+      "output": "A URL input box with the placeholder 'Website URL'.",
+      "explanation": "`type=\"url\"` is for website addresses and may validate the input as a URL."
+    }
+  ]
+}

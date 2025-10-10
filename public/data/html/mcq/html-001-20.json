@@ -1,0 +1,104 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-20-001",
+      "question": "Which of the following is the correct file extension for an HTML file?",
+      "options": [".html", ".htm", "Both .html and .htm", ".doc"],
+      "correct_answer": 3,
+      "explanation": "Both `.html` and `.htm` are valid file extensions for HTML files, but `.html` is more commonly used."
+    },
+    {
+      "id": "mcq-001-20-002",
+      "question": "What is the maximum recommended length for a file name including its extension?",
+      "options": [
+        "8 characters",
+        "32 characters",
+        "255 characters",
+        "There is no limit"
+      ],
+      "correct_answer": 3,
+      "explanation": "255 characters is the maximum recommended length for file names on most modern file systems."
+    },
+    {
+      "id": "mcq-001-20-003",
+      "question": "What is the typical name given to the default home page file of a website?",
+      "options": ["home.html", "main.html", "index.html", "default.html"],
+      "correct_answer": 3,
+      "explanation": "`index.html` is the standard name for the default home page on most web servers."
+    },
+    {
+      "id": "mcq-001-20-004",
+      "question": "Which of the following file names is best for search engine optimization (SEO)?",
+      "options": [
+        "aboutus.html",
+        "about-us.html",
+        "AboutUs.html",
+        "about_us.html"
+      ],
+      "correct_answer": 2,
+      "explanation": "Using lowercase letters and hyphens, like `about-us.html`, is best for SEO and readability."
+    },
+    {
+      "id": "mcq-001-20-005",
+      "question": "Which of the following file names is invalid for an HTML file?",
+      "options": [
+        "contact.html",
+        "about us.html",
+        "products.html",
+        "services.html"
+      ],
+      "correct_answer": 2,
+      "explanation": "File names should not contain spaces. Use hyphens or underscores instead."
+    },
+    {
+      "id": "mcq-001-20-006",
+      "question": "Which character is recommended to use as a separator in HTML file names?",
+      "options": ["Space", "Hyphen (-)", "Comma (,)", "Period (.)"],
+      "correct_answer": 2,
+      "explanation": "Hyphens are recommended as separators in HTML file names for clarity and SEO."
+    },
+    {
+      "id": "mcq-001-20-007",
+      "question": "Which of the following is NOT a valid reason for using lowercase letters in HTML file names?",
+      "options": [
+        "To improve SEO",
+        "For consistency",
+        "To avoid case sensitivity issues",
+        "To make the file name longer"
+      ],
+      "correct_answer": 4,
+      "explanation": "Using lowercase letters does not make file names longer, but it is good for consistency and compatibility."
+    },
+    {
+      "id": "mcq-001-20-008",
+      "question": "Which file extension should NOT be used for HTML documents?",
+      "options": [".html", ".htm", ".txt", ".HTML"],
+      "correct_answer": 3,
+      "explanation": ".txt is a text file extension, not for HTML documents."
+    },
+    {
+      "id": "mcq-001-20-009",
+      "question": "If you name your HTML file `index.HTML`, will it work on all servers?",
+      "options": [
+        "Yes, always",
+        "No, never",
+        "Yes, on Windows but not on Linux",
+        "Yes, but may cause issues on case-sensitive servers"
+      ],
+      "correct_answer": 4,
+      "explanation": "Case-sensitive servers (like Linux) treat `index.html` and `index.HTML` as different files."
+    },
+    {
+      "id": "mcq-001-20-010",
+      "question": "Which of the following is best practice when naming HTML files?",
+      "options": [
+        "Use only numbers",
+        "Use special characters like @, #, %, &",
+        "Use lowercase letters and hyphens",
+        "Use spaces for readability"
+      ],
+      "correct_answer": 3,
+      "explanation": "Use lowercase letters and hyphens for compatibility and readability."
+    }
+  ]
+}

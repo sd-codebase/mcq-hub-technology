@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-09-001",
+      "question": "What is an HTML entity and why are entities used in HTML?",
+      "answer": "An HTML entity is a special code used to represent reserved characters, symbols, or invisible characters in HTML. Entities are used to display characters that have special meaning in HTML (like `<`, `>`, `&`) or to display characters not found on the keyboard.",
+      "explanation": "Entities prevent confusion between HTML code and visible content, ensuring that special characters display correctly."
+    },
+    {
+      "id": "interview-001-09-002",
+      "question": "How do you write the less-than (`<`) and greater-than (`>`) signs in HTML code?",
+      "answer": "Use `&lt;` for the less-than sign (`<`) and `&gt;` for the greater-than sign (`>`). Example:\n\n```html\n<p>&lt;div&gt;Content&lt;/div&gt;</p>\n```",
+      "explanation": "If you use `<` or `>` directly, the browser may interpret it as an HTML tag."
+    },
+    {
+      "id": "interview-001-09-003",
+      "question": "How do you display an ampersand (`&`) character on a web page?",
+      "answer": "Use the entity `&amp;` to display an ampersand (`&`). Example:\n\n```html\n<p>A &amp; B</p>\n```",
+      "explanation": "Using `&` alone could be mistaken for the start of an entity."
+    },
+    {
+      "id": "interview-001-09-004",
+      "question": "What is the syntax for writing an HTML entity?",
+      "answer": "HTML entities start with an ampersand (`&`), followed by the entity name or number, and end with a semicolon (`;`).\n- Named entity: `&copy;`\n- Numeric entity: `&#169;`\n- Hexadecimal entity: `&#xA9;`",
+      "explanation": "All three forms represent the copyright symbol (©)."
+    },
+    {
+      "id": "interview-001-09-005",
+      "question": "How do you display non-breaking spaces in HTML?",
+      "answer": "Use the entity `&nbsp;` to create a non-breaking space. Example:\n\n```html\n<p>Hello&nbsp;&nbsp;World</p>\n```",
+      "explanation": "`&nbsp;` prevents the browser from automatically breaking a line at that space."
+    },
+    {
+      "id": "interview-001-09-006",
+      "question": "Give examples of named entities for common symbols in HTML.",
+      "answer": "Examples:\n- `&copy;` for ©\n- `&reg;` for ®\n- `&trade;` for ™\n- `&euro;` for €\n- `&pound;` for £\n- `&yen;` for ¥",
+      "explanation": "Named entities are easier to remember and read than numeric or hex codes."
+    },
+    {
+      "id": "interview-001-09-007",
+      "question": "What is the difference between named, numeric, and hexadecimal entities?",
+      "answer": "- Named entities use a descriptive name (e.g., `&copy;`)\n- Numeric entities use a number (e.g., `&#169;`)\n- Hexadecimal entities use a hex number (e.g., `&#xA9;`)\nAll three display the same character.",
+      "explanation": "Not all browsers support every named entity, so numeric or hexadecimal entities may be safer for rare symbols."
+    },
+    {
+      "id": "interview-001-09-008",
+      "question": "How do you display special characters like quotes, apostrophes, and dashes in HTML?",
+      "answer": "Use entities such as `&quot;` for a double quote (`\"`), `&apos;` for a single quote (`'`), `&mdash;` for an em dash (—), and `&ndash;` for an en dash (–).",
+      "explanation": "Using entities ensures these characters display correctly and are not confused with HTML syntax."
+    },
+    {
+      "id": "interview-001-09-009",
+      "question": "How do you find the correct entity for a character you want to display?",
+      "answer": "You can use online resources like the W3C HTML Entities Reference or search for 'HTML entity for [character]'.",
+      "explanation": "Most code editors also provide autocomplete for common HTML entities."
+    },
+    {
+      "id": "interview-001-09-010",
+      "question": "Can you use entities for emoji and other Unicode symbols in HTML?",
+      "answer": "Yes, you can use numeric (decimal or hexadecimal) entities for emoji and other Unicode symbols. Example:\n\n```html\n<p>&#128512;</p>\n<p>&#x1F600;</p>\n```",
+      "explanation": "Both examples will display the 😀 emoji."
+    }
+  ]
+}

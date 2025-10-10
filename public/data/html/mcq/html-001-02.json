@@ -1,0 +1,179 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-02-001",
+      "question": "Who is credited with inventing HTML?",
+      "options": [
+        "Bill Gates",
+        "Tim Berners-Lee",
+        "James Gosling",
+        "Brendan Eich"
+      ],
+      "correct_answer": 2,
+      "explanation": "Tim Berners-Lee invented HTML in 1991 while working at CERN."
+    },
+    {
+      "id": "mcq-001-02-002",
+      "question": "In which year was HTML first proposed?",
+      "options": ["1989", "1991", "1995", "2000"],
+      "correct_answer": 2,
+      "explanation": "HTML was first proposed by Tim Berners-Lee in 1991."
+    },
+    {
+      "id": "mcq-001-02-003",
+      "question": "Which organization is primarily responsible for maintaining the HTML standard today?",
+      "options": ["W3C", "ECMA", "ISO", "IETF"],
+      "correct_answer": 1,
+      "explanation": "The World Wide Web Consortium (W3C), along with WHATWG, is responsible for maintaining the HTML standard."
+    },
+    {
+      "id": "mcq-001-02-004",
+      "question": "What was the main goal of creating HTML?",
+      "options": [
+        "To design desktop applications",
+        "To create web pages and share documents via the internet",
+        "To manage databases",
+        "To style web content"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML was created to allow the sharing and structuring of documents on the World Wide Web."
+    },
+    {
+      "id": "mcq-001-02-005",
+      "question": "What is the full form of CERN, the institution where HTML was invented?",
+      "options": [
+        "Central European Research Network",
+        "Conseil Européen pour la Recherche Nucléaire",
+        "Central Environmental Research Node",
+        "Center for European Research and Networking"
+      ],
+      "correct_answer": 2,
+      "explanation": "CERN stands for 'Conseil Européen pour la Recherche Nucléaire' (European Organization for Nuclear Research)."
+    },
+    {
+      "id": "mcq-001-02-006",
+      "question": "Which of the following is TRUE about the history of HTML?",
+      "options": [
+        "HTML was created after CSS and JavaScript",
+        "HTML was created before CSS and JavaScript",
+        "HTML and CSS were created together",
+        "JavaScript was invented before HTML"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML was created before CSS and JavaScript."
+    },
+    {
+      "id": "mcq-001-02-007",
+      "question": "The first web browser, also a web editor, was called:",
+      "options": ["Mosaic", "Netscape", "WorldWideWeb", "Internet Explorer"],
+      "correct_answer": 3,
+      "explanation": "WorldWideWeb, later renamed Nexus, was the first web browser and editor."
+    },
+    {
+      "id": "mcq-001-02-008",
+      "question": "Which version of HTML introduced the `<!DOCTYPE html>` declaration?",
+      "options": ["HTML 2.0", "HTML 3.2", "HTML 4.01", "HTML5"],
+      "correct_answer": 4,
+      "explanation": "HTML5 introduced the simplified `<!DOCTYPE html>` declaration."
+    },
+    {
+      "id": "mcq-001-02-009",
+      "question": "Which consortium joined WHATWG in maintaining the HTML standard in 2019?",
+      "options": ["ISO", "W3C", "IETF", "ECMA"],
+      "correct_answer": 2,
+      "explanation": "W3C and WHATWG agreed to work together on the HTML Living Standard from 2019."
+    },
+    {
+      "id": "mcq-001-02-010",
+      "question": "HTML was originally derived from which markup language?",
+      "options": ["XML", "SGML", "Markdown", "YAML"],
+      "correct_answer": 2,
+      "explanation": "HTML was originally a subset of SGML (Standard Generalized Markup Language)."
+    },
+    {
+      "id": "mcq-001-02-011",
+      "question": "What is the 'Living Standard' in the context of HTML?",
+      "options": [
+        "A fixed version of HTML",
+        "A continuously updated specification",
+        "A deprecated HTML version",
+        "A printed HTML manual"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML is now a 'Living Standard', meaning it is updated continuously."
+    },
+    {
+      "id": "mcq-001-02-012",
+      "question": "Which of the following HTML versions introduced support for multimedia elements like `<audio>` and `<video>`?",
+      "options": ["HTML 3.2", "HTML 4.01", "XHTML", "HTML5"],
+      "correct_answer": 4,
+      "explanation": "HTML5 introduced new multimedia elements like `<audio>` and `<video>`."
+    },
+    {
+      "id": "mcq-001-02-013",
+      "question": "Which technology came first: HTML or CSS?",
+      "options": ["CSS", "HTML", "They were released together", "JavaScript"],
+      "correct_answer": 2,
+      "explanation": "HTML was created before CSS."
+    },
+    {
+      "id": "mcq-001-02-014",
+      "question": "Which of the following is NOT a version of HTML?",
+      "options": ["HTML 2.0", "HTML 3.2", "HTML 4.01", "HTML 6.0"],
+      "correct_answer": 4,
+      "explanation": "There is no official HTML 6.0 version."
+    },
+    {
+      "id": "mcq-001-02-015",
+      "question": "In which decade did the development of HTML start?",
+      "options": ["1970s", "1980s", "1990s", "2000s"],
+      "correct_answer": 3,
+      "explanation": "Development of HTML started in the early 1990s."
+    },
+    {
+      "id": "mcq-001-02-016",
+      "question": "The first proposal for HTML contained how many tags?",
+      "options": ["8", "18", "22", "28"],
+      "correct_answer": 2,
+      "explanation": "Tim Berners-Lee's first proposal included 18 tags."
+    },
+    {
+      "id": "mcq-001-02-017",
+      "question": "Which of the following best describes HTML5?",
+      "options": [
+        "A static version",
+        "A living standard",
+        "A deprecated version",
+        "A browser plugin"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML5 is maintained as a living standard."
+    },
+    {
+      "id": "mcq-001-02-018",
+      "question": "What was a major reason for introducing XHTML?",
+      "options": [
+        "To make HTML more compatible with XML",
+        "To introduce multimedia elements",
+        "To support JavaScript",
+        "To enable CSS integration"
+      ],
+      "correct_answer": 1,
+      "explanation": "XHTML was introduced to make HTML stricter and more compatible with XML."
+    },
+    {
+      "id": "mcq-001-02-019",
+      "question": "Where was Tim Berners-Lee working when he created HTML?",
+      "options": ["MIT", "NASA", "CERN", "Google"],
+      "correct_answer": 3,
+      "explanation": "Tim Berners-Lee was working at CERN."
+    },
+    {
+      "id": "mcq-001-02-020",
+      "question": "Which group currently maintains the 'HTML Living Standard'?",
+      "options": ["W3C", "WHATWG", "IETF", "ISO"],
+      "correct_answer": 2,
+      "explanation": "WHATWG (Web Hypertext Application Technology Working Group) maintains the HTML Living Standard."
+    }
+  ]
+}

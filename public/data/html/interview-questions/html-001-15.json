@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-15-001",
+      "question": "What is the difference between HTML and CSS?",
+      "answer": "HTML is used to define the structure and content of a web page, while CSS is used to style and layout HTML elements. HTML provides the 'what', CSS provides the 'how it looks'.",
+      "explanation": "HTML tags describe elements like headings, paragraphs, and images. CSS rules control their colors, fonts, sizes, spacing, and positioning."
+    },
+    {
+      "id": "interview-001-15-002",
+      "question": "How do you link an external CSS file to an HTML document?",
+      "answer": "Use the `<link>` tag inside the `<head>` section:\n```html\n<link rel=\"stylesheet\" href=\"styles.css\">\n```",
+      "explanation": "This tells the browser where to find and load the stylesheet."
+    },
+    {
+      "id": "interview-001-15-003",
+      "question": "What is an inline style and how do you use it?",
+      "answer": "Inline styles are CSS rules added directly to an HTML element using the `style` attribute:\n```html\n<p style=\"color: red; font-size: 18px;\">Hello</p>\n```",
+      "explanation": "Inline styles only affect the specific element and override external or internal styles."
+    },
+    {
+      "id": "interview-001-15-004",
+      "question": "How can you write internal CSS in an HTML page?",
+      "answer": "Internal CSS is written inside a `<style>` block in the `<head>`:\n```html\n<style>\np { color: blue; }\n</style>\n```",
+      "explanation": "Internal CSS affects all matching elements in the page."
+    },
+    {
+      "id": "interview-001-15-005",
+      "question": "What is the difference between class and id selectors in CSS?",
+      "answer": "The `id` selector (`#id`) selects a single unique element, while the `class` selector (`.class`) selects one or more elements with the same class.",
+      "explanation": "IDs must be unique in a page, classes can be reused for grouping similar elements."
+    },
+    {
+      "id": "interview-001-15-006",
+      "question": "How do you select all `<p>` tags inside a `<div>` with class 'container' in CSS?",
+      "answer": "Use the descendant selector:\n```css\n.container p {\n  /* styles here */\n}\n```",
+      "explanation": "This applies the styles to all `<p>` elements inside elements with class 'container'."
+    },
+    {
+      "id": "interview-001-15-007",
+      "question": "How do you apply multiple classes to an HTML element?",
+      "answer": "List class names in the `class` attribute separated by spaces:\n```html\n<div class=\"box shadow\"></div>\n```",
+      "explanation": "Each class can apply different styles and can be combined for modular design."
+    },
+    {
+      "id": "interview-001-15-008",
+      "question": "What is the CSS box model?",
+      "answer": "The CSS box model describes how elements are rendered with content, padding, border, and margin:\n- Content: The actual text/image.\n- Padding: Space around content.\n- Border: Surrounds the padding.\n- Margin: Space outside the border.",
+      "explanation": "Understanding the box model is essential for accurate page layouts."
+    },
+    {
+      "id": "interview-001-15-009",
+      "question": "How can you change the font of all headings on a page using CSS?",
+      "answer": "Use a group selector for all heading tags:\n```css\nh1, h2, h3, h4, h5, h6 {\n  font-family: 'Arial', sans-serif;\n}\n```",
+      "explanation": "This applies the chosen font to all heading levels."
+    },
+    {
+      "id": "interview-001-15-010",
+      "question": "What is the difference between 'padding' and 'margin' in CSS?",
+      "answer": "`padding` is the space between an element's content and its border. `margin` is the space outside the border, between the element and others.",
+      "explanation": "Padding increases the space inside an element, margin increases the space outside."
+    }
+  ]
+}

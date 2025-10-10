@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-11-001",
+      "question": "What is the difference between HTML and XML?",
+      "answer": "HTML is a markup language designed for displaying data and focusing on how data looks (presentation), while XML is a markup language designed for storing and transporting data with strict rules about structure and case sensitivity.",
+      "explanation": "HTML is forgiving and not case sensitive, while XML is strict, case sensitive, and requires every tag to be properly closed."
+    },
+    {
+      "id": "interview-001-11-002",
+      "question": "Can HTML and XML be used together? How?",
+      "answer": "Yes, XML can be embedded inside HTML using `<script type=\"application/xml\">` or by loading XML data with JavaScript for processing or display.",
+      "explanation": "This is useful when you want to separate data (XML) from presentation (HTML) and display or process data dynamically."
+    },
+    {
+      "id": "interview-001-11-003",
+      "question": "Are HTML tags allowed in XML documents?",
+      "answer": "No, HTML tags are not valid in XML unless they are declared in the XML's schema or DTD. XML documents use custom tags defined by the developer.",
+      "explanation": "Trying to use HTML tags in XML without proper declaration will cause parsing errors."
+    },
+    {
+      "id": "interview-001-11-004",
+      "question": "How do browsers handle XML files compared to HTML files?",
+      "answer": "Browsers display XML as plain text or a collapsible tree, not as a formatted web page. HTML is rendered visually with formatting.",
+      "explanation": "XML is intended for data storage and transfer, not for user interface, unless transformed (e.g., with XSLT)."
+    },
+    {
+      "id": "interview-001-11-005",
+      "question": "What are some common use-cases for XML in web development?",
+      "answer": "XML is used for configuration files, data storage, document formats (like SVG or RSS), and exchanging data between systems (e.g., SOAP web services).",
+      "explanation": "XML's strictness and self-describing nature make it ideal for structured data interchange."
+    },
+    {
+      "id": "interview-001-11-006",
+      "question": "What is XHTML and how is it related to HTML and XML?",
+      "answer": "XHTML is a stricter, XML-based version of HTML. It combines HTML's tags and structure with XML's syntax rules.",
+      "explanation": "XHTML documents must be well-formed and all tags must be properly closed and nested."
+    },
+    {
+      "id": "interview-001-11-007",
+      "question": "How are empty elements (like `<br>`) handled differently in HTML and XML?",
+      "answer": "In HTML, `<br>` is sufficient. In XML (and XHTML), empty elements must be self-closed: `<br />`.",
+      "explanation": "Omitting the slash in XML will cause parsing errors."
+    },
+    {
+      "id": "interview-001-11-008",
+      "question": "Can you use custom tags in HTML? What about in XML?",
+      "answer": "Custom tags can be used in XML freely, but in HTML, browsers ignore unknown tags and do not render them with any special behavior.",
+      "explanation": "Custom tags are standard practice in XML, but in HTML they are only useful with supporting JavaScript frameworks (e.g., Web Components)."
+    },
+    {
+      "id": "interview-001-11-009",
+      "question": "How do you display literal XML code on an HTML page?",
+      "answer": "Use HTML entities like `&lt;`, `&gt;`, and `&amp;` inside a `<pre>` or `<code>` tag to show XML as text.",
+      "explanation": "This prevents the browser from interpreting the XML as real elements."
+    },
+    {
+      "id": "interview-001-11-010",
+      "question": "What happens if an XML document is not well-formed? How does this differ from HTML?",
+      "answer": "If an XML document is not well-formed (e.g., unclosed tags, case mismatches), it will not be parsed at all. In HTML, browsers try to fix errors and still render the page.",
+      "explanation": "XML's strictness ensures data integrity, while HTML's forgiving nature prioritizes user experience."
+    }
+  ]
+}

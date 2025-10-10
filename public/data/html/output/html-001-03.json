@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-03-001",
+      "question": "What is displayed in the browser?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<header>\n  <h1>Welcome!</h1>\n</header>\n<section>\n  <p>This is a section.</p>\n</section>\n<footer>\n  <p>Footer text</p>\n</footer>\n</body>\n</html>\n```",
+      "output": "Welcome!\nThis is a section.\nFooter text",
+      "explanation": "HTML5 semantic elements like `<header>`, `<section>`, and `<footer>` structure the page but are rendered as block-level containers. The text inside is displayed."
+    },
+    {
+      "id": "output-001-03-002",
+      "question": "What is the result of this code?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<nav>\n  <a href=\"#\">Home</a> |\n  <a href=\"#\">About</a>\n</nav>\n</body>\n</html>\n```",
+      "output": "Home | About",
+      "explanation": "The `<nav>` element groups navigation links. The links and separator are shown in-line."
+    },
+    {
+      "id": "output-001-03-003",
+      "question": "What does the browser render?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<main>\n  <article>\n    <h2>Article Title</h2>\n    <p>Article content goes here.</p>\n  </article>\n</main>\n</body>\n</html>\n```",
+      "output": "Article Title\nArticle content goes here.",
+      "explanation": "HTML5 semantic elements like `<main>` and `<article>` help structure the page for accessibility and SEO. The content is displayed normally."
+    },
+    {
+      "id": "output-001-03-004",
+      "question": "Given this HTML, what is visible?\n\n```html\n<section>\n  <h2>News</h2>\n  <p>Latest updates</p>\n</section>\n```",
+      "output": "News\nLatest updates",
+      "explanation": "The `<section>` element structures the content; the text and heading are displayed."
+    },
+    {
+      "id": "output-001-03-005",
+      "question": "What is rendered for this code?\n\n```html\n<div>\n  <header>Header</header>\n  <footer>Footer</footer>\n</div>\n```",
+      "output": "Header\nFooter",
+      "explanation": "The `<header>` and `<footer>` tags inside a `<div>` simply render their contents."
+    },
+    {
+      "id": "output-001-03-006",
+      "question": "What appears in the browser?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<p>This page uses HTML5 semantic tags.</p>\n</body>\n</html>\n```",
+      "output": "This page uses HTML5 semantic tags.",
+      "explanation": "This is standard paragraph text rendered in the browser."
+    },
+    {
+      "id": "output-001-03-007",
+      "question": "What does the following display?\n\n```html\n<header>\n  <h1>Page Title</h1>\n  <p>Subtitle</p>\n</header>\n```",
+      "output": "Page Title\nSubtitle",
+      "explanation": "The `<header>` element renders its contents at the top of its section."
+    },
+    {
+      "id": "output-001-03-008",
+      "question": "What is the output?\n\n```html\n<nav>\n  <ul>\n    <li><a href=\"#\">Link 1</a></li>\n    <li><a href=\"#\">Link 2</a></li>\n  </ul>\n</nav>\n```",
+      "output": "A vertical (bulleted) list with 'Link 1' and 'Link 2' as clickable links.",
+      "explanation": "The `<nav>` element helps define navigation, but the list is displayed as a standard bulleted list."
+    },
+    {
+      "id": "output-001-03-009",
+      "question": "What is displayed when this is rendered?\n\n```html\n<aside>\n  <p>Sidebar content</p>\n</aside>\n```",
+      "output": "Sidebar content",
+      "explanation": "The `<aside>` element is for tangential or sidebar content; its contents appear as standard block text."
+    },
+    {
+      "id": "output-001-03-010",
+      "question": "What will the browser show?\n\n```html\n<article>\n  <h2>Blog Post</h2>\n  <p>This is a blog post.</p>\n</article>\n```",
+      "output": "Blog Post\nThis is a blog post.",
+      "explanation": "The `<article>` element is for self-contained content. The heading and paragraph are displayed."
+    },
+    {
+      "id": "output-001-03-011",
+      "question": "What is shown?\n\n```html\n<footer>\n  <p>&copy; 2025 Example</p>\n</footer>\n```",
+      "output": "© 2025 Example",
+      "explanation": "The `<footer>` tag marks footer content, but just displays its child content."
+    },
+    {
+      "id": "output-001-03-012",
+      "question": "What will be rendered?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<header><h1>Site</h1></header>\n<main>Main content</main>\n<footer>Footer info</footer>\n</body>\n</html>\n```",
+      "output": "Site\nMain content\nFooter info",
+      "explanation": "HTML5 semantic tags present content in logical regions; all text is displayed in order."
+    },
+    {
+      "id": "output-001-03-013",
+      "question": "What is the result of this code?\n\n```html\n<section>\n  <article>\n    <h3>Nested Article</h3>\n    <p>Inside a section.</p>\n  </article>\n</section>\n```",
+      "output": "Nested Article\nInside a section.",
+      "explanation": "Nested semantic elements are allowed and their content is displayed as written."
+    },
+    {
+      "id": "output-001-03-014",
+      "question": "What does this produce?\n\n```html\n<nav>Navigation</nav>\n<main>Main</main>\n<aside>Aside</aside>\n```",
+      "output": "Navigation\nMain\nAside",
+      "explanation": "Semantic tags organize the content but display their content directly."
+    },
+    {
+      "id": "output-001-03-015",
+      "question": "What will the browser render?\n\n```html\n<!DOCTYPE html>\n<html>\n<body>\n<section>\n  <h2>Features</h2>\n  <ul>\n    <li>HTML5</li>\n    <li>CSS3</li>\n  </ul>\n</section>\n</body>\n</html>\n```",
+      "output": "Features\n- HTML5\n- CSS3",
+      "explanation": "The section contains a heading and a bulleted list."
+    },
+    {
+      "id": "output-001-03-016",
+      "question": "What is the visible output?\n\n```html\n<main>\n  <p>Hello, world!</p>\n</main>\n```",
+      "output": "Hello, world!",
+      "explanation": "The `<main>` tag contains the main page content."
+    },
+    {
+      "id": "output-001-03-017",
+      "question": "What does this render?\n\n```html\n<aside><strong>Note:</strong> This is important.</aside>\n```",
+      "output": "Note: This is important. (with 'Note:' in bold)",
+      "explanation": "The `<strong>` tag makes 'Note:' bold. The `<aside>` content appears as block text."
+    },
+    {
+      "id": "output-001-03-018",
+      "question": "What will be shown if you open this HTML?\n\n```html\n<header>\n  <nav>\n    <a href=\"#\">Menu</a>\n  </nav>\n</header>\n```",
+      "output": "Menu",
+      "explanation": "The `<nav>` inside `<header>` displays the link 'Menu'."
+    },
+    {
+      "id": "output-001-03-019",
+      "question": "What is the browser output for this code?\n\n```html\n<main>\n  <section>\n    <h1>Summary</h1>\n    <p>Overview of content.</p>\n  </section>\n</main>\n```",
+      "output": "Summary\nOverview of content.",
+      "explanation": "The tags structure the page, but the heading and paragraph are rendered."
+    },
+    {
+      "id": "output-001-03-020",
+      "question": "What does the following show?\n\n```html\n<footer>Contact: admin@example.com</footer>\n```",
+      "output": "Contact: admin@example.com",
+      "explanation": "The content of the `<footer>` tag is displayed as normal text."
+    }
+  ]
+}

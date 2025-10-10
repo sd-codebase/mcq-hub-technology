@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-12-001",
+      "question": "What is the difference between HTML and XHTML?",
+      "answer": "HTML is a markup language designed for creating web pages, with a forgiving syntax that allows for some errors. XHTML is a stricter, XML-based version of HTML that requires well-formed code (proper nesting, lowercase tags, all tags closed).",
+      "explanation": "Browsers are lenient with HTML but strict with XHTML. XHTML documents must be valid XML documents."
+    },
+    {
+      "id": "interview-001-12-002",
+      "question": "What are the main rules that distinguish XHTML from HTML?",
+      "answer": "XHTML requires:\n- All tags must be properly nested and closed.\n- Tag and attribute names must be lowercase.\n- All attribute values must be quoted.\n- Empty elements (like `<br>`, `<img>`) must be self-closed (`<br />`, `<img />`).",
+      "explanation": "These rules ensure XHTML documents can be parsed as XML."
+    },
+    {
+      "id": "interview-001-12-003",
+      "question": "How do you declare an XHTML document?",
+      "answer": "Use a specific doctype at the top of the document, for example:\n```html\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n```",
+      "explanation": "This doctype tells browsers and parsers to expect XHTML syntax."
+    },
+    {
+      "id": "interview-001-12-004",
+      "question": "Can modern browsers display XHTML documents? How?",
+      "answer": "Yes, modern browsers can display XHTML documents if served with the correct MIME type (`application/xhtml+xml`). If served as `text/html`, browsers treat it as regular HTML.",
+      "explanation": "Serving as XML enforces stricter parsing rules and may cause errors for invalid syntax."
+    },
+    {
+      "id": "interview-001-12-005",
+      "question": "What is the MIME type for XHTML, and why is it important?",
+      "answer": "The correct MIME type for XHTML is `application/xhtml+xml`. It tells browsers to parse the document as XML.",
+      "explanation": "If XHTML is served with `text/html`, browsers use HTML's lenient parsing instead."
+    },
+    {
+      "id": "interview-001-12-006",
+      "question": "How are empty elements like `<img>` or `<br>` written in XHTML?",
+      "answer": "In XHTML, empty elements must be self-closed with a space and slash: `<img src=\"...\" alt=\"...\" />`, `<br />`.",
+      "explanation": "Failing to self-close empty tags causes parsing errors in XHTML."
+    },
+    {
+      "id": "interview-001-12-007",
+      "question": "How do you comment code in XHTML?",
+      "answer": "Comments in XHTML use the same syntax as HTML:\n```html\n<!-- This is a comment -->\n```",
+      "explanation": "Comments must not contain two consecutive dashes (--) within the comment content."
+    },
+    {
+      "id": "interview-001-12-008",
+      "question": "Can you use JavaScript and CSS with XHTML? Are there any differences?",
+      "answer": "Yes, but inline JavaScript and CSS must follow XML rules. For example, attribute values in event handlers must be quoted, and script/style blocks should be wrapped in CDATA if using XML MIME type.",
+      "explanation": "CDATA prevents parsing errors from characters like `<` or `&` inside scripts/styles."
+    },
+    {
+      "id": "interview-001-12-009",
+      "question": "What are the advantages and disadvantages of using XHTML?",
+      "answer": "**Advantages:**\n- Enforces stricter, more consistent code\n- Well-formed, so can be parsed by XML tools\n\n**Disadvantages:**\n- More error-prone (small mistakes can break the page)\n- Less forgiving than HTML",
+      "explanation": "XHTML is useful for data exchange but can be less convenient for web development due to strictness."
+    },
+    {
+      "id": "interview-001-12-010",
+      "question": "How do you convert an HTML document to XHTML?",
+      "answer": "Steps:\n1. Use the XHTML doctype.\n2. Make all tag and attribute names lowercase.\n3. Quote all attribute values.\n4. Self-close empty elements.\n5. Ensure all tags are properly nested and closed.",
+      "explanation": "Automated tools or editors can help with conversion by highlighting non-XHTML-compliant code."
+    }
+  ]
+}

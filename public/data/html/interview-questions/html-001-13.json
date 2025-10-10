@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-13-001",
+      "question": "What is semantic HTML and why is it important?",
+      "answer": "Semantic HTML uses elements that convey meaning about the structure and content of a web page, such as `<header>`, `<footer>`, `<article>`, and `<nav>`, instead of non-semantic tags like `<div>` or `<span>`.",
+      "explanation": "Semantic tags improve accessibility, SEO, and code readability by making the page's structure clear to browsers, search engines, and assistive technologies."
+    },
+    {
+      "id": "interview-001-13-002",
+      "question": "List five semantic HTML elements and describe their typical use.",
+      "answer": "- `<header>`: Represents introductory content or navigation links.\n- `<nav>`: Contains the main navigation links of a page.\n- `<main>`: Contains the dominant content unique to the document.\n- `<article>`: Contains self-contained content that could be distributed independently.\n- `<footer>`: Contains information about the author, copyright, or related links at the end of a section.",
+      "explanation": "These elements describe their content's role, making the page easier to understand for both humans and machines."
+    },
+    {
+      "id": "interview-001-13-003",
+      "question": "How does semantic HTML improve accessibility?",
+      "answer": "Semantic HTML provides cues to screen readers and assistive technologies about the structure and purpose of content, making it easier for users with disabilities to navigate and understand the page.",
+      "explanation": "For example, using `<nav>` lets screen readers identify navigation areas, and `<main>` indicates where the main content is."
+    },
+    {
+      "id": "interview-001-13-004",
+      "question": "What is the difference between `<section>`, `<article>`, and `<div>`?",
+      "answer": "- `<section>` groups related content, typically with a heading.\n- `<article>` contains independent, self-contained content.\n- `<div>` is a generic container with no semantic meaning.",
+      "explanation": "Use `<section>` and `<article>` for meaningful grouping; use `<div>` only when no semantic element fits."
+    },
+    {
+      "id": "interview-001-13-005",
+      "question": "When should you use `<aside>` in your HTML?",
+      "answer": "Use `<aside>` for content tangentially related to the main content, such as sidebars, pull quotes, or advertisements.",
+      "explanation": "This helps browsers and assistive technologies identify secondary content."
+    },
+    {
+      "id": "interview-001-13-006",
+      "question": "How does semantic HTML benefit search engine optimization (SEO)?",
+      "answer": "Semantic elements help search engines understand the meaning and hierarchy of the content, improving how pages are indexed and ranked.",
+      "explanation": "For example, search engines give more weight to text in `<main>`, `<header>`, `<nav>`, and `<article>` tags."
+    },
+    {
+      "id": "interview-001-13-007",
+      "question": "How can you use semantic tags to improve code maintainability?",
+      "answer": "Semantic tags make the HTML structure clearer, so developers can easily understand the purpose of each section and update the code efficiently.",
+      "explanation": "Clear structure reduces bugs and makes collaboration easier."
+    },
+    {
+      "id": "interview-001-13-008",
+      "question": "What would be the semantic replacement for a `<div id=\"navigation\">` element?",
+      "answer": "Replace it with a `<nav>` element:\n\n```html\n<nav>\n  <!-- navigation links -->\n</nav>\n```",
+      "explanation": "This change adds meaning for browsers, search engines, and assistive tech."
+    },
+    {
+      "id": "interview-001-13-009",
+      "question": "Can you nest semantic elements inside each other? Give an example.",
+      "answer": "Yes, semantic elements can be nested. For example:\n\n```html\n<article>\n  <header>...</header>\n  <section>...</section>\n  <footer>...</footer>\n</article>\n```",
+      "explanation": "Nesting reflects the logical structure of the content."
+    },
+    {
+      "id": "interview-001-13-010",
+      "question": "Is it OK to use non-semantic elements like `<div>` and `<span>`? When should you use them?",
+      "answer": "Yes, use `<div>` and `<span>` when no suitable semantic element exists. They are useful for grouping or styling content that doesn't carry specific meaning.",
+      "explanation": "Prefer semantic tags when possible, but use non-semantic ones when adding structure or styles without implying meaning."
+    }
+  ]
+}

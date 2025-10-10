@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-18-001",
+      "question": "What is the difference between static and dynamic web pages?",
+      "answer": "Static web pages are fixed and display the same content for every visitor, while dynamic web pages can change content in response to user interactions, time, or data from a server.",
+      "explanation": "Static pages are typically built with only HTML and CSS. Dynamic pages use technologies like JavaScript, server-side scripting, and databases."
+    },
+    {
+      "id": "interview-001-18-002",
+      "question": "How can you make a simple static webpage interactive?",
+      "answer": "By adding JavaScript to the page, you can respond to user events like clicks, input, or mouse movement. For example:\n```html\n<button onclick=\"alert('Hello!')\">Click Me</button>\n```",
+      "explanation": "JavaScript lets you manipulate the DOM and handle user interactions."
+    },
+    {
+      "id": "interview-001-18-003",
+      "question": "What is the Document Object Model (DOM) in the context of web pages?",
+      "answer": "The DOM is a programming interface that represents the structure of an HTML document as a tree of objects. JavaScript can use the DOM to read or modify content, structure, and styles on the page.",
+      "explanation": "The DOM allows for dynamic changes to the page after it has loaded."
+    },
+    {
+      "id": "interview-001-18-004",
+      "question": "Give an example of how JavaScript can change the content of a web page after it has loaded.",
+      "answer": "You can use JavaScript like this:\n```html\n<p id=\"greeting\">Hello</p>\n<script>\ndocument.getElementById('greeting').textContent = 'Hi, user!';\n</script>\n```",
+      "explanation": "This changes the text inside the paragraph after the page loads."
+    },
+    {
+      "id": "interview-001-18-005",
+      "question": "What is an event in JavaScript and how do you handle it?",
+      "answer": "An event is an action or occurrence (like a click, keypress, or page load) that your code can respond to. You handle it by adding an event listener:\n```javascript\ndocument.querySelector('button').addEventListener('click', function() {\n  alert('Button clicked!');\n});\n```",
+      "explanation": "Event listeners allow you to run code in response to user actions."
+    },
+    {
+      "id": "interview-001-18-006",
+      "question": "How do you update the style of an HTML element using JavaScript?",
+      "answer": "You can change style properties directly:\n```javascript\ndocument.getElementById('mydiv').style.backgroundColor = 'yellow';\n```",
+      "explanation": "This changes the element's appearance without reloading the page."
+    },
+    {
+      "id": "interview-001-18-007",
+      "question": "What is AJAX and how does it contribute to dynamic web pages?",
+      "answer": "AJAX (Asynchronous JavaScript and XML) is a technique for loading data from a server without reloading the entire page, enabling dynamic updates.",
+      "explanation": "AJAX allows for partial page updates, like refreshing a chat window or loading new articles."
+    },
+    {
+      "id": "interview-001-18-008",
+      "question": "How can you store user data on the client side for dynamic behavior?",
+      "answer": "You can use Web Storage APIs like `localStorage` or `sessionStorage` to save data in the browser:",
+      "explanation": "This data persists across page loads (localStorage) or sessions (sessionStorage) and can be used to remember user preferences."
+    },
+    {
+      "id": "interview-001-18-009",
+      "question": "What are some common use cases for dynamic web pages?",
+      "answer": "Common uses include user authentication, real-time updates (like notifications), personalized content, interactive forms, and dashboards.",
+      "explanation": "Dynamic pages improve user experience by making sites responsive to user input and current data."
+    },
+    {
+      "id": "interview-001-18-010",
+      "question": "How does server-side scripting (like PHP or Node.js) make a web page dynamic?",
+      "answer": "Server-side scripts generate HTML content based on user requests, database data, or application state before sending it to the browser.",
+      "explanation": "This allows each user to see personalized or real-time content, such as user dashboards, search results, or shopping carts."
+    }
+  ]
+}

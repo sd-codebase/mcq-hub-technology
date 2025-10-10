@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-02-001",
+      "question": "What is displayed in the browser with this code?\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n  <title>HTML History</title>\n</head>\n<body>\n  <p>HTML was invented by Tim Berners-Lee.</p>\n</body>\n</html>\n```",
+      "output": "HTML was invented by Tim Berners-Lee.",
+      "explanation": "The `<p>` tag displays the sentence directly in the browser."
+    },
+    {
+      "id": "output-001-02-002",
+      "question": "What output do you see?\n\n```html\n<p>&lt;!-- HTML stands for HyperText Markup Language --&gt;</p>\n```",
+      "output": "<!-- HTML stands for HyperText Markup Language -->",
+      "explanation": "Using `&lt;` and `&gt;` displays literal angle brackets and the comment as text, not as an actual HTML comment."
+    },
+    {
+      "id": "output-001-02-003",
+      "question": "What will the browser show for this HTML?\n\n```html\n<h2>HTML 5</h2>\n<p>HTML5 introduced new elements like &lt;header&gt;, &lt;footer&gt;, and &lt;section&gt;.</p>\n```",
+      "output": "A subheading 'HTML 5' and below it the text: HTML5 introduced new elements like <header>, <footer>, and <section>.",
+      "explanation": "Entities are used to show literal tags. `<h2>` creates a subheading."
+    },
+    {
+      "id": "output-001-02-004",
+      "question": "Given this code, what is rendered?\n\n```html\n<p>The first version of HTML was released in 1991.</p>\n```",
+      "output": "The first version of HTML was released in 1991.",
+      "explanation": "The `<p>` element displays the text as a paragraph."
+    },
+    {
+      "id": "output-001-02-005",
+      "question": "What does the browser display?\n\n```html\n<p>HTML is maintained by the <b>W3C</b> and <b>WHATWG</b>.</p>\n```",
+      "output": "HTML is maintained by the W3C and WHATWG. (Both names are bold)",
+      "explanation": "The `<b>` tag makes 'W3C' and 'WHATWG' bold."
+    },
+    {
+      "id": "output-001-02-006",
+      "question": "What will you see?\n\n```html\n<p>HTML originally had 18 tags.</p>\n```",
+      "output": "HTML originally had 18 tags.",
+      "explanation": "The sentence is displayed as-is inside the paragraph."
+    },
+    {
+      "id": "output-001-02-007",
+      "question": "What appears when you open this HTML?\n\n```html\n<p>&#169; 1991 CERN</p>\n```",
+      "output": "© 1991 CERN",
+      "explanation": "The `&#169;` entity is the copyright symbol."
+    },
+    {
+      "id": "output-001-02-008",
+      "question": "What is shown in the browser?\n\n```html\n<p>HTML was derived from SGML.</p>\n```",
+      "output": "HTML was derived from SGML.",
+      "explanation": "Simple paragraph text is rendered."
+    },
+    {
+      "id": "output-001-02-009",
+      "question": "What will the following display?\n\n```html\n<p>Tim Berners-Lee worked at CERN when he created HTML.</p>\n```",
+      "output": "Tim Berners-Lee worked at CERN when he created HTML.",
+      "explanation": "The `<p>` tag displays the provided text as a paragraph."
+    },
+    {
+      "id": "output-001-02-010",
+      "question": "What is the output?\n\n```html\n<p>HTML5 introduced the &lt;video&gt; and &lt;audio&gt; tags.</p>\n```",
+      "output": "HTML5 introduced the <video> and <audio> tags.",
+      "explanation": "Entities are used for literal angle brackets, so the tag names are shown as text."
+    },
+    {
+      "id": "output-001-02-011",
+      "question": "What appears when this is rendered?\n\n```html\n<p>The W3C and WHATWG both maintain HTML standards.</p>\n```",
+      "output": "The W3C and WHATWG both maintain HTML standards.",
+      "explanation": "The `<p>` element shows the text as a paragraph."
+    },
+    {
+      "id": "output-001-02-012",
+      "question": "What will show in the browser?\n\n```html\n<p>HTML stands for <b>HyperText Markup Language</b>.</p>\n```",
+      "output": "HTML stands for HyperText Markup Language. (The definition is bold)",
+      "explanation": "The `<b>` tag makes 'HyperText Markup Language' bold."
+    },
+    {
+      "id": "output-001-02-013",
+      "question": "What is displayed?\n\n```html\n<p>HTML5 is a living standard.</p>\n```",
+      "output": "HTML5 is a living standard.",
+      "explanation": "The text is shown as a paragraph."
+    },
+    {
+      "id": "output-001-02-014",
+      "question": "What will the output be?\n\n```html\n<p>The <i>WorldWideWeb</i> browser was the first web browser.</p>\n```",
+      "output": "The WorldWideWeb browser was the first web browser. (The browser name is italicized)",
+      "explanation": "The `<i>` tag makes 'WorldWideWeb' italic."
+    },
+    {
+      "id": "output-001-02-015",
+      "question": "What is shown in the browser?\n\n```html\n<p>HTML was created to share documents on the web.</p>\n```",
+      "output": "HTML was created to share documents on the web.",
+      "explanation": "It's a simple paragraph displayed as-is."
+    },
+    {
+      "id": "output-001-02-016",
+      "question": "What is rendered?\n\n```html\n<p>The first HTML proposal had 18 tags.</p>\n```",
+      "output": "The first HTML proposal had 18 tags.",
+      "explanation": "The text is displayed inside a paragraph."
+    },
+    {
+      "id": "output-001-02-017",
+      "question": "What is the browser output?\n\n```html\n<p>HTML5 supports modern multimedia and semantic elements.</p>\n```",
+      "output": "HTML5 supports modern multimedia and semantic elements.",
+      "explanation": "Simple paragraph text; the browser renders the content as shown."
+    },
+    {
+      "id": "output-001-02-018",
+      "question": "What will you see for this code?\n\n```html\n<p>HTML is a markup language, not a programming language.</p>\n```",
+      "output": "HTML is a markup language, not a programming language.",
+      "explanation": "The browser displays the sentence as a paragraph."
+    },
+    {
+      "id": "output-001-02-019",
+      "question": "What does this code display?\n\n```html\n<p>HTML5 simplified the doctype to &lt;!DOCTYPE html&gt;.</p>\n```",
+      "output": "HTML5 simplified the doctype to <!DOCTYPE html>.",
+      "explanation": "Entities are used so the doctype is displayed as text."
+    },
+    {
+      "id": "output-001-02-020",
+      "question": "What is shown?\n\n```html\n<p>CERN stands for Conseil Européen pour la Recherche Nucléaire.</p>\n```",
+      "output": "CERN stands for Conseil Européen pour la Recherche Nucléaire.",
+      "explanation": "Displays the sentence as a paragraph."
+    }
+  ]
+}

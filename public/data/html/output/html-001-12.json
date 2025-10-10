@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-12-001",
+      "question": "What will the browser display?\n\n```html\n<p>Hello</p>\n<P>World</P>\n```",
+      "output": "Hello\nWorld",
+      "explanation": "HTML tags are not case sensitive, so both <p> and <P> are valid and displayed normally."
+    },
+    {
+      "id": "output-001-12-002",
+      "question": "What is rendered?\n\n```html\n<p>First</p><P>Second</P>\n```",
+      "output": "First\nSecond",
+      "explanation": "HTML is case-insensitive for tag names, so both versions of the <p> tag work."
+    },
+    {
+      "id": "output-001-12-003",
+      "question": "What happens in XHTML with this code?\n\n```html\n<P>Text</P>\n```",
+      "output": "May cause a validation error or render incorrectly in strict XHTML.",
+      "explanation": "XHTML is case sensitive and requires lowercase tags. Uppercase tags may not be recognized."
+    },
+    {
+      "id": "output-001-12-004",
+      "question": "What is the output?\n\n```html\n<p CLASS=\"greet\">Hi!</p>\n```",
+      "output": "Hi!",
+      "explanation": "HTML attribute names are not case sensitive, so CLASS and class are treated the same."
+    },
+    {
+      "id": "output-001-12-005",
+      "question": "What is displayed?\n\n```html\n<p Id=\"msg\">Hello</p>\n```",
+      "output": "Hello",
+      "explanation": "HTML attribute names are not case sensitive, so 'Id' and 'id' are equivalent."
+    },
+    {
+      "id": "output-001-12-006",
+      "question": "What is shown?\n\n```html\n<p>5 &Gt; 3</p>\n```",
+      "output": "5 > 3",
+      "explanation": "HTML named entities (like &gt;) are not case sensitive, but it is best practice to use lowercase."
+    },
+    {
+      "id": "output-001-12-007",
+      "question": "What will you see in HTML5?\n\n```html\n<DIV>Uppercase div</DIV>\n```",
+      "output": "Uppercase div",
+      "explanation": "HTML5 is not case sensitive, so uppercase tags render just like lowercase."
+    },
+    {
+      "id": "output-001-12-008",
+      "question": "What is rendered?\n\n```html\n<p>MixED CaSe TaGS</p>\n```",
+      "output": "MixED CaSe TaGS",
+      "explanation": "HTML tag and attribute names are not case sensitive, but content inside tags preserves its case."
+    },
+    {
+      "id": "output-001-12-009",
+      "question": "What is the result in the browser?\n\n```html\n<BR>\n<Br>\n<br>\n```",
+      "output": "Three line breaks",
+      "explanation": "HTML is not case sensitive for tag names, so all three are valid."
+    },
+    {
+      "id": "output-001-12-010",
+      "question": "What is displayed?\n\n```html\n<p id=\"first\">A</p>\n<p ID=\"second\">B</p>\n```",
+      "output": "A\nB",
+      "explanation": "The id attribute is not case sensitive in HTML, so both are rendered normally."
+    },
+    {
+      "id": "output-001-12-011",
+      "question": "What happens if you use uppercase in a custom data attribute?\n\n```html\n<div DATA-NAME=\"test\"></div>\n```",
+      "output": "",
+      "explanation": "HTML treats attribute names as case-insensitive, but JavaScript expects lowercase (data-name). Using uppercase may cause issues with JS access."
+    },
+    {
+      "id": "output-001-12-012",
+      "question": "What does this render?\n\n```html\n<img SRC=\"cat.png\" ALT=\"Cat\">\n```",
+      "output": "The image 'cat.png' or the text 'Cat' if the image can't be loaded.",
+      "explanation": "HTML attribute names are not case sensitive, so SRC and ALT work like src and alt."
+    },
+    {
+      "id": "output-001-12-013",
+      "question": "What is the output?\n\n```html\n<p>Case Sensitivity Test</p>\n```",
+      "output": "Case Sensitivity Test",
+      "explanation": "Content inside tags is always rendered as written, regardless of tag case."
+    },
+    {
+      "id": "output-001-12-014",
+      "question": "How is this rendered in HTML5?\n\n```html\n<IMG src=\"dog.jpg\" alt=\"Dog\">\n```",
+      "output": "The image 'dog.jpg' or the alt text 'Dog' if not found.",
+      "explanation": "Uppercase tag names are valid in HTML5."
+    },
+    {
+      "id": "output-001-12-015",
+      "question": "What happens if you use uppercase for the doctype?\n\n```html\n<!DOCTYPE HTML>\n<html><body>Hi</body></html>\n```",
+      "output": "Hi",
+      "explanation": "HTML5 doctype is case-insensitive; the content is rendered as normal."
+    },
+    {
+      "id": "output-001-12-016",
+      "question": "What is the visible result?\n\n```html\n<p>Title: <SPAN>Example</SPAN></p>\n```",
+      "output": "Title: Example",
+      "explanation": "HTML is not case sensitive for tag names, so <SPAN> works as <span>."
+    },
+    {
+      "id": "output-001-12-017",
+      "question": "What is shown?\n\n```html\n<p class=\"A\">Test</p>\n```",
+      "output": "Test",
+      "explanation": "The class attribute is not case sensitive in HTML, but CSS selectors are case sensitive depending on the OS and server."
+    },
+    {
+      "id": "output-001-12-018",
+      "question": "What is rendered?\n\n```html\n<p>HTML is not CaSe SeNsItIvE for tags</p>\n```",
+      "output": "HTML is not CaSe SeNsItIvE for tags",
+      "explanation": "HTML tag names are not case sensitive, but text content is displayed exactly as written."
+    },
+    {
+      "id": "output-001-12-019",
+      "question": "What will appear?\n\n```html\n<BoDy><H1>Uppercase body and heading</H1></BoDy>\n```",
+      "output": "Uppercase body and heading",
+      "explanation": "HTML tag names can be uppercase or lowercase; both work in HTML5."
+    },
+    {
+      "id": "output-001-12-020",
+      "question": "What is the effect of different cases in tag and attribute names?\n\n```html\n<p CLASS=\"demo\">Demo</p>\n```",
+      "output": "Demo",
+      "explanation": "HTML does not care about case in tag or attribute names, so CLASS works as class."
+    }
+  ]
+}

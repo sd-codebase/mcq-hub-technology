@@ -1,0 +1,164 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-17-001",
+      "question": "Which browser engine is used by Google Chrome?",
+      "options": ["Trident", "Blink", "Gecko", "WebKit"],
+      "correct_answer": 2,
+      "explanation": "Google Chrome uses the Blink rendering engine."
+    },
+    {
+      "id": "mcq-001-17-002",
+      "question": "Which rendering engine is used by Mozilla Firefox?",
+      "options": ["Blink", "Trident", "Presto", "Gecko"],
+      "correct_answer": 4,
+      "explanation": "Mozilla Firefox uses the Gecko rendering engine."
+    },
+    {
+      "id": "mcq-001-17-003",
+      "question": "Which browser was originally powered by the Trident engine?",
+      "options": ["Internet Explorer", "Safari", "Opera", "Firefox"],
+      "correct_answer": 1,
+      "explanation": "Internet Explorer used the Trident engine."
+    },
+    {
+      "id": "mcq-001-17-004",
+      "question": "What is the rendering engine used by Apple Safari?",
+      "options": ["WebKit", "Blink", "Presto", "Gecko"],
+      "correct_answer": 1,
+      "explanation": "Apple Safari uses the WebKit engine."
+    },
+    {
+      "id": "mcq-001-17-005",
+      "question": "Which engine was Opera using before switching to Blink?",
+      "options": ["Blink", "Gecko", "Presto", "Trident"],
+      "correct_answer": 3,
+      "explanation": "Opera originally used Presto before switching to Blink."
+    },
+    {
+      "id": "mcq-001-17-006",
+      "question": "What is the main purpose of a browser engine?",
+      "options": [
+        "To connect to the Internet",
+        "To render HTML, CSS, and execute JavaScript",
+        "To download files",
+        "To provide email services"
+      ],
+      "correct_answer": 2,
+      "explanation": "A browser engine renders HTML and CSS, and executes JavaScript."
+    },
+    {
+      "id": "mcq-001-17-007",
+      "question": "Which browser uses WebKit on iOS devices?",
+      "options": ["Chrome", "Safari", "Firefox", "All browsers"],
+      "correct_answer": 4,
+      "explanation": "Due to Apple's policies, all browsers on iOS use WebKit."
+    },
+    {
+      "id": "mcq-001-17-008",
+      "question": "Which browser engine is the foundation for the Blink engine?",
+      "options": ["Trident", "Gecko", "WebKit", "Presto"],
+      "correct_answer": 3,
+      "explanation": "Blink is a fork of WebKit."
+    },
+    {
+      "id": "mcq-001-17-009",
+      "question": "Which of these browsers does NOT use Blink?",
+      "options": ["Opera", "Vivaldi", "Brave", "Safari"],
+      "correct_answer": 4,
+      "explanation": "Safari uses WebKit, not Blink."
+    },
+    {
+      "id": "mcq-001-17-010",
+      "question": "What engine did Microsoft Edge use before switching to Blink?",
+      "options": ["WebKit", "EdgeHTML", "Presto", "Gecko"],
+      "correct_answer": 2,
+      "explanation": "Microsoft Edge originally used EdgeHTML before migrating to Blink."
+    },
+    {
+      "id": "mcq-001-17-011",
+      "question": "Which browser engine is open-source?",
+      "options": ["Blink", "WebKit", "Gecko", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "Blink, WebKit, and Gecko are all open-source browser engines."
+    },
+    {
+      "id": "mcq-001-17-012",
+      "question": "Which browser's engine is known as 'Quantum'?",
+      "options": ["Safari", "Chrome", "Firefox", "Edge"],
+      "correct_answer": 3,
+      "explanation": "Quantum is Mozilla Firefox's updated version of the Gecko engine."
+    },
+    {
+      "id": "mcq-001-17-013",
+      "question": "What is unique about the engine used in Internet Explorer?",
+      "options": [
+        "It's open-source",
+        "It's called Trident and was proprietary to Microsoft",
+        "It's based on WebKit",
+        "It's used by Chrome"
+      ],
+      "correct_answer": 2,
+      "explanation": "Trident was a proprietary engine developed by Microsoft for Internet Explorer."
+    },
+    {
+      "id": "mcq-001-17-014",
+      "question": "Which of these browsers uses the Gecko engine?",
+      "options": ["Edge", "Firefox", "Chrome", "Safari"],
+      "correct_answer": 2,
+      "explanation": "Firefox uses the Gecko engine."
+    },
+    {
+      "id": "mcq-001-17-015",
+      "question": "Which engine do Chromium-based browsers use?",
+      "options": ["Gecko", "WebKit", "Blink", "Trident"],
+      "correct_answer": 3,
+      "explanation": "Chromium-based browsers use Blink."
+    },
+    {
+      "id": "mcq-001-17-016",
+      "question": "What is the purpose of the JavaScript engine inside a browser?",
+      "options": [
+        "To render HTML",
+        "To interpret and execute JavaScript code",
+        "To store cookies",
+        "To display images"
+      ],
+      "correct_answer": 2,
+      "explanation": "The JavaScript engine interprets and executes JavaScript in the browser."
+    },
+    {
+      "id": "mcq-001-17-017",
+      "question": "Which rendering engine was used by Opera before switching to Blink?",
+      "options": ["Gecko", "Presto", "Trident", "EdgeHTML"],
+      "correct_answer": 2,
+      "explanation": "Opera used Presto before adopting Blink."
+    },
+    {
+      "id": "mcq-001-17-018",
+      "question": "Which browser engine is required by Apple for all browsers on iOS?",
+      "options": ["Blink", "Gecko", "WebKit", "Trident"],
+      "correct_answer": 3,
+      "explanation": "Apple requires all iOS browsers to use WebKit."
+    },
+    {
+      "id": "mcq-001-17-019",
+      "question": "Which of these is NOT a browser rendering engine?",
+      "options": ["Blink", "Gecko", "V8", "WebKit"],
+      "correct_answer": 3,
+      "explanation": "V8 is a JavaScript engine, not a rendering engine."
+    },
+    {
+      "id": "mcq-001-17-020",
+      "question": "Which of the following best describes a browser engine?",
+      "options": [
+        "A tool for writing HTML",
+        "A component that interprets and renders HTML, CSS, and JavaScript",
+        "The internet connection module",
+        "A hardware component"
+      ],
+      "correct_answer": 2,
+      "explanation": "A browser engine interprets and renders web content."
+    }
+  ]
+}

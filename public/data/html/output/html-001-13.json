@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-13-001",
+      "question": "What is displayed by this code?\n\n```html\n<p>One     two      three</p>\n```",
+      "output": "One two three",
+      "explanation": "HTML collapses multiple spaces into a single space in normal flow."
+    },
+    {
+      "id": "output-001-13-002",
+      "question": "What is the output of this snippet?\n\n```html\n<pre>Hello    world!</pre>\n```",
+      "output": "Hello    world!",
+      "explanation": "The <pre> tag preserves all spaces and line breaks."
+    },
+    {
+      "id": "output-001-13-003",
+      "question": "How does the browser render this?\n\n```html\n<p>Line 1\nLine 2</p>\n```",
+      "output": "Line 1 Line 2",
+      "explanation": "Line breaks in HTML source are ignored in normal flow (outside <pre>), so both lines appear on the same line."
+    },
+    {
+      "id": "output-001-13-004",
+      "question": "What is shown?\n\n```html\n<p>Space&nbsp;&nbsp;Space</p>\n```",
+      "output": "Space  Space",
+      "explanation": "The &nbsp; entity creates a non-breaking space, so there are two spaces between the words."
+    },
+    {
+      "id": "output-001-13-005",
+      "question": "What happens with this code?\n\n```html\n<p>Tab\tTab</p>\n```",
+      "output": "Tab Tab",
+      "explanation": "Tab characters in HTML source are rendered as a single space in the browser."
+    },
+    {
+      "id": "output-001-13-006",
+      "question": "What is rendered?\n\n```html\n<pre>\nA\n B\n  C\n</pre>\n```",
+      "output": "A\n B\n  C",
+      "explanation": "The <pre> element preserves all whitespace and line breaks exactly as written."
+    },
+    {
+      "id": "output-001-13-007",
+      "question": "What does the browser display?\n\n```html\n<p>One<br>Two</p>\n```",
+      "output": "One (line break) Two",
+      "explanation": "The <br> tag forces a line break, so 'Two' starts on a new line."
+    },
+    {
+      "id": "output-001-13-008",
+      "question": "What is the visible result?\n\n```html\n<p>First      Second</p>\n```",
+      "output": "First Second",
+      "explanation": "Multiple spaces collapse to a single space in normal HTML flow."
+    },
+    {
+      "id": "output-001-13-009",
+      "question": "How does this render?\n\n```html\n<p>Red&nbsp;&nbsp;&nbsp;Blue</p>\n```",
+      "output": "Red   Blue",
+      "explanation": "Each &nbsp; is a non-breaking space, so three spaces appear between the words."
+    },
+    {
+      "id": "output-001-13-010",
+      "question": "What do you see?\n\n```html\n<pre>\nfirst\n   second\n      third\n</pre>\n```",
+      "output": "first\n   second\n      third",
+      "explanation": "<pre> preserves all white space and line breaks exactly as typed."
+    },
+    {
+      "id": "output-001-13-011",
+      "question": "What is shown on the page?\n\n```html\n<p>Alpha    Beta</p>\n```",
+      "output": "Alpha Beta",
+      "explanation": "Extra spaces are ignored and collapsed into one."
+    },
+    {
+      "id": "output-001-13-012",
+      "question": "What is the output?\n\n```html\n<p>1\t2\t3</p>\n```",
+      "output": "1 2 3",
+      "explanation": "Tab characters are treated as single spaces in normal HTML."
+    },
+    {
+      "id": "output-001-13-013",
+      "question": "How does this render?\n\n```html\n<pre>   Indented line</pre>\n```",
+      "output": "   Indented line",
+      "explanation": "Whitespace at the start of lines is preserved in <pre>."
+    },
+    {
+      "id": "output-001-13-014",
+      "question": "What happens here?\n\n```html\n<p>Multiple     spaces</p>\n```",
+      "output": "Multiple spaces",
+      "explanation": "Multiple spaces collapse to one in a paragraph."
+    },
+    {
+      "id": "output-001-13-015",
+      "question": "What is shown?\n\n```html\n<p>Space&nbsp;Space</p>\n```",
+      "output": "Space Space",
+      "explanation": "The &nbsp; entity creates a single non-breaking space, which is visible."
+    },
+    {
+      "id": "output-001-13-016",
+      "question": "What is the result?\n\n```html\n<pre>\nFirst\nSecond\nThird\n</pre>\n```",
+      "output": "First\nSecond\nThird",
+      "explanation": "Line breaks and spacing inside <pre> are preserved."
+    },
+    {
+      "id": "output-001-13-017",
+      "question": "What is rendered?\n\n```html\n<p>End   of   line</p>\n```",
+      "output": "End of line",
+      "explanation": "All extra spaces are collapsed into one."
+    },
+    {
+      "id": "output-001-13-018",
+      "question": "What do you see?\n\n```html\n<pre> A B C </pre>\n```",
+      "output": " A B C ",
+      "explanation": "All spaces are preserved in <pre>."
+    },
+    {
+      "id": "output-001-13-019",
+      "question": "What is displayed?\n\n```html\n<p>Word1&nbsp;&nbsp;Word2</p>\n```",
+      "output": "Word1  Word2",
+      "explanation": "Two non-breaking spaces are shown between the words."
+    },
+    {
+      "id": "output-001-13-020",
+      "question": "How does this render?\n\n```html\n<p>Before <br> After</p>\n```",
+      "output": "Before (line break) After",
+      "explanation": "<br> creates a line break so 'After' appears beneath 'Before'."
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-04-001",
+      "question": "Which of the following is the correct way to write an HTML tag?",
+      "options": ["`<tagname>`", "`[tagname]`", "`{tagname}`", "`(tagname)`"],
+      "correct_answer": 1,
+      "explanation": "HTML tags are written using angle brackets, like `<p>`."
+    },
+    {
+      "id": "mcq-001-04-002",
+      "question": "What is the correct way to create a paragraph in HTML?",
+      "options": [
+        "`<para>`Paragraph text`</para>`",
+        "`<p>Paragraph text</p>`",
+        "`<pg>Paragraph text</pg>`",
+        "`<paragraph>Paragraph text</paragraph>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "Paragraphs are created using the `<p>` tag, like `<p>Paragraph text</p>`."
+    },
+    {
+      "id": "mcq-001-04-003",
+      "question": "What is the purpose of the `<!DOCTYPE html>` declaration?",
+      "options": [
+        "To add a comment in HTML",
+        "To specify the document type and version of HTML",
+        "To close an HTML document",
+        "To define a header"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `<!DOCTYPE html>` declaration is used to specify the document type and version of HTML."
+    },
+    {
+      "id": "mcq-001-04-004",
+      "question": "Which of the following is a self-closing HTML tag?",
+      "options": ["`<img>`", "`<div>`", "`<section>`", "`<body>`"],
+      "correct_answer": 1,
+      "explanation": "`<img>` is a self-closing tag that does not require a separate closing tag."
+    },
+    {
+      "id": "mcq-001-04-005",
+      "question": "What must all HTML documents start with?",
+      "options": ["`<html>`", "`<!DOCTYPE html>`", "`<head>`", "`<body>`"],
+      "correct_answer": 2,
+      "explanation": "All HTML documents should start with the `<!DOCTYPE html>` declaration."
+    },
+    {
+      "id": "mcq-001-04-006",
+      "question": "Which tag is used to define the main content of an HTML document?",
+      "options": ["`<body>`", "`<main>`", "`<html>`", "`<content>`"],
+      "correct_answer": 1,
+      "explanation": "The `<body>` tag is used to define the main content section of an HTML document."
+    },
+    {
+      "id": "mcq-001-04-007",
+      "question": "How do you write a comment in HTML?",
+      "options": [
+        "`<!-- This is a comment -->`",
+        "`// This is a comment`",
+        "`# This is a comment`",
+        "`/* This is a comment */`"
+      ],
+      "correct_answer": 1,
+      "explanation": "HTML comments are written as `<!-- This is a comment -->`."
+    },
+    {
+      "id": "mcq-001-04-008",
+      "question": "Which tag is used to specify a line break in HTML?",
+      "options": ["`<lb>`", "`<break>`", "`<br>`", "`<line>`"],
+      "correct_answer": 3,
+      "explanation": "The `<br>` tag inserts a line break in the text."
+    },
+    {
+      "id": "mcq-001-04-009",
+      "question": "Which of the following tags is used for the largest heading in HTML?",
+      "options": ["`<h6>`", "`<heading>`", "`<h1>`", "`<h10>`"],
+      "correct_answer": 3,
+      "explanation": "The `<h1>` tag is used for the largest and most important heading."
+    },
+    {
+      "id": "mcq-001-04-010",
+      "question": "What is the proper way to close an HTML tag?",
+      "options": [
+        "`<tagname/>`",
+        "`</tagname>`",
+        "`<\\tagname>`",
+        "`<tagname!>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "Tags are closed using a forward slash, like `</p>`."
+    },
+    {
+      "id": "mcq-001-04-011",
+      "question": "Which of the following is the correct way to nest HTML tags?",
+      "options": [
+        "`<b><i>Text</b></i>`",
+        "`<b><i>Text</i></b>`",
+        "`<i><b>Text</i></b>`",
+        "`<b><i>Text<b></i>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "Tags must be properly nested, like `<b><i>Text</i></b>`."
+    },
+    {
+      "id": "mcq-001-04-012",
+      "question": "Which tag is used to define a hyperlink in HTML?",
+      "options": ["`<link>`", "`<a>`", "`<hyperlink>`", "`<href>`"],
+      "correct_answer": 2,
+      "explanation": "The `<a>` tag is used to define hyperlinks."
+    },
+    {
+      "id": "mcq-001-04-013",
+      "question": "What does the `<ul>` tag represent in HTML?",
+      "options": [
+        "An unordered list",
+        "An underlined text",
+        "An upload element",
+        "A user login"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `<ul>` tag defines an unordered (bulleted) list."
+    },
+    {
+      "id": "mcq-001-04-014",
+      "question": "Which tag is used to insert an image in an HTML page?",
+      "options": ["`<pic>`", "`<img>`", "`<image>`", "`<src>`"],
+      "correct_answer": 2,
+      "explanation": "The `<img>` tag is used to display images."
+    },
+    {
+      "id": "mcq-001-04-015",
+      "question": "Which HTML tag is used to create a numbered list?",
+      "options": ["`<ul>`", "`<ol>`", "`<li>`", "`<dl>`"],
+      "correct_answer": 2,
+      "explanation": "The `<ol>` tag is used for ordered (numbered) lists."
+    },
+    {
+      "id": "mcq-001-04-016",
+      "question": "Which HTML tag is used to define table rows?",
+      "options": ["`<row>`", "`<td>`", "`<tr>`", "`<table>`"],
+      "correct_answer": 3,
+      "explanation": "The `<tr>` tag defines a row in a table."
+    },
+    {
+      "id": "mcq-001-04-017",
+      "question": "What is the correct way to make text bold in HTML?",
+      "options": [
+        "`<b>Text</b>`",
+        "`<strong>Text</strong>`",
+        "Both `<b>` and `<strong>`",
+        "Neither"
+      ],
+      "correct_answer": 3,
+      "explanation": "Both `<b>` and `<strong>` make text bold, but `<strong>` also conveys importance."
+    },
+    {
+      "id": "mcq-001-04-018",
+      "question": "Which tag is used to create a drop-down list in a form?",
+      "options": [
+        "`<input type=\"dropdown\">`",
+        "`<list>`",
+        "`<select>`",
+        "`<dropdown>`"
+      ],
+      "correct_answer": 3,
+      "explanation": "The `<select>` tag is used to create drop-down lists."
+    },
+    {
+      "id": "mcq-001-04-019",
+      "question": "What is the correct nesting order for HTML document structure?",
+      "options": [
+        "`<html><body><head></head></body></html>`",
+        "`<html><head><body></body></head></html>`",
+        "`<html><head></head><body></body></html>`",
+        "`<body><html><head></head></html></body>`"
+      ],
+      "correct_answer": 3,
+      "explanation": "The correct order is `<html><head></head><body></body></html>`."
+    },
+    {
+      "id": "mcq-001-04-020",
+      "question": "Which tag is used to define metadata about an HTML document?",
+      "options": ["`<meta>`", "`<head>`", "`<data>`", "`<info>`"],
+      "correct_answer": 1,
+      "explanation": "The `<meta>` tag provides metadata such as description, keywords, and character set."
+    }
+  ]
+}

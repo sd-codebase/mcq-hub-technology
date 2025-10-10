@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-01-001",
+      "question": "What is the purpose of the `<html>` tag in an HTML document?",
+      "answer": "The `<html>` tag is the root element of an HTML document. It wraps all the content on the entire page, including the `<head>` and `<body>` sections.",
+      "explanation": "Every HTML page starts with the `<html>` tag, which tells browsers and parsers that the content inside is an HTML document."
+    },
+    {
+      "id": "interview-001-01-002",
+      "question": "What is the difference between the `<head>` and `<body>` tags?",
+      "answer": "The `<head>` tag contains meta-information about the document (like title, character set, linked styles/scripts), while the `<body>` tag contains the visible content displayed on the page.",
+      "explanation": "Content inside `<head>` is not shown directly to users, but `<body>` content is rendered in the browser window."
+    },
+    {
+      "id": "interview-001-01-003",
+      "question": "What does the `<title>` tag do?",
+      "answer": "The `<title>` tag sets the title of the web page, which appears in the browser tab and search engine results.",
+      "explanation": "It should be placed inside the `<head>` section and is important for accessibility and SEO."
+    },
+    {
+      "id": "interview-001-01-004",
+      "question": "How do you create a paragraph in HTML?",
+      "answer": "To create a paragraph, use the `<p>` tag. For example: `<p>This is a paragraph.</p>`",
+      "explanation": "The `<p>` tag is a block-level element that adds space above and below the text."
+    },
+    {
+      "id": "interview-001-01-005",
+      "question": "How do you make text bold or italic in HTML?",
+      "answer": "Use `<b>` or `<strong>` for bold text, and `<i>` or `<em>` for italic text. Example: `<b>Bold</b>` `<i>Italic</i>`",
+      "explanation": "`<b>` and `<i>` are purely visual, while `<strong>` and `<em>` also provide semantic meaning for accessibility."
+    },
+    {
+      "id": "interview-001-01-006",
+      "question": "What does the `<br>` tag do?",
+      "answer": "The `<br>` tag inserts a line break, making the text following it appear on a new line.",
+      "explanation": "It is an empty (self-closing) tag and does not require a closing tag."
+    },
+    {
+      "id": "interview-001-01-007",
+      "question": "How do you create a hyperlink in HTML?",
+      "answer": "Use the `<a>` tag with the `href` attribute. Example: `<a href=\"https://example.com\">Link</a>`",
+      "explanation": "The text inside the `<a>` tag becomes clickable, and the `href` attribute specifies the destination URL."
+    },
+    {
+      "id": "interview-001-01-008",
+      "question": "How do you add an image to a web page?",
+      "answer": "Use the `<img>` tag with the `src` attribute. Example: `<img src=\"image.png\" alt=\"Description\">`",
+      "explanation": "`<img>` is a self-closing tag. The `alt` attribute provides alternative text for accessibility and when the image cannot load."
+    },
+    {
+      "id": "interview-001-01-009",
+      "question": "How do you create a list of items in HTML?",
+      "answer": "Use `<ul>` for unordered (bulleted) lists and `<ol>` for ordered (numbered) lists. List items go inside `<li>` tags.",
+      "explanation": "Example: `<ul><li>Item 1</li><li>Item 2</li></ul>` creates a bulleted list."
+    },
+    {
+      "id": "interview-001-01-010",
+      "question": "What are HTML entities and why are they used?",
+      "answer": "HTML entities are special codes used to display reserved characters or symbols, such as `&lt;` for `<` or `&amp;` for `&`.",
+      "explanation": "Entities prevent confusion between code and content, allowing you to display characters that would otherwise be interpreted as HTML."
+    }
+  ]
+}

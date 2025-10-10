@@ -6,8 +6,8 @@
       "options": [
         "const",
         "let",
-        "Both let and const",
-        "Neither let nor const"
+        "Both `let` and `const`",
+        "Neither `let` nor `const`"
       ],
       "correct_answer": 1,
       "explanation": "The `let` keyword declares a variable that can be reassigned. `const` declares a constant that cannot be reassigned after initialization."

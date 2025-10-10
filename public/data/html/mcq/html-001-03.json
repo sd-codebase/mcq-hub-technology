@@ -1,0 +1,184 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-03-001",
+      "question": "Which HTML version introduced semantic elements such as `<section>`, `<header>`, and `<footer>`?",
+      "options": ["HTML 3.2", "HTML 4.01", "XHTML", "HTML5"],
+      "correct_answer": 4,
+      "explanation": "Semantic elements like `<section>`, `<header>`, and `<footer>` were introduced in `HTML5`."
+    },
+    {
+      "id": "mcq-001-03-002",
+      "question": "What is the main difference between HTML and XHTML?",
+      "options": [
+        "XHTML is case-insensitive",
+        "XHTML requires all elements to be properly closed",
+        "HTML does not use tags",
+        "XHTML allows tag omission"
+      ],
+      "correct_answer": 2,
+      "explanation": "`XHTML` is stricter, requiring all elements to be properly closed and written in lowercase."
+    },
+    {
+      "id": "mcq-001-03-003",
+      "question": "Which of the following is NOT a valid HTML5 semantic element?",
+      "options": ["`<article>`", "`<main>`", "`<marquee>`", "`<nav>`"],
+      "correct_answer": 3,
+      "explanation": "`<marquee>` is not a semantic element and is obsolete."
+    },
+    {
+      "id": "mcq-001-03-004",
+      "question": "What does the term 'HTML Living Standard' refer to?",
+      "options": [
+        "A version of HTML frozen in 2014",
+        "A continuously updated HTML specification",
+        "A standard for living web pages",
+        "A draft standard for offline HTML"
+      ],
+      "correct_answer": 2,
+      "explanation": "The 'HTML Living Standard' is a specification that is continuously updated by WHATWG."
+    },
+    {
+      "id": "mcq-001-03-005",
+      "question": "Which organization is currently responsible for the HTML Living Standard?",
+      "options": ["ECMA", "WHATWG", "ISO", "IETF"],
+      "correct_answer": 2,
+      "explanation": "WHATWG (Web Hypertext Application Technology Working Group) maintains the HTML Living Standard."
+    },
+    {
+      "id": "mcq-001-03-006",
+      "question": "Which version of HTML first required the use of the `<!DOCTYPE>` declaration?",
+      "options": ["HTML 2.0", "HTML 3.2", "HTML 4.01", "HTML5"],
+      "correct_answer": 3,
+      "explanation": "The `<!DOCTYPE>` declaration was made mandatory in HTML 4.01."
+    },
+    {
+      "id": "mcq-001-03-007",
+      "question": "What is the correct `<!DOCTYPE>` for HTML5?",
+      "options": [
+        "`<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\">`",
+        "`<!DOCTYPE html>`",
+        "`<!DOCTYPE xhtml>`",
+        "`<!DOCTYPE HTML4>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML5 uses the simplified `<!DOCTYPE html>` declaration."
+    },
+    {
+      "id": "mcq-001-03-008",
+      "question": "Which of the following best describes HTML4?",
+      "options": [
+        "A version of HTML focused on multimedia",
+        "A version of HTML that introduced stricter syntax rules",
+        "A version of HTML standardized in 1997",
+        "A version of HTML that removed all deprecated elements"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML4 was standardized in 1997 and included many improvements over previous versions."
+    },
+    {
+      "id": "mcq-001-03-009",
+      "question": "Which HTML version attempted to make HTML more like XML?",
+      "options": ["HTML5", "HTML 4.01", "XHTML", "HTML 3.2"],
+      "correct_answer": 3,
+      "explanation": "`XHTML` was designed to make HTML more like XML, enforcing stricter syntax."
+    },
+    {
+      "id": "mcq-001-03-010",
+      "question": "Which of the following is a feature of HTML5?",
+      "options": [
+        "Framesets",
+        "Obsolete `<font>` tag",
+        "Native multimedia support using `<audio>` and `<video>`",
+        "Mandatory use of uppercase tags"
+      ],
+      "correct_answer": 3,
+      "explanation": "HTML5 introduced native support for multimedia elements like `<audio>` and `<video>`."
+    },
+    {
+      "id": "mcq-001-03-011",
+      "question": "What is the main goal of semantic elements in HTML5?",
+      "options": [
+        "To improve SEO and accessibility",
+        "To add animation",
+        "To create server-side scripts",
+        "To replace CSS"
+      ],
+      "correct_answer": 1,
+      "explanation": "Semantic elements improve SEO and accessibility by providing meaningful structure."
+    },
+    {
+      "id": "mcq-001-03-012",
+      "question": "Which HTML version deprecated the `<center>` and `<font>` tags?",
+      "options": ["HTML 2.0", "HTML 3.2", "HTML 4.01", "HTML5"],
+      "correct_answer": 3,
+      "explanation": "`HTML 4.01` deprecated these tags in favor of CSS for styling."
+    },
+    {
+      "id": "mcq-001-03-013",
+      "question": "Which HTML version introduced the Document Object Model (DOM)?",
+      "options": ["HTML 2.0", "HTML 3.2", "HTML 4.01", "HTML5"],
+      "correct_answer": 3,
+      "explanation": "`HTML 4.01` formalized the DOM specification."
+    },
+    {
+      "id": "mcq-001-03-014",
+      "question": "Which statement is TRUE about HTML5?",
+      "options": [
+        "It requires a closing tag for all elements",
+        "It supports both self-closing and non-self-closing tags",
+        "It allows use of deprecated tags like `<font>`",
+        "It is not compatible with previous HTML versions"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML5 supports both self-closing and non-self-closing tags."
+    },
+    {
+      "id": "mcq-001-03-015",
+      "question": "Which organization started the WHATWG group responsible for the HTML Living Standard?",
+      "options": ["W3C", "Mozilla, Apple, and Opera", "Microsoft", "IETF"],
+      "correct_answer": 2,
+      "explanation": "WHATWG was started by browser vendors Mozilla, Apple, and Opera."
+    },
+    {
+      "id": "mcq-001-03-016",
+      "question": "Which of the following is NOT a valid HTML5 tag?",
+      "options": ["`<aside>`", "`<footer>`", "`<blink>`", "`<header>`"],
+      "correct_answer": 3,
+      "explanation": "`<blink>` is not part of HTML5."
+    },
+    {
+      "id": "mcq-001-03-017",
+      "question": "HTML5 introduced which of the following form input types?",
+      "options": [
+        "`<input type=\"date\">`",
+        "`<input type=\"color\">`",
+        "`<input type=\"range\">`",
+        "All of the above"
+      ],
+      "correct_answer": 4,
+      "explanation": "HTML5 introduced several new input types including `date`, `color`, and `range`."
+    },
+    {
+      "id": "mcq-001-03-018",
+      "question": "Which HTML version is considered a 'strict' version with XML-based syntax?",
+      "options": ["HTML 4.01", "HTML5", "XHTML", "HTML 3.2"],
+      "correct_answer": 3,
+      "explanation": "`XHTML` was designed with strict, XML-based syntax."
+    },
+    {
+      "id": "mcq-001-03-019",
+      "question": "What is the current status of HTML according to WHATWG?",
+      "options": ["Frozen", "Living Standard", "Draft", "Deprecated"],
+      "correct_answer": 2,
+      "explanation": "HTML is a 'Living Standard' maintained by WHATWG."
+    },
+    {
+      "id": "mcq-001-03-020",
+      "question": "Which HTML version dropped support for the `<frameset>` element?",
+      "options": ["HTML 4.01", "HTML5", "XHTML", "HTML 3.2"],
+      "correct_answer": 2,
+      "explanation": "HTML5 dropped support for the `<frameset>` element."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-20-001",
+      "question": "What is responsive web design and why is it important?",
+      "answer": "Responsive web design is an approach where web pages automatically adjust their layout and appearance to fit different screen sizes and devices, such as desktops, tablets, and smartphones.",
+      "explanation": "It ensures a good user experience and accessibility on all devices, and is essential for modern web development."
+    },
+    {
+      "id": "interview-001-20-002",
+      "question": "How do you make a web page responsive using HTML and CSS?",
+      "answer": "Use a combination of flexible layouts (percentages, auto), media queries, and responsive units (em, rem, vw, vh) in CSS.",
+      "explanation": "Media queries allow you to apply different styles at different screen widths. Example:\n```css\n@media (max-width: 600px) {\n  body { font-size: 16px; }\n}\n```"
+    },
+    {
+      "id": "interview-001-20-003",
+      "question": "What is the viewport meta tag and why is it crucial for mobile responsiveness?",
+      "answer": "The viewport meta tag controls the layout viewport's size and scale. Example:\n```html\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n```",
+      "explanation": "Without it, mobile browsers may render pages at desktop widths, making them hard to read."
+    },
+    {
+      "id": "interview-001-20-004",
+      "question": "How can images be made responsive in HTML?",
+      "answer": "Set images to use relative (percentage) widths or use CSS max-width:\n```css\nimg { max-width: 100%; height: auto; }\n```",
+      "explanation": "This makes images shrink within their parent container on smaller screens."
+    },
+    {
+      "id": "interview-001-20-005",
+      "question": "What are media queries and how do they work?",
+      "answer": "Media queries are CSS rules that apply styles only if certain conditions are met, such as screen width or device type.",
+      "explanation": "They allow you to create breakpoints for different devices and screen sizes."
+    },
+    {
+      "id": "interview-001-20-006",
+      "question": "Name some frameworks or libraries that help with responsive web design.",
+      "answer": "Popular frameworks include Bootstrap, Foundation, Bulma, and Tailwind CSS.",
+      "explanation": "These provide pre-built responsive components and grid systems."
+    },
+    {
+      "id": "interview-001-20-007",
+      "question": "What is a mobile-first approach?",
+      "answer": "A mobile-first approach designs and develops for mobile devices before scaling up to larger screens.",
+      "explanation": "You start with styles for small screens and use media queries to enhance the layout for larger devices."
+    },
+    {
+      "id": "interview-001-20-008",
+      "question": "How can you test if a website is responsive?",
+      "answer": "Resize your browser window, use device emulation in browser developer tools, or test on actual devices.",
+      "explanation": "Testing ensures your site looks and works well on all screen sizes."
+    },
+    {
+      "id": "interview-001-20-009",
+      "question": "What are breakpoints in responsive design?",
+      "answer": "Breakpoints are specific screen widths at which the layout or design of a web page changes to provide a better user experience.",
+      "explanation": "They are defined using media queries and typically target common device widths."
+    },
+    {
+      "id": "interview-001-20-010",
+      "question": "Why should you avoid using fixed widths in responsive web design?",
+      "answer": "Fixed widths prevent layouts from adapting to different screen sizes, making it difficult for users on small screens to view content.",
+      "explanation": "Using relative units and flexible grids ensures a fluid, adaptable design."
+    }
+  ]
+}

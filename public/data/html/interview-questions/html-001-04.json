@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-04-001",
+      "question": "What is the difference between block-level and inline elements in HTML?",
+      "answer": "**Block-level elements** start on a new line and take up the full width available, while **inline elements** only take up as much width as necessary and do not start on a new line.",
+      "explanation": "Examples of block-level elements: `<div>`, `<p>`, `<h1>`, `<ul>`, `<table>`. Examples of inline elements: `<span>`, `<a>`, `<strong>`, `<img>`."
+    },
+    {
+      "id": "interview-001-04-002",
+      "question": "Give examples of commonly used block-level and inline elements.",
+      "answer": "**Block-level:** `<div>`, `<p>`, `<h1>`-`<h6>`, `<ul>`, `<ol>`, `<li>`, `<table>`, `<section>`, `<article>`, `<header>`, `<footer>`\n\n**Inline:** `<span>`, `<a>`, `<b>`, `<i>`, `<img>`, `<strong>`, `<em>`, `<code>`, `<small>`",
+      "explanation": "Block-level elements are used for major page structure, while inline elements are for content inside blocks."
+    },
+    {
+      "id": "interview-001-04-003",
+      "question": "How does the browser render block-level and inline elements differently?",
+      "answer": "Block-level elements always start on a new line and stack vertically. Inline elements flow with the text and appear on the same line unless a line break occurs.",
+      "explanation": "Block-level elements expand to fill their parent’s width; inline elements only use the width of their content."
+    },
+    {
+      "id": "interview-001-04-004",
+      "question": "Can you nest block-level elements inside inline elements? What happens if you do?",
+      "answer": "Nesting block-level elements inside inline elements is **invalid HTML** and may cause unpredictable rendering or browser errors.",
+      "explanation": "Browsers may try to fix invalid nesting, but it’s best practice to follow HTML rules for structure."
+    },
+    {
+      "id": "interview-001-04-005",
+      "question": "How can you make a block-level element behave like an inline element?",
+      "answer": "You can change the CSS `display` property to `inline` or `inline-block`:\n\n```css\n.mydiv { display: inline; }\n```",
+      "explanation": "`inline-block` allows the element to flow inline but still have block styling (width, height, margins)."
+    },
+    {
+      "id": "interview-001-04-006",
+      "question": "Is the `<img>` tag a block-level or inline element? How does it behave in a paragraph?",
+      "answer": "`<img>` is an inline element. When placed in a paragraph, it appears within the text and does not start a new line.",
+      "explanation": "Images can be aligned with surrounding text and do not break the flow unless styled otherwise."
+    },
+    {
+      "id": "interview-001-04-007",
+      "question": "How does the `<span>` tag differ from the `<div>` tag?",
+      "answer": "`<span>` is an inline element, while `<div>` is a block-level element. `<span>` is used to style or group inline content; `<div>` is used for larger structural grouping.",
+      "explanation": "Use `<span>` for short sections inside text, `<div>` for major layout components."
+    },
+    {
+      "id": "interview-001-04-008",
+      "question": "What happens if you style an inline element with a width or height property in CSS?",
+      "answer": "By default, inline elements ignore width and height. To apply these properties, change their display to `inline-block` or `block`.",
+      "explanation": "`display: inline-block;` allows inline elements to accept width/height and margins."
+    },
+    {
+      "id": "interview-001-04-009",
+      "question": "How can you visually distinguish block-level elements from inline elements when inspecting a page?",
+      "answer": "Block-level elements usually occupy the full width and start on new lines, while inline elements appear within lines of text. Developer tools highlight the box model, showing block-level elements as larger boxes.",
+      "explanation": "Use browser dev tools to toggle element outlines and see layout."
+    },
+    {
+      "id": "interview-001-04-010",
+      "question": "What is the effect of using `<br>` inside block vs. inline elements?",
+      "answer": "`<br>` causes a line break in both block-level and inline elements, immediately moving the following content to a new line.",
+      "explanation": "`<br>` is often used inside inline elements (like `<span>`) to force a line break, but can also be used in blocks for extra separation."
+    }
+  ]
+}

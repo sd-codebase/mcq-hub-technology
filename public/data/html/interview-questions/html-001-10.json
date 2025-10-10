@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-10-001",
+      "question": "How does whitespace affect the display of text in HTML?",
+      "answer": "In standard HTML, whitespace characters (spaces, tabs, newlines) are collapsed into a single space when rendered in the browser.",
+      "explanation": "Extra spaces or line breaks in the HTML source do not appear in the output unless you use special tags or entities."
+    },
+    {
+      "id": "interview-001-10-002",
+      "question": "How do you preserve whitespace and line breaks in HTML?",
+      "answer": "Use the `<pre>` tag to preserve all whitespace and line breaks exactly as they appear in the HTML source.",
+      "explanation": "Text inside `<pre>` is displayed in a fixed-width font and maintains formatting."
+    },
+    {
+      "id": "interview-001-10-003",
+      "question": "What is the effect of the `<br>` tag on whitespace?",
+      "answer": "The `<br>` tag forces a line break, starting the following content on a new line.",
+      "explanation": "Use `<br>` for single line breaks within paragraphs or other block elements."
+    },
+    {
+      "id": "interview-001-10-004",
+      "question": "How can you insert multiple spaces between words in HTML?",
+      "answer": "Use the `&nbsp;` (non-breaking space) entity to add extra spaces between words.",
+      "explanation": "Regular spaces are collapsed, but each `&nbsp;` is rendered as a space."
+    },
+    {
+      "id": "interview-001-10-005",
+      "question": "How does whitespace in attribute values behave?",
+      "answer": "Whitespace inside attribute values is preserved exactly as written.",
+      "explanation": "For example, `<p title=\"  hello   world  \">` will keep the spaces in the tooltip."
+    },
+    {
+      "id": "interview-001-10-006",
+      "question": "Is whitespace inside HTML comments preserved?",
+      "answer": "Yes, all whitespace inside comments is preserved, but comments are not displayed in the browser.",
+      "explanation": "Comments are visible only in the page source."
+    },
+    {
+      "id": "interview-001-10-007",
+      "question": "How can you prevent a line break between two words in HTML?",
+      "answer": "Use the `&nbsp;` entity between the words to prevent line breaks.",
+      "explanation": "`&nbsp;` stands for non-breaking space, keeping the words together."
+    },
+    {
+      "id": "interview-001-10-008",
+      "question": "How does the browser handle tab characters (`\\t`) in HTML content?",
+      "answer": "Tab characters are treated as regular whitespace and are collapsed into a single space.",
+      "explanation": "To visually represent tabs, use CSS or the `<pre>` tag."
+    },
+    {
+      "id": "interview-001-10-009",
+      "question": "What is the CSS property used to control whitespace rendering?",
+      "answer": "The `white-space` CSS property controls how whitespace is handled. Example: `white-space: pre;` preserves whitespace, `white-space: nowrap;` prevents line breaks.",
+      "explanation": "This property lets you override the default HTML whitespace collapsing behavior."
+    },
+    {
+      "id": "interview-001-10-010",
+      "question": "Can you use multiple `<br>` tags to create extra vertical space? Is it a good practice?",
+      "answer": "Yes, you can use multiple `<br>` tags for extra space, but it is not considered good practice. Use CSS for spacing instead.",
+      "explanation": "Overusing `<br>` makes your HTML harder to maintain and less semantic. Prefer margin and padding in CSS."
+    }
+  ]
+}

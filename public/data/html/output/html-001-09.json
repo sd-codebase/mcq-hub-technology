@@ -1,0 +1,124 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-09-001",
+      "question": "What is rendered by this code?\n\n```html\n<p>Hello<!-- This is a comment -->World</p>\n```",
+      "output": "HelloWorld",
+      "explanation": "HTML comments (`<!-- ... -->`) are not displayed in the browser; only the visible text is shown."
+    },
+    {
+      "id": "output-001-09-002",
+      "question": "What is the result of this HTML?\n\n```html\n<!-- <h1>This heading is commented out</h1> -->\n<p>Visible text</p>\n```",
+      "output": "Visible text",
+      "explanation": "The commented-out heading is not rendered; only the paragraph appears."
+    },
+    {
+      "id": "output-001-09-003",
+      "question": "What does the browser display?\n\n```html\n<p>Start<!-- comment -->End</p>\n```",
+      "output": "StartEnd",
+      "explanation": "The comment is ignored, so the text is joined together."
+    },
+    {
+      "id": "output-001-09-004",
+      "question": "What is shown on the page?\n\n```html\n<!-- This is a top-level comment -->\n<p>Paragraph</p>\n```",
+      "output": "Paragraph",
+      "explanation": "The comment is not rendered; only the paragraph is displayed."
+    },
+    {
+      "id": "output-001-09-005",
+      "question": "What is displayed?\n\n```html\n<p><!-- nothing here --></p>\n```",
+      "output": "",
+      "explanation": "The paragraph is empty because its only content is a comment."
+    },
+    {
+      "id": "output-001-09-006",
+      "question": "What happens if a comment is placed between elements?\n\n```html\n<h1>Hello</h1><!-- comment --><h2>World</h2>\n```",
+      "output": "Hello\nWorld",
+      "explanation": "The comment is ignored, so both headings are displayed in order."
+    },
+    {
+      "id": "output-001-09-007",
+      "question": "What is rendered?\n\n```html\n<p>This<!-- hidden -->is visible.</p>\n```",
+      "output": "Thisis visible.",
+      "explanation": "The comment is not rendered, so the text is concatenated."
+    },
+    {
+      "id": "output-001-09-008",
+      "question": "What is shown by this HTML?\n\n```html\n<!--\n<ul>\n  <li>Item 1</li>\n</ul>\n-->\n<p>List hidden, text shown.</p>\n```",
+      "output": "List hidden, text shown.",
+      "explanation": "Everything inside the comment is ignored, so only the paragraph is displayed."
+    },
+    {
+      "id": "output-001-09-009",
+      "question": "What does this HTML output?\n\n```html\n<p><!--Start-->A<!--End--></p>\n```",
+      "output": "A",
+      "explanation": "Only 'A' is displayed; the comments are ignored."
+    },
+    {
+      "id": "output-001-09-010",
+      "question": "What is visible when viewing this in a browser?\n\n```html\n<p><!-- multi\nline\ncomment -->Text</p>\n```",
+      "output": "Text",
+      "explanation": "Multiline comments are ignored; only 'Text' is shown."
+    },
+    {
+      "id": "output-001-09-011",
+      "question": "What is the effect of a comment before the doctype?\n\n```\n<!-- Top comment -->\n<!DOCTYPE html>\n<html>\n<body>\n<p>Text</p>\n</body>\n</html>\n```",
+      "output": "Text",
+      "explanation": "The comment is ignored and the paragraph is displayed. (Some browsers may enter quirks mode if anything precedes the doctype, but the visible output is unchanged.)"
+    },
+    {
+      "id": "output-001-09-012",
+      "question": "What happens with nested comments?\n\n```html\n<!-- Outer <!-- Inner --> Outer -->\n<p>Visible</p>\n```",
+      "output": "Visible",
+      "explanation": "HTML does not support nested comments; the first '-->' closes the comment. The paragraph is displayed."
+    },
+    {
+      "id": "output-001-09-013",
+      "question": "What does this HTML render?\n\n```html\n<p>Hello <!-- comment --> World</p>\n```",
+      "output": "Hello  World",
+      "explanation": "The comment is removed, but spaces before and after remain."
+    },
+    {
+      "id": "output-001-09-014",
+      "question": "What is displayed?\n\n```html\n<p>Hello<!-- --></p>\n```",
+      "output": "Hello",
+      "explanation": "The empty comment is ignored; 'Hello' is displayed."
+    },
+    {
+      "id": "output-001-09-015",
+      "question": "What is shown?\n\n```html\n<p><!--Comment--></p>\n<p>Second</p>\n```",
+      "output": "Second",
+      "explanation": "The first paragraph is empty because it only contains a comment. Only the second paragraph is displayed."
+    },
+    {
+      "id": "output-001-09-016",
+      "question": "What output is produced?\n\n```html\n<!--Comment--><div>Box</div><!--End-->\n```",
+      "output": "Box",
+      "explanation": "Only the div's content is shown; comments are ignored."
+    },
+    {
+      "id": "output-001-09-017",
+      "question": "What happens with this HTML?\n\n```html\n<p><!-- <b>Hidden Bold</b> -->Visible</p>\n```",
+      "output": "Visible",
+      "explanation": "The bold text is hidden inside a comment; only 'Visible' is shown."
+    },
+    {
+      "id": "output-001-09-018",
+      "question": "What does the following output?\n\n```html\n<p><!--Start-->A<!--End--></p>\n```",
+      "output": "A",
+      "explanation": "Only 'A' is displayed. The comments are ignored."
+    },
+    {
+      "id": "output-001-09-019",
+      "question": "What is the output of this HTML?\n\n```html\n<p>Visible<!--- Not a valid comment --->Text</p>\n```",
+      "output": "VisibleText",
+      "explanation": "Browsers treat `<!---` as a comment; the rest is ignored until a closing '-->'. Only the visible text outside the comment is displayed."
+    },
+    {
+      "id": "output-001-09-020",
+      "question": "What does this code display?\n\n```html\n<p><!-- <span>Hidden</span> -->Shown</p>\n```",
+      "output": "Shown",
+      "explanation": "The commented-out span is ignored; only 'Shown' is displayed."
+    }
+  ]
+}

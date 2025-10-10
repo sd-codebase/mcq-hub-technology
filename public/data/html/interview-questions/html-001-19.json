@@ -1,0 +1,64 @@
+{
+  "interview_questions": [
+    {
+      "id": "interview-001-19-001",
+      "question": "What are HTML APIs and how do they extend HTML functionality?",
+      "answer": "HTML APIs are sets of JavaScript interfaces provided by the browser that allow web pages to access advanced features like geolocation, drag-and-drop, local storage, and multimedia control.",
+      "explanation": "APIs let developers create more interactive and powerful web applications beyond static HTML features."
+    },
+    {
+      "id": "interview-001-19-002",
+      "question": "What is the Geolocation API and how can it be used in a web page?",
+      "answer": "The Geolocation API allows web pages to access the user's geographical location with their permission. Example:\n```javascript\nnavigator.geolocation.getCurrentPosition(function(position) {\n  console.log(position.coords.latitude, position.coords.longitude);\n});\n```",
+      "explanation": "This API is useful for location-based services and requires user consent for privacy."
+    },
+    {
+      "id": "interview-001-19-003",
+      "question": "How does the Drag and Drop API work in HTML5?",
+      "answer": "The Drag and Drop API allows elements to be draggable and supports handling drag events with JavaScript. Example:\n```html\n<div draggable=\"true\" ondragstart=\"...\">Drag me</div>\n```",
+      "explanation": "You can use events like `dragstart`, `dragover`, and `drop` to control drag-and-drop behavior."
+    },
+    {
+      "id": "interview-001-19-004",
+      "question": "What is the Web Storage API and what are its two main components?",
+      "answer": "The Web Storage API provides ways to store data in the browser. Its two main components are `localStorage` (persistent across sessions) and `sessionStorage` (cleared after the session ends).",
+      "explanation": "`localStorage` and `sessionStorage` store key-value pairs and are accessible via JavaScript."
+    },
+    {
+      "id": "interview-001-19-005",
+      "question": "How do you store and retrieve a value using localStorage?",
+      "answer": "Use the `setItem` and `getItem` methods:\n```javascript\nlocalStorage.setItem('username', 'john');\nvar name = localStorage.getItem('username');\n```",
+      "explanation": "Values are stored as strings and persist even after the browser is closed."
+    },
+    {
+      "id": "interview-001-19-006",
+      "question": "What is the difference between `localStorage` and `sessionStorage`?",
+      "answer": "`localStorage` stores data with no expiration time, available across browser sessions. `sessionStorage` data is cleared when the page session ends (browser/tab is closed).",
+      "explanation": "Use `localStorage` for long-term data and `sessionStorage` for temporary, session-specific data."
+    },
+    {
+      "id": "interview-001-19-007",
+      "question": "How does the HTML5 History API benefit single-page applications (SPAs)?",
+      "answer": "The History API allows SPAs to change the browser URL and manage navigation history without reloading the page, using methods like `pushState` and `replaceState`.",
+      "explanation": "This provides better navigation and bookmarking for dynamic web apps."
+    },
+    {
+      "id": "interview-001-19-008",
+      "question": "What is the File API and how can it be used in web applications?",
+      "answer": "The File API allows web applications to read file contents selected by the user without uploading them to a server. Example:\n```html\n<input type=\"file\" onchange=\"handleFile(this.files[0])\">\n```",
+      "explanation": "This enables features like client-side file validation or previews before upload."
+    },
+    {
+      "id": "interview-001-19-009",
+      "question": "How does the Canvas API work and what is it used for?",
+      "answer": "The Canvas API allows drawing graphics, animations, and images directly in the browser using JavaScript and the `<canvas>` element.",
+      "explanation": "It's used for games, data visualizations, and graphic applications."
+    },
+    {
+      "id": "interview-001-19-010",
+      "question": "How do you check if a browser supports a specific HTML5 API?",
+      "answer": "Check for the existence of the API in JavaScript. Example:\n```javascript\nif (window.localStorage) { /* supported */ }\n```",
+      "explanation": "Feature detection ensures code runs only when the required API is available, improving compatibility."
+    }
+  ]
+}
