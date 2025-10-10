@@ -11,19 +11,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-import {
-  APP_SUBJECT,
-  APP_LOGO,
-  THEME_PRIMARY,
-  THEME_SECONDARY,
-} from "../../config";
+// import {
+//   APP_SUBJECT,
+//   APP_LOGO,
+//   THEME_PRIMARY,
+//   THEME_SECONDARY,
+// } from "../../config";
 import "../globals.css";
 import { Zap } from "@/components/zap";
 import { Header } from "@/components/header";
 
 export const metadata = {
-  title: APP_SUBJECT,
-  description: `MCQ App for ${APP_SUBJECT}`,
+  title: "MCQ Hub",
+  description: `MCQ App for techn skills`,
 };
 
 export default function RootLayout({
