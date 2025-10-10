@@ -1,0 +1,626 @@
+{
+  "topics": [
+    {
+      "id": "html-001",
+      "topic": "Introduction to HTML",
+      "subtopics": [
+        { "id": "html-001-01", "name": "What is HTML?" },
+        { "id": "html-001-02", "name": "History and Evolution of HTML" },
+        {
+          "id": "html-001-03",
+          "name": "HTML Versions (HTML, XHTML, HTML5, HTML Living Standard)"
+        },
+        { "id": "html-001-04", "name": "HTML Syntax and Structure" },
+        { "id": "html-001-05", "name": "HTML Elements and Tags" },
+        { "id": "html-001-06", "name": "HTML Attributes" },
+        { "id": "html-001-07", "name": "Doctype Declaration" },
+        { "id": "html-001-08", "name": "HTML Comments" },
+        { "id": "html-001-09", "name": "HTML Editors and Tools" },
+        { "id": "html-001-10", "name": "Basic HTML Page Structure" },
+        { "id": "html-001-11", "name": "Block vs Inline Elements" },
+        { "id": "html-001-12", "name": "Case Sensitivity in HTML" },
+        { "id": "html-001-13", "name": "Whitespace and Formatting" },
+        { "id": "html-001-14", "name": "HTML Entities" },
+        { "id": "html-001-15", "name": "HTML vs XML" },
+        { "id": "html-001-16", "name": "HTML Validation" },
+        { "id": "html-001-17", "name": "Browsers and Rendering Engines" },
+        { "id": "html-001-18", "name": "Accessibility Basics" },
+        { "id": "html-001-19", "name": "Semantic HTML Overview" },
+        { "id": "html-001-20", "name": "Getting Started with HTML Projects" }
+      ]
+    },
+    {
+      "id": "html-002",
+      "topic": "HTML Document Structure",
+      "subtopics": [
+        { "id": "html-002-01", "name": "<!DOCTYPE> Declaration" },
+        { "id": "html-002-02", "name": "<html> Element" },
+        { "id": "html-002-03", "name": "<head> Section" },
+        { "id": "html-002-04", "name": "<body> Section" },
+        { "id": "html-002-05", "name": "Page Title: <title>" },
+        { "id": "html-002-06", "name": "Meta Tags: <meta>" },
+        { "id": "html-002-07", "name": "Linking CSS: <link>" },
+        { "id": "html-002-08", "name": "Scripting: <script>" },
+        { "id": "html-002-09", "name": "Favicon" },
+        { "id": "html-002-10", "name": "Viewport and Responsive Meta Tags" },
+        { "id": "html-002-11", "name": "Language Attribute: lang" },
+        { "id": "html-002-12", "name": "Base URL: <base>" },
+        { "id": "html-002-13", "name": "External Resources" },
+        { "id": "html-002-14", "name": "Defining Document Character Set" },
+        { "id": "html-002-15", "name": "Preload, Prefetch, Preconnect" },
+        { "id": "html-002-16", "name": "Noscript Tag" },
+        { "id": "html-002-17", "name": "Using Comments in HTML" },
+        { "id": "html-002-18", "name": "HTML Imports (Deprecated)" },
+        {
+          "id": "html-002-19",
+          "name": "Best Practices for Document Structure"
+        },
+        { "id": "html-002-20", "name": "Sectioning and Outlines" }
+      ]
+    },
+    {
+      "id": "html-003",
+      "topic": "Text Formatting Elements",
+      "subtopics": [
+        { "id": "html-003-01", "name": "Headings: <h1> to <h6>" },
+        { "id": "html-003-02", "name": "Paragraphs: <p>" },
+        { "id": "html-003-03", "name": "Line Breaks: <br>" },
+        { "id": "html-003-04", "name": "Horizontal Rules: <hr>" },
+        { "id": "html-003-05", "name": "Bold: <b>, <strong>" },
+        { "id": "html-003-06", "name": "Italic: <i>, <em>" },
+        { "id": "html-003-07", "name": "Underline: <u>" },
+        {
+          "id": "html-003-08",
+          "name": "Superscript and Subscript: <sup>, <sub>"
+        },
+        { "id": "html-003-09", "name": "Strikethrough: <s>, <del>" },
+        { "id": "html-003-10", "name": "Small Text: <small>" },
+        { "id": "html-003-11", "name": "Mark Text: <mark>" },
+        { "id": "html-003-12", "name": "Inserted Text: <ins>" },
+        { "id": "html-003-13", "name": "Quotation: <blockquote>, <q>" },
+        { "id": "html-003-14", "name": "Abbreviations: <abbr>" },
+        { "id": "html-003-15", "name": "Citations: <cite>" },
+        {
+          "id": "html-003-16",
+          "name": "Code: <code>, <pre>, <kbd>, <samp>, <var>"
+        },
+        { "id": "html-003-17", "name": "Addresses: <address>" },
+        { "id": "html-003-18", "name": "Bidirectional Text: <bdo>, <bdi>" },
+        { "id": "html-003-19", "name": "Time: <time>" },
+        { "id": "html-003-20", "name": "Ruby Annotations: <ruby>, <rt>, <rp>" }
+      ]
+    },
+    {
+      "id": "html-004",
+      "topic": "HTML Lists",
+      "subtopics": [
+        { "id": "html-004-01", "name": "Unordered Lists: <ul>" },
+        { "id": "html-004-02", "name": "Ordered Lists: <ol>" },
+        { "id": "html-004-03", "name": "List Items: <li>" },
+        { "id": "html-004-04", "name": "Description Lists: <dl>, <dt>, <dd>" },
+        { "id": "html-004-05", "name": "Nested Lists" },
+        { "id": "html-004-06", "name": "Customizing List Markers" },
+        {
+          "id": "html-004-07",
+          "name": "Reversed and Start Attributes in <ol>"
+        },
+        { "id": "html-004-08", "name": "Type Attribute in <ol>" },
+        { "id": "html-004-09", "name": "Styling Lists with CSS" },
+        { "id": "html-004-10", "name": "Accessibility for Lists" },
+        { "id": "html-004-11", "name": "Menus: <menu>" },
+        { "id": "html-004-12", "name": "Directory Lists: <dir> (Deprecated)" },
+        { "id": "html-004-13", "name": "Custom List Icons" },
+        { "id": "html-004-14", "name": "Semantic Use of Lists" },
+        { "id": "html-004-15", "name": "Interactive Lists" },
+        { "id": "html-004-16", "name": "List Accessibility Roles" },
+        { "id": "html-004-17", "name": "List ARIA Attributes" },
+        { "id": "html-004-18", "name": "Lists in Navigation" },
+        { "id": "html-004-19", "name": "Lists in Forms" },
+        { "id": "html-004-20", "name": "List Performance Optimization" }
+      ]
+    },
+    {
+      "id": "html-005",
+      "topic": "Hyperlinks and Navigation",
+      "subtopics": [
+        { "id": "html-005-01", "name": "Anchor Element: <a>" },
+        { "id": "html-005-02", "name": "Absolute vs Relative URLs" },
+        { "id": "html-005-03", "name": "Target Attribute" },
+        { "id": "html-005-04", "name": "Linking to External Files" },
+        { "id": "html-005-05", "name": "Email Links" },
+        { "id": "html-005-06", "name": "Telephone Links" },
+        { "id": "html-005-07", "name": "Fragment Identifiers" },
+        { "id": "html-005-08", "name": "Download Attribute" },
+        { "id": "html-005-09", "name": "Navigation Menus" },
+        { "id": "html-005-10", "name": "Breadcrumb Navigation" },
+        { "id": "html-005-11", "name": "Skip Navigation Links" },
+        { "id": "html-005-12", "name": "Link Relationships: rel Attribute" },
+        { "id": "html-005-13", "name": "Accessible Navigation" },
+        { "id": "html-005-14", "name": "Tabindex and Keyboard Navigation" },
+        { "id": "html-005-15", "name": "ARIA Roles in Navigation" },
+        { "id": "html-005-16", "name": "URL Encoding" },
+        { "id": "html-005-17", "name": "nofollow, noopener, noreferrer" },
+        { "id": "html-005-18", "name": "Navigation with <nav>" },
+        { "id": "html-005-19", "name": "Sitemap Pages" },
+        { "id": "html-005-20", "name": "Link Styling and States" }
+      ]
+    },
+    {
+      "id": "html-006",
+      "topic": "Images and Multimedia",
+      "subtopics": [
+        { "id": "html-006-01", "name": "Image Tag: <img>" },
+        {
+          "id": "html-006-02",
+          "name": "Image Attributes: src, alt, width, height"
+        },
+        { "id": "html-006-03", "name": "Responsive Images: srcset, sizes" },
+        {
+          "id": "html-006-04",
+          "name": "Figure and Figcaption: <figure>, <figcaption>"
+        },
+        {
+          "id": "html-006-05",
+          "name": "Image Formats (JPEG, PNG, GIF, SVG, WebP, AVIF)"
+        },
+        { "id": "html-006-06", "name": "Background Images with CSS" },
+        { "id": "html-006-07", "name": "Lazy Loading Images" },
+        { "id": "html-006-08", "name": "Image Maps: <map>, <area>" },
+        { "id": "html-006-09", "name": "Decorative vs Informative Images" },
+        { "id": "html-006-10", "name": "Accessible Images" },
+        { "id": "html-006-11", "name": "Audio: <audio> Element" },
+        { "id": "html-006-12", "name": "Video: <video> Element" },
+        {
+          "id": "html-006-13",
+          "name": "Multimedia Formats (MP3, MP4, OGG, WebM)"
+        },
+        { "id": "html-006-14", "name": "Captions and Subtitles: <track>" },
+        { "id": "html-006-15", "name": "Embedding YouTube and Vimeo" },
+        { "id": "html-006-16", "name": "Using <object> and <embed>" },
+        { "id": "html-006-17", "name": "SVG in HTML" },
+        { "id": "html-006-18", "name": "Accessibility in Multimedia" },
+        { "id": "html-006-19", "name": "Autoplay, Controls, and Looping" },
+        { "id": "html-006-20", "name": "Fallback Content for Media" }
+      ]
+    },
+    {
+      "id": "html-007",
+      "topic": "Tables in HTML",
+      "subtopics": [
+        {
+          "id": "html-007-01",
+          "name": "Table Basics: <table>, <tr>, <td>, <th>"
+        },
+        {
+          "id": "html-007-02",
+          "name": "Table Headers and Footers: <thead>, <tfoot>"
+        },
+        { "id": "html-007-03", "name": "Table Body: <tbody>" },
+        { "id": "html-007-04", "name": "Caption: <caption>" },
+        { "id": "html-007-05", "name": "Colgroup and Col: <colgroup>, <col>" },
+        { "id": "html-007-06", "name": "Rowspan and Colspan" },
+        { "id": "html-007-07", "name": "Nesting Tables" },
+        { "id": "html-007-08", "name": "Accessible Tables" },
+        { "id": "html-007-09", "name": "Responsive Tables" },
+        { "id": "html-007-10", "name": "Styling Tables with CSS" },
+        { "id": "html-007-11", "name": "Semantic Use of Tables" },
+        { "id": "html-007-12", "name": "Sorting and Filtering Tables" },
+        { "id": "html-007-13", "name": "Table ARIA Roles" },
+        { "id": "html-007-14", "name": "Sticky Table Headers" },
+        { "id": "html-007-15", "name": "Data Tables vs Layout Tables" },
+        { "id": "html-007-16", "name": "Merging Cells" },
+        { "id": "html-007-17", "name": "Table Accessibility Guidelines" },
+        { "id": "html-007-18", "name": "Tables in Forms" },
+        { "id": "html-007-19", "name": "Exporting Tables to CSV/Excel" },
+        { "id": "html-007-20", "name": "Deprecated Table Attributes" }
+      ]
+    },
+    {
+      "id": "html-008",
+      "topic": "Forms and User Input",
+      "subtopics": [
+        { "id": "html-008-01", "name": "Form Element: <form>" },
+        {
+          "id": "html-008-02",
+          "name": "Input Types: text, password, email, number, etc."
+        },
+        { "id": "html-008-03", "name": "Labels: <label>" },
+        { "id": "html-008-04", "name": "Textarea: <textarea>" },
+        { "id": "html-008-05", "name": "Checkboxes: <input type='checkbox'>" },
+        { "id": "html-008-06", "name": "Radio Buttons: <input type='radio'>" },
+        {
+          "id": "html-008-07",
+          "name": "Dropdowns: <select>, <option>, <optgroup>"
+        },
+        {
+          "id": "html-008-08",
+          "name": "Buttons: <button>, <input type='button'>"
+        },
+        { "id": "html-008-09", "name": "File Inputs: <input type='file'>" },
+        { "id": "html-008-10", "name": "Date and Time Inputs" },
+        { "id": "html-008-11", "name": "Range Sliders: <input type='range'>" },
+        { "id": "html-008-12", "name": "Color Picker: <input type='color'>" },
+        {
+          "id": "html-008-13",
+          "name": "Form Attributes: action, method, enctype"
+        },
+        {
+          "id": "html-008-14",
+          "name": "Fieldsets and Legends: <fieldset>, <legend>"
+        },
+        {
+          "id": "html-008-15",
+          "name": "Form Validation (required, pattern, min/max, etc.)"
+        },
+        { "id": "html-008-16", "name": "Datalist: <datalist>" },
+        { "id": "html-008-17", "name": "Autofocus, Autocomplete, Placeholder" },
+        { "id": "html-008-18", "name": "Disabling and Readonly Fields" },
+        { "id": "html-008-19", "name": "Custom Validation Messages" },
+        { "id": "html-008-20", "name": "Accessibility in Forms" }
+      ]
+    },
+    {
+      "id": "html-009",
+      "topic": "Semantic HTML Elements",
+      "subtopics": [
+        { "id": "html-009-01", "name": "<header> and <footer>" },
+        { "id": "html-009-02", "name": "<nav>" },
+        { "id": "html-009-03", "name": "<main>" },
+        { "id": "html-009-04", "name": "<section>" },
+        { "id": "html-009-05", "name": "<article>" },
+        { "id": "html-009-06", "name": "<aside>" },
+        { "id": "html-009-07", "name": "<figure> and <figcaption>" },
+        { "id": "html-009-08", "name": "<mark> and <time>" },
+        { "id": "html-009-09", "name": "<details> and <summary>" },
+        { "id": "html-009-10", "name": "<dialog>" },
+        { "id": "html-009-11", "name": "<address>" },
+        { "id": "html-009-12", "name": "Landmark Roles" },
+        { "id": "html-009-13", "name": "Sectioning Content" },
+        { "id": "html-009-14", "name": "Grouping Content" },
+        { "id": "html-009-15", "name": "Benefits of Semantic HTML" },
+        { "id": "html-009-16", "name": "Semantic vs Non-semantic" },
+        { "id": "html-009-17", "name": "SEO Benefits" },
+        { "id": "html-009-18", "name": "Accessibility Benefits" },
+        { "id": "html-009-19", "name": "Screen Reader Navigation" },
+        { "id": "html-009-20", "name": "Browser Support for Semantic Elements" }
+      ]
+    },
+    {
+      "id": "html-010",
+      "topic": "HTML APIs and Advanced Features",
+      "subtopics": [
+        { "id": "html-010-01", "name": "Canvas API: <canvas>" },
+        { "id": "html-010-02", "name": "SVG Embedding and Manipulation" },
+        { "id": "html-010-03", "name": "Drag and Drop API" },
+        {
+          "id": "html-010-04",
+          "name": "Web Storage API (localStorage, sessionStorage)"
+        },
+        { "id": "html-010-05", "name": "Geolocation API" },
+        { "id": "html-010-06", "name": "Web Workers" },
+        { "id": "html-010-07", "name": "WebSockets" },
+        { "id": "html-010-08", "name": "Notifications API" },
+        { "id": "html-010-09", "name": "Fullscreen API" },
+        { "id": "html-010-10", "name": "Clipboard API" },
+        { "id": "html-010-11", "name": "Web Manifest" },
+        { "id": "html-010-12", "name": "Service Workers" },
+        { "id": "html-010-13", "name": "Device Access (Camera, Microphone)" },
+        { "id": "html-010-14", "name": "Payment Request API" },
+        { "id": "html-010-15", "name": "Custom Elements and Web Components" },
+        { "id": "html-010-16", "name": "Shadow DOM" },
+        { "id": "html-010-17", "name": "Template and Slot Elements" },
+        { "id": "html-010-18", "name": "Media Capture and Streams API" },
+        { "id": "html-010-19", "name": "Pointer Events" },
+        { "id": "html-010-20", "name": "Native Lazy Loading (loading='lazy')" }
+      ]
+    },
+    {
+      "id": "html-011",
+      "topic": "HTML and Accessibility (a11y)",
+      "subtopics": [
+        {
+          "id": "html-011-01",
+          "name": "Accessible Rich Internet Applications (ARIA)"
+        },
+        { "id": "html-011-02", "name": "Semantic Elements for Accessibility" },
+        { "id": "html-011-03", "name": "Alt Text for Images" },
+        { "id": "html-011-04", "name": "Form Accessibility" },
+        { "id": "html-011-05", "name": "Accessible Tables" },
+        { "id": "html-011-06", "name": "Tabindex and Focus Management" },
+        { "id": "html-011-07", "name": "Skip to Content Links" },
+        { "id": "html-011-08", "name": "Landmark Roles" },
+        { "id": "html-011-09", "name": "Accessible Navigation" },
+        { "id": "html-011-10", "name": "Screen Readers" },
+        { "id": "html-011-11", "name": "Contrast and Color Accessibility" },
+        { "id": "html-011-12", "name": "Accessible Multimedia" },
+        {
+          "id": "html-011-13",
+          "name": "ARIA Attributes (aria-label, aria-hidden, etc.)"
+        },
+        { "id": "html-011-14", "name": "Keyboard-Only Navigation" },
+        { "id": "html-011-15", "name": "Accessible Error Messages" },
+        { "id": "html-011-16", "name": "Accessible Dialogs and Modals" },
+        { "id": "html-011-17", "name": "Testing Accessibility" },
+        { "id": "html-011-18", "name": "Accessibility Tools and Extensions" },
+        { "id": "html-011-19", "name": "WCAG Guidelines Overview" },
+        { "id": "html-011-20", "name": "Best Practices for Accessibility" }
+      ]
+    },
+    {
+      "id": "html-012",
+      "topic": "HTML Forms: Advanced Topics",
+      "subtopics": [
+        { "id": "html-012-01", "name": "Form Data Encoding Types" },
+        { "id": "html-012-02", "name": "Form Submission Methods (GET, POST)" },
+        { "id": "html-012-03", "name": "FormData API" },
+        { "id": "html-012-04", "name": "Form Auto-Completion" },
+        { "id": "html-012-05", "name": "Disabling Auto-Completion" },
+        { "id": "html-012-06", "name": "Form Reset and Autofocus" },
+        { "id": "html-012-07", "name": "Client-side Validation" },
+        { "id": "html-012-08", "name": "Server-side Validation" },
+        { "id": "html-012-09", "name": "Constraint Validation API" },
+        { "id": "html-012-10", "name": "Custom Validation Patterns" },
+        { "id": "html-012-11", "name": "Custom Validation Feedback" },
+        { "id": "html-012-12", "name": "Form Events" },
+        { "id": "html-012-13", "name": "Multi-step Forms" },
+        { "id": "html-012-14", "name": "Progressive Disclosure" },
+        {
+          "id": "html-012-15",
+          "name": "Form Security (CSRF, Spam Prevention)"
+        },
+        { "id": "html-012-16", "name": "File Uploads and Drag-and-Drop" },
+        {
+          "id": "html-012-17",
+          "name": "Form Accessibility for Assistive Tech"
+        },
+        { "id": "html-012-18", "name": "Form Styling Best Practices" },
+        { "id": "html-012-19", "name": "Third-party Form Integrations" },
+        { "id": "html-012-20", "name": "Progress Bars and Form Feedback" }
+      ]
+    },
+    {
+      "id": "html-013",
+      "topic": "Embedding Content and External Resources",
+      "subtopics": [
+        { "id": "html-013-01", "name": "iframes: <iframe>" },
+        { "id": "html-013-02", "name": "object and embed: <object>, <embed>" },
+        { "id": "html-013-03", "name": "Inline SVG and MathML" },
+        { "id": "html-013-04", "name": "Third-party Widgets and Plugins" },
+        { "id": "html-013-05", "name": "Google Maps and Other Embeds" },
+        { "id": "html-013-06", "name": "YouTube, Vimeo, and Video Embeds" },
+        { "id": "html-013-07", "name": "Social Media Embeds" },
+        { "id": "html-013-08", "name": "Content Security Policy (CSP)" },
+        { "id": "html-013-09", "name": "Sandbox Attribute" },
+        { "id": "html-013-10", "name": "Cross-Origin Resource Sharing (CORS)" },
+        { "id": "html-013-11", "name": "Fallback Content for Embeds" },
+        { "id": "html-013-12", "name": "Responsive Embeds" },
+        { "id": "html-013-13", "name": "Interactive Maps and Charts" },
+        { "id": "html-013-14", "name": "Embedding PDFs" },
+        { "id": "html-013-15", "name": "Security Considerations for Embeds" },
+        { "id": "html-013-16", "name": "Embedding Fonts (Web Fonts)" },
+        { "id": "html-013-17", "name": "Custom Web Components" },
+        { "id": "html-013-18", "name": "Embedding Data Visualizations" },
+        { "id": "html-013-19", "name": "Lazy Loading Embeds" },
+        { "id": "html-013-20", "name": "Accessibility of Embedded Content" }
+      ]
+    },
+    {
+      "id": "html-014",
+      "topic": "HTML and CSS Integration",
+      "subtopics": [
+        { "id": "html-014-01", "name": "Inline CSS: style Attribute" },
+        { "id": "html-014-02", "name": "Internal CSS: <style> Tag" },
+        { "id": "html-014-03", "name": "External CSS Files: <link>" },
+        { "id": "html-014-04", "name": "CSS Selectors and HTML Elements" },
+        { "id": "html-014-05", "name": "Applying Classes and IDs" },
+        { "id": "html-014-06", "name": "CSS Pseudo-classes and States" },
+        { "id": "html-014-07", "name": "Responsive Design and Media Queries" },
+        { "id": "html-014-08", "name": "Box Model and Layout" },
+        { "id": "html-014-09", "name": "Flexbox and Grid Integration" },
+        { "id": "html-014-10", "name": "Custom Properties (CSS Variables)" },
+        { "id": "html-014-11", "name": "Web Fonts and Icon Fonts" },
+        { "id": "html-014-12", "name": "CSS Animations and Transitions" },
+        { "id": "html-014-13", "name": "Styling Forms and Inputs" },
+        { "id": "html-014-14", "name": "Print Stylesheets" },
+        { "id": "html-014-15", "name": "Dark Mode Support" },
+        { "id": "html-014-16", "name": "CSS Resets and Normalization" },
+        { "id": "html-014-17", "name": "Accessibility with CSS" },
+        { "id": "html-014-18", "name": "Styling SVGs and Embedded Content" },
+        { "id": "html-014-19", "name": "Performance Optimization" },
+        { "id": "html-014-20", "name": "Best Practices for CSS Integration" }
+      ]
+    },
+    {
+      "id": "html-015",
+      "topic": "HTML and JavaScript Integration",
+      "subtopics": [
+        { "id": "html-015-01", "name": "Adding JavaScript: <script> Tag" },
+        { "id": "html-015-02", "name": "Inline vs External Scripts" },
+        {
+          "id": "html-015-03",
+          "name": "Script Attributes: defer, async, type"
+        },
+        { "id": "html-015-04", "name": "DOM Manipulation Basics" },
+        { "id": "html-015-05", "name": "Event Handling in HTML" },
+        { "id": "html-015-06", "name": "Window and Document Objects" },
+        {
+          "id": "html-015-07",
+          "name": "Accessing Elements (getElementById, querySelector, etc.)"
+        },
+        {
+          "id": "html-015-08",
+          "name": "Changing Element Content and Attributes"
+        },
+        { "id": "html-015-09", "name": "Form Interactions and Validation" },
+        { "id": "html-015-10", "name": "Dynamic Content Loading" },
+        { "id": "html-015-11", "name": "Handling Multimedia with JS" },
+        { "id": "html-015-12", "name": "Creating and Removing Elements" },
+        { "id": "html-015-13", "name": "Event Delegation" },
+        { "id": "html-015-14", "name": "Using Data Attributes" },
+        { "id": "html-015-15", "name": "Animating with JavaScript" },
+        { "id": "html-015-16", "name": "Using Web APIs" },
+        { "id": "html-015-17", "name": "Security: XSS Prevention" },
+        { "id": "html-015-18", "name": "Modular JavaScript in HTML" },
+        { "id": "html-015-19", "name": "Progressive Enhancement" },
+        {
+          "id": "html-015-20",
+          "name": "Best Practices for HTML-JS Integration"
+        }
+      ]
+    },
+    {
+      "id": "html-016",
+      "topic": "HTML Graphics and Visualization",
+      "subtopics": [
+        { "id": "html-016-01", "name": "SVG Basics" },
+        { "id": "html-016-02", "name": "Drawing with Canvas" },
+        { "id": "html-016-03", "name": "SVG vs Canvas" },
+        { "id": "html-016-04", "name": "Chart Libraries (Chart.js, D3.js)" },
+        { "id": "html-016-05", "name": "Rendering Vector Graphics" },
+        { "id": "html-016-06", "name": "Animating SVGs" },
+        { "id": "html-016-07", "name": "Image Optimization for Graphics" },
+        { "id": "html-016-08", "name": "Responsive Graphics" },
+        { "id": "html-016-09", "name": "Canvas Text and Images" },
+        { "id": "html-016-10", "name": "WebGL in HTML" },
+        { "id": "html-016-11", "name": "3D Graphics Integration" },
+        { "id": "html-016-12", "name": "Exporting Graphics" },
+        { "id": "html-016-13", "name": "Interactive Graphics" },
+        { "id": "html-016-14", "name": "Accessibility in Graphics" },
+        { "id": "html-016-15", "name": "Use of <picture> Element" },
+        { "id": "html-016-16", "name": "Clipping and Masking" },
+        { "id": "html-016-17", "name": "Performance Optimization" },
+        { "id": "html-016-18", "name": "Cross-browser Graphics Support" },
+        { "id": "html-016-19", "name": "Embedding Graphs in HTML" },
+        { "id": "html-016-20", "name": "Best Practices for HTML Graphics" }
+      ]
+    },
+    {
+      "id": "html-017",
+      "topic": "HTML Performance and Optimization",
+      "subtopics": [
+        { "id": "html-017-01", "name": "Minification and Compression" },
+        { "id": "html-017-02", "name": "Optimizing Images" },
+        { "id": "html-017-03", "name": "Lazy Loading Content" },
+        { "id": "html-017-04", "name": "Preload, Prefetch, Preconnect" },
+        { "id": "html-017-05", "name": "Reducing HTTP Requests" },
+        { "id": "html-017-06", "name": "Efficient Use of CSS and JS" },
+        { "id": "html-017-07", "name": "Asynchronous and Deferred Loading" },
+        { "id": "html-017-08", "name": "Optimizing Fonts" },
+        { "id": "html-017-09", "name": "Critical Rendering Path" },
+        { "id": "html-017-10", "name": "Browser Caching Strategies" },
+        { "id": "html-017-11", "name": "Responsive Design Performance" },
+        {
+          "id": "html-017-12",
+          "name": "Measuring Performance (Lighthouse, Web Vitals)"
+        },
+        { "id": "html-017-13", "name": "Code Splitting" },
+        {
+          "id": "html-017-14",
+          "name": "Optimizing Inline vs External Resources"
+        },
+        { "id": "html-017-15", "name": "DOM Size and Complexity" },
+        { "id": "html-017-16", "name": "Content Delivery Networks (CDN)" },
+        { "id": "html-017-17", "name": "Resource Prioritization" },
+        { "id": "html-017-18", "name": "Avoiding Layout Thrashing" },
+        { "id": "html-017-19", "name": "Service Worker Caching" },
+        {
+          "id": "html-017-20",
+          "name": "Progressive Web App (PWA) Optimization"
+        }
+      ]
+    },
+    {
+      "id": "html-018",
+      "topic": "HTML Internationalization and Localization",
+      "subtopics": [
+        { "id": "html-018-01", "name": "Language Attribute: lang" },
+        { "id": "html-018-02", "name": "Character Encodings (UTF-8, etc.)" },
+        { "id": "html-018-03", "name": "Directionality: dir Attribute" },
+        { "id": "html-018-04", "name": "Right-to-Left (RTL) Support" },
+        { "id": "html-018-05", "name": "Bidirectional Text (<bdo>, <bdi>)" },
+        { "id": "html-018-06", "name": "Localization of Dates and Numbers" },
+        {
+          "id": "html-018-07",
+          "name": "Using <time> and <data> for Localization"
+        },
+        { "id": "html-018-08", "name": "Internationalized URLs" },
+        { "id": "html-018-09", "name": "Accessibility for Multilingual Sites" },
+        { "id": "html-018-10", "name": "Translating HTML Content" },
+        { "id": "html-018-11", "name": "Meta Tags for Localization" },
+        { "id": "html-018-12", "name": "hreflang and Alternate Links" },
+        { "id": "html-018-13", "name": "Unicode and HTML Entities" },
+        { "id": "html-018-14", "name": "Form Handling in Multiple Languages" },
+        {
+          "id": "html-018-15",
+          "name": "Pluralization and Language-specific Content"
+        },
+        { "id": "html-018-16", "name": "Tools for Localization" },
+        { "id": "html-018-17", "name": "Browser Language Detection" },
+        { "id": "html-018-18", "name": "Custom Fonts for Non-Latin Scripts" },
+        { "id": "html-018-19", "name": "Screen Reader Localization" },
+        { "id": "html-018-20", "name": "Best Practices for i18n and l10n" }
+      ]
+    },
+    {
+      "id": "html-019",
+      "topic": "HTML Security Best Practices",
+      "subtopics": [
+        {
+          "id": "html-019-01",
+          "name": "Understanding XSS (Cross-site Scripting)"
+        },
+        { "id": "html-019-02", "name": "Content Security Policy (CSP)" },
+        { "id": "html-019-03", "name": "Input Sanitization" },
+        { "id": "html-019-04", "name": "Output Encoding" },
+        { "id": "html-019-05", "name": "HTTPS and Secure Contexts" },
+        { "id": "html-019-06", "name": "Subresource Integrity (SRI)" },
+        { "id": "html-019-07", "name": "X-Content-Type-Options" },
+        { "id": "html-019-08", "name": "MIME Sniffing Prevention" },
+        { "id": "html-019-09", "name": "Clickjacking and Framebusting" },
+        { "id": "html-019-10", "name": "HTML Injection Attacks" },
+        { "id": "html-019-11", "name": "CSRF Prevention" },
+        {
+          "id": "html-019-12",
+          "name": "Cookie Security (SameSite, HttpOnly, Secure)"
+        },
+        { "id": "html-019-13", "name": "Referrer Policy" },
+        { "id": "html-019-14", "name": "Securing Embedded Content" },
+        { "id": "html-019-15", "name": "Password Field Security" },
+        { "id": "html-019-16", "name": "Disabling File Uploads" },
+        { "id": "html-019-17", "name": "Security Headers Overview" },
+        { "id": "html-019-18", "name": "Third-party Scripts Security" },
+        { "id": "html-019-19", "name": "Reporting Security Issues" },
+        { "id": "html-019-20", "name": "Best Practices for Secure HTML" }
+      ]
+    },
+    {
+      "id": "html-020",
+      "topic": "HTML Best Practices and Future Trends",
+      "subtopics": [
+        { "id": "html-020-01", "name": "Writing Clean and Maintainable HTML" },
+        { "id": "html-020-02", "name": "Semantic Markup for SEO" },
+        { "id": "html-020-03", "name": "Progressive Enhancement" },
+        { "id": "html-020-04", "name": "Mobile-first HTML Design" },
+        { "id": "html-020-05", "name": "Using Modern HTML Elements" },
+        { "id": "html-020-06", "name": "Accessibility-First Development" },
+        { "id": "html-020-07", "name": "HTML in JAMstack" },
+        { "id": "html-020-08", "name": "Integration with Modern Frameworks" },
+        { "id": "html-020-09", "name": "HTML and WebAssembly" },
+        { "id": "html-020-10", "name": "Component-based Web Development" },
+        {
+          "id": "html-020-11",
+          "name": "HTML in Single Page Applications (SPAs)"
+        },
+        { "id": "html-020-12", "name": "Using HTML Templates" },
+        { "id": "html-020-13", "name": "Custom Elements and Web Components" },
+        { "id": "html-020-14", "name": "HTML Living Standard Updates" },
+        { "id": "html-020-15", "name": "Future HTML Elements" },
+        { "id": "html-020-16", "name": "Decoupling Content and Presentation" },
+        { "id": "html-020-17", "name": "HTML in Email Development" },
+        { "id": "html-020-18", "name": "Contributing to the HTML Standard" },
+        { "id": "html-020-19", "name": "Community and Resources" },
+        { "id": "html-020-20", "name": "Keeping Up with HTML Trends" }
+      ]
+    }
+  ]
+}

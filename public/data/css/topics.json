@@ -1,0 +1,584 @@
+{
+  "topics": [
+    {
+      "id": "css-001",
+      "topic": "CSS Basics and Syntax",
+      "subtopics": [
+        { "id": "css-001-01", "name": "What is CSS?" },
+        {
+          "id": "css-001-02",
+          "name": "CSS Syntax (Selectors, Properties, Values)"
+        },
+        {
+          "id": "css-001-03",
+          "name": "Types of CSS (Inline, Internal, External)"
+        },
+        { "id": "css-001-04", "name": "CSS Comments" },
+        { "id": "css-001-05", "name": "Importing CSS Files (@import)" },
+        { "id": "css-001-06", "name": "Case Sensitivity in CSS" },
+        { "id": "css-001-07", "name": "CSS Statements and Declarations" },
+        { "id": "css-001-08", "name": "CSS Units (px, em, rem, %)" },
+        { "id": "css-001-09", "name": "Shorthand Properties" },
+        { "id": "css-001-10", "name": "Box Model Overview" },
+        { "id": "css-001-11", "name": "CSS Resets and Normalization" },
+        { "id": "css-001-12", "name": "Best Practices in Writing CSS" },
+        { "id": "css-001-13", "name": "Escaping Special Characters" },
+        { "id": "css-001-14", "name": "Vendor Prefixes" },
+        { "id": "css-001-15", "name": "Commenting and Documentation" },
+        { "id": "css-001-16", "name": "Error Handling in CSS" },
+        { "id": "css-001-17", "name": "Cascading Order (Cascade)" },
+        { "id": "css-001-18", "name": "CSS File Organization" },
+        { "id": "css-001-19", "name": "Whitespace and Formatting" },
+        { "id": "css-001-20", "name": "Minification and Optimization" }
+      ]
+    },
+    {
+      "id": "css-002",
+      "topic": "Selectors",
+      "subtopics": [
+        { "id": "css-002-01", "name": "Type Selectors" },
+        { "id": "css-002-02", "name": "Class Selectors" },
+        { "id": "css-002-03", "name": "ID Selectors" },
+        { "id": "css-002-04", "name": "Universal Selector (*)" },
+        { "id": "css-002-05", "name": "Attribute Selectors" },
+        { "id": "css-002-06", "name": "Descendant Selectors" },
+        { "id": "css-002-07", "name": "Child Selectors" },
+        { "id": "css-002-08", "name": "Adjacent Sibling Selectors" },
+        { "id": "css-002-09", "name": "General Sibling Selectors" },
+        { "id": "css-002-10", "name": "Pseudo-class Selectors" },
+        { "id": "css-002-11", "name": "Pseudo-element Selectors" },
+        { "id": "css-002-12", "name": "Grouping Selectors" },
+        { "id": "css-002-13", "name": "Combinators" },
+        { "id": "css-002-14", "name": "Negation Pseudo-class :not()" },
+        { "id": "css-002-15", "name": "Structural Pseudo-classes" },
+        { "id": "css-002-16", "name": "Nesting Selectors (CSS Nesting)" },
+        { "id": "css-002-17", "name": "Case-insensitive Attribute Selectors" },
+        { "id": "css-002-18", "name": "Selector Specificity" },
+        { "id": "css-002-19", "name": "Chaining Selectors" },
+        { "id": "css-002-20", "name": ":has() Relational Selector (CSS4)" }
+      ]
+    },
+    {
+      "id": "css-003",
+      "topic": "The Box Model",
+      "subtopics": [
+        { "id": "css-003-01", "name": "Content, Padding, Border, Margin" },
+        { "id": "css-003-02", "name": "Box-sizing Property" },
+        { "id": "css-003-03", "name": "Width and Height" },
+        { "id": "css-003-04", "name": "Margin Properties" },
+        { "id": "css-003-05", "name": "Padding Properties" },
+        { "id": "css-003-06", "name": "Border Properties" },
+        { "id": "css-003-07", "name": "Outline vs Border" },
+        { "id": "css-003-08", "name": "Overflow and Clipping" },
+        { "id": "css-003-09", "name": "Display Property" },
+        { "id": "css-003-10", "name": "Block and Inline Elements" },
+        { "id": "css-003-11", "name": "Box Shadows" },
+        { "id": "css-003-12", "name": "Border Radius" },
+        { "id": "css-003-13", "name": "Box Decoration Break" },
+        { "id": "css-003-14", "name": "Outline-offset" },
+        { "id": "css-003-15", "name": "Box Model in Flex and Grid" },
+        {
+          "id": "css-003-16",
+          "name": "Logical Properties (margin-inline, etc.)"
+        },
+        { "id": "css-003-17", "name": "Box Model Debugging Techniques" },
+        { "id": "css-003-18", "name": "Min/Max Width and Height" },
+        { "id": "css-003-19", "name": "Aspect Ratio Property" },
+        { "id": "css-003-20", "name": "Isolation Property" }
+      ]
+    },
+    {
+      "id": "css-004",
+      "topic": "Color and Background",
+      "subtopics": [
+        {
+          "id": "css-004-01",
+          "name": "Color Values (named, hex, rgb, hsl, lch, etc.)"
+        },
+        { "id": "css-004-02", "name": "Opacity and Alpha Transparency" },
+        { "id": "css-004-03", "name": "Background Color" },
+        { "id": "css-004-04", "name": "Background Image" },
+        { "id": "css-004-05", "name": "Background Repeat" },
+        { "id": "css-004-06", "name": "Background Position" },
+        { "id": "css-004-07", "name": "Background Size" },
+        { "id": "css-004-08", "name": "Background Attachment" },
+        { "id": "css-004-09", "name": "Multiple Backgrounds" },
+        { "id": "css-004-10", "name": "Linear Gradients" },
+        { "id": "css-004-11", "name": "Radial Gradients" },
+        { "id": "css-004-12", "name": "Conic Gradients" },
+        { "id": "css-004-13", "name": "Repeating Gradients" },
+        { "id": "css-004-14", "name": "CSS Filters (blur, brightness, etc.)" },
+        { "id": "css-004-15", "name": "Mix-blend-mode" },
+        { "id": "css-004-16", "name": "Background Clip" },
+        { "id": "css-004-17", "name": "Background Origin" },
+        { "id": "css-004-18", "name": "Image-set() for Responsive Images" },
+        { "id": "css-004-19", "name": "Accent-color (CSS4)" },
+        { "id": "css-004-20", "name": "Forced-colors and Media Queries" }
+      ]
+    },
+    {
+      "id": "css-005",
+      "topic": "Typography",
+      "subtopics": [
+        { "id": "css-005-01", "name": "Font-family" },
+        { "id": "css-005-02", "name": "Font-size and Responsive Sizing" },
+        { "id": "css-005-03", "name": "Font-weight" },
+        { "id": "css-005-04", "name": "Font-style" },
+        { "id": "css-005-05", "name": "Font-variant and Small-caps" },
+        { "id": "css-005-06", "name": "Font-stretch" },
+        { "id": "css-005-07", "name": "Line-height" },
+        { "id": "css-005-08", "name": "Letter-spacing" },
+        { "id": "css-005-09", "name": "Word-spacing" },
+        { "id": "css-005-10", "name": "Text-align" },
+        { "id": "css-005-11", "name": "Text-decoration" },
+        { "id": "css-005-12", "name": "Text-transform" },
+        { "id": "css-005-13", "name": "Text-indent" },
+        { "id": "css-005-14", "name": "Text-shadow" },
+        { "id": "css-005-15", "name": "Font-face for Custom Fonts" },
+        { "id": "css-005-16", "name": "Font-feature-settings" },
+        { "id": "css-005-17", "name": "Writing-mode and Direction" },
+        { "id": "css-005-18", "name": "Text-overflow and White-space" },
+        { "id": "css-005-19", "name": "Hyphens and Word-break" },
+        { "id": "css-005-20", "name": "Variable Fonts (CSS4)" }
+      ]
+    },
+    {
+      "id": "css-006",
+      "topic": "Layout Techniques",
+      "subtopics": [
+        { "id": "css-006-01", "name": "Float and Clear" },
+        {
+          "id": "css-006-02",
+          "name": "Position Property (static, relative, etc.)"
+        },
+        { "id": "css-006-03", "name": "Z-index and Stacking Context" },
+        {
+          "id": "css-006-04",
+          "name": "Display: none, block, inline, inline-block"
+        },
+        { "id": "css-006-05", "name": "Flexbox: Overview" },
+        { "id": "css-006-06", "name": "Flex Container Properties" },
+        { "id": "css-006-07", "name": "Flex Item Properties" },
+        { "id": "css-006-08", "name": "Grid: Overview" },
+        { "id": "css-006-09", "name": "Grid Container Properties" },
+        { "id": "css-006-10", "name": "Grid Item Properties" },
+        { "id": "css-006-11", "name": "Multi-column Layout" },
+        { "id": "css-006-12", "name": "Table Layouts" },
+        { "id": "css-006-13", "name": "Object-fit and Object-position" },
+        { "id": "css-006-14", "name": "Aspect Ratio" },
+        { "id": "css-006-15", "name": "Container Queries (CSS4)" },
+        { "id": "css-006-16", "name": "Subgrid (CSS4)" },
+        { "id": "css-006-17", "name": "Sticky Positioning" },
+        { "id": "css-006-18", "name": "Masonry Layout (CSS4)" },
+        { "id": "css-006-19", "name": "CSS Regions" },
+        { "id": "css-006-20", "name": "Layout Debugging Tools" }
+      ]
+    },
+    {
+      "id": "css-007",
+      "topic": "Responsive Design",
+      "subtopics": [
+        { "id": "css-007-01", "name": "Introduction to Responsive Design" },
+        { "id": "css-007-02", "name": "Media Queries" },
+        { "id": "css-007-03", "name": "Responsive Units (vw, vh, %, etc.)" },
+        { "id": "css-007-04", "name": "Mobile-first Approach" },
+        { "id": "css-007-05", "name": "Responsive Typography" },
+        { "id": "css-007-06", "name": "Responsive Images" },
+        { "id": "css-007-07", "name": "CSS Clamp(), Min(), Max()" },
+        { "id": "css-007-08", "name": "Container Queries" },
+        { "id": "css-007-09", "name": "Breakpoints Strategy" },
+        { "id": "css-007-10", "name": "Touch Target Sizing" },
+        { "id": "css-007-11", "name": "Viewport Meta Tag" },
+        { "id": "css-007-12", "name": "Orientation Media Feature" },
+        { "id": "css-007-13", "name": "Print Media Queries" },
+        { "id": "css-007-14", "name": "Dark Mode with Prefers-color-scheme" },
+        {
+          "id": "css-007-15",
+          "name": "Reduced Motion with Prefers-reduced-motion"
+        },
+        { "id": "css-007-16", "name": "Resolution Media Queries" },
+        { "id": "css-007-17", "name": "Aspect-ratio Media Feature" },
+        { "id": "css-007-18", "name": "Hover and Pointer Media Features" },
+        { "id": "css-007-19", "name": "Responsive Animations" },
+        { "id": "css-007-20", "name": "Testing Responsiveness" }
+      ]
+    },
+    {
+      "id": "css-008",
+      "topic": "Advanced Selectors and Pseudo-classes",
+      "subtopics": [
+        { "id": "css-008-01", "name": "Pseudo-classes Overview" },
+        { "id": "css-008-02", "name": ":hover, :focus, :active, :visited" },
+        {
+          "id": "css-008-03",
+          "name": ":first-child, :last-child, :nth-child()"
+        },
+        { "id": "css-008-04", "name": ":nth-of-type(), :nth-last-child()" },
+        { "id": "css-008-05", "name": ":only-child, :empty" },
+        { "id": "css-008-06", "name": ":checked, :enabled, :disabled" },
+        { "id": "css-008-07", "name": ":required, :optional, :read-only" },
+        { "id": "css-008-08", "name": ":root and Custom Properties" },
+        { "id": "css-008-09", "name": ":target" },
+        { "id": "css-008-10", "name": ":not()" },
+        { "id": "css-008-11", "name": ":is() and :where()" },
+        { "id": "css-008-12", "name": ":has() Relational Selector" },
+        { "id": "css-008-13", "name": ":lang()" },
+        { "id": "css-008-14", "name": "Pseudo-elements Overview" },
+        { "id": "css-008-15", "name": "::before and ::after" },
+        { "id": "css-008-16", "name": "::first-line and ::first-letter" },
+        { "id": "css-008-17", "name": "::marker and ::selection" },
+        { "id": "css-008-18", "name": "Combining Pseudo-classes" },
+        { "id": "css-008-19", "name": "Chaining Pseudo-classes" },
+        { "id": "css-008-20", "name": "Pseudo-classes in Forms" }
+      ]
+    },
+    {
+      "id": "css-009",
+      "topic": "Transitions and Animations",
+      "subtopics": [
+        { "id": "css-009-01", "name": "Transitions Overview" },
+        { "id": "css-009-02", "name": "Transition Properties" },
+        { "id": "css-009-03", "name": "Transition Timing Functions" },
+        { "id": "css-009-04", "name": "Transition Delays" },
+        { "id": "css-009-05", "name": "Animations Overview" },
+        { "id": "css-009-06", "name": "@keyframes Syntax" },
+        { "id": "css-009-07", "name": "Animation-name and Animation-duration" },
+        { "id": "css-009-08", "name": "Animation-timing-function" },
+        { "id": "css-009-09", "name": "Animation-delay" },
+        { "id": "css-009-10", "name": "Animation-iteration-count" },
+        { "id": "css-009-11", "name": "Animation-direction" },
+        { "id": "css-009-12", "name": "Animation-fill-mode" },
+        { "id": "css-009-13", "name": "Animation-play-state" },
+        { "id": "css-009-14", "name": "Chaining Transitions and Animations" },
+        { "id": "css-009-15", "name": "3D Transform Animations" },
+        { "id": "css-009-16", "name": "Animating with CSS Variables" },
+        { "id": "css-009-17", "name": "Animation Performance Optimization" },
+        {
+          "id": "css-009-18",
+          "name": "Prefers-reduced-motion for Accessibility"
+        },
+        { "id": "css-009-19", "name": "Animating SVG with CSS" },
+        { "id": "css-009-20", "name": "Scroll-Driven Animations (CSS4)" }
+      ]
+    },
+    {
+      "id": "css-010",
+      "topic": "Transforms and 3D Effects",
+      "subtopics": [
+        {
+          "id": "css-010-01",
+          "name": "2D Transforms (translate, scale, rotate, skew)"
+        },
+        {
+          "id": "css-010-02",
+          "name": "3D Transforms (rotateX, rotateY, perspective)"
+        },
+        { "id": "css-010-03", "name": "Transform-origin" },
+        { "id": "css-010-04", "name": "Transform-style" },
+        { "id": "css-010-05", "name": "Perspective and Perspective-origin" },
+        { "id": "css-010-06", "name": "Backface-visibility" },
+        { "id": "css-010-07", "name": "Matrix Transforms" },
+        { "id": "css-010-08", "name": "Combining Multiple Transforms" },
+        { "id": "css-010-09", "name": "Transforming SVG Elements" },
+        { "id": "css-010-10", "name": "Hardware Acceleration and Transforms" },
+        { "id": "css-010-11", "name": "3D Animation Use Cases" },
+        { "id": "css-010-12", "name": "Animating Perspective" },
+        { "id": "css-010-13", "name": "Transform with Media Queries" },
+        { "id": "css-010-14", "name": "Transform on Hover and Focus" },
+        { "id": "css-010-15", "name": "Transform with Variables" },
+        { "id": "css-010-16", "name": "Sync Transforms with JavaScript" },
+        { "id": "css-010-17", "name": "Transform and Accessibility" },
+        { "id": "css-010-18", "name": "Transform Performance Optimization" },
+        { "id": "css-010-19", "name": "Perspective for 3D Cards" },
+        { "id": "css-010-20", "name": "Current and Future 3D CSS Features" }
+      ]
+    },
+    {
+      "id": "css-011",
+      "topic": "CSS Variables (Custom Properties)",
+      "subtopics": [
+        { "id": "css-011-01", "name": "Declaring Variables with --" },
+        { "id": "css-011-02", "name": "Using var() Function" },
+        { "id": "css-011-03", "name": ":root for Global Variables" },
+        { "id": "css-011-04", "name": "Variable Inheritance" },
+        { "id": "css-011-05", "name": "Variable Scope" },
+        { "id": "css-011-06", "name": "Fallback Values" },
+        { "id": "css-011-07", "name": "Variables in Media Queries" },
+        { "id": "css-011-08", "name": "Variables in Calc()" },
+        { "id": "css-011-09", "name": "Theme Switching with Variables" },
+        { "id": "css-011-10", "name": "JavaScript and CSS Variables" },
+        { "id": "css-011-11", "name": "Variable Naming Best Practices" },
+        { "id": "css-011-12", "name": "Variables in Animations" },
+        { "id": "css-011-13", "name": "Variables in Keyframes" },
+        { "id": "css-011-14", "name": "Performance Considerations" },
+        { "id": "css-011-15", "name": "Variables for Responsiveness" },
+        { "id": "css-011-16", "name": "Cascading and Overriding Variables" },
+        { "id": "css-011-17", "name": "Environment Variables (env())" },
+        { "id": "css-011-18", "name": "Variable Debugging Techniques" },
+        { "id": "css-011-19", "name": "Limitations of CSS Variables" },
+        { "id": "css-011-20", "name": "Future of CSS Variables" }
+      ]
+    },
+    {
+      "id": "css-012",
+      "topic": "CSS Functions and Calculations",
+      "subtopics": [
+        { "id": "css-012-01", "name": "calc() Function" },
+        { "id": "css-012-02", "name": "min(), max(), clamp()" },
+        { "id": "css-012-03", "name": "color-mix()" },
+        { "id": "css-012-04", "name": "color-contrast()" },
+        { "id": "css-012-05", "name": "attr() Function" },
+        { "id": "css-012-06", "name": "env() Function" },
+        { "id": "css-012-07", "name": "image-set() Function" },
+        { "id": "css-012-08", "name": "var() Function and Custom Properties" },
+        { "id": "css-012-09", "name": "format() Function for @font-face" },
+        { "id": "css-012-10", "name": "hsl(), rgb(), lab(), lch()" },
+        {
+          "id": "css-012-11",
+          "name": "repeat() for grid and repeatable patterns"
+        },
+        { "id": "css-012-12", "name": "url() for backgrounds and fonts" },
+        {
+          "id": "css-012-13",
+          "name": "conic-gradient(), radial-gradient(), linear-gradient()"
+        },
+        {
+          "id": "css-012-14",
+          "name": "steps() and cubic-bezier() in Animations"
+        },
+        { "id": "css-012-15", "name": "round() Function (CSS4)" },
+        { "id": "css-012-16", "name": "CSS Math Functions in Media Queries" },
+        { "id": "css-012-17", "name": "CSS Logical Functions" },
+        { "id": "css-012-18", "name": "CSS Type Functions" },
+        { "id": "css-012-19", "name": "CSS Unit Conversion Functions" },
+        { "id": "css-012-20", "name": "Browser Support for CSS Functions" }
+      ]
+    },
+    {
+      "id": "css-013",
+      "topic": "CSS Architecture and Methodologies",
+      "subtopics": [
+        { "id": "css-013-01", "name": "OOCSS (Object-Oriented CSS)" },
+        { "id": "css-013-02", "name": "BEM (Block Element Modifier)" },
+        {
+          "id": "css-013-03",
+          "name": "SMACSS (Scalable and Modular Architecture)"
+        },
+        { "id": "css-013-04", "name": "Atomic CSS" },
+        { "id": "css-013-05", "name": "ITCSS (Inverted Triangle CSS)" },
+        { "id": "css-013-06", "name": "Utility-first CSS" },
+        { "id": "css-013-07", "name": "CSS-in-JS" },
+        { "id": "css-013-08", "name": "Scoped CSS" },
+        { "id": "css-013-09", "name": "Component-based CSS" },
+        { "id": "css-013-10", "name": "CSS Modules" },
+        { "id": "css-013-11", "name": "Shadow DOM and CSS" },
+        { "id": "css-013-12", "name": "Global vs Local Styles" },
+        { "id": "css-013-13", "name": "Naming Conventions" },
+        { "id": "css-013-14", "name": "CSS File Structure" },
+        { "id": "css-013-15", "name": "Theming with CSS" },
+        { "id": "css-013-16", "name": "CSS Linting and Stylelint" },
+        { "id": "css-013-17", "name": "Code Splitting and Lazy Loading" },
+        { "id": "css-013-18", "name": "CSS Documentation Techniques" },
+        { "id": "css-013-19", "name": "Performance Best Practices" },
+        { "id": "css-013-20", "name": "CSS Refactoring" }
+      ]
+    },
+    {
+      "id": "css-014",
+      "topic": "Preprocessors and Postprocessors",
+      "subtopics": [
+        { "id": "css-014-01", "name": "What are CSS Preprocessors?" },
+        { "id": "css-014-02", "name": "SASS/SCSS Basics" },
+        { "id": "css-014-03", "name": "LESS Basics" },
+        { "id": "css-014-04", "name": "Stylus Basics" },
+        { "id": "css-014-05", "name": "Nesting in Preprocessors" },
+        { "id": "css-014-06", "name": "Mixins and Functions" },
+        { "id": "css-014-07", "name": "Extends and Placeholders" },
+        { "id": "css-014-08", "name": "Variables in Preprocessors" },
+        { "id": "css-014-09", "name": "Loops and Conditionals" },
+        { "id": "css-014-10", "name": "Importing Files" },
+        { "id": "css-014-11", "name": "Modularization with Preprocessors" },
+        { "id": "css-014-12", "name": "Source Maps" },
+        { "id": "css-014-13", "name": "Autoprefixer" },
+        { "id": "css-014-14", "name": "PostCSS Overview" },
+        { "id": "css-014-15", "name": "CSS Minification Tools" },
+        { "id": "css-014-16", "name": "PurgeCSS and Unused CSS Removal" },
+        { "id": "css-014-17", "name": "Custom PostCSS Plugins" },
+        { "id": "css-014-18", "name": "Integrating with Build Tools" },
+        { "id": "css-014-19", "name": "Browser Compatibility Handling" },
+        { "id": "css-014-20", "name": "Preprocessor Limitations" }
+      ]
+    },
+    {
+      "id": "css-015",
+      "topic": "Accessibility and CSS",
+      "subtopics": [
+        { "id": "css-015-01", "name": "Accessible Color Contrast" },
+        { "id": "css-015-02", "name": "Focus Styles and Outlines" },
+        { "id": "css-015-03", "name": "Screen Reader Friendly CSS" },
+        { "id": "css-015-04", "name": "Reduced Motion for Accessibility" },
+        { "id": "css-015-05", "name": "Accessible Font Sizing" },
+        { "id": "css-015-06", "name": "Accessible Interactive Elements" },
+        { "id": "css-015-07", "name": "Visually Hidden Content" },
+        { "id": "css-015-08", "name": "Skip Links Styling" },
+        { "id": "css-015-09", "name": "ARIA Attributes and CSS" },
+        { "id": "css-015-10", "name": "Keyboard Navigation Support" },
+        { "id": "css-015-11", "name": "High Contrast Mode" },
+        { "id": "css-015-12", "name": "Semantic HTML and Styling" },
+        { "id": "css-015-13", "name": "Accessible Animations" },
+        { "id": "css-015-14", "name": "Responsive Accessibility" },
+        { "id": "css-015-15", "name": "Testing for Accessibility" },
+        { "id": "css-015-16", "name": "Dark Mode and Accessibility" },
+        { "id": "css-015-17", "name": "Custom Controls and Accessibility" },
+        { "id": "css-015-18", "name": "Accessible Data Visualization" },
+        { "id": "css-015-19", "name": "Accessibility with Pseudo-elements" },
+        { "id": "css-015-20", "name": "Accessibility Resources and Tools" }
+      ]
+    },
+    {
+      "id": "css-016",
+      "topic": "Print and Media-specific CSS",
+      "subtopics": [
+        { "id": "css-016-01", "name": "Print Style Sheets" },
+        { "id": "css-016-02", "name": "Screen vs Print Media Types" },
+        { "id": "css-016-03", "name": "Media Queries for Print" },
+        { "id": "css-016-04", "name": "Hiding Elements in Print" },
+        { "id": "css-016-05", "name": "Page Breaks and Pagination" },
+        { "id": "css-016-06", "name": "Setting Page Size and Margins" },
+        { "id": "css-016-07", "name": "Print Color Adjustments" },
+        { "id": "css-016-08", "name": "Print-specific Fonts" },
+        { "id": "css-016-09", "name": "Avoiding Orphans and Widows" },
+        { "id": "css-016-10", "name": "Footers and Headers for Print" },
+        { "id": "css-016-11", "name": "CSS Paged Media Module" },
+        { "id": "css-016-12", "name": "Printable Tables and Data" },
+        { "id": "css-016-13", "name": "Backgrounds in Print" },
+        { "id": "css-016-14", "name": "Print-friendly Links" },
+        { "id": "css-016-15", "name": "CSS Grid and Flexbox in Print" },
+        { "id": "css-016-16", "name": "PDF Generation and CSS" },
+        { "id": "css-016-17", "name": "Browser Print Previews" },
+        { "id": "css-016-18", "name": "Accessibility in Print Styles" },
+        { "id": "css-016-19", "name": "Responsive Print Layouts" },
+        { "id": "css-016-20", "name": "Advanced Print Styling Techniques" }
+      ]
+    },
+    {
+      "id": "css-017",
+      "topic": "SVG, Icons, and Web Graphics",
+      "subtopics": [
+        { "id": "css-017-01", "name": "Styling Inline SVG" },
+        { "id": "css-017-02", "name": "SVG as Background" },
+        { "id": "css-017-03", "name": "SVG Colors and Gradients" },
+        { "id": "css-017-04", "name": "SVG Filters with CSS" },
+        { "id": "css-017-05", "name": "SVG Animations with CSS" },
+        { "id": "css-017-06", "name": "Using Icon Fonts" },
+        { "id": "css-017-07", "name": "SVG Sprites" },
+        { "id": "css-017-08", "name": "Masking with CSS" },
+        { "id": "css-017-09", "name": "Clipping Paths" },
+        { "id": "css-017-10", "name": "CSS Shapes" },
+        { "id": "css-017-11", "name": "Image-set() for Responsive Images" },
+        { "id": "css-017-12", "name": "Mix-blend-mode with Images" },
+        { "id": "css-017-13", "name": "Object-fit for Images and SVG" },
+        { "id": "css-017-14", "name": "WebP, AVIF, and Modern Image Formats" },
+        { "id": "css-017-15", "name": "SVG Accessibility" },
+        { "id": "css-017-16", "name": "SVG in CSS Sprites" },
+        {
+          "id": "css-017-17",
+          "name": "Icon Systems (Font Awesome, Material Icons)"
+        },
+        { "id": "css-017-18", "name": "Favicon and App Icon Styling" },
+        { "id": "css-017-19", "name": "CSS for Canvas Elements" },
+        { "id": "css-017-20", "name": "Retina and High-DPI Graphics" }
+      ]
+    },
+    {
+      "id": "css-018",
+      "topic": "Interactivity and UI States",
+      "subtopics": [
+        { "id": "css-018-01", "name": "Styling Hover States" },
+        { "id": "css-018-02", "name": "Styling Active States" },
+        { "id": "css-018-03", "name": "Styling Focus States" },
+        { "id": "css-018-04", "name": "Disabled UI Elements" },
+        { "id": "css-018-05", "name": "Form Validation States" },
+        { "id": "css-018-06", "name": "Custom Checkbox and Radio Styling" },
+        { "id": "css-018-07", "name": "Styling Input Placeholders" },
+        { "id": "css-018-08", "name": "Custom Select Dropdown Styling" },
+        { "id": "css-018-09", "name": "Button Styling" },
+        { "id": "css-018-10", "name": "Tooltip Styling" },
+        { "id": "css-018-11", "name": "Accordion and Tab Styling" },
+        { "id": "css-018-12", "name": "Modal and Overlay Styling" },
+        { "id": "css-018-13", "name": "Progress Bar Styling" },
+        { "id": "css-018-14", "name": "Slider and Range Input Styling" },
+        { "id": "css-018-15", "name": "Toast and Notification Styling" },
+        { "id": "css-018-16", "name": "CSS for Drag-and-drop" },
+        { "id": "css-018-17", "name": "Switch and Toggle Styling" },
+        { "id": "css-018-18", "name": "Responsive UI State Handling" },
+        { "id": "css-018-19", "name": "UI State Animations" },
+        { "id": "css-018-20", "name": "Custom Form Controls (CSS4)" }
+      ]
+    },
+    {
+      "id": "css-019",
+      "topic": "Performance Optimization and Best Practices",
+      "subtopics": [
+        { "id": "css-019-01", "name": "Reducing CSS File Size" },
+        { "id": "css-019-02", "name": "CSS Minification" },
+        { "id": "css-019-03", "name": "Critical CSS and Above-the-Fold" },
+        { "id": "css-019-04", "name": "Lazy Loading Styles" },
+        { "id": "css-019-05", "name": "Removing Unused CSS (Tree-shaking)" },
+        { "id": "css-019-06", "name": "Efficient Selector Usage" },
+        { "id": "css-019-07", "name": "Avoiding !important" },
+        { "id": "css-019-08", "name": "Optimizing Animations and Transitions" },
+        {
+          "id": "css-019-09",
+          "name": "Using CSS Containment (contain: content)"
+        },
+        { "id": "css-019-10", "name": "Font Loading Optimization" },
+        { "id": "css-019-11", "name": "Image Optimization Techniques" },
+        { "id": "css-019-12", "name": "Caching CSS Assets" },
+        { "id": "css-019-13", "name": "HTTP/2 and CSS Delivery" },
+        { "id": "css-019-14", "name": "Inlining Critical CSS" },
+        { "id": "css-019-15", "name": "Using Modern CSS Features" },
+        { "id": "css-019-16", "name": "Performance Auditing Tools" },
+        { "id": "css-019-17", "name": "Accessibility and Performance" },
+        { "id": "css-019-18", "name": "Avoiding CSS Reflows and Repaints" },
+        { "id": "css-019-19", "name": "Best Practices for Large Codebases" },
+        { "id": "css-019-20", "name": "Progressive Enhancement" }
+      ]
+    },
+    {
+      "id": "css-020",
+      "topic": "Modern CSS and Future CSS (CSS4+)",
+      "subtopics": [
+        { "id": "css-020-01", "name": "CSS Feature Queries (@supports)" },
+        { "id": "css-020-02", "name": "CSS Nesting (CSS4)" },
+        { "id": "css-020-03", "name": "Container Queries (CSS4)" },
+        { "id": "css-020-04", "name": "Subgrid (CSS4)" },
+        { "id": "css-020-05", "name": "Accent-color Property" },
+        { "id": "css-020-06", "name": "Color-mix() and Color-contrast()" },
+        {
+          "id": "css-020-07",
+          "name": "Scroll-Linked Animations (Scroll Timeline)"
+        },
+        { "id": "css-020-08", "name": "Popover API and Popover Styling" },
+        { "id": "css-020-09", "name": "CSS Masonry Layout" },
+        { "id": "css-020-10", "name": "Relative Color Syntax" },
+        { "id": "css-020-11", "name": ":has() Relational Selector" },
+        { "id": "css-020-12", "name": "CSS Anchor Positioning" },
+        { "id": "css-020-13", "name": "Media Queries Level 4+" },
+        { "id": "css-020-14", "name": "Future Typography Features" },
+        { "id": "css-020-15", "name": "CSS Houdini APIs" },
+        {
+          "id": "css-020-16",
+          "name": "New Color Spaces (lab, lch, oklab, oklch)"
+        },
+        { "id": "css-020-17", "name": "CSS Modules Level 4+" },
+        { "id": "css-020-18", "name": "Light-Dark Color Schemes" },
+        { "id": "css-020-19", "name": "CSS in Web Components" },
+        {
+          "id": "css-020-20",
+          "name": "CSS Spec and Browser Implementation Process"
+        }
+      ]
+    }
+  ]
+}

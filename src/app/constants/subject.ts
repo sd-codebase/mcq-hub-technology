@@ -1,5 +1,23 @@
 export const subjects = [
   {
+    logotext: "HTML",
+    name: "HTML",
+    link: "subjects/html/topics",
+    questions: "20,000",
+  },
+  {
+    logotext: "CSS",
+    name: "CSS",
+    link: "subjects/css/topics",
+    questions: "20,000",
+  },
+  {
+    logotext: "Sass",
+    name: "Sass",
+    link: "subjects/sass/topics",
+    questions: "20,000",
+  },
+  {
     logotext: "JS",
     name: "JavaScript",
     link: "subjects/javascript/topics",

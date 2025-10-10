@@ -1,0 +1,569 @@
+{
+  "topics": [
+    {
+      "id": "sass-001",
+      "topic": "Introduction to Sass (SCSS)",
+      "subtopics": [
+        { "id": "sass-001-01", "name": "What is Sass? (History and Overview)" },
+        { "id": "sass-001-02", "name": "Sass vs. SCSS Syntax" },
+        { "id": "sass-001-03", "name": "Installing and Using Sass CLI" },
+        { "id": "sass-001-04", "name": "Integrating Sass with Build Tools" },
+        { "id": "sass-001-05", "name": "File Extensions (.sass vs .scss)" },
+        { "id": "sass-001-06", "name": "Basic Compilation Workflow" },
+        { "id": "sass-001-07", "name": "Sass in Modern Frontend Frameworks" },
+        { "id": "sass-001-08", "name": "Sass Versions and Updates" },
+        { "id": "sass-001-09", "name": "Community and Ecosystem" },
+        { "id": "sass-001-10", "name": "Best Practices for Sass Usage" },
+        { "id": "sass-001-11", "name": "Project Structure with Sass" },
+        { "id": "sass-001-12", "name": "Transitioning from CSS to Sass" },
+        { "id": "sass-001-13", "name": "Common Use Cases" },
+        { "id": "sass-001-14", "name": "Sass Limitations" },
+        { "id": "sass-001-15", "name": "Performance Considerations" },
+        { "id": "sass-001-16", "name": "Debugging in Sass" },
+        { "id": "sass-001-17", "name": "Sass Documentation and Resources" },
+        { "id": "sass-001-18", "name": "Sass for Large Scale Projects" },
+        { "id": "sass-001-19", "name": "Command Line vs. GUI Compilers" },
+        { "id": "sass-001-20", "name": "Future of Sass" }
+      ]
+    },
+    {
+      "id": "sass-002",
+      "topic": "Variables in Sass",
+      "subtopics": [
+        { "id": "sass-002-01", "name": "Declaring Variables with $" },
+        { "id": "sass-002-02", "name": "Variable Scope (Global vs Local)" },
+        { "id": "sass-002-03", "name": "Default Values (!default)" },
+        { "id": "sass-002-04", "name": "Using Variables in Selectors" },
+        { "id": "sass-002-05", "name": "Interpolation with Variables" },
+        { "id": "sass-002-06", "name": "Variable Naming Conventions" },
+        { "id": "sass-002-07", "name": "Color Variables" },
+        { "id": "sass-002-08", "name": "String Variables" },
+        { "id": "sass-002-09", "name": "Boolean Variables" },
+        { "id": "sass-002-10", "name": "Number Variables" },
+        { "id": "sass-002-11", "name": "Math Operations with Variables" },
+        { "id": "sass-002-12", "name": "Variable Maps" },
+        { "id": "sass-002-13", "name": "Using Variables in Mixins" },
+        { "id": "sass-002-14", "name": "Using Variables in Functions" },
+        { "id": "sass-002-15", "name": "Importing and Sharing Variables" },
+        { "id": "sass-002-16", "name": "Variable Shadowing" },
+        { "id": "sass-002-17", "name": "Best Practices for Variables" },
+        { "id": "sass-002-18", "name": "Dynamic Variables" },
+        { "id": "sass-002-19", "name": "Variables in Responsive Design" },
+        { "id": "sass-002-20", "name": "Debugging Variable Issues" }
+      ]
+    },
+    {
+      "id": "sass-003",
+      "topic": "Nesting in Sass",
+      "subtopics": [
+        { "id": "sass-003-01", "name": "Basic Nesting Syntax" },
+        { "id": "sass-003-02", "name": "Parent Selector Reference (&)" },
+        { "id": "sass-003-03", "name": "Nesting Pseudo-classes" },
+        { "id": "sass-003-04", "name": "Nesting Pseudo-elements" },
+        { "id": "sass-003-05", "name": "Nesting Attribute Selectors" },
+        { "id": "sass-003-06", "name": "Nesting with Combinators" },
+        { "id": "sass-003-07", "name": "Nesting with Media Queries" },
+        { "id": "sass-003-08", "name": "Deep Nesting and Output CSS" },
+        { "id": "sass-003-09", "name": "Avoiding Over-Nesting" },
+        { "id": "sass-003-10", "name": "Flattening Nested Selectors" },
+        { "id": "sass-003-11", "name": "Selector Specificity & Nesting" },
+        { "id": "sass-003-12", "name": "Nesting with Interpolation" },
+        { "id": "sass-003-13", "name": "Nesting in Mixins" },
+        { "id": "sass-003-14", "name": "Nesting in Functions" },
+        { "id": "sass-003-15", "name": "Nested Keyframes" },
+        { "id": "sass-003-16", "name": "Nesting and Code Organization" },
+        { "id": "sass-003-17", "name": "Nesting in Responsive Design" },
+        { "id": "sass-003-18", "name": "Nesting Placeholders" },
+        { "id": "sass-003-19", "name": "Nesting and Performance" },
+        { "id": "sass-003-20", "name": "Best Practices for Nesting" }
+      ]
+    },
+    {
+      "id": "sass-004",
+      "topic": "Mixins in Sass",
+      "subtopics": [
+        { "id": "sass-004-01", "name": "Defining Mixins (@mixin)" },
+        { "id": "sass-004-02", "name": "Including Mixins (@include)" },
+        { "id": "sass-004-03", "name": "Mixin Arguments and Defaults" },
+        { "id": "sass-004-04", "name": "Named Arguments" },
+        { "id": "sass-004-05", "name": "Content Blocks in Mixins (@content)" },
+        { "id": "sass-004-06", "name": "Reusable Patterns with Mixins" },
+        { "id": "sass-004-07", "name": "Mixins and Scope" },
+        { "id": "sass-004-08", "name": "Mixins for Responsive Design" },
+        { "id": "sass-004-09", "name": "Mixins in Partial Files" },
+        { "id": "sass-004-10", "name": "Mixin Recursion" },
+        { "id": "sass-004-11", "name": "Mixins and Inheritance" },
+        { "id": "sass-004-12", "name": "Mixins for Vendor Prefixes" },
+        { "id": "sass-004-13", "name": "Mixins with Variable Arguments" },
+        { "id": "sass-004-14", "name": "Debugging Mixins" },
+        { "id": "sass-004-15", "name": "Mixins and Loops" },
+        { "id": "sass-004-16", "name": "Mixins and Conditionals" },
+        {
+          "id": "sass-004-17",
+          "name": "Mixin Libraries (Compass, Bourbon, etc.)"
+        },
+        { "id": "sass-004-18", "name": "Best Practices for Mixins" },
+        { "id": "sass-004-19", "name": "Mixins and DRY Principle" },
+        { "id": "sass-004-20", "name": "Mixins Output Control" }
+      ]
+    },
+    {
+      "id": "sass-005",
+      "topic": "Functions and Operations in Sass",
+      "subtopics": [
+        { "id": "sass-005-01", "name": "Defining Functions (@function)" },
+        {
+          "id": "sass-005-02",
+          "name": "Using Built-in Functions (Color, String, List, Map, Math)"
+        },
+        { "id": "sass-005-03", "name": "Function Arguments and Defaults" },
+        { "id": "sass-005-04", "name": "Return Values from Functions" },
+        { "id": "sass-005-05", "name": "Math Operators (+, -, *, /, %)" },
+        {
+          "id": "sass-005-06",
+          "name": "String Interpolation and Manipulation"
+        },
+        { "id": "sass-005-07", "name": "Color Manipulation Functions" },
+        { "id": "sass-005-08", "name": "Unit Conversion Functions" },
+        { "id": "sass-005-09", "name": "Argument Types and Validation" },
+        { "id": "sass-005-10", "name": "Function Scope" },
+        { "id": "sass-005-11", "name": "Custom Functions" },
+        { "id": "sass-005-12", "name": "Recursive Functions" },
+        { "id": "sass-005-13", "name": "List and Map Functions" },
+        { "id": "sass-005-14", "name": "Debugging Functions" },
+        { "id": "sass-005-15", "name": "Performance Considerations" },
+        { "id": "sass-005-16", "name": "Function Libraries" },
+        { "id": "sass-005-17", "name": "Using Functions in Mixins" },
+        { "id": "sass-005-18", "name": "Function vs. Mixin Use Cases" },
+        { "id": "sass-005-19", "name": "Best Practices for Functions" },
+        { "id": "sass-005-20", "name": "Functions and DRY Principle" }
+      ]
+    },
+    {
+      "id": "sass-006",
+      "topic": "Sass Modules and Imports",
+      "subtopics": [
+        { "id": "sass-006-01", "name": "Using @use and @forward" },
+        { "id": "sass-006-02", "name": "Migrating from @import to @use" },
+        { "id": "sass-006-03", "name": "Partial Files and Naming Conventions" },
+        { "id": "sass-006-04", "name": "Module Namespaces" },
+        { "id": "sass-006-05", "name": "Configuring Module Variables" },
+        {
+          "id": "sass-006-06",
+          "name": "Importing Variables, Mixins, and Functions"
+        },
+        { "id": "sass-006-07", "name": "Order of Imports and Dependencies" },
+        {
+          "id": "sass-006-08",
+          "name": "Combining Sass Modules and CSS Imports"
+        },
+        { "id": "sass-006-09", "name": "Avoiding Import Loops" },
+        { "id": "sass-006-10", "name": "Module Scope and Isolation" },
+        { "id": "sass-006-11", "name": "Sharing Code Across Projects" },
+        { "id": "sass-006-12", "name": "Importing External Libraries" },
+        { "id": "sass-006-13", "name": "Best Practices for Modular Structure" },
+        { "id": "sass-006-14", "name": "Modules and Team Collaboration" },
+        { "id": "sass-006-15", "name": "Maintaining Large Codebases" },
+        { "id": "sass-006-16", "name": "Debugging Module Imports" },
+        { "id": "sass-006-17", "name": "Modules and Performance" },
+        { "id": "sass-006-18", "name": "Using @forward for APIs" },
+        { "id": "sass-006-19", "name": "Modules in Component Libraries" },
+        { "id": "sass-006-20", "name": "Organizing Code with Modules" }
+      ]
+    },
+    {
+      "id": "sass-007",
+      "topic": "Inheritance and Placeholders in Sass",
+      "subtopics": [
+        { "id": "sass-007-01", "name": "Using @extend" },
+        { "id": "sass-007-02", "name": "Placeholder Selectors (%)" },
+        { "id": "sass-007-03", "name": "Combining Extends with Placeholders" },
+        { "id": "sass-007-04", "name": "Extending Multiple Selectors" },
+        { "id": "sass-007-05", "name": "Extending Nested Selectors" },
+        { "id": "sass-007-06", "name": "Extending with Arguments" },
+        { "id": "sass-007-07", "name": "Extending with Mixins" },
+        { "id": "sass-007-08", "name": "Inheritance vs. Mixins" },
+        { "id": "sass-007-09", "name": "Avoiding Extend Pitfalls" },
+        { "id": "sass-007-10", "name": "Chaining Extends" },
+        { "id": "sass-007-11", "name": "Specificity and Extends" },
+        { "id": "sass-007-12", "name": "Extending with Placeholders Only" },
+        { "id": "sass-007-13", "name": "Extends and Output CSS" },
+        { "id": "sass-007-14", "name": "Extending Utility Classes" },
+        { "id": "sass-007-15", "name": "Best Practices for Extends" },
+        { "id": "sass-007-16", "name": "Placeholders for Reusable Patterns" },
+        { "id": "sass-007-17", "name": "Extending in Large Projects" },
+        { "id": "sass-007-18", "name": "Maintaining Extends" },
+        { "id": "sass-007-19", "name": "Extends and DRY Principle" },
+        { "id": "sass-007-20", "name": "Debugging Extends" }
+      ]
+    },
+    {
+      "id": "sass-008",
+      "topic": "Conditionals and Logic in Sass",
+      "subtopics": [
+        { "id": "sass-008-01", "name": "If/Else Statements (@if, @else)" },
+        { "id": "sass-008-02", "name": "Ternary Operations (if() function)" },
+        { "id": "sass-008-03", "name": "Using Booleans in Conditionals" },
+        { "id": "sass-008-04", "name": "Comparison Operators" },
+        { "id": "sass-008-05", "name": "Combining Multiple Conditions" },
+        { "id": "sass-008-06", "name": "Conditionals in Mixins" },
+        { "id": "sass-008-07", "name": "Conditionals in Functions" },
+        { "id": "sass-008-08", "name": "Nested Conditionals" },
+        { "id": "sass-008-09", "name": "Truthy and Falsy Values" },
+        { "id": "sass-008-10", "name": "Fallbacks with Conditionals" },
+        { "id": "sass-008-11", "name": "Debugging Conditionals" },
+        { "id": "sass-008-12", "name": "Conditionals and Output CSS" },
+        { "id": "sass-008-13", "name": "Conditionals in Loops" },
+        { "id": "sass-008-14", "name": "Conditionals in Responsive Design" },
+        { "id": "sass-008-15", "name": "Conditional Imports" },
+        { "id": "sass-008-16", "name": "Maintaining Conditional Logic" },
+        { "id": "sass-008-17", "name": "Performance and Conditionals" },
+        { "id": "sass-008-18", "name": "Best Practices for Conditionals" },
+        { "id": "sass-008-19", "name": "Conditional Inheritance" },
+        {
+          "id": "sass-008-20",
+          "name": "Dynamic Class Generation with Conditionals"
+        }
+      ]
+    },
+    {
+      "id": "sass-009",
+      "topic": "Loops and Iteration in Sass",
+      "subtopics": [
+        { "id": "sass-009-01", "name": "@for Loops" },
+        { "id": "sass-009-02", "name": "@each Loops" },
+        { "id": "sass-009-03", "name": "@while Loops" },
+        { "id": "sass-009-04", "name": "Loop Variables and Scoping" },
+        { "id": "sass-009-05", "name": "Iterating Over Lists" },
+        { "id": "sass-009-06", "name": "Iterating Over Maps" },
+        { "id": "sass-009-07", "name": "Nested Loops" },
+        { "id": "sass-009-08", "name": "Dynamic Class Generation with Loops" },
+        { "id": "sass-009-09", "name": "Loops in Mixins" },
+        { "id": "sass-009-10", "name": "Loops in Functions" },
+        { "id": "sass-009-11", "name": "Loops for Responsive Design" },
+        { "id": "sass-009-12", "name": "Loops for Theming" },
+        { "id": "sass-009-13", "name": "Debugging Loops" },
+        { "id": "sass-009-14", "name": "Performance Considerations" },
+        { "id": "sass-009-15", "name": "Advanced Loop Patterns" },
+        { "id": "sass-009-16", "name": "Combining Loops and Conditionals" },
+        { "id": "sass-009-17", "name": "Best Practices for Loops" },
+        { "id": "sass-009-18", "name": "Loop Output and CSS Size" },
+        { "id": "sass-009-19", "name": "Reusable Loop Utilities" },
+        { "id": "sass-009-20", "name": "Loops in Component Libraries" }
+      ]
+    },
+    {
+      "id": "sass-010",
+      "topic": "Advanced Features and Best Practices in Sass",
+      "subtopics": [
+        {
+          "id": "sass-010-01",
+          "name": "Error Handling (@error, @warn, @debug)"
+        },
+        { "id": "sass-010-02", "name": "Silent Comments (//)" },
+        { "id": "sass-010-03", "name": "Sass Maps and Deep Operations" },
+        { "id": "sass-010-04", "name": "Color Utilities and Custom Palettes" },
+        { "id": "sass-010-05", "name": "Responsive Mixins and Utilities" },
+        { "id": "sass-010-06", "name": "Theming with Sass" },
+        { "id": "sass-010-07", "name": "Accessibility Considerations" },
+        { "id": "sass-010-08", "name": "Sass in Design Systems" },
+        { "id": "sass-010-09", "name": "Reusable Component Styles" },
+        { "id": "sass-010-10", "name": "Performance Optimization Strategies" },
+        { "id": "sass-010-11", "name": "Maintaining Large Sass Codebases" },
+        { "id": "sass-010-12", "name": "Sass Linting and Style Guides" },
+        { "id": "sass-010-13", "name": "Testing Sass Code" },
+        { "id": "sass-010-14", "name": "Documentation for Sass Projects" },
+        { "id": "sass-010-15", "name": "Sass in Continuous Integration" },
+        { "id": "sass-010-16", "name": "Sass and CSS Custom Properties" },
+        { "id": "sass-010-17", "name": "Migration Strategies" },
+        {
+          "id": "sass-010-18",
+          "name": "Sass with Modern JavaScript Frameworks"
+        },
+        {
+          "id": "sass-010-19",
+          "name": "Best Practices for Team Collaboration"
+        },
+        { "id": "sass-010-20", "name": "Future Directions for Sass" }
+      ]
+    },
+    {
+      "id": "less-001",
+      "topic": "Introduction to Less",
+      "subtopics": [
+        { "id": "less-001-01", "name": "What is Less? (History and Overview)" },
+        { "id": "less-001-02", "name": "Less vs. CSS Syntax" },
+        { "id": "less-001-03", "name": "Installing and Using Less" },
+        { "id": "less-001-04", "name": "Less Compilation Workflow" },
+        { "id": "less-001-05", "name": "Less in Build Tools and Frameworks" },
+        { "id": "less-001-06", "name": "File Extensions and Structure" },
+        { "id": "less-001-07", "name": "Less Versions and Updates" },
+        { "id": "less-001-08", "name": "Less Community and Ecosystem" },
+        { "id": "less-001-09", "name": "Integrating Less with JavaScript" },
+        { "id": "less-001-10", "name": "Best Practices for Less Usage" },
+        { "id": "less-001-11", "name": "Project Structure with Less" },
+        { "id": "less-001-12", "name": "Transitioning from CSS to Less" },
+        { "id": "less-001-13", "name": "Common Use Cases" },
+        { "id": "less-001-14", "name": "Limitations of Less" },
+        { "id": "less-001-15", "name": "Performance Considerations" },
+        { "id": "less-001-16", "name": "Debugging in Less" },
+        { "id": "less-001-17", "name": "Less Documentation and Resources" },
+        { "id": "less-001-18", "name": "Less for Large Scale Projects" },
+        { "id": "less-001-19", "name": "Command Line vs. GUI Compilers" },
+        { "id": "less-001-20", "name": "Future of Less" }
+      ]
+    },
+    {
+      "id": "less-002",
+      "topic": "Variables in Less",
+      "subtopics": [
+        { "id": "less-002-01", "name": "Declaring Variables with @" },
+        { "id": "less-002-02", "name": "Variable Scope (Global vs Local)" },
+        { "id": "less-002-03", "name": "Overriding Variables" },
+        { "id": "less-002-04", "name": "Variable Interpolation" },
+        { "id": "less-002-05", "name": "Variable Naming Conventions" },
+        { "id": "less-002-06", "name": "Color Variables" },
+        { "id": "less-002-07", "name": "String Variables" },
+        { "id": "less-002-08", "name": "Number Variables" },
+        { "id": "less-002-09", "name": "Math Operations with Variables" },
+        { "id": "less-002-10", "name": "Variables in Property Names" },
+        { "id": "less-002-11", "name": "Using Variables in Mixins" },
+        { "id": "less-002-12", "name": "Using Variables in Functions" },
+        { "id": "less-002-13", "name": "Variable Shadowing" },
+        { "id": "less-002-14", "name": "Variable Guards" },
+        { "id": "less-002-15", "name": "Importing and Sharing Variables" },
+        { "id": "less-002-16", "name": "Variables in Loops" },
+        { "id": "less-002-17", "name": "Best Practices for Variables" },
+        { "id": "less-002-18", "name": "Variables in Responsive Design" },
+        { "id": "less-002-19", "name": "Debugging Variable Issues" },
+        { "id": "less-002-20", "name": "Dynamic Variables" }
+      ]
+    },
+    {
+      "id": "less-003",
+      "topic": "Nesting in Less",
+      "subtopics": [
+        { "id": "less-003-01", "name": "Basic Nesting Syntax" },
+        { "id": "less-003-02", "name": "Parent Selector Reference &" },
+        { "id": "less-003-03", "name": "Nesting Pseudo-classes" },
+        { "id": "less-003-04", "name": "Nesting Pseudo-elements" },
+        { "id": "less-003-05", "name": "Nesting Attribute Selectors" },
+        { "id": "less-003-06", "name": "Nesting with Combinators" },
+        { "id": "less-003-07", "name": "Nesting with Media Queries" },
+        { "id": "less-003-08", "name": "Deep Nesting and Output CSS" },
+        { "id": "less-003-09", "name": "Avoiding Over-Nesting" },
+        { "id": "less-003-10", "name": "Flattening Nested Selectors" },
+        { "id": "less-003-11", "name": "Selector Specificity & Nesting" },
+        { "id": "less-003-12", "name": "Nesting with Interpolation" },
+        { "id": "less-003-13", "name": "Nesting in Mixins" },
+        { "id": "less-003-14", "name": "Nesting in Functions" },
+        { "id": "less-003-15", "name": "Nested Keyframes" },
+        { "id": "less-003-16", "name": "Nesting and Code Organization" },
+        { "id": "less-003-17", "name": "Nesting in Responsive Design" },
+        { "id": "less-003-18", "name": "Nesting and Performance" },
+        { "id": "less-003-19", "name": "Best Practices for Nesting" },
+        { "id": "less-003-20", "name": "Debugging Nested Selectors" }
+      ]
+    },
+    {
+      "id": "less-004",
+      "topic": "Mixins in Less",
+      "subtopics": [
+        { "id": "less-004-01", "name": "Defining Mixins (.mixin())" },
+        { "id": "less-004-02", "name": "Including Mixins" },
+        { "id": "less-004-03", "name": "Mixin Parameters and Defaults" },
+        { "id": "less-004-04", "name": "Named Arguments in Mixins" },
+        { "id": "less-004-05", "name": "Guards and Conditional Mixins" },
+        { "id": "less-004-06", "name": "Mixin Recursion" },
+        { "id": "less-004-07", "name": "Mixins with Variable Arguments" },
+        { "id": "less-004-08", "name": "Mixins for Responsive Design" },
+        { "id": "less-004-09", "name": "Mixin Scope" },
+        { "id": "less-004-10", "name": "Mixins in Partial Files" },
+        { "id": "less-004-11", "name": "Reusable Patterns with Mixins" },
+        { "id": "less-004-12", "name": "Debugging Mixins" },
+        { "id": "less-004-13", "name": "Mixins and Inheritance" },
+        { "id": "less-004-14", "name": "Mixins with Loops" },
+        { "id": "less-004-15", "name": "Mixins with Conditionals" },
+        { "id": "less-004-16", "name": "Mixin Libraries" },
+        { "id": "less-004-17", "name": "Best Practices for Mixins" },
+        { "id": "less-004-18", "name": "Mixins and DRY Principle" },
+        { "id": "less-004-19", "name": "Mixins for Vendor Prefixes" },
+        { "id": "less-004-20", "name": "Mixins Output Control" }
+      ]
+    },
+    {
+      "id": "less-005",
+      "topic": "Functions and Operations in Less",
+      "subtopics": [
+        {
+          "id": "less-005-01",
+          "name": "Using Built-in Functions (Color, String, Math)"
+        },
+        { "id": "less-005-02", "name": "Defining Custom Functions" },
+        { "id": "less-005-03", "name": "Function Arguments and Defaults" },
+        { "id": "less-005-04", "name": "Return Values from Functions" },
+        { "id": "less-005-05", "name": "Math Operators (+, -, *, /, %)" },
+        {
+          "id": "less-005-06",
+          "name": "String Interpolation and Manipulation"
+        },
+        { "id": "less-005-07", "name": "Color Manipulation Functions" },
+        { "id": "less-005-08", "name": "Unit Conversion Functions" },
+        { "id": "less-005-09", "name": "Argument Types and Validation" },
+        { "id": "less-005-10", "name": "Function Scope" },
+        { "id": "less-005-11", "name": "Recursive Functions" },
+        { "id": "less-005-12", "name": "Debugging Functions" },
+        { "id": "less-005-13", "name": "Performance Considerations" },
+        { "id": "less-005-14", "name": "Function Libraries" },
+        { "id": "less-005-15", "name": "Using Functions in Mixins" },
+        { "id": "less-005-16", "name": "Function vs. Mixin Use Cases" },
+        { "id": "less-005-17", "name": "Best Practices for Functions" },
+        { "id": "less-005-18", "name": "Functions and DRY Principle" },
+        { "id": "less-005-19", "name": "Functions in Responsive Design" },
+        { "id": "less-005-20", "name": "Advanced Function Patterns" }
+      ]
+    },
+    {
+      "id": "less-006",
+      "topic": "Importing and Modularization in Less",
+      "subtopics": [
+        { "id": "less-006-01", "name": "Using @import" },
+        {
+          "id": "less-006-02",
+          "name": "Import Options (reference, inline, less, css, once, multiple)"
+        },
+        { "id": "less-006-03", "name": "Partial Files and Naming Conventions" },
+        {
+          "id": "less-006-04",
+          "name": "Importing Variables, Mixins, and Functions"
+        },
+        { "id": "less-006-05", "name": "Order of Imports and Dependencies" },
+        { "id": "less-006-06", "name": "Combining Less and CSS Imports" },
+        { "id": "less-006-07", "name": "Avoiding Import Loops" },
+        { "id": "less-006-08", "name": "Importing External Libraries" },
+        { "id": "less-006-09", "name": "Import Paths and Aliases" },
+        { "id": "less-006-10", "name": "Sharing Code Across Projects" },
+        { "id": "less-006-11", "name": "Best Practices for Modular Structure" },
+        { "id": "less-006-12", "name": "Maintaining Large Codebases" },
+        { "id": "less-006-13", "name": "Importing Fonts and Images" },
+        { "id": "less-006-14", "name": "Debugging Imports" },
+        { "id": "less-006-15", "name": "Modules in Component Libraries" },
+        { "id": "less-006-16", "name": "Organizing Code with Imports" },
+        { "id": "less-006-17", "name": "Performance and Imports" },
+        { "id": "less-006-18", "name": "Team Collaboration with Modular Less" },
+        { "id": "less-006-19", "name": "Importing from Node Modules" },
+        { "id": "less-006-20", "name": "Future-Proof Modularization" }
+      ]
+    },
+    {
+      "id": "less-007",
+      "topic": "Extends and Inheritance in Less",
+      "subtopics": [
+        { "id": "less-007-01", "name": "Using :extend" },
+        { "id": "less-007-02", "name": "Extending Multiple Selectors" },
+        { "id": "less-007-03", "name": "Extending Nested Selectors" },
+        { "id": "less-007-04", "name": "Extending with Guards" },
+        { "id": "less-007-05", "name": "Extending with Mixins" },
+        { "id": "less-007-06", "name": "Inheritance vs. Mixins" },
+        { "id": "less-007-07", "name": "Avoiding Extend Pitfalls" },
+        { "id": "less-007-08", "name": "Chaining Extends" },
+        { "id": "less-007-09", "name": "Specificity and Extends" },
+        { "id": "less-007-10", "name": "Extending Utility Classes" },
+        { "id": "less-007-11", "name": "Best Practices for Extends" },
+        { "id": "less-007-12", "name": "Maintaining Extends" },
+        { "id": "less-007-13", "name": "Extends and Output CSS" },
+        { "id": "less-007-14", "name": "Extends and DRY Principle" },
+        { "id": "less-007-15", "name": "Extends in Large Projects" },
+        { "id": "less-007-16", "name": "Debugging Extends" },
+        { "id": "less-007-17", "name": "Extending Placeholders" },
+        { "id": "less-007-18", "name": "Extending with Loops" },
+        { "id": "less-007-19", "name": "Extending with Interpolation" },
+        { "id": "less-007-20", "name": "Extending and Performance" }
+      ]
+    },
+    {
+      "id": "less-008",
+      "topic": "Conditionals and Guards in Less",
+      "subtopics": [
+        { "id": "less-008-01", "name": "Guards in Mixins" },
+        { "id": "less-008-02", "name": "when Keyword for Conditionals" },
+        { "id": "less-008-03", "name": "Boolean Logic in Guards" },
+        { "id": "less-008-04", "name": "Comparison Operators" },
+        { "id": "less-008-05", "name": "Combining Multiple Conditions" },
+        { "id": "less-008-06", "name": "Conditionals in Functions" },
+        { "id": "less-008-07", "name": "Conditionals in Loops" },
+        { "id": "less-008-08", "name": "Truthy and Falsy Values" },
+        { "id": "less-008-09", "name": "Fallbacks with Guards" },
+        { "id": "less-008-10", "name": "Switch Statements (Less)" },
+        { "id": "less-008-11", "name": "Debugging Guards" },
+        { "id": "less-008-12", "name": "Conditionals and Output CSS" },
+        { "id": "less-008-13", "name": "Dynamic Class Generation with Guards" },
+        { "id": "less-008-14", "name": "Best Practices for Conditionals" },
+        { "id": "less-008-15", "name": "Conditional Imports" },
+        { "id": "less-008-16", "name": "Maintaining Conditional Logic" },
+        { "id": "less-008-17", "name": "Performance and Guards" },
+        { "id": "less-008-18", "name": "Conditional Inheritance" },
+        { "id": "less-008-19", "name": "Conditionals for Responsive Design" },
+        { "id": "less-008-20", "name": "Guards in Large Projects" }
+      ]
+    },
+    {
+      "id": "less-009",
+      "topic": "Loops and Iteration in Less",
+      "subtopics": [
+        { "id": "less-009-01", "name": ".each() for Lists and Arrays" },
+        { "id": "less-009-02", "name": ".for() and .range() Loops" },
+        { "id": "less-009-03", "name": "While Loops in Less" },
+        { "id": "less-009-04", "name": "Loop Variables and Scoping" },
+        { "id": "less-009-05", "name": "Nested Loops" },
+        { "id": "less-009-06", "name": "Dynamic Class Generation with Loops" },
+        { "id": "less-009-07", "name": "Loops in Mixins" },
+        { "id": "less-009-08", "name": "Loops in Functions" },
+        { "id": "less-009-09", "name": "Loops for Responsive Design" },
+        { "id": "less-009-10", "name": "Loops for Theming" },
+        { "id": "less-009-11", "name": "Debugging Loops" },
+        { "id": "less-009-12", "name": "Performance Considerations" },
+        { "id": "less-009-13", "name": "Advanced Loop Patterns" },
+        { "id": "less-009-14", "name": "Combining Loops and Conditionals" },
+        { "id": "less-009-15", "name": "Best Practices for Loops" },
+        { "id": "less-009-16", "name": "Loop Output and CSS Size" },
+        { "id": "less-009-17", "name": "Reusable Loop Utilities" },
+        { "id": "less-009-18", "name": "Loops in Component Libraries" },
+        { "id": "less-009-19", "name": "Loops and DRY Principle" },
+        { "id": "less-009-20", "name": "Loops in Large Projects" }
+      ]
+    },
+    {
+      "id": "less-010",
+      "topic": "Advanced Features and Best Practices in Less",
+      "subtopics": [
+        { "id": "less-010-01", "name": "Error Handling and Debugging" },
+        { "id": "less-010-02", "name": "Silent Comments" },
+        { "id": "less-010-03", "name": "Reusable Component Styles" },
+        { "id": "less-010-04", "name": "Custom Color Utilities" },
+        { "id": "less-010-05", "name": "Responsive Mixins and Utilities" },
+        { "id": "less-010-06", "name": "Theming with Less" },
+        { "id": "less-010-07", "name": "Accessibility Considerations" },
+        { "id": "less-010-08", "name": "Less in Design Systems" },
+        { "id": "less-010-09", "name": "Performance Optimization Strategies" },
+        { "id": "less-010-10", "name": "Maintaining Large Less Codebases" },
+        { "id": "less-010-11", "name": "Less Linting and Style Guides" },
+        { "id": "less-010-12", "name": "Testing Less Code" },
+        { "id": "less-010-13", "name": "Documentation for Less Projects" },
+        { "id": "less-010-14", "name": "Less in Continuous Integration" },
+        { "id": "less-010-15", "name": "Migration Strategies" },
+        {
+          "id": "less-010-16",
+          "name": "Less with Modern JavaScript Frameworks"
+        },
+        {
+          "id": "less-010-17",
+          "name": "Best Practices for Team Collaboration"
+        },
+        { "id": "less-010-18", "name": "Future Directions for Less" },
+        { "id": "less-010-19", "name": "Advanced Modularization Patterns" },
+        { "id": "less-010-20", "name": "Community Resources and Tools" }
+      ]
+    }
+  ]
+}
