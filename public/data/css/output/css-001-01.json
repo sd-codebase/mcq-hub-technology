@@ -2,91 +2,91 @@
   "output_questions": [
     {
       "id": "output-001-01-001",
-      "question": "<style>\np {\n  color: red;\n}\n</style>\n<p>Hello, World!</p>",
+      "question": "```css<style>\np {\n  color: red;\n}\n</style>\n<p>Hello, World!</p>```",
       "output": "<p style=\"color: red;\">Hello, World!</p>",
       "explanation": "The CSS rule `p { color: red; }` sets the text color of the paragraph to red."
     },
     {
       "id": "output-001-01-002",
-      "question": "<style>\nh1 {\n  color: green;\n}\n</style>\n<h1>Welcome to CSS</h1>",
+      "question": "```css<style>\nh1 {\n  color: green;\n}\n</style>\n<h1>Welcome to CSS</h1>```",
       "output": "<h1 style=\"color: green;\">Welcome to CSS</h1>",
       "explanation": "The CSS rule applies green color to the `<h1>` heading."
     },
     {
       "id": "output-001-01-003",
-      "question": "<style>\nbody {\n  background-color: yellow;\n}\n</style>\n<p>This is a test.</p>",
+      "question": "`<style>\nbody {\n  background-color: yellow;\n}\n</style>\n<p>This is a test.</p>`,",
       "output": "<body style=\"background-color: yellow;\"><p>This is a test.</p></body>",
       "explanation": "The background of the page will be yellow due to the `body { background-color: yellow; }` rule."
     },
     {
       "id": "output-001-01-004",
-      "question": "<style>\n/* No CSS defined */\n</style>\n<h2>CSS Example</h2>",
+      "question": "`<style>\n/* No CSS defined */\n</style>\n<h2>CSS Example</h2>`",
       "output": "<h2>CSS Example</h2>",
       "explanation": "No CSS is applied, so default browser styles will be used for the heading."
     },
     {
       "id": "output-001-01-005",
-      "question": "<style>\n* {\n  color: red;\n}\n</style>\n<p>Universal selector</p>\n<h1>Heading</h1>",
+      "question": "`<style>\n* {\n  color: red;\n}\n</style>\n<p>Universal selector</p>\n<h1>Heading</h1>`",
       "output": "<p style=\"color: red;\">Universal selector</p>\n<h1 style=\"color: red;\">Heading</h1>",
       "explanation": "The universal selector `*` sets all text to red."
     },
     {
       "id": "output-001-01-006",
-      "question": "<style>\np {\n  color: blue;\n}\n</style>\n<p>This is blue text.</p>\n<p>This is also blue.</p>",
+      "question": "`<style>\np {\n  color: blue;\n}\n</style>\n<p>This is blue text.</p>\n<p>This is also blue.</p>`",
       "output": "<p style=\"color: blue;\">This is blue text.</p>\n<p style=\"color: blue;\">This is also blue.</p>",
       "explanation": "Both `<p>` elements are blue due to the CSS rule."
     },
     {
       "id": "output-001-01-007",
-      "question": "<style>\nbody {\n  color: purple;\n}\n</style>\n<p>Paragraph text</p>",
+      "question": "`<style>\nbody {\n  color: purple;\n}\n</style>\n<p>Paragraph text</p>`",
       "output": "<body style=\"color: purple;\"><p>Paragraph text</p></body>",
       "explanation": "Paragraph text inherits the purple color from the body."
     },
     {
       "id": "output-001-01-008",
-      "question": "<style>\nh2 {\n  color: orange;\n}\n</style>\n<h2>Subheading</h2>",
+      "question": "`<style>\nh2 {\n  color: orange;\n}\n</style>\n<h2>Subheading</h2>`",
       "output": "<h2 style=\"color: orange;\">Subheading</h2>",
       "explanation": "The `<h2>` element is styled orange."
     },
     {
       "id": "output-001-01-009",
-      "question": "<style>\nh1 {\n  background-color: lightgray;\n}\n</style>\n<h1>Main Title</h1>",
+      "question": "`<style>\nh1 {\n  background-color: lightgray;\n}\n</style>\n<h1>Main Title</h1>`",
       "output": "<h1 style=\"background-color: lightgray;\">Main Title</h1>",
       "explanation": "The background of the `<h1>` is light gray."
     },
     {
       "id": "output-001-01-010",
-      "question": "<style>\np {\n  color: #333333;\n}\n</style>\n<p>Dark gray text</p>",
+      "question": "`<style>\np {\n  color: #333333;\n}\n</style>\n<p>Dark gray text</p>`",
       "output": "<p style=\"color: #333333;\">Dark gray text</p>",
       "explanation": "The hexadecimal color is applied to the paragraph."
     },
     {
       "id": "output-001-01-011",
-      "question": "<style>\nspan {\n  color: blue;\n}\n</style>\n<p>This is <span>blue inside span</span></p>",
+      "question": "`<style>\nspan {\n  color: blue;\n}\n</style>\n<p>This is <span>blue inside span</span></p>`",
       "output": "<p>This is <span style=\"color: blue;\">blue inside span</span></p>",
       "explanation": "Only the text inside `<span>` is blue."
     },
     {
       "id": "output-001-01-012",
-      "question": "<style>\nh1 {\n  color: red;\n}\nh2 {\n  color: green;\n}\n</style>\n<h1>Red Title</h1>\n<h2>Green Subtitle</h2>",
+      "question": "`<style>\nh1 {\n  color: red;\n}\nh2 {\n  color: green;\n}\n</style>\n<h1>Red Title</h1>\n<h2>Green Subtitle</h2>`",
       "output": "<h1 style=\"color: red;\">Red Title</h1>\n<h2 style=\"color: green;\">Green Subtitle</h2>",
       "explanation": "Each heading gets its respective color."
     },
     {
       "id": "output-001-01-013",
-      "question": "<style>\np {\n  color: orange;\n}\n</style>\n<p>This is a paragraph.</p>\n<h1>This is a heading.</h1>",
+      "question": "`<style>\np {\n  color: orange;\n}\n</style>\n<p>This is a paragraph.</p>\n<h1>This is a heading.</h1>`",
       "output": "<p style=\"color: orange;\">This is a paragraph.</p>\n<h1>This is a heading.</h1>",
       "explanation": "Only the paragraph gets the orange color."
     },
     {
       "id": "output-001-01-014",
-      "question": "<style>\np {\n  color: blue;\n}\n</style>\n<p>One</p>\n<p>Two</p>\n<p>Three</p>",
+      "question": "`<style>\np {\n  color: blue;\n}\n</style>\n<p>One</p>\n<p>Two</p>\n<p>Three</p>`",
       "output": "<p style=\"color: blue;\">One</p>\n<p style=\"color: blue;\">Two</p>\n<p style=\"color: blue;\">Three</p>",
       "explanation": "All `<p>` elements are blue."
     },
     {
       "id": "output-001-01-015",
-      "question": "<style>\nbody {\n  background-color: #f0f0f0;\n}\n</style>\n<p>Background?</p>",
+      "question": "`<style>\nbody {\n  background-color: #f0f0f0;\n}\n</style>\n<p>Background?</p>`,",
       "output": "<body style=\"background-color: #f0f0f0;\"><p>Background?</p></body>",
       "explanation": "The entire page background is set to a very light gray."
     }
