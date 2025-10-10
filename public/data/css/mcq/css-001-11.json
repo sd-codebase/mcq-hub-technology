@@ -1,0 +1,144 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-11-001",
+      "question": "What is the CSS Box Model?",
+      "options": [
+        "A way to style fonts",
+        "A layout model describing the rectangular boxes generated for elements",
+        "A technique for responsive images",
+        "A CSS preprocessor"
+      ],
+      "correct_answer": 2,
+      "explanation": "The CSS Box Model describes how elements are rendered as rectangular boxes, consisting of content, padding, border, and margin."
+    },
+    {
+      "id": "mcq-001-11-002",
+      "question": "Which of the following is NOT a part of the CSS Box Model?",
+      "options": ["Margin", "Padding", "Border", "Selector"],
+      "correct_answer": 4,
+      "explanation": "Selector is not part of the box model. The box model consists of content, padding, border, and margin."
+    },
+    {
+      "id": "mcq-001-11-003",
+      "question": "Which property determines the spacing between the border and the content?",
+      "options": ["margin", "padding", "border-width", "outline"],
+      "correct_answer": 2,
+      "explanation": "Padding is the space between the content and the border."
+    },
+    {
+      "id": "mcq-001-11-004",
+      "question": "What does the `margin` property control?",
+      "options": [
+        "Space inside the border",
+        "Space outside the border",
+        "The border’s thickness",
+        "Text alignment"
+      ],
+      "correct_answer": 2,
+      "explanation": "Margin sets the space outside the border, separating elements from each other."
+    },
+    {
+      "id": "mcq-001-11-005",
+      "question": "What value of the `box-sizing` property includes border and padding in width and height?",
+      "options": [
+        "`content-box`",
+        "`border-box`",
+        "`padding-box`",
+        "`full-box`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`box-sizing: border-box;` makes width and height include content, padding, and border."
+    },
+    {
+      "id": "mcq-001-11-006",
+      "question": "Which property adds a line around the content and padding?",
+      "options": ["margin", "border", "outline", "padding"],
+      "correct_answer": 2,
+      "explanation": "The border property adds a line around the content and padding."
+    },
+    {
+      "id": "mcq-001-11-007",
+      "question": "If you set `width: 100px; padding: 10px; border: 5px solid;` and `box-sizing: content-box;`, what is the total width?",
+      "options": ["100px", "110px", "120px", "130px"],
+      "correct_answer": 4,
+      "explanation": "Width (100) + left/right padding (20) + left/right border (10) = 130px."
+    },
+    {
+      "id": "mcq-001-11-008",
+      "question": "What does `overflow: hidden;` do in the context of the box model?",
+      "options": [
+        "Hides content outside the box",
+        "Expands the box",
+        "Adds extra padding",
+        "Removes the border"
+      ],
+      "correct_answer": 1,
+      "explanation": "`overflow: hidden;` hides any content that exceeds the element’s box dimensions."
+    },
+    {
+      "id": "mcq-001-11-009",
+      "question": "Which of the following properties is used to set the space between elements?",
+      "options": ["margin", "padding", "border", "width"],
+      "correct_answer": 1,
+      "explanation": "Margin controls the space between elements."
+    },
+    {
+      "id": "mcq-001-11-010",
+      "question": "What is the default value for `box-sizing`?",
+      "options": [
+        "`border-box`",
+        "`content-box`",
+        "`padding-box`",
+        "`margin-box`"
+      ],
+      "correct_answer": 2,
+      "explanation": "By default, `box-sizing` is set to `content-box` in CSS."
+    },
+    {
+      "id": "mcq-001-11-011",
+      "question": "If you set `margin: 20px 10px;`, what is the left margin?",
+      "options": ["20px", "10px", "0px", "30px"],
+      "correct_answer": 2,
+      "explanation": "`margin: 20px 10px;` sets top/bottom to 20px, left/right to 10px."
+    },
+    {
+      "id": "mcq-001-11-012",
+      "question": "Which property affects the size of the clickable area in a button?",
+      "options": ["padding", "font-size", "color", "text-align"],
+      "correct_answer": 1,
+      "explanation": "Padding increases the space around the button’s content, affecting the clickable area."
+    },
+    {
+      "id": "mcq-001-11-013",
+      "question": "What does `outline` do compared to `border`?",
+      "options": [
+        "Outline is drawn inside the border",
+        "Outline does not affect box size and is drawn outside the border",
+        "Outline and border are the same",
+        "Outline affects margin"
+      ],
+      "correct_answer": 2,
+      "explanation": "Outline is drawn outside the border and does not affect box size."
+    },
+    {
+      "id": "mcq-001-11-014",
+      "question": "Which property would you use to add rounded corners to a box?",
+      "options": ["border-radius", "box-shadow", "margin", "outline"],
+      "correct_answer": 1,
+      "explanation": "`border-radius` adds rounded corners to boxes."
+    },
+    {
+      "id": "mcq-001-11-015",
+      "question": "What is the main difference between `padding` and `margin`?",
+      "options": [
+        "Padding is inside the border, margin is outside",
+        "Padding is outside the border, margin is inside",
+        "They are the same",
+        "Padding is only for text"
+      ],
+      "correct_answer": 1,
+      "explanation": "Padding is the space inside the border; margin is the space outside the border."
+    }
+  ]
+}

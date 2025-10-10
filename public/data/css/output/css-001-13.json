@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-13-001",
+      "question": "<style>\ndiv {\n  width: 300px;\n  height: 100px;\n  background: #eee;\n}\n</style>\n<div>Fixed size box</div>",
+      "output": "<div style=\"width: 300px; height: 100px; background: #eee;\">Fixed size box</div>",
+      "explanation": "The div appears as a box 300px wide and 100px tall with a light gray background."
+    },
+    {
+      "id": "output-001-13-002",
+      "question": "<style>\np {\n  max-width: 400px;\n}\n</style>\n<p>This is a paragraph with a maximum width.</p>",
+      "output": "<p style=\"max-width: 400px;\">This is a paragraph with a maximum width.</p>",
+      "explanation": "The paragraph won't expand beyond 400px in width, even if the container is wider."
+    },
+    {
+      "id": "output-001-13-003",
+      "question": "<style>\nimg {\n  width: 100%;\n}\n</style>\n<img src=\"cat.jpg\" alt=\"Cat\">",
+      "output": "<img src=\"cat.jpg\" alt=\"Cat\" style=\"width: 100%;\">",
+      "explanation": "The image will stretch to fill the width of its container."
+    },
+    {
+      "id": "output-001-13-004",
+      "question": "<style>\n.box {\n  min-height: 50px;\n  background: #ccc;\n}\n</style>\n<div class=\"box\">Short box</div>",
+      "output": "<div class=\"box\" style=\"min-height: 50px; background: #ccc;\">Short box</div>",
+      "explanation": "The box will always be at least 50px tall, even if the content is less."
+    },
+    {
+      "id": "output-001-13-005",
+      "question": "<style>\ndiv {\n  height: 30vh;\n}\n</style>\n<div>Viewport height</div>",
+      "output": "<div style=\"height: 30vh;\">Viewport height</div>",
+      "explanation": "The div's height is 30% of the viewport height."
+    },
+    {
+      "id": "output-001-13-006",
+      "question": "<style>\n.box {\n  width: 60vw;\n}\n</style>\n<div class=\"box\">Wide box</div>",
+      "output": "<div class=\"box\" style=\"width: 60vw;\">Wide box</div>",
+      "explanation": "The box's width is set to 60% of the viewport width."
+    },
+    {
+      "id": "output-001-13-007",
+      "question": "<style>\np {\n  min-width: 200px;\n  background: yellow;\n}\n</style>\n<p>Minimum width paragraph</p>",
+      "output": "<p style=\"min-width: 200px; background: yellow;\">Minimum width paragraph</p>",
+      "explanation": "The paragraph will never be less than 200px wide and has a yellow background."
+    },
+    {
+      "id": "output-001-13-008",
+      "question": "<style>\ndiv {\n  width: auto;\n}\n</style>\n<div>Auto width</div>",
+      "output": "<div style=\"width: auto;\">Auto width</div>",
+      "explanation": "The width is determined by the content or the parent container."
+    },
+    {
+      "id": "output-001-13-009",
+      "question": "<style>\nimg {\n  height: 150px;\n  width: auto;\n}\n</style>\n<img src=\"dog.jpg\" alt=\"Dog\">",
+      "output": "<img src=\"dog.jpg\" alt=\"Dog\" style=\"height: 150px; width: auto;\">",
+      "explanation": "The image's height is fixed at 150px and the width is automatically scaled to keep the aspect ratio."
+    },
+    {
+      "id": "output-001-13-010",
+      "question": "<style>\n.box {\n  width: 80%;\n  height: 50px;\n  background: lightblue;\n}\n</style>\n<div class=\"box\">Percent width</div>",
+      "output": "<div class=\"box\" style=\"width: 80%; height: 50px; background: lightblue;\">Percent width</div>",
+      "explanation": "The box is 80% as wide as its parent and 50px tall."
+    },
+    {
+      "id": "output-001-13-011",
+      "question": "<style>\np {\n  max-height: 20px;\n  overflow: hidden;\n}\n</style>\n<p>This is a very tall paragraph that will be cut off.</p>",
+      "output": "<p style=\"max-height: 20px; overflow: hidden;\">This is a very tall paragraph that will be cut off.</p>",
+      "explanation": "The paragraph cannot grow taller than 20px; extra content will be hidden."
+    },
+    {
+      "id": "output-001-13-012",
+      "question": "<style>\ndiv {\n  width: 150px;\n  height: 150px;\n  background: coral;\n}\n</style>\n<div>Square</div>",
+      "output": "<div style=\"width: 150px; height: 150px; background: coral;\">Square</div>",
+      "explanation": "The div is a 150px by 150px square with a coral background."
+    },
+    {
+      "id": "output-001-13-013",
+      "question": "<style>\np {\n  height: auto;\n}\n</style>\n<p>Auto height</p>",
+      "output": "<p style=\"height: auto;\">Auto height</p>",
+      "explanation": "The height grows to fit the content."
+    },
+    {
+      "id": "output-001-13-014",
+      "question": "<style>\n.box {\n  min-width: 250px;\n  max-width: 500px;\n  background: #fafafa;\n}\n</style>\n<div class=\"box\">Flexible width box</div>",
+      "output": "<div class=\"box\" style=\"min-width: 250px; max-width: 500px; background: #fafafa;\">Flexible width box</div>",
+      "explanation": "The box's width can shrink to 250px or grow to 500px, but not outside that range."
+    },
+    {
+      "id": "output-001-13-015",
+      "question": "<style>\ndiv {\n  width: 100px;\n  height: 100px;\n  background: #333;\n  color: #fff;\n}\n</style>\n<div>Small dark box</div>",
+      "output": "<div style=\"width: 100px; height: 100px; background: #333; color: #fff;\">Small dark box</div>",
+      "explanation": "A small, square box with a dark background and white text."
+    }
+  ]
+}

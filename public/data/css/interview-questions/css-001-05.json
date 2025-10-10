@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Properties",
+  "interview_questions": [
+    {
+      "id": "interview-001-05-001",
+      "question": "What is a CSS property? Give two examples.",
+      "answer": "A CSS property is a characteristic or attribute that defines how an element is displayed. Examples include `color` (sets text color) and `background-color` (sets the background color of an element).",
+      "explanation": "Properties are the building blocks of CSS rules, allowing you to control the appearance of elements."
+    },
+    {
+      "id": "interview-001-05-002",
+      "question": "How do you change the font size of a paragraph using CSS?",
+      "answer": "You can use the `font-size` property in a CSS rule targeting paragraph elements. Example: `p { font-size: 18px; }`",
+      "explanation": "The `font-size` property controls the size of the text inside the selected element."
+    },
+    {
+      "id": "interview-001-05-003",
+      "question": "What property would you use to make text bold in CSS?",
+      "answer": "Use the `font-weight` property. For bold text: `font-weight: bold;`",
+      "explanation": "`font-weight` controls the thickness of text, and `bold` is a common value for emphasis."
+    },
+    {
+      "id": "interview-001-05-004",
+      "question": "How can you set the background color of a `<div>` element?",
+      "answer": "By using the `background-color` property. Example: `div { background-color: #fafafa; }`",
+      "explanation": "This sets the background color of all `<div>` elements to a light gray."
+    },
+    {
+      "id": "interview-001-05-005",
+      "question": "Which property controls the space between the lines of text?",
+      "answer": "The `line-height` property controls the vertical space between lines of text within an element.",
+      "explanation": "Adjusting `line-height` can improve readability and visual appearance."
+    },
+    {
+      "id": "interview-001-05-006",
+      "question": "What does the `border` property do in CSS?",
+      "answer": "The `border` property adds a border around an element. You can specify border width, style, and color, e.g., `border: 1px solid black;`",
+      "explanation": "Borders can help visually separate or highlight elements on a page."
+    },
+    {
+      "id": "interview-001-05-007",
+      "question": "How do you remove the underline from links in CSS?",
+      "answer": "Use the `text-decoration` property with the value `none`. Example: `a { text-decoration: none; }`",
+      "explanation": "This makes links appear without the default underline."
+    },
+    {
+      "id": "interview-001-05-008",
+      "question": "Explain the use of the `margin` property.",
+      "answer": "`margin` sets the space outside an element’s border. It can be set for all sides or individually (top, right, bottom, left). Example: `margin: 20px;`",
+      "explanation": "Margins help create space between elements in the layout."
+    },
+    {
+      "id": "interview-001-05-009",
+      "question": "How do you make an image display with rounded corners?",
+      "answer": "Use the `border-radius` property. Example: `img { border-radius: 10px; }`",
+      "explanation": "The higher the value, the more rounded the corners. You can use px, %, or other units."
+    },
+    {
+      "id": "interview-001-05-010",
+      "question": "Which property changes the color of text?",
+      "answer": "The `color` property sets the text color. Example: `p { color: brown; }`",
+      "explanation": "`color` applies to the foreground (text) of the element."
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-01-001",
+      "question": "What does CSS stand for?",
+      "options": [
+        "Computer Style Sheets",
+        "Creative Style Sheets",
+        "Cascading Style Sheets",
+        "Colorful Style Sheets"
+      ],
+      "correct_answer": 3,
+      "explanation": "CSS stands for **Cascading Style Sheets**, which is the technology used to style the visual presentation of HTML documents."
+    },
+    {
+      "id": "mcq-001-01-002",
+      "question": "Which one of the following is NOT a use of CSS?",
+      "options": [
+        "Changing background color",
+        "Adding interactivity to a page",
+        "Styling fonts",
+        "Setting element margins"
+      ],
+      "correct_answer": 2,
+      "explanation": "Adding interactivity is done by JavaScript, not CSS. CSS is for styling (appearance)."
+    },
+    {
+      "id": "mcq-001-01-003",
+      "question": "Which HTML tag is used to link an external CSS file?",
+      "options": ["`<script>`", "`<link>`", "`<style>`", "`<css>`"],
+      "correct_answer": 2,
+      "explanation": "The `<link>` tag is used in HTML to link an external CSS file using the `rel=\"stylesheet\"` attribute."
+    },
+    {
+      "id": "mcq-001-01-004",
+      "question": "How do you write a single-line CSS comment?",
+      "options": [
+        "`// comment`",
+        "`# comment`",
+        "`<!-- comment -->`",
+        "`/* comment */`"
+      ],
+      "correct_answer": 4,
+      "explanation": "CSS comments use the syntax `/* comment */` for both single and multi-line comments."
+    },
+    {
+      "id": "mcq-001-01-005",
+      "question": "Which of the following is the correct syntax for applying a style to all `<h1>` elements?",
+      "options": [
+        "`h1 { color: blue; }`",
+        "`<h1> { color: blue; }`",
+        "`h1: { color: blue; }`",
+        "`h1 = { color: blue; }`"
+      ],
+      "correct_answer": 1,
+      "explanation": "The correct CSS syntax is `h1 { property: value; }`."
+    },
+    {
+      "id": "mcq-001-01-006",
+      "question": "Which is NOT a valid way to include CSS in a web page?",
+      "options": [
+        "Inline style",
+        "Internal style sheet",
+        "External style sheet",
+        "CSS in `<title>` tag"
+      ],
+      "correct_answer": 4,
+      "explanation": "CSS cannot be placed in the `<title>` tag. It can be inline (with `style` attribute), internal (`<style>` tag), or external (`<link>` tag)."
+    },
+    {
+      "id": "mcq-001-01-007",
+      "question": "What is the main advantage of using external CSS?",
+      "options": [
+        "Faster page load",
+        "Cleaner HTML and reusable styles",
+        "No need for browsers",
+        "It allows CSS to run on the server"
+      ],
+      "correct_answer": 2,
+      "explanation": "External CSS keeps HTML cleaner and allows styles to be reused across multiple pages."
+    },
+    {
+      "id": "mcq-001-01-008",
+      "question": "Which CSS version introduced custom properties (variables)?",
+      "options": ["CSS1", "CSS2", "CSS3", "CSS4"],
+      "correct_answer": 3,
+      "explanation": "CSS Custom Properties (variables) were introduced in **CSS3**."
+    },
+    {
+      "id": "mcq-001-01-009",
+      "question": "What does the 'Cascading' in CSS refer to?",
+      "options": [
+        "Multiple styles can fall back on each other",
+        "CSS can animate elements",
+        "CSS can be used for server-side code",
+        "CSS replaces JavaScript"
+      ],
+      "correct_answer": 1,
+      "explanation": "The 'Cascading' in CSS means that styles can override each other based on **specificity** and **source order**."
+    },
+    {
+      "id": "mcq-001-01-010",
+      "question": "Which property is used to change the text color in CSS?",
+      "options": [
+        "`font-color`",
+        "`text-color`",
+        "`color`",
+        "`background-color`"
+      ],
+      "correct_answer": 3,
+      "explanation": "The `color` property is used to change the **text color** in CSS."
+    },
+    {
+      "id": "mcq-001-01-011",
+      "question": "Where should you place the `<link rel=\"stylesheet\">` tag in an HTML document?",
+      "options": [
+        "Inside `<body>`",
+        "At the bottom of `<body>`",
+        "Inside `<head>`",
+        "After the closing `</html>` tag"
+      ],
+      "correct_answer": 3,
+      "explanation": "The `<link rel=\"stylesheet\">` tag should go inside the `<head>` section of the HTML document."
+    },
+    {
+      "id": "mcq-001-01-012",
+      "question": "Which of the following is NOT a valid CSS unit?",
+      "options": ["`px`", "`em`", "`kg`", "`%`"],
+      "correct_answer": 3,
+      "explanation": "`kg` is not a CSS unit. Common units include `px`, `em`, `rem`, `%`, `vw`, `vh`, etc."
+    },
+    {
+      "id": "mcq-001-01-013",
+      "question": "What happens if a browser encounters an unknown CSS property?",
+      "options": [
+        "It throws an error",
+        "It ignores the property",
+        "It ignores the entire CSS file",
+        "It stops rendering the page"
+      ],
+      "correct_answer": 2,
+      "explanation": "Browsers simply ignore unknown CSS properties and continue rendering the rest of the CSS."
+    },
+    {
+      "id": "mcq-001-01-014",
+      "question": "Which is the correct way to add a comment in a CSS file?",
+      "options": [
+        "`// comment`",
+        "`<!-- comment -->`",
+        "`/* comment */`",
+        "`# comment`"
+      ],
+      "correct_answer": 3,
+      "explanation": "CSS comments are written as `/* comment */`."
+    },
+    {
+      "id": "mcq-001-01-015",
+      "question": "What is the default file extension for a CSS file?",
+      "options": [".html", ".js", ".css", ".scss"],
+      "correct_answer": 3,
+      "explanation": "CSS files have the `.css` file extension."
+    }
+  ]
+}

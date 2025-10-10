@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-20-001",
+      "question": "<style>\np {\n  color: blue;\n}\np {\n  color: red;\n}\n</style>\n<p>What color?</p>",
+      "output": "<p style=\"color: red;\">What color?</p>",
+      "explanation": "The last rule wins due to the cascade: the paragraph will be red."
+    },
+    {
+      "id": "output-001-20-002",
+      "question": "<style>\n#main {\n  color: green;\n}\np {\n  color: orange;\n}\n</style>\n<p id=\"main\">Check color</p>",
+      "output": "<p id=\"main\" style=\"color: green;\">Check color</p>",
+      "explanation": "ID selectors have higher specificity than type selectors, so the text is green."
+    },
+    {
+      "id": "output-001-20-003",
+      "question": "<style>\n.title {\n  color: purple;\n}\nh1 {\n  color: black;\n}\n</style>\n<h1 class=\"title\">Heading</h1>",
+      "output": "<h1 class=\"title\" style=\"color: purple;\">Heading</h1>",
+      "explanation": "Class selectors are more specific than type selectors, so the heading is purple."
+    },
+    {
+      "id": "output-001-20-004",
+      "question": "<style>\np {\n  color: blue;\n}\n#main {\n  color: red;\n}\n</style>\n<p id=\"main\">Test</p>",
+      "output": "<p id=\"main\" style=\"color: red;\">Test</p>",
+      "explanation": "ID selector wins over the type selector due to higher specificity."
+    },
+    {
+      "id": "output-001-20-005",
+      "question": "<style>\np {\n  color: green !important;\n}\np {\n  color: red;\n}\n</style>\n<p>Priority?</p>",
+      "output": "<p style=\"color: green;\">Priority?</p>",
+      "explanation": "`!important` overrides normal cascade and specificity rules."
+    },
+    {
+      "id": "output-001-20-006",
+      "question": "<style>\np.special {\n  color: orange;\n}\n#main.special {\n  color: blue;\n}\n</style>\n<p id=\"main\" class=\"special\">Color?</p>",
+      "output": "<p id=\"main\" class=\"special\" style=\"color: blue;\">Color?</p>",
+      "explanation": "The selector `#main.special` is more specific than `.special` alone."
+    },
+    {
+      "id": "output-001-20-007",
+      "question": "<style>\np {\n  color: red;\n}\np {\n  color: blue;\n  color: green;\n}\n</style>\n<p>Final color?</p>",
+      "output": "<p style=\"color: green;\">Final color?</p>",
+      "explanation": "The last property value in order wins, so the color is green."
+    },
+    {
+      "id": "output-001-20-008",
+      "question": "<style>\np {\n  color: red !important;\n}\np {\n  color: blue !important;\n}\n</style>\n<p>Which important?</p>",
+      "output": "<p style=\"color: blue;\">Which important?</p>",
+      "explanation": "When both are `!important`, the last one in order wins."
+    },
+    {
+      "id": "output-001-20-009",
+      "question": "<style>\n#main {\n  color: green;\n}\n.title {\n  color: orange;\n}\n</style>\n<p id=\"main\" class=\"title\">Which color?</p>",
+      "output": "<p id=\"main\" class=\"title\" style=\"color: green;\">Which color?</p>",
+      "explanation": "ID selectors are more specific than class selectors, so green wins."
+    },
+    {
+      "id": "output-001-20-010",
+      "question": "<style>\ndiv span {\n  color: purple;\n}\nspan {\n  color: brown;\n}\n</style>\n<div><span>Test</span></div>",
+      "output": "<div><span style=\"color: purple;\">Test</span></div>",
+      "explanation": "The descendant selector has higher specificity than the type selector."
+    },
+    {
+      "id": "output-001-20-011",
+      "question": "<style>\np {\n  color: blue;\n}\n</style>\n<p style=\"color: red;\">Inline style</p>",
+      "output": "<p style=\"color: red;\">Inline style</p>",
+      "explanation": "Inline styles have higher specificity than CSS rules."
+    },
+    {
+      "id": "output-001-20-012",
+      "question": "<style>\np {\n  color: green;\n}\nbody p {\n  color: brown;\n}\n</style>\n<p>Which one?</p>",
+      "output": "<p style=\"color: brown;\">Which one?</p>",
+      "explanation": "`body p` is more specific than just `p`."
+    },
+    {
+      "id": "output-001-20-013",
+      "question": "<style>\np {\n  color: blue;\n}\n@media (max-width: 600px) {\n  p {\n    color: red;\n  }\n}\n</style>\n<p>Responsive color</p>",
+      "output": "<p style=\"color: blue;\">Responsive color</p> (unless viewport ≤ 600px, then red)",
+      "explanation": "The color is blue unless the media query matches, in which case it becomes red."
+    },
+    {
+      "id": "output-001-20-014",
+      "question": "<style>\np {\n  color: blue;\n}\np#main {\n  color: orange;\n}\n</style>\n<p id=\"main\">Color?</p>",
+      "output": "<p id=\"main\" style=\"color: orange;\">Color?</p>",
+      "explanation": "`p#main` is more specific than `p`, so orange is applied."
+    },
+    {
+      "id": "output-001-20-015",
+      "question": "<style>\np {\n  color: blue;\n}\n</style>\n<!-- <p style=\"color: red;\">Commented out</p> -->\n<p>Actual</p>",
+      "output": "<p style=\"color: blue;\">Actual</p>",
+      "explanation": "Commented HTML tags are ignored, so the rule applies to the only actual paragraph."
+    }
+  ]
+}

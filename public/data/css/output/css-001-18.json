@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-18-001",
+      "question": "<style>\nimg {\n  float: left;\n  margin-right: 10px;\n}\n</style>\n<img src=\"pic.jpg\" alt=\"Left\">Text flows here.",
+      "output": "<img src=\"pic.jpg\" alt=\"Left\" style=\"float: left; margin-right: 10px;\">Text flows here.",
+      "explanation": "The image floats to the left with text wrapping around it, and 10px space to its right."
+    },
+    {
+      "id": "output-001-18-002",
+      "question": "<style>\ndiv {\n  float: right;\n  width: 100px;\n  background: #eee;\n}\n</style>\n<div>Right box</div><p>Paragraph beside box.</p>",
+      "output": "<div style=\"float: right; width: 100px; background: #eee;\">Right box</div><p>Paragraph beside box.</p>",
+      "explanation": "The div floats right, and the paragraph flows to its left."
+    },
+    {
+      "id": "output-001-18-003",
+      "question": "<style>\n.box {\n  float: left;\n  width: 60px;\n  background: #ffd;\n}\n</style>\n<div class=\"box\">A</div><div class=\"box\">B</div><div class=\"box\">C</div>",
+      "output": "<div class=\"box\" style=\"float: left; width: 60px; background: #ffd;\">A</div><div class=\"box\" style=\"float: left; width: 60px; background: #ffd;\">B</div><div class=\"box\" style=\"float: left; width: 60px; background: #ffd;\">C</div>",
+      "explanation": "All boxes float left, stacking next to each other horizontally."
+    },
+    {
+      "id": "output-001-18-004",
+      "question": "<style>\nimg {\n  float: right;\n}\n</style>\n<p>Text before<img src=\"r.png\">Text after</p>",
+      "output": "<p>Text before<img src=\"r.png\" style=\"float: right;\">Text after</p>",
+      "explanation": "The image floats right, so text wraps on its left."
+    },
+    {
+      "id": "output-001-18-005",
+      "question": "<style>\ndiv {\n  float: left;\n  width: 40%;\n  background: #eef;\n}\n.clearfix {\n  clear: both;\n}\n</style>\n<div>Floated</div><p class=\"clearfix\">Clear below</p>",
+      "output": "<div style=\"float: left; width: 40%; background: #eef;\">Floated</div><p class=\"clearfix\" style=\"clear: both;\">Clear below</p>",
+      "explanation": "The paragraph with `clear: both` moves below the floated div."
+    },
+    {
+      "id": "output-001-18-006",
+      "question": "<style>\n.left {\n  float: left;\n}\n.right {\n  float: right;\n}\n</style>\n<div class=\"left\">Left</div><div class=\"right\">Right</div>",
+      "output": "<div class=\"left\" style=\"float: left;\">Left</div><div class=\"right\" style=\"float: right;\">Right</div>",
+      "explanation": "Left is on the left, right is on the right, with content flowing between if present."
+    },
+    {
+      "id": "output-001-18-007",
+      "question": "<style>\ndiv {\n  float: left;\n  width: 80px;\n}\n</style>\n<div>One</div><div>Two</div><div>Three</div><div style=\"clear: left;\">Cleared</div>",
+      "output": "<div style=\"float: left; width: 80px;\">One</div><div style=\"float: left; width: 80px;\">Two</div><div style=\"float: left; width: 80px;\">Three</div><div style=\"clear: left;\">Cleared</div>",
+      "explanation": "The last div is moved below the floated elements by `clear: left`."
+    },
+    {
+      "id": "output-001-18-008",
+      "question": "<style>\n.box {\n  float: right;\n  width: 50px;\n  background: #ccc;\n}\n</style>\n<div class=\"box\">1</div><div class=\"box\">2</div><div class=\"box\">3</div>",
+      "output": "<div class=\"box\" style=\"float: right; width: 50px; background: #ccc;\">1</div><div class=\"box\" style=\"float: right; width: 50px; background: #ccc;\">2</div><div class=\"box\" style=\"float: right; width: 50px; background: #ccc;\">3</div>",
+      "explanation": "Boxes stack to the right in reverse order."
+    },
+    {
+      "id": "output-001-18-009",
+      "question": "<style>\ndiv {\n  float: left;\n  width: 100px;\n}\n.clear {\n  clear: both;\n}\n</style>\n<div>Box</div><div>Box</div><p class=\"clear\">After clear</p>",
+      "output": "<div style=\"float: left; width: 100px;\">Box</div><div style=\"float: left; width: 100px;\">Box</div><p class=\"clear\" style=\"clear: both;\">After clear</p>",
+      "explanation": "The paragraph moves below the floated divs."
+    },
+    {
+      "id": "output-001-18-010",
+      "question": "<style>\nimg {\n  float: left;\n  margin: 0 10px 0 0;\n}\n</style>\n<img src=\"cat.jpg\">Cat image float",
+      "output": "<img src=\"cat.jpg\" style=\"float: left; margin: 0 10px 0 0;\">Cat image float",
+      "explanation": "Image floats left with 10px space to its right."
+    },
+    {
+      "id": "output-001-18-011",
+      "question": "<style>\ndiv {\n  float: none;\n}\n</style>\n<div>Not floated</div>",
+      "output": "<div style=\"float: none;\">Not floated</div>",
+      "explanation": "The default flow is restored with `float: none`."
+    },
+    {
+      "id": "output-001-18-012",
+      "question": "<style>\n.box {\n  float: left;\n  width: 80px;\n}\n</style>\n<div class=\"box\">A</div><div class=\"box\">B</div><div style=\"clear: left;\">Clear left</div>",
+      "output": "<div class=\"box\" style=\"float: left; width: 80px;\">A</div><div class=\"box\" style=\"float: left; width: 80px;\">B</div><div style=\"clear: left;\">Clear left</div>",
+      "explanation": "The last div appears below the floated elements due to `clear: left`."
+    },
+    {
+      "id": "output-001-18-013",
+      "question": "<style>\np {\n  float: right;\n  width: 120px;\n}\n</style>\n<p>Floated paragraph</p><div>Normal div</div>",
+      "output": "<p style=\"float: right; width: 120px;\">Floated paragraph</p><div>Normal div</div>",
+      "explanation": "The paragraph floats right, the div flows around it."
+    },
+    {
+      "id": "output-001-18-014",
+      "question": "<style>\ndiv {\n  float: left;\n  width: 60px;\n}\n.clearfix::after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n</style>\n<div class=\"clearfix\"><div>1</div><div>2</div></div>",
+      "output": "<div class=\"clearfix\" style=\"\"><div style=\"float: left; width: 60px;\">1</div><div style=\"float: left; width: 60px;\">2</div></div>",
+      "explanation": "The clearfix hack allows the parent to contain floated children."
+    },
+    {
+      "id": "output-001-18-015",
+      "question": "<style>\ndiv {\n  float: left;\n  width: 80px;\n}\n</style>\n<div>Box1</div><div>Box2</div><div style=\"clear: left;\">After float</div>",
+      "output": "<div style=\"float: left; width: 80px;\">Box1</div><div style=\"float: left; width: 80px;\">Box2</div><div style=\"clear: left;\">After float</div>",
+      "explanation": "The last div is placed below the floated boxes due to `clear: left`."
+    }
+  ]
+}

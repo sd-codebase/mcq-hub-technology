@@ -1,0 +1,154 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-15-001",
+      "question": "What is the purpose of the CSS box model?",
+      "options": [
+        "To style font properties",
+        "To define the structure of HTML",
+        "To describe the rectangular boxes and layout for elements",
+        "To create animations"
+      ],
+      "correct_answer": 3,
+      "explanation": "The CSS box model is fundamental for layout, describing how elements are rendered as boxes with content, padding, border, and margin."
+    },
+    {
+      "id": "mcq-001-15-002",
+      "question": "Which part of the box model defines the space between the content and the border?",
+      "options": ["Margin", "Padding", "Outline", "Width"],
+      "correct_answer": 2,
+      "explanation": "Padding is the space between the content and the border."
+    },
+    {
+      "id": "mcq-001-15-003",
+      "question": "If you set `width: 200px; padding: 10px; border: 5px solid; margin: 20px;` and `box-sizing: border-box;`, what is the total width?",
+      "options": ["200px", "230px", "250px", "240px"],
+      "correct_answer": 1,
+      "explanation": "With `border-box`, width includes content, padding, and border. Margins are added outside, but total box width stays 200px."
+    },
+    {
+      "id": "mcq-001-15-004",
+      "question": "Which property can create space outside the border of an element?",
+      "options": ["Padding", "Margin", "Border", "Width"],
+      "correct_answer": 2,
+      "explanation": "Margin creates space outside the border, separating elements."
+    },
+    {
+      "id": "mcq-001-15-005",
+      "question": "What happens if you set a negative margin in CSS?",
+      "options": [
+        "The element disappears",
+        "The element moves closer to its neighbors",
+        "It causes an error",
+        "Increases the element size"
+      ],
+      "correct_answer": 2,
+      "explanation": "Negative margins pull elements closer, possibly overlapping neighboring elements."
+    },
+    {
+      "id": "mcq-001-15-006",
+      "question": "Which property is NOT part of the CSS box model?",
+      "options": ["border", "outline", "margin", "padding"],
+      "correct_answer": 2,
+      "explanation": "Outline is not part of the box model; it's drawn outside the border and doesn't affect box size."
+    },
+    {
+      "id": "mcq-001-15-007",
+      "question": "Which value for `box-sizing` makes width and height NOT include padding and border?",
+      "options": [
+        "`border-box`",
+        "`content-box`",
+        "`margin-box`",
+        "`box-model`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`content-box` is the default and does not include padding or border in the element's width/height."
+    },
+    {
+      "id": "mcq-001-15-008",
+      "question": "What is the effect of `overflow: visible;`?",
+      "options": [
+        "Content outside the box is hidden",
+        "Content outside the box is clipped",
+        "Content outside the box is visible and can overflow",
+        "Content is scaled"
+      ],
+      "correct_answer": 3,
+      "explanation": "`overflow: visible;` shows any content that goes outside the box's boundaries."
+    },
+    {
+      "id": "mcq-001-15-009",
+      "question": "Which order correctly lists the box model layers from innermost to outermost?",
+      "options": [
+        "Content > Border > Padding > Margin",
+        "Content > Padding > Border > Margin",
+        "Padding > Content > Border > Margin",
+        "Margin > Border > Padding > Content"
+      ],
+      "correct_answer": 2,
+      "explanation": "The order is: Content, Padding, Border, Margin."
+    },
+    {
+      "id": "mcq-001-15-010",
+      "question": "What is the default value for the `box-sizing` property?",
+      "options": [
+        "`border-box`",
+        "`content-box`",
+        "`margin-box`",
+        "`padding-box`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`content-box` is the default value for `box-sizing` in CSS."
+    },
+    {
+      "id": "mcq-001-15-011",
+      "question": "If you set `padding: 20px;` on a box with `width: 100px;` and no border or margin, what is the box's total width (assuming `box-sizing: content-box;`)?",
+      "options": ["100px", "140px", "120px", "160px"],
+      "correct_answer": 4,
+      "explanation": "Total width = width + left/right padding (100 + 20 + 20) = 140px. But with top/bottom, it's 160px total box area."
+    },
+    {
+      "id": "mcq-001-15-012",
+      "question": "What does `border-radius: 20px;` do?",
+      "options": [
+        "Rounds the corners of the box",
+        "Adds extra padding",
+        "Changes the border color",
+        "Adds a shadow"
+      ],
+      "correct_answer": 1,
+      "explanation": "`border-radius` makes corners rounded."
+    },
+    {
+      "id": "mcq-001-15-013",
+      "question": "How can you visually debug the box model in modern browsers?",
+      "options": [
+        "Use browser developer tools/Inspector",
+        "Print the page",
+        "Add random CSS code",
+        "Use only inline styles"
+      ],
+      "correct_answer": 1,
+      "explanation": "Browser dev tools let you inspect and visualize box model details."
+    },
+    {
+      "id": "mcq-001-15-014",
+      "question": "Which of the following could cause unexpected layout issues in CSS?",
+      "options": [
+        "Forgetting to set `box-sizing: border-box;`",
+        "Using only relative units",
+        "Using margin: auto",
+        "Setting background-color"
+      ],
+      "correct_answer": 1,
+      "explanation": "Missing `box-sizing: border-box;` can make element sizes unpredictable when using padding/border."
+    },
+    {
+      "id": "mcq-001-15-015",
+      "question": "Which CSS property sets the space between the border and the outside of a box?",
+      "options": ["padding", "margin", "border-spacing", "outline"],
+      "correct_answer": 2,
+      "explanation": "Margin is the space outside the border, between the element and its neighbors."
+    }
+  ]
+}

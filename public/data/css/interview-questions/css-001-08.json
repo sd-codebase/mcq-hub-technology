@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Fonts",
+  "interview_questions": [
+    {
+      "id": "interview-001-08-001",
+      "question": "How do you change the font family of an element in CSS?",
+      "answer": "Use the `font-family` property with a list of fonts. Example: `p { font-family: Arial, sans-serif; }`",
+      "explanation": "The browser uses the first available font in the list. It's good practice to include a generic family (e.g., `serif`, `sans-serif`, `monospace`) as a fallback."
+    },
+    {
+      "id": "interview-001-08-002",
+      "question": "What is the difference between `font-style: italic;` and `font-style: oblique;`?",
+      "answer": "`italic` uses the font's designed italic version, while `oblique` simulates italics by slanting the normal font if a true italic is not available.",
+      "explanation": "Most fonts provide a true italic, but if not, `oblique` will slant the regular font."
+    },
+    {
+      "id": "interview-001-08-003",
+      "question": "How do you make text bold in CSS?",
+      "answer": "Use the `font-weight` property. Example: `font-weight: bold;` or `font-weight: 700;`",
+      "explanation": "`font-weight` accepts keywords (normal, bold, bolder, lighter) or numeric values (100–900)."
+    },
+    {
+      "id": "interview-001-08-004",
+      "question": "What does the `font-size` property do? Give an example.",
+      "answer": "`font-size` sets the size of the font. Example: `h1 { font-size: 2em; }`",
+      "explanation": "Font size can be set in various units: px, em, rem, %, etc."
+    },
+    {
+      "id": "interview-001-08-005",
+      "question": "What is the default font family for most browsers?",
+      "answer": "Most browsers default to Times New Roman (serif) for text, but this can vary by operating system and browser.",
+      "explanation": "Default fonts vary, so it's best to specify a font stack for consistency."
+    },
+    {
+      "id": "interview-001-08-006",
+      "question": "How can you include a custom web font in your CSS?",
+      "answer": "Use the `@font-face` rule to define a custom font, then use `font-family` to apply it. Example:\n```css\n@font-face {\n  font-family: 'MyFont';\n  src: url('myfont.woff2') format('woff2');\n}\nbody { font-family: 'MyFont', sans-serif; }\n```",
+      "explanation": "Web fonts let you use non-standard fonts by loading them from a URL."
+    },
+    {
+      "id": "interview-001-08-007",
+      "question": "What does `font-variant: small-caps;` do?",
+      "answer": "It displays text in small capital letters, using larger capitals for uppercase and smaller capitals for lowercase.",
+      "explanation": "Small-caps can improve readability and design for headings or acronyms."
+    },
+    {
+      "id": "interview-001-08-008",
+      "question": "Explain the shorthand `font` property in CSS.",
+      "answer": "The `font` shorthand sets font-style, font-variant, font-weight, font-size, line-height, and font-family in one line. Example: `font: italic small-caps bold 16px/2 Arial, sans-serif;`",
+      "explanation": "Shorthand saves space and ensures all font-related properties are set together."
+    },
+    {
+      "id": "interview-001-08-009",
+      "question": "How would you inherit the font properties from a parent element?",
+      "answer": "Use the value `inherit` for any font property, e.g., `font-size: inherit;` or `font-family: inherit;`",
+      "explanation": "Inheritance ensures consistent typography across nested elements."
+    },
+    {
+      "id": "interview-001-08-010",
+      "question": "What is the difference between `em` and `rem` for font sizing?",
+      "answer": "`em` is relative to the font-size of the parent element, while `rem` is relative to the root (`html`) font size.",
+      "explanation": "`rem` helps maintain consistent sizing across a site, while `em` allows for scalable, nested font sizing."
+    }
+  ]
+}

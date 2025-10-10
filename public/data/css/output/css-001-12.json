@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-12-001",
+      "question": "<style>\ndiv {\n  margin: 20px;\n}\n</style>\n<div>Box with margin</div>",
+      "output": "<div style=\"margin: 20px;\">Box with margin</div>",
+      "explanation": "The div has 20px of margin on all sides, creating space outside the box."
+    },
+    {
+      "id": "output-001-12-002",
+      "question": "<style>\np {\n  padding: 15px;\n}\n</style>\n<p>Padded text</p>",
+      "output": "<p style=\"padding: 15px;\">Padded text</p>",
+      "explanation": "The paragraph has 15px of padding on all sides, creating space inside the border."
+    },
+    {
+      "id": "output-001-12-003",
+      "question": "<style>\ndiv {\n  margin-top: 30px;\n  margin-bottom: 10px;\n}\n</style>\n<div>Vertical margin</div>",
+      "output": "<div style=\"margin-top: 30px; margin-bottom: 10px;\">Vertical margin</div>",
+      "explanation": "The div has 30px margin above and 10px below."
+    },
+    {
+      "id": "output-001-12-004",
+      "question": "<style>\np {\n  padding-left: 40px;\n}\n</style>\n<p>Indented text</p>",
+      "output": "<p style=\"padding-left: 40px;\">Indented text</p>",
+      "explanation": "The paragraph's text is indented with 40px of left padding."
+    },
+    {
+      "id": "output-001-12-005",
+      "question": "<style>\ndiv {\n  margin: 5px 10px 15px 20px;\n}\n</style>\n<div>Different margins</div>",
+      "output": "<div style=\"margin: 5px 10px 15px 20px;\">Different margins</div>",
+      "explanation": "Top margin: 5px, right: 10px, bottom: 15px, left: 20px (clockwise)."
+    },
+    {
+      "id": "output-001-12-006",
+      "question": "<style>\np {\n  padding: 10px 20px;\n}\n</style>\n<p>Padded sides</p>",
+      "output": "<p style=\"padding: 10px 20px;\">Padded sides</p>",
+      "explanation": "Top/bottom padding: 10px; left/right: 20px."
+    },
+    {
+      "id": "output-001-12-007",
+      "question": "<style>\n.box {\n  margin-right: auto;\n  margin-left: auto;\n  width: 200px;\n}\n</style>\n<div class=\"box\">Centered box</div>",
+      "output": "<div class=\"box\" style=\"margin-right: auto; margin-left: auto; width: 200px;\">Centered box</div>",
+      "explanation": "Setting left/right margins to auto with a fixed width centers the div horizontally."
+    },
+    {
+      "id": "output-001-12-008",
+      "question": "<style>\ndiv {\n  padding-top: 30px;\n}\n</style>\n<div>Top padding</div>",
+      "output": "<div style=\"padding-top: 30px;\">Top padding</div>",
+      "explanation": "The div has 30px of padding at the top, increasing the space inside the top border."
+    },
+    {
+      "id": "output-001-12-009",
+      "question": "<style>\np {\n  margin: 0 50px;\n}\n</style>\n<p>Horizontal margins</p>",
+      "output": "<p style=\"margin: 0 50px;\">Horizontal margins</p>",
+      "explanation": "Top/bottom margin: 0; left/right margin: 50px."
+    },
+    {
+      "id": "output-001-12-010",
+      "question": "<style>\n.box {\n  padding: 5px 10px 15px 20px;\n}\n</style>\n<div class=\"box\">Padding values</div>",
+      "output": "<div class=\"box\" style=\"padding: 5px 10px 15px 20px;\">Padding values</div>",
+      "explanation": "Padding order: top 5px, right 10px, bottom 15px, left 20px (clockwise)."
+    },
+    {
+      "id": "output-001-12-011",
+      "question": "<style>\ndiv {\n  margin-bottom: 40px;\n}\n</style>\n<div>Bottom margin</div>",
+      "output": "<div style=\"margin-bottom: 40px;\">Bottom margin</div>",
+      "explanation": "The div has 40px of margin below it."
+    },
+    {
+      "id": "output-001-12-012",
+      "question": "<style>\np {\n  padding-right: 25px;\n}\n</style>\n<p>Right padding</p>",
+      "output": "<p style=\"padding-right: 25px;\">Right padding</p>",
+      "explanation": "The paragraph has 25px of padding on the right side."
+    },
+    {
+      "id": "output-001-12-013",
+      "question": "<style>\n.box {\n  margin: 0;\n  padding: 0;\n}\n</style>\n<div class=\"box\">No margin or padding</div>",
+      "output": "<div class=\"box\" style=\"margin: 0; padding: 0;\">No margin or padding</div>",
+      "explanation": "The div has no margin or padding at all."
+    },
+    {
+      "id": "output-001-12-014",
+      "question": "<style>\ndiv {\n  margin-left: 60px;\n}\n</style>\n<div>Left margin</div>",
+      "output": "<div style=\"margin-left: 60px;\">Left margin</div>",
+      "explanation": "The div is pushed 60px from the left edge."
+    },
+    {
+      "id": "output-001-12-015",
+      "question": "<style>\np {\n  padding-bottom: 12px;\n}\n</style>\n<p>Bottom padding</p>",
+      "output": "<p style=\"padding-bottom: 12px;\">Bottom padding</p>",
+      "explanation": "The paragraph has 12px of padding at the bottom."
+    }
+  ]
+}

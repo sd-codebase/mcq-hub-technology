@@ -1,0 +1,174 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-03-001",
+      "question": "Which of the following is NOT a type of CSS (Cascading Style Sheets)?",
+      "options": ["Inline CSS", "Internal CSS", "External CSS", "Remote CSS"],
+      "correct_answer": 4,
+      "explanation": "Remote CSS is not a standard term. The three main types are Inline, Internal, and External CSS."
+    },
+    {
+      "id": "mcq-001-03-002",
+      "question": "How is Inline CSS applied to an HTML element?",
+      "options": [
+        "Using a `<style>` tag in the `<head>`",
+        "Using the `style` attribute inside the HTML tag",
+        "Using a `<link>` tag",
+        "Using an `@import` statement"
+      ],
+      "correct_answer": 2,
+      "explanation": "Inline CSS is applied directly to HTML elements using the `style` attribute, e.g., `<p style=\"color: red;\">`."
+    },
+    {
+      "id": "mcq-001-03-003",
+      "question": "Where do you place Internal CSS in an HTML document?",
+      "options": [
+        "Inside `<body>`",
+        "Inside `<style>` tags in the `<head>` section",
+        "In a separate `.css` file",
+        "After the closing `</html>` tag"
+      ],
+      "correct_answer": 2,
+      "explanation": "Internal CSS is placed within `<style>` tags inside the `<head>` section of the HTML document."
+    },
+    {
+      "id": "mcq-001-03-004",
+      "question": "Which is the correct syntax for linking an external CSS file?",
+      "options": [
+        "`<link rel=\"stylesheet\" href=\"style.css\">`",
+        "`<style src=\"style.css\">`",
+        "`<script src=\"style.css\">`",
+        "`<link src=\"style.css\">`"
+      ],
+      "correct_answer": 1,
+      "explanation": "External CSS files are linked using `<link rel=\"stylesheet\" href=\"style.css\">` in the `<head>`."
+    },
+    {
+      "id": "mcq-001-03-005",
+      "question": "Which type of CSS has the highest specificity?",
+      "options": [
+        "External CSS",
+        "Internal CSS",
+        "Inline CSS",
+        "All are equal"
+      ],
+      "correct_answer": 3,
+      "explanation": "Inline CSS has the highest specificity and will override both internal and external styles if there is a conflict."
+    },
+    {
+      "id": "mcq-001-03-006",
+      "question": "Which of these is true about External CSS?",
+      "options": [
+        "It is written inside the HTML file",
+        "It is applied through the `style` attribute",
+        "It is stored in a separate `.css` file",
+        "It can only be used for one page"
+      ],
+      "correct_answer": 3,
+      "explanation": "External CSS is stored in a separate file (usually with a `.css` extension) and linked to HTML files."
+    },
+    {
+      "id": "mcq-001-03-007",
+      "question": "What is the main benefit of using External CSS?",
+      "options": [
+        "Styles apply only to a single HTML element",
+        "You can reuse styles across multiple pages",
+        "It requires less code",
+        "It allows for more CSS properties"
+      ],
+      "correct_answer": 2,
+      "explanation": "External CSS allows you to reuse the same stylesheet across multiple HTML pages, making site-wide changes easy."
+    },
+    {
+      "id": "mcq-001-03-008",
+      "question": "What happens if the same property is defined in Inline, Internal, and External CSS?",
+      "options": [
+        "External CSS wins",
+        "Internal CSS wins",
+        "Inline CSS wins",
+        "All are applied together"
+      ],
+      "correct_answer": 3,
+      "explanation": "The most specific rule wins: Inline CSS overrides Internal, which overrides External."
+    },
+    {
+      "id": "mcq-001-03-009",
+      "question": "How do you write an Internal CSS rule that changes all `<h2>` text to orange?",
+      "options": [
+        "`<style> h2 { color: orange; } </style>`",
+        "`<link> h2 { color: orange; } </link>`",
+        "`<script> h2 { color: orange; } </script>`",
+        "`<css> h2 { color: orange; } </css>`"
+      ],
+      "correct_answer": 1,
+      "explanation": "Internal CSS uses the `<style>` tag in the document's `<head>`."
+    },
+    {
+      "id": "mcq-001-03-010",
+      "question": "Which type of CSS is most maintainable for large websites?",
+      "options": [
+        "Inline CSS",
+        "Internal CSS",
+        "External CSS",
+        "All are equally maintainable"
+      ],
+      "correct_answer": 3,
+      "explanation": "External CSS is most maintainable for large websites because it keeps style rules separate and reusable."
+    },
+    {
+      "id": "mcq-001-03-011",
+      "question": "What file extension is commonly used for External CSS files?",
+      "options": [".html", ".css", ".js", ".scss"],
+      "correct_answer": 2,
+      "explanation": "External CSS files use the `.css` extension."
+    },
+    {
+      "id": "mcq-001-03-012",
+      "question": "Which of these is NOT a benefit of External CSS?",
+      "options": [
+        "Improved maintainability",
+        "Faster site-wide styling changes",
+        "Reduced HTML file size",
+        "Styles are always loaded synchronously"
+      ],
+      "correct_answer": 4,
+      "explanation": "External CSS can be loaded asynchronously and does not guarantee synchronous loading."
+    },
+    {
+      "id": "mcq-001-03-013",
+      "question": "Where should you place the `<style>` tag for Internal CSS?",
+      "options": [
+        "Inside `<body>`",
+        "Inside `<head>`",
+        "After `</html>`",
+        "Anywhere in the document"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `<style>` tag for Internal CSS should be placed inside the `<head>` section."
+    },
+    {
+      "id": "mcq-001-03-014",
+      "question": "Which type of CSS increases the size of your HTML document the most?",
+      "options": [
+        "External CSS",
+        "Internal CSS",
+        "Inline CSS",
+        "All increase size equally"
+      ],
+      "correct_answer": 3,
+      "explanation": "Inline CSS increases HTML size the most, as style attributes are repeated in every element."
+    },
+    {
+      "id": "mcq-001-03-015",
+      "question": "What is a disadvantage of Inline CSS?",
+      "options": [
+        "It cannot override external styles",
+        "It is hard to maintain and reuse",
+        "It cannot be used with HTML elements",
+        "It is faster than other CSS types"
+      ],
+      "correct_answer": 2,
+      "explanation": "Inline CSS is hard to maintain and cannot be reused efficiently."
+    }
+  ]
+}

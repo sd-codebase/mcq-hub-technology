@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Units",
+  "interview_questions": [
+    {
+      "id": "interview-001-19-001",
+      "question": "What is a CSS unit and why is it important?",
+      "answer": "A CSS unit defines the measurement for property values like length, size, or spacing. Units are important because they determine how large or small elements appear across different devices and resolutions.",
+      "explanation": "Choosing the right unit affects the scalability, responsiveness, and consistency of your web layouts."
+    },
+    {
+      "id": "interview-001-19-002",
+      "question": "List and briefly describe three absolute units in CSS.",
+      "answer": "1. `px` (pixels): A fixed, device-dependent unit.  \n2. `cm` (centimeters), `mm` (millimeters), `in` (inches): Physical length units, mostly used for print.  \n3. `pt` (points), `pc` (picas): Typically used in print stylesheets.",
+      "explanation": "Absolute units are best for print or when precise sizing is required, but are less flexible for responsive design."
+    },
+    {
+      "id": "interview-001-19-003",
+      "question": "What is the difference between `em` and `rem` units?",
+      "answer": "`em` is relative to the font-size of the element’s parent, while `rem` is relative to the font-size of the root (`html`) element.",
+      "explanation": "`rem` ensures consistent scaling across components, whereas `em` allows for nested scaling effects."
+    },
+    {
+      "id": "interview-001-19-004",
+      "question": "How do viewport units (`vw`, `vh`) work?",
+      "answer": "`vw` is 1% of the viewport's width, and `vh` is 1% of the viewport's height. For example, `50vw` is half the viewport width.",
+      "explanation": "Viewport units are commonly used for responsive layouts, such as full-page sections or hero banners."
+    },
+    {
+      "id": "interview-001-19-005",
+      "question": "What does the `%` unit represent in CSS?",
+      "answer": "The `%` unit is relative to the parent element’s size or another related property. For example, `width: 50%` makes the element half as wide as its parent.",
+      "explanation": "Percentages are great for fluid, responsive designs."
+    },
+    {
+      "id": "interview-001-19-006",
+      "question": "What are `ch` and `ex` units and when would you use them?",
+      "answer": "`ch` is the width of the '0' (zero) character in the element’s font. `ex` is the height of the lowercase 'x' in the font. Use them for typographic layouts, such as setting the width of input fields or aligning text.",
+      "explanation": "They are useful when you want sizing to relate to the current font’s characters, making content more readable."
+    },
+    {
+      "id": "interview-001-19-007",
+      "question": "How does CSS handle mixing different units in a single property value?",
+      "answer": "You can mix units using the `calc()` function. Example: `width: calc(100% - 30px);` combines percentage and pixel units.",
+      "explanation": "`calc()` is powerful for creating dynamic layouts that require flexibility between fixed and relative measurements."
+    },
+    {
+      "id": "interview-001-19-008",
+      "question": "Why are relative units often preferred over absolute units for web design?",
+      "answer": "Relative units like `em`, `rem`, `%`, `vw`, and `vh` allow layouts to adapt to different screen sizes and user settings, improving accessibility and responsiveness.",
+      "explanation": "Using relative units ensures content is readable and usable across devices."
+    },
+    {
+      "id": "interview-001-19-009",
+      "question": "What happens if you omit the unit for a property that requires one (e.g., `width: 10;`)?",
+      "answer": "The declaration is invalid and ignored by the browser.",
+      "explanation": "Always include the correct unit (e.g., `px`, `%`, etc.) for properties that require them to ensure styles are applied."
+    },
+    {
+      "id": "interview-001-19-010",
+      "question": "Can you use decimals with CSS units? Give an example.",
+      "answer": "Yes, you can use decimals (e.g., `font-size: 1.5em;` or `margin: 0.25rem;`).",
+      "explanation": "Decimals allow for fine-tuned adjustments in sizing and spacing."
+    }
+  ]
+}

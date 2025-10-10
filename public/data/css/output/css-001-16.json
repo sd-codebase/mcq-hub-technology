@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-16-001",
+      "question": "<style>\ndiv {\n  position: static;\n  top: 20px;\n}\n</style>\n<div>Static position</div>",
+      "output": "<div style=\"position: static; top: 20px;\">Static position</div>",
+      "explanation": "The `top` property has no effect because `position: static` is the default and ignores offset properties."
+    },
+    {
+      "id": "output-001-16-002",
+      "question": "<style>\ndiv {\n  position: relative;\n  left: 30px;\n}\n</style>\n<div>Relative move</div>",
+      "output": "<div style=\"position: relative; left: 30px;\">Relative move</div>",
+      "explanation": "The div is shifted 30px to the right from its normal position."
+    },
+    {
+      "id": "output-001-16-003",
+      "question": "<style>\nspan {\n  position: absolute;\n  top: 50px;\n  left: 100px;\n}\n</style>\n<span>Absolutely positioned</span>",
+      "output": "<span style=\"position: absolute; top: 50px; left: 100px;\">Absolutely positioned</span>",
+      "explanation": "The span is placed 50px from the top and 100px from the left of its first positioned ancestor or the document body."
+    },
+    {
+      "id": "output-001-16-004",
+      "question": "<style>\ndiv {\n  position: fixed;\n  bottom: 0;\n  right: 0;\n  background: #ddd;\n}\n</style>\n<div>Fixed box</div>",
+      "output": "<div style=\"position: fixed; bottom: 0; right: 0; background: #ddd;\">Fixed box</div>",
+      "explanation": "The div is always fixed to the bottom-right corner of the viewport, even when scrolling."
+    },
+    {
+      "id": "output-001-16-005",
+      "question": "<style>\n.box {\n  position: sticky;\n  top: 10px;\n  background: yellow;\n}\n</style>\n<div class=\"box\">Sticky box</div>",
+      "output": "<div class=\"box\" style=\"position: sticky; top: 10px; background: yellow;\">Sticky box</div>",
+      "explanation": "The div will 'stick' to the top of its container when you scroll past it, staying 10px from the top."
+    },
+    {
+      "id": "output-001-16-006",
+      "question": "<style>\ndiv {\n  position: absolute;\n  right: 20px;\n}\n</style>\n<div>Right aligned</div>",
+      "output": "<div style=\"position: absolute; right: 20px;\">Right aligned</div>",
+      "explanation": "The div is absolutely positioned 20px from the right edge of its containing block."
+    },
+    {
+      "id": "output-001-16-007",
+      "question": "<style>\ndiv {\n  position: relative;\n  top: -15px;\n}\n</style>\n<div>Move up</div>",
+      "output": "<div style=\"position: relative; top: -15px;\">Move up</div>",
+      "explanation": "The div is moved 15px up from its normal position."
+    },
+    {
+      "id": "output-001-16-008",
+      "question": "<style>\n.outer {\n  position: relative;\n  width: 200px;\n  height: 200px;\n  background: #eee;\n}\n.inner {\n  position: absolute;\n  top: 40px;\n  left: 50px;\n  background: #aaf;\n}\n</style>\n<div class=\"outer\">\n  <div class=\"inner\">Inner</div>\n</div>",
+      "output": "<div class=\"outer\" style=\"position: relative; width: 200px; height: 200px; background: #eee;\">\n  <div class=\"inner\" style=\"position: absolute; top: 40px; left: 50px; background: #aaf;\">Inner</div>\n</div>",
+      "explanation": "The inner div is absolutely positioned relative to the outer div."
+    },
+    {
+      "id": "output-001-16-009",
+      "question": "<style>\n.box {\n  position: fixed;\n  top: 20px;\n  left: 20px;\n  background: pink;\n}\n</style>\n<div class=\"box\">Fixed top-left</div>",
+      "output": "<div class=\"box\" style=\"position: fixed; top: 20px; left: 20px; background: pink;\">Fixed top-left</div>",
+      "explanation": "The box remains at the top-left of the viewport, 20px from each edge, regardless of scrolling."
+    },
+    {
+      "id": "output-001-16-010",
+      "question": "<style>\ndiv {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1000;\n}\n</style>\n<div>On top</div>",
+      "output": "<div style=\"position: absolute; top: 0; left: 0; z-index: 1000;\">On top</div>",
+      "explanation": "A very high `z-index` ensures this div appears above most other elements."
+    },
+    {
+      "id": "output-001-16-011",
+      "question": "<style>\ndiv {\n  position: relative;\n  z-index: 2;\n}\nspan {\n  position: relative;\n  z-index: 1;\n}\n</style>\n<div>Div above</div>\n<span>Span below</span>",
+      "output": "<div style=\"position: relative; z-index: 2;\">Div above</div>\n<span style=\"position: relative; z-index: 1;\">Span below</span>",
+      "explanation": "The div is stacked above the span because of the higher z-index."
+    },
+    {
+      "id": "output-001-16-012",
+      "question": "<style>\n.box {\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n}\n</style>\n<div class=\"box\">Bottom right</div>",
+      "output": "<div class=\"box\" style=\"position: absolute; bottom: 10px; right: 10px;\">Bottom right</div>",
+      "explanation": "The box is positioned 10px from the bottom and right of its containing block."
+    },
+    {
+      "id": "output-001-16-013",
+      "question": "<style>\ndiv {\n  position: sticky;\n  top: 0;\n  background: #ccc;\n}\n</style>\n<div>Sticky header</div>",
+      "output": "<div style=\"position: sticky; top: 0; background: #ccc;\">Sticky header</div>",
+      "explanation": "The div will stick to the top of its parent when scrolling."
+    },
+    {
+      "id": "output-001-16-014",
+      "question": "<style>\n.box {\n  position: absolute;\n  left: 0;\n  right: 0;\n  margin: auto;\n  width: 100px;\n}\n</style>\n<div class=\"box\">Centered absolute</div>",
+      "output": "<div class=\"box\" style=\"position: absolute; left: 0; right: 0; margin: auto; width: 100px;\">Centered absolute</div>",
+      "explanation": "The box is horizontally centered absolutely using left/right 0 and margin auto."
+    },
+    {
+      "id": "output-001-16-015",
+      "question": "<style>\np {\n  position: relative;\n  left: 25%;\n}\n</style>\n<p>Move 25% right</p>",
+      "output": "<p style=\"position: relative; left: 25%;\">Move 25% right</p>",
+      "explanation": "The paragraph is shifted 25% of its containing block to the right."
+    }
+  ]
+}

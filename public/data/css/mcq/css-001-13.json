@@ -1,0 +1,179 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-13-001",
+      "question": "What is the main purpose of a CSS reset or normalization?",
+      "options": [
+        "To add new colors to a website",
+        "To ensure consistent default styling across browsers",
+        "To improve animation performance",
+        "To change all fonts to Arial"
+      ],
+      "correct_answer": 2,
+      "explanation": "CSS resets/normalizations help make elements look and behave consistently across different browsers by removing or adjusting default styles."
+    },
+    {
+      "id": "mcq-001-13-002",
+      "question": "Which of the following is a popular CSS normalization library?",
+      "options": ["Normalize.css", "Animate.css", "Bootstrap", "jQuery UI"],
+      "correct_answer": 1,
+      "explanation": "Normalize.css is widely used to normalize browser default styles."
+    },
+    {
+      "id": "mcq-001-13-003",
+      "question": "What does the universal selector `*` do in a CSS reset?",
+      "options": [
+        "Selects only the body element",
+        "Selects all elements",
+        "Selects only headings",
+        "Selects only links"
+      ],
+      "correct_answer": 2,
+      "explanation": "The universal selector `*` applies the specified styles to all elements."
+    },
+    {
+      "id": "mcq-001-13-004",
+      "question": "Where should a CSS reset be placed in your stylesheet?",
+      "options": [
+        "At the bottom",
+        "In the middle",
+        "At the top, before custom styles",
+        "After all media queries"
+      ],
+      "correct_answer": 3,
+      "explanation": "A CSS reset should be placed at the top of the stylesheet so custom styles can override it."
+    },
+    {
+      "id": "mcq-001-13-005",
+      "question": "Which of the following is NOT a normal effect of a CSS reset?",
+      "options": [
+        "Removing default margin and padding",
+        "Forcing all fonts to bold",
+        "Setting box-sizing to border-box",
+        "Normalizing heading sizes"
+      ],
+      "correct_answer": 2,
+      "explanation": "A CSS reset does not force all fonts to bold; it removes or normalizes spacing and other styles."
+    },
+    {
+      "id": "mcq-001-13-006",
+      "question": "Which rule removes default spacing from all elements?",
+      "options": [
+        "`* { margin: 0; padding: 0; }`",
+        "`body { margin: 0; }`",
+        "`h1, h2, h3 { margin: 0; }`",
+        "`div { padding: 0; }`"
+      ],
+      "correct_answer": 1,
+      "explanation": "The universal selector resets margin and padding for all elements."
+    },
+    {
+      "id": "mcq-001-13-007",
+      "question": "What is a drawback of using an aggressive CSS reset?",
+      "options": [
+        "It makes your site faster",
+        "It removes browser accessibility features",
+        "It may remove useful default styles you want to keep",
+        "It adds new browser bugs"
+      ],
+      "correct_answer": 3,
+      "explanation": "Aggressive resets may remove helpful defaults, requiring you to manually re-add them."
+    },
+    {
+      "id": "mcq-001-13-008",
+      "question": "What does the following code accomplish?\n```css\nhtml { box-sizing: border-box; }\n*, *:before, *:after { box-sizing: inherit; }\n```",
+      "options": [
+        "Sets all elements to use the border-box model",
+        "Removes all styles",
+        "Adds padding to all elements",
+        "Makes all fonts bigger"
+      ],
+      "correct_answer": 1,
+      "explanation": "This code ensures all elements use `border-box` sizing, which includes padding and border in width/height calculations."
+    },
+    {
+      "id": "mcq-001-13-009",
+      "question": "Which is an effect of Normalize.css?",
+      "options": [
+        "Completely removes all default styles",
+        "Makes elements render more consistently across browsers",
+        "Adds new HTML elements",
+        "Requires JavaScript to work"
+      ],
+      "correct_answer": 2,
+      "explanation": "Normalize.css helps elements render more consistently without removing all default styles."
+    },
+    {
+      "id": "mcq-001-13-010",
+      "question": "If you use both a CSS reset and Normalize.css, what can happen?",
+      "options": [
+        "It will always improve your site",
+        "There may be conflicts or redundant styles",
+        "Your site won't load",
+        "It will make your CSS faster"
+      ],
+      "correct_answer": 2,
+      "explanation": "Using both can cause conflicts or redundancy; usually you should pick one approach."
+    },
+    {
+      "id": "mcq-001-13-011",
+      "question": "What is the purpose of Sanitize.css?",
+      "options": [
+        "To remove all CSS rules",
+        "To normalize and improve browser default styles",
+        "To minify your CSS",
+        "To create grid layouts"
+      ],
+      "correct_answer": 2,
+      "explanation": "Sanitize.css normalizes and improves browser defaults, similar to Normalize.css."
+    },
+    {
+      "id": "mcq-001-13-012",
+      "question": "What is the result of this code?\n```css\n* { box-sizing: border-box; }\n```",
+      "options": [
+        "All elements use content-box sizing",
+        "All elements use border-box sizing",
+        "Only divs use border-box sizing",
+        "No effect"
+      ],
+      "correct_answer": 2,
+      "explanation": "`* { box-sizing: border-box; }` makes all elements use the border-box sizing model."
+    },
+    {
+      "id": "mcq-001-13-013",
+      "question": "Why is it important to normalize or reset CSS before starting a project?",
+      "options": [
+        "To ensure consistency across browsers",
+        "To remove all styles",
+        "To improve search engine optimization",
+        "To add animations"
+      ],
+      "correct_answer": 1,
+      "explanation": "Normalizing or resetting CSS ensures that your website looks the same in all browsers."
+    },
+    {
+      "id": "mcq-001-13-014",
+      "question": "Which is a best practice when using a CSS reset?",
+      "options": [
+        "Customize it for your project",
+        "Use all available resets together",
+        "Only use it on mobile sites",
+        "Never use a reset"
+      ],
+      "correct_answer": 1,
+      "explanation": "It's best to adjust resets to your project's needs."
+    },
+    {
+      "id": "mcq-001-13-015",
+      "question": "What is a common effect of a CSS reset on headings like `<h1>`?",
+      "options": [
+        "Removes default margins and font size",
+        "Makes them bold",
+        "Adds a border",
+        "Changes their color"
+      ],
+      "correct_answer": 1,
+      "explanation": "Resets often remove default margins and font sizes from headings."
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-10-001",
+      "question": "Which of the following is a valid CSS shorthand property?",
+      "options": [
+        "`margin: 10px 20px;`",
+        "`font: 16px Arial;`",
+        "`border: 1px solid black;`",
+        "All of the above"
+      ],
+      "correct_answer": 4,
+      "explanation": "All three are valid shorthand properties: `margin`, `font`, and `border` can accept multiple values in shorthand."
+    },
+    {
+      "id": "mcq-001-10-002",
+      "question": "What does the following CSS shorthand property do?\n`padding: 10px 20px;`",
+      "options": [
+        "Sets vertical padding to 10px and horizontal to 20px",
+        "Sets all four paddings to 10px",
+        "Sets top and bottom padding to 20px",
+        "Sets left and right padding to 10px"
+      ],
+      "correct_answer": 1,
+      "explanation": "`padding: 10px 20px;` sets top and bottom padding to 10px, left and right padding to 20px."
+    },
+    {
+      "id": "mcq-001-10-003",
+      "question": "Which of these is NOT a valid use of CSS shorthand?",
+      "options": [
+        "`background: #fff url('bg.png') no-repeat;`",
+        "`border-radius: 10px 20px;`",
+        "`color: red blue;`",
+        "`font: italic bold 16px Arial;`"
+      ],
+      "correct_answer": 3,
+      "explanation": "`color` property does not accept multiple values in shorthand."
+    },
+    {
+      "id": "mcq-001-10-004",
+      "question": "How many values can the `margin` shorthand property accept?",
+      "options": ["1", "2", "3", "4"],
+      "correct_answer": 4,
+      "explanation": "The `margin` property can accept 1 to 4 values, each specifying different sides."
+    },
+    {
+      "id": "mcq-001-10-005",
+      "question": "What does `border: 1px solid red;` set?",
+      "options": [
+        "Border width only",
+        "Border style only",
+        "Border color only",
+        "Border width, style, and color"
+      ],
+      "correct_answer": 4,
+      "explanation": "`border: 1px solid red;` sets width, style, and color of the border in one shorthand."
+    },
+    {
+      "id": "mcq-001-10-006",
+      "question": "Which of the following is equivalent to `margin: 10px 20px 30px 40px;`?",
+      "options": [
+        "Top: 10px, Right: 20px, Bottom: 30px, Left: 40px",
+        "Top: 10px, Right: 40px, Bottom: 30px, Left: 20px",
+        "All sides: 10px",
+        "Top: 10px, Right: 20px, Bottom: 10px, Left: 20px"
+      ],
+      "correct_answer": 1,
+      "explanation": "The order is: top, right, bottom, left."
+    },
+    {
+      "id": "mcq-001-10-007",
+      "question": "What does `font: italic small-caps bold 16px/2 Arial, sans-serif;` do?",
+      "options": [
+        "Sets all font-related properties at once",
+        "Sets only the font size",
+        "Sets only the font style",
+        "Is invalid CSS"
+      ],
+      "correct_answer": 1,
+      "explanation": "This is a font shorthand that sets font-style, variant, weight, size, line-height, and family all at once."
+    },
+    {
+      "id": "mcq-001-10-008",
+      "question": "What is the main benefit of using CSS shorthand properties?",
+      "options": [
+        "They make CSS code longer",
+        "They reduce file size and improve readability",
+        "They slow down browser rendering",
+        "They are only for advanced CSS"
+      ],
+      "correct_answer": 2,
+      "explanation": "CSS shorthand reduces code repetition, improves readability, and decreases file size."
+    },
+    {
+      "id": "mcq-001-10-009",
+      "question": "Which of the following is a correct shorthand for setting all background properties?",
+      "options": [
+        "`background: #fff url('bg.png') no-repeat center center/cover;`",
+        "`background: url('bg.png') #fff;`",
+        "`background: repeat center;`",
+        "`background: #fff;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "This shorthand sets color, image, repeat, position, and size in one line."
+    },
+    {
+      "id": "mcq-001-10-010",
+      "question": "If you write `margin: 10px 20px;`, how are the values applied?",
+      "options": [
+        "10px to all sides",
+        "10px to top/bottom, 20px to left/right",
+        "10px to left/right, 20px to top/bottom",
+        "20px to all sides"
+      ],
+      "correct_answer": 2,
+      "explanation": "With two values, the first is top/bottom, the second is left/right."
+    },
+    {
+      "id": "mcq-001-10-011",
+      "question": "Which is the correct shorthand for `padding-top: 5px; padding-right: 10px; padding-bottom: 15px; padding-left: 20px;`?",
+      "options": [
+        "`padding: 5px 10px 15px 20px;`",
+        "`padding: 5px 20px 15px 10px;`",
+        "`padding: 20px 15px 10px 5px;`",
+        "`padding: 15px 20px 5px 10px;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "The order is top, right, bottom, left."
+    },
+    {
+      "id": "mcq-001-10-012",
+      "question": "Which of the following is NOT a valid CSS shorthand property?",
+      "options": ["`border`", "`margin`", "`padding`", "`color`"],
+      "correct_answer": 4,
+      "explanation": "`color` is not a shorthand; it only sets one value."
+    },
+    {
+      "id": "mcq-001-10-013",
+      "question": "How does the shorthand property `list-style: square inside;` affect a list?",
+      "options": [
+        "It sets the list marker to a square and positions it inside the list item",
+        "It sets the list color",
+        "It removes the list marker",
+        "It makes the list markers bold"
+      ],
+      "correct_answer": 1,
+      "explanation": "`list-style` shorthand can set marker type and position."
+    },
+    {
+      "id": "mcq-001-10-014",
+      "question": "What does `outline: 2px dashed blue;` set?",
+      "options": [
+        "Outline width, style, and color",
+        "Only outline color",
+        "Only outline style",
+        "Only outline width"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `outline` shorthand sets width, style, and color."
+    },
+    {
+      "id": "mcq-001-10-015",
+      "question": "Which is a correct way to use shorthand for `border-radius`?",
+      "options": [
+        "`border-radius: 10px 20px 30px 40px;`",
+        "`border-radius: 10px;`",
+        "Both 1 and 2",
+        "`border-radius: 10, 20, 30, 40;`"
+      ],
+      "correct_answer": 3,
+      "explanation": "You can use one to four values with `border-radius` shorthand."
+    }
+  ]
+}

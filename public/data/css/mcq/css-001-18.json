@@ -1,0 +1,159 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-18-001",
+      "question": "What does CSS minification do?",
+      "options": [
+        "Adds more whitespace to CSS files",
+        "Removes whitespace and comments to reduce file size",
+        "Creates new CSS rules automatically",
+        "Slows down website loading"
+      ],
+      "correct_answer": 2,
+      "explanation": "Minification removes unnecessary whitespace and comments to make files smaller and sites faster."
+    },
+    {
+      "id": "mcq-001-18-002",
+      "question": "Which tool is commonly used to minify CSS?",
+      "options": ["Photoshop", "CSSNano", "Notepad", "GitHub"],
+      "correct_answer": 2,
+      "explanation": "CSSNano is a popular CSS minification tool."
+    },
+    {
+      "id": "mcq-001-18-003",
+      "question": "What is the main benefit of minifying CSS?",
+      "options": [
+        "Easier to read",
+        "Faster website loading",
+        "Makes debugging simpler",
+        "Adds new features"
+      ],
+      "correct_answer": 2,
+      "explanation": "Minified CSS loads faster because of its smaller file size."
+    },
+    {
+      "id": "mcq-001-18-004",
+      "question": "Which of the following is removed during CSS minification?",
+      "options": ["Whitespace", "Comments", "Line breaks", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "Minification removes whitespace, comments, and line breaks."
+    },
+    {
+      "id": "mcq-001-18-005",
+      "question": "What should you do before minifying your CSS?",
+      "options": [
+        "Backup your original CSS file",
+        "Delete all your CSS",
+        "Add extra comments",
+        "Write CSS in one line"
+      ],
+      "correct_answer": 1,
+      "explanation": "Always keep a backup of your original (unminified) CSS for maintenance and debugging."
+    },
+    {
+      "id": "mcq-001-18-006",
+      "question": "Which of the following is true about minified CSS files?",
+      "options": [
+        "They are easier to edit",
+        "They are harder to read",
+        "They load slower",
+        "They contain more comments"
+      ],
+      "correct_answer": 2,
+      "explanation": "Minified files are harder for humans to read since all formatting and comments are removed."
+    },
+    {
+      "id": "mcq-001-18-007",
+      "question": "How can you make minified CSS easier to debug?",
+      "options": [
+        "Use source maps",
+        "Delete minified files",
+        "Add more whitespace",
+        "Never use minification"
+      ],
+      "correct_answer": 1,
+      "explanation": "Source maps allow browsers to map minified code back to the original code for debugging."
+    },
+    {
+      "id": "mcq-001-18-008",
+      "question": "Which file extension is commonly used for minified CSS?",
+      "options": [".min.css", ".cssm", ".compressed.css", ".csm"],
+      "correct_answer": 1,
+      "explanation": "It is a common convention to name minified files with the `.min.css` extension."
+    },
+    {
+      "id": "mcq-001-18-009",
+      "question": "Which is a disadvantage of minifying CSS?",
+      "options": [
+        "Slower website",
+        "Harder to maintain and debug",
+        "Increases file size",
+        "Removes valid CSS rules"
+      ],
+      "correct_answer": 2,
+      "explanation": "Minified CSS is difficult to maintain and debug without the original files or source maps."
+    },
+    {
+      "id": "mcq-001-18-010",
+      "question": "Which of the following should NOT be done to your production CSS?",
+      "options": [
+        "Minify CSS",
+        "Add source maps",
+        "Remove all comments and whitespace",
+        "Make it less readable for the team"
+      ],
+      "correct_answer": 4,
+      "explanation": "You should not make CSS less readable for your team—always keep the original, editable files."
+    },
+    {
+      "id": "mcq-001-18-011",
+      "question": "What is a typical size reduction from minifying a CSS file?",
+      "options": ["1-5%", "10-30%", "50-90%", "No reduction"],
+      "correct_answer": 2,
+      "explanation": "Minification often reduces file size by 10-30%, depending on the amount of whitespace and comments."
+    },
+    {
+      "id": "mcq-001-18-012",
+      "question": "Why do most build tools include CSS minification by default?",
+      "options": [
+        "To prevent editing",
+        "To improve page load times",
+        "To add bugs",
+        "To hide code from the browser"
+      ],
+      "correct_answer": 2,
+      "explanation": "Build tools minify CSS to improve page load times by reducing file size."
+    },
+    {
+      "id": "mcq-001-18-013",
+      "question": "Which of the following is NOT removed during CSS minification?",
+      "options": ["CSS rules", "Whitespace", "Comments", "Line breaks"],
+      "correct_answer": 1,
+      "explanation": "The actual CSS rules remain; only formatting and comments are removed."
+    },
+    {
+      "id": "mcq-001-18-014",
+      "question": "What is a best practice for working with minified CSS in production?",
+      "options": [
+        "Only work with minified files",
+        "Keep both minified and original files",
+        "Never use source maps",
+        "Write all code in one line"
+      ],
+      "correct_answer": 2,
+      "explanation": "Keep both the minified and original files for easy maintenance and fast loading."
+    },
+    {
+      "id": "mcq-001-18-015",
+      "question": "Which process is opposite to minification?",
+      "options": [
+        "Beautification (pretty-printing)",
+        "Compression",
+        "Obfuscation",
+        "Concatenation"
+      ],
+      "correct_answer": 1,
+      "explanation": "Beautification or pretty-printing adds whitespace and formatting back to minified files for readability."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-19-001",
+      "question": "<style>\np {\n  font-size: 18px;\n}\n</style>\n<p>Pixels size</p>",
+      "output": "<p style=\"font-size: 18px;\">Pixels size</p>",
+      "explanation": "The font size is set to 18 pixels (`px`), a common absolute unit."
+    },
+    {
+      "id": "output-001-19-002",
+      "question": "<style>\nh1 {\n  margin-top: 2em;\n}\n</style>\n<h1>Em margin</h1>",
+      "output": "<h1 style=\"margin-top: 2em;\">Em margin</h1>",
+      "explanation": "The top margin is 2 times the element's font size (`em` unit)."
+    },
+    {
+      "id": "output-001-19-003",
+      "question": "<style>\ndiv {\n  width: 50vw;\n  height: 30vh;\n  background: #eef;\n}\n</style>\n<div>Viewport units</div>",
+      "output": "<div style=\"width: 50vw; height: 30vh; background: #eef;\">Viewport units</div>",
+      "explanation": "`vw` is 50% of the viewport width, `vh` is 30% of the viewport height."
+    },
+    {
+      "id": "output-001-19-004",
+      "question": "<style>\nh2 {\n  font-size: 2rem;\n}\n</style>\n<h2>Rem size</h2>",
+      "output": "<h2 style=\"font-size: 2rem;\">Rem size</h2>",
+      "explanation": "`rem` is relative to the root element's font size."
+    },
+    {
+      "id": "output-001-19-005",
+      "question": "<style>\nspan {\n  padding-left: 5%;\n}\n</style>\n<span>Percent padding</span>",
+      "output": "<span style=\"padding-left: 5%;\">Percent padding</span>",
+      "explanation": "Padding is 5% of the containing element's width."
+    },
+    {
+      "id": "output-001-19-006",
+      "question": "<style>\np {\n  border-width: 4pt;\n  border-style: solid;\n}\n</style>\n<p>Point border</p>",
+      "output": "<p style=\"border-width: 4pt; border-style: solid;\">Point border</p>",
+      "explanation": "The border is 4 points wide (`pt`), mostly used in print."
+    },
+    {
+      "id": "output-001-19-007",
+      "question": "<style>\ndiv {\n  width: 10cm;\n  height: 2cm;\n  background: #ccc;\n}\n</style>\n<div>Centimeter box</div>",
+      "output": "<div style=\"width: 10cm; height: 2cm; background: #ccc;\">Centimeter box</div>",
+      "explanation": "Width and height use centimeters (`cm`)."
+    },
+    {
+      "id": "output-001-19-008",
+      "question": "<style>\np {\n  font-size: 12mm;\n}\n</style>\n<p>Millimeter font</p>",
+      "output": "<p style=\"font-size: 12mm;\">Millimeter font</p>",
+      "explanation": "Font size is set to 12 millimeters (`mm`)."
+    },
+    {
+      "id": "output-001-19-009",
+      "question": "<style>\nh3 {\n  margin-bottom: 0.5in;\n}\n</style>\n<h3>Inch margin</h3>",
+      "output": "<h3 style=\"margin-bottom: 0.5in;\">Inch margin</h3>",
+      "explanation": "Bottom margin is half an inch (`in`)."
+    },
+    {
+      "id": "output-001-19-010",
+      "question": "<style>\ndiv {\n  height: 2ex;\n  background: #eee;\n}\n</style>\n<div>Ex height</div>",
+      "output": "<div style=\"height: 2ex; background: #eee;\">Ex height</div>",
+      "explanation": "`ex` unit is the height of the lowercase 'x' in the current font."
+    },
+    {
+      "id": "output-001-19-011",
+      "question": "<style>\np {\n  letter-spacing: 0.1ch;\n}\n</style>\n<p>Char spacing</p>",
+      "output": "<p style=\"letter-spacing: 0.1ch;\">Char spacing</p>",
+      "explanation": "`ch` is the width of the '0' (zero) glyph in the element's font."
+    },
+    {
+      "id": "output-001-19-012",
+      "question": "<style>\nh4 {\n  font-size: 150%;\n}\n</style>\n<h4>Percent font size</h4>",
+      "output": "<h4 style=\"font-size: 150%;\">Percent font size</h4>",
+      "explanation": "The font size is 150% of the parent element's font size."
+    },
+    {
+      "id": "output-001-19-013",
+      "question": "<style>\ndiv {\n  min-width: 20em;\n}\n</style>\n<div>Min width em</div>",
+      "output": "<div style=\"min-width: 20em;\">Min width em</div>",
+      "explanation": "`em` units are relative to the element's font size; here, min-width is 20 times that size."
+    },
+    {
+      "id": "output-001-19-014",
+      "question": "<style>\np {\n  padding-bottom: 6pc;\n}\n</style>\n<p>Pica padding</p>",
+      "output": "<p style=\"padding-bottom: 6pc;\">Pica padding</p>",
+      "explanation": "Padding at the bottom is 6 picas (`pc`), where 1pc = 12pt."
+    },
+    {
+      "id": "output-001-19-015",
+      "question": "<style>\ndiv {\n  width: 100vw;\n  height: 100vh;\n  background: #fafafa;\n}\n</style>\n<div>Full viewport</div>",
+      "output": "<div style=\"width: 100vw; height: 100vh; background: #fafafa;\">Full viewport</div>",
+      "explanation": "Width and height are set to the full viewport size with `vw` and `vh`."
+    }
+  ]
+}

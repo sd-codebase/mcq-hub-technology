@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Display and Visibility",
+  "interview_questions": [
+    {
+      "id": "interview-001-15-001",
+      "question": "What is the difference between `display: none;` and `visibility: hidden;`?",
+      "answer": "`display: none;` removes the element from the document flow entirely, so it takes up no space. `visibility: hidden;` makes the element invisible but it still occupies space in the layout.",
+      "explanation": "Use `display: none;` to completely hide an element, and `visibility: hidden;` when you want to hide it but preserve layout."
+    },
+    {
+      "id": "interview-001-15-002",
+      "question": "What does `display: block;` do to an inline element like `<span>`?",
+      "answer": "`display: block;` causes the element to behave as a block-level element, meaning it starts on a new line and stretches to fill its container's width.",
+      "explanation": "Block-level elements respect width, height, margin, and padding on all sides."
+    },
+    {
+      "id": "interview-001-15-003",
+      "question": "How does `display: inline;` affect block elements like `<div>`?",
+      "answer": "`display: inline;` makes the element behave like inline content: it does not start on a new line and only takes up as much width as necessary.",
+      "explanation": "Inline elements cannot have their width and height set explicitly."
+    },
+    {
+      "id": "interview-001-15-004",
+      "question": "Explain the use of `display: inline-block;`.",
+      "answer": "`display: inline-block;` allows the element to flow inline with text, but still respects width and height properties.",
+      "explanation": "This is useful for buttons or custom controls that behave like text but need block styling."
+    },
+    {
+      "id": "interview-001-15-005",
+      "question": "What is the effect of `opacity: 0;` on an element?",
+      "answer": "The element becomes fully transparent (invisible), but still exists in the layout and can capture mouse events.",
+      "explanation": "`opacity: 0;` is different from `display: none;` because the element remains in the flow."
+    },
+    {
+      "id": "interview-001-15-006",
+      "question": "How does `display: flex;` affect the children of an element?",
+      "answer": "`display: flex;` makes the element a flex container, changing the layout of its direct children to follow the flexbox model (e.g., row or column alignment, spacing, etc.).",
+      "explanation": "Flexbox is useful for advanced layouts and responsive design."
+    },
+    {
+      "id": "interview-001-15-007",
+      "question": "What does `display: grid;` do?",
+      "answer": "`display: grid;` turns the element into a grid container, enabling grid-based layouts for its children.",
+      "explanation": "CSS Grid allows for 2-dimensional layouts (rows and columns)."
+    },
+    {
+      "id": "interview-001-15-008",
+      "question": "How does `visibility: collapse;` behave, and when is it used?",
+      "answer": "`visibility: collapse;` is mainly used for table elements. It hides the row or column and removes its space. On non-table elements, it behaves like `visibility: hidden;`.",
+      "explanation": "Rarely used outside of tables."
+    },
+    {
+      "id": "interview-001-15-009",
+      "question": "What does `display: none;` do to child elements of a hidden element?",
+      "answer": "All child elements are also removed from the layout and do not render.",
+      "explanation": "Hiding a parent with `display: none;` hides all its descendants, regardless of their own display properties."
+    },
+    {
+      "id": "interview-001-15-010",
+      "question": "How can you make an element semi-transparent?",
+      "answer": "Use the `opacity` property with a value between 0 and 1 (e.g., `opacity: 0.5;` for 50% transparency).",
+      "explanation": "`opacity` applies to the entire element, including its content and background."
+    }
+  ]
+}

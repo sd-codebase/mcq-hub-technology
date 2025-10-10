@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-07-001",
+      "question": "<style>\np {\n  color: red;\n}\n</style>\n<p>Red text</p>",
+      "output": "<p style=\"color: red;\">Red text</p>",
+      "explanation": "The paragraph text is colored red using a named color."
+    },
+    {
+      "id": "output-001-07-002",
+      "question": "<style>\nh1 {\n  color: #00FF00;\n}\n</style>\n<h1>Green heading</h1>",
+      "output": "<h1 style=\"color: #00FF00;\">Green heading</h1>",
+      "explanation": "The heading is colored green using a hexadecimal color value."
+    },
+    {
+      "id": "output-001-07-003",
+      "question": "<style>\ndiv {\n  background-color: rgb(0,0,255);\n}\n</style>\n<div>Blue background</div>",
+      "output": "<div style=\"background-color: rgb(0,0,255);\">Blue background</div>",
+      "explanation": "The div's background is blue using an RGB color value."
+    },
+    {
+      "id": "output-001-07-004",
+      "question": "<style>\nspan {\n  color: #333;\n}\n</style>\n<span>Dark gray</span>",
+      "output": "<span style=\"color: #333;\">Dark gray</span>",
+      "explanation": "The span text is dark gray using a short hexadecimal color code."
+    },
+    {
+      "id": "output-001-07-005",
+      "question": "<style>\nh2 {\n  background: rgba(255,0,0,0.5);\n}\n</style>\n<h2>Half-transparent red</h2>",
+      "output": "<h2 style=\"background: rgba(255,0,0,0.5);\">Half-transparent red</h2>",
+      "explanation": "The heading has a semi-transparent red background using RGBA."
+    },
+    {
+      "id": "output-001-07-006",
+      "question": "<style>\np {\n  color: hsl(240, 100%, 50%);\n}\n</style>\n<p>HSL blue</p>",
+      "output": "<p style=\"color: hsl(240, 100%, 50%);\">HSL blue</p>",
+      "explanation": "The paragraph text uses HSL to set the color to blue."
+    },
+    {
+      "id": "output-001-07-007",
+      "question": "<style>\np {\n  background-color: hsla(120, 100%, 25%, 0.3);\n}\n</style>\n<p>Transparent green background</p>",
+      "output": "<p style=\"background-color: hsla(120, 100%, 25%, 0.3);\">Transparent green background</p>",
+      "explanation": "Green background with 30% opacity using HSLA."
+    },
+    {
+      "id": "output-001-07-008",
+      "question": "<style>\ndiv {\n  color: #FF0;\n}\n</style>\n<div>Yellow text</div>",
+      "output": "<div style=\"color: #FF0;\">Yellow text</div>",
+      "explanation": "Hex shorthand `#FF0` is equivalent to yellow."
+    },
+    {
+      "id": "output-001-07-009",
+      "question": "<style>\nbody {\n  background: linear-gradient(to right, #f00, #00f);\n}\n</style>\n<body>Gradient</body>",
+      "output": "<body style=\"background: linear-gradient(to right, #f00, #00f);\">Gradient</body>",
+      "explanation": "The background is a horizontal gradient from red to blue."
+    },
+    {
+      "id": "output-001-07-010",
+      "question": "<style>\nh3 {\n  color: rgb(255, 165, 0);\n}\n</style>\n<h3>Orange heading</h3>",
+      "output": "<h3 style=\"color: rgb(255, 165, 0);\">Orange heading</h3>",
+      "explanation": "RGB values for orange are used for the heading."
+    },
+    {
+      "id": "output-001-07-011",
+      "question": "<style>\np {\n  color: #000;\n  background: #fff;\n}\n</style>\n<p>Black on white</p>",
+      "output": "<p style=\"color: #000; background: #fff;\">Black on white</p>",
+      "explanation": "Text is black, background is white using hex codes."
+    },
+    {
+      "id": "output-001-07-012",
+      "question": "<style>\nspan {\n  color: #abcdef;\n}\n</style>\n<span>Custom color</span>",
+      "output": "<span style=\"color: #abcdef;\">Custom color</span>",
+      "explanation": "A custom 6-digit hex color is used."
+    },
+    {
+      "id": "output-001-07-013",
+      "question": "<style>\nh4 {\n  background-color: rgb(0, 255, 255);\n}\n</style>\n<h4>Aqua background</h4>",
+      "output": "<h4 style=\"background-color: rgb(0, 255, 255);\">Aqua background</h4>",
+      "explanation": "The background is set to aqua using RGB."
+    },
+    {
+      "id": "output-001-07-014",
+      "question": "<style>\n.box {\n  background: #0000ff80;\n}\n</style>\n<div class=\"box\">Blue with alpha</div>",
+      "output": "<div class=\"box\" style=\"background: #0000ff80;\">Blue with alpha</div>",
+      "explanation": "Hex with 8 digits includes alpha (opacity), resulting in a semi-transparent blue background."
+    },
+    {
+      "id": "output-001-07-015",
+      "question": "<style>\np {\n  color: transparent;\n}\n</style>\n<p>Invisible text</p>",
+      "output": "<p style=\"color: transparent;\">Invisible text</p>",
+      "explanation": "The text is rendered invisible by setting its color to transparent."
+    }
+  ]
+}

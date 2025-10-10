@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-04-001",
+      "question": "<style>\np {\n  color: red;\n}\n</style>\n<p>Hello!</p>\n<div>Not affected</div>",
+      "output": "<p style=\"color: red;\">Hello!</p>\n<div>Not affected</div>",
+      "explanation": "The selector `p` only targets `<p>` elements, so only the paragraph text is red."
+    },
+    {
+      "id": "output-001-04-002",
+      "question": "<style>\n#main {\n  background: yellow;\n}\n</style>\n<div id=\"main\">Content</div>\n<div>Other</div>",
+      "output": "<div id=\"main\" style=\"background: yellow;\">Content</div>\n<div>Other</div>",
+      "explanation": "The `#main` selector targets the element with id `main`."
+    },
+    {
+      "id": "output-001-04-003",
+      "question": "<style>\n.title {\n  color: blue;\n}\n</style>\n<h2 class=\"title\">Heading</h2>\n<p>Text</p>",
+      "output": "<h2 class=\"title\" style=\"color: blue;\">Heading</h2>\n<p>Text</p>",
+      "explanation": "The `.title` selector targets elements with class `title`."
+    },
+    {
+      "id": "output-001-04-004",
+      "question": "<style>\nli {\n  list-style-type: square;\n}\n</style>\n<ul><li>One</li><li>Two</li></ul>",
+      "output": "<ul><li style=\"list-style-type: square;\">One</li><li style=\"list-style-type: square;\">Two</li></ul>",
+      "explanation": "The `li` selector styles all list items."
+    },
+    {
+      "id": "output-001-04-005",
+      "question": "<style>\ndiv, p {\n  margin: 0;\n}\n</style>\n<div>Box</div>\n<p>Paragraph</p>",
+      "output": "<div style=\"margin: 0;\">Box</div>\n<p style=\"margin: 0;\">Paragraph</p>",
+      "explanation": "Multiple selectors separated by commas apply the same style to both elements."
+    },
+    {
+      "id": "output-001-04-006",
+      "question": "<style>\nheader nav {\n  background: gray;\n}\n</style>\n<header><nav>Menu</nav></header>",
+      "output": "<header><nav style=\"background: gray;\">Menu</nav></header>",
+      "explanation": "The descendant selector `header nav` targets navs inside headers."
+    },
+    {
+      "id": "output-001-04-007",
+      "question": "<style>\nspan.important {\n  font-weight: bold;\n}\n</style>\n<span class=\"important\">Note</span>",
+      "output": "<span class=\"important\" style=\"font-weight: bold;\">Note</span>",
+      "explanation": "Only span elements with class `important` are bold."
+    },
+    {
+      "id": "output-001-04-008",
+      "question": "<style>\n#footer p {\n  color: green;\n}\n</style>\n<div id=\"footer\"><p>Footer text</p></div>",
+      "output": "<div id=\"footer\"><p style=\"color: green;\">Footer text</p></div>",
+      "explanation": "Paragraphs inside an element with id `footer` are green."
+    },
+    {
+      "id": "output-001-04-009",
+      "question": "<style>\ninput[type=\"text\"] {\n  border: 1px solid #333;\n}\n</style>\n<input type=\"text\"><input type=\"button\">",
+      "output": "<input type=\"text\" style=\"border: 1px solid #333;\"><input type=\"button\">",
+      "explanation": "Attribute selectors target only text inputs."
+    },
+    {
+      "id": "output-001-04-010",
+      "question": "<style>\nul > li {\n  color: purple;\n}\n</style>\n<ul><li>Alpha</li><li>Beta</li></ul>",
+      "output": "<ul><li style=\"color: purple;\">Alpha</li><li style=\"color: purple;\">Beta</li></ul>",
+      "explanation": "The child combinator `>` targets direct children `li` of `ul`."
+    },
+    {
+      "id": "output-001-04-011",
+      "question": "<style>\nsection h2 {\n  text-decoration: underline;\n}\n</style>\n<section><h2>Section title</h2></section>",
+      "output": "<section><h2 style=\"text-decoration: underline;\">Section title</h2></section>",
+      "explanation": "Descendant selector styles h2s inside sections."
+    },
+    {
+      "id": "output-001-04-012",
+      "question": "<style>\np.note {\n  background: #ffe;\n}\n</style>\n<p class=\"note\">A note</p>\n<p>Regular paragraph</p>",
+      "output": "<p class=\"note\" style=\"background: #ffe;\">A note</p>\n<p>Regular paragraph</p>",
+      "explanation": "Only paragraphs with class `note` get the background."
+    },
+    {
+      "id": "output-001-04-013",
+      "question": "<style>\ndiv#main {\n  border: 2px solid blue;\n}\n</style>\n<div id=\"main\">Main box</div>",
+      "output": "<div id=\"main\" style=\"border: 2px solid blue;\">Main box</div>",
+      "explanation": "The selector `div#main` targets div with id 'main'."
+    },
+    {
+      "id": "output-001-04-014",
+      "question": "<style>\n* {\n  font-family: Arial;\n}\n</style>\n<h1>Header</h1><p>Text</p>",
+      "output": "<h1 style=\"font-family: Arial;\">Header</h1><p style=\"font-family: Arial;\">Text</p>",
+      "explanation": "The universal selector `*` applies to all elements."
+    },
+    {
+      "id": "output-001-04-015",
+      "question": "<style>\na:hover {\n  color: orange;\n}\n</style>\n<a href=\"#\">Hover me</a>",
+      "output": "<a href=\"#\" style=\"color: orange;\">Hover me</a> (when hovered)",
+      "explanation": "The pseudo-class `:hover` changes the color on mouseover."
+    }
+  ]
+}

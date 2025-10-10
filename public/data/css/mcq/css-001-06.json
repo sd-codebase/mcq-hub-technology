@@ -1,0 +1,179 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-06-001",
+      "question": "Which CSS keyword is used to import one stylesheet into another?",
+      "options": ["`@import`", "`@include`", "`import`", "`require`"],
+      "correct_answer": 1,
+      "explanation": "The `@import` keyword is used to import one CSS file into another."
+    },
+    {
+      "id": "mcq-001-06-002",
+      "question": "What is the correct syntax for importing a CSS file named `theme.css`?",
+      "options": [
+        "`@import 'theme.css';`",
+        "`@import url('theme.css');`",
+        "Both 1 and 2",
+        "`@import-css theme.css;`"
+      ],
+      "correct_answer": 3,
+      "explanation": "Both `@import 'theme.css';` and `@import url('theme.css');` are valid."
+    },
+    {
+      "id": "mcq-001-06-003",
+      "question": "Where should the `@import` statement be placed in a CSS file?",
+      "options": [
+        "At the very top, before all other styles",
+        "Anywhere in the file",
+        "Only inside a CSS rule",
+        "At the end of the file"
+      ],
+      "correct_answer": 1,
+      "explanation": "`@import` should be at the top of the CSS file, before any rules."
+    },
+    {
+      "id": "mcq-001-06-004",
+      "question": "Which is a potential drawback of using `@import` to include CSS files?",
+      "options": [
+        "It makes code harder to read",
+        "It can slow down page load",
+        "It doesn't work in any browser",
+        "It is only used for HTML files"
+      ],
+      "correct_answer": 2,
+      "explanation": "`@import` can delay the loading of CSS, as files are fetched after the main CSS is loaded."
+    },
+    {
+      "id": "mcq-001-06-005",
+      "question": "Which is the most efficient way to include multiple CSS files?",
+      "options": [
+        "Multiple `<link>` tags in HTML",
+        "Multiple `@import` statements in CSS",
+        "Both are equally efficient",
+        "Using `<script>` tags"
+      ],
+      "correct_answer": 1,
+      "explanation": "Using multiple `<link>` tags is more efficient because browsers load them in parallel."
+    },
+    {
+      "id": "mcq-001-06-006",
+      "question": "What happens if you use `@import` inside a CSS rule?",
+      "options": [
+        "The rule will work as normal",
+        "It will be ignored",
+        "It causes a syntax error",
+        "It will import the CSS correctly"
+      ],
+      "correct_answer": 3,
+      "explanation": "`@import` must be placed at the top of the file, outside of any CSS rule."
+    },
+    {
+      "id": "mcq-001-06-007",
+      "question": "Which of the following is NOT a valid way to import a CSS file?",
+      "options": [
+        "`@import url('styles.css');`",
+        "`@import 'styles.css';`",
+        "`@import(styles.css);`",
+        "`@import url(styles.css);`"
+      ],
+      "correct_answer": 3,
+      "explanation": "`@import(styles.css);` is not valid syntax."
+    },
+    {
+      "id": "mcq-001-06-008",
+      "question": "How does `@import` affect CSS specificity?",
+      "options": [
+        "Imported styles always have higher specificity",
+        "Imported styles follow the normal cascade and specificity rules",
+        "Imported styles are ignored",
+        "Imported styles override inline styles by default"
+      ],
+      "correct_answer": 2,
+      "explanation": "Imported styles follow normal cascade and specificity rules."
+    },
+    {
+      "id": "mcq-001-06-009",
+      "question": "Which is a correct way to import a Google Font in your CSS?",
+      "options": [
+        "`@import url('https://fonts.googleapis.com/css?family=Roboto');`",
+        "`import google('Roboto');`",
+        "`@include 'Roboto';`",
+        "`link google('Roboto');`"
+      ],
+      "correct_answer": 1,
+      "explanation": "Google Fonts provides a URL to import with `@import url('...');`."
+    },
+    {
+      "id": "mcq-001-06-010",
+      "question": "Can you use media queries with the `@import` rule?",
+      "options": [
+        "Yes, after the file path",
+        "No, it's not supported",
+        "Only in HTML",
+        "Only in JavaScript"
+      ],
+      "correct_answer": 1,
+      "explanation": "You can use media queries after the file path, e.g., `@import url('print.css') print;`."
+    },
+    {
+      "id": "mcq-001-06-011",
+      "question": "Which of these is true about `@import` and browser support?",
+      "options": [
+        "It is supported by all modern browsers",
+        "It is only supported in Chrome",
+        "It is not supported in any browser",
+        "It is deprecated"
+      ],
+      "correct_answer": 1,
+      "explanation": "`@import` is supported by all modern browsers, but has performance drawbacks."
+    },
+    {
+      "id": "mcq-001-06-012",
+      "question": "What is the difference between `@import` and `<link>` for CSS files?",
+      "options": [
+        "`@import` loads files after the main CSS, `<link>` loads in parallel",
+        "`@import` is faster than `<link>`",
+        "`@import` can only be used in HTML",
+        "`<link>` can only be used for internal CSS"
+      ],
+      "correct_answer": 1,
+      "explanation": "`@import` loads files sequentially, which can delay rendering. `<link>` allows for parallel loading."
+    },
+    {
+      "id": "mcq-001-06-013",
+      "question": "Which is the correct way to import a CSS file for print media only?",
+      "options": [
+        "`@import url('print.css') print;`",
+        "`@import print url('print.css');`",
+        "`@import url('print.css'); print;`",
+        "`@import-print url('print.css');`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`@import url('print.css') print;` imports the stylesheet only for print media."
+    },
+    {
+      "id": "mcq-001-06-014",
+      "question": "What will happen if you try to import a non-existent CSS file?",
+      "options": [
+        "The browser will crash",
+        "The rest of the CSS will not load",
+        "Only the import will fail; the rest of the CSS works",
+        "All styles will be ignored"
+      ],
+      "correct_answer": 3,
+      "explanation": "If the imported file is missing, only that import fails; the rest of your CSS will still be applied."
+    },
+    {
+      "id": "mcq-001-06-015",
+      "question": "Which of these is a best practice for large projects?",
+      "options": [
+        "Use multiple `@import` statements for every file",
+        "Combine CSS into fewer files and use `<link>` tags",
+        "Always use inline styles",
+        "Import CSS files in the HTML `<body>`"
+      ],
+      "correct_answer": 2,
+      "explanation": "Combining CSS files and using `<link>` tags improves performance and maintainability."
+    }
+  ]
+}

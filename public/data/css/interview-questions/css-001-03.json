@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Comments",
+  "interview_questions": [
+    {
+      "id": "interview-001-03-001",
+      "question": "How do you write a comment in CSS? Provide an example.",
+      "answer": "CSS comments are written using /* and */. Example: `/* This is a comment */`.",
+      "explanation": "CSS ignores anything between /* and */. Comments can span multiple lines and are useful for documentation or temporarily disabling code."
+    },
+    {
+      "id": "interview-001-03-002",
+      "question": "Can CSS comments be nested? Why or why not?",
+      "answer": "No, CSS comments cannot be nested. If you try to nest them, the first closing */ will end the comment, which can lead to syntax errors.",
+      "explanation": "CSS parsing does not support nested comments. Using nested comments can break your stylesheet."
+    },
+    {
+      "id": "interview-001-03-003",
+      "question": "What is the purpose of using comments in CSS?",
+      "answer": "Comments are used to document your CSS, explain sections of code, or temporarily disable parts of the stylesheet without deleting them.",
+      "explanation": "Comments improve code maintainability and collaboration by providing context and explanations."
+    },
+    {
+      "id": "interview-001-03-004",
+      "question": "Will comments in CSS be rendered or affect the web page appearance?",
+      "answer": "No, comments are ignored by browsers and do not affect the rendering or appearance of the web page.",
+      "explanation": "Comments only exist in the source code and are not displayed to users."
+    },
+    {
+      "id": "interview-001-03-005",
+      "question": "Can you use comments to disable a single property in a CSS rule? Give an example.",
+      "answer": "Yes. You can comment out a property to disable it. Example:\n```css\np {\n  color: red; /* background: yellow; */\n}\n```",
+      "explanation": "This is useful for testing and debugging styles without deleting code."
+    },
+    {
+      "id": "interview-001-03-006",
+      "question": "Is it possible to use HTML-style comments (`<!-- -->`) in CSS?",
+      "answer": "No, HTML-style comments (`<!-- -->`) are not valid in CSS and will cause errors.",
+      "explanation": "Always use /* ... */ for CSS comments."
+    },
+    {
+      "id": "interview-001-03-007",
+      "question": "Where can CSS comments be placed in a stylesheet?",
+      "answer": "CSS comments can be placed anywhere outside property names and values—in selectors, between declarations, before or after rules, or between rules.",
+      "explanation": "They are flexible and do not interfere with the stylesheet as long as they are not inside a property name or value."
+    },
+    {
+      "id": "interview-001-03-008",
+      "question": "What happens if you put a comment inside a CSS property value?",
+      "answer": "Putting a comment inside a property value (e.g., `color: re/*comment*/d;`) will break the property and cause it to be ignored.",
+      "explanation": "Comments can only appear between properties, not inside property names or values."
+    },
+    {
+      "id": "interview-001-03-009",
+      "question": "Can comments be used in inline styles in HTML?",
+      "answer": "No, comments cannot be used inside the style attribute of HTML elements. The browser will not recognize them as valid.",
+      "explanation": "Inline styles only accept property-value pairs; comments will cause errors or be ignored."
+    },
+    {
+      "id": "interview-001-03-010",
+      "question": "How can comments help during the development and debugging of CSS?",
+      "answer": "Comments allow developers to leave notes, organize sections, and temporarily disable code by commenting out rules or properties.",
+      "explanation": "They make complex stylesheets easier to understand and maintain, and assist in troubleshooting by isolating code."
+    }
+  ]
+}

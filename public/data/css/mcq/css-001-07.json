@@ -1,0 +1,164 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-07-001",
+      "question": "Is CSS case-sensitive?",
+      "options": [
+        "Yes, always",
+        "No, never",
+        "Only for property names",
+        "Only for class and ID selectors"
+      ],
+      "correct_answer": 4,
+      "explanation": "CSS property names and keywords are case-insensitive, but class and ID selectors are case-sensitive, unless otherwise specified."
+    },
+    {
+      "id": "mcq-001-07-002",
+      "question": "Which of the following selectors is different from `.Menu`?",
+      "options": ["`.menu`", "`.Menu`", "`.MENU`", "All are the same"],
+      "correct_answer": 1,
+      "explanation": "Class selectors are case-sensitive in most browsers, so `.menu` is different from `.Menu`."
+    },
+    {
+      "id": "mcq-001-07-003",
+      "question": "Which CSS property values are case-insensitive?",
+      "options": [
+        "Color values",
+        "Font family names",
+        "Property names and keywords",
+        "All CSS values"
+      ],
+      "correct_answer": 3,
+      "explanation": "Property names and keywords (such as `color`, `font-weight`, `bold`, etc.) are case-insensitive."
+    },
+    {
+      "id": "mcq-001-07-004",
+      "question": "What will happen if you write `COLOR: RED;` instead of `color: red;`?",
+      "options": [
+        "It will not work",
+        "It will work, because CSS properties are case-insensitive",
+        "It will only work in some browsers",
+        "It will cause an error"
+      ],
+      "correct_answer": 2,
+      "explanation": "CSS property names are case-insensitive, so `COLOR` is treated the same as `color`."
+    },
+    {
+      "id": "mcq-001-07-005",
+      "question": "How does HTML’s case sensitivity affect CSS selectors?",
+      "options": [
+        "HTML is case-insensitive, so CSS selectors are always case-insensitive",
+        "HTML is case-insensitive, but CSS class and ID selectors are case-sensitive",
+        "HTML tags must always be lowercase in CSS",
+        "HTML’s case sensitivity has no effect on CSS"
+      ],
+      "correct_answer": 2,
+      "explanation": "HTML is case-insensitive, but CSS selectors for classes and IDs are case-sensitive by default."
+    },
+    {
+      "id": "mcq-001-07-006",
+      "question": "Which selector matches `<div id=\"Header\">`?",
+      "options": ["`#header`", "`#Header`", "`#HEADER`", "All of the above"],
+      "correct_answer": 2,
+      "explanation": "ID selectors are case-sensitive in CSS, so only `#Header` matches `<div id=\"Header\">`."
+    },
+    {
+      "id": "mcq-001-07-007",
+      "question": "Which of the following statements is TRUE about CSS selectors and case sensitivity?",
+      "options": [
+        "Type selectors are case-sensitive",
+        "Class and ID selectors are always case-insensitive",
+        "Class and ID selectors are case-sensitive",
+        "Type selectors are always uppercase"
+      ],
+      "correct_answer": 3,
+      "explanation": "Type selectors are case-insensitive, but class and ID selectors are case-sensitive."
+    },
+    {
+      "id": "mcq-001-07-008",
+      "question": "If you have `<div class=\"MyClass\">`, which selector will apply styles to it?",
+      "options": ["`.myclass`", "`.MYCLASS`", "`.MyClass`", "All of the above"],
+      "correct_answer": 3,
+      "explanation": "Class selectors are case-sensitive, so only `.MyClass` matches `<div class=\"MyClass\">`."
+    },
+    {
+      "id": "mcq-001-07-009",
+      "question": "How can you make an attribute selector case-insensitive?",
+      "options": [
+        "By adding `i` after the value",
+        "By using uppercase letters",
+        "By adding `*` to the selector",
+        "It's not possible"
+      ],
+      "correct_answer": 1,
+      "explanation": "Use `[attribute=value i]` to make an attribute selector case-insensitive."
+    },
+    {
+      "id": "mcq-001-07-010",
+      "question": "Which of the following is a valid case-insensitive attribute selector?",
+      "options": [
+        "`[type=\"Email\"]`",
+        "`[type=\"email\" i]`",
+        "`[type=\"email\"]`",
+        "`[type=\"EMAIL\"]`"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `i` after the value makes the selector case-insensitive: `[type=\"email\" i]`."
+    },
+    {
+      "id": "mcq-001-07-011",
+      "question": "What is the default case sensitivity for CSS selectors in XML documents?",
+      "options": [
+        "Case-insensitive",
+        "Case-sensitive",
+        "Depends on the browser",
+        "Depends on the property"
+      ],
+      "correct_answer": 2,
+      "explanation": "Selectors are case-sensitive in XML documents."
+    },
+    {
+      "id": "mcq-001-07-012",
+      "question": "Which CSS property is case-sensitive for its value?",
+      "options": [
+        "`font-family`",
+        "`color`",
+        "`background-color`",
+        "`None, all property values are case-insensitive`"
+      ],
+      "correct_answer": 1,
+      "explanation": "Font family names can be case-sensitive, especially when referring to custom fonts."
+    },
+    {
+      "id": "mcq-001-07-013",
+      "question": "If you define a class `buttonPrimary`, which selector correctly targets it?",
+      "options": [
+        "`.buttonprimary`",
+        "`.buttonPrimary`",
+        "`.BUTTONPRIMARY`",
+        "All of the above"
+      ],
+      "correct_answer": 2,
+      "explanation": "CSS class selectors are case-sensitive, so `.buttonPrimary` targets `class=\"buttonPrimary\"`."
+    },
+    {
+      "id": "mcq-001-07-014",
+      "question": "Which of the following will NOT match `<span ID=\"main\">`?",
+      "options": ["`#main`", "`#Main`", "`#MAIN`", "All of the above"],
+      "correct_answer": 2,
+      "explanation": "Since `ID` is `main`, only `#main` matches it; `#Main` does not."
+    },
+    {
+      "id": "mcq-001-07-015",
+      "question": "Which is a best practice regarding case-sensitivity in CSS?",
+      "options": [
+        "Always use uppercase for properties",
+        "Always match the exact case of class/ID names",
+        "Use camelCase for all CSS properties",
+        "CSS does not care about case"
+      ],
+      "correct_answer": 2,
+      "explanation": "Matching the exact case for class and ID names avoids bugs related to case-sensitivity in CSS."
+    }
+  ]
+}

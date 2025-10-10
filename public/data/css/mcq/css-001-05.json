@@ -1,0 +1,184 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-05-001",
+      "question": "How do you write a comment in CSS?",
+      "options": [
+        "`// comment`",
+        "`# comment`",
+        "`<!-- comment -->`",
+        "`/* comment */`"
+      ],
+      "correct_answer": 4,
+      "explanation": "CSS comments use the `/* comment */` syntax."
+    },
+    {
+      "id": "mcq-001-05-002",
+      "question": "Which of the following is true about CSS comments?",
+      "options": [
+        "They are required for each rule",
+        "They are ignored by browsers",
+        "They affect how CSS renders",
+        "They must be placed at the top"
+      ],
+      "correct_answer": 2,
+      "explanation": "Comments are ignored by browsers and do not affect rendering."
+    },
+    {
+      "id": "mcq-001-05-003",
+      "question": "Where can you place CSS comments?",
+      "options": [
+        "Only at the start of the file",
+        "Only between selectors",
+        "Anywhere in the stylesheet",
+        "Only at the end of the file"
+      ],
+      "correct_answer": 3,
+      "explanation": "CSS comments can be placed anywhere in the stylesheet."
+    },
+    {
+      "id": "mcq-001-05-004",
+      "question": "Which of these will cause an error in CSS?",
+      "options": [
+        "`/* valid comment */`",
+        "`// not valid in CSS`",
+        "`# comment`",
+        "Both 2 and 3"
+      ],
+      "correct_answer": 4,
+      "explanation": "Only the `/* ... */` syntax is valid. `//` and `#` are invalid."
+    },
+    {
+      "id": "mcq-001-05-005",
+      "question": "What is the main purpose of writing comments in CSS?",
+      "options": [
+        "To style the content",
+        "To explain code for developers",
+        "To make code run faster",
+        "To create variables"
+      ],
+      "correct_answer": 2,
+      "explanation": "Comments are used to explain code to developers, not for styling."
+    },
+    {
+      "id": "mcq-001-05-006",
+      "question": "Can you use comments to disable a CSS declaration temporarily?",
+      "options": [
+        "Yes, by wrapping the code in `/* ... */`",
+        "No, comments cannot disable code",
+        "Only at the top of the file",
+        "Only with `// ... //`"
+      ],
+      "correct_answer": 1,
+      "explanation": "You can comment out any part of CSS to disable it temporarily."
+    },
+    {
+      "id": "mcq-001-05-007",
+      "question": "Which of the following is a valid multi-line comment in CSS?",
+      "options": [
+        "`/* This is a\nmulti-line comment */`",
+        "`// This is a\nmulti-line comment //`",
+        "`<!-- Multi-line comment -->`",
+        "`# Multi-line\ncomment #`"
+      ],
+      "correct_answer": 1,
+      "explanation": "Multi-line comments in CSS use `/* ... */`."
+    },
+    {
+      "id": "mcq-001-05-008",
+      "question": "Do CSS comments appear in the rendered web page?",
+      "options": [
+        "Yes, always",
+        "No, they are never shown",
+        "Only in the HTML source",
+        "Only if printed"
+      ],
+      "correct_answer": 2,
+      "explanation": "CSS comments are not rendered or visible to users."
+    },
+    {
+      "id": "mcq-001-05-009",
+      "question": "Which is a correct example of a CSS comment?",
+      "options": [
+        "`/* Change header color below */`",
+        "`// Change header color below`",
+        "`<!-- Change header color below -->`",
+        "`# Change header color below`"
+      ],
+      "correct_answer": 1,
+      "explanation": "Only `/* ... */` is a valid comment in CSS."
+    },
+    {
+      "id": "mcq-001-05-010",
+      "question": "What happens if you forget to close a CSS comment?",
+      "options": [
+        "The browser ignores only that comment",
+        "All CSS after the comment is ignored",
+        "An error is shown to the user",
+        "The page will not load"
+      ],
+      "correct_answer": 2,
+      "explanation": "A missing closing tag causes the browser to treat the rest of the file as a comment."
+    },
+    {
+      "id": "mcq-001-05-011",
+      "question": "Can you nest comments in CSS?",
+      "options": [
+        "Yes, using `/* /* */ */`",
+        "No, nested comments are not allowed",
+        "Only with special syntax",
+        "Yes, but only in external files"
+      ],
+      "correct_answer": 2,
+      "explanation": "CSS does not support nested comments."
+    },
+    {
+      "id": "mcq-001-05-012",
+      "question": "What is the effect of this code?\n```css\n/* color: red; */\nh1 { color: blue; }\n```",
+      "options": [
+        "No `<h1>` will have color",
+        "<h1> will be red",
+        "<h1> will be blue",
+        "All text will be red"
+      ],
+      "correct_answer": 3,
+      "explanation": "The comment is ignored and `<h1>` will be blue."
+    },
+    {
+      "id": "mcq-001-05-013",
+      "question": "What is the best practice when writing CSS comments?",
+      "options": [
+        "Write clear, meaningful comments",
+        "Comment every line of code",
+        "Use comments to style elements",
+        "Avoid using comments"
+      ],
+      "correct_answer": 1,
+      "explanation": "Comments should be used to explain complex or important code."
+    },
+    {
+      "id": "mcq-001-05-014",
+      "question": "Are comments retained in CSS files after minification?",
+      "options": [
+        "Yes, always",
+        "No, they are usually removed",
+        "Only if they are single-line comments",
+        "Only if they are multi-line comments"
+      ],
+      "correct_answer": 2,
+      "explanation": "Most minifiers remove comments to reduce file size."
+    },
+    {
+      "id": "mcq-001-05-015",
+      "question": "Which of the following is NOT a use of CSS comments?",
+      "options": [
+        "Explaining code sections",
+        "Disabling code temporarily",
+        "Styling elements",
+        "Documenting file structure"
+      ],
+      "correct_answer": 3,
+      "explanation": "Comments do not style elements; they are only for documentation."
+    }
+  ]
+}

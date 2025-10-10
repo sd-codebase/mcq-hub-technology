@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-10-001",
+      "question": "<style>\ndiv {\n  background-color: yellow;\n}\n</style>\n<div>Yellow background</div>",
+      "output": "<div style=\"background-color: yellow;\">Yellow background</div>",
+      "explanation": "The div's background is yellow using `background-color`."
+    },
+    {
+      "id": "output-001-10-002",
+      "question": "<style>\nbody {\n  background-image: url('bg.png');\n}\n</style>\n<body>With image</body>",
+      "output": "<body style=\"background-image: url('bg.png');\">With image</body>",
+      "explanation": "The page uses 'bg.png' as its background image."
+    },
+    {
+      "id": "output-001-10-003",
+      "question": "<style>\ndiv {\n  background-repeat: no-repeat;\n  background-image: url('pattern.png');\n}\n</style>\n<div>Patterned</div>",
+      "output": "<div style=\"background-repeat: no-repeat; background-image: url('pattern.png');\">Patterned</div>",
+      "explanation": "The pattern image is shown once (not tiled) in the div's background."
+    },
+    {
+      "id": "output-001-10-004",
+      "question": "<style>\nsection {\n  background-position: right top;\n  background-image: url('corner.png');\n}\n</style>\n<section>Corner image</section>",
+      "output": "<section style=\"background-position: right top; background-image: url('corner.png');\">Corner image</section>",
+      "explanation": "The background image is positioned in the top-right corner."
+    },
+    {
+      "id": "output-001-10-005",
+      "question": "<style>\n.box {\n  background-size: cover;\n  background-image: url('cover.jpg');\n}\n</style>\n<div class=\"box\">Cover</div>",
+      "output": "<div class=\"box\" style=\"background-size: cover; background-image: url('cover.jpg');\">Cover</div>",
+      "explanation": "The background image covers the entire box area, possibly cropping the image."
+    },
+    {
+      "id": "output-001-10-006",
+      "question": "<style>\ndiv {\n  background: #eee url('dots.png') repeat-x;\n}\n</style>\n<div>Dotted</div>",
+      "output": "<div style=\"background: #eee url('dots.png') repeat-x;\">Dotted</div>",
+      "explanation": "Gray background with a horizontally repeating dotted image."
+    },
+    {
+      "id": "output-001-10-007",
+      "question": "<style>\nbody {\n  background-attachment: fixed;\n  background-image: url('fixed.jpg');\n}\n</style>\n<body>Fixed BG</body>",
+      "output": "<body style=\"background-attachment: fixed; background-image: url('fixed.jpg');\">Fixed BG</body>",
+      "explanation": "The background image stays fixed while scrolling."
+    },
+    {
+      "id": "output-001-10-008",
+      "question": "<style>\n.box {\n  background: linear-gradient(90deg, red, yellow);\n}\n</style>\n<div class=\"box\">Gradient</div>",
+      "output": "<div class=\"box\" style=\"background: linear-gradient(90deg, red, yellow);\">Gradient</div>",
+      "explanation": "A linear gradient background from red (left) to yellow (right)."
+    },
+    {
+      "id": "output-001-10-009",
+      "question": "<style>\ndiv {\n  background-repeat: round;\n  background-image: url('tile.png');\n}\n</style>\n<div>Rounded repeat</div>",
+      "output": "<div style=\"background-repeat: round; background-image: url('tile.png');\">Rounded repeat</div>",
+      "explanation": "The image is repeated and scaled to fit the div's width and height."
+    },
+    {
+      "id": "output-001-10-010",
+      "question": "<style>\n.box {\n  background-position: center;\n  background-image: url('center.png');\n}\n</style>\n<div class=\"box\">Centered image</div>",
+      "output": "<div class=\"box\" style=\"background-position: center; background-image: url('center.png');\">Centered image</div>",
+      "explanation": "The background image is centered within the element."
+    },
+    {
+      "id": "output-001-10-011",
+      "question": "<style>\nsection {\n  background-size: 50px 100px;\n  background-image: url('sized.png');\n}\n</style>\n<section>Sized BG</section>",
+      "output": "<section style=\"background-size: 50px 100px; background-image: url('sized.png');\">Sized BG</section>",
+      "explanation": "The background image is stretched to 50x100 pixels."
+    },
+    {
+      "id": "output-001-10-012",
+      "question": "<style>\np {\n  background: repeating-linear-gradient(45deg, #ccc, #ccc 10px, #fff 10px, #fff 20px);\n}\n</style>\n<p>Repeating gradient</p>",
+      "output": "<p style=\"background: repeating-linear-gradient(45deg, #ccc, #ccc 10px, #fff 10px, #fff 20px);\">Repeating gradient</p>",
+      "explanation": "The paragraph has a repeating diagonal striped background."
+    },
+    {
+      "id": "output-001-10-013",
+      "question": "<style>\ndiv {\n  background: none;\n}\n</style>\n<div>Clear background</div>",
+      "output": "<div style=\"background: none;\">Clear background</div>",
+      "explanation": "No background is applied, even if inherited."
+    },
+    {
+      "id": "output-001-10-014",
+      "question": "<style>\n.box {\n  background: radial-gradient(circle, blue, white);\n}\n</style>\n<div class=\"box\">Radial Gradient</div>",
+      "output": "<div class=\"box\" style=\"background: radial-gradient(circle, blue, white);\">Radial Gradient</div>",
+      "explanation": "A blue-to-white radial gradient is used as the background."
+    },
+    {
+      "id": "output-001-10-015",
+      "question": "<style>\nbody {\n  background-color: #222;\n  color: #fff;\n}\n</style>\n<body>Dark mode</body>",
+      "output": "<body style=\"background-color: #222; color: #fff;\">Dark mode</body>",
+      "explanation": "The page uses a dark background with white text."
+    }
+  ]
+}

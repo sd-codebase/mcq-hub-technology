@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Positioning",
+  "interview_questions": [
+    {
+      "id": "interview-001-16-001",
+      "question": "What are the possible values for the `position` property in CSS and what does each one mean?",
+      "answer": "Possible values are:\n- `static`: Default positioning, follows normal document flow.\n- `relative`: Positioned relative to its normal position.\n- `absolute`: Positioned relative to the nearest positioned ancestor or the viewport if none.\n- `fixed`: Positioned relative to the browser window (viewport), stays in place when scrolling.\n- `sticky`: Behaves like relative until a scroll threshold is met, then like fixed.",
+      "explanation": "Understanding the different position values is fundamental for controlling layout and element stacking."
+    },
+    {
+      "id": "interview-001-16-002",
+      "question": "Explain how `z-index` works and when it is effective.",
+      "answer": "`z-index` controls the stacking order of positioned elements (those with position relative, absolute, fixed, or sticky). Higher `z-index` values appear above lower values. It is ignored on non-positioned elements.",
+      "explanation": "Use `z-index` to layer overlapping elements, such as modals, dropdowns, or tooltips."
+    },
+    {
+      "id": "interview-001-16-003",
+      "question": "What is the difference between `relative` and `absolute` positioning?",
+      "answer": "`relative` positions an element relative to its normal spot, still taking up space. `absolute` removes the element from normal flow and positions it relative to the nearest positioned ancestor.",
+      "explanation": "`relative` is useful for slight nudges, while `absolute` is used for overlays or floating UI."
+    },
+    {
+      "id": "interview-001-16-004",
+      "question": "How does `fixed` positioning behave during scrolling?",
+      "answer": "An element with `position: fixed;` stays in the same spot relative to the viewport, even when the page is scrolled.",
+      "explanation": "Useful for sticky headers, footers, or floating action buttons."
+    },
+    {
+      "id": "interview-001-16-005",
+      "question": "What is the effect of `position: sticky;`?",
+      "answer": "`position: sticky;` allows an element to act as relatively positioned until it crosses a certain scroll threshold, then becomes fixed within its container.",
+      "explanation": "Commonly used for headers or sidebars that should remain visible while scrolling within a section."
+    },
+    {
+      "id": "interview-001-16-006",
+      "question": "When using `position: absolute;`, what determines the element’s containing block for positioning?",
+      "answer": "The containing block is the nearest ancestor with a position value other than static (relative, absolute, fixed, or sticky). If none, the initial containing block (viewport) is used.",
+      "explanation": "This allows for precise placement within sections, cards, or the whole page."
+    },
+    {
+      "id": "interview-001-16-007",
+      "question": "How can you center an absolutely positioned element both vertically and horizontally?",
+      "answer": "Set `left: 50%; top: 50%; transform: translate(-50%, -50%);` on the element.",
+      "explanation": "`transform` shifts the element back by half its width/height after moving its top-left corner to the center."
+    },
+    {
+      "id": "interview-001-16-008",
+      "question": "What happens if you set `top`, `right`, `bottom`, and `left` on a statically positioned element?",
+      "answer": "These properties have no effect on statically positioned elements (the default).",
+      "explanation": "Offset properties only work with `relative`, `absolute`, `fixed`, or `sticky` positioning."
+    },
+    {
+      "id": "interview-001-16-009",
+      "question": "Can `position: sticky;` work if the parent has `overflow: hidden;`? Why or why not?",
+      "answer": "No, `position: sticky;` will not work if any ancestor has `overflow: hidden`, `scroll`, or `auto`, because sticky positioning depends on the scrolling container.",
+      "explanation": "Sticky positioning requires a scrollable ancestor to determine when to become fixed."
+    },
+    {
+      "id": "interview-001-16-010",
+      "question": "How do you stack elements on top of each other using CSS?",
+      "answer": "Use `position` (relative, absolute, fixed, or sticky) and control the stacking order with `z-index`. Elements with higher `z-index` appear above those with lower values.",
+      "explanation": "This is essential for popups, modals, and layered interfaces."
+    }
+  ]
+}

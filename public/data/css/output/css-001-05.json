@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-05-001",
+      "question": "<style>\np {\n  color: brown;\n  font-size: 18px;\n}\n</style>\n<p>Styled text</p>",
+      "output": "<p style=\"color: brown; font-size: 18px;\">Styled text</p>",
+      "explanation": "Both the color and font-size properties are applied to the paragraph."
+    },
+    {
+      "id": "output-001-05-002",
+      "question": "<style>\ndiv {\n  background-color: #fafafa;\n  border: 1px solid #111;\n}\n</style>\n<div>Box</div>",
+      "output": "<div style=\"background-color: #fafafa; border: 1px solid #111;\">Box</div>",
+      "explanation": "The div has a light background and a dark border."
+    },
+    {
+      "id": "output-001-05-003",
+      "question": "<style>\nh1 {\n  text-align: center;\n  color: navy;\n}\n</style>\n<h1>Centered Heading</h1>",
+      "output": "<h1 style=\"text-align: center; color: navy;\">Centered Heading</h1>",
+      "explanation": "The heading is centered and colored navy."
+    },
+    {
+      "id": "output-001-05-004",
+      "question": "<style>\nul {\n  list-style-type: circle;\n  margin-left: 30px;\n}\n</style>\n<ul><li>Item 1</li><li>Item 2</li></ul>",
+      "output": "<ul style=\"list-style-type: circle; margin-left: 30px;\"><li>Item 1</li><li>Item 2</li></ul>",
+      "explanation": "Unordered list uses circle bullets and has left margin."
+    },
+    {
+      "id": "output-001-05-005",
+      "question": "<style>\nspan {\n  font-weight: bold;\n  color: orange;\n}\n</style>\n<span>Highlight</span>",
+      "output": "<span style=\"font-weight: bold; color: orange;\">Highlight</span>",
+      "explanation": "The span is bold and orange."
+    },
+    {
+      "id": "output-001-05-006",
+      "question": "<style>\np {\n  line-height: 2;\n  background-color: #eee;\n}\n</style>\n<p>Spacing test</p>",
+      "output": "<p style=\"line-height: 2; background-color: #eee;\">Spacing test</p>",
+      "explanation": "Paragraph has increased line height and a light gray background."
+    },
+    {
+      "id": "output-001-05-007",
+      "question": "<style>\nh2 {\n  letter-spacing: 3px;\n  color: teal;\n}\n</style>\n<h2>Wide Letters</h2>",
+      "output": "<h2 style=\"letter-spacing: 3px; color: teal;\">Wide Letters</h2>",
+      "explanation": "`letter-spacing` increases space between letters."
+    },
+    {
+      "id": "output-001-05-008",
+      "question": "<style>\nimg {\n  width: 100px;\n  border-radius: 10px;\n}\n</style>\n<img src=\"logo.png\" alt=\"Logo\">",
+      "output": "<img src=\"logo.png\" alt=\"Logo\" style=\"width: 100px; border-radius: 10px;\">",
+      "explanation": "The image is made 100px wide with rounded corners."
+    },
+    {
+      "id": "output-001-05-009",
+      "question": "<style>\nbutton {\n  background-color: green;\n  color: white;\n}\n</style>\n<button>Submit</button>",
+      "output": "<button style=\"background-color: green; color: white;\">Submit</button>",
+      "explanation": "The button has a green background and white text."
+    },
+    {
+      "id": "output-001-05-010",
+      "question": "<style>\nhr {\n  border: none;\n  height: 4px;\n  background: #555;\n}\n</style>\n<hr>",
+      "output": "<hr style=\"border: none; height: 4px; background: #555;\">",
+      "explanation": "The horizontal rule becomes a thick gray line."
+    },
+    {
+      "id": "output-001-05-011",
+      "question": "<style>\ninput[type=\"text\"] {\n  border: 2px solid orange;\n}\n</style>\n<input type=\"text\">",
+      "output": "<input type=\"text\" style=\"border: 2px solid orange;\">",
+      "explanation": "The text input gets an orange border."
+    },
+    {
+      "id": "output-001-05-012",
+      "question": "<style>\na {\n  text-decoration: none;\n  color: #009;\n}\n</style>\n<a href=\"#\">No Underline</a>",
+      "output": "<a href=\"#\" style=\"text-decoration: none; color: #009;\">No Underline</a>",
+      "explanation": "The anchor text is blue and has no underline."
+    },
+    {
+      "id": "output-001-05-013",
+      "question": "<style>\np {\n  margin-bottom: 25px;\n}\n</style>\n<p>First</p><p>Second</p>",
+      "output": "<p style=\"margin-bottom: 25px;\">First</p><p style=\"margin-bottom: 25px;\">Second</p>",
+      "explanation": "Each paragraph has a 25px space below it."
+    },
+    {
+      "id": "output-001-05-014",
+      "question": "<style>\nbody {\n  font-family: 'Courier New', monospace;\n}\n</style>\n<p>Courier font</p>",
+      "output": "<body style=\"font-family: 'Courier New', monospace;\"><p>Courier font</p></body>",
+      "explanation": "All text uses Courier New font."
+    },
+    {
+      "id": "output-001-05-015",
+      "question": "<style>\nh1 {\n  text-transform: uppercase;\n}\n</style>\n<h1>capitalize me</h1>",
+      "output": "<h1 style=\"text-transform: uppercase;\">CAPITALIZE ME</h1>",
+      "explanation": "The heading is converted to uppercase."
+    }
+  ]
+}

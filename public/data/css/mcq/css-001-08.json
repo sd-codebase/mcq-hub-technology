@@ -1,0 +1,169 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-08-001",
+      "question": "Which of the following is a valid CSS statement?",
+      "options": [
+        "`body { color: black; }`",
+        "`body color: black; {}`",
+        "`body: { color: black }`",
+        "`body = { color: black; }`"
+      ],
+      "correct_answer": 1,
+      "explanation": "The correct CSS statement uses the format `selector { property: value; }`, e.g., `body { color: black; }`."
+    },
+    {
+      "id": "mcq-001-08-002",
+      "question": "What does a CSS declaration consist of?",
+      "options": [
+        "Selector only",
+        "Property and value",
+        "Curly braces only",
+        "Semicolon and colon"
+      ],
+      "correct_answer": 2,
+      "explanation": "A CSS declaration is a property and a value separated by a colon, e.g., `color: red;`."
+    },
+    {
+      "id": "mcq-001-08-003",
+      "question": "What symbol ends each CSS declaration?",
+      "options": ["Comma `,`", "Colon `:`", "Semicolon `;`", "Period `.`"],
+      "correct_answer": 3,
+      "explanation": "A semicolon `;` is used to end each CSS declaration."
+    },
+    {
+      "id": "mcq-001-08-004",
+      "question": "How many declarations can a CSS rule contain?",
+      "options": ["Only one", "Two at most", "As many as needed", "None"],
+      "correct_answer": 3,
+      "explanation": "A CSS rule can contain as many declarations as needed, each separated by a semicolon."
+    },
+    {
+      "id": "mcq-001-08-005",
+      "question": "What is the function of a CSS selector?",
+      "options": [
+        "Defines where the rule applies",
+        "Specifies the value",
+        "Separates declarations",
+        "Comments out code"
+      ],
+      "correct_answer": 1,
+      "explanation": "A selector determines which HTML elements the rule will target."
+    },
+    {
+      "id": "mcq-001-08-006",
+      "question": "Which of the following is an example of a CSS declaration block?",
+      "options": [
+        "`{ color: red; font-size: 16px; }`",
+        "`color: red; font-size: 16px;`",
+        "`body { }`",
+        "`body color: red;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "A declaration block is a set of declarations wrapped in curly braces, e.g., `{ color: red; font-size: 16px; }`."
+    },
+    {
+      "id": "mcq-001-08-007",
+      "question": "Which of the following is NOT a valid CSS property?",
+      "options": [
+        "`margin`",
+        "`font-size`",
+        "`text-style`",
+        "`background-color`"
+      ],
+      "correct_answer": 3,
+      "explanation": "`text-style` is not a valid CSS property. Valid ones include `margin`, `font-size`, and `background-color`."
+    },
+    {
+      "id": "mcq-001-08-008",
+      "question": "What is the correct way to write multiple declarations in a rule?",
+      "options": [
+        "`p { color: red font-size: 14px }`",
+        "`p { color: red; font-size: 14px; }`",
+        "`p: color: red; font-size: 14px;`",
+        "`p color: red; font-size: 14px;`"
+      ],
+      "correct_answer": 2,
+      "explanation": "Multiple declarations are separated by semicolons within curly braces."
+    },
+    {
+      "id": "mcq-001-08-009",
+      "question": "Which of the following is an incorrect CSS statement?",
+      "options": [
+        "`h3 { color: orange; }`",
+        "`.box { width: 100px; height: 50px; }`",
+        "`#main { font-weight: bold; }`",
+        "`div color: blue;`"
+      ],
+      "correct_answer": 4,
+      "explanation": "`div color: blue;` is missing curly braces and the colon between selector and property."
+    },
+    {
+      "id": "mcq-001-08-010",
+      "question": "What is the role of the colon `:` in a CSS statement?",
+      "options": [
+        "Separates selector from declaration block",
+        "Separates property from value",
+        "Ends the statement",
+        "None of the above"
+      ],
+      "correct_answer": 2,
+      "explanation": "The colon `:` separates the property from its value, e.g., `color: red;`."
+    },
+    {
+      "id": "mcq-001-08-011",
+      "question": "What happens if you forget the semicolon after a declaration in a block with multiple declarations?",
+      "options": [
+        "Only the affected property is ignored",
+        "The rule is ignored",
+        "All declarations after the missing semicolon are ignored",
+        "Browser will show an error message"
+      ],
+      "correct_answer": 3,
+      "explanation": "If the semicolon is missing and there are more declarations after it, all subsequent declarations may be ignored."
+    },
+    {
+      "id": "mcq-001-08-012",
+      "question": "Which part of the CSS rule `p { color: red; }` is the declaration block?",
+      "options": ["`p`", "`color: red;`", "`{ color: red; }`", "`red;`"],
+      "correct_answer": 3,
+      "explanation": "The declaration block is everything inside the curly braces: `{ color: red; }`."
+    },
+    {
+      "id": "mcq-001-08-013",
+      "question": "Which is TRUE about CSS statement order?",
+      "options": [
+        "The order does not matter",
+        "Later statements can override earlier ones if they apply to the same element and property",
+        "Earlier statements always override later ones",
+        "Statements are always executed in alphabetical order"
+      ],
+      "correct_answer": 2,
+      "explanation": "If two rules apply to the same element and property, the last one wins due to the cascade."
+    },
+    {
+      "id": "mcq-001-08-014",
+      "question": "Which of the following is a complete CSS statement?",
+      "options": [
+        "`font-size: 14px;`",
+        "`p { font-size: 14px; }`",
+        "`font-size 14px`",
+        "`p font-size: 14px;`"
+      ],
+      "correct_answer": 2,
+      "explanation": "A complete CSS statement includes a selector and a declaration block, e.g., `p { font-size: 14px; }`."
+    },
+    {
+      "id": "mcq-001-08-015",
+      "question": "What are CSS statements made up of?",
+      "options": [
+        "Selectors and declaration blocks",
+        "Just properties",
+        "Only values",
+        "Only selectors"
+      ],
+      "correct_answer": 1,
+      "explanation": "A CSS statement includes a selector and a declaration block."
+    }
+  ]
+}

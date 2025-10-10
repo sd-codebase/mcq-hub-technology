@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-06-001",
+      "question": "<style>\np {\n  font-size: 24px;\n}\n</style>\n<p>Big text</p>",
+      "output": "<p style=\"font-size: 24px;\">Big text</p>",
+      "explanation": "The paragraph's font size is set to 24 pixels."
+    },
+    {
+      "id": "output-001-06-002",
+      "question": "<style>\ndiv {\n  width: 50%;\n  background: #ccc;\n}\n</style>\n<div>Half-width box</div>",
+      "output": "<div style=\"width: 50%; background: #ccc;\">Half-width box</div>",
+      "explanation": "The div will take up 50% of its parent element's width with a gray background."
+    },
+    {
+      "id": "output-001-06-003",
+      "question": "<style>\nspan {\n  font-size: 2em;\n}\n</style>\n<span>Double size</span>",
+      "output": "<span style=\"font-size: 2em;\">Double size</span>",
+      "explanation": "`2em` means the span's font size is twice the size of its parent element's font size."
+    },
+    {
+      "id": "output-001-06-004",
+      "question": "<style>\nh1 {\n  margin-top: 1.5rem;\n}\n</style>\n<h1>Heading</h1>",
+      "output": "<h1 style=\"margin-top: 1.5rem;\">Heading</h1>",
+      "explanation": "The top margin uses the root element's font size multiplied by 1.5."
+    },
+    {
+      "id": "output-001-06-005",
+      "question": "<style>\np {\n  line-height: 120%;\n}\n</style>\n<p>Spacing lines</p>",
+      "output": "<p style=\"line-height: 120%;\">Spacing lines</p>",
+      "explanation": "Line height is set to 120% of the font size, increasing the space between lines."
+    },
+    {
+      "id": "output-001-06-006",
+      "question": "<style>\n.box {\n  width: 200px;\n  height: 100px;\n  background: pink;\n}\n</style>\n<div class=\"box\"></div>",
+      "output": "<div class=\"box\" style=\"width: 200px; height: 100px; background: pink;\"></div>",
+      "explanation": "The box will be 200px wide, 100px tall, and have a pink background."
+    },
+    {
+      "id": "output-001-06-007",
+      "question": "<style>\nhr {\n  width: 75vw;\n}\n</style>\n<hr>",
+      "output": "<hr style=\"width: 75vw;\">",
+      "explanation": "The horizontal rule will be 75% of the viewport width."
+    },
+    {
+      "id": "output-001-06-008",
+      "question": "<style>\ndiv {\n  height: 50vh;\n  background: lightblue;\n}\n</style>\n<div>Tall box</div>",
+      "output": "<div style=\"height: 50vh; background: lightblue;\">Tall box</div>",
+      "explanation": "The div's height is 50% of the viewport height."
+    },
+    {
+      "id": "output-001-06-009",
+      "question": "<style>\np {\n  padding: 10px 5%;\n}\n</style>\n<p>Padding example</p>",
+      "output": "<p style=\"padding: 10px 5%;\">Padding example</p>",
+      "explanation": "Padding is 10px on top/bottom and 5% of width on left/right."
+    },
+    {
+      "id": "output-001-06-010",
+      "question": "<style>\np {\n  letter-spacing: 0.2em;\n}\n</style>\n<p>Spaced letters</p>",
+      "output": "<p style=\"letter-spacing: 0.2em;\">Spaced letters</p>",
+      "explanation": "Extra space between each letter is set to 0.2 times the font size."
+    },
+    {
+      "id": "output-001-06-011",
+      "question": "<style>\n.box {\n  min-width: 100px;\n  max-width: 300px;\n}\n</style>\n<div class=\"box\">Flexible box</div>",
+      "output": "<div class=\"box\" style=\"min-width: 100px; max-width: 300px;\">Flexible box</div>",
+      "explanation": "The box cannot be smaller than 100px or larger than 300px wide."
+    },
+    {
+      "id": "output-001-06-012",
+      "question": "<style>\np {\n  border-width: 0.5rem;\n  border-style: solid;\n}\n</style>\n<p>Border test</p>",
+      "output": "<p style=\"border-width: 0.5rem; border-style: solid;\">Border test</p>",
+      "explanation": "The border width uses rem units (relative to root font size)."
+    },
+    {
+      "id": "output-001-06-013",
+      "question": "<style>\nimg {\n  width: 80%;\n}\n</style>\n<img src=\"cat.png\" alt=\"cat\">",
+      "output": "<img src=\"cat.png\" alt=\"cat\" style=\"width: 80%;\">",
+      "explanation": "The image will be 80% as wide as its containing element."
+    },
+    {
+      "id": "output-001-06-014",
+      "question": "<style>\nh2 {\n  font-size: 1.5em;\n}\n</style>\n<h2>Responsive heading</h2>",
+      "output": "<h2 style=\"font-size: 1.5em;\">Responsive heading</h2>",
+      "explanation": "The heading's font size is 1.5 times the parent element's font size."
+    },
+    {
+      "id": "output-001-06-015",
+      "question": "<style>\ndiv {\n  margin: 0 auto;\n  width: 300px;\n}\n</style>\n<div>Centered box</div>",
+      "output": "<div style=\"margin: 0 auto; width: 300px;\">Centered box</div>",
+      "explanation": "Auto left/right margins with a fixed width centers the div horizontally."
+    }
+  ]
+}

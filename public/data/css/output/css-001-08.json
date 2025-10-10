@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-08-001",
+      "question": "<style>\np {\n  font-family: Arial, sans-serif;\n}\n</style>\n<p>Arial font</p>",
+      "output": "<p style=\"font-family: Arial, sans-serif;\">Arial font</p>",
+      "explanation": "The paragraph uses Arial or the default sans-serif font if Arial is unavailable."
+    },
+    {
+      "id": "output-001-08-002",
+      "question": "<style>\nh1 {\n  font-family: 'Times New Roman', serif;\n}\n</style>\n<h1>Times New Roman heading</h1>",
+      "output": "<h1 style=\"font-family: 'Times New Roman', serif;\">Times New Roman heading</h1>",
+      "explanation": "The heading uses Times New Roman or the default serif font."
+    },
+    {
+      "id": "output-001-08-003",
+      "question": "<style>\np {\n  font-size: 24px;\n}\n</style>\n<p>Large font</p>",
+      "output": "<p style=\"font-size: 24px;\">Large font</p>",
+      "explanation": "The font size of the paragraph is set to 24 pixels."
+    },
+    {
+      "id": "output-001-08-004",
+      "question": "<style>\nh2 {\n  font-style: italic;\n}\n</style>\n<h2>Italic heading</h2>",
+      "output": "<h2 style=\"font-style: italic;\">Italic heading</h2>",
+      "explanation": "The heading is displayed in italic font style."
+    },
+    {
+      "id": "output-001-08-005",
+      "question": "<style>\nspan {\n  font-weight: bold;\n}\n</style>\n<span>Bold text</span>",
+      "output": "<span style=\"font-weight: bold;\">Bold text</span>",
+      "explanation": "The span is displayed with bold font weight."
+    },
+    {
+      "id": "output-001-08-006",
+      "question": "<style>\np {\n  font-family: monospace;\n}\n</style>\n<p>Monospace font</p>",
+      "output": "<p style=\"font-family: monospace;\">Monospace font</p>",
+      "explanation": "The paragraph uses a monospace font."
+    },
+    {
+      "id": "output-001-08-007",
+      "question": "<style>\nh3 {\n  font-variant: small-caps;\n}\n</style>\n<h3>Small caps</h3>",
+      "output": "<h3 style=\"font-variant: small-caps;\">Small caps</h3>",
+      "explanation": "The heading is rendered with small capital letters."
+    },
+    {
+      "id": "output-001-08-008",
+      "question": "<style>\nbody {\n  font-size: 18px;\n}\n</style>\n<p>Inherited font size</p>",
+      "output": "<body style=\"font-size: 18px;\"><p>Inherited font size</p></body>",
+      "explanation": "The font size for the entire body (and its children) is set to 18px."
+    },
+    {
+      "id": "output-001-08-009",
+      "question": "<style>\np {\n  font-family: 'Courier New', Courier, monospace;\n}\n</style>\n<p>Courier New text</p>",
+      "output": "<p style=\"font-family: 'Courier New', Courier, monospace;\">Courier New text</p>",
+      "explanation": "The paragraph uses Courier New (or fallback to Courier or monospace)."
+    },
+    {
+      "id": "output-001-08-010",
+      "question": "<style>\nh4 {\n  font-weight: 700;\n}\n</style>\n<h4>Heavy heading</h4>",
+      "output": "<h4 style=\"font-weight: 700;\">Heavy heading</h4>",
+      "explanation": "The heading uses a bold font weight (700)."
+    },
+    {
+      "id": "output-001-08-011",
+      "question": "<style>\np {\n  font-style: oblique;\n}\n</style>\n<p>Oblique text</p>",
+      "output": "<p style=\"font-style: oblique;\">Oblique text</p>",
+      "explanation": "The paragraph is rendered in an oblique font style."
+    },
+    {
+      "id": "output-001-08-012",
+      "question": "<style>\nstrong {\n  font-weight: bolder;\n}\n</style>\n<strong>Stronger text</strong>",
+      "output": "<strong style=\"font-weight: bolder;\">Stronger text</strong>",
+      "explanation": "The strong element is rendered with a heavier weight than its parent."
+    },
+    {
+      "id": "output-001-08-013",
+      "question": "<style>\np {\n  font-size: 1.5em;\n}\n</style>\n<p>Em size</p>",
+      "output": "<p style=\"font-size: 1.5em;\">Em size</p>",
+      "explanation": "The paragraph's font size is 1.5 times the size of its parent element."
+    },
+    {
+      "id": "output-001-08-014",
+      "question": "<style>\nh5 {\n  font-family: Verdana, Geneva, sans-serif;\n}\n</style>\n<h5>Verdana heading</h5>",
+      "output": "<h5 style=\"font-family: Verdana, Geneva, sans-serif;\">Verdana heading</h5>",
+      "explanation": "The heading uses Verdana, Geneva, or the default sans-serif font."
+    },
+    {
+      "id": "output-001-08-015",
+      "question": "<style>\np {\n  font-weight: lighter;\n}\n</style>\n<p>Lighter text</p>",
+      "output": "<p style=\"font-weight: lighter;\">Lighter text</p>",
+      "explanation": "The paragraph text is rendered with a lighter weight than its parent."
+    }
+  ]
+}

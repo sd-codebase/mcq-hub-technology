@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Text Properties",
+  "interview_questions": [
+    {
+      "id": "interview-001-09-001",
+      "question": "What does the `text-align` property do in CSS? Provide examples of its values.",
+      "answer": "`text-align` sets the horizontal alignment of inline content inside a block element. Common values include `left`, `right`, `center`, and `justify`. Example: `p { text-align: center; }` centers text in a paragraph.",
+      "explanation": "It's commonly used for aligning text and inline elements within their parent container."
+    },
+    {
+      "id": "interview-001-09-002",
+      "question": "How can you transform all text in an element to uppercase using CSS?",
+      "answer": "Use the `text-transform` property: `text-transform: uppercase;`. Example: `h1 { text-transform: uppercase; }` will render the heading in all uppercase letters.",
+      "explanation": "`text-transform` can also be used for `lowercase` and `capitalize` effects."
+    },
+    {
+      "id": "interview-001-09-003",
+      "question": "Explain the use of `text-decoration` in CSS with examples.",
+      "answer": "`text-decoration` adds decorative lines to text, such as `underline`, `line-through`, or `overline`. Example: `a { text-decoration: underline; }` underlines links.",
+      "explanation": "It's also used to remove underlines from links or add strikethrough effects."
+    },
+    {
+      "id": "interview-001-09-004",
+      "question": "What is the difference between `letter-spacing` and `word-spacing`?",
+      "answer": "`letter-spacing` controls the space between characters, while `word-spacing` controls the space between words. Example: `h2 { letter-spacing: 2px; } p { word-spacing: 10px; }`",
+      "explanation": "Both are useful for adjusting text readability and visual style."
+    },
+    {
+      "id": "interview-001-09-005",
+      "question": "How do you create a text shadow effect in CSS?",
+      "answer": "Use the `text-shadow` property: `text-shadow: 2px 2px 5px #888;` applies a gray shadow 2px right and 2px down, blurred by 5px.",
+      "explanation": "Multiple shadows can be created by separating values with commas."
+    },
+    {
+      "id": "interview-001-09-006",
+      "question": "What does the `text-indent` property do?",
+      "answer": "`text-indent` sets the indentation of the first line of text in a block. Example: `p { text-indent: 40px; }`",
+      "explanation": "It's often used for styling paragraphs in articles or books."
+    },
+    {
+      "id": "interview-001-09-007",
+      "question": "How do you justify text in CSS?",
+      "answer": "Use the value `justify` for the `text-align` property: `p { text-align: justify; }` spreads text so lines are flush with both left and right edges.",
+      "explanation": "Justification is common in newspapers and books."
+    },
+    {
+      "id": "interview-001-09-008",
+      "question": "Explain the difference between `text-transform: capitalize` and `text-transform: uppercase`.",
+      "answer": "`capitalize` makes the first letter of each word uppercase, while `uppercase` transforms all letters to uppercase. Example: `text-transform: capitalize;` turns 'hello world' into 'Hello World'.",
+      "explanation": "Choose based on whether you want all caps or only initial capitals."
+    },
+    {
+      "id": "interview-001-09-009",
+      "question": "How can you remove underlines from links using CSS?",
+      "answer": "Set `text-decoration` to `none`: `a { text-decoration: none; }` removes the underline from anchor tags.",
+      "explanation": "This is useful for customizing link appearance."
+    },
+    {
+      "id": "interview-001-09-010",
+      "question": "What property would you use to add space between lines of text?",
+      "answer": "Use the `line-height` property. Example: `p { line-height: 1.5; }` increases the vertical space between lines.",
+      "explanation": "Improving line height enhances readability, especially for paragraphs."
+    }
+  ]
+}

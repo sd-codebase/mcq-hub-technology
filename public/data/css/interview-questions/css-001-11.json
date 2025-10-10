@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Borders",
+  "interview_questions": [
+    {
+      "id": "interview-001-11-001",
+      "question": "How do you add a solid border to an element in CSS?",
+      "answer": "Use the `border` property. Example: `div { border: 1px solid black; }` adds a 1px solid black border to divs.",
+      "explanation": "The `border` property is shorthand for setting width, style, and color."
+    },
+    {
+      "id": "interview-001-11-002",
+      "question": "How do you create a dashed border only at the top of an element?",
+      "answer": "Use `border-top`. Example: `p { border-top: 2px dashed red; }`",
+      "explanation": "CSS supports border properties for each side: top, right, bottom, left."
+    },
+    {
+      "id": "interview-001-11-003",
+      "question": "What does the `border-radius` property do in CSS?",
+      "answer": "`border-radius` rounds the corners of an element. Example: `img { border-radius: 10px; }`",
+      "explanation": "You can make circles with `border-radius: 50%` on square elements."
+    },
+    {
+      "id": "interview-001-11-004",
+      "question": "How do you set different border colors for each side of an element?",
+      "answer": "Use `border-color` with up to four values: `border-color: red green blue orange;` (top, right, bottom, left).",
+      "explanation": "Each value sets the color for one side, clockwise from the top."
+    },
+    {
+      "id": "interview-001-11-005",
+      "question": "What is the effect of `border-style: none;`?",
+      "answer": "It removes the border from the element, even if border width or color are set.",
+      "explanation": "A border is only visible if `border-style` is set to a visible style (solid, dashed, etc.)."
+    },
+    {
+      "id": "interview-001-11-006",
+      "question": "How do you create a double border on the left side of an element?",
+      "answer": "Use `border-left: 4px double blue;`.",
+      "explanation": "The double style creates two parallel lines on the specified side."
+    },
+    {
+      "id": "interview-001-11-007",
+      "question": "What is the default border style if you only specify `border-width` and `border-color`?",
+      "answer": "If `border-style` is not specified, the border is not visible; you must set a style like `solid`.",
+      "explanation": "The default style is `none`, so always include a border style."
+    },
+    {
+      "id": "interview-001-11-008",
+      "question": "How can you make a circle with a border using CSS?",
+      "answer": "Set `border-radius: 50%` and make the element square. Example: `width: 100px; height: 100px; border-radius: 50%; border: 2px solid #333;`",
+      "explanation": "A 50% border radius on a square creates a perfect circle."
+    },
+    {
+      "id": "interview-001-11-009",
+      "question": "What CSS property adds space between the border and the content of an element?",
+      "answer": "The `padding` property.",
+      "explanation": "Padding is the space between content and the border, not part of the border itself."
+    },
+    {
+      "id": "interview-001-11-010",
+      "question": "How do you remove all borders from an element?",
+      "answer": "Use `border: none;` or set all four sides to `border-top: none; border-right: none; border-bottom: none; border-left: none;`",
+      "explanation": "`border: none;` is shorthand to remove all borders at once."
+    }
+  ]
+}

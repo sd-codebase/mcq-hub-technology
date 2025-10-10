@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-11-001",
+      "question": "<style>\ndiv {\n  border: 1px solid black;\n}\n</style>\n<div>Bordered box</div>",
+      "output": "<div style=\"border: 1px solid black;\">Bordered box</div>",
+      "explanation": "The div has a solid black border of 1px thickness."
+    },
+    {
+      "id": "output-001-11-002",
+      "question": "<style>\np {\n  border-top: 3px dashed red;\n}\n</style>\n<p>Dashed top border</p>",
+      "output": "<p style=\"border-top: 3px dashed red;\">Dashed top border</p>",
+      "explanation": "Only the top of the paragraph has a 3px red dashed border."
+    },
+    {
+      "id": "output-001-11-003",
+      "question": "<style>\nspan {\n  border-bottom: 2px dotted green;\n}\n</style>\n<span>Dotted bottom</span>",
+      "output": "<span style=\"border-bottom: 2px dotted green;\">Dotted bottom</span>",
+      "explanation": "The span has a green dotted border at the bottom."
+    },
+    {
+      "id": "output-001-11-004",
+      "question": "<style>\nh2 {\n  border-left: 4px double blue;\n}\n</style>\n<h2>Double left border</h2>",
+      "output": "<h2 style=\"border-left: 4px double blue;\">Double left border</h2>",
+      "explanation": "The heading has a double blue border on the left."
+    },
+    {
+      "id": "output-001-11-005",
+      "question": "<style>\ndiv {\n  border-radius: 10px;\n  border: 2px solid #333;\n}\n</style>\n<div>Rounded corners</div>",
+      "output": "<div style=\"border-radius: 10px; border: 2px solid #333;\">Rounded corners</div>",
+      "explanation": "`border-radius` rounds the corners of the div."
+    },
+    {
+      "id": "output-001-11-006",
+      "question": "<style>\np {\n  border-width: 5px 2px 1px 4px;\n  border-style: solid;\n  border-color: red green blue orange;\n}\n</style>\n<p>Multi-border</p>",
+      "output": "<p style=\"border-width: 5px 2px 1px 4px; border-style: solid; border-color: red green blue orange;\">Multi-border</p>",
+      "explanation": "Different widths and colors for each border side."
+    },
+    {
+      "id": "output-001-11-007",
+      "question": "<style>\n.box {\n  border: none;\n}\n</style>\n<div class=\"box\">No border</div>",
+      "output": "<div class=\"box\" style=\"border: none;\">No border</div>",
+      "explanation": "No border is rendered for this div."
+    },
+    {
+      "id": "output-001-11-008",
+      "question": "<style>\nh3 {\n  border-right: 8px groove purple;\n}\n</style>\n<h3>Groove right border</h3>",
+      "output": "<h3 style=\"border-right: 8px groove purple;\">Groove right border</h3>",
+      "explanation": "The right side of the heading has a purple grooved border."
+    },
+    {
+      "id": "output-001-11-009",
+      "question": "<style>\np {\n  border-style: outset;\n  border-width: 4px;\n  border-color: teal;\n}\n</style>\n<p>Outset border</p>",
+      "output": "<p style=\"border-style: outset; border-width: 4px; border-color: teal;\">Outset border</p>",
+      "explanation": "The border appears raised using the 'outset' style."
+    },
+    {
+      "id": "output-001-11-010",
+      "question": "<style>\ndiv {\n  border: 5px solid #f0f;\n  border-radius: 50%;\n  width: 100px;\n  height: 100px;\n}\n</style>\n<div></div>",
+      "output": "<div style=\"border: 5px solid #f0f; border-radius: 50%; width: 100px; height: 100px;\"></div>",
+      "explanation": "A circular div with a thick magenta border."
+    },
+    {
+      "id": "output-001-11-011",
+      "question": "<style>\nhr {\n  border: 2px dashed #ccc;\n}\n</style>\n<hr>",
+      "output": "<hr style=\"border: 2px dashed #ccc;\">",
+      "explanation": "The horizontal rule uses a light gray dashed border."
+    },
+    {
+      "id": "output-001-11-012",
+      "question": "<style>\nspan {\n  border-bottom: thick solid #008000;\n}\n</style>\n<span>Thick green underline</span>",
+      "output": "<span style=\"border-bottom: thick solid #008000;\">Thick green underline</span>",
+      "explanation": "The span has a thick solid green border at the bottom."
+    },
+    {
+      "id": "output-001-11-013",
+      "question": "<style>\nh4 {\n  border: 2px inset #999;\n}\n</style>\n<h4>Inset border</h4>",
+      "output": "<h4 style=\"border: 2px inset #999;\">Inset border</h4>",
+      "explanation": "The border appears sunken using the 'inset' style."
+    },
+    {
+      "id": "output-001-11-014",
+      "question": "<style>\np {\n  border-style: dotted dashed solid double;\n  border-width: 2px 4px 6px 8px;\n}\n</style>\n<p>Mixed borders</p>",
+      "output": "<p style=\"border-style: dotted dashed solid double; border-width: 2px 4px 6px 8px;\">Mixed borders</p>",
+      "explanation": "Each side of the border has a different style and width."
+    },
+    {
+      "id": "output-001-11-015",
+      "question": "<style>\ndiv {\n  border-radius: 20px 0 20px 0;\n  border: 2px solid #09c;\n}\n</style>\n<div>Diagonal corners</div>",
+      "output": "<div style=\"border-radius: 20px 0 20px 0; border: 2px solid #09c;\">Diagonal corners</div>",
+      "explanation": "The div has rounded corners only on the top-left and bottom-right."
+    }
+  ]
+}

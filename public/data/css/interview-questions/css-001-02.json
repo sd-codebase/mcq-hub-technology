@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Syntax",
+  "interview_questions": [
+    {
+      "id": "interview-001-02-001",
+      "question": "Describe the structure of a CSS rule and provide an example.",
+      "answer": "A CSS rule consists of a selector and a declaration block. The selector specifies which HTML elements the rule applies to, and the declaration block contains one or more property-value pairs enclosed in curly braces. Example:\n```css\np {\n  color: blue;\n  font-size: 16px;\n}\n```",
+      "explanation": "Understanding the syntax is fundamental for writing valid and effective CSS."
+    },
+    {
+      "id": "interview-001-02-002",
+      "question": "What is the purpose of the semicolon in CSS syntax?",
+      "answer": "A semicolon separates each property-value pair within a declaration block. It indicates the end of one declaration and allows another to follow.",
+      "explanation": "While the last declaration in a block can omit the semicolon, including it prevents errors when adding new declarations."
+    },
+    {
+      "id": "interview-001-02-003",
+      "question": "How do you write a comment in CSS?",
+      "answer": "CSS comments are written using `/* comment text */`. They can span multiple lines and are ignored by browsers.",
+      "explanation": "Comments help document code and can be used to temporarily disable lines without deleting them."
+    },
+    {
+      "id": "interview-001-02-004",
+      "question": "What happens if you forget a curly brace or semicolon in a CSS rule?",
+      "answer": "Forgetting a curly brace or semicolon will usually cause the browser to ignore the rule or the rest of the declaration block, leading to unexpected or missing styles.",
+      "explanation": "Proper syntax is crucial for styles to be interpreted correctly."
+    },
+    {
+      "id": "interview-001-02-005",
+      "question": "Is white space (spaces, tabs, new lines) important in CSS syntax?",
+      "answer": "White space is ignored by CSS, so it can be used freely to improve readability. However, it cannot be used inside property names or values.",
+      "explanation": "Use white space and indentation to make CSS code more readable."
+    },
+    {
+      "id": "interview-001-02-006",
+      "question": "Can you combine multiple selectors in a single CSS rule? How?",
+      "answer": "Yes, multiple selectors can be combined using a comma. For example:\n```css\nh1, h2, h3 {\n  color: red;\n}\n```",
+      "explanation": "This allows the same styles to be applied to several elements at once."
+    },
+    {
+      "id": "interview-001-02-007",
+      "question": "How do you write a CSS rule that only applies to elements with a certain class?",
+      "answer": "Use the dot (`.`) notation followed by the class name as the selector:\n```css\n.my-class {\n  color: green;\n}\n```",
+      "explanation": "Class selectors target any element with the specified class attribute."
+    },
+    {
+      "id": "interview-001-02-008",
+      "question": "How do you target an element with a specific id in CSS?",
+      "answer": "Use the hash (`#`) symbol followed by the id name as the selector:\n```css\n#header {\n  background: gray;\n}\n```",
+      "explanation": "ID selectors are unique and should only be used once per page."
+    },
+    {
+      "id": "interview-001-02-009",
+      "question": "What is the effect of omitting the unit from a value in CSS (e.g., `width: 10;`)?",
+      "answer": "If you omit the unit from a value that requires one, the property is invalid and will be ignored by the browser.",
+      "explanation": "Always include appropriate units (px, em, %, etc.) for values that require them."
+    },
+    {
+      "id": "interview-001-02-010",
+      "question": "Are CSS property names case sensitive?",
+      "answer": "No, CSS property names are not case sensitive. For example, `color`, `Color`, and `COLOR` are treated the same.",
+      "explanation": "Best practice is to use lowercase for consistency and readability."
+    }
+  ]
+}

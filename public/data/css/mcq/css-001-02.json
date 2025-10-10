@@ -1,0 +1,144 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-02-001",
+      "question": "Which of the following is the correct structure of a CSS rule?",
+      "options": [
+        "`selector { property: value; }`",
+        "`property: value { selector; }`",
+        "`selector: { property = value; }`",
+        "`selector (property: value;)`"
+      ],
+      "correct_answer": 1,
+      "explanation": "A CSS rule consists of a selector followed by curly braces containing property-value pairs, e.g., `h1 { color: blue; }`."
+    },
+    {
+      "id": "mcq-001-02-002",
+      "question": "Which part of the following CSS rule is the property?\n\n```css\np { font-size: 16px; }\n```",
+      "options": ["`p`", "`font-size`", "`16px`", "`{}`"],
+      "correct_answer": 2,
+      "explanation": "In the rule `p { font-size: 16px; }`, `font-size` is the property being set."
+    },
+    {
+      "id": "mcq-001-02-003",
+      "question": "Which of the following is a valid CSS value for the `color` property?",
+      "options": ["`#ff0000`", "`red`", "`rgb(255, 0, 0)`", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "CSS supports multiple value formats for colors, including named colors, hex codes, and RGB notation."
+    },
+    {
+      "id": "mcq-001-02-004",
+      "question": "What does a CSS selector do?",
+      "options": [
+        "Specifies which HTML elements the rule applies to",
+        "Defines the color of text",
+        "Creates a new HTML element",
+        "Links an external stylesheet"
+      ],
+      "correct_answer": 1,
+      "explanation": "Selectors are used to target specific HTML elements for styling."
+    },
+    {
+      "id": "mcq-001-02-005",
+      "question": "What is the correct separator between multiple CSS declarations in a rule?",
+      "options": ["Comma `,`", "Colon `:`", "Semicolon `;`", "Space"],
+      "correct_answer": 3,
+      "explanation": "Each CSS declaration within a rule must end with a semicolon."
+    },
+    {
+      "id": "mcq-001-02-006",
+      "question": "Which of the following is a valid CSS selector?",
+      "options": ["`h1`", "`.menu`", "`#header`", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "Type selectors, class selectors, and ID selectors are all valid in CSS."
+    },
+    {
+      "id": "mcq-001-02-007",
+      "question": "What will happen if you leave out the curly braces `{}` in a CSS rule?",
+      "options": [
+        "The CSS will work as normal",
+        "The rule will be ignored",
+        "Browsers will apply the rule to all elements",
+        "An error message is shown to the user"
+      ],
+      "correct_answer": 2,
+      "explanation": "CSS rules without curly braces are invalid and will be ignored by the browser."
+    },
+    {
+      "id": "mcq-001-02-008",
+      "question": "In the rule `a { text-decoration: none; color: black; }`, which is the selector?",
+      "options": ["`a`", "`text-decoration`", "`color`", "`none`"],
+      "correct_answer": 1,
+      "explanation": "The selector is `a`, which targets all anchor (`<a>`) elements."
+    },
+    {
+      "id": "mcq-001-02-009",
+      "question": "Which is the correct way to apply multiple styles to a single selector?",
+      "options": [
+        "`h1 { color: red } h1 { font-size: 20px }`",
+        "`h1 { color: red, font-size: 20px }`",
+        "`h1 { color: red; font-size: 20px; }`",
+        "`h1 { color = red; font-size = 20px; }`"
+      ],
+      "correct_answer": 3,
+      "explanation": "Multiple declarations are separated by semicolons within a single set of curly braces."
+    },
+    {
+      "id": "mcq-001-02-010",
+      "question": "What is a value in a CSS declaration?",
+      "options": [
+        "The HTML element name",
+        "The style setting for a property",
+        "A class or ID name",
+        "A CSS comment"
+      ],
+      "correct_answer": 2,
+      "explanation": "The value is the specific setting assigned to a property, e.g., `red` in `color: red;`."
+    },
+    {
+      "id": "mcq-001-02-011",
+      "question": "Given the CSS rule:\n```css\nh2 { background-color: yellow; }\n```\nWhat does `yellow` represent?",
+      "options": ["Selector", "Property", "Value", "Declaration"],
+      "correct_answer": 3,
+      "explanation": "`yellow` is the value assigned to the `background-color` property."
+    },
+    {
+      "id": "mcq-001-02-012",
+      "question": "What is the proper way to separate a property and value in CSS?",
+      "options": ["Equal sign `=`", "Colon `:`", "Semicolon `;`", "Comma `,`"],
+      "correct_answer": 2,
+      "explanation": "A colon separates property and value, e.g., `color: red;`."
+    },
+    {
+      "id": "mcq-001-02-013",
+      "question": "Which of these is NOT a valid CSS property?",
+      "options": ["margin", "background-color", "font-style", "font-shape"],
+      "correct_answer": 4,
+      "explanation": "`font-shape` is not a valid CSS property."
+    },
+    {
+      "id": "mcq-001-02-014",
+      "question": "What is the meaning of this CSS rule: `* { margin: 0; padding: 0; }`?",
+      "options": [
+        "Applies styles to all elements",
+        "Applies styles only to paragraphs",
+        "Applies styles to elements with class `*`",
+        "No effect"
+      ],
+      "correct_answer": 1,
+      "explanation": "The universal selector `*` applies the rule to all elements."
+    },
+    {
+      "id": "mcq-001-02-015",
+      "question": "What is the result of this CSS rule? \n```css\nh1 { color: green }\n```",
+      "options": [
+        "All h1 elements will be green",
+        "Only the first h1 is green",
+        "All text is green",
+        "No effect"
+      ],
+      "correct_answer": 1,
+      "explanation": "`h1 { color: green; }` makes all `<h1>` elements display green text."
+    }
+  ]
+}

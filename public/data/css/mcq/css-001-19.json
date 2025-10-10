@@ -1,0 +1,184 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-19-001",
+      "question": "What is the primary benefit of CSS code formatting and organization?",
+      "options": [
+        "It changes how browsers render your site",
+        "It makes CSS easier to read and maintain",
+        "It speeds up the browser's rendering",
+        "It increases file size"
+      ],
+      "correct_answer": 2,
+      "explanation": "Proper formatting and organization make CSS much easier to read, debug, and maintain, especially in larger projects."
+    },
+    {
+      "id": "mcq-001-19-002",
+      "question": "Which is a recommended practice for organizing CSS code?",
+      "options": [
+        "Group related rules together",
+        "Write all CSS in a single line",
+        "Avoid using comments",
+        "Duplicate rules for each selector"
+      ],
+      "correct_answer": 1,
+      "explanation": "Grouping related rules improves maintainability and readability."
+    },
+    {
+      "id": "mcq-001-19-003",
+      "question": "What is a common convention for naming CSS classes?",
+      "options": [
+        "Using meaningful, descriptive names",
+        "Random letters and numbers",
+        "Using only numbers",
+        "Uppercase only"
+      ],
+      "correct_answer": 1,
+      "explanation": "Using descriptive class names makes it easier to understand the purpose of each rule."
+    },
+    {
+      "id": "mcq-001-19-004",
+      "question": "Which CSS code organization technique is widely used for large projects?",
+      "options": [
+        "Writing all CSS in one file",
+        "Splitting CSS into multiple modular files",
+        "Avoiding comments",
+        "Using only inline styles"
+      ],
+      "correct_answer": 2,
+      "explanation": "Splitting CSS into modular files (like components or sections) helps manage complexity in large projects."
+    },
+    {
+      "id": "mcq-001-19-005",
+      "question": "What is the BEM naming convention in CSS?",
+      "options": [
+        "Browser Embedded Module",
+        "Block Element Modifier",
+        "Basic Element Model",
+        "Box Element Margin"
+      ],
+      "correct_answer": 2,
+      "explanation": "BEM stands for Block Element Modifier, a methodology for naming classes to make CSS more structured."
+    },
+    {
+      "id": "mcq-001-19-006",
+      "question": "Why is it helpful to use comments in CSS?",
+      "options": [
+        "To explain the purpose of code sections",
+        "To change how CSS works",
+        "To slow down site loading",
+        "To add extra selectors"
+      ],
+      "correct_answer": 1,
+      "explanation": "Comments document code, making it easier for you and others to understand and update later."
+    },
+    {
+      "id": "mcq-001-19-007",
+      "question": "Where should you place your CSS custom properties (variables) for best organization?",
+      "options": [
+        "Inside each rule",
+        "At the top of the stylesheet, often in `:root`",
+        "At the bottom of the file",
+        "Only in inline styles"
+      ],
+      "correct_answer": 2,
+      "explanation": "Placing variables at the top (often in `:root`) makes them accessible and easy to manage."
+    },
+    {
+      "id": "mcq-001-19-008",
+      "question": "Which is NOT a recommended method for CSS organization?",
+      "options": [
+        "Alphabetizing properties within rules",
+        "Grouping related selectors",
+        "Using consistent indentation",
+        "Mixing unrelated styles in one rule"
+      ],
+      "correct_answer": 4,
+      "explanation": "Mixing unrelated styles makes code confusing and harder to maintain."
+    },
+    {
+      "id": "mcq-001-19-009",
+      "question": "What is a CSS preprocessor?",
+      "options": [
+        "A browser plugin",
+        "A tool that adds features like variables and nesting to CSS",
+        "A minifier",
+        "A CSS validator"
+      ],
+      "correct_answer": 2,
+      "explanation": "CSS preprocessors (like Sass or LESS) add advanced features to CSS for organization and maintainability."
+    },
+    {
+      "id": "mcq-001-19-010",
+      "question": "When using a CSS preprocessor, how should you organize your partial files?",
+      "options": [
+        "By feature or component",
+        "By color only",
+        "All in one partial",
+        "With random names"
+      ],
+      "correct_answer": 1,
+      "explanation": "Organizing partials by feature or component keeps code modular and easier to manage."
+    },
+    {
+      "id": "mcq-001-19-011",
+      "question": "What is the purpose of a CSS linter?",
+      "options": [
+        "To minify code",
+        "To check code for errors and enforce style rules",
+        "To run CSS in the browser",
+        "To format HTML"
+      ],
+      "correct_answer": 2,
+      "explanation": "Linters help catch errors and enforce consistent code style."
+    },
+    {
+      "id": "mcq-001-19-012",
+      "question": "Which of the following helps avoid conflicts in large CSS codebases?",
+      "options": [
+        "Using global selectors only",
+        "Using a naming convention like BEM",
+        "Writing no comments",
+        "Minifying CSS"
+      ],
+      "correct_answer": 2,
+      "explanation": "Naming conventions like BEM help avoid selector conflicts and clarify code structure."
+    },
+    {
+      "id": "mcq-001-19-013",
+      "question": "Which is a benefit of alphabetizing CSS properties in a rule?",
+      "options": [
+        "Faster rendering",
+        "Easier to scan and avoid duplicates",
+        "Reduces CSS file size",
+        "Improves animations"
+      ],
+      "correct_answer": 2,
+      "explanation": "Alphabetizing makes properties easier to find and avoids accidental duplicates."
+    },
+    {
+      "id": "mcq-001-19-014",
+      "question": "What is a 'partial' in the context of CSS preprocessors?",
+      "options": [
+        "A comment",
+        "A small CSS file included into larger files",
+        "An invalid CSS file",
+        "A minified CSS file"
+      ],
+      "correct_answer": 2,
+      "explanation": "Partials are small, focused files that are imported into main stylesheets in preprocessors."
+    },
+    {
+      "id": "mcq-001-19-015",
+      "question": "Which of the following is a best practice for large CSS projects?",
+      "options": [
+        "Write all code in one file",
+        "Avoid naming conventions",
+        "Modularize and document your code",
+        "Never use comments"
+      ],
+      "correct_answer": 3,
+      "explanation": "Modular and well-documented code is crucial for maintainability in large projects."
+    }
+  ]
+}

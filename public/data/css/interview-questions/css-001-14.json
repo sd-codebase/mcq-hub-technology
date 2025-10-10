@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Box Model",
+  "interview_questions": [
+    {
+      "id": "interview-001-14-001",
+      "question": "What are the four main components of the CSS box model?",
+      "answer": "The four main components are: Content, Padding, Border, and Margin. Content is the innermost part containing text or images. Padding surrounds the content. Border wraps the padding. Margin is the outermost space between the border and other elements.",
+      "explanation": "Understanding the box model is essential for controlling spacing and layout of elements."
+    },
+    {
+      "id": "interview-001-14-002",
+      "question": "How does `box-sizing: border-box;` affect the box model?",
+      "answer": "`box-sizing: border-box;` makes the element's width and height include its padding and border, not just the content. This simplifies sizing elements.",
+      "explanation": "It prevents elements from becoming larger than expected when padding or borders are added."
+    },
+    {
+      "id": "interview-001-14-003",
+      "question": "What is the difference between `content-box` and `border-box` values of `box-sizing`?",
+      "answer": "`content-box` (default) means width/height apply only to content, so padding and border are added outside. `border-box` makes width/height include content, padding, and border.",
+      "explanation": "`border-box` makes layouts easier to manage, while `content-box` can lead to unexpected sizing."
+    },
+    {
+      "id": "interview-001-14-004",
+      "question": "How can you create extra space inside an element, between its content and border?",
+      "answer": "Use the `padding` property. For example, `padding: 10px;` adds 10px of space inside the border around the content.",
+      "explanation": "Padding increases the space inside the box, helping with readability and layout."
+    },
+    {
+      "id": "interview-001-14-005",
+      "question": "How can you add space outside an element, separating it from other elements?",
+      "answer": "Use the `margin` property. For example, `margin: 20px;` adds 20px of space outside the border.",
+      "explanation": "Margins create spacing between elements, helping with layout and alignment."
+    },
+    {
+      "id": "interview-001-14-006",
+      "question": "If a box has `width: 200px; padding: 10px; border: 2px solid; margin: 5px;`, what is its total rendered width (with default `box-sizing`)?",
+      "answer": "The total width is 200px (content) + 10px*2 (padding left/right) + 2px*2 (border left/right) = 224px. Margin adds space outside, so total space including margin is 224px + 5px*2 = 234px.",
+      "explanation": "With `box-sizing: content-box`, padding and border are added to width. Margin is always outside."
+    },
+    {
+      "id": "interview-001-14-007",
+      "question": "Does margin affect the size of an element’s box?",
+      "answer": "No, margin does not affect the size of the element’s box. It only affects the spacing outside the box.",
+      "explanation": "Margins create separation between elements, but do not change the element’s actual width or height."
+    },
+    {
+      "id": "interview-001-14-008",
+      "question": "What happens if you set `overflow: hidden;` on a box with content that is bigger than the box?",
+      "answer": "Any content that exceeds the box's boundaries will be clipped and hidden from view.",
+      "explanation": "This is useful for containing floating elements or preventing scrollbars."
+    },
+    {
+      "id": "interview-001-14-009",
+      "question": "How can you visually debug the box model in the browser?",
+      "answer": "Use browser developer tools (e.g., Chrome DevTools) to inspect elements. The computed styles panel shows the box model with content, padding, border, and margin.",
+      "explanation": "This helps identify layout bugs and understand how styles are applied."
+    },
+    {
+      "id": "interview-001-14-010",
+      "question": "How do inline and block elements differ in terms of the box model?",
+      "answer": "Block elements respect width, height, margin, and padding on all sides. Inline elements ignore width/height, only apply horizontal padding/margin, and do not start on a new line.",
+      "explanation": "Understanding this distinction helps with layout and spacing decisions."
+    }
+  ]
+}

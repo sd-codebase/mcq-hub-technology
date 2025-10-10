@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Overflow",
+  "interview_questions": [
+    {
+      "id": "interview-001-17-001",
+      "question": "What is the purpose of the `overflow` property in CSS?",
+      "answer": "The `overflow` property controls what happens to content that exceeds the size of its container. It can clip the content, show scrollbars, or let the content spill outside the box.",
+      "explanation": "Proper use of `overflow` prevents layout issues and can improve usability by providing scrollbars when needed."
+    },
+    {
+      "id": "interview-001-17-002",
+      "question": "Describe the difference between `overflow: hidden`, `overflow: scroll`, and `overflow: auto`.",
+      "answer": "`hidden` clips any overflow and hides it; `scroll` always shows scrollbars, even if not needed; `auto` adds scrollbars only when content overflows.",
+      "explanation": "Choose the value based on whether you want to hide, always show, or conditionally show scrollbars."
+    },
+    {
+      "id": "interview-001-17-003",
+      "question": "How can you enable only horizontal or vertical scrolling on an element?",
+      "answer": "Use `overflow-x` for horizontal and `overflow-y` for vertical scrolling. Example: `overflow-x: auto; overflow-y: hidden;` allows only horizontal scrolling.",
+      "explanation": "This is useful for tables, code blocks, or any content that may overflow in only one direction."
+    },
+    {
+      "id": "interview-001-17-004",
+      "question": "What does `overflow: visible` do?",
+      "answer": "`overflow: visible` allows overflowing content to spill outside the element’s box. This is the default value.",
+      "explanation": "It’s useful for dropdowns or tooltips but can cause layout issues if not managed."
+    },
+    {
+      "id": "interview-001-17-005",
+      "question": "What is the use of `overflow: clip` and how does it differ from `overflow: hidden`?",
+      "answer": "`overflow: clip` simply cuts off content that exceeds the box, without providing scrollbars. `hidden` also hides overflow, but scrollbars may be generated for accessibility tools.",
+      "explanation": "Use `clip` for strict clipping when scrollbars are not needed at all."
+    },
+    {
+      "id": "interview-001-17-006",
+      "question": "How can you create a scrolling container for code or preformatted text?",
+      "answer": "Set a fixed height or width and use `overflow: auto;` or `overflow: scroll;`. Example: `pre { max-height: 200px; overflow: auto; }`",
+      "explanation": "This allows users to scroll through long content without breaking layout."
+    },
+    {
+      "id": "interview-001-17-007",
+      "question": "What is the effect of `overflow: hidden;` on positioned child elements?",
+      "answer": "Any part of the positioned child that goes outside the parent with `overflow: hidden;` will be clipped and not visible.",
+      "explanation": "This is often used to contain floated or absolutely positioned elements."
+    },
+    {
+      "id": "interview-001-17-008",
+      "question": "Can you animate the `overflow` property? Why or why not?",
+      "answer": "No, the `overflow` property itself is not animatable. However, you can animate size (height/width) or scroll position to achieve similar effects.",
+      "explanation": "To create sliding or revealing effects, animate the size and use overflow to control visibility."
+    },
+    {
+      "id": "interview-001-17-009",
+      "question": "How does `overflow: auto;` behave if the content fits inside the box?",
+      "answer": "If the content fits, no scrollbars are shown. Scrollbars appear only if the content overflows.",
+      "explanation": "This creates a cleaner appearance, adding scrollbars only when necessary."
+    },
+    {
+      "id": "interview-001-17-010",
+      "question": "What is the difference between `overflow-x` and `overflow-y`?",
+      "answer": "`overflow-x` controls overflow in the horizontal direction, while `overflow-y` controls vertical overflow. Each can be set independently.",
+      "explanation": "This allows for fine control of scrolling and clipping behavior on each axis."
+    }
+  ]
+}

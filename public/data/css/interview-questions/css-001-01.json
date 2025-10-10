@@ -1,0 +1,65 @@
+{
+  "subtopic": "Introduction to CSS",
+  "interview_questions": [
+    {
+      "id": "interview-001-01-001",
+      "question": "What is CSS and why is it used in web development?",
+      "answer": "CSS stands for Cascading Style Sheets. It is a style sheet language used for describing the presentation of a document written in HTML or XML. CSS defines how elements should be displayed on screen, paper, or in other media, allowing you to separate content from design.",
+      "explanation": "CSS is crucial for web development as it enables developers to control the look and feel of web pages, leading to better user experiences and easier maintenance."
+    },
+    {
+      "id": "interview-001-01-002",
+      "question": "How does CSS relate to HTML?",
+      "answer": "CSS and HTML are complementary: HTML provides the structure and content of a webpage, while CSS controls its layout, colors, fonts, and other visual aspects. CSS can be embedded in HTML files or linked from external files.",
+      "explanation": "Using CSS with HTML promotes separation of concerns, making code easier to manage and update."
+    },
+    {
+      "id": "interview-001-01-003",
+      "question": "What does 'Cascading' mean in CSS?",
+      "answer": "'Cascading' refers to the way CSS applies rules based on specificity, inheritance, and source order. If multiple rules match an element, CSS determines which one to apply using the cascade algorithm.",
+      "explanation": "The cascade allows developers to write flexible, layered styles and resolve conflicts predictably."
+    },
+    {
+      "id": "interview-001-01-004",
+      "question": "List three ways to apply CSS to an HTML document.",
+      "answer": "1. Inline styles (using the style attribute on elements)\n2. Internal styles (using a <style> block in the HTML head)\n3. External styles (linking a .css file with <link> in the HTML head)",
+      "explanation": "Each method suits different scenarios. External is preferred for maintainability."
+    },
+    {
+      "id": "interview-001-01-005",
+      "question": "What is the main advantage of using an external CSS file?",
+      "answer": "External CSS files allow you to write styles in a single location and apply them to multiple web pages, making site-wide updates easy and promoting code reuse.",
+      "explanation": "This reduces duplication and helps maintain consistency across a website."
+    },
+    {
+      "id": "interview-001-01-006",
+      "question": "Describe the basic structure of a CSS rule.",
+      "answer": "A CSS rule consists of a selector and a declaration block: `selector { property: value; }`. The selector targets the HTML element(s), and the declaration block defines one or more property-value pairs.",
+      "explanation": "Understanding this structure is foundational to writing and reading CSS."
+    },
+    {
+      "id": "interview-001-01-007",
+      "question": "What is a selector in CSS?",
+      "answer": "A selector is a pattern used to select the HTML elements you want to style. Examples include element selectors (`p`), class selectors (`.class`), and id selectors (`#id`).",
+      "explanation": "Selectors control which elements a CSS rule affects."
+    },
+    {
+      "id": "interview-001-01-008",
+      "question": "How does CSS improve website accessibility?",
+      "answer": "CSS enables better color contrast, font resizing, and layout adjustments, all of which help make web content more accessible to people with disabilities.",
+      "explanation": "Accessibility is a key aspect of modern web design, and CSS provides tools to support it."
+    },
+    {
+      "id": "interview-001-01-009",
+      "question": "Can you write CSS without HTML? Why or why not?",
+      "answer": "CSS alone has no effect without HTML (or XML) because it needs elements to style. CSS must be used in conjunction with markup languages.",
+      "explanation": "CSS is a presentation language, not a markup or programming language."
+    },
+    {
+      "id": "interview-001-01-010",
+      "question": "What is browser default styling and how does CSS interact with it?",
+      "answer": "Browsers apply default styles (user agent stylesheets) to HTML elements. CSS overrides these defaults, allowing developers to customize the appearance as needed.",
+      "explanation": "Understanding defaults is important for effective CSS resets and custom styling."
+    }
+  ]
+}

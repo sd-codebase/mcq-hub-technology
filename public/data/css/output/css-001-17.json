@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-17-001",
+      "question": "<style>\ndiv {\n  width: 100px;\n  height: 50px;\n  overflow: hidden;\n  background: #eee;\n}\n</style>\n<div>This is a long text that will be clipped.</div>",
+      "output": "<div style=\"width: 100px; height: 50px; overflow: hidden; background: #eee;\">This is a long text that will be clipped.</div>",
+      "explanation": "The text that doesn't fit inside the box is not visible due to `overflow: hidden`."
+    },
+    {
+      "id": "output-001-17-002",
+      "question": "<style>\ndiv {\n  width: 120px;\n  height: 40px;\n  overflow: scroll;\n  background: #fafafa;\n}\n</style>\n<div>Scroll to see more content in this div.</div>",
+      "output": "<div style=\"width: 120px; height: 40px; overflow: scroll; background: #fafafa;\">Scroll to see more content in this div.</div>",
+      "explanation": "Scrollbars are always visible, even if not needed."
+    },
+    {
+      "id": "output-001-17-003",
+      "question": "<style>\ndiv {\n  width: 80px;\n  height: 30px;\n  overflow: auto;\n  background: #cfc;\n}\n</style>\n<div>Auto overflow example.</div>",
+      "output": "<div style=\"width: 80px; height: 30px; overflow: auto; background: #cfc;\">Auto overflow example.</div>",
+      "explanation": "Scrollbars show up only if the content overflows the box."
+    },
+    {
+      "id": "output-001-17-004",
+      "question": "<style>\ndiv {\n  width: 90px;\n  height: 30px;\n  overflow: visible;\n  background: #eef;\n}\n</style>\n<div>Some overflowing text here.</div>",
+      "output": "<div style=\"width: 90px; height: 30px; overflow: visible; background: #eef;\">Some overflowing text here.</div>",
+      "explanation": "Overflowing content is visible outside the box. No clipping or scrollbars."
+    },
+    {
+      "id": "output-001-17-005",
+      "question": "<style>\ndiv {\n  width: 100px;\n  height: 50px;\n  overflow-x: scroll;\n  overflow-y: hidden;\n  background: #fee;\n}\n</style>\n<div>This text is very long horizontally but not tall.</div>",
+      "output": "<div style=\"width: 100px; height: 50px; overflow-x: scroll; overflow-y: hidden; background: #fee;\">This text is very long horizontally but not tall.</div>",
+      "explanation": "Horizontal scrolling is enabled, vertical overflow is hidden."
+    },
+    {
+      "id": "output-001-17-006",
+      "question": "<style>\ndiv {\n  width: 60px;\n  height: 60px;\n  overflow-y: scroll;\n  background: #ffc;\n}\n</style>\n<div>Line1<br>Line2<br>Line3<br>Line4</div>",
+      "output": "<div style=\"width: 60px; height: 60px; overflow-y: scroll; background: #ffc;\">Line1<br>Line2<br>Line3<br>Line4</div>",
+      "explanation": "Vertical scrollbar appears due to vertical overflow."
+    },
+    {
+      "id": "output-001-17-007",
+      "question": "<style>\ndiv {\n  width: 100px;\n  height: 30px;\n  overflow: clip;\n  background: #ddf;\n}\n</style>\n<div>This content will be clipped.</div>",
+      "output": "<div style=\"width: 100px; height: 30px; overflow: clip; background: #ddf;\">This content will be clipped.</div>",
+      "explanation": "`overflow: clip` behaves like `hidden` but does not add scrollbars even if content is cut off."
+    },
+    {
+      "id": "output-001-17-008",
+      "question": "<style>\ndiv {\n  width: 80px;\n  height: 20px;\n  overflow-x: auto;\n  overflow-y: visible;\n  background: #efe;\n}\n</style>\n<div>This is a wide text for x-overflow.</div>",
+      "output": "<div style=\"width: 80px; height: 20px; overflow-x: auto; overflow-y: visible; background: #efe;\">This is a wide text for x-overflow.</div>",
+      "explanation": "Horizontal scroll appears if text is too wide, but vertical overflow is visible."
+    },
+    {
+      "id": "output-001-17-009",
+      "question": "<style>\ndiv {\n  width: 100px;\n  height: 40px;\n  overflow: scroll;\n  background: #fef;\n}\n</style>\n<div style=\"white-space: nowrap;\">Long single line that causes horizontal scroll.</div>",
+      "output": "<div style=\"width: 100px; height: 40px; overflow: scroll; background: #fef; white-space: nowrap;\">Long single line that causes horizontal scroll.</div>",
+      "explanation": "Long single-line text causes a horizontal scrollbar due to `white-space: nowrap`."
+    },
+    {
+      "id": "output-001-17-010",
+      "question": "<style>\ndiv {\n  width: 90px;\n  height: 20px;\n  overflow: auto;\n  background: #eef;\n}\n</style>\n<div>Short</div>",
+      "output": "<div style=\"width: 90px; height: 20px; overflow: auto; background: #eef;\">Short</div>",
+      "explanation": "No scrollbars appear if content fits; scrollbars are only added if needed."
+    },
+    {
+      "id": "output-001-17-011",
+      "question": "<style>\ndiv {\n  width: 100px;\n  height: 40px;\n  overflow: hidden;\n  background: #cfc;\n}\n</style>\n<div>Visible<br>Hidden</div>",
+      "output": "<div style=\"width: 100px; height: 40px; overflow: hidden; background: #cfc;\">Visible<br>Hidden</div>",
+      "explanation": "If the combined height exceeds 40px, any extra content is hidden."
+    },
+    {
+      "id": "output-001-17-012",
+      "question": "<style>\ndiv {\n  width: 120px;\n  height: 60px;\n  overflow: visible;\n  background: #fdf;\n}\n</style>\n<div>A lot of visible overflowing content that will spill outside.</div>",
+      "output": "<div style=\"width: 120px; height: 60px; overflow: visible; background: #fdf;\">A lot of visible overflowing content that will spill outside.</div>",
+      "explanation": "Overflowing content is visible outside the box."
+    },
+    {
+      "id": "output-001-17-013",
+      "question": "<style>\ndiv {\n  width: 60px;\n  height: 60px;\n  overflow-y: auto;\n  background: #ffd;\n}\n</style>\n<div>One<br>Two<br>Three<br>Four</div>",
+      "output": "<div style=\"width: 60px; height: 60px; overflow-y: auto; background: #ffd;\">One<br>Two<br>Three<br>Four</div>",
+      "explanation": "Vertical scrollbar appears only if the content overflows vertically."
+    },
+    {
+      "id": "output-001-17-014",
+      "question": "<style>\ndiv {\n  width: 70px;\n  height: 30px;\n  overflow: hidden;\n  background: #eed;\n}\n</style>\n<div>Hidden overflow</div>",
+      "output": "<div style=\"width: 70px; height: 30px; overflow: hidden; background: #eed;\">Hidden overflow</div>",
+      "explanation": "Any text that exceeds the box's bounds is not displayed."
+    },
+    {
+      "id": "output-001-17-015",
+      "question": "<style>\ndiv {\n  width: 90px;\n  height: 50px;\n  overflow-x: scroll;\n  overflow-y: auto;\n  background: #fdd;\n}\n</style>\n<div>A really long line that will trigger horizontal scroll and possibly vertical scroll as well.</div>",
+      "output": "<div style=\"width: 90px; height: 50px; overflow-x: scroll; overflow-y: auto; background: #fdd;\">A really long line that will trigger horizontal scroll and possibly vertical scroll as well.</div>",
+      "explanation": "Horizontal scrollbar is always visible; vertical appears if content is too tall."
+    }
+  ]
+}

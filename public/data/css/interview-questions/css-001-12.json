@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Margin and Padding",
+  "interview_questions": [
+    {
+      "id": "interview-001-12-001",
+      "question": "What is the difference between margin and padding in CSS?",
+      "answer": "Margin is the space outside the border of an element, creating space between elements. Padding is the space inside the border, between the border and the content.",
+      "explanation": "Understanding the difference is key to controlling layout spacing and preventing overlaps or crowding."
+    },
+    {
+      "id": "interview-001-12-002",
+      "question": "How do you set different margin values for each side of an element?",
+      "answer": "You can use the shorthand `margin: top right bottom left;` or set each side individually: `margin-top`, `margin-right`, `margin-bottom`, and `margin-left`.",
+      "explanation": "The shorthand allows setting all sides at once, and individual properties provide fine control."
+    },
+    {
+      "id": "interview-001-12-003",
+      "question": "What does `padding: 10px 20px;` mean?",
+      "answer": "`padding: 10px 20px;` sets the top and bottom padding to 10px, and the left and right padding to 20px.",
+      "explanation": "This two-value shorthand is commonly used for symmetrical layouts."
+    },
+    {
+      "id": "interview-001-12-004",
+      "question": "How can you center a block element horizontally using margin?",
+      "answer": "Set its left and right margins to `auto` and specify a width. Example: `margin-left: auto; margin-right: auto; width: 400px;`",
+      "explanation": "`auto` margins distribute extra space equally, centering the element."
+    },
+    {
+      "id": "interview-001-12-005",
+      "question": "What happens if you use negative margins in CSS?",
+      "answer": "Negative margins pull the element closer to its neighbors, potentially causing overlaps.",
+      "explanation": "Negative margins can be useful for special effects, but may cause layout issues if misused."
+    },
+    {
+      "id": "interview-001-12-006",
+      "question": "Can you use percentage values for padding and margin? What are they relative to?",
+      "answer": "Yes. For padding, percentages are relative to the element's width. For margin, percentages are usually relative to the width of the containing block.",
+      "explanation": "This enables responsive spacing that adapts to container size."
+    },
+    {
+      "id": "interview-001-12-007",
+      "question": "What is margin collapsing in CSS?",
+      "answer": "Margin collapsing occurs when vertical margins of adjacent block elements overlap, resulting in a single margin equal to the largest of the combined margins.",
+      "explanation": "This prevents double spacing between elements and is unique to vertical margins."
+    },
+    {
+      "id": "interview-001-12-008",
+      "question": "How do you remove all default padding and margin from HTML elements?",
+      "answer": "Set both properties to zero: `margin: 0; padding: 0;`—often used in a CSS reset.",
+      "explanation": "This creates a consistent baseline for further styling."
+    },
+    {
+      "id": "interview-001-12-009",
+      "question": "How can you visually see the effect of margin versus padding on an element?",
+      "answer": "Use different background colors for the element and its container. Padding will expand the colored area inside the border, while margin will create space outside the border.",
+      "explanation": "Visualizing helps understand the box model and diagnose layout bugs."
+    },
+    {
+      "id": "interview-001-12-010",
+      "question": "What is the default value for margin and padding in most browsers?",
+      "answer": "Most browsers apply default margins and/or paddings to certain elements (like `body`, `p`, `ul`), but the default is generally `0` unless specified by the browser's user agent stylesheet.",
+      "explanation": "Default spacing can lead to inconsistent layouts if not reset."
+    }
+  ]
+}

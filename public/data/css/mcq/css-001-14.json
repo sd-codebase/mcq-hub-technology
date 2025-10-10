@@ -1,0 +1,139 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-14-001",
+      "question": "Which of the following is NOT a valid way to write a CSS property value?",
+      "options": [
+        "`color: red;`",
+        "`font-size: 16px;`",
+        "`margin-top: 10;`",
+        "`background-color: #fff;`"
+      ],
+      "correct_answer": 3,
+      "explanation": "CSS property values must include units where required. `margin-top: 10;` is invalid. It should be `margin-top: 10px;` or another valid CSS unit."
+    },
+    {
+      "id": "mcq-001-14-002",
+      "question": "Which of the following is a valid property value for the `display` property?",
+      "options": ["`block`", "`inline`", "`none`", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "`block`, `inline`, and `none` are all valid values for the `display` property."
+    },
+    {
+      "id": "mcq-001-14-003",
+      "question": "What is the output of `font-size: 2em;` if the parent element has a font size of 15px?",
+      "options": ["2px", "30px", "15px", "20px"],
+      "correct_answer": 2,
+      "explanation": "`2em` means 2 times the parent font size, so 2 * 15px = 30px."
+    },
+    {
+      "id": "mcq-001-14-004",
+      "question": "Which of these is a valid value for the `position` property?",
+      "options": ["`fixed`", "`relative`", "`absolute`", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "`position` can be set to `static`, `relative`, `absolute`, `fixed`, or `sticky`."
+    },
+    {
+      "id": "mcq-001-14-005",
+      "question": "What does the value `auto` mean in CSS?",
+      "options": [
+        "The browser calculates the value",
+        "Sets the value to zero",
+        "Inherits from parent",
+        "Removes the property"
+      ],
+      "correct_answer": 1,
+      "explanation": "`auto` lets the browser determine the best value based on the context."
+    },
+    {
+      "id": "mcq-001-14-006",
+      "question": "Which is NOT a valid value for the `color` property?",
+      "options": ["`#333`", "`rgb(0,0,0)`", "`blue`", "`bg-blue`"],
+      "correct_answer": 4,
+      "explanation": "`bg-blue` is not a valid CSS color value. The others are valid."
+    },
+    {
+      "id": "mcq-001-14-007",
+      "question": "What is the result of `opacity: 0.5;`?",
+      "options": [
+        "The element is fully transparent",
+        "The element is fully opaque",
+        "The element is 50% opaque",
+        "The element is hidden"
+      ],
+      "correct_answer": 3,
+      "explanation": "`opacity: 0.5;` makes the element 50% opaque (semi-transparent)."
+    },
+    {
+      "id": "mcq-001-14-008",
+      "question": "Which CSS property requires a unit value?",
+      "options": ["`width`", "`background-color`", "`color`", "`display`"],
+      "correct_answer": 1,
+      "explanation": "`width` requires a unit value like `px`, `em`, `%`, etc."
+    },
+    {
+      "id": "mcq-001-14-009",
+      "question": "What value can be used with `font-weight` for bold text?",
+      "options": ["`bold`", "`700`", "Both 1 and 2", "`italic`"],
+      "correct_answer": 3,
+      "explanation": "`font-weight` accepts both the keyword `bold` and numeric value `700` for bold text."
+    },
+    {
+      "id": "mcq-001-14-010",
+      "question": "Which of these is a correct value for the `overflow` property?",
+      "options": ["`hidden`", "`scroll`", "`auto`", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "`overflow` accepts `visible`, `hidden`, `scroll`, and `auto` as valid values."
+    },
+    {
+      "id": "mcq-001-14-011",
+      "question": "What does `inherit` do when used as a property value?",
+      "options": [
+        "Forces the property to use the parent’s value",
+        "Sets the property to the initial value",
+        "Removes the property",
+        "Sets the value to zero"
+      ],
+      "correct_answer": 1,
+      "explanation": "`inherit` means the property will take its value from its parent element."
+    },
+    {
+      "id": "mcq-001-14-012",
+      "question": "Which of the following is a valid value for the `background-repeat` property?",
+      "options": [
+        "`repeat-x`",
+        "`repeat-y`",
+        "`no-repeat`",
+        "All of the above"
+      ],
+      "correct_answer": 4,
+      "explanation": "`background-repeat` supports `repeat`, `repeat-x`, `repeat-y`, and `no-repeat` as values."
+    },
+    {
+      "id": "mcq-001-14-013",
+      "question": "What does `display: none;` do to an element?",
+      "options": [
+        "Hides the element and removes it from the flow",
+        "Hides the element but keeps its space",
+        "Makes the element transparent",
+        "Centers the element"
+      ],
+      "correct_answer": 1,
+      "explanation": "`display: none;` removes the element from the layout and makes it invisible."
+    },
+    {
+      "id": "mcq-001-14-014",
+      "question": "Which of these is NOT a valid value for the `text-align` property?",
+      "options": ["`left`", "`center`", "`justify`", "`top`"],
+      "correct_answer": 4,
+      "explanation": "`top` is not a valid value for `text-align`. Valid values are `left`, `right`, `center`, and `justify`."
+    },
+    {
+      "id": "mcq-001-14-015",
+      "question": "What is the value of `font-style` for italic text?",
+      "options": ["`italic`", "`bold`", "`underline`", "`oblique`"],
+      "correct_answer": 1,
+      "explanation": "`font-style: italic;` sets text to italic. `oblique` is also supported but is less common."
+    }
+  ]
+}

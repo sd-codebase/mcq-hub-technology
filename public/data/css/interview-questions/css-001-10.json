@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Background Properties",
+  "interview_questions": [
+    {
+      "id": "interview-001-10-001",
+      "question": "How do you set a background color for an element in CSS?",
+      "answer": "Use the `background-color` property. Example: `div { background-color: yellow; }`",
+      "explanation": "This property sets the background color of the selected element."
+    },
+    {
+      "id": "interview-001-10-002",
+      "question": "How can you display an image as a background in CSS?",
+      "answer": "Use the `background-image` property. Example: `body { background-image: url('bg.png'); }`",
+      "explanation": "The image will be tiled by default unless other background properties are set."
+    },
+    {
+      "id": "interview-001-10-003",
+      "question": "What does `background-repeat: no-repeat;` do?",
+      "answer": "It prevents the background image from repeating (tiling). Example: `div { background-repeat: no-repeat; }`",
+      "explanation": "The image will only display once in the background."
+    },
+    {
+      "id": "interview-001-10-004",
+      "question": "How do you position a background image in the top-right corner?",
+      "answer": "Use `background-position: right top;`. Example: `section { background-position: right top; }`",
+      "explanation": "You can use combinations like 'left', 'center', 'right', 'top', 'bottom', or specific values."
+    },
+    {
+      "id": "interview-001-10-005",
+      "question": "What does `background-size: cover;` do?",
+      "answer": "It scales the background image to cover the entire element, possibly cropping parts of the image.",
+      "explanation": "`cover` ensures no blank space but may crop the image."
+    },
+    {
+      "id": "interview-001-10-006",
+      "question": "How do you set a background with both a color and an image?",
+      "answer": "Use the shorthand: `background: #eee url('dots.png') repeat-x;`",
+      "explanation": "The shorthand property lets you specify multiple background values at once."
+    },
+    {
+      "id": "interview-001-10-007",
+      "question": "What does `background-attachment: fixed;` do?",
+      "answer": "It fixes the background image relative to the viewport, so it doesn't scroll with the page content.",
+      "explanation": "`fixed` backgrounds are often used for parallax effects."
+    },
+    {
+      "id": "interview-001-10-008",
+      "question": "How do you create a linear gradient background using CSS?",
+      "answer": "Use `background: linear-gradient(direction, color1, color2);`. Example: `background: linear-gradient(90deg, red, yellow);`",
+      "explanation": "Gradients can be linear or radial and support multiple color stops."
+    },
+    {
+      "id": "interview-001-10-009",
+      "question": "What is the effect of `background-repeat: round;`?",
+      "answer": "The background image is repeated and scaled to fit the container's width and height.",
+      "explanation": "`round` stretches the image to fit without gaps."
+    },
+    {
+      "id": "interview-001-10-010",
+      "question": "How would you center a background image?",
+      "answer": "Use `background-position: center;`. Example: `.box { background-position: center; }`",
+      "explanation": "This centers the background image both vertically and horizontally."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Specificity and Cascade",
+  "interview_questions": [
+    {
+      "id": "interview-001-20-001",
+      "question": "What is CSS specificity and how does it affect which styles are applied?",
+      "answer": "CSS specificity is a set of rules browsers use to determine which style declarations are applied to an element. It is calculated based on the types of selectors used: inline styles, IDs, classes/attributes/pseudo-classes, and element selectors. The more specific the selector, the higher its precedence.",
+      "explanation": "Specificity ensures that the most relevant rule is applied, resolving conflicts between multiple CSS rules."
+    },
+    {
+      "id": "interview-001-20-002",
+      "question": "Explain the order of specificity from lowest to highest for these selectors: element, class, ID, inline style.",
+      "answer": "Order from lowest to highest: 1) Element selectors (e.g., `p`), 2) Class selectors (e.g., `.btn`), 3) ID selectors (e.g., `#main`), 4) Inline styles (e.g., `style=\"color: red;\"`).",
+      "explanation": "This order dictates which style wins when multiple rules could apply."
+    },
+    {
+      "id": "interview-001-20-003",
+      "question": "What does the `!important` declaration do in CSS?",
+      "answer": "`!important` overrides normal specificity and cascade rules, making that style take precedence over others, unless another `!important` rule with higher specificity exists.",
+      "explanation": "`!important` should be used sparingly, as it can make CSS harder to debug and maintain."
+    },
+    {
+      "id": "interview-001-20-004",
+      "question": "If two CSS rules have the same specificity, which one is applied?",
+      "answer": "If two rules have the same specificity, the one that appears last in the CSS (source order) will be applied.",
+      "explanation": "The cascade ensures that the most recently declared rule takes effect when specificity is tied."
+    },
+    {
+      "id": "interview-001-20-005",
+      "question": "How does the cascade work in CSS?",
+      "answer": "The cascade is the process by which browsers resolve conflicts among multiple CSS rules for the same element. It considers specificity, source order, and importance (`!important`).",
+      "explanation": "Understanding the cascade is essential for predicting how styles will be applied."
+    },
+    {
+      "id": "interview-001-20-006",
+      "question": "Can an inline style be overridden by a CSS rule with `!important`?",
+      "answer": "Yes, a CSS rule with `!important` will override an inline style unless the inline style itself also uses `!important`.",
+      "explanation": "`!important` increases a rule’s priority above normal specificity."
+    },
+    {
+      "id": "interview-001-20-007",
+      "question": "What is inheritance in CSS and how does it relate to the cascade?",
+      "answer": "Inheritance in CSS means some properties are passed from parent to child elements automatically. The cascade determines which rule is inherited if there are conflicts.",
+      "explanation": "Not all properties are inherited by default (e.g., color is, but margin is not)."
+    },
+    {
+      "id": "interview-001-20-008",
+      "question": "How do you increase the specificity of a CSS selector without using `!important`?",
+      "answer": "Increase specificity by using more specific selectors, e.g., adding an ID, class, or more elements to the selector chain.",
+      "explanation": "For example, `.btn.active` is more specific than `.btn` alone."
+    },
+    {
+      "id": "interview-001-20-009",
+      "question": "What happens if two conflicting CSS rules have both `!important` and the same specificity?",
+      "answer": "If both rules use `!important` and have the same specificity, the rule that appears last in the CSS source order is applied.",
+      "explanation": "Source order breaks the tie when both specificity and importance are equal."
+    },
+    {
+      "id": "interview-001-20-010",
+      "question": "How do browser default styles interact with your custom CSS and the cascade?",
+      "answer": "Browser default styles are at the bottom of the cascade. Any custom CSS with higher specificity or appearing later in the source will override the browser’s defaults.",
+      "explanation": "Understanding default styles helps avoid unexpected results, especially when resetting or normalizing CSS."
+    }
+  ]
+}

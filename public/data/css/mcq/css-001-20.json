@@ -1,0 +1,159 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-20-001",
+      "question": "Which CSS property controls the visibility of an element without affecting the layout?",
+      "options": ["`display`", "`opacity`", "`visibility`", "`z-index`"],
+      "correct_answer": 3,
+      "explanation": "`visibility: hidden;` hides the element but leaves its space in the layout."
+    },
+    {
+      "id": "mcq-001-20-002",
+      "question": "What is the effect of `opacity: 0;` on an element?",
+      "options": [
+        "The element is visible but fully transparent",
+        "The element is not rendered at all",
+        "The element is hidden but takes up space",
+        "The element is visible and fully opaque"
+      ],
+      "correct_answer": 1,
+      "explanation": "`opacity: 0;` makes the element fully transparent, but it is still present and responds to events."
+    },
+    {
+      "id": "mcq-001-20-003",
+      "question": "Which value of the `display` property removes the element from the document flow?",
+      "options": ["`inline`", "`block`", "`none`", "`flex`"],
+      "correct_answer": 3,
+      "explanation": "`display: none;` removes the element from the flow and it does not take up space."
+    },
+    {
+      "id": "mcq-001-20-004",
+      "question": "How can you hide an element but leave its space reserved in the layout?",
+      "options": [
+        "`display: none;`",
+        "`visibility: hidden;`",
+        "`opacity: 0;`",
+        "`z-index: -1;`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`visibility: hidden;` hides the element but its space remains."
+    },
+    {
+      "id": "mcq-001-20-005",
+      "question": "Which CSS property can you animate to fade an element in or out?",
+      "options": ["`display`", "`visibility`", "`opacity`", "`position`"],
+      "correct_answer": 3,
+      "explanation": "`opacity` can be transitioned for fade-in or fade-out effects."
+    },
+    {
+      "id": "mcq-001-20-006",
+      "question": "What is the default value of the `visibility` property?",
+      "options": ["`hidden`", "`collapse`", "`visible`", "`none`"],
+      "correct_answer": 3,
+      "explanation": "The default value for `visibility` is `visible`."
+    },
+    {
+      "id": "mcq-001-20-007",
+      "question": "Which property combination will both hide an element and remove it from the layout?",
+      "options": [
+        "`display: none;`",
+        "`visibility: hidden;`",
+        "`opacity: 0;`",
+        "`z-index: -1;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`display: none;` hides the element and removes it from the layout."
+    },
+    {
+      "id": "mcq-001-20-008",
+      "question": "How do you make an element invisible but still interactive (clickable)?",
+      "options": [
+        "`display: none;`",
+        "`opacity: 0; pointer-events: auto;`",
+        "`visibility: hidden;`",
+        "`z-index: 0;`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`opacity: 0; pointer-events: auto;` makes the element invisible, but it still responds to pointer events."
+    },
+    {
+      "id": "mcq-001-20-009",
+      "question": "Which property would you use to stack elements in front of or behind each other?",
+      "options": ["`opacity`", "`z-index`", "`display`", "`visibility`"],
+      "correct_answer": 2,
+      "explanation": "`z-index` controls the stacking order of positioned elements."
+    },
+    {
+      "id": "mcq-001-20-010",
+      "question": "What is the result of `visibility: collapse;` on a table row?",
+      "options": [
+        "The row is hidden and space is removed",
+        "The row is hidden but space remains",
+        "The row is visible",
+        "It has no effect"
+      ],
+      "correct_answer": 1,
+      "explanation": "`visibility: collapse;` hides a table row and removes its space."
+    },
+    {
+      "id": "mcq-001-20-011",
+      "question": "If you want to hide an element and ensure it is not accessible to screen readers, which should you use?",
+      "options": [
+        "`display: none;`",
+        "`visibility: hidden;`",
+        "`opacity: 0;`",
+        "`z-index: -1;`"
+      ],
+      "correct_answer": 1,
+      "explanation": "`display: none;` removes the element from both the layout and assistive technologies."
+    },
+    {
+      "id": "mcq-001-20-012",
+      "question": "Which property hides an element visually but keeps it accessible for screen readers?",
+      "options": [
+        "`display: none;`",
+        "`visibility: hidden;`",
+        "`opacity: 0;` with proper ARIA attributes",
+        "`z-index: -1;`"
+      ],
+      "correct_answer": 3,
+      "explanation": "Setting `opacity: 0;` can hide an element visually, but it's still accessible unless additional ARIA or CSS rules are applied."
+    },
+    {
+      "id": "mcq-001-20-013",
+      "question": "What is a common use case for `visibility: hidden;`?",
+      "options": [
+        "Temporarily hiding elements while maintaining layout",
+        "Removing elements from the DOM",
+        "Making text bold",
+        "Changing background color"
+      ],
+      "correct_answer": 1,
+      "explanation": "`visibility: hidden;` is used when you want to hide elements but keep their space reserved."
+    },
+    {
+      "id": "mcq-001-20-014",
+      "question": "How can you hide an element only on small screens using CSS?",
+      "options": [
+        "Use `display: none;` inside a media query",
+        "Use `opacity: 0;` on all elements",
+        "Set `visibility: hidden;` everywhere",
+        "You cannot do this with CSS"
+      ],
+      "correct_answer": 1,
+      "explanation": "Media queries allow you to apply `display: none;` at certain screen sizes."
+    },
+    {
+      "id": "mcq-001-20-015",
+      "question": "Which property, when set, will NOT hide the element from the accessibility tree (screen readers)?",
+      "options": [
+        "`display: none;`",
+        "`visibility: hidden;`",
+        "`opacity: 0;`",
+        "Both 2 and 3"
+      ],
+      "correct_answer": 4,
+      "explanation": "`visibility: hidden;` and `opacity: 0;` hide the element visually but not from screen readers; `display: none;` removes it completely."
+    }
+  ]
+}

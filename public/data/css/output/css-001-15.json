@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-15-001",
+      "question": "<style>\ndiv {\n  display: none;\n}\n</style>\n<div>Hidden div</div>\n<span>Visible span</span>",
+      "output": "<span>Visible span</span>",
+      "explanation": "The div is not rendered at all because `display: none` removes it from the layout."
+    },
+    {
+      "id": "output-001-15-002",
+      "question": "<style>\np {\n  visibility: hidden;\n}\n</style>\n<p>Invisible paragraph</p>\n<span>Visible text</span>",
+      "output": "<p style=\"visibility: hidden;\">Invisible paragraph</p>\n<span>Visible text</span>",
+      "explanation": "The paragraph is invisible but still takes up space; the span is unaffected."
+    },
+    {
+      "id": "output-001-15-003",
+      "question": "<style>\nspan {\n  display: block;\n  background: #eee;\n}\n</style>\n<span>Block span</span>",
+      "output": "<span style=\"display: block; background: #eee;\">Block span</span>",
+      "explanation": "The span acts as a block element, appearing on its own line with a gray background."
+    },
+    {
+      "id": "output-001-15-004",
+      "question": "<style>\ndiv {\n  display: inline;\n  color: blue;\n}\n</style>\n<div>Inline div</div><span>Next to div</span>",
+      "output": "<div style=\"display: inline; color: blue;\">Inline div</div><span>Next to div</span>",
+      "explanation": "The div now behaves like text (inline), so it sits next to the span."
+    },
+    {
+      "id": "output-001-15-005",
+      "question": "<style>\nh1 {\n  display: inline-block;\n  background: yellow;\n}\n</style>\n<h1>Inline-block heading</h1>",
+      "output": "<h1 style=\"display: inline-block; background: yellow;\">Inline-block heading</h1>",
+      "explanation": "The heading is an inline-block, so it can sit with other text but maintain block-like dimensions."
+    },
+    {
+      "id": "output-001-15-006",
+      "question": "<style>\np {\n  opacity: 0.5;\n}\n</style>\n<p>Semi-transparent text</p>",
+      "output": "<p style=\"opacity: 0.5;\">Semi-transparent text</p>",
+      "explanation": "The paragraph is partially transparent (50% opacity)."
+    },
+    {
+      "id": "output-001-15-007",
+      "question": "<style>\ndiv {\n  display: flex;\n}\n</style>\n<div><span>A</span><span>B</span></div>",
+      "output": "<div style=\"display: flex;\"><span>A</span><span>B</span></div>",
+      "explanation": "The div is a flex container, so its child spans are laid out in a row."
+    },
+    {
+      "id": "output-001-15-008",
+      "question": "<style>\ndiv {\n  display: grid;\n}\n</style>\n<div><span>1</span><span>2</span></div>",
+      "output": "<div style=\"display: grid;\"><span>1</span><span>2</span></div>",
+      "explanation": "The div is a grid container; children are grid items (by default, each on its own row)."
+    },
+    {
+      "id": "output-001-15-009",
+      "question": "<style>\nh2 {\n  visibility: collapse;\n}\n</style>\n<h2>Should collapse</h2><p>Paragraph</p>",
+      "output": "<h2 style=\"visibility: collapse;\">Should collapse</h2><p>Paragraph</p>",
+      "explanation": "`visibility: collapse` on non-table elements acts like `visibility: hidden`—the space remains, but the content is invisible."
+    },
+    {
+      "id": "output-001-15-010",
+      "question": "<style>\n.box {\n  display: none;\n}\n</style>\n<div class=\"box\">Invisible</div><div>Visible</div>",
+      "output": "<div>Visible</div>",
+      "explanation": "Only the visible div is rendered; the `.box` div isn't part of the layout."
+    },
+    {
+      "id": "output-001-15-011",
+      "question": "<style>\np {\n  display: inline;\n  background: #faf;\n}\n</style>\n<p>Inline paragraph</p><span>Text</span>",
+      "output": "<p style=\"display: inline; background: #faf;\">Inline paragraph</p><span>Text</span>",
+      "explanation": "The paragraph appears inline with the span, both on the same line."
+    },
+    {
+      "id": "output-001-15-012",
+      "question": "<style>\nspan {\n  opacity: 0;\n}\n</style>\n<span>Invisible span</span>",
+      "output": "<span style=\"opacity: 0;\">Invisible span</span>",
+      "explanation": "The span is fully transparent (invisible) but still present in the document and clickable."
+    },
+    {
+      "id": "output-001-15-013",
+      "question": "<style>\ndiv {\n  display: block;\n}\n</style>\n<div>Block div</div><span>Text</span>",
+      "output": "<div style=\"display: block;\">Block div</div><span>Text</span>",
+      "explanation": "The div appears as a block (default), occupying full width."
+    },
+    {
+      "id": "output-001-15-014",
+      "question": "<style>\np {\n  display: none;\n}\n</style>\n<p>Gone</p><p>Also gone</p>",
+      "output": "",
+      "explanation": "Both paragraphs are removed from the render tree by `display: none`."
+    },
+    {
+      "id": "output-001-15-015",
+      "question": "<style>\np {\n  display: block;\n}\n</style>\n<p>Block</p><span>Inline</span>",
+      "output": "<p style=\"display: block;\">Block</p><span>Inline</span>",
+      "explanation": "Paragraphs are blocks by default, so each occupies its own line; span remains inline."
+    }
+  ]
+}

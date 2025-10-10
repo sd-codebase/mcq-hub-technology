@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Values and Units",
+  "interview_questions": [
+    {
+      "id": "interview-001-06-001",
+      "question": "What are the different types of values you can use in CSS properties?",
+      "answer": "CSS values can be keywords (e.g., `auto`, `inherit`), lengths (e.g., `px`, `em`, `rem`), percentages (`%`), colors (e.g., `#fff`, `rgb(0,0,0)`), URLs (`url('image.png')`), and functions (e.g., `calc()`, `var()`).",
+      "explanation": "Knowing the types of values helps in writing flexible and powerful CSS rules."
+    },
+    {
+      "id": "interview-001-06-002",
+      "question": "What is the difference between absolute and relative units in CSS?",
+      "answer": "Absolute units (e.g., `px`, `cm`, `in`) have a fixed size, while relative units (e.g., `em`, `rem`, `%`, `vw`, `vh`) depend on another value, such as the parent or root font size or viewport size.",
+      "explanation": "Relative units make layouts more responsive and adaptable to different screen sizes."
+    },
+    {
+      "id": "interview-001-06-003",
+      "question": "Explain the difference between `em` and `rem` units.",
+      "answer": "`em` is relative to the font size of the parent element, while `rem` is relative to the root element (`html`) font size.",
+      "explanation": "`rem` ensures consistent sizing across the page, while `em` allows for nesting and scaling within a component."
+    },
+    {
+      "id": "interview-001-06-004",
+      "question": "What does the percentage (`%`) unit mean in CSS?",
+      "answer": "A percentage value is relative to another dimension, often the parent element’s size (e.g., `width: 50%` means half the width of the parent).",
+      "explanation": "Percentages are essential for building fluid layouts."
+    },
+    {
+      "id": "interview-001-06-005",
+      "question": "How do viewport units (`vw`, `vh`) work in CSS?",
+      "answer": "`vw` is 1% of the viewport’s width, and `vh` is 1% of the viewport’s height. For example, `50vw` is half the viewport’s width.",
+      "explanation": "Viewport units enable truly responsive sizing regardless of parent elements."
+    },
+    {
+      "id": "interview-001-06-006",
+      "question": "What is the value of `auto` in CSS and when would you use it?",
+      "answer": "`auto` lets the browser calculate the value. For example, `margin: auto` centers a block element horizontally if a width is set.",
+      "explanation": "`auto` is useful for letting the browser handle certain layout decisions automatically."
+    },
+    {
+      "id": "interview-001-06-007",
+      "question": "Explain the difference between `initial`, `inherit`, and `unset` in CSS.",
+      "answer": "`initial` sets a property to its default value, `inherit` makes it inherit from the parent, and `unset` acts as `inherit` if inheritable or `initial` otherwise.",
+      "explanation": "These keywords are useful for resetting or controlling the inheritance of styles."
+    },
+    {
+      "id": "interview-001-06-008",
+      "question": "Can you perform calculations in CSS property values? How?",
+      "answer": "Yes, using the `calc()` function. Example: `width: calc(100% - 20px);`",
+      "explanation": "`calc()` allows you to mix units and create dynamic layouts."
+    },
+    {
+      "id": "interview-001-06-009",
+      "question": "What happens if you use a CSS unit incorrectly (e.g., `width: 10;`)?",
+      "answer": "If you omit the unit for a value that requires one, the property is invalid and ignored by the browser.",
+      "explanation": "Always include the correct unit for property values that need them."
+    },
+    {
+      "id": "interview-001-06-010",
+      "question": "How do the `min-width`, `max-width`, `min-height`, and `max-height` properties use CSS values and units?",
+      "answer": "They set constraints on the size of elements using any valid CSS unit (e.g., `px`, `em`, `%`).",
+      "explanation": "These properties help create responsive layouts by preventing elements from becoming too small or too large."
+    }
+  ]
+}

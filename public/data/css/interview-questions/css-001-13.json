@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Height and Width",
+  "interview_questions": [
+    {
+      "id": "interview-001-13-001",
+      "question": "How do you set a fixed width and height for an element in CSS?",
+      "answer": "Use the `width` and `height` properties with fixed units (like `px` or `em`). Example: `div { width: 300px; height: 100px; }` sets the element to 300px wide and 100px tall.",
+      "explanation": "Fixed dimensions are useful for consistent layout elements like buttons or containers."
+    },
+    {
+      "id": "interview-001-13-002",
+      "question": "What is the effect of using `max-width` or `min-width` on an element?",
+      "answer": "`max-width` limits how wide an element can grow, while `min-width` ensures it doesn’t shrink below a certain width. Example: `max-width: 400px;` prevents the element from exceeding 400px even if the container is wider.",
+      "explanation": "These properties help create responsive designs that adapt to various screen sizes."
+    },
+    {
+      "id": "interview-001-13-003",
+      "question": "How can you make an image scale to fit the width of its parent container?",
+      "answer": "Set `width: 100%;` on the image. Example: `img { width: 100%; }` makes the image stretch to fill its container's width.",
+      "explanation": "This technique is often used for responsive images."
+    },
+    {
+      "id": "interview-001-13-004",
+      "question": "What does `min-height` do in CSS?",
+      "answer": "`min-height` sets the minimum height of an element. The element can grow taller if content requires, but will never be shorter than the specified value.",
+      "explanation": "It prevents content from being squished too small in flexible layouts."
+    },
+    {
+      "id": "interview-001-13-005",
+      "question": "How do viewport units (`vh`, `vw`) work for setting element dimensions?",
+      "answer": "`vh` stands for viewport height (1vh = 1% of the viewport’s height), and `vw` stands for viewport width (1vw = 1% of the viewport’s width). Example: `height: 30vh;` sets the element's height to 30% of the viewport height.",
+      "explanation": "Viewport units are useful for creating layouts that adapt to the browser window size."
+    },
+    {
+      "id": "interview-001-13-006",
+      "question": "What happens if you set both width and max-width on the same element?",
+      "answer": "If `width` exceeds `max-width`, the element’s width is limited to the value of `max-width`. Otherwise, the actual width is used.",
+      "explanation": "`max-width` always takes precedence if there is a conflict."
+    },
+    {
+      "id": "interview-001-13-007",
+      "question": "Describe a scenario for using `height: auto`.",
+      "answer": "`height: auto` lets the element's height adjust automatically based on its content. It's useful for containers where the content size is dynamic.",
+      "explanation": "Auto height ensures that all content is visible without overflow."
+    },
+    {
+      "id": "interview-001-13-008",
+      "question": "How do you keep an image’s aspect ratio when setting its width or height?",
+      "answer": "Set one dimension (width or height) to a specific value and the other to `auto`. Example: `img { height: 150px; width: auto; }` keeps the aspect ratio consistent.",
+      "explanation": "This prevents the image from being stretched or squashed."
+    },
+    {
+      "id": "interview-001-13-009",
+      "question": "What is the difference between `width: auto` and not specifying a width at all?",
+      "answer": "`width: auto` lets the browser calculate the width based on content or parent, which is also the default if no width is set. However, if other properties (like margin or display) interact, `auto` can behave differently than an unset width.",
+      "explanation": "Explicitly setting `auto` can be useful for overriding inherited or default widths."
+    },
+    {
+      "id": "interview-001-13-010",
+      "question": "How can you limit the height of an element and hide overflow content?",
+      "answer": "Set a maximum height with `max-height` and hide extra content with `overflow: hidden;`. Example: `div { max-height: 100px; overflow: hidden; }`",
+      "explanation": "This is useful for creating content previews or preventing layout breaks."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-09-001",
+      "question": "<style>\np {\n  text-align: center;\n}\n</style>\n<p>Centered text</p>",
+      "output": "<p style=\"text-align: center;\">Centered text</p>",
+      "explanation": "The paragraph text is centered horizontally using `text-align: center`."
+    },
+    {
+      "id": "output-001-09-002",
+      "question": "<style>\nh1 {\n  text-transform: uppercase;\n}\n</style>\n<h1>heading</h1>",
+      "output": "<h1 style=\"text-transform: uppercase;\">HEADING</h1>",
+      "explanation": "All text in the heading is converted to uppercase letters."
+    },
+    {
+      "id": "output-001-09-003",
+      "question": "<style>\np {\n  text-decoration: underline;\n}\n</style>\n<p>Underlined text</p>",
+      "output": "<p style=\"text-decoration: underline;\">Underlined text</p>",
+      "explanation": "The paragraph text is underlined."
+    },
+    {
+      "id": "output-001-09-004",
+      "question": "<style>\nh2 {\n  letter-spacing: 4px;\n}\n</style>\n<h2>Spaced</h2>",
+      "output": "<h2 style=\"letter-spacing: 4px;\">Spaced</h2>",
+      "explanation": "Each letter in the heading is separated by 4 pixels."
+    },
+    {
+      "id": "output-001-09-005",
+      "question": "<style>\np {\n  word-spacing: 20px;\n}\n</style>\n<p>Lots of space here</p>",
+      "output": "<p style=\"word-spacing: 20px;\">Lots of space here</p>",
+      "explanation": "Extra space is added between each word in the paragraph."
+    },
+    {
+      "id": "output-001-09-006",
+      "question": "<style>\nh3 {\n  text-shadow: 2px 2px 5px #999;\n}\n</style>\n<h3>Shadowed text</h3>",
+      "output": "<h3 style=\"text-shadow: 2px 2px 5px #999;\">Shadowed text</h3>",
+      "explanation": "A gray drop shadow appears behind the heading text."
+    },
+    {
+      "id": "output-001-09-007",
+      "question": "<style>\np {\n  text-indent: 40px;\n}\n</style>\n<p>Indented paragraph</p>",
+      "output": "<p style=\"text-indent: 40px;\">Indented paragraph</p>",
+      "explanation": "The first line of the paragraph is indented by 40px."
+    },
+    {
+      "id": "output-001-09-008",
+      "question": "<style>\nh4 {\n  text-align: right;\n}\n</style>\n<h4>Right aligned</h4>",
+      "output": "<h4 style=\"text-align: right;\">Right aligned</h4>",
+      "explanation": "The heading is aligned to the right edge of its container."
+    },
+    {
+      "id": "output-001-09-009",
+      "question": "<style>\np {\n  text-transform: capitalize;\n}\n</style>\n<p>capitalize each word</p>",
+      "output": "<p style=\"text-transform: capitalize;\">Capitalize Each Word</p>",
+      "explanation": "The first letter of each word in the paragraph is capitalized."
+    },
+    {
+      "id": "output-001-09-010",
+      "question": "<style>\np {\n  text-decoration: line-through;\n}\n</style>\n<p>Strikethrough text</p>",
+      "output": "<p style=\"text-decoration: line-through;\">Strikethrough text</p>",
+      "explanation": "A line is drawn through the text in the paragraph."
+    },
+    {
+      "id": "output-001-09-011",
+      "question": "<style>\nh5 {\n  letter-spacing: -2px;\n}\n</style>\n<h5>Tighten</h5>",
+      "output": "<h5 style=\"letter-spacing: -2px;\">Tighten</h5>",
+      "explanation": "The letters in the heading are closer together by 2 pixels."
+    },
+    {
+      "id": "output-001-09-012",
+      "question": "<style>\np {\n  text-align: justify;\n}\n</style>\n<p>This paragraph is justified. The lines will be stretched so that each line has equal width.</p>",
+      "output": "<p style=\"text-align: justify;\">This paragraph is justified. The lines will be stretched so that each line has equal width.</p>",
+      "explanation": "Text is aligned on both the left and right sides."
+    },
+    {
+      "id": "output-001-09-013",
+      "question": "<style>\nh2 {\n  text-decoration: overline;\n}\n</style>\n<h2>Overlined heading</h2>",
+      "output": "<h2 style=\"text-decoration: overline;\">Overlined heading</h2>",
+      "explanation": "A line is drawn above the heading text."
+    },
+    {
+      "id": "output-001-09-014",
+      "question": "<style>\np {\n  text-shadow: 0 0 10px red;\n}\n</style>\n<p>Glowing text</p>",
+      "output": "<p style=\"text-shadow: 0 0 10px red;\">Glowing text</p>",
+      "explanation": "A red glowing shadow effect is applied to the paragraph text."
+    },
+    {
+      "id": "output-001-09-015",
+      "question": "<style>\nh6 {\n  text-transform: lowercase;\n}\n</style>\n<h6>LOWERCASE HEADING</h6>",
+      "output": "<h6 style=\"text-transform: lowercase;\">lowercase heading</h6>",
+      "explanation": "All letters in the heading are converted to lowercase."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Color Values",
+  "interview_questions": [
+    {
+      "id": "interview-001-07-001",
+      "question": "Name three different ways to specify a color in CSS and give an example for each.",
+      "answer": "1. Named colors: `color: red;`\n2. Hexadecimal: `color: #00FF00;`\n3. RGB: `color: rgb(0,0,255);`",
+      "explanation": "CSS supports multiple color formats to provide flexibility and compatibility with various tools and workflows."
+    },
+    {
+      "id": "interview-001-07-002",
+      "question": "What does the 'rgba()' function do in CSS?",
+      "answer": "`rgba()` stands for Red, Green, Blue, and Alpha. It allows you to specify a color with transparency. Example: `background: rgba(255,0,0,0.5);` makes a semi-transparent red background.",
+      "explanation": "The alpha value (0 to 1) controls the opacity of the color."
+    },
+    {
+      "id": "interview-001-07-003",
+      "question": "How does the 'hsl()' function specify color in CSS?",
+      "answer": "`hsl()` stands for Hue, Saturation, Lightness. Example: `color: hsl(240, 100%, 50%);` produces a pure blue color.",
+      "explanation": "HSL makes it easier to adjust colors by changing lightness or saturation values."
+    },
+    {
+      "id": "interview-001-07-004",
+      "question": "What is the difference between `#abc` and `#aabbcc` in CSS?",
+      "answer": "`#abc` is a shorthand for `#aabbcc`. Each digit is repeated to make the full 6-digit hexadecimal color.",
+      "explanation": "Shorthand is only valid when each component is doubled (e.g., `#fff` for `#ffffff`)."
+    },
+    {
+      "id": "interview-001-07-005",
+      "question": "How do you make text completely invisible using a color value in CSS?",
+      "answer": "Set the color to `transparent`. Example: `color: transparent;`",
+      "explanation": "The text takes up space but is not visible, useful for accessibility or design tricks."
+    },
+    {
+      "id": "interview-001-07-006",
+      "question": "How do you create a linear gradient background in CSS?",
+      "answer": "Use the `linear-gradient()` function. Example: `background: linear-gradient(to right, #f00, #00f);` creates a red-to-blue gradient.",
+      "explanation": "Gradients can be linear or radial, and support multiple color stops."
+    },
+    {
+      "id": "interview-001-07-007",
+      "question": "What does the 'alpha' channel represent in CSS color values?",
+      "answer": "The alpha channel specifies the opacity of a color, from 0 (fully transparent) to 1 (fully opaque).",
+      "explanation": "Used in RGBA and HSLA color formats for transparency effects."
+    },
+    {
+      "id": "interview-001-07-008",
+      "question": "How would you set a semi-transparent background color for an element?",
+      "answer": "Use RGBA or HSLA notation with an alpha value less than 1. Example: `background: rgba(0,255,0,0.3);`",
+      "explanation": "This makes the background green with 30% opacity."
+    },
+    {
+      "id": "interview-001-07-009",
+      "question": "What is the difference between `color: inherit` and `color: initial`?",
+      "answer": "`color: inherit` makes the element take its parent's color. `color: initial` resets the color to the default (usually browser default, typically black).",
+      "explanation": "Inheritance and resetting are important for predictable styling and overrides."
+    },
+    {
+      "id": "interview-001-07-010",
+      "question": "Can you use CSS variables for color values? Give an example.",
+      "answer": "Yes. Example:\n```css\n:root { --main-color: #3498db; }\np { color: var(--main-color); }\n```",
+      "explanation": "CSS variables increase reusability and make theme changes easier."
+    }
+  ]
+}

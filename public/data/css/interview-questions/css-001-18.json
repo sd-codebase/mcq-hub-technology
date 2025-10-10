@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Float and Clear",
+  "interview_questions": [
+    {
+      "id": "interview-001-18-001",
+      "question": "What does the `float` property do in CSS?",
+      "answer": "The `float` property moves an element to the left or right, allowing text and inline elements to wrap around it. Common values are `left`, `right`, and `none`.",
+      "explanation": "Floats are often used for images or layouts, but require clearing to avoid layout issues."
+    },
+    {
+      "id": "interview-001-18-002",
+      "question": "How do you make sure that elements below a floated element do not wrap around it?",
+      "answer": "Use the `clear` property (e.g., `clear: both;`) on the element you want to appear below the floated element. This forces the element to move below any floated elements.",
+      "explanation": "`clear` can take values `left`, `right`, or `both`, depending on which floats to clear."
+    },
+    {
+      "id": "interview-001-18-003",
+      "question": "What is a common use case for the `float` property in web design?",
+      "answer": "Floats are commonly used for text wrapping around images, sidebars, and multi-column layouts.",
+      "explanation": "Although modern layouts use Flexbox and Grid, float is still seen in legacy code and for simple text/image arrangements."
+    },
+    {
+      "id": "interview-001-18-004",
+      "question": "How can you clear floats without adding extra markup in HTML?",
+      "answer": "Use the CSS clearfix hack:\n```css\n.clearfix::after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n```",
+      "explanation": "This pseudo-element approach clears floats on a parent container without extra HTML elements."
+    },
+    {
+      "id": "interview-001-18-005",
+      "question": "What happens if you float multiple elements to the left?",
+      "answer": "They will stack horizontally from left to right as long as there is space. If space runs out, they wrap to the next line.",
+      "explanation": "Floats are removed from normal flow, so non-floated elements can ignore them unless cleared."
+    },
+    {
+      "id": "interview-001-18-006",
+      "question": "How does floating affect the height of the parent container?",
+      "answer": "If all child elements are floated, the parent container collapses to zero height unless cleared.",
+      "explanation": "This is why clearfix or clearing techniques are necessary when using float-based layouts."
+    },
+    {
+      "id": "interview-001-18-007",
+      "question": "What is the effect of `float: none;`?",
+      "answer": "`float: none;` ensures the element does not float and remains in normal document flow.",
+      "explanation": "Use this value to override inherited or previously set float properties."
+    },
+    {
+      "id": "interview-001-18-008",
+      "question": "Can you float block-level and inline elements? Give examples.",
+      "answer": "Yes, both can be floated. Example: `img { float: left; }` or `div { float: right; }`.",
+      "explanation": "Floated inline elements become block-level when floated."
+    },
+    {
+      "id": "interview-001-18-009",
+      "question": "What is a practical use case for `clear: both;`?",
+      "answer": "To ensure a footer or section appears below both left and right floated columns in a layout.",
+      "explanation": "This guarantees that cleared content doesn’t wrap next to floated columns."
+    },
+    {
+      "id": "interview-001-18-010",
+      "question": "Why are modern layouts moving away from floats?",
+      "answer": "CSS Flexbox and Grid provide more robust, flexible, and easier-to-manage layout mechanisms without the quirks and workarounds required for floats.",
+      "explanation": "Floats were never intended for complex layouts and have been superseded by newer CSS layout models."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-16-001",
+      "question": "What happens if you do not use a CSS reset or normalization?",
+      "options": [
+        "All browsers will render your page identically",
+        "Different browsers may render default styles differently",
+        "Your page will load faster",
+        "Your CSS will not work"
+      ],
+      "correct_answer": 2,
+      "explanation": "Browsers have different default styles, so without a reset or normalization, pages can look inconsistent."
+    },
+    {
+      "id": "mcq-001-16-002",
+      "question": "Which of the following is a common CSS reset technique?",
+      "options": [
+        "`* { margin: 0; padding: 0; box-sizing: border-box; }`",
+        "`body { color: blue; }`",
+        "`h1 { font-size: 24px; }`",
+        "`a { text-decoration: underline; }`"
+      ],
+      "correct_answer": 1,
+      "explanation": "This reset removes default margin and padding and applies `border-box` for easier box sizing."
+    },
+    {
+      "id": "mcq-001-16-003",
+      "question": "What is the main goal of using Normalize.css?",
+      "options": [
+        "To remove all browser default styles",
+        "To make elements render more consistently across browsers",
+        "To add animation effects",
+        "To minify your CSS"
+      ],
+      "correct_answer": 2,
+      "explanation": "Normalize.css preserves useful defaults but aims for consistent rendering across browsers."
+    },
+    {
+      "id": "mcq-001-16-004",
+      "question": "Where should you place your reset or normalization rules in your stylesheet?",
+      "options": [
+        "At the top, before your custom styles",
+        "At the bottom, after all styles",
+        "In the middle",
+        "It does not matter"
+      ],
+      "correct_answer": 1,
+      "explanation": "Place resets/normalizations at the top so your custom styles can override them."
+    },
+    {
+      "id": "mcq-001-16-005",
+      "question": "Which of these is NOT a benefit of using a CSS reset?",
+      "options": [
+        "Consistency across browsers",
+        "Reduced default spacing",
+        "Directly supports animations",
+        "Fewer cross-browser bugs"
+      ],
+      "correct_answer": 3,
+      "explanation": "A CSS reset does not affect animation support."
+    },
+    {
+      "id": "mcq-001-16-006",
+      "question": "What is a potential drawback of an aggressive CSS reset?",
+      "options": [
+        "It might remove useful browser defaults",
+        "It makes your CSS less maintainable",
+        "It is not supported in Chrome",
+        "It makes all text bold"
+      ],
+      "correct_answer": 1,
+      "explanation": "Aggressive resets can remove helpful defaults, requiring you to redefine them."
+    },
+    {
+      "id": "mcq-001-16-007",
+      "question": "Which of these is a valid use of the universal selector in a reset?",
+      "options": [
+        "`* { margin: 0; }`",
+        "`* { border: 0; }`",
+        "`* { padding: 0; }`",
+        "All of the above"
+      ],
+      "correct_answer": 4,
+      "explanation": "All of these are common universal selector reset techniques."
+    },
+    {
+      "id": "mcq-001-16-008",
+      "question": "Which of the following is true about Normalize.css?",
+      "options": [
+        "It removes all styles",
+        "It preserves some useful browser defaults",
+        "It only works on mobile browsers",
+        "It is a JavaScript library"
+      ],
+      "correct_answer": 2,
+      "explanation": "Normalize.css keeps useful defaults and normalizes the rest."
+    },
+    {
+      "id": "mcq-001-16-009",
+      "question": "What is the effect of `html { box-sizing: border-box; } * { box-sizing: inherit; }`?",
+      "options": [
+        "All elements use the border-box sizing model",
+        "All elements use content-box",
+        "No effect",
+        "It adds a border to all elements"
+      ],
+      "correct_answer": 1,
+      "explanation": "This makes all elements use border-box, which is easier for sizing."
+    },
+    {
+      "id": "mcq-001-16-010",
+      "question": "Why is it recommended to customize resets for your project?",
+      "options": [
+        "To improve CSS performance",
+        "To avoid removing useful defaults you want to keep",
+        "To add more colors",
+        "To avoid using selectors"
+      ],
+      "correct_answer": 2,
+      "explanation": "Customizing resets lets you keep useful defaults and avoid extra work."
+    },
+    {
+      "id": "mcq-001-16-011",
+      "question": "Which of these is a feature of Sanitize.css?",
+      "options": [
+        "Removes all browser styles",
+        "Normalizes and improves browser styles",
+        "Adds JavaScript features",
+        "Only works in Edge"
+      ],
+      "correct_answer": 2,
+      "explanation": "Sanitize.css normalizes and enhances browser styles."
+    },
+    {
+      "id": "mcq-001-16-012",
+      "question": "What happens if you use both a reset and Normalize.css?",
+      "options": [
+        "You get the benefits of both",
+        "There may be conflicts or redundant styles",
+        "Browsers ignore both",
+        "It is required for all projects"
+      ],
+      "correct_answer": 2,
+      "explanation": "Using both can cause conflicts or unnecessary duplication."
+    },
+    {
+      "id": "mcq-001-16-013",
+      "question": "Which of these is NOT a side effect of using a CSS reset?",
+      "options": [
+        "Improved browser consistency",
+        "All elements have zero margin/padding by default",
+        "Instant dark mode support",
+        "You must re-style form elements"
+      ],
+      "correct_answer": 3,
+      "explanation": "Resets do not provide dark mode support."
+    },
+    {
+      "id": "mcq-001-16-014",
+      "question": "What is a best practice for using resets or normalizations?",
+      "options": [
+        "Put them at the top, then override as needed",
+        "Use multiple resets together",
+        "Never use one",
+        "Only use them in JavaScript"
+      ],
+      "correct_answer": 1,
+      "explanation": "Put resets at the top and override as needed for your design."
+    },
+    {
+      "id": "mcq-001-16-015",
+      "question": "Which is TRUE about browser default styles?",
+      "options": [
+        "They are always the same",
+        "They vary between browsers",
+        "They only affect colors",
+        "They are set by CSS frameworks"
+      ],
+      "correct_answer": 2,
+      "explanation": "Browser default styles are different, which is why resets/normalization are used."
+    }
+  ]
+}

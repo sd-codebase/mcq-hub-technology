@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-02-001",
+      "question": "<style>\np {\n  color: blue;\n  font-size: 20px;\n}\n</style>\n<p>Sample text</p>",
+      "output": "<p style=\"color: blue; font-size: 20px;\">Sample text</p>",
+      "explanation": "Both properties are applied to the paragraph, making the text blue and 20px in size."
+    },
+    {
+      "id": "output-001-02-002",
+      "question": "<style>\nh1 {\n  color: red;\n  background-color: yellow;\n}\n</style>\n<h1>Important</h1>",
+      "output": "<h1 style=\"color: red; background-color: yellow;\">Important</h1>",
+      "explanation": "The heading will have red text and a yellow background."
+    },
+    {
+      "id": "output-001-02-003",
+      "question": "<style>\nh2 { font-size: 30px }\n</style>\n<h2>Big Heading</h2>",
+      "output": "<h2 style=\"font-size: 30px;\">Big Heading</h2>",
+      "explanation": "The `<h2>` element gets a font size of 30px."
+    },
+    {
+      "id": "output-001-02-004",
+      "question": "<style>\np{\ncolor:green;\nfont-weight:bold;\n}\n</style>\n<p>Bold green text</p>",
+      "output": "<p style=\"color: green; font-weight: bold;\">Bold green text</p>",
+      "explanation": "CSS ignores whitespace and newlines, applying both properties."
+    },
+    {
+      "id": "output-001-02-005",
+      "question": "<style>\nspan {font-style: italic;}\n</style>\n<p>This is <span>italic text</span>.</p>",
+      "output": "<p>This is <span style=\"font-style: italic;\">italic text</span>.</p>",
+      "explanation": "The span is italicized while the rest of the text is unchanged."
+    },
+    {
+      "id": "output-001-02-006",
+      "question": "<style>\na {\n  color: #0000ff;\n  text-decoration: none;\n}\n</style>\n<a href=\"#\">Link</a>",
+      "output": "<a href=\"#\" style=\"color: #0000ff; text-decoration: none;\">Link</a>",
+      "explanation": "The link appears blue and has no underline."
+    },
+    {
+      "id": "output-001-02-007",
+      "question": "<style>\nul {list-style-type: square;}\n</style>\n<ul><li>One</li><li>Two</li></ul>",
+      "output": "<ul style=\"list-style-type: square;\"><li>One</li><li>Two</li></ul>",
+      "explanation": "List items in the unordered list use square bullets."
+    },
+    {
+      "id": "output-001-02-008",
+      "question": "<style>\nh1, h2 { text-align: center; }\n</style>\n<h1>Title</h1>\n<h2>Subtitle</h2>",
+      "output": "<h1 style=\"text-align: center;\">Title</h1>\n<h2 style=\"text-align: center;\">Subtitle</h2>",
+      "explanation": "Both headers are centered due to the combined selector."
+    },
+    {
+      "id": "output-001-02-009",
+      "question": "<style>\np {\n  color: red font-size: 18px;\n}\n</style>\n<p>Error?</p>",
+      "output": "<p>Error?</p>",
+      "explanation": "The CSS is invalid due to missing semicolon between 'red' and 'font-size', so the browser ignores the styles."
+    },
+    {
+      "id": "output-001-02-010",
+      "question": "<style>\np { color: blue } p { color: green }\n</style>\n<p>What color?</p>",
+      "output": "<p style=\"color: green;\">What color?</p>",
+      "explanation": "The second rule overrides the first, so the paragraph is green."
+    },
+    {
+      "id": "output-001-02-011",
+      "question": "<style>\ndiv { border: 1px solid black; padding: 5px; }\n</style>\n<div>Box</div>",
+      "output": "<div style=\"border: 1px solid black; padding: 5px;\">Box</div>",
+      "explanation": "A border and padding are applied to the div."
+    },
+    {
+      "id": "output-001-02-012",
+      "question": "<style>\nh3 { color: purple } /* This is a comment */\n</style>\n<h3>Commented CSS</h3>",
+      "output": "<h3 style=\"color: purple;\">Commented CSS</h3>",
+      "explanation": "CSS comments are ignored by the browser."
+    },
+    {
+      "id": "output-001-02-013",
+      "question": "<style>\np { background: #eee; color: #444; }\n</style>\n<p>Example</p>",
+      "output": "<p style=\"background: #eee; color: #444;\">Example</p>",
+      "explanation": "Both background and text color are set for the paragraph."
+    },
+    {
+      "id": "output-001-02-014",
+      "question": "<style>\nbody { font-family: Arial, sans-serif; }\n</style>\n<p>Font Example</p>",
+      "output": "<body style=\"font-family: Arial, sans-serif;\"><p>Font Example</p></body>",
+      "explanation": "The font family is set for the entire page."
+    },
+    {
+      "id": "output-001-02-015",
+      "question": "<style>\np { color: blue }\np { font-weight: bold }\n</style>\n<p>Style order?</p>",
+      "output": "<p style=\"color: blue; font-weight: bold;\">Style order?</p>",
+      "explanation": "Both properties are applied; order does not affect the result since both target the same element."
+    }
+  ]
+}

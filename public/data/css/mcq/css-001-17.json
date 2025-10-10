@@ -1,0 +1,179 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-17-001",
+      "question": "What is the main purpose of whitespace in a CSS file?",
+      "options": [
+        "To increase file size",
+        "To separate selectors and declarations for readability",
+        "To make stylesheets run faster",
+        "To add color to the page"
+      ],
+      "correct_answer": 2,
+      "explanation": "Whitespace (spaces, tabs, newlines) in CSS is ignored by browsers and is used to organize code for easier reading and editing."
+    },
+    {
+      "id": "mcq-001-17-002",
+      "question": "Will extra spaces or newlines in your CSS affect how it works?",
+      "options": [
+        "Yes, it will break the CSS",
+        "No, CSS ignores extra whitespace",
+        "Only in some browsers",
+        "It will change the colors"
+      ],
+      "correct_answer": 2,
+      "explanation": "CSS is not sensitive to extra whitespace; it is ignored by the browser."
+    },
+    {
+      "id": "mcq-001-17-003",
+      "question": "Which is the best practice for formatting CSS?",
+      "options": [
+        "Write all rules on one line",
+        "Use consistent indentation and spacing",
+        "Avoid using any whitespace",
+        "Put each selector and property on a separate file"
+      ],
+      "correct_answer": 2,
+      "explanation": "Consistent indentation and spacing make CSS more readable and maintainable."
+    },
+    {
+      "id": "mcq-001-17-004",
+      "question": "Which of these is NOT a whitespace character in CSS?",
+      "options": ["Space", "Tab", "Newline", "Semicolon"],
+      "correct_answer": 4,
+      "explanation": "Semicolon is a syntax character, not whitespace."
+    },
+    {
+      "id": "mcq-001-17-005",
+      "question": "What is the effect of minifying CSS?",
+      "options": [
+        "Removes whitespace to reduce file size",
+        "Adds more whitespace",
+        "Changes CSS functionality",
+        "Makes the website slower"
+      ],
+      "correct_answer": 1,
+      "explanation": "Minification removes unnecessary whitespace and comments to reduce CSS file size for faster loading."
+    },
+    {
+      "id": "mcq-001-17-006",
+      "question": "Which is a recommended CSS formatting style for team projects?",
+      "options": [
+        "Consistent indentation and spacing",
+        "Random spaces and tabs",
+        "No indentation",
+        "All code on one line"
+      ],
+      "correct_answer": 1,
+      "explanation": "Consistent formatting helps teams read and maintain CSS code more effectively."
+    },
+    {
+      "id": "mcq-001-17-007",
+      "question": "How do you separate multiple selectors in a CSS rule?",
+      "options": [
+        "With a space",
+        "With a semicolon",
+        "With a comma",
+        "With a period"
+      ],
+      "correct_answer": 3,
+      "explanation": "A comma is used to separate multiple selectors in a CSS rule."
+    },
+    {
+      "id": "mcq-001-17-008",
+      "question": "Which of the following is a well-formatted CSS rule?",
+      "options": [
+        "`h1 {color: blue;}`",
+        "`h1 { color: blue; }`",
+        "`h1{color:blue;}`",
+        "All of the above"
+      ],
+      "correct_answer": 4,
+      "explanation": "All are valid, but `h1 { color: blue; }` is the most readable. Browsers accept all these forms."
+    },
+    {
+      "id": "mcq-001-17-009",
+      "question": "What is the main reason for using comments in CSS?",
+      "options": [
+        "To explain and document code",
+        "To remove whitespace",
+        "To change layout",
+        "To minify code"
+      ],
+      "correct_answer": 1,
+      "explanation": "Comments are used to explain code for others (and yourself) to read later."
+    },
+    {
+      "id": "mcq-001-17-010",
+      "question": "Which is NOT a benefit of using proper formatting and whitespace in CSS?",
+      "options": [
+        "Easier code maintenance",
+        "Better readability",
+        "Smaller file size",
+        "Fewer bugs"
+      ],
+      "correct_answer": 3,
+      "explanation": "Whitespace actually increases file size, but helps readability and maintenance. Minification can reduce file size."
+    },
+    {
+      "id": "mcq-001-17-011",
+      "question": "What is the purpose of indentation in CSS?",
+      "options": [
+        "To change color",
+        "To improve code structure and readability",
+        "To increase specificity",
+        "To minify code"
+      ],
+      "correct_answer": 2,
+      "explanation": "Indentation makes code structure more obvious and easier to read."
+    },
+    {
+      "id": "mcq-001-17-012",
+      "question": "Does whitespace inside a CSS selector affect its behavior?",
+      "options": [
+        "Yes, always",
+        "No, unless it changes the selector's meaning",
+        "Only for class selectors",
+        "Only in media queries"
+      ],
+      "correct_answer": 2,
+      "explanation": "Whitespace can change the meaning of a selector (e.g., `div .class` vs. `div.class`). Otherwise, it is ignored."
+    },
+    {
+      "id": "mcq-001-17-013",
+      "question": "What is a common convention for placing the opening curly brace `{` in CSS?",
+      "options": [
+        "On the same line as the selector",
+        "On a new line",
+        "It makes no difference",
+        "Both 1 and 2 are common"
+      ],
+      "correct_answer": 4,
+      "explanation": "Both styles are accepted, but most developers put the `{` on the same line as the selector."
+    },
+    {
+      "id": "mcq-001-17-014",
+      "question": "What happens if you accidentally add extra spaces between the property and value in CSS?",
+      "options": [
+        "It causes an error",
+        "CSS ignores the extra spaces",
+        "It changes the value",
+        "It minifies the code"
+      ],
+      "correct_answer": 2,
+      "explanation": "CSS ignores extra spaces between property and value."
+    },
+    {
+      "id": "mcq-001-17-015",
+      "question": "Which tool can automatically format and arrange whitespace in your CSS?",
+      "options": [
+        "CSS minifier",
+        "CSS formatter/linter",
+        "Browser dev tools",
+        "FTP client"
+      ],
+      "correct_answer": 2,
+      "explanation": "A CSS formatter or linter can arrange whitespace and formatting for consistency."
+    }
+  ]
+}

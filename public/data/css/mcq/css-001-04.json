@@ -1,0 +1,184 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-04-001",
+      "question": "How can you add a CSS comment in your stylesheet?",
+      "options": [
+        "`<!-- comment -->`",
+        "`// comment`",
+        "`/* comment */`",
+        "`# comment`"
+      ],
+      "correct_answer": 3,
+      "explanation": "CSS comments use `/* comment */` syntax for both single and multi-line comments."
+    },
+    {
+      "id": "mcq-001-04-002",
+      "question": "What is the main purpose of comments in CSS?",
+      "options": [
+        "To style elements",
+        "To explain code for developers",
+        "To create variables",
+        "To link external files"
+      ],
+      "correct_answer": 2,
+      "explanation": "Comments are used for documentation and explanations within the CSS code for developers."
+    },
+    {
+      "id": "mcq-001-04-003",
+      "question": "Which of the following is a valid CSS comment?",
+      "options": [
+        "`/* This is a comment */`",
+        "`# This is a comment #`",
+        "`-- This is a comment --`",
+        "`// This is a comment`"
+      ],
+      "correct_answer": 1,
+      "explanation": "Only `/* comment */` is valid CSS comment syntax."
+    },
+    {
+      "id": "mcq-001-04-004",
+      "question": "Where can you place comments in a CSS file?",
+      "options": [
+        "Only at the top",
+        "Only between rules",
+        "Anywhere in the CSS file",
+        "Only at the end"
+      ],
+      "correct_answer": 3,
+      "explanation": "CSS comments can be placed anywhere in the CSS file."
+    },
+    {
+      "id": "mcq-001-04-005",
+      "question": "What effect do comments have on the rendering of a web page?",
+      "options": [
+        "They slow down the page",
+        "They change the style",
+        "They are ignored by the browser",
+        "They are shown to the user"
+      ],
+      "correct_answer": 3,
+      "explanation": "Comments are ignored by browsers and have no effect on rendering."
+    },
+    {
+      "id": "mcq-001-04-006",
+      "question": "Which of these will cause an error in your CSS file?",
+      "options": [
+        "`/* This is fine */`",
+        "`// Not allowed in CSS`",
+        "`/* Nested /* comment */ not allowed */`",
+        "Both 2 and 3"
+      ],
+      "correct_answer": 4,
+      "explanation": "`//` is not a valid CSS comment. Nested comments are also not allowed in CSS."
+    },
+    {
+      "id": "mcq-001-04-007",
+      "question": "How does a CSS minifier treat comments by default?",
+      "options": [
+        "Removes all comments",
+        "Converts comments to code",
+        "Leaves them as is",
+        "Displays them to users"
+      ],
+      "correct_answer": 1,
+      "explanation": "Minifiers usually remove all comments to reduce file size."
+    },
+    {
+      "id": "mcq-001-04-008",
+      "question": "Which of the following is NOT a valid use for CSS comments?",
+      "options": [
+        "Documenting code sections",
+        "Temporarily disabling code",
+        "Explaining complex rules",
+        "Styling elements"
+      ],
+      "correct_answer": 4,
+      "explanation": "Comments are for documentation, not for styling elements."
+    },
+    {
+      "id": "mcq-001-04-009",
+      "question": "Can you use comments to prevent part of a CSS rule from running?",
+      "options": [
+        "Yes, by wrapping the code in `/* ... */`",
+        "No, comments do not affect rules",
+        "Only in JavaScript",
+        "Only at the top of the file"
+      ],
+      "correct_answer": 1,
+      "explanation": "You can 'comment out' lines by wrapping them in `/* ... */`."
+    },
+    {
+      "id": "mcq-001-04-010",
+      "question": "Which of these will cause all CSS below it to be ignored?",
+      "options": [
+        "A comment at the top",
+        "A syntax error in a comment",
+        "A missing closing comment tag",
+        "A comment with special characters"
+      ],
+      "correct_answer": 3,
+      "explanation": "A missing closing comment tag (`*/`) can cause the browser to ignore the rest of the CSS file."
+    },
+    {
+      "id": "mcq-001-04-011",
+      "question": "Are CSS comments visible to users in the browser?",
+      "options": [
+        "Yes, always",
+        "No, but visible in developer tools",
+        "No, not even in source code",
+        "Only if the page is printed"
+      ],
+      "correct_answer": 2,
+      "explanation": "Comments are not rendered, but can be seen in the browser's developer tools or source view."
+    },
+    {
+      "id": "mcq-001-04-012",
+      "question": "What happens if you put a CSS comment inside a property value?",
+      "options": [
+        "It works as normal",
+        "It causes an error",
+        "The property is ignored",
+        "The browser crashes"
+      ],
+      "correct_answer": 3,
+      "explanation": "If a comment interrupts a property value, the property may be ignored by the browser."
+    },
+    {
+      "id": "mcq-001-04-013",
+      "question": "Which of the following is a multi-line CSS comment?",
+      "options": [
+        "`/* This is a\nmulti-line comment */`",
+        "`// This is a\nmulti-line comment //`",
+        "`<!-- Multi-line comment -->`",
+        "`# Multi-line\ncomment #`"
+      ],
+      "correct_answer": 1,
+      "explanation": "CSS allows multi-line comments using `/* ... */`."
+    },
+    {
+      "id": "mcq-001-04-014",
+      "question": "Can you comment out an entire CSS rule?",
+      "options": [
+        "Yes, with `/* ... */`",
+        "No, only one line at a time",
+        "Yes, with `// ... //`",
+        "Only with HTML comments"
+      ],
+      "correct_answer": 1,
+      "explanation": "You can comment out any section of CSS, including full rules, by wrapping them in `/* ... */`."
+    },
+    {
+      "id": "mcq-001-04-015",
+      "question": "Which of the following is TRUE about CSS comments?",
+      "options": [
+        "They are required for every rule",
+        "They help document code for humans",
+        "They change how the browser renders styles",
+        "They are visible on the web page"
+      ],
+      "correct_answer": 2,
+      "explanation": "CSS comments are for documentation and do not affect rendering."
+    }
+  ]
+}

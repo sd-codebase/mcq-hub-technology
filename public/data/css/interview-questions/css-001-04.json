@@ -1,0 +1,65 @@
+{
+  "subtopic": "CSS Selectors",
+  "interview_questions": [
+    {
+      "id": "interview-001-04-001",
+      "question": "What is a CSS selector, and why is it important?",
+      "answer": "A CSS selector is a pattern used to target and select HTML elements for styling. Selectors are crucial because they determine which elements a given style rule will apply to.",
+      "explanation": "Understanding selectors is key to writing effective CSS, as they allow you to control the appearance of specific elements or groups of elements on a page."
+    },
+    {
+      "id": "interview-001-04-002",
+      "question": "Name and describe three types of basic CSS selectors.",
+      "answer": "1. **Type selector:** Targets elements by their tag name (e.g., `p` for all paragraphs).\n2. **Class selector:** Targets elements with a specific class attribute, using a dot (e.g., `.highlight`).\n3. **ID selector:** Targets a single element with a specific id attribute, using a hash (e.g., `#main`).",
+      "explanation": "Basic selectors let you style elements broadly (type), by shared characteristics (class), or uniquely (id)."
+    },
+    {
+      "id": "interview-001-04-003",
+      "question": "How do you select all `<p>` elements inside a `<div>` using CSS?",
+      "answer": "Use the descendant selector: `div p { ... }`",
+      "explanation": "This targets all `<p>` elements that are nested anywhere inside a `<div>`, regardless of depth."
+    },
+    {
+      "id": "interview-001-04-004",
+      "question": "What is the difference between the child selector (`>`) and the descendant selector (space)?",
+      "answer": "The **child selector** (`A > B`) selects only direct children, while the **descendant selector** (`A B`) selects any descendant regardless of nesting depth.",
+      "explanation": "`div > p` targets only `<p>` that are *immediate* children of `<div>`, while `div p` targets all `<p>` inside `<div>`."
+    },
+    {
+      "id": "interview-001-04-005",
+      "question": "How do you target elements with a specific attribute value in CSS?",
+      "answer": "Use the attribute selector. Example: `input[type=\"text\"] { ... }` targets all `<input>` elements with `type=\"text\"`.",
+      "explanation": "Attribute selectors are powerful for styling elements based on their attributes and values."
+    },
+    {
+      "id": "interview-001-04-006",
+      "question": "What does the universal selector (`*`) do?",
+      "answer": "The universal selector matches all elements in the document. For example, `* { box-sizing: border-box; }` applies the rule to every element.",
+      "explanation": "It is useful for applying global rules or resets."
+    },
+    {
+      "id": "interview-001-04-007",
+      "question": "Explain how to select multiple unrelated elements with one rule.",
+      "answer": "Use a comma to separate selectors. Example: `h1, h2, .special { color: red; }`",
+      "explanation": "The rule applies to all elements matching any of the listed selectors."
+    },
+    {
+      "id": "interview-001-04-008",
+      "question": "What is a pseudo-class? Give an example.",
+      "answer": "A pseudo-class targets elements in a certain state, such as `:hover` for mouse hover. Example: `a:hover { color: blue; }`",
+      "explanation": "Pseudo-classes style elements based on user interaction or element state."
+    },
+    {
+      "id": "interview-001-04-009",
+      "question": "What is a pseudo-element? Give an example.",
+      "answer": "A pseudo-element styles a specific part of an element, such as `::first-line` or `::before`. Example: `p::first-line { font-weight: bold; }`",
+      "explanation": "Pseudo-elements let you style sub-parts of elements directly with CSS."
+    },
+    {
+      "id": "interview-001-04-010",
+      "question": "How would you select all elements with both class `foo` and class `bar`?",
+      "answer": "Use the selector `.foo.bar { ... }` (no space between class names).",
+      "explanation": "This matches only elements that have both `foo` and `bar` classes at the same time."
+    }
+  ]
+}

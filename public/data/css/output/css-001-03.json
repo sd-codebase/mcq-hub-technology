@@ -1,0 +1,94 @@
+{
+  "output_questions": [
+    {
+      "id": "output-001-03-001",
+      "question": "<style>\n/* This is a comment */\nh1 { color: orange; }\n</style>\n<h1>Title</h1>",
+      "output": "<h1 style=\"color: orange;\">Title</h1>",
+      "explanation": "The CSS comment is ignored, so the `<h1>` appears orange."
+    },
+    {
+      "id": "output-001-03-002",
+      "question": "<style>\n/* h2 { color: red; } */\nh2 { color: green; }\n</style>\n<h2>Subtitle</h2>",
+      "output": "<h2 style=\"color: green;\">Subtitle</h2>",
+      "explanation": "The commented-out CSS (`h2 { color: red; }`) does nothing; only the green color rule is applied."
+    },
+    {
+      "id": "output-001-03-003",
+      "question": "<style>\n/*\np {\n  color: blue;\n}\n*/\np {\n  color: purple;\n}\n</style>\n<p>Paragraph</p>",
+      "output": "<p style=\"color: purple;\">Paragraph</p>",
+      "explanation": "Only the non-commented rule is applied (`color: purple`)."
+    },
+    {
+      "id": "output-001-03-004",
+      "question": "<style>\nh1 {\n  /* color: red; */\n  color: green;\n}\n</style>\n<h1>Heading</h1>",
+      "output": "<h1 style=\"color: green;\">Heading</h1>",
+      "explanation": "The commented `color: red;` is ignored, so the heading is green."
+    },
+    {
+      "id": "output-001-03-005",
+      "question": "<style>\np {\n  font-size: 20px; /* Large text */\n  color: black;\n}\n</style>\n<p>Text</p>",
+      "output": "<p style=\"font-size: 20px; color: black;\">Text</p>",
+      "explanation": "Comment after a property doesn't affect the applied styles."
+    },
+    {
+      "id": "output-001-03-006",
+      "question": "<style>\n/* Set color to blue for all paragraphs */\np { color: blue; }\n</style>\n<p>Blue?</p>",
+      "output": "<p style=\"color: blue;\">Blue?</p>",
+      "explanation": "The comment is ignored; paragraph is blue."
+    },
+    {
+      "id": "output-001-03-007",
+      "question": "<style>\nh2 /* comment here */ { color: pink; }\n</style>\n<h2>Subtitle</h2>",
+      "output": "<h2 style=\"color: pink;\">Subtitle</h2>",
+      "explanation": "Comments between selector and block are ignored; rule still applies."
+    },
+    {
+      "id": "output-001-03-008",
+      "question": "<style>\n/* color: green; */\nh3 { color: red; }\n</style>\n<h3>Subheading</h3>",
+      "output": "<h3 style=\"color: red;\">Subheading</h3>",
+      "explanation": "Only the uncommented color is used."
+    },
+    {
+      "id": "output-001-03-009",
+      "question": "<style>\n/*\n.multiple-class {\n  color: orange;\n}\n*/\n.single-class {\n  color: purple;\n}\n</style>\n<span class=\"single-class\">Color</span>",
+      "output": "<span class=\"single-class\" style=\"color: purple;\">Color</span>",
+      "explanation": "Only `.single-class` is active; `.multiple-class` is commented out."
+    },
+    {
+      "id": "output-001-03-010",
+      "question": "<style>\np { color: green; /* background: yellow; */ }\n</style>\n<p>Test</p>",
+      "output": "<p style=\"color: green;\">Test</p>",
+      "explanation": "The background property is commented out, so only the color is applied."
+    },
+    {
+      "id": "output-001-03-011",
+      "question": "<style>\n/*\nh4 { color: blue; }\n*/\nh4 { color: gray; }\n</style>\n<h4>Section</h4>",
+      "output": "<h4 style=\"color: gray;\">Section</h4>",
+      "explanation": "The blue rule is commented out; the gray rule is used."
+    },
+    {
+      "id": "output-001-03-012",
+      "question": "<style>\nh1 { color: red; }\n/* h1 { color: blue; } */\n</style>\n<h1>Color?</h1>",
+      "output": "<h1 style=\"color: red;\">Color?</h1>",
+      "explanation": "Only the uncommented rule (`red`) applies."
+    },
+    {
+      "id": "output-001-03-013",
+      "question": "<style>\n/* This is a comment\nacross multiple lines */\nh2 { color: orange; }\n</style>\n<h2>Heading</h2>",
+      "output": "<h2 style=\"color: orange;\">Heading</h2>",
+      "explanation": "Multi-line comments are ignored; color is orange."
+    },
+    {
+      "id": "output-001-03-014",
+      "question": "<style>\np {\n  color: #222; /* dark gray */\n}\n</style>\n<p>Color?</p>",
+      "output": "<p style=\"color: #222;\">Color?</p>",
+      "explanation": "Comments don't affect the property value."
+    },
+    {
+      "id": "output-001-03-015",
+      "question": "<style>\n/* Remove the following style\nh5 { color: magenta; }\n*/\nh5 { color: teal; }\n</style>\n<h5>Test</h5>",
+      "output": "<h5 style=\"color: teal;\">Test</h5>",
+      "explanation": "The magenta rule is commented out. The teal color is used."
+    }
+  ]
+}

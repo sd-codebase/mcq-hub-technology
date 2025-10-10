@@ -1,0 +1,139 @@
+{
+  "mcqs": [
+    {
+      "id": "mcq-001-09-001",
+      "question": "Which of the following is a valid CSS unit?",
+      "options": ["`px`", "`em`", "`rem`", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "CSS supports a variety of units including `px`, `em`, `rem`, `%`, `vw`, `vh`, and more."
+    },
+    {
+      "id": "mcq-001-09-002",
+      "question": "What is the base value for `1em` in CSS?",
+      "options": [
+        "The root element's font size",
+        "The parent element's font size",
+        "Always 16px",
+        "The browser default"
+      ],
+      "correct_answer": 2,
+      "explanation": "`1em` is relative to the font size of the parent element."
+    },
+    {
+      "id": "mcq-001-09-003",
+      "question": "Which unit is relative to the root (`html`) element's font size?",
+      "options": ["`em`", "`rem`", "`px`", "`%`"],
+      "correct_answer": 2,
+      "explanation": "`rem` stands for 'root em' and is relative to the root element's font size."
+    },
+    {
+      "id": "mcq-001-09-004",
+      "question": "What does the `%` unit represent in CSS?",
+      "options": [
+        "Pixels",
+        "Relative to parent",
+        "Relative to root",
+        "Absolute value"
+      ],
+      "correct_answer": 2,
+      "explanation": "`%` units are relative to the parent element's corresponding property."
+    },
+    {
+      "id": "mcq-001-09-005",
+      "question": "Which unit is best for creating scalable layouts in CSS?",
+      "options": ["`px`", "`em` or `rem`", "`cm`", "`pt`"],
+      "correct_answer": 2,
+      "explanation": "`em` and `rem` are relative units and are preferred for scalable, responsive layouts."
+    },
+    {
+      "id": "mcq-001-09-006",
+      "question": "How many pixels is `1in` equal to in most browsers?",
+      "options": ["72px", "96px", "120px", "144px"],
+      "correct_answer": 2,
+      "explanation": "In CSS, `1in` (inch) is defined as exactly `96px`."
+    },
+    {
+      "id": "mcq-001-09-007",
+      "question": "Which CSS unit is relative to the viewport width?",
+      "options": ["`vw`", "`vh`", "`vmin`", "All of the above"],
+      "correct_answer": 4,
+      "explanation": "`vw`, `vh`, and `vmin` are all viewport-relative units."
+    },
+    {
+      "id": "mcq-001-09-008",
+      "question": "What is the value of `100vw`?",
+      "options": [
+        "100% of the parent width",
+        "100% of the viewport width",
+        "100% of the root width",
+        "100% of the screen width in pixels"
+      ],
+      "correct_answer": 2,
+      "explanation": "`100vw` means 100% of the viewport's width."
+    },
+    {
+      "id": "mcq-001-09-009",
+      "question": "Which is a valid use of the `calc()` function?",
+      "options": [
+        "`width: calc(100% - 50px);`",
+        "`margin: calc(2em + 5px);`",
+        "`font-size: calc(1rem * 2);`",
+        "All of the above"
+      ],
+      "correct_answer": 4,
+      "explanation": "The `calc()` function allows mathematical expressions with units in CSS."
+    },
+    {
+      "id": "mcq-001-09-010",
+      "question": "Which unit should you prefer for font sizes to ensure accessibility?",
+      "options": ["`px`", "`rem`", "`cm`", "`in`"],
+      "correct_answer": 2,
+      "explanation": "`rem` is recommended for font sizes because it's scalable and respects user preferences."
+    },
+    {
+      "id": "mcq-001-09-011",
+      "question": "What does `50vh` represent in CSS?",
+      "options": [
+        "50% of the parent height",
+        "50% of the element height",
+        "50% of the viewport height",
+        "50px"
+      ],
+      "correct_answer": 3,
+      "explanation": "`vh` is relative to the viewport height, so `50vh` is 50% of the viewport's height."
+    },
+    {
+      "id": "mcq-001-09-012",
+      "question": "Which of the following is NOT a valid CSS unit?",
+      "options": ["`ex`", "`ch`", "`vw`", "`kg`"],
+      "correct_answer": 4,
+      "explanation": "`kg` is not a valid CSS unit. The others are valid."
+    },
+    {
+      "id": "mcq-001-09-013",
+      "question": "What is the default font-size for most browsers?",
+      "options": ["12px", "14px", "16px", "18px"],
+      "correct_answer": 3,
+      "explanation": "Most browsers use 16px as the default font size."
+    },
+    {
+      "id": "mcq-001-09-014",
+      "question": "Which unit is absolute in CSS?",
+      "options": ["`em`", "`px`", "`%`", "`rem`"],
+      "correct_answer": 2,
+      "explanation": "`px` is an absolute (fixed) unit, unlike `em`, `rem`, or `%`, which are relative."
+    },
+    {
+      "id": "mcq-001-09-015",
+      "question": "Which of these statements about CSS units is TRUE?",
+      "options": [
+        "Use only `px` for web design",
+        "`rem` and `em` scale with user settings",
+        "`cm` is best for responsive layouts",
+        "`vh` is the same as `%`"
+      ],
+      "correct_answer": 2,
+      "explanation": "`rem` and `em` are relative units that scale based on user and browser settings, supporting accessibility."
+    }
+  ]
+}
