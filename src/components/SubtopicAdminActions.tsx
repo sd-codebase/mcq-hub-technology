@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 
 type QuestionType = "mcq" | "output" | "interview";
 
@@ -67,6 +68,54 @@ export default function SubtopicAdminActions({
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
 
+  // Tests state
+  const [tests, setTests] = useState<any[]>([]);
+  const [testsLoading, setTestsLoading] = useState(false);
+  const [testsError, setTestsError] = useState("");
+  const [isTestsModalOpen, setIsTestsModalOpen] = useState(false);
+
+  // Fetch tests for this subtopic
+  const fetchTests = async () => {
+    setTestsLoading(true);
+    setTestsError("");
+
+    try {
+      // Fetch all three types in parallel
+      const [mcqRes, outputRes, interviewRes] = await Promise.all([
+        fetch(`/api/tests?subtopicId=${subtopic.id}&questionType=mcq`),
+        fetch(`/api/tests?subtopicId=${subtopic.id}&questionType=output`),
+        fetch(`/api/tests?subtopicId=${subtopic.id}&questionType=interview`),
+      ]);
+
+      // Parse responses, handling errors gracefully
+      const mcqData = mcqRes.ok ? await mcqRes.json() : { data: [] };
+      const outputData = outputRes.ok ? await outputRes.json() : { data: [] };
+      const interviewData = interviewRes.ok
+        ? await interviewRes.json()
+        : { data: [] };
+
+      // Combine all tests
+      const allTests = [
+        ...(mcqData.data || []),
+        ...(outputData.data || []),
+        ...(interviewData.data || []),
+      ];
+
+      // Sort by creation date (newest first)
+      allTests.sort(
+        (a, b) =>
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      );
+
+      setTests(allTests);
+    } catch (error) {
+      console.error("Error fetching tests:", error);
+      setTestsError("Failed to load tests");
+    } finally {
+      setTestsLoading(false);
+    }
+  };
+
   const openModal = (type: QuestionType) => {
     setModalType(type);
     setIsOpen(true);
@@ -80,6 +129,15 @@ export default function SubtopicAdminActions({
     setJsonInput("");
     setError("");
     setSuccess("");
+  };
+
+  const openTestsModal = () => {
+    setIsTestsModalOpen(true);
+    fetchTests();
+  };
+
+  const closeTestsModal = () => {
+    setIsTestsModalOpen(false);
   };
 
   const handleSave = async () => {
@@ -129,8 +187,11 @@ export default function SubtopicAdminActions({
       setSuccess(
         `Successfully saved ${data.saved} question(s)${
           data.duplicates > 0 ? `, ${data.duplicates} duplicate(s) skipped` : ""
-        }`
+        }${data.testsCreated ? `, ${data.testsCreated} test(s) created` : ""}`
       );
+
+      // Re-fetch tests to show newly created ones
+      fetchTests();
 
       // Close modal after short delay
       setTimeout(() => {
@@ -173,9 +234,19 @@ export default function SubtopicAdminActions({
         >
           Interview Questions
         </button>
+        <button
+          onClick={openTestsModal}
+          className="px-4 py-2 rounded-full text-sm font-semibold text-white
+                   bg-gradient-to-r from-amber-600 to-orange-600
+                   hover:from-amber-700 hover:to-orange-700
+                   transition-all duration-300 shadow-lg shadow-amber-500/20
+                   transform hover:scale-105"
+        >
+          View Tests
+        </button>
       </div>
 
-      {/* Modal */}
+      {/* Add Questions Modal */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
           <div className="bg-gray-800 rounded-xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-gray-700">
@@ -243,6 +314,109 @@ export default function SubtopicAdminActions({
                            hover:bg-gray-600 transition-all duration-300 disabled:opacity-50"
                 >
                   Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Tests Modal */}
+      {isTestsModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
+          <div className="bg-gray-800 rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-700">
+            <div className="p-6">
+              {/* Header with Refresh Button */}
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-bold text-white">
+                  Existing Tests - {subtopic.name}
+                </h2>
+                <button
+                  onClick={fetchTests}
+                  disabled={testsLoading}
+                  className="px-3 py-1.5 rounded-lg text-sm font-semibold text-white
+                           bg-indigo-600 hover:bg-indigo-700
+                           transition-all duration-300 disabled:opacity-50"
+                >
+                  {testsLoading ? "⏳ Loading..." : "🔄 Refresh"}
+                </button>
+              </div>
+
+              {/* Loading State */}
+              {testsLoading && (
+                <div className="text-center py-12 text-gray-400">
+                  <div className="text-lg">Loading tests...</div>
+                </div>
+              )}
+
+              {/* Error State */}
+              {testsError && (
+                <div className="p-4 bg-red-900/20 border border-red-500 rounded text-red-400 text-center">
+                  {testsError}
+                </div>
+              )}
+
+              {/* Empty State */}
+              {!testsLoading && !testsError && tests.length === 0 && (
+                <div className="text-center py-12">
+                  <div className="text-gray-500 text-lg mb-2">
+                    No tests created yet
+                  </div>
+                  <div className="text-gray-600 text-sm">
+                    Tests will appear here after you add at least 5 questions of the same type
+                  </div>
+                </div>
+              )}
+
+              {/* Tests Grid */}
+              {!testsLoading && !testsError && tests.length > 0 && (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {tests.map((test) => {
+                    const encodedName = encodeURIComponent(subtopic.name);
+                    const questionType = test.questionType || "mcq";
+                    const testUrl = `/subjects/${subject}/test/${questionType}/${subtopic.id}/${encodedName}`;
+
+                    // Determine badge color based on question type
+                    const badgeColors = {
+                      mcq: "bg-indigo-500",
+                      output: "bg-teal-500",
+                      interview: "bg-pink-500",
+                    };
+                    const badgeColor = badgeColors[questionType as keyof typeof badgeColors] || "bg-gray-500";
+
+                    return (
+                      <Link
+                        key={test._id}
+                        href={testUrl}
+                        className="block p-4 rounded-lg border border-gray-600 bg-gray-700/50
+                                 hover:bg-gray-700 hover:border-indigo-500
+                                 transition-all duration-300 transform hover:scale-105"
+                      >
+                        <div className="font-semibold text-white text-lg mb-2">
+                          {test.testName}
+                        </div>
+                        <div className="text-sm text-gray-400 mb-3">
+                          {test.questionCount} questions
+                        </div>
+                        <span
+                          className={`inline-block px-2 py-1 rounded text-xs font-bold text-white ${badgeColor}`}
+                        >
+                          {questionType.toUpperCase()}
+                        </span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+
+              {/* Close Button */}
+              <div className="mt-6 flex justify-end">
+                <button
+                  onClick={closeTestsModal}
+                  className="px-6 py-3 rounded-lg font-semibold text-gray-300 bg-gray-700
+                           hover:bg-gray-600 transition-all duration-300"
+                >
+                  Close
                 </button>
               </div>
             </div>
