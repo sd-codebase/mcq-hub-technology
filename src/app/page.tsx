@@ -1,10 +1,8 @@
 import { Header } from "@/components/header";
-import { TechLogoGenerator } from "@/components/logo";
 import { Zap } from "@/components/zap";
-import Image from "next/image";
+import SubjectsSection from "@/components/SubjectsSection";
 import Link from "next/link";
 import React from "react";
-import { subjects } from "./constants/subject";
 
 // --- Icon Imports (Using lucide-react approximations) ---
 const Code = ({ className }: { className?: string }) => (
@@ -176,49 +174,6 @@ const Features = () => {
     </section>
   );
 };
-
-const SubjectsSection = () => (
-  <section id="subjects" className="py-20 bg-gray-950">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-4xl font-bold text-center text-white mb-4">
-        Deep Coverage Across Top Technologies
-      </h2>
-      <p className="text-xl text-gray-400 text-center mb-12 max-w-3xl mx-auto">
-        Find specialized question sets for the languages and frameworks that
-        power the modern web.
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {subjects.map((subject, index) => (
-          <Link
-            key={index}
-            href={subject.link}
-            className="transform hover:scale-105 transition duration-300 shadow-xl border  cursor-pointer"
-          >
-            {/* Logo Placeholder - User mentioned they have the logos */}
-            <div
-              key={index}
-              className="p-6 bg-gray-800 rounded-xl flex flex-col items-center text-center 
-                       transform hover:scale-105 transition duration-300 
-                       shadow-xl border border-gray-700 cursor-pointer group"
-            >
-              {/* Logo container with fixed dimensions */}
-              <div>
-                <TechLogoGenerator text={subject.name} />
-              </div>
-              <h4 className="mt-4 text-lg font-medium text-white group-hover:text-indigo-300">
-                {subject.name}
-              </h4>
-              <span className="text-sm text-gray-500 mt-1">
-                ({subject.questions}+ Questions)
-              </span>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  </section>
-);
 
 const CtaSection = () => (
   <section id="start-test" className="py-24 bg-gray-900">

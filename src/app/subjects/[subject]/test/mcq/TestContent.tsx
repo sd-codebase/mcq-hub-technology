@@ -35,14 +35,18 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
   useEffect(() => {
     if (!subtopic || !subject) return;
     setShowLoader(true);
-    // Using the new API route structure
-    fetch(`/api/${subject}/questions/mcq/${subtopic}`)
+    // Using the new MongoDB API
+    fetch(`/api/questions/mcq?topicId=${subtopic}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch questions");
         return res.json();
       })
       .then((response) => {
-        setQuestions(response.data?.mcqs || []);
+        if (response.success) {
+          setQuestions(response.data || []);
+        } else {
+          setQuestions([]);
+        }
         setShowLoader(false);
       })
       .catch((err) => {
@@ -82,8 +86,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
 
   if (!questions.length) return <div>Loading questions...</div>;
 
-  // Try to get topic/subtopic name from questions[0] or fallback to subtopic param
-  const topicName = questions[0]?.topic || subtopic || "";
+  // Use subtopicName from query params
   const testType = "MCQ Test";
   const q = questions[current];
 
@@ -98,7 +101,8 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
       arr[current] = selected ?? -1;
       return arr;
     });
-    if (selected === q.correct_answer - 1) setScore((s) => s + 1);
+    // New API uses 0-based index for correct_answer
+    if (selected === q.correct_answer) setScore((s) => s + 1);
     setSelected(null);
     setShowLoader(true);
     setTimeout(() => {
@@ -173,10 +177,11 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
         <div className="space-y-8">
           {questions.map((q, idx) => {
             const userAns = userAnswers[idx];
-            const isCorrect = userAns === q.correct_answer - 1;
+            // New API uses 0-based index for correct_answer
+            const isCorrect = userAns === q.correct_answer;
             return (
               <div
-                key={q.id}
+                key={q._id || idx}
                 className="p-6 rounded-xl shadow-2xl border border-gray-700"
                 style={{
                   background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)",
@@ -191,7 +196,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
                       key={oidx}
                       className={`px-4 py-3 rounded-lg flex items-center gap-3 text-base
                         ${
-                          oidx === q.correct_answer - 1
+                          oidx === q.correct_answer
                             ? "bg-green-50 border border-green-500 text-green-700"
                             : userAns === oidx
                             ? "bg-red-50 border border-red-500 text-red-700"
@@ -200,7 +205,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
                       `}
                     >
                       <span className="text-lg">
-                        {oidx === q.correct_answer - 1
+                        {oidx === q.correct_answer
                           ? "✓"
                           : userAns === oidx
                           ? "✗"

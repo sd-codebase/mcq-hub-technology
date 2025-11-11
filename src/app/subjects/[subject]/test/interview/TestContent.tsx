@@ -24,14 +24,18 @@ export default function InterviewTestContent({ subject }: { subject: string }) {
 
   useEffect(() => {
     if (!subtopic || !subject) return;
-    // Using the new API route structure
-    fetch(`/api/${subject}/questions/interview-questions/${subtopic}`)
+    // Using the new MongoDB API
+    fetch(`/api/questions/interview?topicId=${subtopic}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch questions");
         return res.json();
       })
       .then((response) => {
-        setQuestions(response.data?.interview_questions || []);
+        if (response.success) {
+          setQuestions(response.data || []);
+        } else {
+          setQuestions([]);
+        }
       })
       .catch((err) => {
         setError("Failed to load questions.");

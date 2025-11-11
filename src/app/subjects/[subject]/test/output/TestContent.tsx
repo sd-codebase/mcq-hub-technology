@@ -26,10 +26,18 @@ export default function TestContent({ subject }: { subject: string }) {
   useEffect(() => {
     if (!subtopic || !subject) return;
 
-    fetch(`/api/${subject}/questions/output/${subtopic}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setQuestions(data?.data?.output_questions || []);
+    // Using the new MongoDB API
+    fetch(`/api/questions/output?topicId=${subtopic}`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch questions");
+        return res.json();
+      })
+      .then((response) => {
+        if (response.success) {
+          setQuestions(response.data || []);
+        } else {
+          setQuestions([]);
+        }
       })
       .catch(() => setError("Failed to load questions."));
   }, [subtopic, subject]);
