@@ -1,31 +1,35 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import TestHeader from "../../../../../../../components/TestHeader";
+
 const MDEditorRenderer = dynamic(
-  () => import("../../../../../components/MDEditorRenderer"),
+  () => import("../../../../../../../components/MDEditorRenderer"),
   { ssr: false }
 );
-import { useSearchParams } from "next/navigation";
-import TestHeader from "../../../../../components/TestHeader";
 
-export default function InterviewTestContent({ subject }: { subject: string }) {
-  const searchParams = useSearchParams();
-  const subtopic = searchParams.get("subtopic");
-  const subtopicName = decodeURIComponent(
-    searchParams.get("subtopicName") || ""
-  );
-
+export default function TestContent({
+  subject,
+  subtopicId,
+  subtopicName,
+}: {
+  subject: string;
+  subtopicId: string;
+  subtopicName: string;
+}) {
   const [questions, setQuestions] = useState<any[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [current, setCurrent] = useState(0);
   const [showResult, setShowResult] = useState(false);
+  const [score, setScore] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [showExplanation, setShowExplanation] = useState(false);
 
   useEffect(() => {
-    if (!subtopic || !subject) return;
+    if (!subtopicId || !subject) return;
+
     // Using the new MongoDB API
-    fetch(`/api/questions/interview?topicId=${subtopic}`)
+    fetch(`/api/questions/output?topicId=${subtopicId}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch questions");
         return res.json();
@@ -37,17 +41,21 @@ export default function InterviewTestContent({ subject }: { subject: string }) {
           setQuestions([]);
         }
       })
-      .catch((err) => {
-        setError("Failed to load questions.");
-      });
-  }, [subtopic, subject]);
+      .catch(() => setError("Failed to load questions."));
+  }, [subtopicId, subject]);
 
   if (error) return <div className="text-red-500">{error}</div>;
-  if (!subtopic)
-    return <div className="text-red-500">No subtopic selected.</div>;
   if (!questions.length) return <div>Loading questions...</div>;
 
   const q = questions[current];
+  const testType = "Output Test";
+
+  function handleCheck() {
+    setShowExplanation(true);
+    if (userAnswer.trim() === q.output.replace(/```|\n/g, "").trim()) {
+      setScore((s) => s + 1);
+    }
+  }
 
   function handleNext() {
     setUserAnswer("");
@@ -68,17 +76,19 @@ export default function InterviewTestContent({ subject }: { subject: string }) {
           Test Complete! 🎉
         </h2>
         <div className="mb-6 text-xl text-gray-200">
-          You completed all {questions.length} interview questions
+          Your score: <span className="text-indigo-400 font-bold">{score}</span>{" "}
+          / {questions.length}
         </div>
         <div className="flex flex-wrap gap-4">
           <button
             className="px-6 py-3 rounded-full text-white font-semibold cursor-pointer
-                     bg-gradient-to-r from-indigo-600 to-purple-600 
+                     bg-gradient-to-r from-indigo-600 to-purple-600
                      hover:from-indigo-700 hover:to-purple-700
                      transition-all duration-300 shadow-lg shadow-indigo-500/20
                      transform hover:scale-105"
             onClick={() => {
               setCurrent(0);
+              setScore(0);
               setShowResult(false);
             }}
           >
@@ -89,7 +99,7 @@ export default function InterviewTestContent({ subject }: { subject: string }) {
             className="px-6 py-3 rounded-full font-semibold cursor-pointer
                      bg-gradient-to-r from-teal-500 to-green-500
                      hover:from-teal-600 hover:to-green-600
-                     text-white transition-all duration-300 
+                     text-white transition-all duration-300
                      shadow-lg shadow-teal-500/20
                      transform hover:scale-105"
           >
@@ -108,7 +118,7 @@ export default function InterviewTestContent({ subject }: { subject: string }) {
     >
       <TestHeader
         subtopicName={subtopicName}
-        testType="Interview Questions"
+        testType={testType}
         currentQuestion={current + 1}
         totalQuestions={questions.length}
       />
@@ -117,54 +127,55 @@ export default function InterviewTestContent({ subject }: { subject: string }) {
         <MDEditorRenderer value={q.question} />
       </div>
 
-      <textarea
-        className="w-full border-2 px-6 py-4 rounded-lg mb-6 text-gray-700 bg-white shadow-md
-                 border-gray-200 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-500/50 focus:ring-offset-2
-                 transition-all duration-300"
-        placeholder="Write your answer here..."
-        value={userAnswer}
-        onChange={(e) => setUserAnswer(e.target.value)}
-        disabled={showExplanation}
-        rows={6}
-      />
+      <div className="space-y-6 mb-6">
+        <input
+          className="w-full border-2 px-6 py-4 rounded-lg text-gray-700 bg-white shadow-md
+                   border-gray-200 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-500/50 focus:ring-offset-2
+                   transition-all duration-300 text-lg"
+          placeholder="Type the output here..."
+          value={userAnswer}
+          onChange={(e) => setUserAnswer(e.target.value)}
+          disabled={showExplanation}
+        />
 
-      {showExplanation && (
-        <div className="space-y-6 mb-6">
-          <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
-            <div className="text-indigo-700 font-semibold text-lg mb-3">
-              Sample Answer:
+        {showExplanation && (
+          <div className="space-y-4">
+            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
+              <div className="text-indigo-700 font-semibold text-lg mb-3">
+                Expected Output:
+              </div>
+              <div className="text-gray-800 font-mono bg-gray-50 p-3 rounded border border-gray-100">
+                <MDEditorRenderer value={q.output} />
+              </div>
             </div>
-            <div className="text-gray-700">
-              <MDEditorRenderer value={q.answer} />
+
+            <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
+              <div className="text-indigo-700 font-semibold text-lg mb-3">
+                Explanation:
+              </div>
+              <div className="text-gray-700">
+                <MDEditorRenderer value={q.explanation} />
+              </div>
             </div>
           </div>
-
-          <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
-            <div className="text-indigo-700 font-semibold text-lg mb-3">
-              Additional Notes:
-            </div>
-            <div className="text-gray-700">
-              <MDEditorRenderer value={q.explanation} />
-            </div>
-          </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {!showExplanation ? (
         <button
           className="px-8 py-3 rounded-full text-white font-semibold text-lg cursor-pointer
-                   bg-gradient-to-r from-indigo-600 to-purple-600 
+                   bg-gradient-to-r from-indigo-600 to-purple-600
                    hover:from-indigo-700 hover:to-purple-700
                    transition-all duration-300 shadow-lg shadow-indigo-500/20
                    transform hover:scale-105"
-          onClick={() => setShowExplanation(true)}
+          onClick={handleCheck}
         >
-          Show Answer
+          Check Answer
         </button>
       ) : (
         <button
           className="px-8 py-3 rounded-full text-white font-semibold text-lg cursor-pointer
-                   bg-gradient-to-r from-indigo-600 to-purple-600 
+                   bg-gradient-to-r from-indigo-600 to-purple-600
                    hover:from-indigo-700 hover:to-purple-700
                    transition-all duration-300 shadow-lg shadow-indigo-500/20
                    transform hover:scale-105"

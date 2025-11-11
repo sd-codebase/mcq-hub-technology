@@ -2,24 +2,25 @@
 import React, { useEffect, useState, useRef } from "react";
 import dynamic from "next/dynamic";
 const MDEditorRenderer = dynamic(
-  () => import("../../../../../components/MDEditorRenderer"),
+  () => import("../../../../../../../components/MDEditorRenderer"),
   { ssr: false }
 );
-import { useSearchParams } from "next/navigation";
-import TestHeader from "../../../../../components/TestHeader";
+import TestHeader from "../../../../../../../components/TestHeader";
 
 const MCQ_TIMER =
   typeof process !== "undefined" && process.env.NEXT_PUBLIC_MCQ_TIMER
     ? parseInt(process.env.NEXT_PUBLIC_MCQ_TIMER)
     : 60;
 
-export default function McqTestContentPage({ subject }: { subject: string }) {
-  const searchParams = useSearchParams();
-  const subtopic = searchParams.get("subtopic");
-  const subtopicName = decodeURIComponent(
-    searchParams.get("subtopicName") || ""
-  );
-
+export default function McqTestContentPage({
+  subject,
+  subtopicId,
+  subtopicName,
+}: {
+  subject: string;
+  subtopicId: string;
+  subtopicName: string;
+}) {
   const [questions, setQuestions] = useState<any[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [current, setCurrent] = useState(0);
@@ -33,10 +34,10 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
   const [userAnswers, setUserAnswers] = useState<number[]>([]);
 
   useEffect(() => {
-    if (!subtopic || !subject) return;
+    if (!subtopicId || !subject) return;
     setShowLoader(true);
     // Using the new MongoDB API
-    fetch(`/api/questions/mcq?topicId=${subtopic}`)
+    fetch(`/api/questions/mcq?topicId=${subtopicId}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch questions");
         return res.json();
@@ -53,7 +54,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
         setError("Failed to load questions.");
         setShowLoader(false);
       });
-  }, [subtopic, subject]);
+  }, [subtopicId, subject]);
 
   // Timer logic
   useEffect(() => {
@@ -81,12 +82,9 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
   }, [timer]);
 
   if (error) return <div className="text-red-500">{error}</div>;
-  if (!subtopic)
-    return <div className="text-red-500">No subtopic selected.</div>;
 
   if (!questions.length) return <div>Loading questions...</div>;
 
-  // Use subtopicName from query params
   const testType = "MCQ Test";
   const q = questions[current];
 
@@ -130,7 +128,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
         <div className="flex flex-wrap gap-4">
           <button
             className="px-6 py-3 rounded-full text-white font-semibold cursor-pointer
-                     bg-gradient-to-r from-indigo-600 to-purple-600 
+                     bg-gradient-to-r from-indigo-600 to-purple-600
                      hover:from-indigo-700 hover:to-purple-700
                      transition-all duration-300 shadow-lg shadow-indigo-500/20
                      transform hover:scale-105"
@@ -160,7 +158,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
             className="px-6 py-3 rounded-full font-semibold cursor-pointer
                      bg-gradient-to-r from-teal-500 to-green-500
                      hover:from-teal-600 hover:to-green-600
-                     text-white transition-all duration-300 
+                     text-white transition-all duration-300
                      shadow-lg shadow-teal-500/20
                      transform hover:scale-105"
           >
@@ -230,7 +228,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
         <div className="flex gap-4 mt-8">
           <button
             className="px-8 py-3 rounded-full text-white font-semibold cursor-pointer
-                     bg-gradient-to-r from-indigo-600 to-purple-600 
+                     bg-gradient-to-r from-indigo-600 to-purple-600
                      hover:from-indigo-700 hover:to-purple-700
                      transition-all duration-300 shadow-lg shadow-indigo-500/20
                      transform hover:scale-105"
@@ -250,7 +248,7 @@ export default function McqTestContentPage({ subject }: { subject: string }) {
             className="px-8 py-3 rounded-full font-semibold cursor-pointer
                      bg-gradient-to-r from-teal-500 to-green-500
                      hover:from-teal-600 hover:to-green-600
-                     text-white transition-all duration-300 
+                     text-white transition-all duration-300
                      shadow-lg shadow-teal-500/20
                      transform hover:scale-105"
           >
