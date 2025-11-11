@@ -3,6 +3,28 @@ import { Zap } from "@/components/zap";
 import SubjectsSection from "@/components/SubjectsSection";
 import Link from "next/link";
 import React from "react";
+import { generatePageMetadata } from "@/lib/seo";
+
+export const metadata = generatePageMetadata({
+  title: "Home - Interactive Coding Quizzes & Practice Tests",
+  description:
+    "Master coding skills with interactive quizzes. Practice MCQ, code output, and interview questions for JavaScript, TypeScript, React, Node.js, and more. Start your tech career preparation today.",
+  path: "/",
+  keywords: [
+    "coding quiz",
+    "programming tests",
+    "interview preparation",
+    "MCQ tests",
+    "JavaScript quiz",
+    "TypeScript quiz",
+    "React quiz",
+    "Node.js quiz",
+    "coding interview",
+    "technical assessment",
+    "online coding practice",
+    "developer quiz",
+  ],
+});
 
 // --- Icon Imports (Using lucide-react approximations) ---
 const Code = ({ className }: { className?: string }) => (

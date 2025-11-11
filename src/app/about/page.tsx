@@ -1,5 +1,20 @@
 import React from "react";
 import { offerings, technologies } from "../constants/about";
+import { generatePageMetadata } from "@/lib/seo";
+
+export const metadata = generatePageMetadata({
+  title: "About Us - MCQ Hub Mission & Vision",
+  description:
+    "Learn about MCQ Hub's mission to empower developers through comprehensive technical assessments and interview preparation. Discover our platform's features and technologies.",
+  path: "/about",
+  keywords: [
+    "about MCQ Hub",
+    "coding platform",
+    "developer training",
+    "interview preparation platform",
+    "technical assessment",
+  ],
+});
 
 const AboutHero = () => (
   <div className="text-center mb-12">
