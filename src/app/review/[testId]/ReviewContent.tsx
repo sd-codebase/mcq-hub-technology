@@ -8,11 +8,12 @@ const MDEditorRenderer = dynamic(() => import("@/components/MDEditorRenderer"), 
   ssr: false,
 });
 
-interface MCQQuestion {
+interface Question {
   _id: string;
   question: string;
-  options: string[];
-  correct_answer: number;
+  options?: string[];
+  correct_answer?: number;
+  output?: string;
   explanation: string;
 }
 
@@ -21,7 +22,7 @@ interface ReviewContentProps {
   topicName: string;
   subtopicName: string;
   testName: string;
-  questions: MCQQuestion[];
+  questions: Question[];
 }
 
 export default function ReviewContent({
@@ -75,40 +76,57 @@ export default function ReviewContent({
                 </h2>
               </div>
 
-              {/* Options */}
-              <div className="space-y-4 mb-8">
-                {question.options.map((option, optionIndex) => {
-                  const isCorrect = optionIndex === question.correct_answer;
-                  return (
-                    <div
-                      key={optionIndex}
-                      className={`p-4 rounded-lg border-2 transition-all duration-300 ${
-                        isCorrect
-                          ? "border-green-500 bg-green-50 ring-2 ring-green-200"
-                          : "border-gray-200 bg-gray-50"
-                      }`}
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 mt-1">
-                          <div
-                            className={`w-6 h-6 rounded-full border-2 flex items-center justify-center font-semibold text-sm ${
-                              isCorrect
-                                ? "border-green-500 bg-green-500 text-white"
-                                : "border-gray-300 text-gray-600"
-                            }`}
-                          >
-                            {isCorrect && "✓"}
-                            {!isCorrect && String.fromCharCode(65 + optionIndex)}
+              {/* Options (MCQ) */}
+              {question.options && (
+                <div className="space-y-4 mb-8">
+                  {question.options.map((option, optionIndex) => {
+                    const isCorrect = optionIndex === question.correct_answer;
+                    return (
+                      <div
+                        key={optionIndex}
+                        className={`p-4 rounded-lg border-2 transition-all duration-300 ${
+                          isCorrect
+                            ? "border-green-500 bg-green-50 ring-2 ring-green-200"
+                            : "border-gray-200 bg-gray-50"
+                        }`}
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 mt-1">
+                            <div
+                              className={`w-6 h-6 rounded-full border-2 flex items-center justify-center font-semibold text-sm ${
+                                isCorrect
+                                  ? "border-green-500 bg-green-500 text-white"
+                                  : "border-gray-300 text-gray-600"
+                              }`}
+                            >
+                              {isCorrect && "✓"}
+                              {!isCorrect && String.fromCharCode(65 + optionIndex)}
+                            </div>
+                          </div>
+                          <div className="flex-1 text-gray-700">
+                            <MDEditorRenderer value={option} />
                           </div>
                         </div>
-                        <div className="flex-1 text-gray-700">
-                          <MDEditorRenderer value={option} />
-                        </div>
                       </div>
+                    );
+                  })}
+                </div>
+              )}
+
+              {/* Output (OUTPUT Question Type) */}
+              {question.output && !question.options && (
+                <div className="mb-8">
+                  <div className="p-4 rounded-lg border-2 border-green-500 bg-green-50 ring-2 ring-green-200">
+                    <div className="text-green-700 text-sm font-semibold mb-2 flex items-center gap-2">
+                      <span className="text-xl">✓</span>
+                      <span>Expected Output:</span>
                     </div>
-                  );
-                })}
-              </div>
+                    <div className="text-green-800 font-mono text-lg whitespace-pre-wrap">
+                      <MDEditorRenderer value={question.output} />
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* Explanation */}
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">

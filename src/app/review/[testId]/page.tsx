@@ -1,10 +1,11 @@
 import ReviewContent from "./ReviewContent";
 
-interface MCQQuestion {
+interface Question {
   _id: string;
   question: string;
-  options: string[];
-  correct_answer: number;
+  options?: string[];
+  correct_answer?: number;
+  output?: string;
   explanation: string;
 }
 
@@ -17,7 +18,7 @@ interface TestResponse {
     subtopicName: string;
     testName: string;
     questionType: string;
-    questions: MCQQuestion[];
+    questions: Question[];
     questionCount: number;
   };
 }
@@ -54,8 +55,9 @@ export default async function ReviewPage({ params }: ReviewPageProps) {
 
     const testData: TestResponse = await testResponse.json();
 
-    // Only support MCQ for now
-    if (testData.data.questionType !== "mcq") {
+    // Support MCQ and OUTPUT question types
+    const supportedTypes = ["mcq", "output"];
+    if (!supportedTypes.includes(testData.data.questionType)) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-500 to-orange-600">
           <div className="text-center text-white">

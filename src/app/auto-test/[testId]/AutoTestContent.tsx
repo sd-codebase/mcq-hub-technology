@@ -161,7 +161,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
       {/* Intro Phase */}
       {phase === "intro" && (
         <div className="text-center max-w-2xl animate-fade-in">
-          <div className="space-y-4 text-white">
+          <div className="space-y-8 text-white">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
               {testData.subjectName}
             </h1>
@@ -181,9 +181,20 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         <div className={`w-full max-w-4xl ${getQuestionBlockAnimation()}`}>
           {/* Question Card */}
           <div className="bg-white p-8 rounded-lg shadow-2xl mb-6">
-            {/* Question Number */}
-            <div className="text-sm font-medium text-gray-500 mb-3">
-              <strong>#{currentIndex + 1}</strong>
+            {/* Question Number with Quiz Type */}
+            <div className="flex justify-between items-center mb-3">
+              <div className="text-sm font-medium text-gray-500">
+                <strong>#{currentIndex + 1}</strong>
+              </div>
+              <div
+                className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                  testData.questionType === "mcq"
+                    ? "bg-indigo-100 text-indigo-700"
+                    : "bg-teal-100 text-teal-700"
+                }`}
+              >
+                {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
+              </div>
             </div>
 
             {/* Question Text */}
@@ -191,43 +202,59 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
               <MDEditorRenderer value={currentQuestion.question} />
             </div>
 
-            {/* Options */}
-            <div className="space-y-4 mb-6">
-              {currentQuestion.options.map((option: string, idx: number) => {
-                const isCorrect = idx === currentQuestion.correct_answer;
-                const showAnswer = phase === "answer";
+            {/* Options (MCQ) */}
+            {currentQuestion.options && (
+              <div className="space-y-4 mb-6">
+                {currentQuestion.options.map((option: string, idx: number) => {
+                  const isCorrect = idx === currentQuestion.correct_answer;
+                  const showAnswer = phase === "answer";
 
-                return (
-                  <div
-                    key={idx}
-                    className={`p-4 rounded-lg border-2 transition-all duration-300
-                             ${
-                               showAnswer && isCorrect
-                                 ? "border-green-500 bg-green-50 ring-4 ring-green-200 animate-fade-correct"
-                                 : "border-gray-200 bg-gray-50"
-                             }`}
-                  >
-                    <div className="flex items-start gap-3">
-                      <span
-                        className={`font-semibold text-lg ${
-                          showAnswer && isCorrect
-                            ? "text-green-700"
-                            : "text-gray-700"
-                        }`}
-                      >
-                        {String.fromCharCode(65 + idx)})
-                      </span>
-                      <div className="flex-1">
-                        <MDEditorRenderer value={option} />
+                  return (
+                    <div
+                      key={idx}
+                      className={`p-4 rounded-lg border-2 transition-all duration-300
+                               ${
+                                 showAnswer && isCorrect
+                                   ? "border-green-500 bg-green-50 ring-4 ring-green-200 animate-fade-correct"
+                                   : "border-gray-200 bg-gray-50"
+                               }`}
+                    >
+                      <div className="flex items-start gap-3">
+                        <span
+                          className={`font-semibold text-lg ${
+                            showAnswer && isCorrect
+                              ? "text-green-700"
+                              : "text-gray-700"
+                          }`}
+                        >
+                          {String.fromCharCode(65 + idx)})
+                        </span>
+                        <div className="flex-1">
+                          <MDEditorRenderer value={option} />
+                        </div>
+                        {showAnswer && isCorrect && (
+                          <span className="text-green-600 text-2xl">✓</span>
+                        )}
                       </div>
-                      {showAnswer && isCorrect && (
-                        <span className="text-green-600 text-2xl">✓</span>
-                      )}
                     </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Output (OUTPUT Question Type) - Only show in answer phase */}
+            {currentQuestion.output && !currentQuestion.options && phase === "answer" && (
+              <div className="mb-6">
+                <div className="p-4 rounded-lg bg-green-50 border-2 border-green-500 ring-4 ring-green-200 animate-fade-correct">
+                  <div className="text-green-700 text-sm font-semibold mb-2 flex items-center gap-2">
+                    <span>✓ Expected Output:</span>
                   </div>
-                );
-              })}
-            </div>
+                  <div className="text-green-800 font-mono text-lg whitespace-pre-wrap">
+                    <MDEditorRenderer value={currentQuestion.output} />
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Explanation */}
             {/* {currentQuestion.explanation && (
