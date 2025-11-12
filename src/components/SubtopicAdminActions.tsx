@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import CopyPromptButton from "./CopyPromptButton";
 
 type QuestionType = "mcq" | "output" | "interview";
 
@@ -10,6 +11,7 @@ interface SubtopicAdminActionsProps {
     name: string;
   };
   subject: string;
+  topicName: string;
 }
 
 const EXAMPLE_JSON = {
@@ -57,9 +59,27 @@ const MODAL_TITLES = {
   interview: "Add Interview Questions",
 };
 
+// Subject to Language mapping
+const SUBJECT_LANGUAGE_MAP: Record<string, string> = {
+  "javascript": "javascript",
+  "nodejs": "javascript",
+  "node.js": "javascript",
+  "typescript": "typescript",
+  "angular": "typescript",
+  "css": "css",
+  "scss": "css",
+  "less": "css",
+};
+
+const getLanguageFromSubject = (subjectName: string): string => {
+  const normalized = subjectName.toLowerCase().trim();
+  return SUBJECT_LANGUAGE_MAP[normalized] || subjectName;
+};
+
 export default function SubtopicAdminActions({
   subtopic,
   subject,
+  topicName,
 }: SubtopicAdminActionsProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [modalType, setModalType] = useState<QuestionType>("mcq");
@@ -67,6 +87,15 @@ export default function SubtopicAdminActions({
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
+
+  // Question counts for each type
+  const QUESTION_COUNTS = {
+    mcq: 15,
+    output: 15,
+    interview: 10,
+  };
+
+  const getQuestionCount = (): number => QUESTION_COUNTS[modalType];
 
   // Tests state
   const [tests, setTests] = useState<any[]>([]);
@@ -80,34 +109,15 @@ export default function SubtopicAdminActions({
     setTestsError("");
 
     try {
-      // Fetch all three types in parallel
-      const [mcqRes, outputRes, interviewRes] = await Promise.all([
-        fetch(`/api/tests?subtopicId=${subtopic.id}&questionType=mcq`),
-        fetch(`/api/tests?subtopicId=${subtopic.id}&questionType=output`),
-        fetch(`/api/tests?subtopicId=${subtopic.id}&questionType=interview`),
-      ]);
+      // Single API call to fetch all test types
+      const response = await fetch(`/api/tests?subtopicId=${subtopic.id}`);
 
-      // Parse responses, handling errors gracefully
-      const mcqData = mcqRes.ok ? await mcqRes.json() : { data: [] };
-      const outputData = outputRes.ok ? await outputRes.json() : { data: [] };
-      const interviewData = interviewRes.ok
-        ? await interviewRes.json()
-        : { data: [] };
+      if (!response.ok) {
+        throw new Error("Failed to fetch tests");
+      }
 
-      // Combine all tests
-      const allTests = [
-        ...(mcqData.data || []),
-        ...(outputData.data || []),
-        ...(interviewData.data || []),
-      ];
-
-      // // Sort by creation date (newest first)
-      // allTests.sort(
-      //   (a, b) =>
-      //     new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-      // );
-
-      setTests(allTests);
+      const data = await response.json();
+      setTests(data.data || []);
     } catch (error) {
       console.error("Error fetching tests:", error);
       setTestsError("Failed to load tests");
@@ -295,6 +305,14 @@ export default function SubtopicAdminActions({
 
               {/* Buttons */}
               <div className="flex gap-3 mt-6">
+                <CopyPromptButton
+                  questionType={modalType}
+                  count={getQuestionCount()}
+                  subjectName={subject}
+                  chapterName={topicName}
+                  topicName={subtopic.name}
+                  language={getLanguageFromSubject(subject)}
+                />
                 <button
                   onClick={handleSave}
                   disabled={loading || !jsonInput.trim()}

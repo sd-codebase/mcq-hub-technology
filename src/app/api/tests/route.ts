@@ -17,24 +17,23 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    if (!questionType) {
-      return NextResponse.json(
-        { success: false, message: "questionType is required" },
-        { status: 400 }
-      );
+    // Build query - questionType is optional
+    const query: any = { subtopicId };
+
+    if (questionType) {
+      if (!["mcq", "output", "interview"].includes(questionType)) {
+        return NextResponse.json(
+          {
+            success: false,
+            message: "questionType must be mcq, output, or interview",
+          },
+          { status: 400 }
+        );
+      }
+      query.questionType = questionType;
     }
 
-    if (!["mcq", "output", "interview"].includes(questionType)) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "questionType must be mcq, output, or interview",
-        },
-        { status: 400 }
-      );
-    }
-
-    const tests = await Test.find({ subtopicId, questionType }).sort({
+    const tests = await Test.find(query).sort({
       createdAt: 1,
     });
 
