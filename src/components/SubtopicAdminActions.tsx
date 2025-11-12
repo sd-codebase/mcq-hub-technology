@@ -101,11 +101,11 @@ export default function SubtopicAdminActions({
         ...(interviewData.data || []),
       ];
 
-      // Sort by creation date (newest first)
-      allTests.sort(
-        (a, b) =>
-          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-      );
+      // // Sort by creation date (newest first)
+      // allTests.sort(
+      //   (a, b) =>
+      //     new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      // );
 
       setTests(allTests);
     } catch (error) {
@@ -255,7 +255,8 @@ export default function SubtopicAdminActions({
                 {MODAL_TITLES[modalType]}
               </h2>
               <p className="text-gray-400 text-sm mb-4">
-                Paste JSON array of questions for: <strong>{subtopic.name}</strong>
+                Paste JSON array of questions for:{" "}
+                <strong>{subtopic.name}</strong>
               </p>
 
               {/* Example format */}
@@ -329,7 +330,7 @@ export default function SubtopicAdminActions({
               {/* Header with Refresh Button */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-white">
-                  Existing Tests - {subtopic.name}
+                  Tests - {subtopic.name}
                 </h2>
                 <button
                   onClick={fetchTests}
@@ -363,7 +364,8 @@ export default function SubtopicAdminActions({
                     No tests created yet
                   </div>
                   <div className="text-gray-600 text-sm">
-                    Tests will appear here after you add at least 5 questions of the same type
+                    Tests will appear here after you add at least 5 questions of
+                    the same type
                   </div>
                 </div>
               )}
@@ -382,12 +384,16 @@ export default function SubtopicAdminActions({
                       output: "bg-teal-500",
                       interview: "bg-pink-500",
                     };
-                    const badgeColor = badgeColors[questionType as keyof typeof badgeColors] || "bg-gray-500";
+                    const badgeColor =
+                      badgeColors[questionType as keyof typeof badgeColors] ||
+                      "bg-gray-500";
 
                     return (
                       <Link
                         key={test._id}
-                        href={testUrl}
+                        href={`/auto-test/${test._id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="block p-4 rounded-lg border border-gray-600 bg-gray-700/50
                                  hover:bg-gray-700 hover:border-indigo-500
                                  transition-all duration-300 transform hover:scale-105"

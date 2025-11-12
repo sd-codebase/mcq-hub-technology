@@ -44,6 +44,7 @@ export async function GET(request: NextRequest) {
       subjectName: test.subjectName,
       topicName: test.topicName,
       subtopicName: test.subtopicName,
+      questionType: test.questionType,
       questionCount: test.questionIds.length,
       questionIds: test.questionIds,
       createdAt: test.createdAt,

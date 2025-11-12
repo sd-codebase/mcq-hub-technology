@@ -97,6 +97,7 @@ export async function POST(request: NextRequest) {
     let savedCount = 0;
     let duplicateCount = 0;
     let insertedDocs: any[] = [];
+    let duplicateQuestions: string[] = [];
 
     try {
       const result = await OutputQuestion.insertMany(questionsToInsert, {
@@ -110,6 +111,14 @@ export async function POST(request: NextRequest) {
         insertedDocs = error.insertedDocs || [];
         savedCount = insertedDocs.length;
         duplicateCount = questions.length - savedCount;
+
+        // Identify which questions are duplicates
+        const savedQuestionTexts = new Set(
+          insertedDocs.map((doc: any) => doc.question)
+        );
+        duplicateQuestions = questionsToInsert
+          .filter((q: any) => !savedQuestionTexts.has(q.question))
+          .map((q: any) => q.question);
       } else {
         throw error;
       }
@@ -150,9 +159,8 @@ export async function POST(request: NextRequest) {
         const batches: any[][] = [];
         for (let i = 0; i < questionIds.length; i += batchSize) {
           const batch = questionIds.slice(i, i + batchSize);
-          if (batch.length === batchSize) {
-            batches.push(batch);
-          }
+          // Create batch regardless of size (even if < 5 questions)
+          batches.push(batch);
         }
 
         // Create test documents for each batch
@@ -183,6 +191,8 @@ export async function POST(request: NextRequest) {
         duplicates: duplicateCount,
         total: questions.length,
         testsCreated,
+        duplicateQuestionsList:
+          duplicateQuestions.length > 0 ? duplicateQuestions : undefined,
         message: `Successfully saved ${savedCount} Output questions${
           duplicateCount > 0 ? `, ${duplicateCount} duplicates skipped` : ""
         }${testsCreated > 0 ? `, ${testsCreated} tests created` : ""}`,
