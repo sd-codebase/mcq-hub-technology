@@ -1,0 +1,69 @@
+
+Generate {{count}} multiple-choice questions (MCQ) for the following context:
+**Subject:** {{Subject}}
+**Chapter:** {{Chapter}}
+**Topic:** {{Topic}}
+**Programming Language/Technology:** {{technology}}
+**Count of Questions:** {{count}}
+
+Requirements:
+
+1. Generate exactly {{count}} questions
+2. Each question must have exactly 4 options
+3. Specify the correct answer as an index (0-3)
+4. Use proper markdown formatting in explanations
+5. Use appropriate code syntax highlighting with language tags (```{{technology}})
+6. Make questions practical and educational
+7. Explanations should be clear and informative with proper formatting (**bold**, headings, lists)
+
+Return ONLY a valid JSON array with this exact structure:
+[
+{
+    "question": "Question text here?",
+    "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
+    "correct_answer": 2,
+    "explanation": "Markdown formatted explanation with **bold**, headings, and code blocks"
+  }
+]
+
+Important:
+
+- Use proper markdown in explanations (## headings, **bold**, lists, code blocks)
+- correct_answer must be 0, 1, 2, or 3 (zero-indexed)
+- Code blocks must use ```{{technology}} for syntax highlighting
+- Return ONLY the JSON array, no additional text
+
+
+## Example Input:
+Subject: Web Development
+Chapter: React Fundamentals
+Topic: useState Hook
+Technology: javascript
+Count: 2
+
+
+##Expected Output:
+[
+  {
+    "question": "What is the correct way to initialize a state variable with an initial value of 0 using the useState hook?",
+    "options": [
+      "const [count] = useState(0);",
+      "const count = useState(0);",
+      "const [count, setCount] = useState(0);",
+      "const {count, setCount} = useState(0);"
+    ],
+    "correct_answer": 2,
+    "explanation": "## Correct Usage of useState\n\nThe **useState** hook returns an array with exactly two elements:\n\n1. **Current state value** - the variable that holds the state\n2. **Setter function** - the function to update the state\n\n### Syntax\n```javascript\nconst [count, setCount] = useState(0);\n```\n\n### Why other options are incorrect:\n- **Option 0**: Missing the setter function\n- **Option 1**: Not using array destructuring\n- **Option 3**: useState returns an array, not an object"
+  },
+  {
+    "question": "What happens when you call the state setter function returned by useState?",
+    "options": [
+      "It immediately updates the state and re-renders the component synchronously",
+      "It schedules a state update and re-render, which may be batched",
+      "It only updates the state without triggering a re-render",
+      "It creates a new component instance"
+    ],
+    "correct_answer": 1,
+    "explanation": "## State Updates in React\n\nWhen you call a state setter function (e.g., `setCount`), React **schedules** an update rather than applying it immediately.\n\n### Key Points:\n- State updates are **asynchronous**\n- Multiple updates may be **batched** together for performance\n- After the update, React **re-renders** the component\n\n### Example:\n```javascript\nconst [count, setCount] = useState(0);\n\nsetCount(1);\nconsole.log(count); // Still 0! Update hasn't applied yet\n```\n\n**Best Practice**: Never rely on the state value immediately after calling the setter."
+  }
+]

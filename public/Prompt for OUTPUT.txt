@@ -1,0 +1,57 @@
+
+Generate {{count}} code output prediction questions for the following context:
+
+**Subject:** {{Subject}}
+**Chapter:** {{Chapter}}
+**Topic:** {{Topic}}
+**Programming Language/Technology:** {{technology}}
+**Count of Questions:** {{count}}
+
+Requirements:
+
+1. Generate exactly {{count}} questions
+2. Each question must contain code with proper syntax highlighting
+3. Provide the expected output
+4. Include clear explanations with markdown formatting
+5. Code blocks must use ```{{technology}} for syntax highlighting
+6. Output should be in ``` code blocks
+7. Make questions practical and test real concepts
+
+Return ONLY a valid JSON array with this exact structure:
+[
+{
+"question": "What is the output of the code snippet? \n ```{{technology}}\ncode here\n```",
+"output": "```\nexpected output\n```",
+"explanation": "Markdown formatted explanation with **bold**, headings, and code blocks if needed"
+}
+]
+
+Important:
+
+- Question field must contain code with ```{{technology}} syntax highlighting
+- Output field must be in ``` code blocks
+- Explanations should include **bold**, headings, and visual representations if helpful
+- Return ONLY the JSON array, no additional text
+
+
+##Example Input:
+Subject: Programming Fundamentals
+Chapter: Data Types and Variables
+Topic: Type Coercion
+Technology: javascript
+Count: 2
+
+
+##Expected Output:
+[
+  {
+    "question": "What is the output of the code snippet? \n ```javascript\nconsole.log([] + []);\nconsole.log([] + {});\nconsole.log({} + []);\n```",
+    "output": "```\n\n[object Object]\n[object Object]\n```",
+    "explanation": "## Type Coercion in JavaScript\n\nThis demonstrates how JavaScript handles **type coercion** when using the `+` operator with objects and arrays.\n\n### Breakdown:\n\n1. **`[] + []`** → Empty string `\"\"`\n   - Both arrays are converted to strings\n   - Empty array becomes empty string\n   - `\"\" + \"\"` = `\"\"`\n\n2. **`[] + {}`** → `\"[object Object]\"`\n   - Array becomes `\"\"` (empty string)\n   - Object becomes `\"[object Object]\"`\n   - `\"\" + \"[object Object]\"` = `\"[object Object]\"`\n\n3. **`{} + []`** → `\"[object Object]\"`\n   - In this context, both are converted to strings\n   - Result: `\"[object Object]\"`\n\n**Key Point**: The `+` operator triggers **string concatenation** when either operand is not a number."
+  },
+  {
+    "question": "What is the output of the code snippet? \n ```javascript\nlet x = 5;\nfunction test() {\n  console.log(x);\n  let x = 10;\n  console.log(x);\n}\ntest();\n```",
+    "output": "```\nReferenceError: Cannot access 'x' before initialization\n```",
+    "explanation": "## Temporal Dead Zone (TDZ)\n\nThis code demonstrates the **Temporal Dead Zone** concept with `let` declarations.\n\n### Why the Error Occurs:\n\n1. **Hoisting**: The variable `x` inside the function is hoisted but not initialized\n2. **TDZ**: From the start of the block until the `let x = 10;` line, `x` is in the TDZ\n3. **First `console.log(x)`**: Attempts to access `x` before its declaration\n\n### Visual Representation:\n\n```javascript\nfunction test() {\n  // TDZ starts here for 'x'\n  console.log(x); // ❌ ReferenceError!\n  let x = 10;     // TDZ ends, x is initialized\n  console.log(x); // ✅ Would print 10 if we got here\n}\n```\n\n**Important**: `let` and `const` are hoisted but cannot be accessed before declaration, unlike `var` which would return `undefined`."
+  }
+]

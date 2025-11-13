@@ -61,14 +61,15 @@ const MODAL_TITLES = {
 
 // Subject to Language mapping
 const SUBJECT_LANGUAGE_MAP: Record<string, string> = {
-  "javascript": "javascript",
-  "nodejs": "javascript",
-  "node.js": "javascript",
-  "typescript": "typescript",
-  "angular": "typescript",
-  "css": "css",
-  "scss": "css",
-  "less": "css",
+  javascript: "javascript",
+  typescript: "typescript",
+  nodejs: "javascript",
+  reactjs: "javascript",
+  angular: "typescript",
+  vuejs: "javascript",
+  html: "html",
+  css: "css",
+  sass: "css",
 };
 
 const getLanguageFromSubject = (subjectName: string): string => {
@@ -90,7 +91,7 @@ export default function SubtopicAdminActions({
 
   // Question counts for each type
   const QUESTION_COUNTS = {
-    mcq: 15,
+    mcq: 20,
     output: 15,
     interview: 10,
   };

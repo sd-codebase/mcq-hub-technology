@@ -1,0 +1,60 @@
+
+Generate {{count}} interview questions with detailed answers for the following context:
+
+**Subject:** {{Subject}}
+**Chapter:** {{Chapter}}
+**Topic:** {{Topic}}
+**Programming Language/Technology:** {{technology}}
+**Count of Questions:** {{count}}
+
+Requirements:
+
+1. Generate exactly {{count}} questions
+2. Questions should be common interview questions
+3. Answers must be comprehensive with proper markdown formatting
+4. Use ## for main headings, ### for subheadings
+5. Use **bold** for important terms
+6. Include code examples with ```{{technology}} syntax highlighting
+7. Use lists, tables, and visual representations where helpful
+8. Include practical examples
+
+Return ONLY a valid JSON array with this exact structure:
+[
+{
+"question": "Interview question text?",
+"answer": "## Main Heading\n\nDetailed answer with **bold**, code blocks, lists, etc.",
+"explanation": "**Key points** to remember or additional context with proper formatting"
+}
+]
+
+Important:
+
+- Answers must be well-structured with ## headings and ### subheadings
+- Use **bold** for emphasis on important concepts
+- Include code examples with ```{{technology}} syntax highlighting
+- Use lists and visual representations
+- Explanations should highlight key takeaways
+- Return ONLY the JSON array, no additional text
+
+
+##Example Input:
+Subject: Web Development
+Chapter: React Core Concepts
+Topic: useEffect Hook
+Technology: javascript
+Count: 2
+
+
+##Expected Output:
+[
+  {
+    "question": "What is the useEffect hook in React and when would you use it?",
+    "answer": "## useEffect Hook Overview\n\nThe **useEffect** hook is a fundamental React hook that allows you to perform **side effects** in functional components. It serves as a replacement for lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` in class components.\n\n### What are Side Effects?\n\nSide effects are operations that affect things outside the component's scope:\n- **Data fetching** from APIs\n- **DOM manipulation** directly\n- **Subscriptions** to external data sources\n- **Timers** (setTimeout, setInterval)\n- **Logging** or analytics\n\n### Basic Syntax\n\n```javascript\nuseEffect(() => {\n  // Side effect code here\n  \n  return () => {\n    // Cleanup code (optional)\n  };\n}, [dependencies]);\n```\n\n### Three Common Patterns\n\n#### 1. Run on Every Render\n```javascript\nuseEffect(() => {\n  console.log('Runs after every render');\n});\n```\n\n#### 2. Run Once (on Mount)\n```javascript\nuseEffect(() => {\n  console.log('Runs only once after initial render');\n}, []); // Empty dependency array\n```\n\n#### 3. Run When Dependencies Change\n```javascript\nuseEffect(() => {\n  console.log('Runs when count changes');\n}, [count]); // Runs when 'count' updates\n```\n\n### Practical Example: Data Fetching\n\n```javascript\nimport { useState, useEffect } from 'react';\n\nfunction UserProfile({ userId }) {\n  const [user, setUser] = useState(null);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    setLoading(true);\n    \n    fetch(`https://api.example.com/users/${userId}`)\n      .then(response => response.json())\n      .then(data => {\n        setUser(data);\n        setLoading(false);\n      });\n  }, [userId]); // Re-fetch when userId changes\n\n  if (loading) return <div>Loading...</div>;\n  return <div>{user.name}</div>;\n}\n```\n\n### Cleanup Function\n\nUse the return function to clean up resources:\n\n```javascript\nuseEffect(() => {\n  const timer = setInterval(() => {\n    console.log('Tick');\n  }, 1000);\n\n  // Cleanup: runs before next effect or unmount\n  return () => {\n    clearInterval(timer);\n  };\n}, []);\n```",
+    "explanation": "**Key Takeaways:**\n- **useEffect** runs after render, not during it\n- **Empty dependency array `[]`** means run once on mount\n- **Dependencies** determine when the effect re-runs\n- **Cleanup function** prevents memory leaks\n- Always include all values used inside the effect in the dependency array to avoid bugs"
+  },
+  {
+    "question": "Explain the dependency array in useEffect and what happens if you omit it.",
+    "answer": "## Understanding the Dependency Array\n\nThe **dependency array** is the second argument to `useEffect` that controls when the effect runs. It's one of the most important concepts to master in React.\n\n### Three Scenarios\n\n| Dependency Array | Behavior | Use Case |\n|-----------------|----------|----------|\n| No array | Runs after every render | Rarely needed, usually a mistake |\n| Empty array `[]` | Runs once on mount | Initial data fetching, subscriptions |\n| With dependencies `[a, b]` | Runs when dependencies change | Dynamic updates based on props/state |\n\n### 1. No Dependency Array\n\n```javascript\nuseEffect(() => {\n  console.log('Runs after EVERY render');\n}); // ⚠️ No dependency array\n```\n\n**Behavior**: Runs after every single render, including re-renders caused by state or prop changes.\n\n**Problem**: Can cause infinite loops!\n\n```javascript\nconst [count, setCount] = useState(0);\n\nuseEffect(() => {\n  setCount(count + 1); // ❌ Infinite loop!\n});\n```\n\n### 2. Empty Dependency Array\n\n```javascript\nuseEffect(() => {\n  console.log('Runs ONCE on mount');\n}, []); // ✅ Empty array\n```\n\n**Behavior**: Runs only once after the initial render (component mount).\n\n**Use Cases**:\n- Initial API calls\n- Setting up subscriptions\n- Adding event listeners\n\n```javascript\nuseEffect(() => {\n  // Fetch user data once\n  fetchUserData();\n  \n  // Setup subscription\n  const subscription = dataSource.subscribe();\n  \n  return () => subscription.unsubscribe();\n}, []); // Runs once\n```\n\n### 3. With Dependencies\n\n```javascript\nuseEffect(() => {\n  console.log('Runs when userId or filter changes');\n}, [userId, filter]); // ✅ Specified dependencies\n```\n\n**Behavior**: Runs on mount and whenever any dependency value changes.\n\n**Practical Example**:\n\n```javascript\nfunction SearchResults({ query, page }) {\n  const [results, setResults] = useState([]);\n\n  useEffect(() => {\n    // Fetch new results when query or page changes\n    async function fetchResults() {\n      const data = await fetch(\n        `/api/search?q=${query}&page=${page}`\n      );\n      setResults(await data.json());\n    }\n    \n    fetchResults();\n  }, [query, page]); // Re-run when these change\n\n  return <ResultsList items={results} />;\n}\n```\n\n### Common Pitfalls\n\n#### Missing Dependencies\n\n```javascript\n// ❌ BAD: count is used but not in dependencies\nconst [count, setCount] = useState(0);\n\nuseEffect(() => {\n  const timer = setInterval(() => {\n    console.log(count); // Always logs 0!\n  }, 1000);\n  \n  return () => clearInterval(timer);\n}, []); // Missing 'count'\n\n// ✅ GOOD: Include all dependencies\nuseEffect(() => {\n  const timer = setInterval(() => {\n    console.log(count); // Logs current count\n  }, 1000);\n  \n  return () => clearInterval(timer);\n}, [count]); // Includes 'count'\n```\n\n#### Object/Array Dependencies\n\n```javascript\n// ❌ BAD: Object created on every render\nconst options = { sort: 'asc' };\n\nuseEffect(() => {\n  fetchData(options);\n}, [options]); // Runs every render!\n\n// ✅ GOOD: Use primitive values or useMemo\nconst sort = 'asc';\n\nuseEffect(() => {\n  fetchData({ sort });\n}, [sort]); // Only runs when sort changes\n```\n\n### ESLint Rule\n\nReact provides an ESLint rule `exhaustive-deps` that warns about missing dependencies:\n\n```javascript\n// ESLint will warn you!\nuseEffect(() => {\n  doSomething(propA, stateB);\n}, []); // ⚠️ Missing dependencies: propA, stateB\n```",
+    "explanation": "**Essential Rules:**\n- **Always include all values** from component scope used in the effect\n- **Omitting the array** causes the effect to run after every render\n- **Empty array `[]`** means run once on mount only\n- **Primitive values** (strings, numbers) in dependencies work well\n- **Objects/arrays** should be avoided or memoized to prevent unnecessary re-runs\n- **Use ESLint** plugin to catch missing dependencies automatically"
+  }
+]
