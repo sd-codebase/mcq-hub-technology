@@ -1,0 +1,161 @@
+(async function() {
+  // remove previous if exists
+  document.getElementById('pasteBtn')?.remove();
+
+  // create button
+  const btn = document.createElement('button');
+  btn.id = 'pasteBtn';
+  btn.textContent = '📋 Paste';
+  Object.assign(btn.style, {
+    position: 'fixed',
+    right: '20px',
+    bottom: '20px',
+    zIndex: '2147483647',
+    padding: '10px 14px',
+    borderRadius: '8px',
+    background: '#0ea37a',
+    color: '#fff',
+    border: 'none',
+    cursor: 'pointer',
+    boxShadow: '0 6px 18px rgba(0,0,0,0.25)',
+    fontWeight: '600'
+  });
+  document.body.appendChild(btn);
+
+  // helper: find best editable element (visible contenteditable or role=textbox, else visible textarea, else textarea[name=prompt-textarea])
+  function findEditable() {
+    const candidates = [
+      ...document.querySelectorAll('[contenteditable="true"], [role="textbox"], textarea[name="prompt-textarea"], textarea')
+    ];
+    // prefer visible ones (have client rects visible)
+    const visible = candidates.filter(el => {
+      try {
+        const rects = el.getClientRects();
+        return rects && rects.length > 0 && el.offsetParent !== null && window.getComputedStyle(el).visibility !== 'hidden';
+      } catch (e) { return false; }
+    });
+    if (visible.length) return visible[0];
+    // fallback to first candidate
+    return candidates[0] || null;
+  }
+
+  // helper: insert text into contenteditable using several strategies
+  function insertIntoContentEditable(el, text) {
+    el.focus();
+
+    // Attempt 1: execCommand insertText (works for many editors)
+    try {
+      const ok = document.execCommand('insertText', false, text);
+      if (ok) {
+        // fire input event
+        el.dispatchEvent(new InputEvent('input', { bubbles: true, data: text, inputType: 'insertFromPaste' }));
+        return true;
+      }
+    } catch (e) { /* ignore */ }
+
+    // Attempt 2: use Selection & Range to insert text node at caret or at end
+    try {
+      const sel = window.getSelection();
+      let range;
+      if (sel && sel.rangeCount > 0) {
+        range = sel.getRangeAt(0);
+      } else {
+        range = document.createRange();
+        range.selectNodeContents(el);
+        range.collapse(false); // to end
+      }
+
+      // insert text node
+      const textNode = document.createTextNode(text);
+      range.deleteContents();
+      range.insertNode(textNode);
+
+      // move caret after inserted node
+      range.setStartAfter(textNode);
+      range.collapse(true);
+      sel.removeAllRanges();
+      sel.addRange(range);
+
+      // Dispatch input (React listens)
+      el.dispatchEvent(new InputEvent('input', { bubbles: true, data: text, inputType: 'insertFromPaste' }));
+      return true;
+    } catch (e) {
+      // continue to next
+    }
+
+    // Attempt 3: set innerText / textContent (danger: may wipe formatting). Use if contenteditable has simple paragraphs.
+    try {
+      const prev = el.innerText || '';
+      el.innerText = prev + text;
+      el.dispatchEvent(new InputEvent('input', { bubbles: true, data: text, inputType: 'insertFromPaste' }));
+      return true;
+    } catch (e) { /* ignore */ }
+
+    return false;
+  }
+
+  // helper: insert into (possibly hidden) textarea using prototype setter (for React)
+  function insertIntoTextarea(el, text, append = false) {
+    try {
+      const setter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value').set;
+      if (!setter) return false;
+      const newValue = append ? (el.value || '') + text : text;
+      setter.call(el, newValue);
+      el.dispatchEvent(new Event('input', { bubbles: true }));
+      el.dispatchEvent(new Event('change', { bubbles: true }));
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // main paste handler
+  btn.addEventListener('click', async () => {
+    let text = '';
+    try {
+      text = await navigator.clipboard.readText();
+      if (!text) { alert('Clipboard empty.'); return; }
+    } catch (err) {
+      // fallback: prompt for manual paste if clipboard access denied
+      text = prompt('Clipboard access blocked — paste text here:');
+      if (!text) return;
+    }
+
+    const editable = findEditable();
+    if (!editable) { alert('Could not find an editable chat input on this page.'); return; }
+
+    const tag = editable.tagName?.toLowerCase();
+    let success = false;
+
+    if (editable.isContentEditable || editable.getAttribute('role') === 'textbox') {
+      success = insertIntoContentEditable(editable, text);
+    }
+
+    // If it's a textarea (visible or hidden) also set its value (some UIs read from textarea)
+    if (!success && tag === 'textarea') {
+      success = insertIntoTextarea(editable, text, false);
+    } else {
+      // Even if we inserted into contenteditable, try to update hidden textarea if present
+      const hiddenTA = document.querySelector('textarea[name="prompt-textarea"], textarea[aria-hidden="true"]');
+      if (hiddenTA) insertIntoTextarea(hiddenTA, text, false);
+    }
+
+    // Fire extra events that some frameworks may listen to
+    try {
+      editable.dispatchEvent(new Event('change', { bubbles: true }));
+      editable.dispatchEvent(new Event('focus', { bubbles: true }));
+    } catch (e) {}
+
+    console.log('Paste attempt finished. success:', success);
+    if (success) {
+      // small visual cue
+      btn.textContent = '✅ Pasted';
+      setTimeout(() => btn.textContent = '📋 Paste', 900);
+    } else {
+      alert('Could not programmatically insert the text — clipboard text copied to console for manual paste.');
+      console.log('clipboard text:\n', text);
+    }
+  });
+
+  console.log('Paste button added. Click to paste clipboard into ChatGPT input.');
+})();

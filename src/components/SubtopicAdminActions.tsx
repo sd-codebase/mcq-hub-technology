@@ -151,6 +151,17 @@ export default function SubtopicAdminActions({
     setIsTestsModalOpen(false);
   };
 
+  const handlePaste = async () => {
+    try {
+      const clipboardText = await navigator.clipboard.readText();
+      setJsonInput(clipboardText);
+      setError(""); // Clear any previous errors
+    } catch (error) {
+      console.error("Failed to read clipboard:", error);
+      setError("Failed to read clipboard. Please check clipboard permissions.");
+    }
+  };
+
   const handleSave = async () => {
     setError("");
     setSuccess("");
@@ -279,6 +290,16 @@ export default function SubtopicAdminActions({
                   {EXAMPLE_JSON[modalType]}
                 </pre>
               </details>
+
+              {/* Paste Button */}
+              <div className="mb-4">
+                <button
+                  onClick={handlePaste}
+                  className="px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg"
+                >
+                  📋 Paste from Clipboard
+                </button>
+              </div>
 
               {/* Textarea */}
               <textarea

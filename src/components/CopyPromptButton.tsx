@@ -7,29 +7,30 @@ type QuestionType = "mcq" | "output" | "interview";
 const PROMPTS: Record<QuestionType, string> = {
   mcq: `
 Generate multiple-choice questions (MCQ) for the following inputs:
+
+**Programming Language/Technology:** {technology}
+**Count:** {count}
 **Subject:** {subject_name}
 **Chapter:** {chapter_name}
-**Topic:** {topic_name}
-**Programming Language/Technology:** {technology}
-**Count:** {count}`,
+**Topic:** {topic_name}`,
 
   output: `
 Generate code output prediction questions for the following inputs:
 
+**Programming Language/Technology:** {technology}
+**Count:** {count}
 **Subject:** {subject_name}
 **Chapter:** {chapter_name}
-**Topic:** {topic_name}
-**Programming Language/Technology:** {technology}
-**Count:** {count}`,
+**Topic:** {topic_name}`,
 
   interview: `
 Generate interview questions with detailed answers for the following inputs:
 
+**Programming Language/Technology:** {technology}
+**Count:** {count}
 **Subject:** {subject_name}
 **Chapter:** {chapter_name}
-**Topic:** {topic_name}
-**Programming Language/Technology:** {technology}
-**Count:** {count}`,
+**Topic:** {topic_name}`,
 };
 
 interface CopyPromptButtonProps {
