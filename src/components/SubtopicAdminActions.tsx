@@ -156,20 +156,23 @@ export default function SubtopicAdminActions({
       const clipboardText = await navigator.clipboard.readText();
       setJsonInput(clipboardText);
       setError(""); // Clear any previous errors
+
+      // Auto-save
+      handleSave(clipboardText);
     } catch (error) {
       console.error("Failed to read clipboard:", error);
       setError("Failed to read clipboard. Please check clipboard permissions.");
     }
   };
 
-  const handleSave = async () => {
+  const handleSave = async (clipboardText?: string) => {
     setError("");
     setSuccess("");
 
     // Validate JSON
     let questions;
     try {
-      questions = JSON.parse(jsonInput);
+      questions = JSON.parse(clipboardText || jsonInput);
       if (!Array.isArray(questions)) {
         setError("Input must be a JSON array");
         return;
@@ -297,7 +300,7 @@ export default function SubtopicAdminActions({
                   onClick={handlePaste}
                   className="px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg"
                 >
-                  📋 Paste from Clipboard
+                  📋 Paste and Save
                 </button>
               </div>
 
@@ -336,7 +339,7 @@ export default function SubtopicAdminActions({
                   language={getLanguageFromSubject(subject)}
                 />
                 <button
-                  onClick={handleSave}
+                  onClick={() => handleSave()}
                   disabled={loading || !jsonInput.trim()}
                   className={`flex-1 px-6 py-3 rounded-lg font-semibold text-white
                            ${

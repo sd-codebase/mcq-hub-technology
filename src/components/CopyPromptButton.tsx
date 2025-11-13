@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 type QuestionType = "mcq" | "output" | "interview";
 
@@ -53,6 +53,11 @@ export default function CopyPromptButton({
   onCopied,
 }: CopyPromptButtonProps) {
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(handleCopy, 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Replace placeholders in prompt with actual values
   const replacePlaceholders = (prompt: string): string => {
