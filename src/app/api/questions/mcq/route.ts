@@ -81,6 +81,7 @@ export async function POST(request: NextRequest) {
         question.correct_answer === undefined ||
         !question.explanation
       ) {
+        console.log({ que: question.question });
         return NextResponse.json(
           {
             error:
@@ -141,9 +142,7 @@ export async function POST(request: NextRequest) {
         let subtopicName = "";
 
         for (const topic of subjectExists.topics) {
-          const subtopic = topic.subtopics.find(
-            (st: any) => st.id === topicId
-          );
+          const subtopic = topic.subtopics.find((st: any) => st.id === topicId);
           if (subtopic) {
             subjectName = subjectExists.name;
             topicName = topic.name;

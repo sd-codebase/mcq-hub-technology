@@ -12,6 +12,12 @@ interface SubtopicAdminActionsProps {
   };
   subject: string;
   topicName: string;
+  allSubtopics?: Array<{
+    id: string;
+    name: string;
+  }>;
+  topicIndex?: number;
+  subtopicIndex?: number;
 }
 
 const EXAMPLE_JSON = {
@@ -81,6 +87,9 @@ export default function SubtopicAdminActions({
   subtopic,
   subject,
   topicName,
+  allSubtopics = [],
+  topicIndex = 0,
+  subtopicIndex = 0,
 }: SubtopicAdminActionsProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [modalType, setModalType] = useState<QuestionType>("mcq");
@@ -88,6 +97,13 @@ export default function SubtopicAdminActions({
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
+  const [currentSubtopic, setCurrentSubtopic] = useState(subtopic);
+  const [currentSubtopicIndex, setCurrentSubtopicIndex] =
+    useState(subtopicIndex);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [animationState, setAnimationState] = useState<
+    "idle" | "entering" | "exiting"
+  >("idle");
 
   // Question counts for each type
   const QUESTION_COUNTS = {
@@ -97,6 +113,18 @@ export default function SubtopicAdminActions({
   };
 
   const getQuestionCount = (): number => QUESTION_COUNTS[modalType];
+
+  // Find the next subtopic
+  const getNextSubtopic = () => {
+    if (!allSubtopics || allSubtopics.length === 0) return null;
+    const currentIndex = allSubtopics.findIndex(
+      (s) => s.id === currentSubtopic.id
+    );
+    if (currentIndex === -1 || currentIndex === allSubtopics.length - 1) {
+      return null; // No next subtopic
+    }
+    return allSubtopics[currentIndex + 1];
+  };
 
   // Tests state
   const [tests, setTests] = useState<any[]>([]);
@@ -133,6 +161,43 @@ export default function SubtopicAdminActions({
     setJsonInput("");
     setError("");
     setSuccess("");
+    setAnimationState("entering");
+  };
+
+  const openNextSubtopicModalWithAnimation = async (type: QuestionType) => {
+    const nextSubtopic = getNextSubtopic();
+    if (!nextSubtopic) {
+      // No next subtopic, just close
+      closeModal();
+      return;
+    }
+
+    // Start exit animation
+    setAnimationState("exiting");
+
+    // Wait for exit animation to complete
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
+    // Close modal completely to unmount and destroy old state
+    setIsOpen(false);
+
+    // Wait a tick for React to unmount
+    await new Promise((resolve) => setTimeout(resolve, 500));
+
+    // Switch to next subtopic and reset state
+    setCurrentSubtopic(nextSubtopic);
+    setCurrentSubtopicIndex(currentSubtopicIndex + 1);
+    setJsonInput("");
+    setError("");
+    setSuccess("");
+    setAnimationState("entering");
+
+    // Reopen modal with fresh state
+    setIsOpen(true);
+
+    // Wait for enter animation to complete
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    setAnimationState("idle");
   };
 
   const closeModal = () => {
@@ -140,6 +205,9 @@ export default function SubtopicAdminActions({
     setJsonInput("");
     setError("");
     setSuccess("");
+    setAnimationState("idle");
+    setCurrentSubtopic(subtopic); // Reset to original subtopic
+    setCurrentSubtopicIndex(subtopicIndex); // Reset to original index
   };
 
   const openTestsModal = () => {
@@ -195,7 +263,7 @@ export default function SubtopicAdminActions({
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          topicId: subtopic.id,
+          topicId: currentSubtopic.id,
           questions,
         }),
       });
@@ -218,9 +286,9 @@ export default function SubtopicAdminActions({
       // Re-fetch tests to show newly created ones
       fetchTests();
 
-      // Close modal after short delay
+      // Close modal after short delay and open next subtopic if available
       setTimeout(() => {
-        closeModal();
+        openNextSubtopicModalWithAnimation(modalType);
       }, 2000);
     } catch (err) {
       setError("Network error. Please try again.");
@@ -273,15 +341,30 @@ export default function SubtopicAdminActions({
 
       {/* Add Questions Modal */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-          <div className="bg-gray-800 rounded-xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-gray-700">
+        <div
+          className={`fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 transition-opacity duration-500 ${
+            animationState === "exiting" ? "opacity-0" : "opacity-100"
+          }`}
+        >
+          <div
+            className={`bg-gray-800 rounded-xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-gray-700 transition-all duration-500 ${
+              animationState === "entering"
+                ? "opacity-100 scale-100"
+                : animationState === "exiting"
+                ? "opacity-0 scale-95"
+                : "opacity-100 scale-100"
+            }`}
+          >
             <div className="p-6">
               <h2 className="text-2xl font-bold text-white mb-4">
                 {MODAL_TITLES[modalType]}
               </h2>
               <p className="text-gray-400 text-sm mb-4">
                 Paste JSON array of questions for:{" "}
-                <strong>{subtopic.name}</strong>
+                <strong>
+                  {topicIndex + 1}.{currentSubtopicIndex + 1}{" "}
+                  {currentSubtopic.name}
+                </strong>
               </p>
 
               {/* Example format */}
@@ -335,7 +418,7 @@ export default function SubtopicAdminActions({
                   count={getQuestionCount()}
                   subjectName={subject}
                   chapterName={topicName}
-                  topicName={subtopic.name}
+                  topicName={currentSubtopic.name}
                   language={getLanguageFromSubject(subject)}
                 />
                 <button

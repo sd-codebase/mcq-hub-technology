@@ -94,7 +94,7 @@ export default function TopicsList({ subject }: { subject: string }) {
                   {`${topicIndex + 1}.${subIndex + 1} ${sub.name}`}
                 </div>
                 {isAdminMode ? (
-                  <SubtopicAdminActions subtopic={sub} subject={subject} topicName={topic.name} />
+                  <SubtopicAdminActions subtopic={sub} subject={subject} topicName={topic.name} allSubtopics={topic.subtopics} topicIndex={topicIndex} subtopicIndex={subIndex} />
                 ) : (
                   <SubtopicActions subtopic={sub} subject={subject} />
                 )}

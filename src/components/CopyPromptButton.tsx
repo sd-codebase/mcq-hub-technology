@@ -54,11 +54,6 @@ export default function CopyPromptButton({
 }: CopyPromptButtonProps) {
   const [copied, setCopied] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(handleCopy, 500);
-    return () => clearTimeout(timer);
-  }, []);
-
   // Replace placeholders in prompt with actual values
   const replacePlaceholders = (prompt: string): string => {
     let result = prompt;
@@ -101,6 +96,12 @@ export default function CopyPromptButton({
       console.error("Failed to copy prompt:", error);
     }
   };
+
+  useEffect(() => {
+    console.log({ chapterName, topicName });
+    const timer = setTimeout(handleCopy, 500);
+    return () => clearTimeout(timer);
+  }, [questionType, count, subjectName, chapterName, topicName, language]);
 
   return (
     <button
