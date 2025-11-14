@@ -28,7 +28,14 @@ export default function SubjectsSection() {
   useEffect(() => {
     async function fetchSubjects() {
       try {
-        const response = await fetch("/api/subjects");
+        let url = "/api/subjects";
+
+        // Add status=active filter if not in ADMIN mode
+        if (process.env.NEXT_PUBLIC_ACTOR_MODE !== "ADMIN") {
+          url += "?status=active";
+        }
+
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error("Failed to fetch subjects");
         }

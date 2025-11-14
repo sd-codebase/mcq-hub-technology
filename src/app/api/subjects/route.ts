@@ -10,8 +10,18 @@ export async function GET(request: NextRequest) {
     // Connect to MongoDB
     await connectDB();
 
-    // Fetch all metadata sorted by order
-    const metadataList = await SubjectMetadata.find().sort({ order: 1 });
+    // Get optional status query parameter
+    const { searchParams } = new URL(request.url);
+    const statusFilter = searchParams.get("status");
+
+    // Build query filter
+    const query: any = {};
+    if (statusFilter && ["active", "inactive"].includes(statusFilter)) {
+      query.status = statusFilter;
+    }
+
+    // Fetch metadata sorted by order
+    const metadataList = await SubjectMetadata.find(query).sort({ order: 1 });
 
     return NextResponse.json({
       success: true,

@@ -5,6 +5,7 @@ export interface ISubjectMetadata {
   shortName: string;
   questions: string;
   order: number;
+  status?: "active" | "inactive";
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -28,6 +29,11 @@ const SubjectMetadataSchema = new Schema<ISubjectMetadata>(
     order: {
       type: Number,
       required: true,
+    },
+    status: {
+      type: String,
+      enum: ["active", "inactive"],
+      default: "active",
     },
   },
   {
