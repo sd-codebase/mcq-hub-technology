@@ -26,6 +26,23 @@
   document.body.appendChild(btn);
 
   function showSuccessToast(message = "Code copied successfully!") {
+    // ------- SOUND -------
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = "sine";
+    osc.frequency.value = 880;      // pleasant ding
+    gain.gain.setValueAtTime(0.2, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + 0.4);
+  } catch (e) {
+    console.warn("Audio playback blocked by browser:", e);
+  }
   const toast = document.createElement("div");
   toast.textContent = message;
 
@@ -35,7 +52,7 @@
     right: "40px",
     background: "#10a37f",
     color: "white",
-    padding: "12px 32px",
+    padding: "64px 64px",
     borderRadius: "8px",
     fontSize: "20px",
     fontWeight: "600",
