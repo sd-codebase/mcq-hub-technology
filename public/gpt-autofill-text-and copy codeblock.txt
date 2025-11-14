@@ -1,0 +1,167 @@
+
+
+
+(async function() {
+  // remove previous if exists
+  document.getElementById('pasteBtn')?.remove();
+
+  // create button
+  const btn = document.createElement('button');
+  btn.id = 'pasteBtn';
+  btn.textContent = '📋 Paste+AutoSend';
+  Object.assign(btn.style, {
+    position: 'fixed',
+    right: '10px',
+    bottom: '120px',
+    zIndex: '2147483647',
+    padding: '10px 14px',
+    borderRadius: '8px',
+    background: '#0ea37a',
+    color: '#fff',
+    border: 'none',
+    cursor: 'pointer',
+    boxShadow: '0 6px 18px rgba(0,0,0,0.25)',
+    fontWeight: '600'
+  });
+  document.body.appendChild(btn);
+
+  function showSuccessToast(message = "Code copied successfully!") {
+  const toast = document.createElement("div");
+  toast.textContent = message;
+
+  Object.assign(toast.style, {
+    position: "fixed",
+    top: "40px",
+    right: "40px",
+    background: "#10a37f",
+    color: "white",
+    padding: "12px 32px",
+    borderRadius: "8px",
+    fontSize: "20px",
+    fontWeight: "600",
+    zIndex: "999999999",
+    boxShadow: "0 6px 18px rgba(0,0,0,0.25)",
+    opacity: "0",
+    transition: "opacity 0.3s ease",
+  });
+
+  document.body.appendChild(toast);
+
+  // Fade in
+  requestAnimationFrame(() => {
+    toast.style.opacity = "1";
+  });
+
+  // Fade out and remove
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    setTimeout(() => toast.remove(), 400);
+  }, 5000);
+}
+
+  // helper: wait until ChatGPT stops generating
+  function waitForGPTToFinish() {
+    return new Promise(resolve => {
+      const interval = setInterval(() => {
+        // UI markers for "Generating" state
+        const isGenerating =
+          document.querySelector('[data-testid="bot-typing-indicator"]') ||
+          document.querySelector('.typing-indicator') ||
+          document.querySelector('svg.animate-spin'); // fallback spinner
+
+        if (!isGenerating) {
+          clearInterval(interval);
+          resolve();
+        }
+      }, 60000);
+    });
+  }
+
+  // find latest code block
+  function getLatestCodeBlock() {
+    const blocks = [...document.querySelectorAll("pre code")];
+    if (!blocks.length) return null;
+    return blocks[blocks.length - 1].innerText;
+  }
+
+  // paste logic
+  async function pasteAndSend() {
+    let text = "";
+    try {
+      text = await navigator.clipboard.readText();
+      if (!text) {
+        alert("Clipboard empty.");
+        return;
+      }
+    } catch {
+      text = prompt("Clipboard blocked — paste text here:");
+      if (!text) return;
+    }
+
+    // contentEditable or textarea
+    const editable =
+      document.querySelector('[contenteditable="true"]') ||
+      document.querySelector('[role="textbox"]') ||
+      document.querySelector('textarea[name="prompt-textarea"]') ||
+      document.querySelector("textarea");
+
+    if (!editable) {
+      alert("ChatGPT input box not found!");
+      return;
+    }
+
+    // insert text
+    editable.focus();
+    const ok = document.execCommand("insertText", false, text);
+    if (!ok) {
+      editable.innerText += text;
+    }
+
+    editable.dispatchEvent(new InputEvent("input", { bubbles: true }));
+
+    // update button state
+    btn.textContent = "✅ Pasted";
+
+    // auto-send after 200ms
+    setTimeout(async () => {
+      const sendBtn =
+        document.querySelector('button[data-testid="send-button"]') ||
+        document.querySelector('button[aria-label="Send message"]') ||
+        document.querySelector('button[type=submit]');
+
+      if (sendBtn) {
+        sendBtn.click();
+        console.log("🚀 Auto-sent message.");
+      } else {
+        console.warn("❌ Send button not found.");
+      }
+
+      // Wait until model finishes responding
+      console.log("⌛ Waiting for GPT to finish...");
+      await waitForGPTToFinish();
+      console.log("✅ GPT stopped responding.");
+
+      // Get latest code block
+      const code = getLatestCodeBlock();
+      if (code) {
+        await navigator.clipboard.writeText(code);
+        showSuccessToast("Latest code block copied!");
+        console.log("📋 Copied latest code block to clipboard.");
+        btn.textContent = "✨ Code Copied!";
+      } else {
+        console.warn("⚠️ No code block found.");
+        btn.textContent = "⚠️ No Code";
+      }
+
+      // reset button text
+      setTimeout(() => {
+        btn.textContent = "📋 Paste+AutoSend";
+      }, 1200);
+
+    }, 200);
+  }
+
+  btn.addEventListener("click", pasteAndSend);
+
+  console.log("Paste+AutoSend+AutoCopy button added.");
+})();
