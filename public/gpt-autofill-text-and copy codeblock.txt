@@ -55,7 +55,7 @@
   // Fade out and remove
   setTimeout(() => {
     toast.style.opacity = "0";
-    setTimeout(() => toast.remove(), 400);
+    setTimeout(() => toast.remove(), 500);
   }, 5000);
 }
 
@@ -64,16 +64,15 @@
     return new Promise(resolve => {
       const interval = setInterval(() => {
         // UI markers for "Generating" state
-        const isGenerating =
-          document.querySelector('[data-testid="bot-typing-indicator"]') ||
-          document.querySelector('.typing-indicator') ||
-          document.querySelector('svg.animate-spin'); // fallback spinner
+        const isGeneratingStopped =
+          document.querySelector('[aria-label="Start voice mode"]');
+          
 
-        if (!isGenerating) {
+        if (isGeneratingStopped) {
           clearInterval(interval);
-          resolve();
+          setTimeout(resolve, 1000)
         }
-      }, 60000);
+      }, 3000);
     });
   }
 
