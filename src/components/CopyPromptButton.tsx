@@ -47,7 +47,7 @@ export default function CopyPromptButton({
   // Replace placeholders in prompt with actual values
   const replacePlaceholders = (prompt: string): string => {
     let result = prompt;
-    let type = PROMPTS[questionType];
+    const type = PROMPTS[questionType];
 
     if (type) {
       result = result.replace(/{type}/g, type);
