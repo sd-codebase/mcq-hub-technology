@@ -4,33 +4,22 @@ import React, { useEffect, useState } from "react";
 
 type QuestionType = "mcq" | "output" | "interview";
 
+const Prompt = `
+Response should be **copyable code block of valid json** only. Only **valid json**.
+Generate {type} for the following inputs:
+
+**Programming Language/Technology:** {technology}
+**Count:** {count}
+**Subject:** {subject_name}
+**Chapter:** {chapter_name}
+**Topic:** {topic_name}`;
+
 const PROMPTS: Record<QuestionType, string> = {
-  mcq: `
-Generate multiple-choice questions (MCQ) for the following inputs:
+  mcq: "multiple-choice questions (MCQ)",
 
-**Programming Language/Technology:** {technology}
-**Count:** {count}
-**Subject:** {subject_name}
-**Chapter:** {chapter_name}
-**Topic:** {topic_name}`,
+  output: "code output prediction questions",
 
-  output: `
-Generate code output prediction questions for the following inputs:
-
-**Programming Language/Technology:** {technology}
-**Count:** {count}
-**Subject:** {subject_name}
-**Chapter:** {chapter_name}
-**Topic:** {topic_name}`,
-
-  interview: `
-Generate interview questions with detailed answers for the following inputs:
-
-**Programming Language/Technology:** {technology}
-**Count:** {count}
-**Subject:** {subject_name}
-**Chapter:** {chapter_name}
-**Topic:** {topic_name}`,
+  interview: "interview questions with detailed answers",
 };
 
 interface CopyPromptButtonProps {
@@ -57,7 +46,11 @@ export default function CopyPromptButton({
   // Replace placeholders in prompt with actual values
   const replacePlaceholders = (prompt: string): string => {
     let result = prompt;
+    let type = PROMPTS[questionType];
 
+    if (type) {
+      result = result.replace(/{type}/g, type);
+    }
     if (count !== undefined) {
       result = result.replace(/{count}/g, String(count));
     }
@@ -81,7 +74,7 @@ export default function CopyPromptButton({
 
   const handleCopy = async () => {
     try {
-      let prompt = PROMPTS[questionType];
+      let prompt = Prompt;
 
       // Replace placeholders with dynamic data
       prompt = replacePlaceholders(prompt);
