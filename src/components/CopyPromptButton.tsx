@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 type QuestionType = "mcq" | "output" | "interview";
 
 const Prompt = `
+Read the attached Prompt file in the project for context, and follow the instructions strictly mentioned in the promt file.
 Response should be **copyable code block of valid json** only. Only **valid json**.
 Generate {type} for the following inputs:
 
