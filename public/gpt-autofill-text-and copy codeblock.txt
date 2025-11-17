@@ -1,9 +1,33 @@
 
 
-
 (async function() {
+  let processInProgress = false;
   // remove previous if exists
   document.getElementById('pasteBtn')?.remove();
+
+  // Auto-trigger paste+send when tab becomes active again
+  window.addEventListener("focus", async () => {
+    console.log("🔙 User returned to tab → auto-trigger paste+send");
+    if(processInProgress) {
+      return false;
+    }
+    try {
+      text = await navigator.clipboard.readText();
+      
+      if (!text) {
+        return;
+      }
+      console.log("hasText")
+      if(text.includes("\n**Count:**") && text.includes("\n**Subject:**") && text.includes("\n**Chapter:**")) {
+       pasteAndSend();  // <-- your main workflow function
+      }
+    } catch {
+      text = prompt("Clipboard blocked — paste text here:");
+      if (!text) return;
+    }
+      
+  });
+
 
   // create button
   const btn = document.createElement('button');
@@ -137,6 +161,7 @@
 
     // update button state
     btn.textContent = "✅ Pasted";
+    
 
     // auto-send after 200ms
     setTimeout(async () => {
@@ -148,6 +173,7 @@
       if (sendBtn) {
         sendBtn.click();
         console.log("🚀 Auto-sent message.");
+        processInProgress = true;
       } else {
         console.warn("❌ Send button not found.");
       }
@@ -164,6 +190,7 @@
         showSuccessToast("Latest code block copied!");
         console.log("📋 Copied latest code block to clipboard.");
         btn.textContent = "✨ Code Copied!";
+        processInProgress = false;
       } else {
         console.warn("⚠️ No code block found.");
         btn.textContent = "⚠️ No Code";

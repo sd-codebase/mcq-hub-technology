@@ -73,6 +73,32 @@ export default function CopyPromptButton({
     return result;
   };
 
+  // Play success sound using Web Audio API
+  const playSuccessSound = () => {
+    try {
+      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+
+      // Set sound properties
+      oscillator.frequency.value = 800; // 800 Hz frequency
+      oscillator.type = "sine"; // Sine wave for smooth sound
+
+      // Set volume
+      gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+
+      // Play for 200ms
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.2);
+    } catch (error) {
+      console.error("Failed to play sound:", error);
+    }
+  };
+
   const handleCopy = async () => {
     try {
       let prompt = Prompt;
@@ -82,6 +108,7 @@ export default function CopyPromptButton({
 
       await navigator.clipboard.writeText(prompt);
       setCopied(true);
+      playSuccessSound();
       onCopied?.();
 
       // Reset "Copied!" feedback after 2 seconds

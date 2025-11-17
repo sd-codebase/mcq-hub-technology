@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import CopyPromptButton from "./CopyPromptButton";
+import { debounce } from "lodash";
 
 type QuestionType = "mcq" | "output" | "interview";
 
@@ -43,6 +44,12 @@ const EXAMPLE_JSON = {
     "explanation": "Closures are created when a function is defined inside another function"
   }
 ]`,
+};
+
+const ExpectedKeysInJson = {
+  mcq: ["question", "options", "correct_answer", "explanation"],
+  output: ["question", "output", "explanation"],
+  interview: ["question", "answer", "explanation"],
 };
 
 const API_ENDPOINTS = {
@@ -131,6 +138,53 @@ export default function SubtopicAdminActions({
   const [testsLoading, setTestsLoading] = useState(false);
   const [testsError, setTestsError] = useState("");
   const [isTestsModalOpen, setIsTestsModalOpen] = useState(false);
+
+  const handleWindowFocus = () => {
+    handlePasteEvent();
+  };
+
+  const handlePasteEvent = async () => {
+    try {
+      const clipboardText = await navigator.clipboard.readText();
+
+      // Check if clipboardText has content
+      const hasContent = clipboardText && clipboardText.trim().length > 0;
+      console.log("Clipboard has content:", hasContent);
+
+      if (!hasContent) {
+        return;
+      }
+
+      const questions = JSON.parse(clipboardText);
+
+      // Validate questions against ExpectedKeysInJson
+      const expectedKeys = ExpectedKeysInJson[modalType];
+      const isValid =
+        Array.isArray(questions) &&
+        questions.every((question) =>
+          expectedKeys.every((key) => key in question)
+        );
+
+      console.log("Questions have expected keys:", isValid);
+
+      if (isValid) {
+        debouncedPaste();
+      }
+    } catch (error) {
+      console.log("Error: Failed to read clipboard:", error);
+    }
+  };
+
+  // Detect when user returns to the browser tab using cmd+tab or clicking back
+  useEffect(() => {
+    if (isOpen) {
+      window.addEventListener("focus", handleWindowFocus);
+    }
+
+    return () => {
+      window.removeEventListener("focus", handleWindowFocus);
+    };
+  }, [isOpen]);
 
   // Fetch tests for this subtopic
   const fetchTests = async () => {
@@ -233,7 +287,11 @@ export default function SubtopicAdminActions({
     }
   };
 
+  const debouncedPaste = debounce(handlePaste, 1000);
+
   const handleSave = async (clipboardText?: string) => {
+    // console.log("called save");
+    // return;
     setError("");
     setSuccess("");
 
@@ -275,6 +333,8 @@ export default function SubtopicAdminActions({
         setLoading(false);
         return;
       }
+
+      // const data = { saved: 25, duplicates: 0, testsCreated : 4};
 
       // Show success message with details
       setSuccess(
