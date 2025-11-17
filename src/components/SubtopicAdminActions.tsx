@@ -287,7 +287,7 @@ export default function SubtopicAdminActions({
     }
   };
 
-  const debouncedPaste = debounce(handlePaste, 1000);
+  const debouncedPaste = debounce(handlePaste, 100);
 
   const handleSave = async (clipboardText?: string) => {
     // console.log("called save");
