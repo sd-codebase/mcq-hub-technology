@@ -232,10 +232,10 @@ const Footer = () => (
         <div className="mb-4 md:mb-0">
           <div className="flex items-center justify-center md:justify-start">
             <Zap className="h-6 w-6 text-indigo-400 mr-2" />
-            <span className="text-xl font-bold text-white">MCQHub</span>
+            <span className="text-xl font-bold text-white">QuizzyDock</span>
           </div>
           <p className="text-gray-500 mt-2 text-sm">
-            © {new Date().getFullYear()} MCQHub. All rights reserved.
+            © {new Date().getFullYear()} QuizzyDock. All rights reserved.
           </p>
         </div>
         <div className="space-x-6 text-sm">

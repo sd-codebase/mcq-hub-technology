@@ -13,7 +13,7 @@ export const Header = ({
           <Zap className="h-6 w-6 text-indigo-400 mr-2" />
           <div className="flex flex-col items-center">
             <span className="text-2xl font-bold text-white tracking-tight -mb-1">
-              MCQ<span className="text-indigo-400">Hub</span>
+              Quizzy<span className="text-indigo-400">Dock</span>
             </span>
             <span className="text-[12px] font-medium text-gray-400 tracking-wider">
               TECH SKILLS

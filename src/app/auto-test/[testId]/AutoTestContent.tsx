@@ -148,7 +148,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
             <Zap className="h-6 w-6 text-indigo-400" />
             <div className="flex flex-col items-center">
               <span className="text-2xl font-bold text-white tracking-tight -mb-1">
-                MCQ<span className="text-indigo-400">Hub</span>
+                Quizzy<span className="text-indigo-400">Dock</span>
               </span>
               <span className="text-[12px] font-medium text-gray-400 tracking-wider">
                 TECH SKILLS
@@ -243,18 +243,20 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
             )}
 
             {/* Output (OUTPUT Question Type) - Only show in answer phase */}
-            {currentQuestion.output && !currentQuestion.options && phase === "answer" && (
-              <div className="mb-6">
-                <div className="p-4 rounded-lg bg-green-50 border-2 border-green-500 ring-4 ring-green-200 animate-fade-correct">
-                  <div className="text-green-700 text-sm font-semibold mb-2 flex items-center gap-2">
-                    <span>✓ Expected Output:</span>
-                  </div>
-                  <div className="text-green-800 font-mono text-lg whitespace-pre-wrap">
-                    <MDEditorRenderer value={currentQuestion.output} />
+            {currentQuestion.output &&
+              !currentQuestion.options &&
+              phase === "answer" && (
+                <div className="mb-6">
+                  <div className="p-4 rounded-lg bg-green-50 border-2 border-green-500 ring-4 ring-green-200 animate-fade-correct">
+                    <div className="text-green-700 text-sm font-semibold mb-2 flex items-center gap-2">
+                      <span>✓ Expected Output:</span>
+                    </div>
+                    <div className="text-green-800 font-mono text-lg whitespace-pre-wrap">
+                      <MDEditorRenderer value={currentQuestion.output} />
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
 
             {/* Explanation */}
             {/* {currentQuestion.explanation && (
@@ -402,7 +404,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
             )}
           </div>
           <div className="mt-16">
-            <p className="text-xl text-indigo-400 ">{baseUrl}</p>
+            <p className="text-md text-gray-200 font-semibold">{baseUrl}</p>
           </div>
 
           {/* <div className="text-3xl font-bold text-indigo-400">{timer}</div> */}
