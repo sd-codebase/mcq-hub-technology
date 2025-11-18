@@ -6,9 +6,9 @@ import { generatePageMetadata } from "@/lib/seo";
 export const metadata = generatePageMetadata({
   title: "Legal - Privacy Policy & Terms of Service",
   description:
-    "Read MCQ Hub's privacy policy and terms of service. Learn about how we protect your data and our platform usage terms.",
+    "Read Quizzy Dock's privacy policy and terms of service. Learn about how we protect your data and our platform usage terms.",
   path: "/legal",
-  keywords: ["privacy policy", "terms of service", "legal", "MCQ Hub terms"],
+  keywords: ["privacy policy", "terms of service", "legal", "Quizzy Dock terms"],
   noIndex: true,
 });
 

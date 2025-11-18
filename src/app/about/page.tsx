@@ -3,12 +3,12 @@ import { offerings, technologies } from "../constants/about";
 import { generatePageMetadata } from "@/lib/seo";
 
 export const metadata = generatePageMetadata({
-  title: "About Us - MCQ Hub Mission & Vision",
+  title: "About Us - Quizzy Dock Mission & Vision",
   description:
-    "Learn about MCQ Hub's mission to empower developers through comprehensive technical assessments and interview preparation. Discover our platform's features and technologies.",
+    "Learn about Quizzy Dock's mission to empower developers through comprehensive technical assessments and interview preparation. Discover our platform's features and technologies.",
   path: "/about",
   keywords: [
-    "about MCQ Hub",
+    "about Quizzy Dock",
     "coding platform",
     "developer training",
     "interview preparation platform",
@@ -19,7 +19,7 @@ export const metadata = generatePageMetadata({
 const AboutHero = () => (
   <div className="text-center mb-12">
     <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-teal-400 mb-4">
-      About MCQHub
+      About Quizzy Dock
     </h1>
     <p className="text-xl text-gray-400 max-w-2xl mx-auto">
       Empowering developers to master technical skills through comprehensive
@@ -34,7 +34,7 @@ const MissionSection = () => (
       Our Mission
     </h2>
     <p className="text-lg text-gray-300 leading-relaxed">
-      MCQHub is dedicated to helping developers master technical skills through
+      Quizzy Dock is dedicated to helping developers master technical skills through
       comprehensive assessments and interview preparation materials. We believe
       in practical learning and real-world preparation.
     </p>

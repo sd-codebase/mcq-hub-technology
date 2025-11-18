@@ -5,9 +5,9 @@ import { generatePageMetadata } from "@/lib/seo";
 export const metadata = generatePageMetadata({
   title: "Contact Us - Get in Touch",
   description:
-    "Have questions about MCQ Hub? Get in touch with us. We'd love to hear your feedback and help you with any inquiries about our coding quiz platform.",
+    "Have questions about Quizzy Dock? Get in touch with us. We'd love to hear your feedback and help you with any inquiries about our coding quiz platform.",
   path: "/contact",
-  keywords: ["contact MCQ Hub", "support", "feedback", "help"],
+  keywords: ["contact Quizzy Dock", "support", "feedback", "help"],
 });
 
 export default function ContactPage() {

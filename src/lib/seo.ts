@@ -2,12 +2,12 @@ import { Metadata } from "next";
 
 // Site configuration
 export const SITE_CONFIG = {
-  name: "MCQ HUB TECH SKILLS",
-  shortName: "MCQ Hub",
+  name: "Quizzy Dock Tech Skills",
+  shortName: "Quizzy Dock",
   description:
-    "Master coding skills with interactive quizzes. Practice MCQ, code output, and interview questions for JavaScript, TypeScript, React, Node.js, and more.",
+    "Master coding skills with interactive quizzes. Practice MCQs, code output, and interview questions for JavaScript, TypeScript, React, Node.js, and more on Quizzy Dock.",
   url:
-    process.env.NEXT_PUBLIC_BASE_URL || "https://mcqhub-technology.vercel.app",
+    process.env.NEXT_PUBLIC_BASE_URL || "https://www.quizzydock.com",
   ogImage: "/images/og-image.png", // Default OpenGraph image
   keywords: [
     "coding quiz",

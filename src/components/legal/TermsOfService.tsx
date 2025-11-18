@@ -8,7 +8,7 @@ export const TermsOfService = () => {
             Acceptance of Terms
           </h2>
           <p>
-            By accessing and using MCQHub, you agree to be bound by these Terms
+            By accessing and using Quizzy Dock, you agree to be bound by these Terms
             of Service and all applicable laws and regulations.
           </p>
         </section>
@@ -32,7 +32,7 @@ export const TermsOfService = () => {
             Content Usage
           </h2>
           <p>
-            All content provided on MCQHub is for educational purposes only. You
+            All content provided on Quizzy Dock is for educational purposes only. You
             may not reproduce, distribute, or use our content for commercial
             purposes without explicit permission.
           </p>

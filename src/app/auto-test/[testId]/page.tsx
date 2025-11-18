@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import AutoTestContent from "./AutoTestContent";
 
 export const metadata: Metadata = {
-  title: "Auto Test Player - MCQ Hub",
+  title: "Auto Test Player - Quizzy Dock",
   description: "Automated test playback for recording and demonstration",
 };
 
