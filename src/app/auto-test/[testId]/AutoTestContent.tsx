@@ -181,19 +181,28 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         <div className={`w-full max-w-4xl ${getQuestionBlockAnimation()}`}>
           {/* Question Card */}
           <div className="bg-white p-8 rounded-lg shadow-2xl mb-6">
-            {/* Question Number with Quiz Type */}
-            <div className="flex justify-between items-center mb-3">
+            {/* Question Number with Timer and Quiz Type */}
+            <div className="flex justify-between items-center mb-3 gap-3">
               <div className="text-sm font-medium text-gray-500">
                 <strong>#{currentIndex + 1}</strong>
               </div>
-              <div
-                className={`text-xs font-semibold px-3 py-1 rounded-full ${
-                  testData.questionType === "mcq"
-                    ? "bg-indigo-100 text-indigo-700"
-                    : "bg-teal-100 text-teal-700"
-                }`}
-              >
-                {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
+              <div className="flex items-center gap-3">
+                {/* Reverse Seconds Counter - Hide during answer phase */}
+                {phase !== "answer" && (
+                  <div className="text-sm font-semibold px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">
+                    {timer}s
+                  </div>
+                )}
+                {/* Quiz Type Badge */}
+                <div
+                  className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                    testData.questionType === "mcq"
+                      ? "bg-indigo-100 text-indigo-700"
+                      : "bg-teal-100 text-teal-700"
+                  }`}
+                >
+                  {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
+                </div>
               </div>
             </div>
 
