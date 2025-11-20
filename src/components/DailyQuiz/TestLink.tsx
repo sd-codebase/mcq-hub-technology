@@ -1,12 +1,16 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { buildReviewUrl } from "@/utils/slug";
 
 interface Test {
   _id: string;
   testName: string;
   questionType: string;
   questionCount: number;
+  subjectName?: string;
+  topicName?: string;
+  subtopicName?: string;
 }
 
 interface TestLinkProps {
@@ -32,8 +36,13 @@ export default function TestLink({ test }: TestLinkProps) {
     return null;
   }
 
+  // Build review URL with slugs for SEO
+  const reviewUrl = test.subjectName && test.topicName && test.subtopicName
+    ? buildReviewUrl(test._id, test.subjectName, test.topicName, test.subtopicName)
+    : `/review/${test._id}`;
+
   return (
-    <Link href={`/review/${test._id}`} target="_blank" rel="noopener noreferrer">
+    <Link href={reviewUrl} target="_blank" rel="noopener noreferrer">
       <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800 border border-gray-700 hover:border-indigo-500/50 transition-all duration-300 transform hover:scale-105 cursor-pointer group">
         <span
           className={`px-1.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-bold whitespace-nowrap ${getTypeColor(

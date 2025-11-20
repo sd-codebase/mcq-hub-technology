@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import ReviewTestContent from "@/components/ReviewTestContent";
+import AdminReviewTestContent from "@/components/AdminReviewTestContent";
 
 export const metadata: Metadata = {
   title: "Review Test - Quizzy Dock",
@@ -49,5 +49,5 @@ export default async function ReviewTestPage({
     );
   }
 
-  return <ReviewTestContent testData={testData} />;
+  return <AdminReviewTestContent testData={testData} />;
 }

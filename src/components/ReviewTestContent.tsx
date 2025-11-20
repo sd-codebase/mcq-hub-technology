@@ -25,27 +25,6 @@ interface ReviewTestContentProps {
 }
 
 export default function ReviewTestContent({ testData }: ReviewTestContentProps) {
-  const [expandedQuestions, setExpandedQuestions] = useState<Set<number>>(
-    new Set(testData.questions.map((_, index) => index)) // Expand all questions by default
-  );
-  const [copiedId, setCopiedId] = useState<string | null>(null);
-
-  const toggleQuestion = (index: number) => {
-    const newExpanded = new Set(expandedQuestions);
-    if (newExpanded.has(index)) {
-      newExpanded.delete(index);
-    } else {
-      newExpanded.add(index);
-    }
-    setExpandedQuestions(newExpanded);
-  };
-
-  const copyToClipboard = (questionId: string, index: number) => {
-    navigator.clipboard.writeText(questionId).then(() => {
-      setCopiedId(questionId);
-      setTimeout(() => setCopiedId(null), 2000);
-    });
-  };
 
   return (
     <div
@@ -91,145 +70,110 @@ export default function ReviewTestContent({ testData }: ReviewTestContentProps) 
         </div>
 
         {/* Questions List */}
-        <div className="space-y-4 mb-12">
+        <div className="space-y-8 mb-12">
           {testData.questions.map((question, index) => {
-            const isExpanded = expandedQuestions.has(index);
-            const questionId = question._id || `Q${index + 1}`;
-            const isCopied = copiedId === questionId;
-
             return (
-              <div
-                key={index}
-                className="bg-gray-800/50 border border-gray-700 rounded-lg overflow-hidden hover:border-indigo-500/50 transition-all duration-300"
-              >
+              <div key={index} className="border-b border-gray-700 pb-8">
                 {/* Question Header */}
-                <div className="bg-white hover:bg-gray-100 transition-colors duration-200 px-6 py-3 flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-4 flex-1">
-                    <span className="font-bold text-indigo-600 text-lg min-w-fit">
-                      #{index + 1}
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <code className="text-indigo-600 text-sm font-mono bg-gray-100 px-3 py-1 rounded border border-gray-300">
-                        {questionId}
-                      </code>
-                      <button
-                        onClick={() => copyToClipboard(questionId, index)}
-                        className={`px-3 py-1 rounded text-sm font-semibold transition-all duration-300 ${
-                          isCopied
-                            ? "bg-green-600 text-white"
-                            : "bg-indigo-600 hover:bg-indigo-700 text-white"
-                        }`}
-                      >
-                        {isCopied ? "✓ Copied" : "Copy"}
-                      </button>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => toggleQuestion(index)}
-                    className="text-gray-600 text-2xl min-w-fit"
-                  >
-                    {isExpanded ? "▼" : "▶"}
-                  </button>
+                <div className="mb-6">
+                  <span className="font-bold text-indigo-400 text-xl min-w-fit">
+                    #{index + 1}
+                  </span>
                 </div>
 
-                {/* Question Content - Expanded */}
-                {isExpanded && (
-                  <div className="px-6 py-4 bg-gray-900/50 border-t border-gray-700 space-y-4">
-                    {/* Full Question */}
-                    <div>
-                      <p className="text-gray-400 text-xs uppercase font-semibold mb-2">
-                        Question
-                      </p>
-                      <div className="text-gray-800 text-base bg-white p-4 rounded-lg">
-                        <MDEditorRenderer value={question.question} />
-                      </div>
-                    </div>
+                {/* Full Question */}
+                <div className="mb-6">
+                  <p className="text-gray-400 text-xs uppercase font-semibold mb-3">
+                    Question
+                  </p>
+                  <div className="text-gray-800 text-base bg-white p-4 rounded-lg">
+                    <MDEditorRenderer value={question.question} />
+                  </div>
+                </div>
 
-                    {/* MCQ Options */}
-                    {question.options && (
-                      <div className="pt-3 border-t border-gray-700">
-                        <p className="text-gray-400 text-xs uppercase font-semibold mb-3">
-                          Options
-                        </p>
-                        <div className="space-y-2">
-                          {question.options.map((option: string, optionIdx: number) => {
-                            const isCorrect = optionIdx === question.correct_answer;
-                            return (
-                              <div
-                                key={optionIdx}
-                                className={`p-3 rounded-lg border-2 transition-all duration-200 ${
+                {/* MCQ Options */}
+                {question.options && (
+                  <div className="mb-6">
+                    <p className="text-gray-400 text-xs uppercase font-semibold mb-3">
+                      Options
+                    </p>
+                    <div className="space-y-2">
+                      {question.options.map((option: string, optionIdx: number) => {
+                        const isCorrect = optionIdx === question.correct_answer;
+                        return (
+                          <div
+                            key={optionIdx}
+                            className={`p-3 rounded-lg border-2 transition-all duration-200 ${
+                              isCorrect
+                                ? "bg-green-50 border-green-500"
+                                : "bg-white border-gray-300"
+                            }`}
+                          >
+                            <div className="flex items-start gap-3">
+                              <span
+                                className={`font-bold text-lg min-w-fit ${
                                   isCorrect
-                                    ? "bg-green-50 border-green-500"
-                                    : "bg-white border-gray-300"
+                                    ? "text-green-600"
+                                    : "text-gray-700"
                                 }`}
                               >
-                                <div className="flex items-start gap-3">
-                                  <span
-                                    className={`font-bold text-lg min-w-fit ${
-                                      isCorrect
-                                        ? "text-green-600"
-                                        : "text-gray-700"
-                                    }`}
-                                  >
-                                    {String.fromCharCode(65 + optionIdx)})
-                                  </span>
-                                  <div className="flex-1">
-                                    <div className={isCorrect ? "text-green-700" : "text-gray-800"}>
-                                      <MDEditorRenderer value={option} />
-                                    </div>
-                                  </div>
-                                  {isCorrect && (
-                                    <span className="text-green-600 text-lg font-bold">✓</span>
-                                  )}
+                                {String.fromCharCode(65 + optionIdx)})
+                              </span>
+                              <div className="flex-1">
+                                <div className={isCorrect ? "text-green-700" : "text-gray-800"}>
+                                  <MDEditorRenderer value={option} />
                                 </div>
                               </div>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Output Question Type */}
-                    {question.output && !question.options && (
-                      <div className="pt-3 border-t border-gray-700">
-                        <p className="text-gray-400 text-xs uppercase font-semibold mb-3">
-                          Expected Output
-                        </p>
-                        <div className="p-4 rounded-lg bg-green-900/30 border-2 border-green-500">
-                          <div className="text-green-300 font-mono text-sm whitespace-pre-wrap">
-                            <MDEditorRenderer value={question.output} />
+                              {isCorrect && (
+                                <span className="text-green-600 text-lg font-bold">✓</span>
+                              )}
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    )}
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
 
-                    {/* Interview Question Answer */}
-                    {question.answer && !question.options && !question.output && (
-                      <div className="pt-3 border-t border-gray-700">
-                        <p className="text-gray-400 text-xs uppercase font-semibold mb-3">
-                          Answer
-                        </p>
-                        <div className="p-4 rounded-lg bg-indigo-900/30 border-2 border-indigo-500">
-                          <div className="text-indigo-300 text-sm">
-                            <MDEditorRenderer value={question.answer} />
-                          </div>
-                        </div>
+                {/* Output Question Type */}
+                {question.output && !question.options && (
+                  <div className="mb-6">
+                    <p className="text-gray-400 text-xs uppercase font-semibold mb-3">
+                      Expected Output
+                    </p>
+                    <div className="p-4 rounded-lg bg-green-900/30 border-2 border-green-500">
+                      <div className="text-green-300 font-mono text-sm whitespace-pre-wrap">
+                        <MDEditorRenderer value={question.output} />
                       </div>
-                    )}
+                    </div>
+                  </div>
+                )}
 
-                    {/* Explanation */}
-                    {question.explanation && (
-                      <div className="pt-3 border-t border-gray-700">
-                        <p className="text-gray-400 text-xs uppercase font-semibold mb-3">
-                          Explanation
-                        </p>
-                        <div className="p-4 rounded-lg bg-white border-l-4 border-amber-500">
-                          <div className="text-gray-800 text-sm">
-                            <MDEditorRenderer value={question.explanation} />
-                          </div>
-                        </div>
+                {/* Interview Question Answer */}
+                {question.answer && !question.options && !question.output && (
+                  <div className="mb-6">
+                    <p className="text-gray-400 text-xs uppercase font-semibold mb-3">
+                      Answer
+                    </p>
+                    <div className="p-4 rounded-lg bg-indigo-900/30 border-2 border-indigo-500">
+                      <div className="text-indigo-300 text-sm">
+                        <MDEditorRenderer value={question.answer} />
                       </div>
-                    )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Explanation */}
+                {question.explanation && (
+                  <div>
+                    <p className="text-gray-400 text-xs uppercase font-semibold mb-3">
+                      Explanation
+                    </p>
+                    <div className="p-4 rounded-lg bg-white border-l-4 border-amber-500">
+                      <div className="text-gray-800 text-sm">
+                        <MDEditorRenderer value={question.explanation} />
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

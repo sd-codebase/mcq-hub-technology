@@ -51,6 +51,7 @@ const TestSchema = new Schema<ITest>(
       type: String,
       enum: ["published", "unpublished"],
       default: "unpublished",
+      required: false,
     },
   },
   {
@@ -60,6 +61,10 @@ const TestSchema = new Schema<ITest>(
 
 // Compound index for efficient queries by subtopic and question type
 TestSchema.index({ subtopicId: 1, questionType: 1 });
+
+// Ensure socialMediaStatus field is accessible on the schema
+TestSchema.set("toJSON", { virtuals: true });
+TestSchema.set("toObject", { virtuals: true });
 
 const Test: Model<ITest> =
   mongoose.models.Test || mongoose.model<ITest>("Test", TestSchema);

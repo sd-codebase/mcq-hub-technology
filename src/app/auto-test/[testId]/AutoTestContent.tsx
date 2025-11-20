@@ -127,15 +127,17 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
     if (phase === "thank-you") {
       const updateSocialMediaStatus = async () => {
         try {
-          await fetch(`/api/tests/${testData._id}/social-status`, {
+          const response = await fetch(`/api/tests/${testData._id}/social-status`, {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json",
             },
           });
+          const data = await response.json();
+          console.log("Social media status update response:", data);
         } catch (error) {
           // Silently fail - no error handling needed
-          console.log("Social media status update completed");
+          console.error("Social media status update error:", error);
         }
       };
 

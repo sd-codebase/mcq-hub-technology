@@ -1,4 +1,4 @@
-import ReviewContent from "./ReviewContent";
+import ReviewContent from "../../../ReviewContent";
 
 interface Question {
   _id: string;
