@@ -20,19 +20,10 @@ export async function PATCH(
       );
     }
 
-    console.log(`Attempting to update test ID: ${testId}`);
-
     // First, check if the test exists
     const existingTest = await Test.findById(testId);
-    console.log(`Found existing test:`, existingTest ? "Yes" : "No");
-    console.log(`Existing test data:`, {
-      id: existingTest?._id,
-      name: existingTest?.testName,
-      currentStatus: existingTest?.socialMediaStatus,
-    });
 
     if (!existingTest) {
-      console.log(`Test not found for ID: ${testId}`);
       return NextResponse.json(
         { success: false, message: "Test not found" },
         { status: 404 }
@@ -53,20 +44,9 @@ export async function PATCH(
       { $set: { socialMediaStatus: "published" } }
     );
 
-    console.log(`Update completed`, {
-      matchedCount: updateResult.matchedCount,
-      modifiedCount: updateResult.modifiedCount,
-    });
-
     // Fetch the updated document directly from MongoDB
     const updatedDoc = await testsCollection.findOne({
       _id: new mongoose.Types.ObjectId(testId),
-    });
-
-    console.log(`Updated document from DB:`, {
-      id: updatedDoc?._id,
-      name: updatedDoc?.testName,
-      status: updatedDoc?.socialMediaStatus,
     });
 
     // Return updated test data

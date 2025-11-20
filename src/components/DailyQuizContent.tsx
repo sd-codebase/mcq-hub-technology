@@ -10,6 +10,7 @@ import EmptyState from "./DailyQuiz/EmptyState";
 interface Subtopic {
   id: string;
   name: string;
+  tests: Test[];
 }
 
 interface Topic {
@@ -72,8 +73,8 @@ export default function DailyQuizContent({
 
         // Flatten tests from grouped structure for compatibility
         const allTests: Test[] = [];
-        subjectData.topics.forEach((topic) => {
-          topic.subtopics.forEach((subtopic) => {
+        subjectData.topics.forEach((topic: Topic) => {
+          topic.subtopics.forEach((subtopic: Subtopic) => {
             allTests.push(...subtopic.tests);
           });
         });
