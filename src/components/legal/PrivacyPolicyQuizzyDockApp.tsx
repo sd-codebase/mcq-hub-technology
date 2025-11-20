@@ -55,10 +55,6 @@ export const PrivacyPolicyQuizzyDockApp = () => {
             <li>No signup required for using the app</li>
             <li>No contact or location access permissions requested</li>
             <li>
-              Users under 13 receive special protections in accordance with
-              applicable laws
-            </li>
-            <li>
               Any future permission requests will require explicit user consent
             </li>
           </ul>
