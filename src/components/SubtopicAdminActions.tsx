@@ -574,16 +574,8 @@ export default function SubtopicAdminActions({
                       badgeColors[questionType as keyof typeof badgeColors] ||
                       "bg-gray-500";
 
-                    return (
-                      <Link
-                        key={test._id}
-                        href={`/auto-test/${test._id}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block p-4 rounded-lg border border-gray-600 bg-gray-700/50
-                                 hover:bg-gray-700 hover:border-indigo-500
-                                 transition-all duration-300 transform hover:scale-105"
-                      >
+                    const cardContent = (
+                      <>
                         <div className="font-semibold text-white text-lg mb-2">
                           {test.testName}
                         </div>
@@ -595,6 +587,39 @@ export default function SubtopicAdminActions({
                         >
                           {questionType.toUpperCase()}
                         </span>
+                      </>
+                    );
+
+                    const cardClassName =
+                      "p-4 rounded-lg border border-gray-600 bg-gray-700/50 transition-all duration-300";
+                    const interviewCardClassName =
+                      cardClassName + " cursor-default hover:bg-gray-700/50";
+                    const clickableCardClassName =
+                      cardClassName +
+                      " hover:bg-gray-700 hover:border-indigo-500 transform hover:scale-105 cursor-pointer";
+
+                    // For interview tests, render as div without link
+                    if (questionType === "interview") {
+                      return (
+                        <div
+                          key={test._id}
+                          className={interviewCardClassName}
+                        >
+                          {cardContent}
+                        </div>
+                      );
+                    }
+
+                    // For other test types, render as clickable Link
+                    return (
+                      <Link
+                        key={test._id}
+                        href={`/auto-test/${test._id}/review`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={clickableCardClassName}
+                      >
+                        {cardContent}
                       </Link>
                     );
                   })}

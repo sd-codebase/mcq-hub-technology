@@ -10,7 +10,7 @@ const MDEditorRenderer = dynamic(
   { ssr: false }
 );
 
-type Phase = "intro" | "question" | "answer" | "outro";
+type Phase = "intro" | "question" | "answer" | "outro" | "thank-you";
 
 interface TestData {
   _id: string;
@@ -51,11 +51,13 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
       case "intro":
         return 3; // 3 seconds for intro
       case "question":
-        return 7; // 7 seconds for each question
+        return 5; // 5 seconds for each question
       case "answer":
         return 3; // 3 seconds for answer
       case "outro":
-        return 2; // 2 seconds for outro (test ends after this)
+        return 5; // 5 seconds for outro (then advance to thank-you)
+      case "thank-you":
+        return 999999; // Stay on thank-you screen forever
       default:
         return 5;
     }
@@ -80,7 +82,11 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         }
         break;
       case "outro":
-        // Do not restart test - stay on outro screen
+        // Advance from outro to thank-you after 5 seconds
+        setPhase("thank-you");
+        break;
+      case "thank-you":
+        // Stay on thank-you screen forever - do not advance
         break;
     }
   };
@@ -282,7 +288,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         </div>
       )}
 
-      {/* Outro Phase */}
+      {/* Outro Phase - 5 seconds with download and social links */}
       {phase === "outro" && (
         <div className="text-center max-w-2xl animate-fade-in">
           <h2 className="text-3xl font-bold text-white mb-18">
@@ -417,6 +423,22 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
           </div>
 
           {/* <div className="text-3xl font-bold text-indigo-400">{timer}</div> */}
+        </div>
+      )}
+
+      {/* Thank You Phase - Permanent screen */}
+      {phase === "thank-you" && (
+        <div className="text-center max-w-2xl animate-fade-in flex flex-col items-center justify-center h-screen">
+          <div className="space-y-8">
+            <h2 className="text-5xl font-bold text-white">Thank You!</h2>
+            <p className="text-2xl text-indigo-400 font-semibold">
+              for taking the test
+            </p>
+            <div className="text-lg text-gray-300 mt-8">
+              <p>We hope you learned something new.</p>
+              <p className="mt-4">Keep practicing and improving your skills! 💪</p>
+            </div>
+          </div>
         </div>
       )}
 
