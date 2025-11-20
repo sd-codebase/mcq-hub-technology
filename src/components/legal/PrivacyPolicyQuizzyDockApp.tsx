@@ -29,9 +29,9 @@ export const PrivacyPolicyQuizzyDockApp = () => {
             Third-Party Services
           </h2>
           <p>
-            MongoDB provides storage functionality for the QuizzyDock app. We
-            encourage you to review MongoDB's privacy policy independently to
-            understand how they handle your data.
+            {
+              "MongoDB provides storage functionality for the QuizzyDock app. We encourage you to review MongoDB's privacy policy independently to understand how they handle your data."
+            }
           </p>
         </section>
 
