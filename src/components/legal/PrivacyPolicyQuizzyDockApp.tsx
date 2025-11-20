@@ -52,7 +52,7 @@ export const PrivacyPolicyQuizzyDockApp = () => {
             User Protections
           </h2>
           <ul className="list-disc list-inside space-y-2">
-            <li>No signup required for gameplay</li>
+            <li>No signup required for using the app</li>
             <li>No contact or location access permissions requested</li>
             <li>
               Users under 13 receive special protections in accordance with
