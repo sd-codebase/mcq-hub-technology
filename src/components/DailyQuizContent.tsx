@@ -52,91 +52,37 @@ export default function DailyQuizContent({
         setLoading(true);
         setError("");
 
-        // Fetch subject data
-        const subjectResponse = await fetch(
-          `/api/subjects/by-shortname?shortname=${shortname}`
+        // Fetch published tests grouped by topic and subtopic
+        const response = await fetch(
+          `/api/subjects/${shortname}/published-tests`
         );
 
-        if (!subjectResponse.ok) {
+        if (!response.ok) {
           throw new Error("Subject not found");
         }
 
-        const subjectData = await subjectResponse.json();
+        const data = await response.json();
 
-        if (!subjectData.success || !subjectData.data) {
+        if (!data.success || !data.data) {
           throw new Error("Invalid subject data");
         }
 
-        setSubject(subjectData.data);
+        const subjectData = data.data;
+        setSubject(subjectData);
 
-        // Fetch all tests for each subtopic in parallel
+        // Flatten tests from grouped structure for compatibility
         const allTests: Test[] = [];
-
-        const subtopicTestPromises = subjectData.data.topics.flatMap(
-          (topic: Topic) =>
-            topic.subtopics.map((subtopic: Subtopic) =>
-              fetch(`/api/tests?subtopicId=${subtopic.id}`)
-                .then((res) => res.json())
-                .then((data) => {
-                  if (data.success && data.data && Array.isArray(data.data)) {
-                    const testsWithTopicInfo = data.data.map((test: any) => ({
-                      ...test,
-                      topicName: topic.name,
-                      subtopicId: subtopic.id,
-                      subtopicName: subtopic.name,
-                    }));
-                    allTests.push(...testsWithTopicInfo);
-                  }
-                })
-                .catch((err) => console.error("Error fetching tests:", err))
-            )
-        );
-
-        await Promise.all(subtopicTestPromises);
-
-        // Sort tests: by topic, by subtopic, then by name descending
-        const sortedTests = allTests.sort((a, b) => {
-          const topicAIndex = subjectData.data.topics.findIndex(
-            (t: Topic) => t.name === a.topicName
-          );
-          const topicBIndex = subjectData.data.topics.findIndex(
-            (t: Topic) => t.name === b.topicName
-          );
-
-          if (topicAIndex !== topicBIndex) {
-            return topicAIndex - topicBIndex;
-          }
-
-          const topicA = subjectData.data.topics[topicAIndex];
-          const subtopicAIndex = topicA.subtopics.findIndex(
-            (s: Subtopic) => s.id === a.subtopicId
-          );
-          const subtopicBIndex = topicA.subtopics.findIndex(
-            (s: Subtopic) => s.id === b.subtopicId
-          );
-
-          if (subtopicAIndex !== subtopicBIndex) {
-            return subtopicAIndex - subtopicBIndex;
-          }
-
-          // Sort by test name descending (handle "Part X" format)
-          const aMatch = a.testName.match(/Part\s*(\d+)/);
-          const bMatch = b.testName.match(/Part\s*(\d+)/);
-
-          if (aMatch && bMatch) {
-            // Both are "Part X" format, sort numerically descending
-            return parseInt(bMatch[1]) - parseInt(aMatch[1]);
-          }
-
-          // Fallback to alphabetical descending
-          return b.testName.localeCompare(a.testName);
+        subjectData.topics.forEach((topic) => {
+          topic.subtopics.forEach((subtopic) => {
+            allTests.push(...subtopic.tests);
+          });
         });
 
-        setTests(sortedTests);
+        setTests(allTests);
 
         // Expand first topic by default (last one in original order since we reverse)
-        if (subjectData.data.topics.length > 0) {
-          const firstTopicName = subjectData.data.topics[subjectData.data.topics.length - 1].name;
+        if (subjectData.topics.length > 0) {
+          const firstTopicName = subjectData.topics[subjectData.topics.length - 1].name;
           setExpandedTopics(new Set([firstTopicName]));
         } else {
           setExpandedTopics(new Set());
@@ -163,32 +109,6 @@ export default function DailyQuizContent({
     setExpandedTopics(newExpanded);
   };
 
-  const getTestsByTopicAndSubtopic = () => {
-    const grouped: {
-      [topicName: string]: {
-        [subtopicId: string]: {
-          subtopicName: string;
-          tests: Test[];
-        };
-      };
-    } = {};
-
-    tests.forEach((test) => {
-      if (!grouped[test.topicName]) {
-        grouped[test.topicName] = {};
-      }
-      if (!grouped[test.topicName][test.subtopicId]) {
-        grouped[test.topicName][test.subtopicId] = {
-          subtopicName: test.subtopicName,
-          tests: [],
-        };
-      }
-      grouped[test.topicName][test.subtopicId].tests.push(test);
-    });
-
-    return grouped;
-  };
-
   if (loading) {
     return <LoadingState />;
   }
@@ -201,8 +121,6 @@ export default function DailyQuizContent({
     return <NotFoundState />;
   }
 
-  const groupedTests = getTestsByTopicAndSubtopic();
-
   return (
     <div
       className="min-h-screen pb-12 px-4 sm:px-6 lg:px-8 pt-20"
@@ -214,24 +132,30 @@ export default function DailyQuizContent({
 
       {/* Topics and Tests */}
       <div className="max-w-5xl mx-auto space-y-4 mb-8">
-        {subject.topics.length === 0 ? (
-          <div className="text-center py-12">
-            <p className="text-gray-400 text-lg">No topics available</p>
-          </div>
-        ) : (
-          subject.topics
-            .map((topic, index) => ({ topic, index }))
-            .reverse()
-            .map(({ topic }) => (
-              <TopicSection
-                key={topic.name}
-                topic={topic}
-                isExpanded={expandedTopics.has(topic.name)}
-                onToggle={toggleTopic}
-                groupedTests={groupedTests}
-              />
-            ))
-        )}
+        {subject.topics
+          .map((topic, index) => ({ topic, index }))
+          .reverse()
+          .map(({ topic }) => (
+            <TopicSection
+              key={topic.name}
+              topic={topic}
+              isExpanded={expandedTopics.has(topic.name)}
+              onToggle={toggleTopic}
+              groupedTests={{
+                [topic.name]: {
+                  ...Object.fromEntries(
+                    topic.subtopics.map((subtopic) => [
+                      subtopic.id,
+                      {
+                        subtopicName: subtopic.name,
+                        tests: subtopic.tests,
+                      },
+                    ])
+                  ),
+                },
+              }}
+            />
+          ))}
       </div>
 
       {/* No tests message */}

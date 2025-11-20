@@ -44,7 +44,7 @@ export default function TestLink({ test }: TestLinkProps) {
         </span>
 
         <div className="flex-1 min-w-0">
-          <p className="text-white font-semibold text-xs sm:text-base truncate group-hover:text-indigo-400 transition-colors">
+          <p className="text-indigo-400 font-semibold text-xs sm:text-base truncate group-hover:text-indigo-300 transition-colors">
             {test.testName}
           </p>
           <p className="text-[10px] sm:text-xs text-gray-500">

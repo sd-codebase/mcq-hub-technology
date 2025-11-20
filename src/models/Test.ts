@@ -8,6 +8,7 @@ export interface ITest extends Document {
   questionType: "mcq" | "output" | "interview";
   testName: string;
   questionIds: mongoose.Types.ObjectId[];
+  socialMediaStatus?: "published" | "unpublished";
   createdAt: Date;
   updatedAt: Date;
 }
@@ -45,6 +46,11 @@ const TestSchema = new Schema<ITest>(
       type: [Schema.Types.ObjectId],
       required: true,
       default: [],
+    },
+    socialMediaStatus: {
+      type: String,
+      enum: ["published", "unpublished"],
+      default: "unpublished",
     },
   },
   {

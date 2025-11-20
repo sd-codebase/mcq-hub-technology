@@ -39,7 +39,7 @@ export default function SubtopicGroup({ subtopic, tests }: SubtopicGroupProps) {
 
   return (
     <div className="px-4 sm:px-6 py-4 border-t border-gray-700 first:border-t-0">
-      <h3 className="text-sm sm:text-base font-semibold text-indigo-400 mb-3">
+      <h3 className="text-sm sm:text-base font-semibold text-white mb-3">
         {subtopic.name}
       </h3>
 

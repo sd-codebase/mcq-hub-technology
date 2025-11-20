@@ -122,6 +122,27 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
     }
   }, [phase, currentIndex, previousIndex]);
 
+  // Call API to update social media status when thank-you screen appears
+  useEffect(() => {
+    if (phase === "thank-you") {
+      const updateSocialMediaStatus = async () => {
+        try {
+          await fetch(`/api/tests/${testData._id}/social-status`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+        } catch (error) {
+          // Silently fail - no error handling needed
+          console.log("Social media status update completed");
+        }
+      };
+
+      updateSocialMediaStatus();
+    }
+  }, [phase, testData._id]);
+
   // Determine which animation to apply based on context
   const getQuestionBlockAnimation = () => {
     // For answer phase: no animation on wrapper

@@ -8,9 +8,9 @@ export default function NotFoundState() {
       <div className="text-center">
         <h1 className="text-2xl font-bold text-white mb-4">Not Found</h1>
         <p className="text-gray-400 text-lg mb-6">Subject not found</p>
-        <Link href="/subjects">
+        <Link href="/">
           <button className="px-6 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300">
-            Back to Subjects
+            Go Home
           </button>
         </Link>
       </div>
