@@ -6,7 +6,7 @@ type QuestionType = "mcq" | "output" | "interview";
 
 const Prompt = `
 For context please read the prompt file named "{prompt_file_name}" attached in the project, and follow the instructions strictly mentioned in the prompt file.
-Response should be **copyable code block of valid json** only. Only **valid json**. **no non empty values**
+Response should be **copyable code block of valid json** only. Response should be valid JSON only.
 Generate {type} for the following inputs:
 
 **Programming Language/Technology:** {technology}
