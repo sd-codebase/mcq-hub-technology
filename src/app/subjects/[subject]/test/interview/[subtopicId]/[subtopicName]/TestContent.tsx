@@ -6,6 +6,7 @@ const MDEditorRenderer = dynamic(
   { ssr: false }
 );
 import TestHeader from "../../../../../../../components/TestHeader";
+import FollowUsOnSocialMedia from "../../../../../../../components/FollowUsOnSocialMedia";
 
 export default function InterviewTestContent({
   subject,
@@ -94,6 +95,15 @@ export default function InterviewTestContent({
           >
             Choose New Topic
           </a>
+        </div>
+
+        {/* Follow Us Section */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <FollowUsOnSocialMedia
+            title="Stay Connected With Us"
+            variant="with-labels"
+            size="md"
+          />
         </div>
       </div>
     );

@@ -6,6 +6,7 @@ import LoadingState from "./DailyQuiz/LoadingState";
 import ErrorState from "./DailyQuiz/ErrorState";
 import NotFoundState from "./DailyQuiz/NotFoundState";
 import EmptyState from "./DailyQuiz/EmptyState";
+import FollowUsOnSocialMedia from "./FollowUsOnSocialMedia";
 
 interface Subtopic {
   id: string;
@@ -161,6 +162,15 @@ export default function DailyQuizContent({
 
       {/* No tests message */}
       {tests.length === 0 && <EmptyState />}
+
+      {/* Follow Us Section */}
+      <div className="max-w-5xl mx-auto mt-12 pt-8 border-t border-gray-700">
+        <FollowUsOnSocialMedia
+          title="Stay Connected With Us"
+          variant="with-labels"
+          size="md"
+        />
+      </div>
     </div>
   );
 }

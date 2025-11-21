@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import TestHeader from "../../../../../../../components/TestHeader";
+import FollowUsOnSocialMedia from "../../../../../../../components/FollowUsOnSocialMedia";
 
 const MDEditorRenderer = dynamic(
   () => import("../../../../../../../components/MDEditorRenderer"),
@@ -105,6 +106,15 @@ export default function TestContent({
           >
             Choose New Topic
           </a>
+        </div>
+
+        {/* Follow Us Section */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <FollowUsOnSocialMedia
+            title="Stay Connected With Us"
+            variant="with-labels"
+            size="md"
+          />
         </div>
       </div>
     );

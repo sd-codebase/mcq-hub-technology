@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { buildReviewUrl } from "@/utils/slug";
+import TestStartModal from "../TestStartModal";
 
 interface Test {
   _id: string;
@@ -31,6 +32,9 @@ const getTypeColor = (questionType: string) => {
 };
 
 export default function TestLink({ test }: TestLinkProps) {
+  const router = useRouter();
+  const [showModal, setShowModal] = useState(false);
+
   // Hide interview tests
   if (test.questionType.toLowerCase() === "interview") {
     return null;
@@ -41,9 +45,27 @@ export default function TestLink({ test }: TestLinkProps) {
     ? buildReviewUrl(test._id, test.subjectName, test.topicName, test.subtopicName)
     : `/review/${test._id}`;
 
+  const handleClick = () => {
+    setShowModal(true);
+  };
+
+  const handleProceed = () => {
+    setShowModal(false);
+    router.push(reviewUrl);
+    // Also open in new tab if desired
+    window.open(reviewUrl, "_blank", "noopener,noreferrer");
+  };
+
+  const handleCancel = () => {
+    setShowModal(false);
+  };
+
   return (
-    <Link href={reviewUrl} target="_blank" rel="noopener noreferrer">
-      <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800 border border-gray-700 hover:border-indigo-500/50 transition-all duration-300 transform hover:scale-105 cursor-pointer group">
+    <>
+      <button
+        onClick={handleClick}
+        className="w-full flex items-center gap-2 sm:gap-3 p-2 sm:p-4 rounded-lg bg-gray-800/50 hover:bg-gray-800 border border-gray-700 hover:border-indigo-500/50 transition-all duration-300 transform hover:scale-105 cursor-pointer group"
+      >
         <span
           className={`px-1.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-bold whitespace-nowrap ${getTypeColor(
             test.questionType
@@ -64,7 +86,14 @@ export default function TestLink({ test }: TestLinkProps) {
         <span className="text-indigo-400 text-lg sm:text-xl group-hover:translate-x-1 transition-transform min-w-fit flex-shrink-0">
           →
         </span>
-      </div>
-    </Link>
+      </button>
+
+      <TestStartModal
+        isOpen={showModal}
+        testType={test.questionType}
+        onProceed={handleProceed}
+        onCancel={handleCancel}
+      />
+    </>
   );
 }

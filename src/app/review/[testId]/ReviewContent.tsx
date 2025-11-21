@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import FollowUsOnSocialMedia from "@/components/FollowUsOnSocialMedia";
 
 const MDEditorRenderer = dynamic(() => import("@/components/MDEditorRenderer"), {
   ssr: false,
@@ -142,13 +143,22 @@ export default function ReviewContent({
         </div>
 
         {/* Go to Home Link */}
-        <div className="mt-12 flex justify-center">
+        <div className="mt-12 flex justify-center mb-12">
           <Link
             href="/"
             className="px-8 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Go to Home
           </Link>
+        </div>
+
+        {/* Follow Us Section */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <FollowUsOnSocialMedia
+            title="Stay Connected With Us"
+            variant="with-labels"
+            size="md"
+          />
         </div>
       </div>
     </div>
