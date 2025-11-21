@@ -267,6 +267,13 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
       {/* Question / Answer Phase - Unified Block */}
       {(phase === "question" || phase === "answer") && currentQuestion && (
         <div className={`w-full max-w-4xl ${getQuestionBlockAnimation()}`}>
+          {/* Subtopic and Part Info */}
+          <div className="mb-4 text-center">
+            <p className="text-gray-400 text-md font-medium">
+              {testData.subtopicName} • {testData.testName}
+            </p>
+          </div>
+
           {/* Question Card */}
           <div className="bg-white p-8 rounded-lg shadow-2xl mb-6">
             {/* Question Number with Timer and Quiz Type */}
@@ -373,7 +380,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
       {/* Outro Phase - Show CTA Pack text forever */}
       {phase === "outro" && (
         <div
-          className="fixed inset-0 flex items-center justify-center w-full h-full animate-fade-in"
+          className="fixed inset-0 flex items-center justify-center w-full h-full"
           style={{
             backgroundImage:
               "url('/assets/Gemini_Generated_Image_2uzwhf2uzwhf2uzw.png')",
@@ -389,6 +396,13 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
               font-optical-sizing: auto;
               font-weight: 700;
               font-style: normal;
+              color: #000000;
+              background-color: #ffffff;
+              padding: 4px;
+              margin: 0 40px;
+              border-radius: 8px;
+              box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+              display: inline-block;
             }
           `}</style>
           {/* Dark overlay */}
@@ -397,7 +411,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
             className="absolute inset-0"
             style={{ background: "rgba(0,0,0,0.5)" }}
           ></div>
-          <p className="cta-text text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center px-6 sm:px-8 md:px-12 max-w-5xl relative z-10">
+          <p className="cta-text text-4xl md:text-5xl lg:text-6xl leading-tight text-center px-6 sm:px-8 md:px-12 max-w-5xl relative z-10">
             {testData.socialMediaContent?.cta_pack || ""}
           </p>
         </div>

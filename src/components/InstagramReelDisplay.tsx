@@ -39,16 +39,10 @@ export default function InstagramReelDisplay({
 
         @keyframes fadeInOutThumbnail {
           0% {
-            opacity: 0;
-          }
-          30% {
-            opacity: 1;
-          }
-          70% {
             opacity: 1;
           }
           100% {
-            opacity: 0;
+            opacity: 1;
           }
         }
 
@@ -81,25 +75,31 @@ export default function InstagramReelDisplay({
           font-weight: 700;
           font-style: normal;
           letter-spacing: 1px;
-          color: #f5f5f0;
-          text-shadow:
-            2px 2px 4px rgba(0, 0, 0, 0.5),
-            4px 4px 8px rgba(0, 0, 0, 0.3);
+          color: #000000;
+          background-color: #ffffff;
+          padding: 4px;
+          margin: 0 40px;
+          border-radius: 8px;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+          display: inline-block;
         }
 
         .reel-text-hook {
           font-family: 'Montserrat', sans-serif;
           font-weight: 600;
           letter-spacing: 1px;
-          color: #f5f5f0;
-          text-shadow:
-            2px 2px 4px rgba(0, 0, 0, 0.5),
-            4px 4px 8px rgba(0, 0, 0, 0.3);
+          color: #000000;
+          background-color: #ffffff;
+          padding: 4px;
+          margin: 0 40px;
+          border-radius: 8px;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+          display: inline-block;
         }
       `}</style>
 
       <div
-        className={`reel-text-animate text-center px-6 sm:px-8 md:px-12 max-w-5xl relative z-10`}
+        className={`reel-text-animate text-center relative z-10`}
         style={
           {
             "--animation-name": animationName,
