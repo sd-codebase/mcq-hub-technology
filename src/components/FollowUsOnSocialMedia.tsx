@@ -1,38 +1,23 @@
 "use client";
 
 import React, { JSX } from "react";
+import Image from "next/image";
 
 // Icon Components
 const YouTubeIcon = () => (
-  <svg
-    className="w-full h-full"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <circle cx="12" cy="12" r="10" />
-    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2.3-3 3.5-5.83 5" />
-    <path d="M12 17v.01" />
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 );
 
 const LinkedInIcon = () => (
-  <svg
-    className="w-full h-full"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-  >
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="currentColor">
     <path d="M20 0H4C1.791 0 0 1.791 0 4v16c0 2.209 1.791 4 4 4h16c2.209 0 4-1.791 4-4V4c0-2.209-1.791-4-4-4zM8 19H5V9h3v10zm-1.5-11.268c-.966 0-1.75-.785-1.75-1.75s.785-1.75 1.75-1.75 1.75.785 1.75 1.75-.785 1.75-1.75 1.75zM19 19h-3v-5c0-1.385-.5-2.326-1.739-2.326-1.018 0-1.607.684-1.871 1.346-.096.234-.121.562-.121.889V19h-3V9h3v1.398c.442-.68 1.236-1.646 3.008-1.646 2.197 0 3.843 1.434 3.843 4.518V19z" />
   </svg>
 );
 
 const FacebookIcon = () => (
-  <svg
-    className="w-full h-full"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-  >
+  <svg className="w-full h-full" viewBox="0 0 24 24" fill="currentColor">
     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
   </svg>
 );
@@ -53,21 +38,22 @@ const InstagramIcon = () => (
 
 const WhatsAppIcon = () => (
   <svg
-    className="w-full h-full"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
     viewBox="0 0 24 24"
-    fill="currentColor"
+    fill="none"
   >
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371 0-.57 0-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a8.06 8.06 0 00-4.255 1.111l-.305.175-3.158-.829.844 3.051.194.309a8.007 8.007 0 001.232 4.038l.276.398 4.572.224c.51 0 1.021-.035 1.529-.104l.43-.047 3.158.829-.844-3.051-.194-.31a8.007 8.007 0 00-1.232-4.038l-.276-.398-4.572-.224m5.421 7.403c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371 0-.57 0-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" />
-  </svg>
-);
-
-const PlayStoreIcon = () => (
-  <svg
-    className="w-full h-full"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-  >
-    <path d="M3.609 1.814L13.792 12 3.609 22.186A.996.996 0 0 1 3 21.814V2.186c0-.35.189-.673.609-.372zm16.168.536c-.42-.384-1.008-.418-1.511-.106l-7.737 5.6 5.848 5.856 7.737-5.6c.503-.312.832-.858.832-1.489 0-.63-.329-1.177-.832-1.489l-3.337-2.772zm0 17.3l-7.737-5.6-5.848 5.856 7.737 5.6c.503.312 1.091.278 1.511-.106l3.337-2.772c.503-.312.832-.858.832-1.489 0-.63-.329-1.177-.832-1.489z" />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112-.149.224-.579.73-.71.88-.131.149-.261.168-.486.056-.224-.112-.953-.351-1.815-1.12-.673-.6-1.125-1.34-1.257-1.565-.131-.224-.014-.345.098-.457.101-.101.224-.262.336-.393.112-.131.149-.224.224-.374.075-.149.037-.28-.019-.393-.056-.112-.504-1.214-.69-1.663-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008c-.15 0-.393.056-.6.28-.206.225-.785.767-.785 1.871 0 1.104.804 2.171.916 2.32.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.206-.149-.43-.261"
+      fill="#FFF"
+    />
+    <path
+      d="M16.57 14.438c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112-.149.224-.579.73-.71.88-.131.149-.261.168-.486.056-.224-.112-.953-.351-1.815-1.12-.673-.6-1.125-1.34-1.257-1.565-.131-.224-.014-.345.098-.457.101-.101.224-.262.336-.393.112-.131.149-.224.224-.374.075-.149.037-.28-.019-.393-.056-.112-.504-1.214-.69-1.663-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008c-.15 0-.393.056-.6.28-.206.225-.785.767-.785 1.871 0 1.104.804 2.171.916 2.32.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.206-.149-.43-.261z"
+      fill="#FFF"
+    />
   </svg>
 );
 
@@ -110,11 +96,6 @@ const SOCIAL_MEDIA_LINKS: Omit<SocialMediaLink, "url">[] = [
     icon: WhatsAppIcon,
     color: "from-green-600 to-green-500",
   },
-  {
-    name: "Play Store",
-    icon: PlayStoreIcon,
-    color: "from-blue-500 to-teal-500",
-  },
 ];
 
 export default function FollowUsOnSocialMedia({
@@ -138,9 +119,6 @@ export default function FollowUsOnSocialMedia({
   const whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL
     ? `https://${process.env.NEXT_PUBLIC_WHATSAPP_URL}`
     : "";
-  const playStoreUrl = process.env.NEXT_PUBLIC_PLAY_STORE_URL
-    ? `https://${process.env.NEXT_PUBLIC_PLAY_STORE_URL}`
-    : "";
 
   const urlMap: { [key: string]: string } = {
     YouTube: youtubeUrl,
@@ -148,14 +126,15 @@ export default function FollowUsOnSocialMedia({
     Facebook: facebookUrl,
     Instagram: instagramUrl,
     WhatsApp: whatsappUrl,
-    "Play Store": playStoreUrl,
   };
 
   // Build social media links with URLs
-  const socialMediaLinks: SocialMediaLink[] = SOCIAL_MEDIA_LINKS.map((link) => ({
-    ...link,
-    url: urlMap[link.name],
-  }));
+  const socialMediaLinks: SocialMediaLink[] = SOCIAL_MEDIA_LINKS.map(
+    (link) => ({
+      ...link,
+      url: urlMap[link.name],
+    })
+  );
 
   // Filter out empty URLs
   const validLinks = socialMediaLinks.filter((link) => link.url);
@@ -228,6 +207,54 @@ export default function FollowUsOnSocialMedia({
           Social media links are not configured yet.
         </p>
       )}
+
+      {/* Download the App Section */}
+      <div className="mt-12 pt-8 ">
+        <h3 className="text-lg md:text-xl font-bold text-center text-gray-800 dark:text-white mb-6">
+          Download the App
+        </h3>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          {/* Play Store */}
+          {process.env.NEXT_PUBLIC_PLAY_STORE_URL && (
+            <a
+              href={`https://${process.env.NEXT_PUBLIC_PLAY_STORE_URL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Download on Google Play Store"
+              aria-label="Download on Google Play Store"
+              className="transition-transform duration-300 hover:scale-105"
+            >
+              <Image
+                src="/play-store.png"
+                alt="Download on Google Play Store"
+                width={150}
+                height={50}
+                className="h-auto w-auto"
+              />
+            </a>
+          )}
+
+          {/* App Store */}
+          {process.env.NEXT_PUBLIC_APP_STORE_URL && (
+            <a
+              href={`https://${process.env.NEXT_PUBLIC_APP_STORE_URL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Download on Apple App Store"
+              aria-label="Download on Apple App Store"
+              className="transition-transform duration-300 hover:scale-105"
+            >
+              <Image
+                src="/app-store.png"
+                alt="Download on Apple App Store"
+                width={150}
+                height={50}
+                className="h-auto w-auto"
+              />
+            </a>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
