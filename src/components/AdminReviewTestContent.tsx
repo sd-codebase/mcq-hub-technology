@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { Zap } from "./zap";
 import SocialMediaContentButton from "./SocialMediaContent/SocialMediaContentButton";
 import SocialMediaContentEditor from "./SocialMediaContent/SocialMediaContentEditor";
+import { validateSocialMediaPresence } from "@/utils/validateSocialMediaPresence";
 
 const MDEditorRenderer = dynamic(() => import("./MDEditorRenderer"), {
   ssr: false,
@@ -28,6 +30,7 @@ interface AdminReviewTestContentProps {
 export default function AdminReviewTestContent({
   testData,
 }: AdminReviewTestContentProps) {
+  const router = useRouter();
   const [expandedQuestions, setExpandedQuestions] = useState<Set<number>>(
     new Set(testData.questions.map((_, index) => index)) // Expand all questions by default
   );
@@ -124,6 +127,26 @@ export default function AdminReviewTestContent({
       setCopiedFullTest(true);
       setTimeout(() => setCopiedFullTest(false), 2000);
     });
+  };
+
+  const handleStartAutoTest = () => {
+    // Check if socialMediaContent exists
+    if (!testData.socialMediaContent) {
+      alert("Social media content is required to start the auto test. Please add it first.");
+      return;
+    }
+
+    // Validate required fields (hooks, cta_pack, thumbnail_text)
+    const validation = validateSocialMediaPresence(testData.socialMediaContent);
+    if (!validation.isValid) {
+      alert(
+        `Please fill in the following fields: ${validation.missingFields.join(", ")}`
+      );
+      return;
+    }
+
+    // All valid, navigate to auto test
+    router.push(`/auto-test/${testData._id}`);
   };
 
   return (
@@ -345,17 +368,16 @@ export default function AdminReviewTestContent({
           <SocialMediaContentButton
             onClick={() => setShowSocialMediaModal(true)}
           />
-          <Link href={`/auto-test/${testData._id}`}>
-            <button
-              className="px-8 py-4 rounded-full font-bold text-white text-lg
-                           bg-gradient-to-r from-indigo-600 to-purple-600
-                           hover:from-indigo-700 hover:to-purple-700
-                           transition-all duration-300 shadow-lg shadow-indigo-500/50
-                           transform hover:scale-105"
-            >
-              Start Auto Test ▶
-            </button>
-          </Link>
+          <button
+            onClick={handleStartAutoTest}
+            className="px-8 py-4 rounded-full font-bold text-white text-lg
+                       bg-gradient-to-r from-indigo-600 to-purple-600
+                       hover:from-indigo-700 hover:to-purple-700
+                       transition-all duration-300 shadow-lg shadow-indigo-500/50
+                       transform hover:scale-105"
+          >
+            Start Auto Test ▶
+          </button>
         </div>
 
         {/* Social Media Content Editor Modal */}

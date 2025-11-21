@@ -80,6 +80,7 @@ export async function GET(
       questionType: test.questionType,
       testName: test.testName,
       createdAt: test.createdAt,
+      socialMediaContent: test.socialMediaContent || null,
       questions: orderedQuestions,
       questionCount: orderedQuestions.length,
     };
