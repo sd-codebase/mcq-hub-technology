@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
 import { Zap } from "@/components/zap";
+import QuestionNumberAnimation from "@/components/QuestionNumberAnimation";
 
 const MDEditorRenderer = dynamic(
   () => import("../../../components/MDEditorRenderer"),
@@ -33,6 +34,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
   const [previousIndex, setPreviousIndex] = useState(-1);
   const [isPaused, setIsPaused] = useState(false);
   const [timer, setTimer] = useState(5);
+  const [animationKey, setAnimationKey] = useState(0);
 
   const baseUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
   const youtubeUrl = process.env.NEXT_PUBLIC_YOUTUBE_URL;
@@ -115,10 +117,12 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
 
-  // Track when question index changes (for bounce animation)
+  // Trigger question number animation when question changes
   useEffect(() => {
     if (phase === "question" && currentIndex !== previousIndex) {
       setPreviousIndex(currentIndex);
+      // Trigger animation by incrementing key
+      setAnimationKey((prev) => prev + 1);
     }
   }, [phase, currentIndex, previousIndex]);
 
@@ -170,6 +174,14 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)",
       }}
     >
+      {/* Question Number Animation Overlay */}
+      {phase === "question" && (
+        <QuestionNumberAnimation
+          key={animationKey}
+          questionNumber={currentIndex + 1}
+        />
+      )}
+
       {/* Logo - Always Visible */}
       <div className="w-full flex justify-center py-3 mb-8 mt-16">
         <Link href="/">
