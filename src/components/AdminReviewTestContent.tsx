@@ -21,6 +21,20 @@ interface TestData {
   questionType: string;
   questions: any[];
   questionCount: number;
+  socialMediaContent?: {
+    thumbnail_text?: string;
+    hooks?: string;
+    instagram_reel_caption?: string;
+    facebook_reel_caption?: string;
+    youtube_shorts?: {
+      title: string;
+      description: string;
+      hashtags: string[];
+    };
+    linkedin_caption?: string;
+    whatsapp_channel_post?: string;
+    cta_pack?: string;
+  };
 }
 
 interface AdminReviewTestContentProps {
