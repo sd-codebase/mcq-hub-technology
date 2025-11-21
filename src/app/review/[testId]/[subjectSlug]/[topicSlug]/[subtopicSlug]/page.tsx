@@ -62,7 +62,8 @@ export default async function ReviewPage({ params }: ReviewPageProps) {
 
     // Support MCQ and OUTPUT question types
     const supportedTypes = ["mcq", "output"];
-    if (!supportedTypes.includes(testData.data.questionType)) {
+    const questionTypeNormalized = testData.data.questionType.toLowerCase();
+    if (!supportedTypes.includes(questionTypeNormalized)) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-500 to-orange-600">
           <div className="text-center text-white">

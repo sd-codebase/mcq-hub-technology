@@ -36,7 +36,10 @@ export async function GET(
     // Fetch all questions using the questionIds array based on question type
     let questions: any[];
 
-    switch (test.questionType) {
+    // Normalize question type to lowercase for consistency
+    const normalizedType = test.questionType.toLowerCase();
+
+    switch (normalizedType) {
       case "mcq":
         questions = await MCQQuestion.find({
           _id: { $in: test.questionIds },
@@ -53,8 +56,9 @@ export async function GET(
         });
         break;
       default:
+        console.error(`Unknown question type: ${test.questionType}`);
         return NextResponse.json(
-          { success: false, message: "Invalid question type in test" },
+          { success: false, message: `Invalid question type in test: ${test.questionType}` },
           { status: 500 }
         );
     }

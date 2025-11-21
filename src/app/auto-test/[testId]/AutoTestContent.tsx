@@ -141,9 +141,9 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
     }
   }, [phase, currentIndex, previousIndex]);
 
-  // Call API to update social media status when thank-you screen appears
+  // Call API to update social media status when CTA screen appears
   useEffect(() => {
-    if (phase === "thank-you") {
+    if (phase === "outro") {
       const updateSocialMediaStatus = async () => {
         try {
           const response = await fetch(
