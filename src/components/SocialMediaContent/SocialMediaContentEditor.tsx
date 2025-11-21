@@ -4,6 +4,7 @@ import { useState } from "react";
 import SocialMediaContentModal from "./SocialMediaContentModal";
 import JSONEditor from "./JSONEditor";
 import ValidationResult from "./ValidationResult";
+import ArraySelectionStep from "./ArraySelectionStep";
 import { validateSocialMediaContent } from "@/utils/validateSocialMediaContent";
 
 interface SocialMediaContentEditorProps {
@@ -19,7 +20,9 @@ export default function SocialMediaContentEditor({
   testId,
   onSuccess,
 }: SocialMediaContentEditorProps) {
+  const [step, setStep] = useState<"paste" | "select">("paste");
   const [jsonInput, setJsonInput] = useState("");
+  const [parsedData, setParsedData] = useState<any>(null);
   const [validationResult, setValidationResult] = useState<{
     isValid: boolean;
     errors: string[];
@@ -47,11 +50,35 @@ export default function SocialMediaContentEditor({
       return;
     }
 
-    // If valid, save to API
+    // If valid, parse and move to selection step
+    try {
+      const parsed = JSON.parse(jsonInput);
+      setParsedData(parsed);
+      setStep("select");
+    } catch (error) {
+      setValidationResult({
+        isValid: false,
+        errors: ["Failed to parse JSON"],
+        missingFields: [],
+      });
+    }
+  };
+
+  const handleConfirmAndSave = async (selections: {
+    thumbnail_text: string;
+    hooks: string;
+    cta_pack: string;
+  }) => {
     try {
       setIsSaving(true);
 
-      const socialMediaContent = JSON.parse(jsonInput);
+      // Convert arrays to strings and create final object
+      const finalData = {
+        ...parsedData,
+        thumbnail_text: selections.thumbnail_text,
+        hooks: selections.hooks,
+        cta_pack: selections.cta_pack,
+      };
 
       const response = await fetch(
         `/api/tests/${testId}/social-media-content`,
@@ -60,7 +87,7 @@ export default function SocialMediaContentEditor({
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ socialMediaContent }),
+          body: JSON.stringify({ socialMediaContent: finalData }),
         }
       );
 
@@ -78,6 +105,8 @@ export default function SocialMediaContentEditor({
       // Success
       setValidationResult(null);
       setJsonInput("");
+      setParsedData(null);
+      setStep("paste");
       onSuccess?.();
       setTimeout(() => {
         onClose();
@@ -94,41 +123,80 @@ export default function SocialMediaContentEditor({
     }
   };
 
+  const handleBackToPaste = () => {
+    setStep("paste");
+    setParsedData(null);
+    setValidationResult(null);
+  };
+
   return (
     <SocialMediaContentModal isOpen={isOpen} onClose={onClose}>
       <div className="space-y-6">
-        {/* JSON Editor */}
-        <JSONEditor
-          value={jsonInput}
-          onChange={setJsonInput}
-          isLoading={isSaving}
-        />
+        {step === "paste" ? (
+          <>
+            {/* JSON Editor */}
+            <JSONEditor
+              value={jsonInput}
+              onChange={setJsonInput}
+              isLoading={isSaving}
+            />
 
-        {/* Validation Result - only show if there are errors */}
-        {validationResult && !validationResult.isValid && (
-          <ValidationResult
-            isValid={false}
-            errors={validationResult.errors}
-            missingFields={validationResult.missingFields}
-          />
-        )}
-
-        {/* Save Button */}
-        <div className="flex justify-end">
-          <button
-            onClick={handleSave}
-            disabled={isSaving || !jsonInput.trim()}
-            className="px-8 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-          >
-            {isSaving ? (
-              <>
-                <span className="animate-spin">⏳</span> Saving...
-              </>
-            ) : (
-              <>💾 Save</>
+            {/* Validation Result - only show if there are errors */}
+            {validationResult && !validationResult.isValid && (
+              <ValidationResult
+                isValid={false}
+                errors={validationResult.errors}
+                missingFields={validationResult.missingFields}
+              />
             )}
-          </button>
-        </div>
+
+            {/* Save Button */}
+            <div className="flex justify-end">
+              <button
+                onClick={handleSave}
+                disabled={isSaving || !jsonInput.trim()}
+                className="px-8 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              >
+                {isSaving ? (
+                  <>
+                    <span className="animate-spin">⏳</span> Validating...
+                  </>
+                ) : (
+                  <>💾 Save</>
+                )}
+              </button>
+            </div>
+          </>
+        ) : (
+          <>
+            {/* Selection Step */}
+            <ArraySelectionStep
+              jsonData={parsedData}
+              onConfirm={handleConfirmAndSave}
+              isLoading={isSaving}
+            />
+
+            {/* Validation Result - show if there are errors */}
+            {validationResult && !validationResult.isValid && (
+              <ValidationResult
+                isValid={false}
+                errors={validationResult.errors}
+                missingFields={validationResult.missingFields}
+              />
+            )}
+
+            {/* Back Button */}
+            <div className="flex gap-3 justify-between pt-4">
+              <button
+                onClick={handleBackToPaste}
+                disabled={isSaving}
+                className="px-6 py-2 rounded-lg font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                ← Back to Paste
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </SocialMediaContentModal>
   );

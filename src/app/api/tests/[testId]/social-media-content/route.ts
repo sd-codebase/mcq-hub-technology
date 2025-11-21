@@ -5,10 +5,10 @@ import { validateSocialMediaContent } from "@/utils/validateSocialMediaContent";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { testId: string } }
+  { params }: { params: Promise<{ testId: string }> }
 ) {
   try {
-    const testId = params.testId;
+    const { testId } = await params;
 
     // Validate testId format
     if (!mongoose.Types.ObjectId.isValid(testId)) {
@@ -51,10 +51,10 @@ export async function GET(
 
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { testId: string } }
+  { params }: { params: Promise<{ testId: string }> }
 ) {
   try {
-    const testId = params.testId;
+    const { testId } = await params;
     const body = await request.json();
     const { socialMediaContent } = body;
 
@@ -74,24 +74,18 @@ export async function PATCH(
       );
     }
 
-    // Convert to JSON string for validation
-    const jsonString = JSON.stringify(socialMediaContent);
-    const validation = validateSocialMediaContent(jsonString);
-
-    if (!validation.isValid) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Invalid social media content",
-          errors: validation.errors,
-          missingFields: validation.missingFields,
-        },
-        { status: 400 }
-      );
-    }
+    // Note: Validation is done on the client side before API call
+    // The fields thumbnail_text, hooks, and cta_pack are converted from arrays to strings
+    // on the client, so we skip array validation here
 
     // Update test with socialMediaContent using native MongoDB driver
     const db = mongoose.connection.db;
+    if (!db) {
+      return NextResponse.json(
+        { success: false, message: "Database connection failed" },
+        { status: 500 }
+      );
+    }
     const testsCollection = db.collection("tests");
 
     const updateResult = await testsCollection.updateOne(
@@ -110,6 +104,13 @@ export async function PATCH(
     const updatedDoc = await testsCollection.findOne({
       _id: new mongoose.Types.ObjectId(testId),
     });
+
+    if (!updatedDoc) {
+      return NextResponse.json(
+        { success: false, message: "Failed to fetch updated document" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       {
