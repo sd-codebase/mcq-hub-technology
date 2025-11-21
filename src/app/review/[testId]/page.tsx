@@ -31,7 +31,7 @@ interface ReviewPageProps {
 
 export default async function ReviewPage({ params }: ReviewPageProps) {
   const { testId } = await params;
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL;
 
   try {
     // Fetch test data with all questions included

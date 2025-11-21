@@ -6,8 +6,7 @@ export const SITE_CONFIG = {
   shortName: "Quizzy Dock",
   description:
     "Master coding skills with interactive quizzes. Practice MCQs, code output, and interview questions for JavaScript, TypeScript, React, Node.js, and more on Quizzy Dock.",
-  url:
-    process.env.NEXT_PUBLIC_BASE_URL || "https://www.quizzydock.com",
+  url: process.env.NEXT_PUBLIC_BASE_URL || "https://www.quizzydock.com",
   ogImage: "/images/og-image.png", // Default OpenGraph image
   keywords: [
     "coding quiz",
@@ -160,7 +159,9 @@ export function generateWebSiteSchema() {
   };
 }
 
-export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
+export function generateBreadcrumbSchema(
+  items: { name: string; url: string }[]
+) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

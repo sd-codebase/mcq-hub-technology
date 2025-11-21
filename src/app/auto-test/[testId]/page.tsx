@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 async function fetchTestData(testId: string) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL;
 
   try {
     const response = await fetch(`${baseUrl}/api/tests/${testId}`, {
@@ -38,9 +38,7 @@ export default async function AutoTestPage({
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-950">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">
-            Test Not Found
-          </h1>
+          <h1 className="text-2xl font-bold text-white mb-4">Test Not Found</h1>
           <p className="text-gray-400">
             Unable to load test data. Please check the test ID and try again.
           </p>

@@ -9,8 +9,7 @@ export async function GET(
     const { subject, type, id } = await params;
 
     // Get the base URL from environment variables or default to localhost
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL || "";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL;
 
     // Ensure the URL has the correct protocol
     // const url = baseUrl.startsWith("http") ? baseUrl : `https://${baseUrl}`;
