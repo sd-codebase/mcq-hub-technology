@@ -10,19 +10,30 @@ export default function InstagramReelDisplay({
   type,
 }: InstagramReelDisplayProps) {
   const getBackgroundStyle = () => ({
-    backgroundImage: "url('/assets/Gemini_Generated_Image_2uzwhf2uzwhf2uzw.png')",
+    backgroundImage:
+      "url('/assets/Gemini_Generated_Image_2uzwhf2uzwhf2uzw.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   });
 
-  const fontSizeClass = type === "thumbnail" ? "text-5xl md:text-6xl lg:text-7xl" : "text-4xl md:text-5xl lg:text-6xl";
-  const animationName = type === "thumbnail" ? "fadeInOutThumbnail" : "fadeInOutHook";
+  const fontSizeClass =
+    type === "thumbnail"
+      ? "text-5xl md:text-6xl lg:text-7xl"
+      : "text-4xl md:text-5xl lg:text-6xl";
+  const animationName =
+    type === "thumbnail" ? "fadeInOutThumbnail" : "fadeInOutHook";
 
   return (
     <div
       className="fixed inset-0 flex items-center justify-center w-full h-full overflow-hidden"
       style={getBackgroundStyle()}
     >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/10"></div>
+      <div
+        className="absolute inset-0"
+        style={{ background: "rgba(0,0,0,0.6)" }}
+      ></div>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Bebas+Neue&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Bodoni+Moda:wght@400;700&family=Cormorant+Garamond:wght@300;400;700&display=swap');
 
@@ -86,14 +97,18 @@ export default function InstagramReelDisplay({
       `}</style>
 
       <div
-        className={`reel-text-animate text-center px-6 sm:px-8 md:px-12 max-w-5xl z-10`}
-        style={{
-          "--animation-name": animationName,
-          "--animation-duration": type === "thumbnail" ? "500ms" : "3000ms",
-        } as React.CSSProperties}
+        className={`reel-text-animate text-center px-6 sm:px-8 md:px-12 max-w-5xl relative z-10`}
+        style={
+          {
+            "--animation-name": animationName,
+            "--animation-duration": type === "thumbnail" ? "500ms" : "3000ms",
+          } as React.CSSProperties
+        }
       >
         <p
-          className={`${type === "thumbnail" ? "reel-text-thumbnail" : "reel-text-hook"} ${fontSizeClass} leading-tight`}
+          className={`${
+            type === "thumbnail" ? "reel-text-thumbnail" : "reel-text-hook"
+          } ${fontSizeClass} leading-tight`}
         >
           {text}
         </p>

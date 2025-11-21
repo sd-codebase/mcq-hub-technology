@@ -146,12 +146,15 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
     if (phase === "thank-you") {
       const updateSocialMediaStatus = async () => {
         try {
-          const response = await fetch(`/api/tests/${testData._id}/social-status`, {
-            method: "PATCH",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          });
+          const response = await fetch(
+            `/api/tests/${testData._id}/social-status`,
+            {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          );
           const data = await response.json();
           console.log("Social media status update response:", data);
         } catch (error) {
@@ -247,7 +250,9 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                     {testData.subjectName}
                   </h1>
                   <p className="text-2xl text-gray-300">{testData.topicName}</p>
-                  <p className="text-xl text-gray-400">{testData.subtopicName}</p>
+                  <p className="text-xl text-gray-400">
+                    {testData.subtopicName}
+                  </p>
                   <p className="text-lg text-indigo-400 font-semibold">
                     {testData.testName}
                   </p>
@@ -370,17 +375,23 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         <div
           className="fixed inset-0 flex items-center justify-center w-full h-full animate-fade-in"
           style={{
-            backgroundImage: "url('/assets/Gemini_Generated_Image_2uzwhf2uzwhf2uzw.png')",
+            backgroundImage:
+              "url('/assets/Gemini_Generated_Image_2uzwhf2uzwhf2uzw.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <p className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center px-6 sm:px-8 md:px-12 max-w-5xl">
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div
+            className="absolute inset-0"
+            style={{ background: "rgba(0,0,0,0.5)" }}
+          ></div>
+          <p className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center px-6 sm:px-8 md:px-12 max-w-5xl relative z-10">
             {testData.socialMediaContent?.cta_pack || ""}
           </p>
         </div>
       )}
-
 
       {/* Play/Pause Control */}
       {/* <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2">
