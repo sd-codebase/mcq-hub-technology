@@ -66,7 +66,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
   const getNextPhaseDuration = () => {
     switch (phase) {
       case "intro":
-        return 3.5; // 3.5 seconds for intro (0.5s thumbnail + 3s hook)
+        return 9; // 9 seconds for intro (7s thumbnail + 2s hook)
       case "question":
         return 5; // 5 seconds for each question
       case "answer":
@@ -224,15 +224,15 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
           {testData.socialMediaContent?.thumbnail_text &&
             testData.socialMediaContent?.hooks && (
               <>
-                {/* Thumbnail reel: 0-0.5 seconds (timer: 3.5->3) */}
-                {timer > 3 && (
+                {/* Thumbnail reel: 0-7 seconds (timer: 9->2) */}
+                {timer > 2 && (
                   <InstagramReelDisplay
                     text={testData.socialMediaContent.thumbnail_text}
                     type="thumbnail"
                   />
                 )}
-                {/* Hook reel: 0.5-3.5 seconds (timer: 3->0) */}
-                {timer <= 3 && timer > 0 && (
+                {/* Hook reel: 7-9 seconds (timer: 2->0) */}
+                {timer <= 2 && timer > 0 && (
                   <InstagramReelDisplay
                     text={testData.socialMediaContent.hooks}
                     type="hook"
@@ -381,13 +381,23 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
             backgroundPosition: "center",
           }}
         >
+          <style>{`
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+            .cta-text {
+              font-family: "Roboto Slab", serif;
+              font-optical-sizing: auto;
+              font-weight: 700;
+              font-style: normal;
+            }
+          `}</style>
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/10"></div>
           <div
             className="absolute inset-0"
             style={{ background: "rgba(0,0,0,0.5)" }}
           ></div>
-          <p className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center px-6 sm:px-8 md:px-12 max-w-5xl relative z-10">
+          <p className="cta-text text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center px-6 sm:px-8 md:px-12 max-w-5xl relative z-10">
             {testData.socialMediaContent?.cta_pack || ""}
           </p>
         </div>
@@ -425,11 +435,11 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         }
         @keyframes bounce-in {
           0% {
-            transform: scale(0.95);
+            transform: scale(0.5);
             opacity: 0;
           }
           50% {
-            transform: scale(1.02);
+            transform: scale(1);
           }
           100% {
             transform: scale(1);

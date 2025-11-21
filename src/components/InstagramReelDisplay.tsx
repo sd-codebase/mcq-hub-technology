@@ -35,7 +35,7 @@ export default function InstagramReelDisplay({
         style={{ background: "rgba(0,0,0,0.6)" }}
       ></div>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Bebas+Neue&family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Bodoni+Moda:wght@400;700&family=Cormorant+Garamond:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Montserrat:wght@400;600;700&display=swap');
 
         @keyframes fadeInOutThumbnail {
           0% {
@@ -76,8 +76,10 @@ export default function InstagramReelDisplay({
         }
 
         .reel-text-thumbnail {
-          font-family: 'Montserrat', sans-serif;
+          font-family: "Roboto Slab", serif;
+          font-optical-sizing: auto;
           font-weight: 700;
+          font-style: normal;
           letter-spacing: 1px;
           color: #f5f5f0;
           text-shadow:
@@ -101,7 +103,7 @@ export default function InstagramReelDisplay({
         style={
           {
             "--animation-name": animationName,
-            "--animation-duration": type === "thumbnail" ? "500ms" : "3000ms",
+            "--animation-duration": type === "thumbnail" ? "7000ms" : "2000ms",
           } as React.CSSProperties
         }
       >
