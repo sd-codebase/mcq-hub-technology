@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import { Zap } from "./zap";
 import SocialMediaContentButton from "./SocialMediaContent/SocialMediaContentButton";
 import SocialMediaContentEditor from "./SocialMediaContent/SocialMediaContentEditor";
+import SocialMediaContentViewer from "./SocialMediaContentViewer";
 import { validateSocialMediaPresence } from "@/utils/validateSocialMediaPresence";
 
 const MDEditorRenderer = dynamic(() => import("./MDEditorRenderer"), {
@@ -51,6 +52,7 @@ export default function AdminReviewTestContent({
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [copiedFullTest, setCopiedFullTest] = useState(false);
   const [showSocialMediaModal, setShowSocialMediaModal] = useState(false);
+  const [showSocialMediaViewer, setShowSocialMediaViewer] = useState(false);
 
   const toggleQuestion = (index: number) => {
     const newExpanded = new Set(expandedQuestions);
@@ -379,6 +381,16 @@ export default function AdminReviewTestContent({
           >
             {copiedFullTest ? "✓ Copied to Clipboard" : "📋 Copy Full Test"}
           </button>
+          <button
+            onClick={() => setShowSocialMediaViewer(true)}
+            className="px-8 py-4 rounded-full font-bold text-white text-lg
+                       bg-gradient-to-r from-teal-600 to-cyan-600
+                       hover:from-teal-700 hover:to-cyan-700
+                       transition-all duration-300 shadow-lg shadow-teal-500/50
+                       transform hover:scale-105"
+          >
+            📱 View SM Content
+          </button>
           <SocialMediaContentButton
             onClick={() => setShowSocialMediaModal(true)}
           />
@@ -393,6 +405,13 @@ export default function AdminReviewTestContent({
             Start Auto Test ▶
           </button>
         </div>
+
+        {/* Social Media Content Viewer Modal */}
+        <SocialMediaContentViewer
+          isOpen={showSocialMediaViewer}
+          onClose={() => setShowSocialMediaViewer(false)}
+          socialMediaContent={testData.socialMediaContent}
+        />
 
         {/* Social Media Content Editor Modal */}
         <SocialMediaContentEditor
