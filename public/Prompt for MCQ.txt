@@ -26,6 +26,8 @@ Return ONLY a valid JSON array with this exact structure:
   }
 ]
 
+Keys should not be empty, it should contain meaningful data. Keys should not repeatative. SOmetime you give keys with value empty string.
+
 Important:
 
 - Use proper markdown in explanations (## headings, **bold**, lists, code blocks)

@@ -27,6 +27,8 @@ Return ONLY a valid JSON array with this exact structure:
 }
 ]
 
+Keys should not be empty, it should contain meaningful, valid string. Keys should not repeatative. SOmetime you give keys with value empty string.
+
 Important:
 
 - Answers must be well-structured with ## headings and ### subheadings
@@ -35,6 +37,7 @@ Important:
 - Use lists and visual representations
 - Explanations should highlight key takeaways
 - Return ONLY the JSON array, no additional text
+
 
 
 ##Example Input:

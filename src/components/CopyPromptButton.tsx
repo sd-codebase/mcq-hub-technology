@@ -5,8 +5,8 @@ import React, { useEffect, useState } from "react";
 type QuestionType = "mcq" | "output" | "interview";
 
 const Prompt = `
-Read the attached Prompt file in the project for context, and follow the instructions strictly mentioned in the promt file.
-Response should be **copyable code block of valid json** only. Only **valid json**.
+For context please read the prompt file named "{prompt_file_name}" attached in the project, and follow the instructions strictly mentioned in the prompt file.
+Response should be **copyable code block of valid json** only. Only **valid json**. **no non empty values**
 Generate {type} for the following inputs:
 
 **Programming Language/Technology:** {technology}
@@ -21,6 +21,14 @@ const PROMPTS: Record<QuestionType, string> = {
   output: "code output prediction questions",
 
   interview: "interview questions with detailed answers",
+};
+
+const PROMPTS_FILE_NAME: Record<QuestionType, string> = {
+  mcq: "Prompt for MCQ",
+
+  output: "Prompt for OUTPUT",
+
+  interview: "Prompt for INTERVIEW",
 };
 
 interface CopyPromptButtonProps {
@@ -48,7 +56,11 @@ export default function CopyPromptButton({
   const replacePlaceholders = (prompt: string): string => {
     let result = prompt;
     const type = PROMPTS[questionType];
+    const promptFileName = PROMPTS_FILE_NAME[questionType];
 
+    if (promptFileName) {
+      result = result.replace(/{prompt_file_name}/g, promptFileName);
+    }
     if (type) {
       result = result.replace(/{type}/g, type);
     }
@@ -76,7 +88,8 @@ export default function CopyPromptButton({
   // Play success sound using Web Audio API
   const playSuccessSound = () => {
     try {
-      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const audioContext = new (window.AudioContext ||
+        (window as any).webkitAudioContext)();
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
 
@@ -89,7 +102,10 @@ export default function CopyPromptButton({
 
       // Set volume
       gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+      gainNode.gain.exponentialRampToValueAtTime(
+        0.01,
+        audioContext.currentTime + 0.2
+      );
 
       // Play for 200ms
       oscillator.start(audioContext.currentTime);
