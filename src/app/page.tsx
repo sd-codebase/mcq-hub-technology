@@ -1,6 +1,7 @@
 import { Header } from "@/components/header";
 import { Zap } from "@/components/zap";
 import SubjectsSection from "@/components/SubjectsSection";
+import FollowUsOnSocialMedia from "@/components/FollowUsOnSocialMedia";
 import Link from "next/link";
 import React from "react";
 import { generatePageMetadata } from "@/lib/seo";
@@ -226,8 +227,14 @@ const CtaSection = () => (
 );
 
 const Footer = () => (
-  <footer className="bg-gray-950 border-t border-gray-800 py-10">
+  <footer className="bg-gray-950 border-t border-gray-800 py-16">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Social Media Section */}
+      <div className="mb-12 pb-12 border-b border-gray-800">
+        <FollowUsOnSocialMedia title="Follow Us on Social Media" size="md" />
+      </div>
+
+      {/* Footer Links */}
       <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
         <div className="mb-4 md:mb-0">
           <div className="flex items-center justify-center md:justify-start">

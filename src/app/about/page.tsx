@@ -1,5 +1,6 @@
 import React from "react";
 import { offerings, technologies } from "../constants/about";
+import FollowUsOnSocialMedia from "@/components/FollowUsOnSocialMedia";
 import { generatePageMetadata } from "@/lib/seo";
 
 export const metadata = generatePageMetadata({
@@ -90,6 +91,15 @@ export default function AboutPage() {
           <MissionSection />
           <OfferingsSection />
           <TechnologiesSection />
+
+          {/* Follow Us Section */}
+          <section className="p-8 rounded-2xl border border-indigo-700/30 bg-gradient-to-b from-gray-900 to-gray-950 shadow-xl">
+            <FollowUsOnSocialMedia
+              title="Stay Connected With Us"
+              size="md"
+              variant="with-labels"
+            />
+          </section>
         </div>
       </div>
     </div>

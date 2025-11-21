@@ -1,5 +1,6 @@
 import React from "react";
 import ContactForm from "@/components/contact/ContactForm";
+import FollowUsOnSocialMedia from "@/components/FollowUsOnSocialMedia";
 import { generatePageMetadata } from "@/lib/seo";
 
 export const metadata = generatePageMetadata({
@@ -23,8 +24,16 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="bg-gradient-to-b from-gray-900 to-gray-950 p-8 rounded-2xl border border-indigo-700/30 shadow-xl">
+        <div className="bg-gradient-to-b from-gray-900 to-gray-950 p-8 rounded-2xl border border-indigo-700/30 shadow-xl mb-16">
           <ContactForm />
+        </div>
+
+        {/* Follow Us Section */}
+        <div className="bg-gradient-to-b from-gray-900 to-gray-950 p-8 rounded-2xl border border-indigo-700/30 shadow-xl">
+          <FollowUsOnSocialMedia
+            title="Connect With Us on Social Media"
+            size="lg"
+          />
         </div>
       </div>
     </div>
