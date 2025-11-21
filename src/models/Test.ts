@@ -9,6 +9,20 @@ export interface ITest extends Document {
   testName: string;
   questionIds: mongoose.Types.ObjectId[];
   socialMediaStatus?: "published" | "unpublished";
+  socialMediaContent?: {
+    thumbnail_text?: string[];
+    hooks?: string[];
+    instagram_reel_caption?: string;
+    facebook_reel_caption?: string;
+    youtube_shorts?: {
+      title?: string;
+      description?: string;
+      hashtags?: string[];
+    };
+    linkedin_caption?: string;
+    whatsapp_channel_post?: string;
+    cta_pack?: string[];
+  };
   createdAt: Date;
   updatedAt: Date;
 }
@@ -51,6 +65,23 @@ const TestSchema = new Schema<ITest>(
       type: String,
       enum: ["published", "unpublished"],
       default: "unpublished",
+      required: false,
+    },
+    socialMediaContent: {
+      type: {
+        thumbnail_text: [String],
+        hooks: [String],
+        instagram_reel_caption: String,
+        facebook_reel_caption: String,
+        youtube_shorts: {
+          title: String,
+          description: String,
+          hashtags: [String],
+        },
+        linkedin_caption: String,
+        whatsapp_channel_post: String,
+        cta_pack: [String],
+      },
       required: false,
     },
   },

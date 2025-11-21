@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Zap } from "./zap";
+import SocialMediaContentButton from "./SocialMediaContent/SocialMediaContentButton";
+import SocialMediaContentEditor from "./SocialMediaContent/SocialMediaContentEditor";
 
 const MDEditorRenderer = dynamic(() => import("./MDEditorRenderer"), {
   ssr: false,
@@ -31,6 +33,7 @@ export default function AdminReviewTestContent({
   );
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [copiedFullTest, setCopiedFullTest] = useState(false);
+  const [showSocialMediaModal, setShowSocialMediaModal] = useState(false);
 
   const toggleQuestion = (index: number) => {
     const newExpanded = new Set(expandedQuestions);
@@ -339,6 +342,9 @@ export default function AdminReviewTestContent({
           >
             {copiedFullTest ? "✓ Copied to Clipboard" : "📋 Copy Full Test"}
           </button>
+          <SocialMediaContentButton
+            onClick={() => setShowSocialMediaModal(true)}
+          />
           <Link href={`/auto-test/${testData._id}`}>
             <button
               className="px-8 py-4 rounded-full font-bold text-white text-lg
@@ -351,6 +357,16 @@ export default function AdminReviewTestContent({
             </button>
           </Link>
         </div>
+
+        {/* Social Media Content Editor Modal */}
+        <SocialMediaContentEditor
+          isOpen={showSocialMediaModal}
+          onClose={() => setShowSocialMediaModal(false)}
+          testId={testData._id}
+          onSuccess={() => {
+            // Optionally refresh data here if needed
+          }}
+        />
       </div>
     </div>
   );
