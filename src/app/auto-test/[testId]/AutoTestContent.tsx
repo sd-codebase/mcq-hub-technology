@@ -225,15 +225,39 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         )}
 
         {/* Logo - Always Visible */}
-        <div className="w-full flex justify-center py-3 mb-8 mt-16">
+        <div
+          className={`w-full flex justify-center ${
+            phase === "question" || phase === "answer"
+              ? "py-6 mb-4"
+              : "py-3 mb-8"
+          } mt-8`}
+        >
           <Link href="/">
             <div className="flex items-center gap-2">
-              <Zap className="h-6 w-6 text-indigo-400" />
+              <Zap
+                className={`${
+                  phase === "question" || phase === "answer"
+                    ? "h-10 w-10"
+                    : "h-6 w-6"
+                } text-indigo-400`}
+              />
               <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-white tracking-tight -mb-1">
+                <span
+                  className={`${
+                    phase === "question" || phase === "answer"
+                      ? "text-4xl"
+                      : "text-2xl"
+                  } font-bold text-white tracking-tight -mb-1`}
+                >
                   Quizzy<span className="text-indigo-400">Dock</span>
                 </span>
-                <span className="text-[12px] font-medium text-gray-400 tracking-wider">
+                <span
+                  className={`${
+                    phase === "question" || phase === "answer"
+                      ? "text-sm"
+                      : "text-[12px]"
+                  } font-medium text-gray-400 tracking-wider`}
+                >
                   TECH SKILLS
                 </span>
               </div>
@@ -291,13 +315,13 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
           <div className={`w-full max-w-4xl ${getQuestionBlockAnimation()}`}>
             {/* Subtopic and Part Info */}
             <div className="mb-4 text-center">
-              <p className="text-gray-400 text-md font-medium">
+              <p className="text-gray-300 text-md font-medium">
                 {testData.subtopicName} • {testData.testName}
               </p>
             </div>
 
             {/* Question Card */}
-            <div className="bg-white p-8 rounded-lg shadow-2xl mb-6">
+            <div className="bg-gray-200 p-8 rounded-lg shadow-2xl mb-6">
               {/* Question Number with Timer and Quiz Type */}
               <div className="flex justify-between items-center mb-3 gap-3">
                 <div className="text-sm font-medium text-gray-500">
@@ -343,7 +367,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                                ${
                                  showAnswer && isCorrect
                                    ? "border-green-500 bg-green-50 ring-4 ring-green-200 animate-fade-correct"
-                                   : "border-gray-200 bg-gray-50"
+                                   : "border-gray-200 bg-gray-300"
                                }`}
                         >
                           <div className="flex items-start gap-3">
