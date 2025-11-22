@@ -248,9 +248,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                   {testData.subjectName}
                 </h1>
                 <p className="text-2xl text-gray-300">{testData.topicName}</p>
-                <p className="text-xl text-gray-400">
-                  {testData.subtopicName}
-                </p>
+                <p className="text-xl text-gray-400">{testData.subtopicName}</p>
                 <p className="text-lg text-indigo-400 font-semibold">
                   {testData.testName}
                 </p>
@@ -288,7 +286,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                 )}
                 {/* Quiz Type Badge */}
                 <div
-                  className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                  className={`text-sm font-semibold px-3 py-1 rounded-full ${
                     testData.questionType === "mcq"
                       ? "bg-indigo-100 text-indigo-700"
                       : "bg-teal-100 text-teal-700"
