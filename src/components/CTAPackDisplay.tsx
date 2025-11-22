@@ -24,7 +24,7 @@ export default function CTAPackDisplay({
         isVisible={isVisible}
         type="cta"
         animationDuration={1000}
-        textPosition="25%"
+        textPosition="30%"
         containerHeight="auto"
         backgroundImage={backgroundImage}
       />
