@@ -68,7 +68,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
   const getNextPhaseDuration = () => {
     switch (phase) {
       case "intro":
-        return 12; // 12 seconds for intro (10s thumbnail + 2s hook)
+        return 15; // 15 seconds for intro (10s thumbnail + 5s hook)
       case "question":
         return 5; // 5 seconds for each question
       case "answer":
@@ -222,20 +222,20 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
       {/* Intro Phase */}
       {phase === "intro" && (
         <>
-          {/* Thumbnail Display: 0-7 seconds (timer: 9->2) */}
+          {/* Thumbnail Display: 0-10 seconds (timer: 14->5) */}
           {testData.socialMediaContent?.thumbnail_text && (
             <ThumbnailDisplay
               text={testData.socialMediaContent.thumbnail_text}
-              isVisible={timer > 2}
+              isVisible={timer > 4}
               testName={testData.testName}
             />
           )}
 
-          {/* Hook Display: 7-9 seconds (timer: 2->0) */}
+          {/* Hook Display: 10-15 seconds (timer: 5->1) */}
           {testData.socialMediaContent?.hooks && (
             <HookDisplay
               text={testData.socialMediaContent.hooks}
-              isVisible={timer <= 2 && timer > 0}
+              isVisible={timer <= 5 && timer > 0}
             />
           )}
 
