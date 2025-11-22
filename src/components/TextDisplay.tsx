@@ -1,5 +1,7 @@
 "use client";
 
+import GlowingTextDisplay from "./GlowingTextDisplay";
+
 interface TextDisplayProps {
   text: string;
   isVisible: boolean;
@@ -129,7 +131,7 @@ export default function TextDisplay({
       <div className="absolute inset-0 bg-black/10"></div>
       <div
         className="absolute inset-0"
-        style={{ background: "rgba(0,0,0,0.6)" }}
+        style={{ background: "rgba(0,0,0,0.7)" }}
       ></div>
 
       <style>{`

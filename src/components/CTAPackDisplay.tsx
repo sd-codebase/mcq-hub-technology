@@ -1,5 +1,6 @@
 "use client";
 
+import GlowingTextDisplay from "./GlowingTextDisplay";
 import TextDisplay from "./TextDisplay";
 
 interface CTAPackDisplayProps {
@@ -12,13 +13,18 @@ export default function CTAPackDisplay({
   isVisible,
 }: CTAPackDisplayProps) {
   return (
-    <TextDisplay
-      text={text}
-      isVisible={isVisible}
-      type="cta"
-      animationDuration={1000}
-      textPosition="40%"
-      containerHeight="auto"
-    />
+    <>
+      <div style={{ zIndex: "20" }}>
+        <GlowingTextDisplay text="QuizzyDock" />
+      </div>
+      <TextDisplay
+        text={text}
+        isVisible={isVisible}
+        type="cta"
+        animationDuration={1000}
+        textPosition="50%"
+        containerHeight="auto"
+      />
+    </>
   );
 }
