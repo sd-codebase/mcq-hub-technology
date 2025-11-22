@@ -41,7 +41,11 @@ export default function TextDisplay({
         );
       }
       // Single asterisks for gradient (remove the asterisks)
-      if (part.startsWith("*") && part.endsWith("*") && !part.startsWith("**")) {
+      if (
+        part.startsWith("*") &&
+        part.endsWith("*") &&
+        !part.startsWith("**")
+      ) {
         const gradientText = part.slice(1, -1);
         return <span key={idx}>{gradientText}</span>;
       }
@@ -78,7 +82,7 @@ export default function TextDisplay({
           fontFamily: "'Montserrat', sans-serif",
           borderBottom: "10px solid",
           borderImage: "linear-gradient(to right, #a855f7, #ec4899) 1",
-          paddingBottom: "12px",
+          paddingBottom: "24px",
           showBorder: true,
           isCTABorder: true,
           showSingleWordBg: false,
@@ -103,7 +107,7 @@ export default function TextDisplay({
       case "hook":
         return "text-4xl md:text-4xl lg:text-5xl";
       case "cta":
-        return "text-5xl md:text-5xl lg:text-6xl";
+        return "text-4xl md:text-5xl lg:text-6xl";
       default:
         return "text-5xl md:text-6xl lg:text-7xl";
     }
@@ -225,6 +229,39 @@ export default function TextDisplay({
             : ""
         }
 
+        ${
+          type === "hook"
+            ? `
+        @keyframes slide-up-from-bottom {
+          from {
+            opacity: 0;
+            transform: translateY(100%);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .text-line {
+          opacity: 0;
+          animation: slide-up-from-bottom 0.8s ease-out forwards;
+        }
+
+        ${cleanedText
+          .split("\n")
+          .filter((line) => line.trim().length > 0)
+          .map(
+            (_, idx) =>
+              `.text-line:nth-child(${idx + 1}) { animation-delay: ${
+                idx * 0.35
+              }s; }`
+          )
+          .join("")}
+        `
+            : ""
+        }
+
         p {
           margin: 0;
           padding: 0;
@@ -256,7 +293,9 @@ export default function TextDisplay({
         >
           {cleanedText.split("\n").map((line, idx) => {
             const trimmedLine = line.trim();
-            const hasGradientBackground = /(?<!\*)\*[^*]+\*(?!\*)/.test(trimmedLine);
+            const hasGradientBackground = /(?<!\*)\*[^*]+\*(?!\*)/.test(
+              trimmedLine
+            );
             const isSingleWord =
               typeStyles.showSingleWordBg &&
               hasGradientBackground &&
@@ -281,7 +320,7 @@ export default function TextDisplay({
           style={{ top: "75%" }}
         >
           <p
-            className="text-3xl md:text-4xl lg:text-4xl font-bold text-white text-center rounded-lg"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center rounded-lg"
             style={{
               fontFamily: "'Montserrat', sans-serif",
               background: "linear-gradient(to right, #a855f7, #ec4899)",
