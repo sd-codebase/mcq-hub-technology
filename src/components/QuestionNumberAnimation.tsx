@@ -40,7 +40,7 @@ export default function QuestionNumberAnimation({
         }
       `}</style>
       <div className="question-number-animate-container">
-        <div className="text-9xl font-bold text-white drop-shadow-2xl">
+        <div className="text-6xl font-bold text-white drop-shadow-2xl">
           Q{questionNumber}
         </div>
       </div>
