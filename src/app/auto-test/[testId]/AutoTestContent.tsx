@@ -76,7 +76,9 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
     switch (phase) {
       case "intro":
         // Skip intro if no social media content
-        const hasIntroContent = testData.socialMediaContent?.thumbnail_text || testData.socialMediaContent?.hooks;
+        const hasIntroContent =
+          testData.socialMediaContent?.thumbnail_text ||
+          testData.socialMediaContent?.hooks;
         return hasIntroContent ? 8 : 0; // 8 seconds for intro or 0 to skip
       case "question":
         return 6; // 6 seconds for each question
@@ -229,10 +231,8 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         {/* Logo - Always Visible */}
         <div
           className={`w-full flex justify-center ${
-            phase === "question" || phase === "answer"
-              ? "py-6 mb-4"
-              : "py-3 mb-8"
-          } mt-8`}
+            phase === "question" || phase === "answer" ? "py-6" : "py-3 mb-8"
+          } mt-16`}
         >
           <Link href="/">
             <div className="flex items-center gap-2">
@@ -247,7 +247,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                 <span
                   className={`${
                     phase === "question" || phase === "answer"
-                      ? "text-4xl"
+                      ? "text-2xl"
                       : "text-2xl"
                   } font-bold text-white tracking-tight -mb-1`}
                 >
