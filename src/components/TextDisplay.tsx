@@ -78,7 +78,7 @@ export default function TextDisplay({
           borderImage: "linear-gradient(to bottom, #a855f7, #ec4899) 1",
           paddingLeft: "12px",
           showBorder: true,
-          showSingleWordBg: false,
+          showSingleWordBg: true,
         };
       case "cta":
         return {
@@ -89,7 +89,7 @@ export default function TextDisplay({
           paddingBottom: "24px",
           showBorder: true,
           isCTABorder: true,
-          showSingleWordBg: false,
+          showSingleWordBg: true,
         };
       default:
         return {
