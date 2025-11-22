@@ -16,7 +16,7 @@ export default function MDEditorRenderer({
   style,
 }: MDEditorRendererProps) {
   return (
-    <div data-color-mode="light">
+    <div data-color-mode="dark">
       <MarkdownPreview
         source={value}
         style={{ background: "none", ...style }}
