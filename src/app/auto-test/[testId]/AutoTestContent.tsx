@@ -338,9 +338,9 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                   >
                     {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
                   </div>
-                  {/* Pause Chip - Purple Gradient */}
+                  {/* Pause Chip - Purple to Pink Gradient */}
                   {showPauseChip && (
-                    <div className="text-sm font-semibold px-3 py-1 rounded-sm bg-gradient-to-r from-purple-400 to-purple-600 text-white backdrop-blur-sm border border-purple-400/30 animate-fade-in">
+                    <div className="text-sm font-semibold px-3 py-1 rounded-sm text-white backdrop-blur-sm border border-purple-400/30 animate-fade-in" style={{ background: "linear-gradient(to right, #a855f7, #ec4899)" }}>
                       {testData.questionType === "mcq"
                         ? "Pause & Guess the answer"
                         : "Pause & Guess the output"}

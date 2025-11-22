@@ -29,7 +29,7 @@ export default function DailyQuizSubjects() {
   useEffect(() => {
     async function fetchSubjects() {
       try {
-        let url = "/api/subjects?status=active";
+        const url = "/api/subjects?status=active";
 
         const response = await fetch(url);
         if (!response.ok) {
