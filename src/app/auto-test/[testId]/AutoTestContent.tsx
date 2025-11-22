@@ -321,25 +321,31 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
             </div>
 
             {/* Question Card */}
-            <div className="bg-gray-200 p-8 rounded-lg shadow-2xl mb-6">
+            <div
+              className="p-8 rounded-2xl backdrop-blur-md mb-6 border border-white/20 shadow-2xl"
+              style={{
+                background: "rgba(30, 30, 50, 0.7)",
+                backdropFilter: "blur(10px)",
+              }}
+            >
               {/* Question Number with Timer and Quiz Type */}
               <div className="flex justify-between items-center mb-3 gap-3">
-                <div className="text-sm font-medium text-gray-500">
+                <div className="text-sm font-medium text-gray-300">
                   <strong>#{currentIndex + 1}</strong>
                 </div>
                 <div className="flex items-center gap-3">
                   {/* Reverse Seconds Counter - Hide during answer phase */}
                   {phase !== "answer" && (
-                    <div className="text-sm font-semibold px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">
+                    <div className="text-sm font-semibold px-3 py-1 rounded-full bg-indigo-500/80 text-white backdrop-blur-sm border border-indigo-400/30">
                       {timer}s
                     </div>
                   )}
                   {/* Quiz Type Badge */}
                   <div
-                    className={`text-sm font-semibold px-3 py-1 rounded-full ${
+                    className={`text-sm font-semibold px-3 py-1 rounded-full backdrop-blur-sm border ${
                       testData.questionType === "mcq"
-                        ? "bg-indigo-100 text-indigo-700"
-                        : "bg-teal-100 text-teal-700"
+                        ? "bg-indigo-500/80 text-white border-indigo-400/30"
+                        : "bg-teal-500/80 text-white border-teal-400/30"
                     }`}
                   >
                     {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
@@ -348,8 +354,14 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
               </div>
 
               {/* Question Text */}
-              <div className="text-2xl font-bold mb-6 text-gray-800">
-                <MDEditorRenderer value={currentQuestion.question} />
+              <div
+                className="text-2xl font-bold mb-6 text-white"
+                style={{ textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}
+              >
+                <MDEditorRenderer
+                  value={currentQuestion.question}
+                  style={{ color: "#ffffff", fontWeight: "500" }}
+                />
               </div>
 
               {/* Options (MCQ) */}
@@ -363,28 +375,38 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                       return (
                         <div
                           key={idx}
-                          className={`p-4 rounded-lg border-2 transition-all duration-300
-                               ${
-                                 showAnswer && isCorrect
-                                   ? "border-green-500 bg-green-50 ring-4 ring-green-200 animate-fade-correct"
-                                   : "border-gray-200 bg-gray-300"
-                               }`}
+                          className={`p-4 rounded-xl border-2 transition-all duration-300 backdrop-blur-sm ${
+                            showAnswer && isCorrect
+                              ? "border-green-500 bg-green-500/30 ring-4 ring-green-400/50 animate-fade-correct"
+                              : "border-white/20 bg-white/10 hover:bg-white/15"
+                          }`}
                         >
                           <div className="flex items-start gap-3">
                             <span
                               className={`font-semibold text-lg ${
                                 showAnswer && isCorrect
-                                  ? "text-green-700"
-                                  : "text-gray-700"
+                                  ? "text-green-300"
+                                  : "text-white"
                               }`}
+                              style={{
+                                textShadow: "0 1px 3px rgba(0,0,0,0.3)",
+                              }}
                             >
                               {String.fromCharCode(65 + idx)})
                             </span>
-                            <div className="flex-1">
-                              <MDEditorRenderer value={option} />
+                            <div
+                              className="flex-1 text-white"
+                              style={{
+                                textShadow: "0 1px 3px rgba(0,0,0,0.3)",
+                              }}
+                            >
+                              <MDEditorRenderer
+                                value={option}
+                                style={{ color: "#ffffff", fontWeight: "500" }}
+                              />
                             </div>
                             {showAnswer && isCorrect && (
-                              <span className="text-green-600 text-2xl">✓</span>
+                              <span className="text-green-400 text-2xl">✓</span>
                             )}
                           </div>
                         </div>
@@ -399,11 +421,17 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                 !currentQuestion.options &&
                 phase === "answer" && (
                   <div className="mb-6">
-                    <div className="p-4 rounded-lg bg-green-50 border-2 border-green-500 ring-4 ring-green-200 animate-fade-correct">
-                      <div className="text-green-700 text-sm font-semibold mb-2 flex items-center gap-2">
+                    <div className="p-4 rounded-xl bg-green-500/30 border-2 border-green-500 ring-4 ring-green-400/50 backdrop-blur-sm animate-fade-correct">
+                      <div
+                        className="text-green-300 text-sm font-semibold mb-2 flex items-center gap-2"
+                        style={{ textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}
+                      >
                         <span>✓ Expected Output:</span>
                       </div>
-                      <div className="text-green-800 font-mono text-lg whitespace-pre-wrap">
+                      <div
+                        className="text-white font-mono text-lg whitespace-pre-wrap"
+                        style={{ textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}
+                      >
                         <MDEditorRenderer value={currentQuestion.output} />
                       </div>
                     </div>
