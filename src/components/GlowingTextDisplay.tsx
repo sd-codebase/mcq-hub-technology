@@ -18,15 +18,37 @@ export default function GlowingTextDisplay({
           width: 100%;
           height: 100%;
           display: flex;
-          margin-top: 200px;
-          align-items: start;
+          margin-bottom: 400px;
+          align-items: flex-end;
           justify-content: center;
+        }
+
+        .glowing-text-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          justify-content: center;
+          padding: 8px 16px;
+          border: 2px solid rgba(168, 85, 247, 0.4);
+          border-radius: 50px;
+          background: rgba(0, 0, 0, 0.3);
+          backdrop-filter: blur(10px);
+          box-shadow: 0 8px 32px rgba(168, 85, 247, 0.1);
+        }
+
+        .glowing-icon {
+          color: #ffffff;
+          animation: glow-pulse-icon 3s ease-in-out infinite;
+          width: 1em;
+          height: 1em;
+          flex-shrink: 0;
+          paddint-top: 8px;
         }
 
         .glowing-text {
           font-family: 'Montserrat', sans-serif;
           font-weight: 600;
-          font-size: 2rem;
+          font-size: 1rem;
           color: #ffffff;
           text-align: center;
           letter-spacing: 0.05em;
@@ -64,10 +86,36 @@ export default function GlowingTextDisplay({
               0 0 40px rgba(236, 72, 153, 0.2);
           }
         }
+
+        @keyframes glow-pulse-icon {
+          0% {
+            filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.4));
+          }
+          50% {
+            filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.6)) drop-shadow(0 0 30px rgba(168, 85, 247, 0.5)) drop-shadow(0 0 45px rgba(236, 72, 153, 0.4));
+          }
+          100% {
+            filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.4));
+          }
+        }
       `}</style>
 
       <div className="glowing-text-container">
-        <h1 className="glowing-text">{text}</h1>
+        <div className="glowing-text-wrapper">
+          <svg
+            className="glowing-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <h1 className="glowing-text">{text}</h1>
+        </div>
       </div>
     </div>
   );

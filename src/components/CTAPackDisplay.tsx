@@ -22,7 +22,7 @@ export default function CTAPackDisplay({
         isVisible={isVisible}
         type="cta"
         animationDuration={1000}
-        textPosition="50%"
+        textPosition="25%"
         containerHeight="auto"
       />
     </>
