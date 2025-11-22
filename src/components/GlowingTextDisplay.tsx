@@ -40,7 +40,7 @@ export default function GlowingTextDisplay({
         }
 
         .glowing-icon {
-          color: #ffffff;
+          color: rgba(169, 85, 247, 0.89);
           animation: glow-pulse-icon 3s ease-in-out infinite;
           width: 1.5em;
           height: 1.5em;
