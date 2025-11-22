@@ -5,7 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Zap } from "@/components/zap";
 import QuestionNumberAnimation from "@/components/QuestionNumberAnimation";
-import InstagramReelDisplay from "@/components/InstagramReelDisplay";
+import ThumbnailDisplay from "@/components/ThumbnailDisplay";
+import HookDisplay from "@/components/HookDisplay";
+import CTAPackDisplay from "@/components/CTAPackDisplay";
 
 const MDEditorRenderer = dynamic(
   () => import("../../../components/MDEditorRenderer"),
@@ -66,7 +68,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
   const getNextPhaseDuration = () => {
     switch (phase) {
       case "intro":
-        return 9; // 9 seconds for intro (7s thumbnail + 2s hook)
+        return 12; // 12 seconds for intro (10s thumbnail + 2s hook)
       case "question":
         return 5; // 5 seconds for each question
       case "answer":
@@ -220,47 +222,43 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
       {/* Intro Phase */}
       {phase === "intro" && (
         <>
-          {/* Instagram Reel Display - Show if social media content exists */}
-          {testData.socialMediaContent?.thumbnail_text &&
-            testData.socialMediaContent?.hooks && (
-              <>
-                {/* Thumbnail reel: 0-7 seconds (timer: 9->2) */}
-                {timer > 2 && (
-                  <InstagramReelDisplay
-                    text={testData.socialMediaContent.thumbnail_text}
-                    type="thumbnail"
-                  />
-                )}
-                {/* Hook reel: 7-9 seconds (timer: 2->0) */}
-                {timer <= 2 && timer > 0 && (
-                  <InstagramReelDisplay
-                    text={testData.socialMediaContent.hooks}
-                    type="hook"
-                  />
-                )}
-              </>
-            )}
+          {/* Thumbnail Display: 0-7 seconds (timer: 9->2) */}
+          {testData.socialMediaContent?.thumbnail_text && (
+            <ThumbnailDisplay
+              text={testData.socialMediaContent.thumbnail_text}
+              isVisible={timer > 2}
+              testName={testData.testName}
+            />
+          )}
+
+          {/* Hook Display: 7-9 seconds (timer: 2->0) */}
+          {testData.socialMediaContent?.hooks && (
+            <HookDisplay
+              text={testData.socialMediaContent.hooks}
+              isVisible={timer <= 2 && timer > 0}
+            />
+          )}
 
           {/* Fallback to original intro if no social media content */}
-          {!testData.socialMediaContent?.thumbnail_text ||
-            (!testData.socialMediaContent?.hooks && (
-              <div className="text-center max-w-2xl animate-fade-in">
-                <div className="space-y-8 text-white">
-                  <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-                    {testData.subjectName}
-                  </h1>
-                  <p className="text-2xl text-gray-300">{testData.topicName}</p>
-                  <p className="text-xl text-gray-400">
-                    {testData.subtopicName}
-                  </p>
-                  <p className="text-lg text-indigo-400 font-semibold">
-                    {testData.testName}
-                  </p>
-                  {/* <p className="text-gray-500">{testData.questionCount} Questions</p> */}
-                </div>
-                {/* <div className="mt-8 text-3xl font-bold text-indigo-400">{timer}</div> */}
+          {(!testData.socialMediaContent?.thumbnail_text ||
+            !testData.socialMediaContent?.hooks) && (
+            <div className="text-center max-w-2xl animate-fade-in">
+              <div className="space-y-8 text-white">
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+                  {testData.subjectName}
+                </h1>
+                <p className="text-2xl text-gray-300">{testData.topicName}</p>
+                <p className="text-xl text-gray-400">
+                  {testData.subtopicName}
+                </p>
+                <p className="text-lg text-indigo-400 font-semibold">
+                  {testData.testName}
+                </p>
+                {/* <p className="text-gray-500">{testData.questionCount} Questions</p> */}
               </div>
-            ))}
+              {/* <div className="mt-8 text-3xl font-bold text-indigo-400">{timer}</div> */}
+            </div>
+          )}
         </>
       )}
 
@@ -379,42 +377,10 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
 
       {/* Outro Phase - Show CTA Pack text forever */}
       {phase === "outro" && (
-        <div
-          className="fixed inset-0 flex items-center justify-center w-full h-full"
-          style={{
-            backgroundImage:
-              "url('/assets/Gemini_Generated_Image_2uzwhf2uzwhf2uzw.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <style>{`
-            @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-
-            .cta-text {
-              font-family: "Roboto Slab", serif;
-              font-optical-sizing: auto;
-              font-weight: 700;
-              font-style: normal;
-              color: #000000;
-              background-color: #ffffff;
-              padding: 4px;
-              margin: 0 40px;
-              border-radius: 8px;
-              box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-              display: inline-block;
-            }
-          `}</style>
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/10"></div>
-          <div
-            className="absolute inset-0"
-            style={{ background: "rgba(0,0,0,0.5)" }}
-          ></div>
-          <p className="cta-text text-4xl md:text-5xl lg:text-6xl leading-tight text-center px-6 sm:px-8 md:px-12 max-w-5xl relative z-10">
-            {testData.socialMediaContent?.cta_pack || ""}
-          </p>
-        </div>
+        <CTAPackDisplay
+          text={testData.socialMediaContent?.cta_pack || ""}
+          isVisible={true}
+        />
       )}
 
       {/* Play/Pause Control */}
