@@ -54,6 +54,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
   const [timer, setTimer] = useState(5);
   const [animationKey, setAnimationKey] = useState(0);
   const [backgroundImage, setBackgroundImage] = useState("");
+  const [showPauseChip, setShowPauseChip] = useState(false);
 
   // Initialize random background image on mount
   useEffect(() => {
@@ -153,6 +154,19 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
       setAnimationKey((prev) => prev + 1);
     }
   }, [phase, currentIndex, previousIndex]);
+
+  // Show Pause chip after 1000ms when entering question phase
+  useEffect(() => {
+    if (phase === "question") {
+      setShowPauseChip(false);
+      const timer = setTimeout(() => {
+        setShowPauseChip(true);
+      }, 1000);
+      return () => clearTimeout(timer);
+    } else {
+      setShowPauseChip(false);
+    }
+  }, [phase]);
 
   // Call API to update social media status when CTA screen appears
   useEffect(() => {
@@ -324,12 +338,14 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                   >
                     {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
                   </div>
-                  {/* Pause Chip - Purple to Pink Gradient */}
-                  <div className="text-sm font-semibold px-2 py-1 rounded-sm bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 text-white text-sm shadow-lg">
-                    {testData.questionType === "mcq"
-                      ? "Pause & guess the answer"
-                      : "Pause & guess the output"}
-                  </div>
+                  {/* Pause Chip - Purple Gradient */}
+                  {showPauseChip && (
+                    <div className="text-sm font-semibold px-3 py-1 rounded-sm bg-gradient-to-r from-purple-400 to-purple-600 text-white backdrop-blur-sm border border-purple-400/30 animate-fade-in">
+                      {testData.questionType === "mcq"
+                        ? "Pause & Guess the answer"
+                        : "Pause & Guess the output"}
+                    </div>
+                  )}
                 </div>
               )}
 
