@@ -6,12 +6,14 @@ interface ThumbnailDisplayProps {
   text: string;
   isVisible: boolean;
   testName?: string;
+  backgroundImage?: string;
 }
 
 export default function ThumbnailDisplay({
   text,
   isVisible,
   testName,
+  backgroundImage,
 }: ThumbnailDisplayProps) {
   return (
     <TextDisplay
@@ -22,6 +24,7 @@ export default function ThumbnailDisplay({
       animationDuration={10000}
       textPosition="30%"
       containerHeight="20vh"
+      backgroundImage={backgroundImage}
     />
   );
 }

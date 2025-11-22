@@ -8,6 +8,7 @@ import QuestionNumberAnimation from "@/components/QuestionNumberAnimation";
 import ThumbnailDisplay from "@/components/ThumbnailDisplay";
 import HookDisplay from "@/components/HookDisplay";
 import CTAPackDisplay from "@/components/CTAPackDisplay";
+import { getRandomBackgroundImage } from "@/constants/backgroundImages";
 
 const MDEditorRenderer = dynamic(
   () => import("../../../components/MDEditorRenderer"),
@@ -52,6 +53,12 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
   const [isPaused, setIsPaused] = useState(false);
   const [timer, setTimer] = useState(5);
   const [animationKey, setAnimationKey] = useState(0);
+  const [backgroundImage, setBackgroundImage] = useState("");
+
+  // Initialize random background image on mount
+  useEffect(() => {
+    setBackgroundImage(getRandomBackgroundImage());
+  }, []);
 
   const baseUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
   const youtubeUrl = process.env.NEXT_PUBLIC_YOUTUBE_URL;
@@ -228,6 +235,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
               text={testData.socialMediaContent.thumbnail_text}
               isVisible={timer > 5}
               testName={testData.testName}
+              backgroundImage={backgroundImage}
             />
           )}
 
@@ -236,6 +244,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
             <HookDisplay
               text={testData.socialMediaContent.hooks}
               isVisible={timer <= 5 && timer > 0}
+              backgroundImage={backgroundImage}
             />
           )}
 
@@ -378,6 +387,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         <CTAPackDisplay
           text={testData.socialMediaContent?.cta_pack || ""}
           isVisible={true}
+          backgroundImage={backgroundImage}
         />
       )}
 

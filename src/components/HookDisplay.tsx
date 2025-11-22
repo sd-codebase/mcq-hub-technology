@@ -5,9 +5,10 @@ import TextDisplay from "./TextDisplay";
 interface HookDisplayProps {
   text: string;
   isVisible: boolean;
+  backgroundImage?: string;
 }
 
-export default function HookDisplay({ text, isVisible }: HookDisplayProps) {
+export default function HookDisplay({ text, isVisible, backgroundImage }: HookDisplayProps) {
   return (
     <TextDisplay
       text={text}
@@ -15,6 +16,7 @@ export default function HookDisplay({ text, isVisible }: HookDisplayProps) {
       type="hook"
       animationDuration={4000}
       textPosition="35%"
+      backgroundImage={backgroundImage}
     />
   );
 }

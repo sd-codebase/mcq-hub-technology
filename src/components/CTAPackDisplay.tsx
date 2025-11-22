@@ -6,11 +6,13 @@ import TextDisplay from "./TextDisplay";
 interface CTAPackDisplayProps {
   text: string;
   isVisible: boolean;
+  backgroundImage?: string;
 }
 
 export default function CTAPackDisplay({
   text,
   isVisible,
+  backgroundImage,
 }: CTAPackDisplayProps) {
   return (
     <>
@@ -24,6 +26,7 @@ export default function CTAPackDisplay({
         animationDuration={1000}
         textPosition="25%"
         containerHeight="auto"
+        backgroundImage={backgroundImage}
       />
     </>
   );

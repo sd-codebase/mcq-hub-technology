@@ -10,6 +10,7 @@ interface TextDisplayProps {
   animationDuration?: number; // in ms
   textPosition?: string; // CSS top value
   containerHeight?: string; // CSS height value
+  backgroundImage?: string;
 }
 
 export default function TextDisplay({
@@ -20,6 +21,7 @@ export default function TextDisplay({
   animationDuration = 10000,
   textPosition = "30%",
   containerHeight = "20vh",
+  backgroundImage = "/assets/bg-img-1.png",
 }: TextDisplayProps) {
   if (!isVisible || !text) return null;
 
@@ -121,8 +123,7 @@ export default function TextDisplay({
     <div
       className="fixed inset-0 flex items-center justify-center w-full h-full overflow-hidden"
       style={{
-        backgroundImage:
-          "url('/assets/Gemini_Generated_Image_2uzwhf2uzwhf2uzw.png')",
+        backgroundImage: `url('${backgroundImage}')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -131,7 +132,7 @@ export default function TextDisplay({
       <div className="absolute inset-0 bg-black/10"></div>
       <div
         className="absolute inset-0"
-        style={{ background: "rgba(0,0,0,0.7)" }}
+        style={{ background: "rgba(0,0,0,0.5)" }}
       ></div>
 
       <style>{`
