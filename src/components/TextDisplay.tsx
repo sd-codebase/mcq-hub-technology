@@ -26,10 +26,12 @@ export default function TextDisplay({
     .filter((line) => line.trim().length > 0)
     .join("\n");
 
-  // Helper function to parse and render bold text
+  // Helper function to parse and render bold text and gradient text
   const renderLineWithBold = (line: string) => {
-    const parts = line.split(/(\*\*.*?\*\*)/);
+    // First handle double asterisks (bold) and single asterisks (gradient)
+    const parts = line.split(/((?<!\*)\*[^*]+\*(?!\*)|\*\*.*?\*\*)/);
     return parts.map((part, idx) => {
+      // Double asterisks for bold
       if (part.startsWith("**") && part.endsWith("**")) {
         const boldText = part.slice(2, -2);
         return (
@@ -37,6 +39,11 @@ export default function TextDisplay({
             {boldText}
           </strong>
         );
+      }
+      // Single asterisks for gradient (remove the asterisks)
+      if (part.startsWith("*") && part.endsWith("*") && !part.startsWith("**")) {
+        const gradientText = part.slice(1, -1);
+        return <span key={idx}>{gradientText}</span>;
       }
       return <span key={idx}>{part}</span>;
     });
@@ -249,10 +256,10 @@ export default function TextDisplay({
         >
           {cleanedText.split("\n").map((line, idx) => {
             const trimmedLine = line.trim();
-            const wordCount = trimmedLine.split(/\s+/).length;
+            const hasGradientBackground = /(?<!\*)\*[^*]+\*(?!\*)/.test(trimmedLine);
             const isSingleWord =
               typeStyles.showSingleWordBg &&
-              wordCount === 1 &&
+              hasGradientBackground &&
               trimmedLine.length > 0;
 
             return (
