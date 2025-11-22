@@ -81,9 +81,9 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
           testData.socialMediaContent?.hooks;
         return hasIntroContent ? 8 : 0; // 8 seconds for intro or 0 to skip
       case "question":
-        return 6; // 6 seconds for each question
+        return 3; // 3 seconds for each question
       case "answer":
-        return 3; // 3 seconds for answer
+        return 2; // 2 seconds for answer
       case "outro":
         return 999999; // Stay on outro screen forever
       case "thank-you":
@@ -303,7 +303,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
 
             {/* Question Card */}
             <div
-              className="p-8 rounded-2xl backdrop-blur-md mb-6 shadow-2xl"
+              className="p-4 rounded-2xl backdrop-blur-md mb-6 shadow-2xl"
               style={{
                 background:
                   "linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(236, 72, 153, 0.1) 100%)",
@@ -311,21 +311,34 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                 border: "1.5px solid rgba(168, 85, 247, 0.4)",
               }}
             >
-              {/* Question Number with Timer and Quiz Type */}
-              <div className="flex justify-between items-center mb-3 gap-3">
-                <div className="text-sm font-medium text-gray-300">
-                  <strong>#{currentIndex + 1}</strong>
-                </div>
-                <div className="flex items-center gap-3">
-                  {/* Reverse Seconds Counter - Hide during answer phase */}
-                  {phase !== "answer" && (
-                    <div className="text-sm font-semibold px-3 py-1 rounded-full bg-indigo-500/80 text-white backdrop-blur-sm border border-indigo-400/30">
-                      {timer}s
-                    </div>
-                  )}
+              {/* Header with Pause Chip or Quiz Type Badge */}
+              {phase === "question" && (
+                <div className="flex justify-between items-center mb-3 gap-3 h-12">
                   {/* Quiz Type Badge */}
                   <div
-                    className={`text-sm font-semibold px-3 py-1 rounded-full backdrop-blur-sm border ${
+                    className={`text-sm font-semibold px-3 py-1 rounded-sm backdrop-blur-sm border ${
+                      testData.questionType === "mcq"
+                        ? "bg-indigo-500/80 text-white border-indigo-400/30"
+                        : "bg-teal-500/80 text-white border-teal-400/30"
+                    }`}
+                  >
+                    {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
+                  </div>
+                  {/* Pause Chip - Purple to Pink Gradient */}
+                  <div className="text-sm font-semibold px-2 py-1 rounded-sm bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600 text-white text-sm shadow-lg">
+                    {testData.questionType === "mcq"
+                      ? "Pause & guess the answer"
+                      : "Pause & guess the output"}
+                  </div>
+                </div>
+              )}
+
+              {/* Answer Phase - Only Quiz Type Badge */}
+              {phase === "answer" && (
+                <div className="flex justify-start items-center mb-3 gap-3 h-12">
+                  {/* Quiz Type Badge */}
+                  <div
+                    className={`text-sm font-semibold px-3 py-1 rounded-sm backdrop-blur-sm border ${
                       testData.questionType === "mcq"
                         ? "bg-indigo-500/80 text-white border-indigo-400/30"
                         : "bg-teal-500/80 text-white border-teal-400/30"
@@ -334,7 +347,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                     {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
                   </div>
                 </div>
-              </div>
+              )}
 
               {/* Question Text */}
               <div
