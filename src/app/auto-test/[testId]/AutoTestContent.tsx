@@ -322,10 +322,12 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
 
             {/* Question Card */}
             <div
-              className="p-8 rounded-2xl backdrop-blur-md mb-6 border border-white/20 shadow-2xl"
+              className="p-8 rounded-2xl backdrop-blur-md mb-6 shadow-2xl"
               style={{
-                background: "rgba(30, 30, 50, 0.7)",
+                background:
+                  "linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(236, 72, 153, 0.1) 100%)",
                 backdropFilter: "blur(10px)",
+                border: "1.5px solid rgba(168, 85, 247, 0.4)",
               }}
             >
               {/* Question Number with Timer and Quiz Type */}
@@ -375,15 +377,42 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                       return (
                         <div
                           key={idx}
-                          className={`p-4 rounded-xl border-2 transition-all duration-300 backdrop-blur-sm ${
+                          style={
                             showAnswer && isCorrect
-                              ? "border-green-500 bg-green-500/30 ring-4 ring-green-400/50 animate-fade-correct"
-                              : "border-white/20 bg-white/10 hover:bg-white/15"
-                          }`}
+                              ? {
+                                  background: "rgba(34, 197, 94, 0.3)",
+                                  border: "2px solid rgba(34, 197, 94, 0.8)",
+                                  boxShadow: "0 0 20px rgba(34, 197, 94, 0.3)",
+                                }
+                              : {
+                                  background:
+                                    "linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.05) 100%)",
+                                  border: "2px solid rgba(168, 85, 247, 0.3)",
+                                  backdropFilter: "blur(10px)",
+                                  transition: "all 0.3s ease",
+                                }
+                          }
+                          className="p-4 rounded-xl backdrop-blur-sm hover:bg-white/15"
+                          onMouseEnter={(e) => {
+                            if (!showAnswer || !isCorrect) {
+                              e.currentTarget.style.borderColor =
+                                "rgba(168, 85, 247, 0.6)";
+                              e.currentTarget.style.background =
+                                "linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(236, 72, 153, 0.1) 100%)";
+                            }
+                          }}
+                          onMouseLeave={(e) => {
+                            if (!showAnswer || !isCorrect) {
+                              e.currentTarget.style.borderColor =
+                                "rgba(168, 85, 247, 0.3)";
+                              e.currentTarget.style.background =
+                                "linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.05) 100%)";
+                            }
+                          }}
                         >
                           <div className="flex items-start gap-3">
                             <span
-                              className={`font-semibold text-lg ${
+                              className={`font-semibold ${
                                 showAnswer && isCorrect
                                   ? "text-green-300"
                                   : "text-white"
@@ -406,7 +435,15 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                               />
                             </div>
                             {showAnswer && isCorrect && (
-                              <span className="text-green-400 text-2xl">✓</span>
+                              <span
+                                style={{
+                                  color: "#a855f7",
+                                  fontSize: "1rem",
+                                  fontWeight: "800",
+                                }}
+                              >
+                                ✓
+                              </span>
                             )}
                           </div>
                         </div>
@@ -421,10 +458,21 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                 !currentQuestion.options &&
                 phase === "answer" && (
                   <div className="mb-6">
-                    <div className="p-4 rounded-xl bg-green-500/30 border-2 border-green-500 ring-4 ring-green-400/50 backdrop-blur-sm animate-fade-correct">
+                    <div
+                      className="p-4 rounded-xl backdrop-blur-sm animate-fade-correct"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(236, 72, 153, 0.15) 100%)",
+                        border: "2px solid rgba(168, 85, 247, 0.5)",
+                        boxShadow: "0 0 20px rgba(168, 85, 247, 0.2)",
+                      }}
+                    >
                       <div
-                        className="text-green-300 text-sm font-semibold mb-2 flex items-center gap-2"
-                        style={{ textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}
+                        className="text-sm font-semibold mb-2 flex items-center gap-2"
+                        style={{
+                          textShadow: "0 1px 3px rgba(0,0,0,0.3)",
+                          color: "#a855f7",
+                        }}
                       >
                         <span>✓ Expected Output:</span>
                       </div>
@@ -432,7 +480,10 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                         className="text-white font-mono text-lg whitespace-pre-wrap"
                         style={{ textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}
                       >
-                        <MDEditorRenderer value={currentQuestion.output} />
+                        <MDEditorRenderer
+                          value={currentQuestion.output}
+                          style={{ color: "#ffffff", fontWeight: "500" }}
+                        />
                       </div>
                     </div>
                   </div>
