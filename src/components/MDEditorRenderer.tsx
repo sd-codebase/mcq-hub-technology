@@ -8,15 +8,17 @@ const MarkdownPreview = dynamic(() => import("@uiw/react-markdown-preview"), {
 
 interface MDEditorRendererProps {
   value: string;
+  dataColorMode?: string;
   style?: CSSProperties;
 }
 
 export default function MDEditorRenderer({
   value,
   style,
+  dataColorMode = "light",
 }: MDEditorRendererProps) {
   return (
-    <div data-color-mode="dark">
+    <div data-color-mode={dataColorMode}>
       <MarkdownPreview
         source={value}
         style={{ background: "none", ...style }}

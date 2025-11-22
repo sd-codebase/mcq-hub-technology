@@ -363,6 +363,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                 <MDEditorRenderer
                   value={currentQuestion.question}
                   style={{ color: "#ffffff", fontWeight: "500" }}
+                  dataColorMode="dark"
                 />
               </div>
 
@@ -432,6 +433,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                               <MDEditorRenderer
                                 value={option}
                                 style={{ color: "#ffffff", fontWeight: "500" }}
+                                dataColorMode="dark"
                               />
                             </div>
                             {showAnswer && isCorrect && (
@@ -468,10 +470,10 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                       }}
                     >
                       <div
-                        className="text-sm font-semibold mb-2 flex items-center gap-2"
+                        className="text-md font-semibold mb-2 flex items-center gap-2"
                         style={{
                           textShadow: "0 1px 3px rgba(0,0,0,0.3)",
-                          color: "#a855f7",
+                          color: "#d8b4fe",
                         }}
                       >
                         <span>✓ Expected Output:</span>
@@ -483,6 +485,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                         <MDEditorRenderer
                           value={currentQuestion.output}
                           style={{ color: "#ffffff", fontWeight: "500" }}
+                          dataColorMode="dark"
                         />
                       </div>
                     </div>
