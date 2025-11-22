@@ -317,10 +317,10 @@ export default function TextDisplay({
       {testName && (
         <div
           className="absolute w-full flex justify-center"
-          style={{ top: "75%" }}
+          style={{ top: "70%" }}
         >
           <p
-            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center rounded-lg"
+            className="text-xl md:text-xl lg:text-4xl font-bold text-white text-center rounded-lg"
             style={{
               fontFamily: "'Montserrat', sans-serif",
               background: "linear-gradient(to right, #a855f7, #ec4899)",
