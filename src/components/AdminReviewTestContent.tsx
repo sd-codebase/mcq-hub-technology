@@ -148,7 +148,9 @@ export default function AdminReviewTestContent({
   const handleStartAutoTest = () => {
     // Check if socialMediaContent exists
     if (!testData.socialMediaContent) {
-      alert("Social media content is required to start the auto test. Please add it first.");
+      alert(
+        "Social media content is required to start the auto test. Please add it first."
+      );
       return;
     }
 
@@ -156,7 +158,9 @@ export default function AdminReviewTestContent({
     const validation = validateSocialMediaPresence(testData.socialMediaContent);
     if (!validation.isValid) {
       alert(
-        `Please fill in the following fields: ${validation.missingFields.join(", ")}`
+        `Please fill in the following fields: ${validation.missingFields.join(
+          ", "
+        )}`
       );
       return;
     }
@@ -325,8 +329,8 @@ export default function AdminReviewTestContent({
                         <p className="text-gray-400 text-xs uppercase font-semibold mb-3">
                           Expected Output
                         </p>
-                        <div className="p-4 rounded-lg bg-green-900/30 border-2 border-green-500">
-                          <div className="text-green-300 font-mono text-sm whitespace-pre-wrap">
+                        <div className="p-4 rounded-lg bg-white border-2 border-green-500">
+                          <div className=" font-mono text-sm whitespace-pre-wrap">
                             <MDEditorRenderer value={question.output} />
                           </div>
                         </div>
