@@ -230,7 +230,7 @@ export default function TextDisplay({
         }
 
         ${
-          type === "hook"
+          type === "hook" || type === "cta"
             ? `
         @keyframes slide-up-from-bottom {
           from {
@@ -254,7 +254,7 @@ export default function TextDisplay({
           .map(
             (_, idx) =>
               `.text-line:nth-child(${idx + 1}) { animation-delay: ${
-                idx * 0.35
+                idx * 0.1
               }s; }`
           )
           .join("")}
