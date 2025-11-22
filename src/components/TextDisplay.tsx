@@ -51,7 +51,11 @@ export default function TextDisplay({
         !part.startsWith("**")
       ) {
         const gradientText = part.slice(1, -1);
-        return <span key={idx}>{gradientText}</span>;
+        return (
+          <span key={idx} style={{ fontSize: "0.85em" }}>
+            {gradientText}
+          </span>
+        );
       }
       return <span key={idx}>{part}</span>;
     });
