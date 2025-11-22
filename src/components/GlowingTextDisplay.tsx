@@ -12,7 +12,10 @@ export default function GlowingTextDisplay({
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center w-full h-full overflow-hidden" style={{ zIndex: 50 }}>
+    <div
+      className="fixed inset-0 flex items-center justify-center w-full h-full overflow-hidden"
+      style={{ zIndex: 50 }}
+    >
       <style>{`
         .glowing-text-container {
           width: 100%;
@@ -39,16 +42,16 @@ export default function GlowingTextDisplay({
         .glowing-icon {
           color: #ffffff;
           animation: glow-pulse-icon 3s ease-in-out infinite;
-          width: 1em;
-          height: 1em;
+          width: 1.5em;
+          height: 1.5em;
           flex-shrink: 0;
-          paddint-top: 8px;
+          margin-top: 4px;
         }
 
         .glowing-text {
           font-family: 'Montserrat', sans-serif;
           font-weight: 600;
-          font-size: 1rem;
+          font-size: 1.5rem;
           color: #ffffff;
           text-align: center;
           letter-spacing: 0.05em;
