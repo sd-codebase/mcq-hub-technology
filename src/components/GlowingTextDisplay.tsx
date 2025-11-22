@@ -12,7 +12,7 @@ export default function GlowingTextDisplay({
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center w-full h-full overflow-hidden">
+    <div className="fixed inset-0 flex items-center justify-center w-full h-full overflow-hidden" style={{ zIndex: 50 }}>
       <style>{`
         .glowing-text-container {
           width: 100%;

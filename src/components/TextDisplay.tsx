@@ -132,7 +132,7 @@ export default function TextDisplay({
       <div className="absolute inset-0 bg-black/10"></div>
       <div
         className="absolute inset-0"
-        style={{ background: "rgba(0,0,0,0.5)" }}
+        style={{ background: "rgba(0,0,0,0.6)" }}
       ></div>
 
       <style>{`
