@@ -68,8 +68,12 @@ export default function TextDisplay({
       case "cta":
         return {
           animationName: "fadeInOutText",
-          fontFamily: '"Roboto Slab", serif',
-          showBorder: false,
+          fontFamily: "'Montserrat', sans-serif",
+          borderBottom: "10px solid",
+          borderImage: "linear-gradient(to right, #a855f7, #ec4899) 1",
+          paddingBottom: "12px",
+          showBorder: true,
+          isCTABorder: true,
           showSingleWordBg: false,
         };
       default:
@@ -90,9 +94,9 @@ export default function TextDisplay({
       case "thumbnail":
         return "text-5xl md:text-6xl lg:text-7xl";
       case "hook":
-        return "text-3xl md:text-4xl lg:text-5xl";
+        return "text-4xl md:text-4xl lg:text-5xl";
       case "cta":
-        return "text-4xl md:text-5xl lg:text-6xl";
+        return "text-5xl md:text-5xl lg:text-6xl";
       default:
         return "text-5xl md:text-6xl lg:text-7xl";
     }
@@ -141,7 +145,9 @@ export default function TextDisplay({
         }
 
         .text-display-animate {
-          animation: ${typeStyles.animationName} ${animationDuration}ms ease-in-out forwards;
+          animation: ${
+            typeStyles.animationName
+          } ${animationDuration}ms ease-in-out forwards;
         }
 
         .text-display-style {
@@ -151,14 +157,29 @@ export default function TextDisplay({
           letter-spacing: 1px;
           color: #ffffff;
           padding: 0;
-          margin: 0 40px;
+          margin: 0 24px;
           display: block;
           ${
             typeStyles.showBorder
               ? `
+          ${
+            type !== "cta"
+              ? `
           border-left: 8px solid;
           border-image: linear-gradient(to bottom, #a855f7, #ec4899) 1;
           padding-left: ${typeStyles.paddingLeft || "12px"};
+          `
+              : ""
+          }
+          ${
+            type === "cta"
+              ? `
+          border-bottom: 10px solid;
+          border-image: linear-gradient(to right, #a855f7, #ec4899) 1;
+          padding-bottom: ${typeStyles.paddingBottom || "12px"};
+          `
+              : ""
+          }
           `
               : ""
           }
@@ -169,6 +190,16 @@ export default function TextDisplay({
           display: block;
           margin: 0;
           padding: 0;
+        }
+
+        ${
+          type === "hook"
+            ? `
+        .text-display-style {
+          margin: 0 24px;
+        }
+        `
+            : ""
         }
 
         ${
@@ -200,7 +231,11 @@ export default function TextDisplay({
         style={{
           top: textPosition,
           height: containerHeight,
-          ...(type === "hook" && { display: "flex", justifyContent: "center", alignItems: "center" }),
+          ...(type === "hook" && {
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }),
         }}
       >
         <div
@@ -239,7 +274,7 @@ export default function TextDisplay({
           style={{ top: "75%" }}
         >
           <p
-            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center rounded-lg"
+            className="text-3xl md:text-4xl lg:text-4xl font-bold text-white text-center rounded-lg"
             style={{
               fontFamily: "'Montserrat', sans-serif",
               background: "linear-gradient(to right, #a855f7, #ec4899)",
