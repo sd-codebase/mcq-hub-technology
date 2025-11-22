@@ -75,9 +75,11 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
   const getNextPhaseDuration = () => {
     switch (phase) {
       case "intro":
-        return 10; // 10 seconds for intro (5s thumbnail + 5s hook)
+        // Skip intro if no social media content
+        const hasIntroContent = testData.socialMediaContent?.thumbnail_text || testData.socialMediaContent?.hooks;
+        return hasIntroContent ? 8 : 0; // 8 seconds for intro or 0 to skip
       case "question":
-        return 5; // 5 seconds for each question
+        return 6; // 6 seconds for each question
       case "answer":
         return 3; // 3 seconds for answer
       case "outro":
@@ -125,7 +127,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
       setTimer((t) => {
         if (t <= 1) {
           advancePhase();
-          return getNextPhaseDuration();
+          return 0;
         }
         return t - 1;
       });
@@ -268,44 +270,23 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         {/* Intro Phase */}
         {phase === "intro" && (
           <>
-            {/* Thumbnail Display: 0-5 seconds (timer: 10->6) */}
+            {/* Thumbnail Display: 0-5 seconds (timer: 8->3) */}
             {testData.socialMediaContent?.thumbnail_text && (
               <ThumbnailDisplay
                 text={testData.socialMediaContent.thumbnail_text}
-                isVisible={timer > 5}
+                isVisible={timer > 3}
                 testName={testData.testName}
                 backgroundImage={backgroundImage}
               />
             )}
 
-            {/* Hook Display: 5-10 seconds (timer: 5->1) */}
+            {/* Hook Display: 5-8 seconds (timer: 3->0) */}
             {testData.socialMediaContent?.hooks && (
               <HookDisplay
                 text={testData.socialMediaContent.hooks}
-                isVisible={timer <= 5 && timer > 0}
+                isVisible={timer <= 3 && timer > 0}
                 backgroundImage={backgroundImage}
               />
-            )}
-
-            {/* Fallback to original intro if no social media content */}
-            {(!testData.socialMediaContent?.thumbnail_text ||
-              !testData.socialMediaContent?.hooks) && (
-              <div className="text-center max-w-2xl animate-fade-in">
-                <div className="space-y-8 text-white">
-                  <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-                    {testData.subjectName}
-                  </h1>
-                  <p className="text-2xl text-gray-300">{testData.topicName}</p>
-                  <p className="text-xl text-gray-400">
-                    {testData.subtopicName}
-                  </p>
-                  <p className="text-lg text-indigo-400 font-semibold">
-                    {testData.testName}
-                  </p>
-                  {/* <p className="text-gray-500">{testData.questionCount} Questions</p> */}
-                </div>
-                {/* <div className="mt-8 text-3xl font-bold text-indigo-400">{timer}</div> */}
-              </div>
             )}
           </>
         )}
@@ -438,8 +419,8 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                             </div>
                             {showAnswer && isCorrect && (
                               <span
+                                className="text-green-300"
                                 style={{
-                                  color: "#a855f7",
                                   fontSize: "1rem",
                                   fontWeight: "800",
                                 }}
