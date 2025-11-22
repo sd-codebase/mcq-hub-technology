@@ -26,17 +26,108 @@ export default function ArraySelectionStep({
   const [selectedHook, setSelectedHook] = useState<string>("");
   const [selectedCta, setSelectedCta] = useState<string>("");
 
+  // Textarea state for editable content
+  const [thumbnailTextarea, setThumbnailTextarea] = useState<string>("");
+  const [hookTextarea, setHookTextarea] = useState<string>("");
+  const [ctaTextarea, setCtaTextarea] = useState<string>("");
+
+  // Copy feedback state
+  const [copiedField, setCopiedField] = useState<string | null>(null);
+  const [pastedField, setPastedField] = useState<string | null>(null);
+
   const isAllSelected = selectedThumbnail && selectedHook && selectedCta;
+
+  // Handle radio button selection and populate textarea
+  const handleThumbnailSelect = (value: string) => {
+    setSelectedThumbnail(value);
+    setThumbnailTextarea(value);
+  };
+
+  const handleHookSelect = (value: string) => {
+    setSelectedHook(value);
+    setHookTextarea(value);
+  };
+
+  const handleCtaSelect = (value: string) => {
+    setSelectedCta(value);
+    setCtaTextarea(value);
+  };
+
+  // Copy to clipboard
+  const handleCopy = (text: string, fieldName: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopiedField(fieldName);
+      setTimeout(() => setCopiedField(null), 2000);
+    });
+  };
+
+  // Paste from clipboard
+  const handlePaste = async (fieldName: string, setTextarea: (value: string) => void) => {
+    try {
+      const text = await navigator.clipboard.readText();
+      setTextarea(text);
+      setPastedField(fieldName);
+      setTimeout(() => setPastedField(null), 2000);
+    } catch (error) {
+      console.error("Failed to read clipboard:", error);
+    }
+  };
 
   const handleConfirm = () => {
     if (isAllSelected) {
       onConfirm({
-        thumbnail_text: selectedThumbnail,
-        hooks: selectedHook,
-        cta_pack: selectedCta,
+        thumbnail_text: thumbnailTextarea,
+        hooks: hookTextarea,
+        cta_pack: ctaTextarea,
       });
     }
   };
+
+  // Textarea field component
+  const TextareaField = ({
+    label,
+    value,
+    onChange,
+    fieldName,
+  }: {
+    label: string;
+    value: string;
+    onChange: (value: string) => void;
+    fieldName: string;
+  }) => (
+    <div className="mt-4 space-y-2">
+      <label className="text-xs font-semibold text-gray-600 block">
+        Edit {label}:
+      </label>
+      <div className="flex gap-2">
+        <textarea
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          disabled={isLoading}
+          placeholder={`Enter ${label}...`}
+          className="flex-1 p-3 border border-gray-300 rounded-lg text-sm resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:bg-gray-100 disabled:cursor-not-allowed h-24"
+        />
+        <div className="flex flex-col gap-2">
+          <button
+            onClick={() => handleCopy(value, fieldName)}
+            disabled={isLoading || !value}
+            className="px-3 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+            title="Copy to clipboard"
+          >
+            {copiedField === fieldName ? "✓ Copied!" : "📋 Copy"}
+          </button>
+          <button
+            onClick={() => handlePaste(fieldName, onChange)}
+            disabled={isLoading}
+            className="px-3 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+            title="Paste from clipboard"
+          >
+            {pastedField === fieldName ? "✓ Pasted!" : "📌 Paste"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div className="space-y-8">
@@ -59,7 +150,7 @@ export default function ArraySelectionStep({
                 name="thumbnail_text"
                 value={item}
                 checked={selectedThumbnail === item}
-                onChange={(e) => setSelectedThumbnail(e.target.value)}
+                onChange={(e) => handleThumbnailSelect(e.target.value)}
                 disabled={isLoading}
                 className="w-4 h-4 cursor-pointer"
               />
@@ -67,6 +158,12 @@ export default function ArraySelectionStep({
             </label>
           ))}
         </div>
+        <TextareaField
+          label="Thumbnail Text"
+          value={thumbnailTextarea}
+          onChange={setThumbnailTextarea}
+          fieldName="thumbnail"
+        />
       </div>
 
       {/* Hooks Selection */}
@@ -82,7 +179,7 @@ export default function ArraySelectionStep({
                 name="hooks"
                 value={item}
                 checked={selectedHook === item}
-                onChange={(e) => setSelectedHook(e.target.value)}
+                onChange={(e) => handleHookSelect(e.target.value)}
                 disabled={isLoading}
                 className="w-4 h-4 cursor-pointer"
               />
@@ -90,6 +187,12 @@ export default function ArraySelectionStep({
             </label>
           ))}
         </div>
+        <TextareaField
+          label="Hooks"
+          value={hookTextarea}
+          onChange={setHookTextarea}
+          fieldName="hook"
+        />
       </div>
 
       {/* CTA Pack Selection */}
@@ -105,7 +208,7 @@ export default function ArraySelectionStep({
                 name="cta_pack"
                 value={item}
                 checked={selectedCta === item}
-                onChange={(e) => setSelectedCta(e.target.value)}
+                onChange={(e) => handleCtaSelect(e.target.value)}
                 disabled={isLoading}
                 className="w-4 h-4 cursor-pointer"
               />
@@ -113,6 +216,12 @@ export default function ArraySelectionStep({
             </label>
           ))}
         </div>
+        <TextareaField
+          label="CTA Pack"
+          value={ctaTextarea}
+          onChange={setCtaTextarea}
+          fieldName="cta"
+        />
       </div>
 
       {/* Confirm Button */}
