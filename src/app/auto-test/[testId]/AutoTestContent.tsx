@@ -308,13 +308,6 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         {/* Question / Answer Phase - Unified Block */}
         {(phase === "question" || phase === "answer") && currentQuestion && (
           <div className={`w-full max-w-4xl ${getQuestionBlockAnimation()}`}>
-            {/* Subtopic and Part Info */}
-            <div className="mb-4 text-center">
-              <p className="text-gray-300 text-md font-medium">
-                {testData.subtopicName} • {testData.testName}
-              </p>
-            </div>
-
             {/* Question Card */}
             <div
               className="p-4 rounded-2xl backdrop-blur-md mb-6 shadow-2xl"
@@ -327,40 +320,60 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
             >
               {/* Header with Pause Chip or Quiz Type Badge */}
               {phase === "question" && (
-                <div className="flex justify-between items-center mb-3 gap-3 h-12">
-                  {/* Quiz Type Badge */}
-                  <div
-                    className={`text-sm font-semibold px-3 py-1 rounded-sm backdrop-blur-sm border ${
-                      testData.questionType === "mcq"
-                        ? "bg-indigo-500/80 text-white border-indigo-400/30"
-                        : "bg-teal-500/80 text-white border-teal-400/30"
-                    }`}
-                  >
-                    {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
+                <div>
+                  {/* Subtopic and Test Name */}
+                  <div className="text-md text-gray-200 mb-2">
+                    {testData.subtopicName} • {testData.testName}
                   </div>
-                  {/* Pause Chip - Purple to Pink Gradient */}
-                  {showPauseChip && (
-                    <div className="text-sm font-semibold px-3 py-1 rounded-sm text-white backdrop-blur-sm border border-purple-400/30 animate-fade-in" style={{ background: "linear-gradient(to right, #a855f7, #ec4899)" }}>
-                      {testData.questionType === "mcq"
-                        ? "Pause & Guess the answer"
-                        : "Pause & Guess the output"}
+
+                  <div className="flex justify-between items-center mb-3 gap-3 h-12">
+                    {/* Quiz Type Badge */}
+                    <div
+                      className={`text-sm font-semibold px-3 py-1 rounded-sm backdrop-blur-sm border ${
+                        testData.questionType === "mcq"
+                          ? "bg-indigo-500/80 text-white border-indigo-400/30"
+                          : "bg-teal-500/80 text-white border-teal-400/30"
+                      }`}
+                    >
+                      {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
                     </div>
-                  )}
+                    {/* Pause Chip - Purple to Pink Gradient */}
+                    {showPauseChip && (
+                      <div
+                        className="text-sm font-semibold px-3 py-1 rounded-sm text-white backdrop-blur-sm border border-purple-400/30 animate-fade-in"
+                        style={{
+                          background:
+                            "linear-gradient(to right, #a855f7, #ec4899)",
+                        }}
+                      >
+                        {testData.questionType === "mcq"
+                          ? "Pause & Guess the answer"
+                          : "Pause & Guess the output"}
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
 
               {/* Answer Phase - Only Quiz Type Badge */}
               {phase === "answer" && (
-                <div className="flex justify-start items-center mb-3 gap-3 h-12">
-                  {/* Quiz Type Badge */}
-                  <div
-                    className={`text-sm font-semibold px-3 py-1 rounded-sm backdrop-blur-sm border ${
-                      testData.questionType === "mcq"
-                        ? "bg-indigo-500/80 text-white border-indigo-400/30"
-                        : "bg-teal-500/80 text-white border-teal-400/30"
-                    }`}
-                  >
-                    {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
+                <div>
+                  {/* Subtopic and Test Name */}
+                  <div className="text-md text-gray-200 mb-2">
+                    {testData.subtopicName} • {testData.testName}
+                  </div>
+
+                  <div className="flex justify-start items-center mb-3 gap-3 h-12">
+                    {/* Quiz Type Badge */}
+                    <div
+                      className={`text-sm font-semibold px-3 py-1 rounded-sm backdrop-blur-sm border ${
+                        testData.questionType === "mcq"
+                          ? "bg-indigo-500/80 text-white border-indigo-400/30"
+                          : "bg-teal-500/80 text-white border-teal-400/30"
+                      }`}
+                    >
+                      {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
+                    </div>
                   </div>
                 </div>
               )}
@@ -523,6 +536,11 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
             text={testData.socialMediaContent?.cta_pack || ""}
             isVisible={true}
             backgroundImage={backgroundImage}
+            testData={{
+              questionType: testData.questionType,
+              testName: testData.testName,
+              subtopicName: testData.subtopicName,
+            }}
           />
         )}
 

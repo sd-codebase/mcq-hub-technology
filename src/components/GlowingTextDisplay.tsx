@@ -3,11 +3,13 @@
 interface GlowingTextDisplayProps {
   text: string;
   isVisible?: boolean;
+  onClick?: () => void;
 }
 
 export default function GlowingTextDisplay({
   text,
   isVisible = true,
+  onClick,
 }: GlowingTextDisplayProps) {
   if (!isVisible) return null;
 
@@ -37,6 +39,14 @@ export default function GlowingTextDisplay({
           background: rgba(0, 0, 0, 0.3);
           backdrop-filter: blur(10px);
           box-shadow: 0 8px 32px rgba(168, 85, 247, 0.1);
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .glowing-text-wrapper:hover {
+          border-color: rgba(168, 85, 247, 0.6);
+          box-shadow: 0 8px 32px rgba(168, 85, 247, 0.3);
+          background: rgba(0, 0, 0, 0.4);
         }
 
         .glowing-icon {
@@ -104,7 +114,7 @@ export default function GlowingTextDisplay({
       `}</style>
 
       <div className="glowing-text-container">
-        <div className="glowing-text-wrapper">
+        <div className="glowing-text-wrapper" onClick={onClick}>
           <svg
             className="glowing-icon"
             viewBox="0 0 24 24"
