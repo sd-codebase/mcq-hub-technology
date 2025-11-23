@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import mongoose from "mongoose";
 import Test from "@/models/Test";
+import connectDB from "@/lib/mongodb";
 import { validateSocialMediaContent } from "@/utils/validateSocialMediaContent";
 
 export async function GET(
@@ -77,6 +78,9 @@ export async function PATCH(
     // Note: Validation is done on the client side before API call
     // The fields thumbnail_text, hooks, and cta_pack are converted from arrays to strings
     // on the client, so we skip array validation here
+
+    // Connect to database
+    await connectDB();
 
     // Update test with socialMediaContent using native MongoDB driver
     const db = mongoose.connection.db;

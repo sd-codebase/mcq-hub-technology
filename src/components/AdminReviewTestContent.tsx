@@ -385,6 +385,9 @@ export default function AdminReviewTestContent({
           >
             {copiedFullTest ? "✓ Copied to Clipboard" : "📋 Copy SM Prompt"}
           </button>
+          <SocialMediaContentButton
+            onClick={() => setShowSocialMediaModal(true)}
+          />
           <button
             onClick={() => setShowSocialMediaViewer(true)}
             className="px-8 py-4 rounded-full font-bold text-white text-lg
@@ -395,9 +398,7 @@ export default function AdminReviewTestContent({
           >
             📱 View SM Content
           </button>
-          <SocialMediaContentButton
-            onClick={() => setShowSocialMediaModal(true)}
-          />
+
           <button
             onClick={handleStartAutoTest}
             className="px-8 py-4 rounded-full font-bold text-white text-lg

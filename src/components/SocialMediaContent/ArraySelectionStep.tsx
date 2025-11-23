@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, memo } from "react";
 
 interface ArraySelectionStepProps {
   jsonData: {
@@ -16,6 +16,66 @@ interface ArraySelectionStepProps {
   }) => void;
   isLoading?: boolean;
 }
+
+interface TextareaFieldProps {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  fieldName: string;
+  isLoading?: boolean;
+  copiedField: string | null;
+  pastedField: string | null;
+  onCopy: (text: string, fieldName: string) => void;
+  onPaste: (fieldName: string, setTextarea: (value: string) => void) => void;
+}
+
+// Memoized TextareaField component to prevent re-renders
+const TextareaField = memo(({
+  label,
+  value,
+  onChange,
+  fieldName,
+  isLoading,
+  copiedField,
+  pastedField,
+  onCopy,
+  onPaste,
+}: TextareaFieldProps) => (
+  <div className="mt-4 space-y-2">
+    <label className="text-xs font-semibold text-gray-600 block">
+      Edit {label}:
+    </label>
+    <div className="flex gap-2">
+      <textarea
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        disabled={isLoading}
+        placeholder={`Enter ${label}...`}
+        className="flex-1 p-3 border border-gray-300 rounded-lg text-sm resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:bg-gray-100 disabled:cursor-not-allowed h-24"
+      />
+      <div className="flex flex-col gap-2">
+        <button
+          onClick={() => onCopy(value, fieldName)}
+          disabled={isLoading || !value}
+          className="px-3 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+          title="Copy to clipboard"
+        >
+          {copiedField === fieldName ? "✓ Copied!" : "📋 Copy"}
+        </button>
+        <button
+          onClick={() => onPaste(fieldName, onChange)}
+          disabled={isLoading}
+          className="px-3 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+          title="Paste from clipboard"
+        >
+          {pastedField === fieldName ? "✓ Pasted!" : "📌 Paste"}
+        </button>
+      </div>
+    </div>
+  </div>
+));
+
+TextareaField.displayName = "TextareaField";
 
 export default function ArraySelectionStep({
   jsonData,
@@ -53,16 +113,16 @@ export default function ArraySelectionStep({
     setCtaTextarea(value);
   };
 
-  // Copy to clipboard
-  const handleCopy = (text: string, fieldName: string) => {
+  // Copy to clipboard with useCallback
+  const handleCopy = useCallback((text: string, fieldName: string) => {
     navigator.clipboard.writeText(text).then(() => {
       setCopiedField(fieldName);
       setTimeout(() => setCopiedField(null), 2000);
     });
-  };
+  }, []);
 
-  // Paste from clipboard
-  const handlePaste = async (fieldName: string, setTextarea: (value: string) => void) => {
+  // Paste from clipboard with useCallback
+  const handlePaste = useCallback(async (fieldName: string, setTextarea: (value: string) => void) => {
     try {
       const text = await navigator.clipboard.readText();
       setTextarea(text);
@@ -71,7 +131,7 @@ export default function ArraySelectionStep({
     } catch (error) {
       console.error("Failed to read clipboard:", error);
     }
-  };
+  }, []);
 
   const handleConfirm = () => {
     if (isAllSelected) {
@@ -82,52 +142,6 @@ export default function ArraySelectionStep({
       });
     }
   };
-
-  // Textarea field component
-  const TextareaField = ({
-    label,
-    value,
-    onChange,
-    fieldName,
-  }: {
-    label: string;
-    value: string;
-    onChange: (value: string) => void;
-    fieldName: string;
-  }) => (
-    <div className="mt-4 space-y-2">
-      <label className="text-xs font-semibold text-gray-600 block">
-        Edit {label}:
-      </label>
-      <div className="flex gap-2">
-        <textarea
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          disabled={isLoading}
-          placeholder={`Enter ${label}...`}
-          className="flex-1 p-3 border border-gray-300 rounded-lg text-sm resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:bg-gray-100 disabled:cursor-not-allowed h-24"
-        />
-        <div className="flex flex-col gap-2">
-          <button
-            onClick={() => handleCopy(value, fieldName)}
-            disabled={isLoading || !value}
-            className="px-3 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-            title="Copy to clipboard"
-          >
-            {copiedField === fieldName ? "✓ Copied!" : "📋 Copy"}
-          </button>
-          <button
-            onClick={() => handlePaste(fieldName, onChange)}
-            disabled={isLoading}
-            className="px-3 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-            title="Paste from clipboard"
-          >
-            {pastedField === fieldName ? "✓ Pasted!" : "📌 Paste"}
-          </button>
-        </div>
-      </div>
-    </div>
-  );
 
   return (
     <div className="space-y-8">
@@ -163,6 +177,11 @@ export default function ArraySelectionStep({
           value={thumbnailTextarea}
           onChange={setThumbnailTextarea}
           fieldName="thumbnail"
+          isLoading={isLoading}
+          copiedField={copiedField}
+          pastedField={pastedField}
+          onCopy={handleCopy}
+          onPaste={handlePaste}
         />
       </div>
 
@@ -192,6 +211,11 @@ export default function ArraySelectionStep({
           value={hookTextarea}
           onChange={setHookTextarea}
           fieldName="hook"
+          isLoading={isLoading}
+          copiedField={copiedField}
+          pastedField={pastedField}
+          onCopy={handleCopy}
+          onPaste={handlePaste}
         />
       </div>
 
@@ -221,6 +245,11 @@ export default function ArraySelectionStep({
           value={ctaTextarea}
           onChange={setCtaTextarea}
           fieldName="cta"
+          isLoading={isLoading}
+          copiedField={copiedField}
+          pastedField={pastedField}
+          onCopy={handleCopy}
+          onPaste={handlePaste}
         />
       </div>
 
