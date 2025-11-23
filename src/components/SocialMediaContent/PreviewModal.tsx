@@ -48,6 +48,7 @@ export default function PreviewModal({
           textPosition="30%"
           containerHeight="auto"
           backgroundImage="/assets/bg-img-1.png"
+          isPreview={true}
         />
       </div>
     </div>

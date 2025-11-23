@@ -9,6 +9,7 @@ interface TextDisplayProps {
   textPosition?: string; // CSS top value
   containerHeight?: string; // CSS height value
   backgroundImage?: string;
+  isPreview?: boolean; // If true, renders as absolute positioned within parent
 }
 
 export default function TextDisplay({
@@ -20,6 +21,7 @@ export default function TextDisplay({
   textPosition = "30%",
   containerHeight = "20vh",
   backgroundImage = "/assets/bg-img-1.png",
+  isPreview = false,
 }: TextDisplayProps) {
   if (!isVisible || !text) return null;
 
@@ -128,7 +130,9 @@ export default function TextDisplay({
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center w-full h-full overflow-hidden"
+      className={`flex items-center justify-center overflow-hidden ${
+        isPreview ? "absolute inset-0" : "fixed inset-0 w-full h-full"
+      }`}
       style={{
         backgroundImage: `url('${backgroundImage}')`,
         backgroundSize: "cover",
