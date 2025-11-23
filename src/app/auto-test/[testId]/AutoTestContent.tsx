@@ -196,20 +196,8 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
 
   // Determine which animation to apply based on context
   const getQuestionBlockAnimation = () => {
-    // For answer phase: no animation on wrapper
-    if (phase === "answer") {
-      return "";
-    }
-    // For first question: use fade-in
-    if (phase === "question" && currentIndex === 0) {
-      return "animate-fade-in";
-    }
-    // For new questions (after first): use bounce-in
-    if (phase === "question" && currentIndex > previousIndex) {
-      return "animate-bounce-in";
-    }
-    // Default to fade-in
-    return "animate-fade-in";
+    // No animation for question state
+    return "";
   };
 
   return (
