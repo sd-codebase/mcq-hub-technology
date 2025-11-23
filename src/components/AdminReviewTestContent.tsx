@@ -107,7 +107,7 @@ export default function AdminReviewTestContent({
     const subtopicSlug = getSlugFromText(testData.subtopicName);
     const explanationLink = `https://www.quizzydock.com/review/${testData._id}/${subjectSlug}/${topicSlug}/${subtopicSlug}`;
 
-    let fullContent = `Please refer the attached Social Media Growth.md file in this project. Here are the inputs \nSubject: ${
+    let fullContent = `For context, rules, validations, please refer the attached "Social Media Growth.md" file in this project. And give exactly same copyable json code block as mentioned in propmt file. Here are the inputs \nSubject: ${
       testData.subjectName
     }\nTopic: ${testData.topicName}\nSubtopic: ${
       testData.subtopicName
