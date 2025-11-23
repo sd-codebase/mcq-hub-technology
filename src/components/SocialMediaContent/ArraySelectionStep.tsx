@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, memo } from "react";
+import PreviewModal from "./PreviewModal";
 
 interface ArraySelectionStepProps {
   jsonData: {
@@ -24,9 +25,8 @@ interface TextareaFieldProps {
   fieldName: string;
   isLoading?: boolean;
   copiedField: string | null;
-  pastedField: string | null;
   onCopy: (text: string, fieldName: string) => void;
-  onPaste: (fieldName: string, setTextarea: (value: string) => void) => void;
+  onPreview: (text: string, fieldName: string) => void;
 }
 
 // Memoized TextareaField component to prevent re-renders
@@ -37,9 +37,8 @@ const TextareaField = memo(({
   fieldName,
   isLoading,
   copiedField,
-  pastedField,
   onCopy,
-  onPaste,
+  onPreview,
 }: TextareaFieldProps) => (
   <div className="mt-4 space-y-2">
     <label className="text-xs font-semibold text-gray-600 block">
@@ -63,12 +62,12 @@ const TextareaField = memo(({
           {copiedField === fieldName ? "✓ Copied!" : "📋 Copy"}
         </button>
         <button
-          onClick={() => onPaste(fieldName, onChange)}
-          disabled={isLoading}
-          className="px-3 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-          title="Paste from clipboard"
+          onClick={() => onPreview(value, fieldName)}
+          disabled={isLoading || !value}
+          className="px-3 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+          title="Preview text"
         >
-          {pastedField === fieldName ? "✓ Pasted!" : "📌 Paste"}
+          👁️ Preview
         </button>
       </div>
     </div>
@@ -93,7 +92,10 @@ export default function ArraySelectionStep({
 
   // Copy feedback state
   const [copiedField, setCopiedField] = useState<string | null>(null);
-  const [pastedField, setPastedField] = useState<string | null>(null);
+
+  // Preview modal state
+  const [previewField, setPreviewField] = useState<string | null>(null);
+  const [previewText, setPreviewText] = useState<string>("");
 
   const isAllSelected = selectedThumbnail && selectedHook && selectedCta;
 
@@ -121,16 +123,10 @@ export default function ArraySelectionStep({
     });
   }, []);
 
-  // Paste from clipboard with useCallback
-  const handlePaste = useCallback(async (fieldName: string, setTextarea: (value: string) => void) => {
-    try {
-      const text = await navigator.clipboard.readText();
-      setTextarea(text);
-      setPastedField(fieldName);
-      setTimeout(() => setPastedField(null), 2000);
-    } catch (error) {
-      console.error("Failed to read clipboard:", error);
-    }
+  // Open preview modal with useCallback
+  const handlePreview = useCallback((text: string, fieldName: string) => {
+    setPreviewText(text);
+    setPreviewField(fieldName);
   }, []);
 
   const handleConfirm = () => {
@@ -179,9 +175,8 @@ export default function ArraySelectionStep({
           fieldName="thumbnail"
           isLoading={isLoading}
           copiedField={copiedField}
-          pastedField={pastedField}
           onCopy={handleCopy}
-          onPaste={handlePaste}
+          onPreview={handlePreview}
         />
       </div>
 
@@ -213,9 +208,8 @@ export default function ArraySelectionStep({
           fieldName="hook"
           isLoading={isLoading}
           copiedField={copiedField}
-          pastedField={pastedField}
           onCopy={handleCopy}
-          onPaste={handlePaste}
+          onPreview={handlePreview}
         />
       </div>
 
@@ -247,9 +241,8 @@ export default function ArraySelectionStep({
           fieldName="cta"
           isLoading={isLoading}
           copiedField={copiedField}
-          pastedField={pastedField}
           onCopy={handleCopy}
-          onPaste={handlePaste}
+          onPreview={handlePreview}
         />
       </div>
 
@@ -269,6 +262,20 @@ export default function ArraySelectionStep({
           )}
         </button>
       </div>
+
+      {/* Preview Modal */}
+      <PreviewModal
+        isOpen={!!previewField}
+        onClose={() => setPreviewField(null)}
+        text={previewText}
+        type={
+          previewField === "thumbnail"
+            ? "thumbnail"
+            : previewField === "hook"
+              ? "hook"
+              : "cta"
+        }
+      />
     </div>
   );
 }
