@@ -119,20 +119,20 @@ export default function AdminReviewTestContent({
       const questionText = extractPlainText(question.question);
       fullContent += `Q${questionNum}: ${questionText}\n`;
 
-      if (question.options && question.options.length > 0) {
-        // MCQ format
-        question.options.forEach((option: string, optIdx: number) => {
-          const letter = String.fromCharCode(65 + optIdx);
-          const optionText = extractPlainText(option);
-          fullContent += `${letter}) ${optionText}\n`;
-        });
-        const correctLetter = String.fromCharCode(65 + question.correct_answer);
-        fullContent += `Correct Answer: ${correctLetter}\n\n`;
-      } else if (question.output) {
-        // Output prediction format
-        const outputText = extractPlainText(question.output);
-        fullContent += `Expected Output:\n${outputText}\n\n`;
-      }
+      // if (question.options && question.options.length > 0) {
+      //   // MCQ format
+      //   question.options.forEach((option: string, optIdx: number) => {
+      //     const letter = String.fromCharCode(65 + optIdx);
+      //     const optionText = extractPlainText(option);
+      //     fullContent += `${letter}) ${optionText}\n`;
+      //   });
+      //   const correctLetter = String.fromCharCode(65 + question.correct_answer);
+      //   fullContent += `Correct Answer: ${correctLetter}\n\n`;
+      // } else if (question.output) {
+      //   // Output prediction format
+      //   const outputText = extractPlainText(question.output);
+      //   fullContent += `Expected Output:\n${outputText}\n\n`;
+      // }
     });
 
     fullContent += `\nExplanation Link: ${explanationLink}\nTotal Tests: ${
@@ -383,7 +383,7 @@ export default function AdminReviewTestContent({
                 : "bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-indigo-500/50"
             }`}
           >
-            {copiedFullTest ? "✓ Copied to Clipboard" : "📋 Copy Full Test"}
+            {copiedFullTest ? "✓ Copied to Clipboard" : "📋 Copy SM Prompt"}
           </button>
           <button
             onClick={() => setShowSocialMediaViewer(true)}
