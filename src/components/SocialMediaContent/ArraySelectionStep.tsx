@@ -39,40 +39,92 @@ const TextareaField = memo(({
   copiedField,
   onCopy,
   onPreview,
-}: TextareaFieldProps) => (
-  <div className="mt-4 space-y-2">
-    <label className="text-xs font-semibold text-gray-600 block">
-      Edit {label}:
-    </label>
-    <div className="flex gap-2">
-      <textarea
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        disabled={isLoading}
-        placeholder={`Enter ${label}...`}
-        className="flex-1 p-3 border border-gray-300 rounded-lg text-sm resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:bg-gray-100 disabled:cursor-not-allowed h-24"
-      />
-      <div className="flex flex-col gap-2">
-        <button
-          onClick={() => onCopy(value, fieldName)}
-          disabled={isLoading || !value}
-          className="px-3 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-          title="Copy to clipboard"
-        >
-          {copiedField === fieldName ? "✓ Copied!" : "📋 Copy"}
-        </button>
-        <button
-          onClick={() => onPreview(value, fieldName)}
-          disabled={isLoading || !value}
-          className="px-3 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-          title="Preview text"
-        >
-          👁️ Preview
-        </button>
+}: TextareaFieldProps) => {
+  const textareaRef = useState<HTMLTextAreaElement | null>(null);
+
+  const applyFormatting = (wrapChar: string) => {
+    const textarea = document.querySelector(`textarea[data-field="${fieldName}"]`) as HTMLTextAreaElement;
+    if (!textarea) return;
+
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const selectedText = value.substring(start, end);
+
+    if (!selectedText) return;
+
+    const formattedText = `${wrapChar}${selectedText}${wrapChar}`;
+    const newValue =
+      value.substring(0, start) + formattedText + value.substring(end);
+
+    onChange(newValue);
+
+    // Restore selection after state update
+    setTimeout(() => {
+      textarea.focus();
+      textarea.setSelectionRange(
+        start + wrapChar.length,
+        start + wrapChar.length + selectedText.length
+      );
+    }, 0);
+  };
+
+  return (
+    <div className="mt-4 space-y-2">
+      <label className="text-xs font-semibold text-gray-600 block">
+        Edit {label}:
+      </label>
+      <div className="flex gap-2">
+        <div className="flex-1 flex flex-col gap-2">
+          <textarea
+            ref={textareaRef as any}
+            data-field={fieldName}
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            disabled={isLoading}
+            placeholder={`Enter ${label}...`}
+            className="flex-1 p-3 border border-gray-300 rounded-lg text-sm resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:bg-gray-100 disabled:cursor-not-allowed h-24"
+          />
+          <div className="flex gap-2">
+            <button
+              onClick={() => applyFormatting("#")}
+              disabled={isLoading || !value}
+              className="px-3 py-2 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+              title="Wrap selected text with # (Apply BG)"
+            >
+              # Apply BG
+            </button>
+            <button
+              onClick={() => applyFormatting("*")}
+              disabled={isLoading || !value}
+              className="px-3 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+              title="Wrap selected text with * (Bold)"
+            >
+              * Bold
+            </button>
+          </div>
+        </div>
+        <div className="flex flex-col gap-2">
+          <button
+            onClick={() => onCopy(value, fieldName)}
+            disabled={isLoading || !value}
+            className="px-3 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+            title="Copy to clipboard"
+          >
+            {copiedField === fieldName ? "✓ Copied!" : "📋 Copy"}
+          </button>
+          <button
+            onClick={() => onPreview(value, fieldName)}
+            disabled={isLoading || !value}
+            className="px-3 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+            title="Preview text"
+          >
+            👁️ Preview
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-));
+  );
+});
 
 TextareaField.displayName = "TextareaField";
 
