@@ -83,7 +83,8 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
           testData.socialMediaContent?.hooks;
         return hasIntroContent ? 8 : 0; // 8 seconds for intro or 0 to skip
       case "question":
-        return 3; // 3 seconds for each question
+        // First question stays for 4 seconds, others for 3 seconds
+        return currentIndex === 0 ? 4 : 3;
       case "answer":
         return 2; // 2 seconds for answer
       case "outro":
@@ -160,7 +161,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
   useEffect(() => {
     if (phase === "question") {
       setShowQuestionAnimation(false);
-      const delay = currentIndex === 0 ? 500 : 100;
+      const delay = currentIndex === 0 ? 1000 : 100;
       const timer = setTimeout(() => {
         setShowQuestionAnimation(true);
       }, delay);
@@ -174,7 +175,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
   useEffect(() => {
     if (phase === "question") {
       setShowPauseChip(false);
-      const delay = currentIndex === 0 ? 500 : 100;
+      const delay = currentIndex === 0 ? 1000 : 100;
       const timer = setTimeout(() => {
         setShowPauseChip(true);
       }, delay);
