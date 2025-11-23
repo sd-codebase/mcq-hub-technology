@@ -116,7 +116,7 @@ export default function TextDisplay({
   const getFontSizeClasses = () => {
     switch (type) {
       case "thumbnail":
-        return "text-5xl";
+        return "text-4xl";
       case "hook":
         return "text-4xl";
       case "cta":
@@ -169,6 +169,15 @@ export default function TextDisplay({
           }
         }
 
+        @keyframes progressBar {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 100%;
+          }
+        }
+
         .text-display-animate {
           animation: ${
             typeStyles.animationName
@@ -182,7 +191,9 @@ export default function TextDisplay({
           letter-spacing: 1px;
           color: #ffffff;
           padding: 0;
+          margin: 0 24px;
           display: block;
+          position: relative;
           ${
             typeStyles.showBorder
               ? `
@@ -198,8 +209,6 @@ export default function TextDisplay({
           ${
             type === "cta"
               ? `
-          border-bottom: 10px solid;
-          border-image: linear-gradient(to right, #a855f7, #ec4899) 1;
           padding-bottom: ${typeStyles.paddingBottom || "12px"};
           `
               : ""
@@ -208,6 +217,25 @@ export default function TextDisplay({
               : ""
           }
           line-height: 1;
+        }
+
+        ${
+          type === "cta"
+            ? `
+          .text-display-style::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 10px;
+            background: linear-gradient(to right, #a855f7, #ec4899);
+            border-radius: 2px;
+            width: 0;
+            animation: progressBar 1000ms linear forwards;
+            animation-delay: 500ms;
+          }
+          `
+            : ""
         }
 
         .text-line {
