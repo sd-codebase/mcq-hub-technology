@@ -1,7 +1,5 @@
 "use client";
 
-import GlowingTextDisplay from "./GlowingTextDisplay";
-
 interface TextDisplayProps {
   text: string;
   isVisible: boolean;
@@ -32,27 +30,32 @@ export default function TextDisplay({
 
   // Helper function to parse and render bold text and gradient text
   const renderLineWithBold = (line: string) => {
-    // First handle double asterisks (bold) and single asterisks (gradient)
-    const parts = line.split(/((?<!\*)\*[^*]+\*(?!\*)|\*\*.*?\*\*)/);
+    // Handle asterisks for bold and hash for gradient background
+    const parts = line.split(/(#[^#]+#|\*[^*]+\*)/);
     return parts.map((part, idx) => {
-      // Double asterisks for bold
-      if (part.startsWith("**") && part.endsWith("**")) {
-        const boldText = part.slice(2, -2);
+      // Asterisks for bold
+      if (part.startsWith("*") && part.endsWith("*")) {
+        const boldText = part.slice(1, -1);
         return (
           <strong key={idx} className="font-bold">
             {boldText}
           </strong>
         );
       }
-      // Single asterisks for gradient (remove the asterisks)
-      if (
-        part.startsWith("*") &&
-        part.endsWith("*") &&
-        !part.startsWith("**")
-      ) {
+      // Hash for gradient background
+      if (part.startsWith("#") && part.endsWith("#")) {
         const gradientText = part.slice(1, -1);
         return (
-          <span key={idx} style={{ fontSize: "0.85em" }}>
+          <span
+            key={idx}
+            style={{
+              background: "linear-gradient(to right, #a855f7, #ec4899)",
+              padding: "6px 8px",
+              borderRadius: "4px",
+              display: "inline-block",
+              fontSize: "0.95em",
+            }}
+          >
             {gradientText}
           </span>
         );
@@ -300,19 +303,9 @@ export default function TextDisplay({
         >
           {cleanedText.split("\n").map((line, idx) => {
             const trimmedLine = line.trim();
-            const hasGradientBackground = /(?<!\*)\*[^*]+\*(?!\*)/.test(
-              trimmedLine
-            );
-            const isSingleWord =
-              typeStyles.showSingleWordBg &&
-              hasGradientBackground &&
-              trimmedLine.length > 0;
 
             return (
-              <span
-                key={idx}
-                className={`text-line ${isSingleWord ? "single-word" : ""}`}
-              >
+              <span key={idx} className="text-line">
                 {renderLineWithBold(trimmedLine)}
               </span>
             );
