@@ -55,6 +55,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
   const [animationKey, setAnimationKey] = useState(0);
   const [backgroundImage, setBackgroundImage] = useState("");
   const [showPauseChip, setShowPauseChip] = useState(false);
+  const [showQuestionAnimation, setShowQuestionAnimation] = useState(false);
 
   // Initialize random background image on mount
   useEffect(() => {
@@ -155,13 +156,26 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
     }
   }, [phase, currentIndex, previousIndex]);
 
+  // Show question animation after 100ms delay to avoid flickering
+  useEffect(() => {
+    if (phase === "question") {
+      setShowQuestionAnimation(false);
+      const timer = setTimeout(() => {
+        setShowQuestionAnimation(true);
+      }, 500);
+      return () => clearTimeout(timer);
+    } else {
+      setShowQuestionAnimation(false);
+    }
+  }, [phase]);
+
   // Show Pause chip after 1000ms when entering question phase
   useEffect(() => {
     if (phase === "question") {
       setShowPauseChip(false);
       const timer = setTimeout(() => {
         setShowPauseChip(true);
-      }, 1000);
+      }, 500);
       return () => clearTimeout(timer);
     } else {
       setShowPauseChip(false);
@@ -223,7 +237,7 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
       {/* Content wrapper with relative positioning */}
       <div className="relative z-10 w-full">
         {/* Question Number Animation Overlay */}
-        {phase === "question" && (
+        {phase === "question" && showQuestionAnimation && (
           <QuestionNumberAnimation
             key={animationKey}
             questionNumber={currentIndex + 1}
