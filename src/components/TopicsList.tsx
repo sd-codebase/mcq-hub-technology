@@ -70,8 +70,19 @@ export default function TopicsList({ subject }: { subject: string }) {
   }
 
   return (
-    <div className="max-w-5xl mx-auto space-y-12 px-4 ">
-      {topics.map((topic, topicIndex) => (
+    <>
+      {/* Sticky Go to Subjects Button */}
+      <div className="fixed bottom-8 right-8 z-40">
+        <a
+          href="/#subjects"
+          className="px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 block"
+        >
+          ← Go to Subjects
+        </a>
+      </div>
+
+      <div className="max-w-5xl mx-auto space-y-12 px-4 ">
+        {topics.map((topic, topicIndex) => (
         <div
           key={topicIndex}
           className="bg-gray-800 rounded-xl shadow-2xl p-8 border border-gray-700"
@@ -103,6 +114,7 @@ export default function TopicsList({ subject }: { subject: string }) {
           </div>
         </div>
       ))}
-    </div>
+      </div>
+    </>
   );
 }
