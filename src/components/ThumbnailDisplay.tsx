@@ -25,6 +25,7 @@ export default function ThumbnailDisplay({
       textPosition="30%"
       containerHeight="20vh"
       backgroundImage={backgroundImage}
+      isPreview={true}
     />
   );
 }

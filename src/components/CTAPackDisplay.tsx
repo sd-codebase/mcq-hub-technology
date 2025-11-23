@@ -49,6 +49,7 @@ export default function CTAPackDisplay({
         textPosition="30%"
         containerHeight="auto"
         backgroundImage={backgroundImage}
+        isPreview={true}
       />
     </>
   );

@@ -17,6 +17,7 @@ export default function HookDisplay({ text, isVisible, backgroundImage }: HookDi
       animationDuration={4000}
       textPosition="35%"
       backgroundImage={backgroundImage}
+      isPreview={true}
     />
   );
 }

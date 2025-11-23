@@ -131,12 +131,13 @@ export default function TextDisplay({
   return (
     <div
       className={`flex items-center justify-center overflow-hidden ${
-        isPreview ? "absolute inset-0" : "fixed inset-0 w-full h-full"
+        isPreview ? "absolute inset-0" : "w-full h-full"
       }`}
       style={{
         backgroundImage: `url('${backgroundImage}')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        position: isPreview ? "absolute" : "relative",
       }}
     >
       {/* Dark overlay */}

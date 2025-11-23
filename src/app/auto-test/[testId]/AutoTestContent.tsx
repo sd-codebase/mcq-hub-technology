@@ -219,309 +219,355 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-start pt-4 px-8 pb-8 relative"
+      className="min-h-screen flex items-center justify-center relative"
       style={{
-        backgroundImage: `url('${backgroundImage}')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
+        background:
+          "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)",
       }}
     >
-      {/* Dark overlays for readability */}
-      <div
-        className="fixed inset-0 bg-black/10 pointer-events-none"
-        style={{ zIndex: 1 }}
-      ></div>
-      <div
-        className="fixed inset-0 pointer-events-none"
-        style={{ background: "rgba(0,0,0,0.6)", zIndex: 2 }}
-      ></div>
-
-      {/* Content wrapper with relative positioning */}
-      <div className="relative z-10 w-full">
-        {/* Question Number Animation Overlay */}
-        {phase === "question" && showQuestionAnimation && (
-          <QuestionNumberAnimation
-            key={animationKey}
-            questionNumber={currentIndex + 1}
-          />
-        )}
-
-        {/* Logo - Always Visible */}
-        <div
-          className={`w-full flex justify-center ${
-            phase === "question" || phase === "answer" ? "py-6" : "py-3 mb-8"
-          } mt-16`}
+      {/* Reload Button - Fixed Position */}
+      <button
+        onClick={() => {
+          setPhase("intro");
+          setCurrentIndex(0);
+          setPreviousIndex(-1);
+          setTimer(getNextPhaseDuration());
+          setAnimationKey((prev) => prev + 1);
+        }}
+        className="fixed top-8 right-8 p-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition-colors z-50 shadow-lg"
+        title="Restart from thumbnail"
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
         >
-          <Link href="/">
-            <div className="flex items-center gap-2">
-              <Zap
-                className={`${
-                  phase === "question" || phase === "answer"
-                    ? "h-10 w-10"
-                    : "h-6 w-6"
-                } text-indigo-400`}
-              />
-              <div className="flex flex-col items-center">
-                <span
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+          />
+        </svg>
+      </button>
+
+      {/* Fixed size container - 500px width, 890px height */}
+      <div
+        className="relative overflow-hidden  shadow-2xl"
+        style={{
+          width: "500px",
+          height: "890px",
+          backgroundImage: `url('${backgroundImage}')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Dark overlays for readability */}
+        <div
+          className="absolute inset-0 bg-black/10 pointer-events-none"
+          style={{ zIndex: 1 }}
+        ></div>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "rgba(0,0,0,0.6)", zIndex: 2 }}
+        ></div>
+
+        {/* Content wrapper with relative positioning */}
+        <div className="relative z-10 w-full h-full overflow-y-auto flex flex-col items-center px-4">
+          {/* Question Number Animation Overlay */}
+          {phase === "question" && showQuestionAnimation && (
+            <QuestionNumberAnimation
+              key={animationKey}
+              questionNumber={currentIndex + 1}
+            />
+          )}
+
+          {/* Logo - Always Visible */}
+          <div
+            className={`w-full flex justify-center ${
+              phase === "question" || phase === "answer" ? "py-6" : "py-3 mb-8"
+            } mt-16`}
+          >
+            <Link href="/">
+              <div className="flex items-center gap-2">
+                <Zap
                   className={`${
                     phase === "question" || phase === "answer"
-                      ? "text-2xl"
-                      : "text-2xl"
-                  } font-bold text-white tracking-tight -mb-1`}
-                >
-                  Quizzy<span className="text-indigo-400">Dock</span>
-                </span>
-                <span
-                  className={`${
-                    phase === "question" || phase === "answer"
-                      ? "text-sm"
-                      : "text-[12px]"
-                  } font-medium text-gray-400 tracking-wider`}
-                >
-                  TECH SKILLS
-                </span>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        {/* Intro Phase */}
-        {phase === "intro" && (
-          <>
-            {/* Thumbnail Display: 0-5 seconds (timer: 8->3) */}
-            {testData.socialMediaContent?.thumbnail_text && (
-              <ThumbnailDisplay
-                text={testData.socialMediaContent.thumbnail_text}
-                isVisible={timer > 3}
-                testName={testData.testName}
-                backgroundImage={backgroundImage}
-              />
-            )}
-
-            {/* Hook Display: 5-8 seconds (timer: 3->0) */}
-            {testData.socialMediaContent?.hooks && (
-              <HookDisplay
-                text={testData.socialMediaContent.hooks}
-                isVisible={timer <= 3 && timer > 0}
-                backgroundImage={backgroundImage}
-              />
-            )}
-          </>
-        )}
-
-        {/* Question / Answer Phase - Unified Block */}
-        {(phase === "question" || phase === "answer") && currentQuestion && (
-          <div className={`w-full max-w-4xl ${getQuestionBlockAnimation()}`}>
-            {/* Question Card */}
-            <div
-              className="p-4 rounded-2xl backdrop-blur-md mb-6 shadow-2xl"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(236, 72, 153, 0.1) 100%)",
-                backdropFilter: "blur(10px)",
-                border: "1.5px solid rgba(168, 85, 247, 0.4)",
-              }}
-            >
-              {/* Header with Pause Chip or Quiz Type Badge */}
-              {phase === "question" && (
-                <div>
-                  {/* Subtopic and Test Name */}
-                  <div className="text-md text-gray-200 mb-2">
-                    {testData.subtopicName} • {testData.testName}
-                  </div>
-
-                  <div className="flex justify-between items-center mb-3 gap-3 h-12">
-                    {/* Quiz Type Badge */}
-                    <div
-                      className={`text-sm font-semibold px-3 py-1 rounded-sm backdrop-blur-sm border ${
-                        testData.questionType === "mcq"
-                          ? "bg-indigo-500/80 text-white border-indigo-400/30"
-                          : "bg-teal-500/80 text-white border-teal-400/30"
-                      }`}
-                    >
-                      {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
-                    </div>
-                    {/* Pause Chip - Purple to Pink Gradient */}
-                    {showPauseChip && (
-                      <div
-                        className="text-sm font-semibold px-3 py-1 rounded-sm text-white backdrop-blur-sm border border-purple-400/30 animate-fade-in"
-                        style={{
-                          background:
-                            "linear-gradient(to right, #a855f7, #ec4899)",
-                        }}
-                      >
-                        {testData.questionType === "mcq"
-                          ? "Pause & Guess the answer"
-                          : "Pause & Guess the output"}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
-
-              {/* Answer Phase - Only Quiz Type Badge */}
-              {phase === "answer" && (
-                <div>
-                  {/* Subtopic and Test Name */}
-                  <div className="text-md text-gray-200 mb-2">
-                    {testData.subtopicName} • {testData.testName}
-                  </div>
-
-                  <div className="flex justify-start items-center mb-3 gap-3 h-12">
-                    {/* Quiz Type Badge */}
-                    <div
-                      className={`text-sm font-semibold px-3 py-1 rounded-sm backdrop-blur-sm border ${
-                        testData.questionType === "mcq"
-                          ? "bg-indigo-500/80 text-white border-indigo-400/30"
-                          : "bg-teal-500/80 text-white border-teal-400/30"
-                      }`}
-                    >
-                      {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"} QUIZ
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Question Text */}
-              <div
-                className="text-2xl font-bold mb-6 text-white"
-                style={{ textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}
-              >
-                <MDEditorRenderer
-                  value={currentQuestion.question}
-                  style={{ color: "#ffffff", fontWeight: "500" }}
-                  dataColorMode="dark"
+                      ? "h-10 w-10"
+                      : "h-6 w-6"
+                  } text-indigo-400`}
                 />
+                <div className="flex flex-col items-center">
+                  <span
+                    className={`${
+                      phase === "question" || phase === "answer"
+                        ? "text-2xl"
+                        : "text-2xl"
+                    } font-bold text-white tracking-tight -mb-1`}
+                  >
+                    Quizzy<span className="text-indigo-400">Dock</span>
+                  </span>
+                  <span
+                    className={`${
+                      phase === "question" || phase === "answer"
+                        ? "text-sm"
+                        : "text-[12px]"
+                    } font-medium text-gray-400 tracking-wider`}
+                  >
+                    TECH SKILLS
+                  </span>
+                </div>
               </div>
+            </Link>
+          </div>
 
-              {/* Options (MCQ) */}
-              {currentQuestion.options && (
-                <div className="space-y-4 mb-6">
-                  {currentQuestion.options.map(
-                    (option: string, idx: number) => {
-                      const isCorrect = idx === currentQuestion.correct_answer;
-                      const showAnswer = phase === "answer";
+          {/* Intro Phase */}
+          {phase === "intro" && (
+            <>
+              {/* Thumbnail Display: 0-5 seconds (timer: 8->3) */}
+              {testData.socialMediaContent?.thumbnail_text && (
+                <ThumbnailDisplay
+                  text={testData.socialMediaContent.thumbnail_text}
+                  isVisible={timer > 3}
+                  testName={testData.testName}
+                  backgroundImage={backgroundImage}
+                />
+              )}
 
-                      return (
+              {/* Hook Display: 5-8 seconds (timer: 3->0) */}
+              {testData.socialMediaContent?.hooks && (
+                <HookDisplay
+                  text={testData.socialMediaContent.hooks}
+                  isVisible={timer <= 3 && timer > 0}
+                  backgroundImage={backgroundImage}
+                />
+              )}
+            </>
+          )}
+
+          {/* Question / Answer Phase - Unified Block */}
+          {(phase === "question" || phase === "answer") && currentQuestion && (
+            <div
+              className={`w-full ${getQuestionBlockAnimation()}`}
+              style={{ maxWidth: "calc(100% - 32px)" }}
+            >
+              {/* Question Card */}
+              <div
+                className="p-4 rounded-2xl backdrop-blur-md mb-6 shadow-2xl"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(236, 72, 153, 0.1) 100%)",
+                  backdropFilter: "blur(10px)",
+                  border: "1.5px solid rgba(168, 85, 247, 0.4)",
+                }}
+              >
+                {/* Header with Pause Chip or Quiz Type Badge */}
+                {phase === "question" && (
+                  <div>
+                    {/* Subtopic and Test Name */}
+                    <div className="text-md text-gray-200 mb-2">
+                      {testData.subtopicName} • {testData.testName}
+                    </div>
+
+                    <div className="flex justify-between items-center mb-3 gap-3 h-12">
+                      {/* Quiz Type Badge */}
+                      <div
+                        className={`text-sm font-semibold px-3 py-1 rounded-sm backdrop-blur-sm border ${
+                          testData.questionType === "mcq"
+                            ? "bg-indigo-500/80 text-white border-indigo-400/30"
+                            : "bg-teal-500/80 text-white border-teal-400/30"
+                        }`}
+                      >
+                        {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"}{" "}
+                        QUIZ
+                      </div>
+                      {/* Pause Chip - Purple to Pink Gradient */}
+                      {showPauseChip && (
                         <div
-                          key={idx}
-                          style={
-                            showAnswer && isCorrect
-                              ? {
-                                  background: "rgba(34, 197, 94, 0.3)",
-                                  border: "2px solid rgba(34, 197, 94, 0.8)",
-                                  boxShadow: "0 0 20px rgba(34, 197, 94, 0.3)",
-                                }
-                              : {
-                                  background:
-                                    "linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.05) 100%)",
-                                  border: "2px solid rgba(168, 85, 247, 0.3)",
-                                  backdropFilter: "blur(10px)",
-                                  transition: "all 0.3s ease",
-                                }
-                          }
-                          className="p-4 rounded-xl backdrop-blur-sm hover:bg-white/15"
-                          onMouseEnter={(e) => {
-                            if (!showAnswer || !isCorrect) {
-                              e.currentTarget.style.borderColor =
-                                "rgba(168, 85, 247, 0.6)";
-                              e.currentTarget.style.background =
-                                "linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(236, 72, 153, 0.1) 100%)";
-                            }
-                          }}
-                          onMouseLeave={(e) => {
-                            if (!showAnswer || !isCorrect) {
-                              e.currentTarget.style.borderColor =
-                                "rgba(168, 85, 247, 0.3)";
-                              e.currentTarget.style.background =
-                                "linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.05) 100%)";
-                            }
+                          className="text-sm font-semibold px-3 py-1 rounded-sm text-white backdrop-blur-sm border border-purple-400/30 animate-fade-in"
+                          style={{
+                            background:
+                              "linear-gradient(to right, #a855f7, #ec4899)",
                           }}
                         >
-                          <div className="flex items-start gap-3">
-                            <span
-                              className={`font-semibold ${
-                                showAnswer && isCorrect
-                                  ? "text-green-300"
-                                  : "text-white"
-                              }`}
-                              style={{
-                                textShadow: "0 1px 3px rgba(0,0,0,0.3)",
-                              }}
-                            >
-                              {String.fromCharCode(65 + idx)})
-                            </span>
-                            <div
-                              className="flex-1 text-white"
-                              style={{
-                                textShadow: "0 1px 3px rgba(0,0,0,0.3)",
-                              }}
-                            >
-                              <MDEditorRenderer
-                                value={option}
-                                style={{ color: "#ffffff", fontWeight: "500" }}
-                                dataColorMode="dark"
-                              />
-                            </div>
-                            {showAnswer && isCorrect && (
-                              <span
-                                className="text-green-300"
-                                style={{
-                                  fontSize: "1rem",
-                                  fontWeight: "800",
-                                }}
-                              >
-                                ✓
-                              </span>
-                            )}
-                          </div>
+                          {testData.questionType === "mcq"
+                            ? "Pause & Guess the answer"
+                            : "Pause & Guess the output"}
                         </div>
-                      );
-                    }
-                  )}
-                </div>
-              )}
+                      )}
+                    </div>
+                  </div>
+                )}
 
-              {/* Output (OUTPUT Question Type) - Only show in answer phase */}
-              {currentQuestion.output &&
-                !currentQuestion.options &&
-                phase === "answer" && (
-                  <div className="mb-6">
-                    <div
-                      className="p-4 rounded-xl backdrop-blur-sm animate-fade-correct"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(236, 72, 153, 0.15) 100%)",
-                        border: "2px solid rgba(168, 85, 247, 0.5)",
-                        boxShadow: "0 0 20px rgba(168, 85, 247, 0.2)",
-                      }}
-                    >
+                {/* Answer Phase - Only Quiz Type Badge */}
+                {phase === "answer" && (
+                  <div>
+                    {/* Subtopic and Test Name */}
+                    <div className="text-md text-gray-200 mb-2">
+                      {testData.subtopicName} • {testData.testName}
+                    </div>
+
+                    <div className="flex justify-start items-center mb-3 gap-3 h-12">
+                      {/* Quiz Type Badge */}
                       <div
-                        className="text-md font-semibold mb-2 flex items-center gap-2"
-                        style={{
-                          textShadow: "0 1px 3px rgba(0,0,0,0.3)",
-                          color: "#d8b4fe",
-                        }}
+                        className={`text-sm font-semibold px-3 py-1 rounded-sm backdrop-blur-sm border ${
+                          testData.questionType === "mcq"
+                            ? "bg-indigo-500/80 text-white border-indigo-400/30"
+                            : "bg-teal-500/80 text-white border-teal-400/30"
+                        }`}
                       >
-                        <span>✓ Expected Output:</span>
-                      </div>
-                      <div
-                        className="text-white font-mono text-lg whitespace-pre-wrap"
-                        style={{ textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}
-                      >
-                        <MDEditorRenderer
-                          value={currentQuestion.output}
-                          style={{ color: "#ffffff", fontWeight: "500" }}
-                          dataColorMode="dark"
-                        />
+                        {testData.questionType === "mcq" ? "MCQ" : "OUTPUT"}{" "}
+                        QUIZ
                       </div>
                     </div>
                   </div>
                 )}
 
-              {/* Explanation */}
-              {/* {currentQuestion.explanation && (
+                {/* Question Text */}
+                <div
+                  className="text-2xl font-bold mb-6 text-white"
+                  style={{ textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}
+                >
+                  <MDEditorRenderer
+                    value={currentQuestion.question}
+                    style={{ color: "#ffffff", fontWeight: "500" }}
+                    dataColorMode="dark"
+                  />
+                </div>
+
+                {/* Options (MCQ) */}
+                {currentQuestion.options && (
+                  <div className="space-y-4 mb-6">
+                    {currentQuestion.options.map(
+                      (option: string, idx: number) => {
+                        const isCorrect =
+                          idx === currentQuestion.correct_answer;
+                        const showAnswer = phase === "answer";
+
+                        return (
+                          <div
+                            key={idx}
+                            style={
+                              showAnswer && isCorrect
+                                ? {
+                                    background: "rgba(34, 197, 94, 0.3)",
+                                    border: "2px solid rgba(34, 197, 94, 0.8)",
+                                    boxShadow:
+                                      "0 0 20px rgba(34, 197, 94, 0.3)",
+                                  }
+                                : {
+                                    background:
+                                      "linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.05) 100%)",
+                                    border: "2px solid rgba(168, 85, 247, 0.3)",
+                                    backdropFilter: "blur(10px)",
+                                    transition: "all 0.3s ease",
+                                  }
+                            }
+                            className="p-4 rounded-xl backdrop-blur-sm hover:bg-white/15"
+                            onMouseEnter={(e) => {
+                              if (!showAnswer || !isCorrect) {
+                                e.currentTarget.style.borderColor =
+                                  "rgba(168, 85, 247, 0.6)";
+                                e.currentTarget.style.background =
+                                  "linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(236, 72, 153, 0.1) 100%)";
+                              }
+                            }}
+                            onMouseLeave={(e) => {
+                              if (!showAnswer || !isCorrect) {
+                                e.currentTarget.style.borderColor =
+                                  "rgba(168, 85, 247, 0.3)";
+                                e.currentTarget.style.background =
+                                  "linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.05) 100%)";
+                              }
+                            }}
+                          >
+                            <div className="flex items-start gap-3">
+                              <span
+                                className={`font-semibold ${
+                                  showAnswer && isCorrect
+                                    ? "text-green-300"
+                                    : "text-white"
+                                }`}
+                                style={{
+                                  textShadow: "0 1px 3px rgba(0,0,0,0.3)",
+                                }}
+                              >
+                                {String.fromCharCode(65 + idx)})
+                              </span>
+                              <div
+                                className="flex-1 text-white"
+                                style={{
+                                  textShadow: "0 1px 3px rgba(0,0,0,0.3)",
+                                }}
+                              >
+                                <MDEditorRenderer
+                                  value={option}
+                                  style={{
+                                    color: "#ffffff",
+                                    fontWeight: "500",
+                                  }}
+                                  dataColorMode="dark"
+                                />
+                              </div>
+                              {showAnswer && isCorrect && (
+                                <span
+                                  className="text-green-300"
+                                  style={{
+                                    fontSize: "1rem",
+                                    fontWeight: "800",
+                                  }}
+                                >
+                                  ✓
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      }
+                    )}
+                  </div>
+                )}
+
+                {/* Output (OUTPUT Question Type) - Only show in answer phase */}
+                {currentQuestion.output &&
+                  !currentQuestion.options &&
+                  phase === "answer" && (
+                    <div className="mb-6">
+                      <div
+                        className="p-4 rounded-xl backdrop-blur-sm animate-fade-correct"
+                        style={{
+                          background:
+                            "linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(236, 72, 153, 0.15) 100%)",
+                          border: "2px solid rgba(168, 85, 247, 0.5)",
+                          boxShadow: "0 0 20px rgba(168, 85, 247, 0.2)",
+                        }}
+                      >
+                        <div
+                          className="text-md font-semibold mb-2 flex items-center gap-2"
+                          style={{
+                            textShadow: "0 1px 3px rgba(0,0,0,0.3)",
+                            color: "#d8b4fe",
+                          }}
+                        >
+                          <span>✓ Expected Output:</span>
+                        </div>
+                        <div
+                          className="text-white font-mono text-lg whitespace-pre-wrap"
+                          style={{ textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}
+                        >
+                          <MDEditorRenderer
+                            value={currentQuestion.output}
+                            style={{ color: "#ffffff", fontWeight: "500" }}
+                            dataColorMode="dark"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                {/* Explanation */}
+                {/* {currentQuestion.explanation && (
               <div className="p-6 bg-indigo-50 rounded-lg border-l-4 border-indigo-500">
                 <div className="font-semibold text-indigo-700 mb-2 text-lg">
                   Explanation:
@@ -531,26 +577,26 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
                 </div>
               </div>
             )} */}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {/* Outro Phase - Show CTA Pack text forever */}
-        {phase === "outro" && (
-          <CTAPackDisplay
-            text={testData.socialMediaContent?.cta_pack || ""}
-            isVisible={true}
-            backgroundImage={backgroundImage}
-            testData={{
-              questionType: testData.questionType,
-              testName: testData.testName,
-              subtopicName: testData.subtopicName,
-            }}
-          />
-        )}
+          {/* Outro Phase - Show CTA Pack text forever */}
+          {phase === "outro" && (
+            <CTAPackDisplay
+              text={testData.socialMediaContent?.cta_pack || ""}
+              isVisible={true}
+              backgroundImage={backgroundImage}
+              testData={{
+                questionType: testData.questionType,
+                testName: testData.testName,
+                subtopicName: testData.subtopicName,
+              }}
+            />
+          )}
 
-        {/* Play/Pause Control */}
-        {/* <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2">
+          {/* Play/Pause Control */}
+          {/* <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2">
         <button
           onClick={() => setIsPaused(!isPaused)}
           className="px-8 py-4 rounded-full font-semibold text-white text-lg bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-2xl transform hover:scale-105"
@@ -559,49 +605,50 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
         </button>
       </div> */}
 
-        {/* CSS Animation */}
-        <style jsx>{`
-          @keyframes fade-in {
-            from {
-              opacity: 0;
-              transform: translateY(20px);
+          {/* CSS Animation */}
+          <style jsx>{`
+            @keyframes fade-in {
+              from {
+                opacity: 0;
+                transform: translateY(20px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
             }
-            to {
-              opacity: 1;
-              transform: translateY(0);
+            @keyframes fade-correct {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
             }
-          }
-          @keyframes fade-correct {
-            from {
-              opacity: 0;
+            @keyframes bounce-in {
+              0% {
+                transform: scale(0.5);
+                opacity: 0;
+              }
+              50% {
+                transform: scale(1);
+              }
+              100% {
+                transform: scale(1);
+                opacity: 1;
+              }
             }
-            to {
-              opacity: 1;
+            .animate-fade-in {
+              animation: fade-in 0.5s ease-out;
             }
-          }
-          @keyframes bounce-in {
-            0% {
-              transform: scale(0.5);
-              opacity: 0;
+            .animate-fade-correct {
+              animation: fade-correct 0.8s ease-in-out;
             }
-            50% {
-              transform: scale(1);
+            .animate-bounce-in {
+              animation: bounce-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
             }
-            100% {
-              transform: scale(1);
-              opacity: 1;
-            }
-          }
-          .animate-fade-in {
-            animation: fade-in 0.5s ease-out;
-          }
-          .animate-fade-correct {
-            animation: fade-correct 0.8s ease-in-out;
-          }
-          .animate-bounce-in {
-            animation: bounce-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-          }
-        `}</style>
+          `}</style>
+        </div>
       </div>
     </div>
   );
