@@ -254,13 +254,14 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
 
       {/* Fixed size container - 500px width, 890px height */}
       <div
-        className="relative overflow-hidden  shadow-2xl"
+        className="relative overflow-hidden"
         style={{
           width: "500px",
           height: "890px",
           backgroundImage: `url('${backgroundImage}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          boxShadow: "0 0 60px 30px rgba(5, 10, 25, 1), 0 0 100px 50px rgba(15, 23, 42, 0.9)",
         }}
       >
         {/* Dark overlays for readability */}
