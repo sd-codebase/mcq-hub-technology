@@ -20,14 +20,23 @@ export default function PreviewModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <>
+      {/* Dark overlay - pointer-events-none so it doesn't block interactions */}
+      <div className="fixed inset-0 bg-black/30 z-40 pointer-events-none"></div>
+
+      {/* Preview panel on right side - Strict 520x920 dimensions */}
       <div
-        className="relative rounded-lg overflow-hidden shadow-2xl"
+        className="fixed shadow-2xl z-50"
         style={{
           width: "520px",
           height: "920px",
+          right: "40px",
+          top: "50%",
+          transform: "translateY(-50%)",
           background: "linear-gradient(135deg, #a855f7, #ec4899)",
           overflow: "hidden",
+          borderRadius: "12px",
+          pointerEvents: "auto",
         }}
       >
         {/* Close Button */}
@@ -39,18 +48,26 @@ export default function PreviewModal({
           ✕
         </button>
 
-        {/* TextDisplay Component */}
-        <TextDisplay
-          text={text}
-          isVisible={true}
-          type={type}
-          animationDuration={1000}
-          textPosition="30%"
-          containerHeight="auto"
-          backgroundImage="/assets/bg-img-1.png"
-          isPreview={true}
-        />
+        {/* Preview Container */}
+        <div
+          className="relative w-full h-full"
+          style={{
+            overflow: "hidden",
+          }}
+        >
+          {/* TextDisplay Component */}
+          <TextDisplay
+            text={text}
+            isVisible={true}
+            type={type}
+            animationDuration={1000}
+            textPosition="30%"
+            containerHeight="auto"
+            backgroundImage="/assets/bg-img-1.png"
+            isPreview={true}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

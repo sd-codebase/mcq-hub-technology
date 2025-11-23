@@ -116,13 +116,13 @@ export default function TextDisplay({
   const getFontSizeClasses = () => {
     switch (type) {
       case "thumbnail":
-        return "text-5xl md:text-6xl lg:text-7xl";
+        return "text-5xl";
       case "hook":
-        return "text-4xl md:text-4xl lg:text-5xl";
+        return "text-4xl";
       case "cta":
-        return "text-4xl md:text-5xl lg:text-6xl";
+        return "text-4xl";
       default:
-        return "text-5xl md:text-6xl lg:text-7xl";
+        return "text-5xl";
     }
   };
 
@@ -182,7 +182,6 @@ export default function TextDisplay({
           letter-spacing: 1px;
           color: #ffffff;
           padding: 0;
-          margin: 0 24px;
           display: block;
           ${
             typeStyles.showBorder
@@ -220,9 +219,7 @@ export default function TextDisplay({
         ${
           type === "hook"
             ? `
-        .text-display-style {
-          margin: 0 24px;
-        }
+        
         `
             : ""
         }

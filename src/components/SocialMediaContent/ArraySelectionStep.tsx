@@ -95,7 +95,6 @@ export default function ArraySelectionStep({
 
   // Preview modal state
   const [previewField, setPreviewField] = useState<string | null>(null);
-  const [previewText, setPreviewText] = useState<string>("");
 
   const isAllSelected = selectedThumbnail && selectedHook && selectedCta;
 
@@ -125,7 +124,6 @@ export default function ArraySelectionStep({
 
   // Open preview modal with useCallback
   const handlePreview = useCallback((text: string, fieldName: string) => {
-    setPreviewText(text);
     setPreviewField(fieldName);
   }, []);
 
@@ -267,7 +265,13 @@ export default function ArraySelectionStep({
       <PreviewModal
         isOpen={!!previewField}
         onClose={() => setPreviewField(null)}
-        text={previewText}
+        text={
+          previewField === "thumbnail"
+            ? thumbnailTextarea
+            : previewField === "hook"
+              ? hookTextarea
+              : ctaTextarea
+        }
         type={
           previewField === "thumbnail"
             ? "thumbnail"
