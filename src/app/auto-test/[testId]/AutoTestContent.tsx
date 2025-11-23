@@ -156,31 +156,33 @@ export default function AutoTestContent({ testData }: AutoTestContentProps) {
     }
   }, [phase, currentIndex, previousIndex]);
 
-  // Show question animation after 100ms delay to avoid flickering
+  // Show question animation with delay (500ms for first, 100ms for others)
   useEffect(() => {
     if (phase === "question") {
       setShowQuestionAnimation(false);
+      const delay = currentIndex === 0 ? 500 : 100;
       const timer = setTimeout(() => {
         setShowQuestionAnimation(true);
-      }, 500);
+      }, delay);
       return () => clearTimeout(timer);
     } else {
       setShowQuestionAnimation(false);
     }
-  }, [phase]);
+  }, [phase, currentIndex]);
 
-  // Show Pause chip after 1000ms when entering question phase
+  // Show Pause chip with delay (500ms for first, 100ms for others)
   useEffect(() => {
     if (phase === "question") {
       setShowPauseChip(false);
+      const delay = currentIndex === 0 ? 500 : 100;
       const timer = setTimeout(() => {
         setShowPauseChip(true);
-      }, 500);
+      }, delay);
       return () => clearTimeout(timer);
     } else {
       setShowPauseChip(false);
     }
-  }, [phase]);
+  }, [phase, currentIndex]);
 
   // Call API to update social media status when CTA screen appears
   useEffect(() => {
