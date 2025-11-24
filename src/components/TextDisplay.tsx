@@ -118,11 +118,11 @@ export default function TextDisplay({
       case "thumbnail":
         return "text-4xl";
       case "hook":
-        return "text-4xl";
+        return "text-3xl";
       case "cta":
-        return "text-4xl";
+        return "text-3xl";
       default:
-        return "text-5xl";
+        return "text-4xl";
     }
   };
 
@@ -192,7 +192,6 @@ export default function TextDisplay({
           letter-spacing: 1px;
           color: #ffffff;
           padding: 0;
-          margin: 0 24px;
           display: block;
           position: relative;
           ${
@@ -310,7 +309,7 @@ export default function TextDisplay({
 
       <div
         className={`text-display-animate z-10 w-full px-8 md:px-12 lg:px-16 absolute flex items-center ${
-          type === "hook" ? "justify-center" : "text-left"
+          type === "hook" || type === "thumbnail" || type === "cta" ? "justify-center" : "text-left"
         }`}
         style={{
           top: textPosition,
