@@ -9,11 +9,30 @@ export default function JSONEditor({
   onChange,
   isLoading,
 }: JSONEditorProps) {
+  const handlePaste = async () => {
+    try {
+      const text = await navigator.clipboard.readText();
+      onChange(text);
+    } catch (error) {
+      console.error("Failed to read clipboard:", error);
+    }
+  };
+
   return (
     <div className="space-y-2">
-      <label className="text-sm font-semibold text-gray-700">
-        Paste Your JSON
-      </label>
+      <div className="flex justify-between items-center">
+        <label className="text-sm font-semibold text-gray-700">
+          Paste Your JSON
+        </label>
+        <button
+          onClick={handlePaste}
+          disabled={isLoading}
+          className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          title="Paste from clipboard"
+        >
+          📋 Paste from Clipboard
+        </button>
+      </div>
       <textarea
         value={value}
         onChange={(e) => onChange(e.target.value)}
