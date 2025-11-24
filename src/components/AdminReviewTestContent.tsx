@@ -423,6 +423,8 @@ export default function AdminReviewTestContent({
           isOpen={showSocialMediaModal}
           onClose={() => setShowSocialMediaModal(false)}
           testId={testData._id}
+          testName={testData.testName}
+          testType={testData.questionType}
           onSuccess={() => {
             // Optionally refresh data here if needed
           }}

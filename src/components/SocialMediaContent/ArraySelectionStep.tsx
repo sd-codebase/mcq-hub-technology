@@ -16,6 +16,8 @@ interface ArraySelectionStepProps {
     cta_pack: string;
   }) => void;
   isLoading?: boolean;
+  testName?: string;
+  testType?: string;
 }
 
 interface TextareaFieldProps {
@@ -132,15 +134,56 @@ export default function ArraySelectionStep({
   jsonData,
   onConfirm,
   isLoading,
+  testName,
+  testType,
 }: ArraySelectionStepProps) {
-  const [selectedThumbnail, setSelectedThumbnail] = useState<string>("");
-  const [selectedHook, setSelectedHook] = useState<string>("");
-  const [selectedCta, setSelectedCta] = useState<string>("");
+  // Calculate index based on testName (Part 1, Part 2, etc.)
+  const getDefaultIndex = () => {
+    if (!testName) return 0;
+    const partMatch = testName.match(/Part\s+(\d+)/i);
+    if (partMatch) {
+      const partNumber = parseInt(partMatch[1], 10);
+      return Math.max(0, partNumber - 1); // Part 1 -> 0, Part 2 -> 1, etc.
+    }
+    return 0;
+  };
+
+  // For OUTPUT, get the reverse index from the end of arrays
+  const getDefaultIndexForOutput = (array: any[]) => {
+    if (!testName) return array.length - 1;
+    const partMatch = testName.match(/Part\s+(\d+)/i);
+    if (partMatch) {
+      const partNumber = parseInt(partMatch[1], 10);
+      // For OUTPUT: Part 1 -> last, Part 2 -> second last, etc.
+      const reverseIndex = array.length - partNumber;
+      return Math.max(0, reverseIndex); // Don't go below 0
+    }
+    return array.length - 1;
+  };
+
+  const defaultIndex = getDefaultIndex();
+  const isOutputType = testType?.toLowerCase() === "output";
+
+  const defaultThumbnail = isOutputType
+    ? jsonData.thumbnail_text[getDefaultIndexForOutput(jsonData.thumbnail_text)] || jsonData.thumbnail_text[0] || ""
+    : jsonData.thumbnail_text[defaultIndex] || jsonData.thumbnail_text[0] || "";
+
+  const defaultHook = isOutputType
+    ? jsonData.hooks[getDefaultIndexForOutput(jsonData.hooks)] || jsonData.hooks[0] || ""
+    : jsonData.hooks[defaultIndex] || jsonData.hooks[0] || "";
+
+  const defaultCta = isOutputType
+    ? jsonData.cta_pack[getDefaultIndexForOutput(jsonData.cta_pack)] || jsonData.cta_pack[0] || ""
+    : jsonData.cta_pack[defaultIndex] || jsonData.cta_pack[0] || "";
+
+  const [selectedThumbnail, setSelectedThumbnail] = useState<string>(defaultThumbnail);
+  const [selectedHook, setSelectedHook] = useState<string>(defaultHook);
+  const [selectedCta, setSelectedCta] = useState<string>(defaultCta);
 
   // Textarea state for editable content
-  const [thumbnailTextarea, setThumbnailTextarea] = useState<string>("");
-  const [hookTextarea, setHookTextarea] = useState<string>("");
-  const [ctaTextarea, setCtaTextarea] = useState<string>("");
+  const [thumbnailTextarea, setThumbnailTextarea] = useState<string>(defaultThumbnail);
+  const [hookTextarea, setHookTextarea] = useState<string>(defaultHook);
+  const [ctaTextarea, setCtaTextarea] = useState<string>(defaultCta);
 
   // Copy feedback state
   const [copiedField, setCopiedField] = useState<string | null>(null);
@@ -185,6 +228,8 @@ export default function ArraySelectionStep({
         thumbnail_text: thumbnailTextarea,
         hooks: hookTextarea,
         cta_pack: ctaTextarea,
+        ...(testName && { testName }),
+        ...(testType && { testType }),
       });
     }
   };

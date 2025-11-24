@@ -11,6 +11,8 @@ interface SocialMediaContentEditorProps {
   isOpen: boolean;
   onClose: () => void;
   testId: string;
+  testName?: string;
+  testType?: string;
   onSuccess?: () => void;
 }
 
@@ -18,6 +20,8 @@ export default function SocialMediaContentEditor({
   isOpen,
   onClose,
   testId,
+  testName,
+  testType,
   onSuccess,
 }: SocialMediaContentEditorProps) {
   const [step, setStep] = useState<"paste" | "select">("paste");
@@ -68,6 +72,8 @@ export default function SocialMediaContentEditor({
     thumbnail_text: string;
     hooks: string;
     cta_pack: string;
+    testName?: string;
+    testType?: string;
   }) => {
     try {
       setIsSaving(true);
@@ -174,6 +180,8 @@ export default function SocialMediaContentEditor({
               jsonData={parsedData}
               onConfirm={handleConfirmAndSave}
               isLoading={isSaving}
+              testName={testName}
+              testType={testType}
             />
 
             {/* Validation Result - show if there are errors */}
