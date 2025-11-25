@@ -34,10 +34,10 @@ export const Header = ({
       </nav>
       {hasStartTestButton && (
         <a
-          href="#subjects"
+          href={`${process.env.NEXT_PUBLIC_PLAY_STORE_URL}`}
           className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-lg shadow-indigo-500/50"
         >
-          Start Free Test
+          Download App
         </a>
       )}
       {/* <button className="md:hidden text-white focus:outline-none">
