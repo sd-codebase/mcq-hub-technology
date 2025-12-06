@@ -88,13 +88,15 @@ export default function SocialMediaPublishPage({
   useEffect(() => {
     if (!testData) return;
 
+    const data = testData; // Store in local variable for TypeScript
+
     async function checkVideoExists() {
       setCheckingVideo(true);
       try {
         const formatText = (text: string) =>
           text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
 
-        const filename = `${testData.questionType}-${formatText(testData.testName)}-${formatText(testData.subtopicName)}`;
+        const filename = `${data.questionType}-${formatText(data.testName)}-${formatText(data.subtopicName)}`;
 
         const response = await fetch(`/api/videos/check/${filename}`);
         const result = await response.json();
