@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import CopyPromptButton from "./CopyPromptButton";
+import TestActions from "./TestActions";
 import { debounce } from "lodash";
 
 type QuestionType = "mcq" | "output" | "interview";
@@ -511,7 +511,7 @@ export default function SubtopicAdminActions({
       {/* Tests Modal */}
       {isTestsModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-          <div className="bg-gray-800 rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-700">
+          <div className="bg-gray-800 rounded-xl shadow-2xl max-w-7xl w-full max-h-[90vh] overflow-y-auto border border-gray-700">
             <div className="p-6">
               {/* Header with Refresh Button */}
               <div className="flex items-center justify-between mb-6">
@@ -558,7 +558,7 @@ export default function SubtopicAdminActions({
 
               {/* Tests Grid */}
               {!testsLoading && !testsError && tests.length > 0 && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
                   {tests.map((test) => {
                     const encodedName = encodeURIComponent(subtopic.name);
                     const questionType = test.questionType || "mcq";
@@ -574,8 +574,41 @@ export default function SubtopicAdminActions({
                       badgeColors[questionType as keyof typeof badgeColors] ||
                       "bg-gray-500";
 
-                    const cardContent = (
-                      <>
+                    const cardBaseClassName =
+                      "p-4 rounded-lg border border-gray-600 bg-gray-700/50 transition-all duration-300";
+                    const cardWithHoverClassName =
+                      cardBaseClassName + " hover:border-indigo-500";
+                    const interviewCardClassName =
+                      cardBaseClassName + " cursor-default hover:bg-gray-700/50";
+
+                    // For interview tests, render as div without button
+                    if (questionType === "interview") {
+                      return (
+                        <div
+                          key={test._id}
+                          className={interviewCardClassName}
+                        >
+                          <div className="font-semibold text-white text-lg mb-2">
+                            {test.testName}
+                          </div>
+                          <div className="text-sm text-gray-400 mb-3">
+                            {test.questionCount} questions
+                          </div>
+                          <span
+                            className={`inline-block px-2 py-1 rounded text-xs font-bold text-white ${badgeColor}`}
+                          >
+                            {questionType.toUpperCase()}
+                          </span>
+                        </div>
+                      );
+                    }
+
+                    // For other test types, render as card with Review button
+                    return (
+                      <div
+                        key={test._id}
+                        className={cardWithHoverClassName}
+                      >
                         <div className="font-semibold text-white text-lg mb-2">
                           {test.testName}
                         </div>
@@ -587,40 +620,8 @@ export default function SubtopicAdminActions({
                         >
                           {questionType.toUpperCase()}
                         </span>
-                      </>
-                    );
-
-                    const cardClassName =
-                      "p-4 rounded-lg border border-gray-600 bg-gray-700/50 transition-all duration-300";
-                    const interviewCardClassName =
-                      cardClassName + " cursor-default hover:bg-gray-700/50";
-                    const clickableCardClassName =
-                      cardClassName +
-                      " hover:bg-gray-700 hover:border-indigo-500 transform hover:scale-105 cursor-pointer";
-
-                    // For interview tests, render as div without link
-                    if (questionType === "interview") {
-                      return (
-                        <div
-                          key={test._id}
-                          className={interviewCardClassName}
-                        >
-                          {cardContent}
-                        </div>
-                      );
-                    }
-
-                    // For other test types, render as clickable Link
-                    return (
-                      <Link
-                        key={test._id}
-                        href={`/auto-test/${test._id}/review`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={clickableCardClassName}
-                      >
-                        {cardContent}
-                      </Link>
+                        <TestActions test={test} subtopicName={subtopic.name} />
+                      </div>
                     );
                   })}
                 </div>
