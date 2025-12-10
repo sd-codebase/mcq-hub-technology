@@ -105,7 +105,7 @@ export default function SocialMediaVideosPage() {
         return (
           <Scene2
             videoSource="/scenes/subjects-recording.mov"
-            text={`#39,000+# \nCoding *Questions*\n Already #Live#`}
+            text={`#70,000+# \nCoding *Questions*\n Already #Live#`}
           />
         );
       case 12:
