@@ -16,20 +16,20 @@ export default function Scene1({
   return (
     <>
       <style>{`
-        @keyframes fadeInImage {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
+        // @keyframes fadeInImage {
+        //   0% {
+        //     opacity: 0;
+        //   }
+        //   100% {
+        //     opacity: 1;
+        //   }
+        // }
 
-        .img-feature {
-          animation: fadeInImage 0.4s ease-out forwards;
-          animation-delay: 0.5s;
-          opacity: 0;
-        }
+        // .img-feature {
+        //   animation: fadeInImage 0.4s ease-out forwards;
+        //   animation-delay: 0.5s;
+        //   opacity: 0;
+        // }
       `}</style>
 
       {/* Glowing Text Top */}

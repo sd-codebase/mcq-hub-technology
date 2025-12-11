@@ -10,7 +10,9 @@ interface Scene2Props {
 
 export default function Scene2({ videoSource, text, subtext }: Scene2Props) {
   // Calculate timing for text animation
-  const textLines = text.split("\n").filter((line) => line.trim().length > 0).length;
+  const textLines = text
+    .split("\n")
+    .filter((line) => line.trim().length > 0).length;
   const textAnimationDuration = (textLines - 1) * 0.3 + 0.5; // Same calculation as FormattedGlowingText
   const textBorderDelay = textAnimationDuration; // Border appears after text is done
   const textBorderDuration = 0.5;
@@ -21,46 +23,48 @@ export default function Scene2({ videoSource, text, subtext }: Scene2Props) {
 
   // Subtext timing (only if present)
   const subtextStartDelay = textFadeOutDelay + textFadeOutDuration; // Starts after main text fades out
-  const subtextLines = subtext ? subtext.split("\n").filter((line) => line.trim().length > 0).length : 0;
+  const subtextLines = subtext
+    ? subtext.split("\n").filter((line) => line.trim().length > 0).length
+    : 0;
   const subtextAnimationDuration = (subtextLines - 1) * 0.3 + 0.5;
 
   return (
     <>
       <style>{`
-        @keyframes fadeInVideo {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
+        // @keyframes fadeInVideo {
+        //   0% {
+        //     opacity: 0;
+        //     transform: translateY(20px);
+        //   }
+        //   100% {
+        //     opacity: 1;
+        //     transform: translateY(0);
+        //   }
+        // }
 
-        @keyframes fadeOutMainText {
-          0% {
-            opacity: 1;
-          }
-          100% {
-            opacity: 0;
-          }
-        }
+        // @keyframes fadeOutMainText {
+        //   0% {
+        //     opacity: 1;
+        //   }
+        //   100% {
+        //     opacity: 0;
+        //   }
+        // }
 
-        @keyframes showSubtext {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
+        // @keyframes showSubtext {
+        //   0% {
+        //     opacity: 0;
+        //   }
+        //   100% {
+        //     opacity: 1;
+        //   }
+        // }
 
-        .video-feature {
-          animation: fadeInVideo 0.8s ease-out forwards;
-          animation-delay: 0.5s;
-          opacity: 0;
-        }
+        // .video-feature {
+        //   animation: fadeInVideo 0.8s ease-out forwards;
+        //   animation-delay: 0.5s;
+        //   opacity: 0;
+        // }
 
         .video-feature video {
           borderRadius: 40px;
@@ -109,7 +113,9 @@ export default function Scene2({ videoSource, text, subtext }: Scene2Props) {
               style={{
                 marginTop: "2rem",
                 opacity: 0,
-                animation: `showSubtext ${subtextAnimationDuration + 1}s ease-out forwards`,
+                animation: `showSubtext ${
+                  subtextAnimationDuration + 1
+                }s ease-out forwards`,
                 animationDelay: `${subtextStartDelay}s`,
               }}
             >
