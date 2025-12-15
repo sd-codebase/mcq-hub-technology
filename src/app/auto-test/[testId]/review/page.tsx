@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import AdminReviewTestContent from "@/components/AdminReviewTestContent";
+import { RestrictedAccess } from "@/components/RestrictedAccess";
 
 export const metadata: Metadata = {
   title: "Review Test - Quizzy Dock",
@@ -32,6 +33,9 @@ export default async function ReviewTestPage({
 }: {
   params: Promise<{ testId: string }>;
 }) {
+  if (process.env.NEXT_PUBLIC_ACTOR_MODE !== "ADMIN") {
+    return <RestrictedAccess />;
+  }
   const { testId } = await params;
   const testData = await fetchTestData(testId);
 

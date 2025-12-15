@@ -43,12 +43,12 @@ export default function VideoPlayer({
   // Get timing based on question type and phase
   const getPhaseTime = () => {
     if (phase === "question") {
-      return questionType === "interview" ? 5 : 10; // 5s for interview, 10s for mcq/output
+      return questionType === "interview" ? 7 : 10; // 5s for interview, 10s for mcq/output
     }
     // Answer phase timing
     if (questionType === "mcq") return 10;
-    if (questionType === "output") return 15;
-    if (questionType === "interview") return 15;
+    if (questionType === "output") return 10;
+    if (questionType === "interview") return 10;
     return 10;
   };
 
@@ -93,7 +93,7 @@ export default function VideoPlayer({
   useEffect(() => {
     if (phase === "answer" && rightColumnRef.current) {
       // Determine scroll delay based on question type
-      const scrollDelay = questionType === "interview" ? 10000 : 7000; // 10s for interview, 7s for mcq/output
+      const scrollDelay = questionType === "interview" ? 5000 : 5000; // 10s for interview, 7s for mcq/output
 
       const timeoutId = setTimeout(() => {
         if (rightColumnRef.current) {
@@ -151,7 +151,9 @@ export default function VideoPlayer({
               <span className="text-green-600 font-bold text-2xl">✓</span>
               <div className="flex-1">
                 <MDEditorRenderer
-                  value={currentQuestion.options![currentQuestion.correct_answer!]}
+                  value={
+                    currentQuestion.options![currentQuestion.correct_answer!]
+                  }
                   dataColorMode="light"
                 />
               </div>
@@ -200,7 +202,10 @@ export default function VideoPlayer({
   // Completed screen
   if (phase === "completed") {
     return (
-      <div className="min-h-screen flex items-center justify-center p-8" style={{ background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)" }}>
+      <div
+        className="min-h-screen flex items-center justify-center p-8"
+        style={{ background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)" }}
+      >
         <div className="text-center max-w-2xl">
           <h2 className="text-5xl font-bold text-white mb-6">
             Test Complete! 🎉
@@ -236,12 +241,18 @@ export default function VideoPlayer({
   }
 
   return (
-    <div className="h-screen p-8 overflow-hidden" style={{ background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)" }}>
+    <div
+      className="h-screen p-8 overflow-hidden"
+      style={{ background: "linear-gradient(135deg, #1c1c3c, #0f0f1e)" }}
+    >
       {/* 2-Column Grid */}
       <div className="max-w-7xl mx-auto h-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
           {/* Left Column: Question and Answer */}
-          <div ref={leftColumnRef} className="space-y-6 overflow-y-auto pr-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-transparent hover:[&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full">
+          <div
+            ref={leftColumnRef}
+            className="space-y-6 overflow-y-auto pr-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-transparent hover:[&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full"
+          >
             {/* Question Block */}
             <div className="bg-white p-8 rounded-lg border-2 border-gray-300 shadow-md">
               {/* Topic and Subtopic Name */}
@@ -281,12 +292,22 @@ export default function VideoPlayer({
                       strokeWidth="5"
                       fill="none"
                       strokeDasharray={`${2 * Math.PI * 28}`}
-                      strokeDashoffset={`${2 * Math.PI * 28 * (1 - getProgressPercentage() / 100)}`}
+                      strokeDashoffset={`${
+                        2 * Math.PI * 28 * (1 - getProgressPercentage() / 100)
+                      }`}
                       strokeLinecap="round"
                     />
                   </svg>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className={`text-xl font-bold ${phase === "answer" ? "text-green-500" : "text-indigo-600"}`}>{timer}</span>
+                    <span
+                      className={`text-xl font-bold ${
+                        phase === "answer"
+                          ? "text-green-500"
+                          : "text-indigo-600"
+                      }`}
+                    >
+                      {timer}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -315,10 +336,21 @@ export default function VideoPlayer({
                       >
                         <div className="flex items-start gap-2">
                           {showAnswer && isCorrect && (
-                            <span className="text-green-600 font-bold text-2xl flex-shrink-0">✓</span>
+                            <span className="text-green-600 font-bold text-2xl flex-shrink-0">
+                              ✓
+                            </span>
                           )}
-                          <div className={`flex-1 ${showAnswer && isCorrect ? "text-green-900 font-semibold" : "text-gray-800"}`}>
-                            <MDEditorRenderer value={option} dataColorMode="light" />
+                          <div
+                            className={`flex-1 ${
+                              showAnswer && isCorrect
+                                ? "text-green-900 font-semibold"
+                                : "text-gray-800"
+                            }`}
+                          >
+                            <MDEditorRenderer
+                              value={option}
+                              dataColorMode="light"
+                            />
                           </div>
                         </div>
                       </div>
@@ -330,21 +362,20 @@ export default function VideoPlayer({
 
             {/* Answer Box (Output only - show below question in left column) */}
             {phase === "answer" && questionType === "output" && (
-              <div>
-                {renderAnswerBox()}
-              </div>
+              <div>{renderAnswerBox()}</div>
             )}
           </div>
 
           {/* Right Column: Explanation (only show in answer phase) */}
           {phase === "answer" && (
-            <div ref={rightColumnRef} className={`space-y-6 overflow-y-auto pr-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-transparent hover:[&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full ${questionType === "interview" ? "" : "md:pt-0"}`}>
+            <div
+              ref={rightColumnRef}
+              className={`space-y-6 overflow-y-auto pr-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-transparent hover:[&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full ${
+                questionType === "interview" ? "" : "md:pt-0"
+              }`}
+            >
               {/* For Interview, show answer box here */}
-              {questionType === "interview" && (
-                <div>
-                  {renderAnswerBox()}
-                </div>
-              )}
+              {questionType === "interview" && <div>{renderAnswerBox()}</div>}
 
               {/* Explanation Box */}
               <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-300">

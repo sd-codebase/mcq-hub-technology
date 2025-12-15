@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import CopyPromptButton from "./CopyPromptButton";
 import TestActions from "./TestActions";
 import { debounce } from "lodash";
+import { RestrictedAccess } from "./RestrictedAccess";
 
 type QuestionType = "mcq" | "output" | "interview";
 
@@ -98,6 +99,9 @@ export default function SubtopicAdminActions({
   topicIndex = 0,
   subtopicIndex = 0,
 }: SubtopicAdminActionsProps) {
+  if (process.env.NEXT_PUBLIC_ACTOR_MODE !== "ADMIN") {
+    return <RestrictedAccess />;
+  }
   const [isOpen, setIsOpen] = useState(false);
   const [modalType, setModalType] = useState<QuestionType>("mcq");
   const [jsonInput, setJsonInput] = useState("");
@@ -616,15 +620,13 @@ export default function SubtopicAdminActions({
                     const cardWithHoverClassName =
                       cardBaseClassName + " hover:border-indigo-500";
                     const interviewCardClassName =
-                      cardBaseClassName + " cursor-default hover:bg-gray-700/50";
+                      cardBaseClassName +
+                      " cursor-default hover:bg-gray-700/50";
 
                     // For interview tests, render as div without button
                     if (questionType === "interview") {
                       return (
-                        <div
-                          key={test._id}
-                          className={interviewCardClassName}
-                        >
+                        <div key={test._id} className={interviewCardClassName}>
                           <div className="font-semibold text-white text-lg mb-2">
                             {test.testName}
                           </div>
@@ -642,10 +644,7 @@ export default function SubtopicAdminActions({
 
                     // For other test types, render as card with Review button
                     return (
-                      <div
-                        key={test._id}
-                        className={cardWithHoverClassName}
-                      >
+                      <div key={test._id} className={cardWithHoverClassName}>
                         <div className="font-semibold text-white text-lg mb-2">
                           {test.testName}
                         </div>

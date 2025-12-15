@@ -1,4 +1,5 @@
 "use client";
+import { RestrictedAccess } from "@/components/RestrictedAccess";
 import { useState, useEffect } from "react";
 
 // SVG Icon Components
@@ -80,6 +81,9 @@ export default function SocialMediaPublishPage({
 }: {
   params: Promise<{ testId: string }>;
 }) {
+  if (process.env.NEXT_PUBLIC_ACTOR_MODE !== "ADMIN") {
+    return <RestrictedAccess />;
+  }
   const [testId, setTestId] = useState<string>("");
   const [testData, setTestData] = useState<TestData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -137,9 +141,14 @@ export default function SocialMediaPublishPage({
       setCheckingVideo(true);
       try {
         const formatText = (text: string) =>
-          text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+          text
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^a-z0-9-]/g, "");
 
-        const filename = `${data.questionType}-${formatText(data.testName)}-${formatText(data.subtopicName)}`;
+        const filename = `${data.questionType}-${formatText(
+          data.testName
+        )}-${formatText(data.subtopicName)}`;
 
         const response = await fetch(`/api/videos/check/${filename}`);
         const result = await response.json();
@@ -193,9 +202,14 @@ export default function SocialMediaPublishPage({
     if (!testData) return "";
 
     const formatText = (text: string) =>
-      text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+      text
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[^a-z0-9-]/g, "");
 
-    return `${testData.questionType}-${formatText(testData.testName)}-${formatText(testData.subtopicName)}`;
+    return `${testData.questionType}-${formatText(
+      testData.testName
+    )}-${formatText(testData.subtopicName)}`;
   };
 
   // Handle input change for social media fields
@@ -255,8 +269,13 @@ export default function SocialMediaPublishPage({
 
         // Check video exists
         const formatText = (text: string) =>
-          text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
-        const filename = `${testResult.data.questionType}-${formatText(testResult.data.testName)}-${formatText(testResult.data.subtopicName)}`;
+          text
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^a-z0-9-]/g, "");
+        const filename = `${testResult.data.questionType}-${formatText(
+          testResult.data.testName
+        )}-${formatText(testResult.data.subtopicName)}`;
 
         const videoResponse = await fetch(`/api/videos/check/${filename}`);
         const videoResult = await videoResponse.json();
@@ -269,7 +288,9 @@ export default function SocialMediaPublishPage({
       }
 
       // Fetch social media data
-      const socialResponse = await fetch(`/api/social-media-publishing/${testId}`);
+      const socialResponse = await fetch(
+        `/api/social-media-publishing/${testId}`
+      );
       const socialResult = await socialResponse.json();
 
       if (socialResult.success) {
@@ -331,8 +352,12 @@ export default function SocialMediaPublishPage({
           {/* Test ID Field */}
           <div className="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700">
             <div className="flex-1">
-              <label className="text-sm text-gray-400 block mb-1">Test ID</label>
-              <p className="text-white font-mono text-sm break-all">{testData?._id}</p>
+              <label className="text-sm text-gray-400 block mb-1">
+                Test ID
+              </label>
+              <p className="text-white font-mono text-sm break-all">
+                {testData?._id}
+              </p>
             </div>
             <button
               onClick={() => handleCopy(testData?._id || "", "testId")}
@@ -348,8 +373,8 @@ export default function SocialMediaPublishPage({
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
                 <label className="text-sm text-gray-400">Filename</label>
-                {!checkingVideo && (
-                  videoExists ? (
+                {!checkingVideo &&
+                  (videoExists ? (
                     <span className="px-2 py-0.5 text-xs font-semibold rounded bg-green-600 text-white">
                       Available
                     </span>
@@ -357,10 +382,11 @@ export default function SocialMediaPublishPage({
                     <span className="px-2 py-0.5 text-xs font-semibold rounded bg-red-600 text-white">
                       NA
                     </span>
-                  )
-                )}
+                  ))}
               </div>
-              <p className="text-white font-mono text-sm break-all">{filename}</p>
+              <p className="text-white font-mono text-sm break-all">
+                {filename}
+              </p>
             </div>
             <button
               onClick={() => handleCopy(filename, "filename")}
@@ -374,13 +400,17 @@ export default function SocialMediaPublishPage({
 
         {/* Social Media Links Section */}
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">Social Media Publishing Links</h2>
+          <h2 className="text-2xl font-bold mb-4">
+            Social Media Publishing Links
+          </h2>
 
           <div className="space-y-3">
             {/* Facebook */}
             <div className="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700">
               <div className="flex-1">
-                <label className="text-sm text-gray-400 block mb-1">Facebook</label>
+                <label className="text-sm text-gray-400 block mb-1">
+                  Facebook
+                </label>
                 <input
                   type="text"
                   value={socialMediaData.fb}
@@ -402,7 +432,9 @@ export default function SocialMediaPublishPage({
             {/* Instagram */}
             <div className="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700">
               <div className="flex-1">
-                <label className="text-sm text-gray-400 block mb-1">Instagram</label>
+                <label className="text-sm text-gray-400 block mb-1">
+                  Instagram
+                </label>
                 <input
                   type="text"
                   value={socialMediaData.ig}
@@ -424,7 +456,9 @@ export default function SocialMediaPublishPage({
             {/* YouTube Shorts */}
             <div className="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700">
               <div className="flex-1">
-                <label className="text-sm text-gray-400 block mb-1">YouTube Shorts</label>
+                <label className="text-sm text-gray-400 block mb-1">
+                  YouTube Shorts
+                </label>
                 <input
                   type="text"
                   value={socialMediaData.yt}
@@ -446,7 +480,9 @@ export default function SocialMediaPublishPage({
             {/* LinkedIn */}
             <div className="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700">
               <div className="flex-1">
-                <label className="text-sm text-gray-400 block mb-1">LinkedIn</label>
+                <label className="text-sm text-gray-400 block mb-1">
+                  LinkedIn
+                </label>
                 <input
                   type="text"
                   value={socialMediaData.li}
@@ -468,7 +504,9 @@ export default function SocialMediaPublishPage({
             {/* WhatsApp */}
             <div className="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700">
               <div className="flex-1">
-                <label className="text-sm text-gray-400 block mb-1">WhatsApp</label>
+                <label className="text-sm text-gray-400 block mb-1">
+                  WhatsApp
+                </label>
                 <input
                   type="text"
                   value={socialMediaData.wa}
@@ -499,13 +537,13 @@ export default function SocialMediaPublishPage({
                 {isSaving ? "Saving..." : "Save Links"}
               </button>
               {saveSuccess && (
-                <span className="text-green-400 text-sm">✓ Saved successfully!</span>
+                <span className="text-green-400 text-sm">
+                  ✓ Saved successfully!
+                </span>
               )}
             </div>
             {videoExists && (
-              <button
-                className="px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-              >
+              <button className="px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
                 Move Video to Drive
               </button>
             )}

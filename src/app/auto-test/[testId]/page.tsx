@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import AutoTestContent from "./AutoTestContent";
+import { RestrictedAccess } from "@/components/RestrictedAccess";
 
 export const metadata: Metadata = {
   title: "Auto Test Player - Quizzy Dock",
@@ -31,6 +32,9 @@ export default async function AutoTestPage({
 }: {
   params: Promise<{ testId: string }>;
 }) {
+  if (process.env.NEXT_PUBLIC_ACTOR_MODE !== "ADMIN") {
+    return <RestrictedAccess />;
+  }
   const { testId } = await params;
   const testData = await fetchTestData(testId);
 

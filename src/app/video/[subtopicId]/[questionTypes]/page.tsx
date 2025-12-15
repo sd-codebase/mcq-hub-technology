@@ -1,6 +1,7 @@
 import connectDB from "@/lib/mongodb";
 import Subject from "@/models/Subject";
 import VideoPlayer from "./VideoPlayer";
+import { RestrictedAccess } from "@/components/RestrictedAccess";
 
 interface Question {
   _id: string;
@@ -17,6 +18,9 @@ export default async function VideoPage({
 }: {
   params: Promise<{ subtopicId: string; questionTypes: string }>;
 }) {
+  if (process.env.NEXT_PUBLIC_ACTOR_MODE !== "ADMIN") {
+    return <RestrictedAccess />;
+  }
   const { subtopicId, questionTypes } = await params;
 
   // Validate questionTypes

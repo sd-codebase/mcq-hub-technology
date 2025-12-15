@@ -3,6 +3,7 @@ import Subject from "@/models/Subject";
 import MDEditorRenderer from "@/components/MDEditorRenderer";
 import Link from "next/link";
 import GoToTopButton from "./GoToTopButton";
+import { RestrictedAccess } from "@/components/RestrictedAccess";
 
 interface Question {
   _id: string;
@@ -19,6 +20,9 @@ export default async function VideoReviewPage({
 }: {
   params: Promise<{ subtopicId: string; questionTypes: string }>;
 }) {
+  if (process.env.NEXT_PUBLIC_ACTOR_MODE !== "ADMIN") {
+    return <RestrictedAccess />;
+  }
   const { subtopicId, questionTypes } = await params;
 
   // Validate questionTypes
@@ -153,10 +157,7 @@ export default async function VideoReviewPage({
                             ✓
                           </span>
                         )}
-                        <MDEditorRenderer
-                          value={option}
-                          dataColorMode="dark"
-                        />
+                        <MDEditorRenderer value={option} dataColorMode="dark" />
                       </div>
                     ))}
                   </div>

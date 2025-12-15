@@ -7,8 +7,12 @@ import Scene1 from "@/components/scenes/Scene1";
 import Scene2 from "@/components/scenes/Scene2";
 import Scene3 from "@/components/scenes/Scene3";
 import { SCENE_TIMINGS } from "@/config/scenes.config";
+import { RestrictedAccess } from "@/components/RestrictedAccess";
 
 export default function SocialMediaVideosPage() {
+  if (process.env.NEXT_PUBLIC_ACTOR_MODE !== "ADMIN") {
+    return <RestrictedAccess />;
+  }
   const [currentSceneId, setCurrentSceneId] = useState(0);
 
   useEffect(() => {
