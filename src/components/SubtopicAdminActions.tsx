@@ -529,6 +529,43 @@ export default function SubtopicAdminActions({
                 </button>
               </div>
 
+              {/* Video Section */}
+              <div className="mb-6 pb-6 border-b border-gray-700">
+                <h3 className="text-lg font-semibold text-white mb-4">Video</h3>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href={`/video/${subtopic.id}/mcq/review`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 rounded-lg
+                               bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700
+                               text-white font-semibold transition-all duration-300 shadow-lg"
+                  >
+                    <span>MCQ</span>
+                  </a>
+                  <a
+                    href={`/video/${subtopic.id}/output/review`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 rounded-lg
+                               bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700
+                               text-white font-semibold transition-all duration-300 shadow-lg"
+                  >
+                    <span>Output</span>
+                  </a>
+                  <a
+                    href={`/video/${subtopic.id}/interview/review`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 rounded-lg
+                               bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700
+                               text-white font-semibold transition-all duration-300 shadow-lg"
+                  >
+                    <span>Interview</span>
+                  </a>
+                </div>
+              </div>
+
               {/* Loading State */}
               {testsLoading && (
                 <div className="text-center py-12 text-gray-400">
