@@ -440,21 +440,69 @@ export default function VideoPlayer({
 
             <div className="absolute inset-0 p-12 flex items-end justify-between">
               {/* Left Column - Subject, Topic, Subtopic */}
-              <div className="flex flex-col items-start">
-                <div className="bg-black px-6 py-3 rounded-lg shadow-lg inline-block mb-3">
-                  <h2 className="text-9xl font-bold text-white">
-                    {metadata.subjectName.toUpperCase()}
-                  </h2>
+              <div className="flex flex-col items-start mr-8">
+                <h2 className="text-9xl font-bold text-white mb-3 leading-tight" style={{
+                  display: 'inline',
+                  background: 'black',
+                  padding: '0.75rem 1.5rem',
+                  borderRadius: '0.5rem',
+                  boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+                  boxDecorationBreak: 'clone',
+                  WebkitBoxDecorationBreak: 'clone'
+                }}>
+                  {metadata.subjectName.toUpperCase()}
+                </h2>
+                <div className="text-4xl font-semibold text-black leading-tight" style={{
+                  display: 'inline',
+                  background: '#F4D03F',
+                  padding: '0.75rem 1.5rem',
+                  borderTopLeftRadius: '0.5rem',
+                  borderTopRightRadius: '0.5rem',
+                  boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+                  boxDecorationBreak: 'clone',
+                  WebkitBoxDecorationBreak: 'clone'
+                }}>
+                  {(() => {
+                    const prefix = `${metadata.topicIndex}. `;
+                    const topicText = `${prefix}${metadata.topicName.toUpperCase()}`;
+                    const words = topicText.split(' ');
+                    const midPoint = Math.ceil(words.length / 2);
+                    const line1 = words.slice(0, midPoint).join(' ');
+                    const line2 = words.slice(midPoint).join(' ');
+                    return (
+                      <>
+                        {line1}
+                        <br />
+                        <span style={{ paddingLeft: `${prefix.length * 0.4}em` }}>{line2}</span>
+                      </>
+                    );
+                  })()}
                 </div>
-                <div className="bg-[#F4D03F] px-6 py-3 rounded-t-lg shadow-lg inline-block">
-                  <h3 className="text-4xl font-semibold text-black">
-                    {metadata.topicName.toUpperCase()}
-                  </h3>
-                </div>
-                <div className="bg-yellow-200 px-6 py-3 rounded-b-lg shadow-lg inline-block">
-                  <h3 className="text-3xl font-semibold text-black">
-                    {metadata.subtopicName.toUpperCase()}
-                  </h3>
+                <div className="text-3xl font-semibold text-black leading-tight" style={{
+                  display: 'inline',
+                  background: '#fef08a',
+                  padding: '0.75rem 1.5rem',
+                  borderBottomLeftRadius: '0.5rem',
+                  borderBottomRightRadius: '0.5rem',
+                  boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+                  boxDecorationBreak: 'clone',
+                  WebkitBoxDecorationBreak: 'clone'
+                }}>
+                  {(() => {
+                    const prefix = `${metadata.subtopicIndex}. `;
+                    const subtopicText = `${prefix}${metadata.subtopicName.toUpperCase()}`;
+                    const words = subtopicText.split(' ');
+                    const midPoint = Math.ceil(words.length / 2);
+                    const line1 = words.slice(0, midPoint).join(' ');
+                    const line2 = words.slice(midPoint).join(' ');
+                    return (
+                      <>
+                        {line1}
+                        <br />
+                        <span style={{ paddingLeft: `${prefix.length * 0.4}em` }}>{line2}</span>
+                      </>
+                    );
+                  })()}
                 </div>
               </div>
 

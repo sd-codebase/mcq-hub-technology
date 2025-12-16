@@ -36,13 +36,43 @@ export default function YoutubePostDetailsModal({
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [youtubeData, setYoutubeData] = useState<YoutubePostData | null>(null);
+  const [copiedField, setCopiedField] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  // Reset form when modal opens
+  // Fetch existing YouTube post details
+  const fetchYoutubeData = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `/api/youtube-post-details/${subtopicId}/${questionType}`
+      );
+      const result = await response.json();
+
+      if (result.success && result.data) {
+        // Only set data if there's actual content (not empty default structure)
+        const hasContent = result.data.title || result.data.description ||
+                          result.data.tags?.length > 0 || result.data.pinned_comment ||
+                          result.data.playlist_name;
+        if (hasContent) {
+          setYoutubeData(result.data);
+        }
+      }
+    } catch (err) {
+      console.error("Error fetching YouTube data:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Reset form when modal opens and fetch data
   useEffect(() => {
     if (isOpen) {
       setJsonInput("");
       setError(null);
       setSuccessMessage(null);
+      setYoutubeData(null);
+      fetchYoutubeData();
     }
   }, [isOpen]);
 
@@ -78,6 +108,29 @@ export default function YoutubePostDetailsModal({
     }
   };
 
+  // Copy to clipboard handler
+  const handleCopy = async (text: string, fieldName: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedField(fieldName);
+      setTimeout(() => setCopiedField(null), 2000);
+    } catch (error) {
+      console.error("Failed to copy:", error);
+    }
+  };
+
+  // Generate filename from metadata
+  const getFilename = () => {
+    const formattedName = metadata.subtopicName
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+      .trim()
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/-+/g, '-'); // Replace multiple hyphens with single hyphen
+
+    return `${metadata.topicIndex}.${metadata.subtopicIndex}-${formattedName}`;
+  };
+
   const handleSave = async () => {
     setSaving(true);
     setError(null);
@@ -106,6 +159,8 @@ export default function YoutubePostDetailsModal({
 
       if (result.success) {
         setSuccessMessage("YouTube post details saved successfully!");
+        // Refresh the data to show copy buttons
+        fetchYoutubeData();
         // Close modal after brief success message
         setTimeout(() => {
           onClose();
@@ -144,6 +199,72 @@ export default function YoutubePostDetailsModal({
 
         {/* Content */}
         <div className="p-6">
+          {/* Copy Buttons - Show when data exists */}
+          {youtubeData && (
+            <div className="mb-6 bg-gray-800/50 border border-indigo-500/30 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3">📋 Copy SEO Data</h3>
+              <div className="grid grid-cols-2 gap-2">
+                {/* Title Button */}
+                {youtubeData.title && (
+                  <button
+                    onClick={() => handleCopy(youtubeData.title, "title")}
+                    className="px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg text-sm"
+                  >
+                    {copiedField === "title" ? "✓ Copied!" : "📋 Copy Title"}
+                  </button>
+                )}
+
+                {/* Description Button */}
+                {youtubeData.description && (
+                  <button
+                    onClick={() => handleCopy(youtubeData.description, "description")}
+                    className="px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg text-sm"
+                  >
+                    {copiedField === "description" ? "✓ Copied!" : "📝 Copy Description"}
+                  </button>
+                )}
+
+                {/* Tags Button */}
+                {youtubeData.tags && youtubeData.tags.length > 0 && (
+                  <button
+                    onClick={() => handleCopy(youtubeData.tags.join(", "), "tags")}
+                    className="px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg text-sm"
+                  >
+                    {copiedField === "tags" ? "✓ Copied!" : "🏷️ Copy Tags"}
+                  </button>
+                )}
+
+                {/* Pinned Comment Button */}
+                {youtubeData.pinned_comment && (
+                  <button
+                    onClick={() => handleCopy(youtubeData.pinned_comment, "pinned_comment")}
+                    className="px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg text-sm"
+                  >
+                    {copiedField === "pinned_comment" ? "✓ Copied!" : "📌 Copy Pinned Comment"}
+                  </button>
+                )}
+
+                {/* Playlist Name Button */}
+                {youtubeData.playlist_name && (
+                  <button
+                    onClick={() => handleCopy(youtubeData.playlist_name, "playlist_name")}
+                    className="px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 transition-all duration-300 shadow-lg text-sm"
+                  >
+                    {copiedField === "playlist_name" ? "✓ Copied!" : "📚 Copy Playlist"}
+                  </button>
+                )}
+
+                {/* Filename Button */}
+                <button
+                  onClick={() => handleCopy(getFilename(), "filename")}
+                  className="px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-yellow-600 to-amber-600 hover:from-yellow-700 hover:to-amber-700 transition-all duration-300 shadow-lg text-sm"
+                >
+                  {copiedField === "filename" ? "✓ Copied!" : "📄 Copy Filename"}
+                </button>
+              </div>
+            </div>
+          )}
+
           <div className="space-y-4">
             {/* Error Message */}
             {error && (
@@ -158,16 +279,6 @@ export default function YoutubePostDetailsModal({
                 {successMessage}
               </div>
             )}
-
-            {/* Instructions */}
-            <div className="bg-blue-900/20 border border-blue-500/50 text-blue-300 px-4 py-3 rounded-lg">
-              <p className="text-sm">
-                📋 Paste your YouTube post details as JSON below with the following fields:
-              </p>
-              <code className="text-xs block mt-2 text-blue-200">
-                {`{ "title", "description", "tags", "pinned_comment", "playlist_name" }`}
-              </code>
-            </div>
 
             {/* JSON Input Textarea */}
             <div>
