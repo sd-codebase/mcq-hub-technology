@@ -268,7 +268,7 @@ export default function VideoPlayer({
       .replace(/\s+/g, '-') // Replace spaces with hyphens
       .replace(/-+/g, '-'); // Replace multiple hyphens with single hyphen
 
-    return `${metadata.topicIndex}.${metadata.subtopicIndex}-${formattedName}`;
+    return `${metadata.topicIndex}.${metadata.subtopicIndex}-${questionType}-${formattedName}`;
   };
 
   // Render answer box based on question type
@@ -452,7 +452,7 @@ export default function VideoPlayer({
           {/* Playlist Name Button */}
           {youtubePostDetails.playlist_name && (
             <button
-              onClick={() => handleCopy(youtubePostDetails.playlist_name, "playlist_name")}
+              onClick={() => handleCopy(`${youtubePostDetails.playlist_name} - QuizzyDock`, "playlist_name")}
               className="px-4 py-2 rounded-lg font-semibold text-white bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 transition-all duration-300 shadow-lg text-sm"
             >
               {copiedField === "playlist_name" ? "✓ Copied!" : "📚 Copy Playlist"}
