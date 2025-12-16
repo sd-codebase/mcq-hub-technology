@@ -59,17 +59,22 @@ export default async function VideoPage({
       subjectName: "Unknown Subject",
       topicName: "Unknown Topic",
       subtopicName: "Unknown Subtopic",
+      topicIndex: 0,
+      subtopicIndex: 0,
     };
 
     if (subject) {
-      for (const topic of subject.topics) {
-        const subtopic = topic.subtopics.find(
+      for (let topicIdx = 0; topicIdx < subject.topics.length; topicIdx++) {
+        const topic = subject.topics[topicIdx];
+        const subtopicIdx = topic.subtopics.findIndex(
           (st: any) => st.id === subtopicId
         );
-        if (subtopic) {
+        if (subtopicIdx !== -1) {
           metadata.subjectName = subject.name;
           metadata.topicName = topic.name;
-          metadata.subtopicName = subtopic.name;
+          metadata.subtopicName = topic.subtopics[subtopicIdx].name;
+          metadata.topicIndex = topicIdx + 1; // 1-based indexing
+          metadata.subtopicIndex = subtopicIdx + 1; // 1-based indexing
           break;
         }
       }
@@ -86,6 +91,21 @@ export default async function VideoPage({
       );
     }
 
+    // Fetch YouTube post details
+    let youtubePostDetails = null;
+    try {
+      const youtubeResponse = await fetch(
+        `${baseUrl}/api/youtube-post-details/${subtopicId}/${questionTypes}`,
+        { cache: "no-store" }
+      );
+      const youtubeResult = await youtubeResponse.json();
+      if (youtubeResult.success) {
+        youtubePostDetails = youtubeResult.data;
+      }
+    } catch (error) {
+      console.error("Error fetching YouTube post details:", error);
+    }
+
     // Pass to client component
     return (
       <VideoPlayer
@@ -93,6 +113,7 @@ export default async function VideoPage({
         metadata={metadata}
         questionType={questionTypes}
         subtopicId={subtopicId}
+        youtubePostDetails={youtubePostDetails}
       />
     );
   } catch (error) {

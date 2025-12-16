@@ -5,31 +5,22 @@ import React, { useEffect, useState } from "react";
 type QuestionType = "mcq" | "output" | "interview";
 
 const Prompt = `
-For context please read the prompt file named "{prompt_file_name}" attached in the project, and follow the instructions strictly mentioned in the prompt file.
-Response should be **copyable code block of valid json** only. Response should be valid JSON only.
-Return only json array of given format in attached "{prompt_file_name}" file. Do not wrap the response in object. Source key not needed.
-Generate {type} for the following inputs:
+Read the prompt file attached in the project, and give me the output as stated
 
-**Programming Language/Technology:** {technology}
-**Count:** {count}
-**Subject:** {subject_name}
-**Chapter:** {chapter_name}
-**Topic:** {topic_name}`;
+Video Details:
+- Video Topic: {subject_name}
+- Subtopic (if any): {topic_name}
+- Programming Language / Technology: {technology}
+- Target Audience: Beginners / Students / Interview Candidates / Developers
+- Video Type: {video_type}
+- Language: English
+- Brand: QuizzyDock
+- Platform Goal: Rank in YouTube Search and Suggested Videos`;
 
-const PROMPTS: Record<QuestionType, string> = {
-  mcq: "multiple-choice questions (MCQ)",
-
-  output: "code output prediction questions",
-
-  interview: "interview questions with detailed answers",
-};
-
-const PROMPTS_FILE_NAME: Record<QuestionType, string> = {
-  mcq: "Prompt for MCQ",
-
-  output: "Prompt for OUTPUT",
-
-  interview: "Prompt for INTERVIEW",
+const VIDEO_TYPES: Record<QuestionType, string> = {
+  mcq: "MCQ Quiz",
+  output: "Output Question",
+  interview: "Interview Question",
 };
 
 interface CopyPromptButtonProps {
@@ -56,31 +47,22 @@ export default function CopyPromptButton({
   // Replace placeholders in prompt with actual values
   const replacePlaceholders = (prompt: string): string => {
     let result = prompt;
-    const type = PROMPTS[questionType];
-    const promptFileName = PROMPTS_FILE_NAME[questionType];
+    const videoType = VIDEO_TYPES[questionType];
 
-    if (promptFileName) {
-      result = result.replace(/{prompt_file_name}/g, promptFileName);
+    if (videoType) {
+      result = result.replace(/{video_type}/g, videoType);
     }
-    if (type) {
-      result = result.replace(/{type}/g, type);
-    }
-    if (count !== undefined) {
-      result = result.replace(/{count}/g, String(count));
-    }
-    if (subjectName) {
-      result = result.replace(/{subject_name}/g, subjectName);
-    }
+    // Video Topic = chapterName (metadata.topicName)
     if (chapterName) {
-      result = result.replace(/{chapter_name}/g, chapterName);
+      result = result.replace(/{subject_name}/g, chapterName);
     }
+    // Subtopic = topicName (metadata.subtopicName)
     if (topicName) {
       result = result.replace(/{topic_name}/g, topicName);
     }
-    if (language) {
-      result = result.replace(/{technology}/g, language);
-      // Also replace {language.lower()} with lowercase version
-      // result = result.replace(/{language\.lower\(\)}/g, language.toLowerCase());
+    // Technology = subjectName (metadata.subjectName)
+    if (subjectName) {
+      result = result.replace(/{technology}/g, subjectName);
     }
 
     return result;

@@ -3,6 +3,7 @@ import Subject from "@/models/Subject";
 import MDEditorRenderer from "@/components/MDEditorRenderer";
 import Link from "next/link";
 import GoToTopButton from "./GoToTopButton";
+import YoutubePostDetailsButton from "./YoutubePostDetailsButton";
 import { RestrictedAccess } from "@/components/RestrictedAccess";
 
 interface Question {
@@ -61,17 +62,22 @@ export default async function VideoReviewPage({
       subjectName: "Unknown Subject",
       topicName: "Unknown Topic",
       subtopicName: "Unknown Subtopic",
+      topicIndex: 0,
+      subtopicIndex: 0,
     };
 
     if (subject) {
-      for (const topic of subject.topics) {
-        const subtopic = topic.subtopics.find(
+      for (let topicIdx = 0; topicIdx < subject.topics.length; topicIdx++) {
+        const topic = subject.topics[topicIdx];
+        const subtopicIdx = topic.subtopics.findIndex(
           (st: any) => st.id === subtopicId
         );
-        if (subtopic) {
+        if (subtopicIdx !== -1) {
           metadata.subjectName = subject.name;
           metadata.topicName = topic.name;
-          metadata.subtopicName = subtopic.name;
+          metadata.subtopicName = topic.subtopics[subtopicIdx].name;
+          metadata.topicIndex = topicIdx + 1; // 1-based indexing
+          metadata.subtopicIndex = subtopicIdx + 1; // 1-based indexing
           break;
         }
       }
@@ -105,17 +111,26 @@ export default async function VideoReviewPage({
               <p className="text-gray-500 mt-2">{questions.length} questions</p>
             </div>
 
-            {/* Start Test Button */}
-            <Link
-              href={`/video/${subtopicId}/${questionTypes}`}
-              className="px-8 py-4 rounded-lg font-bold text-white text-lg
-                         bg-gradient-to-r from-indigo-600 to-purple-600
-                         hover:from-indigo-700 hover:to-purple-700
-                         transition-all duration-300 shadow-lg
-                         transform hover:scale-105"
-            >
-              Start Test
-            </Link>
+            {/* Button Group */}
+            <div className="flex gap-3">
+              <YoutubePostDetailsButton
+                subtopicId={subtopicId}
+                questionType={questionTypes as "mcq" | "output" | "interview"}
+                metadata={metadata}
+              />
+
+              {/* Start Test Button */}
+              <Link
+                href={`/video/${subtopicId}/${questionTypes}`}
+                className="px-8 py-4 rounded-lg font-bold text-white text-lg
+                           bg-gradient-to-r from-indigo-600 to-purple-600
+                           hover:from-indigo-700 hover:to-purple-700
+                           transition-all duration-300 shadow-lg
+                           transform hover:scale-105"
+              >
+                Start Test
+              </Link>
+            </div>
           </div>
         </div>
 
