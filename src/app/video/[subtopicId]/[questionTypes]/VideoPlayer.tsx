@@ -348,6 +348,59 @@ export default function VideoPlayer({
           0%, 100% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
           50% { box-shadow: 0 0 30px rgba(239, 68, 68, 0.8), 0 0 40px rgba(239, 68, 68, 0.6); }
         }
+        @keyframes questionAppear {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes answerReveal {
+          from {
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+        @keyframes optionSlideIn {
+          from {
+            opacity: 0;
+            transform: translateX(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        .animate-question-appear {
+          animation: questionAppear 0.6s ease-out forwards;
+        }
+        .animate-answer-reveal {
+          animation: answerReveal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        .animate-option-slide {
+          animation: optionSlideIn 0.5s ease-out forwards;
+        }
+        @keyframes correctAnswerPop {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+        .animate-correct-answer {
+          animation: correctAnswerPop 0.6s ease-out forwards;
+        }
       `}</style>
       <div
         className="h-screen overflow-hidden"
@@ -808,7 +861,7 @@ export default function VideoPlayer({
           >
             <div className="space-y-6 min-h-full">
               {/* Question Block */}
-              <div className="bg-white p-8 rounded-lg border-2 border-gray-300 shadow-md min-h-full">
+              <div key={`question-${currentIndex}`} className="bg-white p-8 rounded-lg border-2 border-gray-300 shadow-md min-h-full animate-question-appear">
                 {/* Topic and Subtopic Name with Question Counter and Timer */}
                 <div className="sticky top-0 z-10 bg-white -mt-8 -mx-8 px-8 pt-8 pb-6 flex items-start justify-between border-b-2 border-gray-300">
                   <div className="flex-1">
@@ -869,7 +922,7 @@ export default function VideoPlayer({
                     </div>
                   </div>
                 </div>
-                <div className="text-gray-900 mb-6">
+                <div className="text-gray-900 mb-6 animate-question-appear">
                   <MDEditorRenderer
                     value={currentQuestion.question}
                     dataColorMode="light"
@@ -887,11 +940,12 @@ export default function VideoPlayer({
                       return (
                         <div
                           key={idx}
-                          className={`p-4 rounded-lg border-2 transition-all duration-500 ${
+                          className={`p-4 rounded-lg border-2 transition-all duration-500 animate-option-slide ${
                             showAnswer && isCorrect
-                              ? "bg-green-50 border-green-500 shadow-lg"
+                              ? "bg-green-50 border-green-500 shadow-lg animate-correct-answer"
                               : "border-gray-200 bg-gray-50"
                           }`}
+                          style={{ animationDelay: `${idx * 0.1}s` }}
                         >
                           <div className="flex items-start gap-2">
                             <div
@@ -920,13 +974,14 @@ export default function VideoPlayer({
                 )}
 
                 {/* Answer Box - All types */}
-                {phase === "answer" && <div className="mt-6">{renderAnswerBox()}</div>}
+                {phase === "answer" && <div className="mt-6 animate-answer-reveal">{renderAnswerBox()}</div>}
 
                 {/* Explanation Box */}
                 {phase === "answer" && (
                   <div
                     ref={explanationRef}
-                    className="bg-blue-50 p-6 rounded-lg border-2 border-blue-300 mt-6"
+                    className="bg-blue-50 p-6 rounded-lg border-2 border-blue-300 mt-6 animate-answer-reveal"
+                    style={{ animationDelay: "0.2s" }}
                   >
                     <div className="text-blue-900 font-semibold text-2xl mb-3">
                       Explanation:
