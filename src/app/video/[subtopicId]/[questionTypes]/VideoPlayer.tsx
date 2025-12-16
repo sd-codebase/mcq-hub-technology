@@ -806,11 +806,11 @@ export default function VideoPlayer({
             ref={containerRef}
             className="flex flex-col gap-8 h-full overflow-y-auto [&::-webkit-scrollbar]:w-0 [&::-webkit-scrollbar-track]:bg-transparent"
           >
-            <div className="space-y-6">
+            <div className="space-y-6 min-h-full">
               {/* Question Block */}
-              <div className="bg-white p-8 rounded-lg border-2 border-gray-300 shadow-md">
+              <div className="bg-white p-8 rounded-lg border-2 border-gray-300 shadow-md min-h-full">
                 {/* Topic and Subtopic Name with Question Counter and Timer */}
-                <div className="sticky top-0 z-10 bg-white -mt-8 -mx-8 px-8 pt-8 pb-6 flex items-start justify-between">
+                <div className="sticky top-0 z-10 bg-white -mt-8 -mx-8 px-8 pt-8 pb-6 flex items-start justify-between border-b-2 border-gray-300">
                   <div className="flex-1">
                     <h1 className="text-3xl font-bold text-gray-900">
                       {metadata.subtopicName}
@@ -918,29 +918,29 @@ export default function VideoPlayer({
                     })}
                   </div>
                 )}
+
+                {/* Answer Box - All types */}
+                {phase === "answer" && <div className="mt-6">{renderAnswerBox()}</div>}
+
+                {/* Explanation Box */}
+                {phase === "answer" && (
+                  <div
+                    ref={explanationRef}
+                    className="bg-blue-50 p-6 rounded-lg border-2 border-blue-300 mt-6"
+                  >
+                    <div className="text-blue-900 font-semibold text-2xl mb-3">
+                      Explanation:
+                    </div>
+                    <div className="text-gray-800">
+                      <MDEditorRenderer
+                        value={currentQuestion.explanation}
+                        dataColorMode="light"
+                        style={{ fontSize: "1.25rem" }}
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
-
-              {/* Answer Box - All types */}
-              {phase === "answer" && <div>{renderAnswerBox()}</div>}
-
-              {/* Explanation Box */}
-              {phase === "answer" && (
-                <div
-                  ref={explanationRef}
-                  className="bg-blue-50 p-6 rounded-lg border-2 border-blue-300"
-                >
-                  <div className="text-blue-900 font-semibold text-2xl mb-3">
-                    Explanation:
-                  </div>
-                  <div className="text-gray-800">
-                    <MDEditorRenderer
-                      value={currentQuestion.explanation}
-                      dataColorMode="light"
-                      style={{ fontSize: "1.25rem" }}
-                    />
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>
