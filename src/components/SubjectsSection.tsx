@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { TechLogoGenerator } from "@/components/logo";
+import ComingSoonModal from "./ComingSoonModal";
 
 interface Subject {
   _id: string;
@@ -10,6 +11,7 @@ interface Subject {
   shortName: string;
   questions: string;
   order: number;
+  status?: "active" | "inactive";
   createdAt: string;
   updatedAt: string;
 }
@@ -24,17 +26,35 @@ export default function SubjectsSection() {
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+  const [pendingNavigation, setPendingNavigation] = useState<string | null>(null);
+  const router = useRouter();
+
+  const handleSubjectClick = (subject: Subject) => {
+    if (subject.status === 'inactive') {
+      setModalMessage(`This subject will be live soon with ${subject.questions}+ questions`);
+      setShowModal(true);
+      setPendingNavigation(`subjects/${subject.shortName}/topics`);
+    } else {
+      // Navigate immediately for active subjects
+      router.push(`subjects/${subject.shortName}/topics`);
+    }
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+    // Navigate after closing modal
+    if (pendingNavigation) {
+      router.push(pendingNavigation);
+      setPendingNavigation(null);
+    }
+  };
 
   useEffect(() => {
     async function fetchSubjects() {
       try {
-        let url = "/api/subjects";
-
-        // Add status=active filter if not in ADMIN mode
-        if (process.env.NEXT_PUBLIC_ACTOR_MODE !== "ADMIN") {
-          url += "?status=active";
-        }
-
+        const url = "/api/subjects";
         const response = await fetch(url);
         if (!response.ok) {
           throw new Error("Failed to fetch subjects");
@@ -78,10 +98,12 @@ export default function SubjectsSection() {
         {!loading && !error && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {subjects.map((subject) => (
-              <Link
+              <div
                 key={subject._id}
-                href={`subjects/${subject.shortName}/topics`}
-                className="transform hover:scale-105 transition duration-300 shadow-xl border cursor-pointer"
+                onClick={() => handleSubjectClick(subject)}
+                className={`transform hover:scale-105 transition duration-300 shadow-xl border cursor-pointer ${
+                  subject.status === 'inactive' ? 'opacity-50' : ''
+                }`}
               >
                 <div className="p-6 bg-gray-800 rounded-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-300 shadow-xl border border-gray-700 cursor-pointer group">
                   <div>
@@ -94,11 +116,17 @@ export default function SubjectsSection() {
                     ({subject.questions}+ Questions)
                   </span>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         )}
       </div>
+
+      <ComingSoonModal
+        isOpen={showModal}
+        onClose={handleModalClose}
+        message={modalMessage}
+      />
     </section>
   );
 }

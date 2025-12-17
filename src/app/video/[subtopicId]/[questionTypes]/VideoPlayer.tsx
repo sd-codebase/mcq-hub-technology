@@ -142,6 +142,8 @@ export default function VideoPlayer({
     if (phase === "cta") {
       const timeout = setTimeout(() => {
         setShowCopyButtons(true);
+        // Play notification sound
+        playNotificationSound();
       }, 5000); // Show after 5 seconds
 
       return () => clearTimeout(timeout);
@@ -149,6 +151,33 @@ export default function VideoPlayer({
       setShowCopyButtons(false);
     }
   }, [phase]);
+
+  // Play notification sound function
+  const playNotificationSound = () => {
+    try {
+      // Create a simple notification beep using Web Audio API
+      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+
+      // Set frequency for a pleasant notification sound
+      oscillator.frequency.value = 800; // Hz
+      oscillator.type = 'sine';
+
+      // Set volume
+      gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+
+      // Play the sound
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.5);
+    } catch (error) {
+      console.error('Failed to play notification sound:', error);
+    }
+  };
 
   // Auto-scroll during answer phase
   useEffect(() => {

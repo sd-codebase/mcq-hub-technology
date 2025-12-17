@@ -2,22 +2,35 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import TestStartModal from "./TestStartModal";
+import ComingSoonModal from "./ComingSoonModal";
 
 export default function SubtopicActions({
   subtopic,
   subject,
+  subjectStatus,
+  subjectQuestions,
 }: {
   subtopic: any;
   subject: string;
+  subjectStatus?: "active" | "inactive";
+  subjectQuestions?: string;
 }) {
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
+  const [showComingSoonModal, setShowComingSoonModal] = useState(false);
   const [selectedTest, setSelectedTest] = useState<string | null>(null);
 
   const encoded = encodeURIComponent(subtopic.id);
   const encodedName = encodeURIComponent(subtopic.name);
 
   const handleTestClick = (testType: string) => {
+    // Check if subject is inactive
+    if (subjectStatus === 'inactive') {
+      setShowComingSoonModal(true);
+      return; // Don't proceed to modal
+    }
+
+    // Proceed normally for active subjects
     setSelectedTest(testType);
     setShowModal(true);
   };
@@ -83,6 +96,12 @@ export default function SubtopicActions({
         testType={selectedTest || ""}
         onProceed={handleProceed}
         onCancel={handleCancel}
+      />
+
+      <ComingSoonModal
+        isOpen={showComingSoonModal}
+        onClose={() => setShowComingSoonModal(false)}
+        message={`This subject will be live soon with ${subjectQuestions}+ questions`}
       />
     </>
   );

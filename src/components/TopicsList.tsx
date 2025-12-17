@@ -28,6 +28,7 @@ export default function TopicsList({ subject }: { subject: string }) {
   const [topics, setTopics] = useState<Topic[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [subjectMetadata, setSubjectMetadata] = useState<any>(null);
   const isAdminMode = process.env.NEXT_PUBLIC_ACTOR_MODE === "ADMIN";
 
   useEffect(() => {
@@ -36,6 +37,7 @@ export default function TopicsList({ subject }: { subject: string }) {
     setLoading(true);
     setError(null);
 
+    // Fetch topics
     fetch(`/api/subjects/by-shortname?shortname=${subject}`)
       .then((res) => {
         if (!res.ok) {
@@ -48,6 +50,16 @@ export default function TopicsList({ subject }: { subject: string }) {
       })
       .catch(() => setError("Failed to load topics."))
       .finally(() => setLoading(false));
+
+    // Fetch subject metadata to get status
+    fetch(`/api/subjects`)
+      .then((res) => res.json())
+      .then((data) => {
+        // Find the subject metadata by shortname
+        const metadata = data.data.find((s: any) => s.shortName === subject);
+        setSubjectMetadata(metadata);
+      })
+      .catch((err) => console.error("Failed to fetch subject metadata:", err));
   }, [subject]);
 
   if (loading) {
@@ -107,7 +119,12 @@ export default function TopicsList({ subject }: { subject: string }) {
                 {isAdminMode ? (
                   <SubtopicAdminActions subtopic={sub} subject={subject} topicName={topic.name} allSubtopics={topic.subtopics} topicIndex={topicIndex} subtopicIndex={subIndex} />
                 ) : (
-                  <SubtopicActions subtopic={sub} subject={subject} />
+                  <SubtopicActions
+                    subtopic={sub}
+                    subject={subject}
+                    subjectStatus={subjectMetadata?.status}
+                    subjectQuestions={subjectMetadata?.questions}
+                  />
                 )}
               </div>
             ))}
