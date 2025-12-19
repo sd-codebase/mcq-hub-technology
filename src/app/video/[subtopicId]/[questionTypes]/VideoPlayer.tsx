@@ -290,6 +290,13 @@ export default function VideoPlayer({
 
   // Convert subtopic name to filename format (hyphen-separated, no special chars)
   const getFilename = () => {
+    const formattedSubjectName = metadata.subjectName
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+      .trim()
+      .replace(/\s+/g, '-') // Replace spaces with hyphens
+      .replace(/-+/g, '-'); // Replace multiple hyphens with single hyphen
+
     const formattedName = metadata.subtopicName
       .toLowerCase()
       .replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
@@ -297,7 +304,7 @@ export default function VideoPlayer({
       .replace(/\s+/g, '-') // Replace spaces with hyphens
       .replace(/-+/g, '-'); // Replace multiple hyphens with single hyphen
 
-    return `${metadata.topicIndex}.${metadata.subtopicIndex}-${questionType}-${formattedName}`;
+    return `${metadata.topicIndex}.${metadata.subtopicIndex}-${formattedSubjectName}-${questionType}-${formattedName}`;
   };
 
   // Render answer box based on question type
