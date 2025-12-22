@@ -314,6 +314,7 @@ export default function YoutubePostDetailsModal({
           <div>
             <CopyPromptButton
               questionType={questionType}
+              promptType="video"
               count={10}
               subjectName={metadata.subjectName}
               chapterName={metadata.topicName}

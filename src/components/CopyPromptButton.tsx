@@ -3,8 +3,21 @@
 import React, { useEffect, useState } from "react";
 
 type QuestionType = "mcq" | "output" | "interview";
+type PromptType = "question" | "video";
 
-const Prompt = `
+const QuestionPrompt = `
+For context please read the prompt file named "{prompt_file_name}" attached in the project, and follow the instructions strictly mentioned in the prompt file.
+Response should be **copyable code block of valid json** only. Response should be valid JSON only.
+Return only json array of given format in attached "{prompt_file_name}" file. Do not wrap the response in object. Source key not needed.
+Generate {type} for the following inputs:
+
+**Programming Language/Technology:** {technology}
+**Count:** {count}
+**Subject:** {subject_name}
+**Chapter:** {chapter_name}
+**Topic:** {topic_name}`;
+
+const VideoPrompt = `
 Read the prompt file attached in the project, and give me the output as stated
 
 Video Details:
@@ -23,8 +36,21 @@ const VIDEO_TYPES: Record<QuestionType, string> = {
   interview: "Interview Question",
 };
 
+const QUESTION_TYPES: Record<QuestionType, string> = {
+  mcq: "multiple-choice questions (MCQ)",
+  output: "code output prediction questions",
+  interview: "interview questions with detailed answers",
+};
+
+const PROMPTS_FILE_NAME: Record<QuestionType, string> = {
+  mcq: "Prompt for MCQ",
+  output: "Prompt for OUTPUT",
+  interview: "Prompt for INTERVIEW",
+};
+
 interface CopyPromptButtonProps {
   questionType: QuestionType;
+  promptType?: PromptType;
   count?: number;
   subjectName?: string;
   chapterName?: string;
@@ -35,6 +61,7 @@ interface CopyPromptButtonProps {
 
 export default function CopyPromptButton({
   questionType,
+  promptType = "question",
   count,
   subjectName,
   chapterName,
@@ -47,22 +74,51 @@ export default function CopyPromptButton({
   // Replace placeholders in prompt with actual values
   const replacePlaceholders = (prompt: string): string => {
     let result = prompt;
-    const videoType = VIDEO_TYPES[questionType];
 
-    if (videoType) {
-      result = result.replace(/{video_type}/g, videoType);
-    }
-    // Video Topic = chapterName (metadata.topicName)
-    if (chapterName) {
-      result = result.replace(/{subject_name}/g, chapterName);
-    }
-    // Subtopic = topicName (metadata.subtopicName)
-    if (topicName) {
-      result = result.replace(/{topic_name}/g, topicName);
-    }
-    // Technology = subjectName (metadata.subjectName)
-    if (subjectName) {
-      result = result.replace(/{technology}/g, subjectName);
+    if (promptType === "video") {
+      // Video prompt replacements
+      const videoType = VIDEO_TYPES[questionType];
+      if (videoType) {
+        result = result.replace(/{video_type}/g, videoType);
+      }
+      // Video Topic = chapterName (metadata.topicName)
+      if (chapterName) {
+        result = result.replace(/{subject_name}/g, chapterName);
+      }
+      // Subtopic = topicName (metadata.subtopicName)
+      if (topicName) {
+        result = result.replace(/{topic_name}/g, topicName);
+      }
+      // Technology = subjectName (metadata.subjectName)
+      if (subjectName) {
+        result = result.replace(/{technology}/g, subjectName);
+      }
+    } else {
+      // Question prompt replacements
+      const type = QUESTION_TYPES[questionType];
+      const promptFileName = PROMPTS_FILE_NAME[questionType];
+
+      if (promptFileName) {
+        result = result.replace(/{prompt_file_name}/g, promptFileName);
+      }
+      if (type) {
+        result = result.replace(/{type}/g, type);
+      }
+      if (count !== undefined) {
+        result = result.replace(/{count}/g, String(count));
+      }
+      if (subjectName) {
+        result = result.replace(/{subject_name}/g, subjectName);
+      }
+      if (chapterName) {
+        result = result.replace(/{chapter_name}/g, chapterName);
+      }
+      if (topicName) {
+        result = result.replace(/{topic_name}/g, topicName);
+      }
+      if (language) {
+        result = result.replace(/{technology}/g, language);
+      }
     }
 
     return result;
@@ -100,7 +156,7 @@ export default function CopyPromptButton({
 
   const handleCopy = async () => {
     try {
-      let prompt = Prompt;
+      let prompt = promptType === "video" ? VideoPrompt : QuestionPrompt;
 
       // Replace placeholders with dynamic data
       prompt = replacePlaceholders(prompt);
@@ -121,7 +177,15 @@ export default function CopyPromptButton({
     console.log({ chapterName, topicName });
     const timer = setTimeout(handleCopy, 500);
     return () => clearTimeout(timer);
-  }, [questionType, count, subjectName, chapterName, topicName, language]);
+  }, [
+    questionType,
+    promptType,
+    count,
+    subjectName,
+    chapterName,
+    topicName,
+    language,
+  ]);
 
   return (
     <button
