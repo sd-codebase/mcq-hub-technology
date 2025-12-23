@@ -154,6 +154,37 @@ export default function CopyPromptButton({
     }
   };
 
+  function speakSlow(text: string) {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    // Get all available voices
+    const voices = synth.getVoices();
+
+    // 1. Look for an Indian English or Hindi female voice
+    // We look for names containing 'India' or 'Google' (often high quality)
+    const indianVoice =
+      voices.find(
+        (voice) =>
+          (voice.lang === "en-IN" || voice.lang === "hi-IN") &&
+          (voice.name.toLowerCase().includes("female") ||
+            voice.name.toLowerCase().includes("woman"))
+      ) || voices.find((voice) => voice.lang === "en-IN"); // Fallback to any Indian voice
+
+    if (indianVoice) {
+      utterance.voice = indianVoice;
+    }
+
+    // 2. Set the speed to "Slow"
+    // 1.0 is normal, 0.5 is half speed, 0.7 is a nice 'slow' pace.
+    utterance.rate = 0.7;
+
+    // 3. Optional: Adjust pitch for a clearer tone
+    utterance.pitch = 1.5;
+
+    synth.speak(utterance);
+  }
+
   const handleCopy = async () => {
     try {
       let prompt = promptType === "video" ? VideoPrompt : QuestionPrompt;
@@ -168,6 +199,7 @@ export default function CopyPromptButton({
 
       // Reset "Copied!" feedback after 2 seconds
       setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => speakSlow("GPT"), 5000);
     } catch (error) {
       console.error("Failed to copy prompt:", error);
     }

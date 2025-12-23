@@ -98,6 +98,15 @@
     toast.style.opacity = "0";
     setTimeout(() => toast.remove(), 500);
   }, 5000);
+
+  setTimeout(() => {
+    const lastArticle = document.querySelector('article:last-of-type');
+    if (lastArticle) {
+      lastArticle.focus();
+    }
+    speakSlow("ABC");
+  }, 4000);
+
 }
 
   // helper: wait until ChatGPT stops generating
@@ -123,6 +132,41 @@
     if (!blocks.length) return null;
     return blocks[blocks.length - 1].innerText;
   }
+
+  function speakSlow(text) {
+  const synth = window.speechSynthesis;
+  const utterance = new SpeechSynthesisUtterance(text);
+
+  // Get all available voices
+  const voices = synth.getVoices();
+
+  // 1. Look for an Indian English or Hindi female voice
+  // We look for names containing 'India' or 'Google' (often high quality)
+  const indianVoice = voices.find(voice => 
+    (voice.lang === 'en-IN' || voice.lang === 'hi-IN') && 
+    (voice.name.toLowerCase().includes('female') || voice.name.toLowerCase().includes('woman'))
+  ) || voices.find(voice => voice.lang === 'en-IN'); // Fallback to any Indian voice
+
+  if (indianVoice) {
+    utterance.voice = indianVoice;
+  }
+
+  // 2. Set the speed to "Slow"
+  // 1.0 is normal, 0.5 is half speed, 0.7 is a nice 'slow' pace.
+  utterance.rate = 0.7; 
+
+  // 3. Optional: Adjust pitch for a clearer tone
+  utterance.pitch = 1.5; 
+
+  synth.speak(utterance);
+}
+
+// Note: Voices are loaded asynchronously. 
+// If calling immediately on page load, wait for the voiceschanged event:
+window.speechSynthesis.onvoiceschanged = () => {
+  console.log("Voices loaded. Ready to speak.");
+};
+
 
   // paste logic
   async function pasteAndSend() {

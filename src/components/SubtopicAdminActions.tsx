@@ -293,6 +293,37 @@ export default function SubtopicAdminActions({
 
   const debouncedPaste = debounce(handlePaste, 100);
 
+  function speakSlow(text: string) {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    // Get all available voices
+    const voices = synth.getVoices();
+
+    // 1. Look for an Indian English or Hindi female voice
+    // We look for names containing 'India' or 'Google' (often high quality)
+    const indianVoice =
+      voices.find(
+        (voice) =>
+          (voice.lang === "en-IN" || voice.lang === "hi-IN") &&
+          (voice.name.toLowerCase().includes("female") ||
+            voice.name.toLowerCase().includes("woman"))
+      ) || voices.find((voice) => voice.lang === "en-IN"); // Fallback to any Indian voice
+
+    if (indianVoice) {
+      utterance.voice = indianVoice;
+    }
+
+    // 2. Set the speed to "Slow"
+    // 1.0 is normal, 0.5 is half speed, 0.7 is a nice 'slow' pace.
+    utterance.rate = 0.7;
+
+    // 3. Optional: Adjust pitch for a clearer tone
+    utterance.pitch = 1.5;
+
+    synth.speak(utterance);
+  }
+
   const handleSave = async (clipboardText?: string) => {
     // console.log("called save");
     // return;
@@ -305,14 +336,19 @@ export default function SubtopicAdminActions({
       questions = JSON.parse(clipboardText || jsonInput);
       if (!Array.isArray(questions)) {
         setError("Input must be a JSON array");
+        speakSlow("Error Occurred");
         return;
       }
       if (questions.length === 0) {
         setError("Array cannot be empty");
+        speakSlow("Error Occurred");
+
         return;
       }
     } catch (err) {
       setError("Invalid JSON format. Please check your input.");
+      speakSlow("Error Occurred");
+
       return;
     }
 
