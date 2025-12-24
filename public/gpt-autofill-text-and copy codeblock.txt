@@ -224,7 +224,7 @@ window.speechSynthesis.onvoiceschanged = () => {
           if (lastArticle) {
             lastArticle.focus();
           }
-        }, 2000);
+        }, 5000);
 
       } else {
         console.warn("❌ Send button not found.");
