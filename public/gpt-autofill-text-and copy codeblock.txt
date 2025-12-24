@@ -218,6 +218,14 @@ window.speechSynthesis.onvoiceschanged = () => {
         sendBtn.click();
         console.log("🚀 Auto-sent message.");
         processInProgress = true;
+
+        setTimeout(() => {
+          const lastArticle = document.querySelector('article:last-of-type');
+          if (lastArticle) {
+            lastArticle.focus();
+          }
+        }, 2000);
+
       } else {
         console.warn("❌ Send button not found.");
       }

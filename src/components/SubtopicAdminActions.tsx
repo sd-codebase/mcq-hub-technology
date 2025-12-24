@@ -7,6 +7,11 @@ import { RestrictedAccess } from "./RestrictedAccess";
 
 type QuestionType = "mcq" | "output" | "interview";
 
+interface Topic {
+  name: string;
+  subtopics: Array<{ id: string; name: string }>;
+}
+
 interface SubtopicAdminActionsProps {
   subtopic: {
     id: string;
@@ -20,6 +25,7 @@ interface SubtopicAdminActionsProps {
   }>;
   topicIndex?: number;
   subtopicIndex?: number;
+  allTopics?: Topic[];
 }
 
 const EXAMPLE_JSON = {
@@ -98,6 +104,7 @@ export default function SubtopicAdminActions({
   allSubtopics = [],
   topicIndex = 0,
   subtopicIndex = 0,
+  allTopics = [],
 }: SubtopicAdminActionsProps) {
   if (process.env.NEXT_PUBLIC_ACTOR_MODE !== "ADMIN") {
     return <RestrictedAccess />;
@@ -111,6 +118,8 @@ export default function SubtopicAdminActions({
   const [currentSubtopic, setCurrentSubtopic] = useState(subtopic);
   const [currentSubtopicIndex, setCurrentSubtopicIndex] =
     useState(subtopicIndex);
+  const [currentTopicIndex, setCurrentTopicIndex] = useState(topicIndex);
+  const [currentTopicName, setCurrentTopicName] = useState(topicName);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [animationState, setAnimationState] = useState<
     "idle" | "entering" | "exiting"
@@ -125,16 +134,62 @@ export default function SubtopicAdminActions({
 
   const getQuestionCount = (): number => QUESTION_COUNTS[modalType];
 
-  // Find the next subtopic
-  const getNextSubtopic = () => {
+  // Find the next subtopic (crosses topic boundaries)
+  interface NextSubtopicResult {
+    subtopic: { id: string; name: string };
+    topicIndex: number;
+    subtopicIndex: number;
+    topicName: string;
+  }
+
+  const getNextSubtopic = (): NextSubtopicResult | null => {
+    // If we have allTopics, use cross-topic navigation
+    if (allTopics && allTopics.length > 0) {
+      const currentTopic = allTopics[currentTopicIndex];
+      if (!currentTopic) return null;
+
+      // Case 1: More subtopics in current topic
+      if (currentSubtopicIndex < currentTopic.subtopics.length - 1) {
+        const nextSubtopicIndex = currentSubtopicIndex + 1;
+        return {
+          subtopic: currentTopic.subtopics[nextSubtopicIndex],
+          topicIndex: currentTopicIndex,
+          subtopicIndex: nextSubtopicIndex,
+          topicName: currentTopic.name,
+        };
+      }
+
+      // Case 2: Move to next topic's first subtopic
+      for (let i = currentTopicIndex + 1; i < allTopics.length; i++) {
+        const nextTopic = allTopics[i];
+        if (nextTopic && nextTopic.subtopics.length > 0) {
+          return {
+            subtopic: nextTopic.subtopics[0],
+            topicIndex: i,
+            subtopicIndex: 0,
+            topicName: nextTopic.name,
+          };
+        }
+      }
+
+      // Case 3: No more topics with subtopics
+      return null;
+    }
+
+    // Fallback: use allSubtopics (within current topic only)
     if (!allSubtopics || allSubtopics.length === 0) return null;
     const currentIndex = allSubtopics.findIndex(
       (s) => s.id === currentSubtopic.id
     );
     if (currentIndex === -1 || currentIndex === allSubtopics.length - 1) {
-      return null; // No next subtopic
+      return null;
     }
-    return allSubtopics[currentIndex + 1];
+    return {
+      subtopic: allSubtopics[currentIndex + 1],
+      topicIndex: currentTopicIndex,
+      subtopicIndex: currentIndex + 1,
+      topicName: currentTopicName,
+    };
   };
 
   // Tests state
@@ -222,10 +277,10 @@ export default function SubtopicAdminActions({
     setAnimationState("entering");
   };
 
-  const openNextSubtopicModalWithAnimation = async (type: QuestionType) => {
-    const nextSubtopic = getNextSubtopic();
-    if (!nextSubtopic) {
-      // No next subtopic, just close
+  const openNextSubtopicModalWithAnimation = async () => {
+    const next = getNextSubtopic();
+    if (!next) {
+      // No next subtopic in any topic, close modal
       closeModal();
       return;
     }
@@ -242,9 +297,11 @@ export default function SubtopicAdminActions({
     // Wait a tick for React to unmount
     await new Promise((resolve) => setTimeout(resolve, 500));
 
-    // Switch to next subtopic and reset state
-    setCurrentSubtopic(nextSubtopic);
-    setCurrentSubtopicIndex(currentSubtopicIndex + 1);
+    // Switch to next subtopic (may be in a different topic)
+    setCurrentSubtopic(next.subtopic);
+    setCurrentSubtopicIndex(next.subtopicIndex);
+    setCurrentTopicIndex(next.topicIndex);
+    setCurrentTopicName(next.topicName);
     setJsonInput("");
     setError("");
     setSuccess("");
@@ -266,6 +323,8 @@ export default function SubtopicAdminActions({
     setAnimationState("idle");
     setCurrentSubtopic(subtopic); // Reset to original subtopic
     setCurrentSubtopicIndex(subtopicIndex); // Reset to original index
+    setCurrentTopicIndex(topicIndex); // Reset to original topic index
+    setCurrentTopicName(topicName); // Reset to original topic name
   };
 
   const openTestsModal = () => {
@@ -388,7 +447,7 @@ export default function SubtopicAdminActions({
 
       // Close modal after short delay and open next subtopic if available
       setTimeout(() => {
-        openNextSubtopicModalWithAnimation(modalType);
+        openNextSubtopicModalWithAnimation();
       }, 2000);
     } catch (err) {
       setError("Network error. Please try again.");
@@ -462,9 +521,12 @@ export default function SubtopicAdminActions({
               <p className="text-gray-400 text-sm mb-4">
                 Paste JSON array of questions for:{" "}
                 <strong>
-                  {topicIndex + 1}.{currentSubtopicIndex + 1}{" "}
+                  {currentTopicIndex + 1}.{currentSubtopicIndex + 1}{" "}
                   {currentSubtopic.name}
                 </strong>
+                <span className="block text-xs text-gray-500 mt-1">
+                  Topic: {currentTopicName}
+                </span>
               </p>
 
               {/* Example format */}
@@ -517,7 +579,7 @@ export default function SubtopicAdminActions({
                   questionType={modalType}
                   count={getQuestionCount()}
                   subjectName={subject}
-                  chapterName={topicName}
+                  chapterName={currentTopicName}
                   topicName={currentSubtopic.name}
                   language={getLanguageFromSubject(subject)}
                 />
