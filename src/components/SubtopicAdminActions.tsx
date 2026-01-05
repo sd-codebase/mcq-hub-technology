@@ -90,6 +90,19 @@ const SUBJECT_LANGUAGE_MAP: Record<string, string> = {
   html: "html",
   css: "css",
   sass: "css",
+
+  python: "python",
+  fastapi: "python",
+  django: "python",
+
+  "core-java": "java",
+  "advanced-java": "java",
+  "spring-boot": "java",
+
+  "c-language": "c",
+  "c++": "cpp",
+
+  "c#": "csharp",
 };
 
 const getLanguageFromSubject = (subjectName: string): string => {
