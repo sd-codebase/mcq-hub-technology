@@ -56,6 +56,8 @@ interface CopyPromptButtonProps {
   chapterName?: string;
   topicName?: string;
   language?: string;
+  topicNumber?: number;
+  subtopicNumber?: number;
   onCopied?: () => void;
 }
 
@@ -67,6 +69,8 @@ export default function CopyPromptButton({
   chapterName,
   topicName,
   language,
+  topicNumber,
+  subtopicNumber,
   onCopied,
 }: CopyPromptButtonProps) {
   const [copied, setCopied] = useState(false);
@@ -199,7 +203,14 @@ export default function CopyPromptButton({
 
       // Reset "Copied!" feedback after 2 seconds
       setTimeout(() => setCopied(false), 2000);
-      setTimeout(() => speakSlow("GPT"), 5000);
+
+      setTimeout(() => {
+        const speakText =
+          subtopicNumber === 1 && [6, 11, 16, 21, 26].includes(topicNumber ?? 0)
+            ? "CDE"
+            : "GPT";
+        speakSlow(speakText);
+      }, 5000);
     } catch (error) {
       console.error("Failed to copy prompt:", error);
     }

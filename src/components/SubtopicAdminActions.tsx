@@ -595,6 +595,8 @@ export default function SubtopicAdminActions({
                   chapterName={currentTopicName}
                   topicName={currentSubtopic.name}
                   language={getLanguageFromSubject(subject)}
+                  topicNumber={currentTopicIndex + 1}
+                  subtopicNumber={currentSubtopicIndex + 1}
                 />
                 <button
                   onClick={() => handleSave()}
