@@ -131,8 +131,9 @@ export default function CopyPromptButton({
   // Play success sound using Web Audio API
   const playSuccessSound = () => {
     try {
-      const audioContext = new (window.AudioContext ||
-        (window as any).webkitAudioContext)();
+      const audioContext = new (
+        window.AudioContext || (window as any).webkitAudioContext
+      )();
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
 
@@ -147,7 +148,7 @@ export default function CopyPromptButton({
       gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
       gainNode.gain.exponentialRampToValueAtTime(
         0.01,
-        audioContext.currentTime + 0.2
+        audioContext.currentTime + 0.2,
       );
 
       // Play for 200ms
@@ -172,7 +173,7 @@ export default function CopyPromptButton({
         (voice) =>
           (voice.lang === "en-IN" || voice.lang === "hi-IN") &&
           (voice.name.toLowerCase().includes("female") ||
-            voice.name.toLowerCase().includes("woman"))
+            voice.name.toLowerCase().includes("woman")),
       ) || voices.find((voice) => voice.lang === "en-IN"); // Fallback to any Indian voice
 
     if (indianVoice) {
@@ -206,7 +207,8 @@ export default function CopyPromptButton({
 
       setTimeout(() => {
         const speakText =
-          subtopicNumber === 1 && [6, 11, 16, 21, 26].includes(topicNumber ?? 0)
+          subtopicNumber === 1 &&
+          [4, 7, 10, 13, 16, 19, 22, 25, 28].includes(topicNumber ?? 0)
             ? "CDE"
             : "GPT";
         speakSlow(speakText);
