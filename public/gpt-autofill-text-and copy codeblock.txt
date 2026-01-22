@@ -115,7 +115,7 @@
       const interval = setInterval(() => {
         // UI markers for "Generating" state
         const isGeneratingStopped =
-          document.querySelector('[aria-label="Start voice mode"]');
+          document.querySelector('[aria-label="Start Voice"]');
           
 
         if (isGeneratingStopped) {
