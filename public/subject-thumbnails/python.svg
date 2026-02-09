@@ -1,1 +1,16 @@
-<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#7c72ff;"></stop><stop offset="100%" style="stop-color:#c073ff;"></stop></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"></feGaussianBlur><feComposite in="SourceGraphic" in2="blur" operator="over"></feComposite></filter></defs><circle cx="50" cy="50" r="35" stroke="url(#mainGrad)" stroke-width="5"></circle><text x="50" y="64" text-anchor="middle" fill="white" filter="url(#glow)" font-family="Outfit, sans-serif" font-weight="900" font-size="34" letter-spacing="-2">Py</text></svg>
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pyBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#366A96"/>
+      <stop offset="100%" style="stop-color:#3679B0"/>
+    </linearGradient>
+    <linearGradient id="pyYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFC836"/>
+      <stop offset="100%" style="stop-color:#FFD43B"/>
+    </linearGradient>
+  </defs>
+  <!-- Blue snake (top-left) -->
+  <path d="M49 5C36 5 27 9 27 17V29H53V33H19C11 33 5 40 5 50C5 60 11 67 19 67H29V55C29 46 37 39 46 39H54C62 39 67 34 67 27V17C67 10 59 5 49 5ZM37 15C39.2 15 41 16.8 41 19C41 21.2 39.2 23 37 23C34.8 23 33 21.2 33 19C33 16.8 34.8 15 37 15Z" fill="url(#pyBlue)"/>
+  <!-- Yellow snake (bottom-right) -->
+  <path d="M51 95C64 95 73 91 73 83V71H47V67H81C89 67 95 60 95 50C95 40 89 33 81 33H71V45C71 54 63 61 54 61H46C38 61 33 66 33 73V83C33 90 41 95 51 95ZM63 85C60.8 85 59 83.2 59 81C59 78.8 60.8 77 63 77C65.2 77 67 78.8 67 81C67 83.2 65.2 85 63 85Z" fill="url(#pyYellow)"/>
+</svg>

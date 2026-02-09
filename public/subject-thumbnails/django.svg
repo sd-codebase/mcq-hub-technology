@@ -1,1 +1,8 @@
-<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#7c72ff;"></stop><stop offset="100%" style="stop-color:#c073ff;"></stop></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"></feGaussianBlur><feComposite in="SourceGraphic" in2="blur" operator="over"></feComposite></filter></defs><circle cx="50" cy="50" r="35" stroke="url(#mainGrad)" stroke-width="5"></circle><text x="50" y="64" text-anchor="middle" fill="white" filter="url(#glow)" font-family="Outfit, sans-serif" font-weight="900" font-size="34" letter-spacing="-2">Dj</text></svg>
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="12" fill="#0C4B33"/>
+  <!-- Stylized D -->
+  <path d="M42 20H56V60C56 74 48 82 36 82C32 82 28 81 26 80V70C28 71 31 72 34 72C40 72 42 68 42 62Z" fill="white"/>
+  <rect x="42" y="20" width="14" height="10" rx="1" fill="white"/>
+  <!-- Dot -->
+  <rect x="42" y="74" width="14" height="10" rx="2" fill="white"/>
+</svg>
