@@ -45,32 +45,30 @@ export default function DownloadApp({
 
   if (variant === "inline") {
     return (
-      <div className="flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5">
-        <span className="text-sm font-medium text-gray-300">Download App</span>
-        <div className="flex items-center gap-2">
-          {playStoreUrl && (
-            <a
-              href={playStoreUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Get it on Google Play"
-              className="text-white transition-all hover:text-indigo-400 hover:scale-110"
-            >
-              <PlayStoreIcon className="h-5 w-5" />
-            </a>
-          )}
-          {appStoreUrl && (
-            <a
-              href={appStoreUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Download on the App Store"
-              className="text-white transition-all hover:text-indigo-400 hover:scale-110"
-            >
-              <AppStoreIcon className="h-5 w-5" />
-            </a>
-          )}
-        </div>
+      <div className="flex items-center gap-3">
+        <span className="text-sm font-bold text-gray-300">Download App</span>
+        {playStoreUrl && (
+          <a
+            href={playStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Get it on Google Play"
+            className="flex items-center justify-center w-10 h-10 rounded-lg border border-white/15 bg-white/5 text-white transition-all hover:bg-white/10 hover:border-indigo-400/50"
+          >
+            <PlayStoreIcon className="h-5 w-5" />
+          </a>
+        )}
+        {appStoreUrl && (
+          <a
+            href={appStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download on the App Store"
+            className="flex items-center justify-center w-10 h-10 rounded-lg border border-white/15 bg-white/5 text-white transition-all hover:bg-white/10 hover:border-indigo-400/50"
+          >
+            <AppStoreIcon className="h-5 w-5" />
+          </a>
+        )}
       </div>
     );
   }
