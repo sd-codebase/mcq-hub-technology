@@ -1,8 +1,7 @@
 import { Header } from "@/components/header";
 import { Zap } from "@/components/zap";
 import SubjectsSection from "@/components/SubjectsSection";
-import FollowUsOnSocialMedia from "@/components/FollowUsOnSocialMedia";
-import Link from "next/link";
+import DownloadApp from "@/components/DownloadApp";
 import React from "react";
 import { generatePageMetadata } from "@/lib/seo";
 
@@ -208,20 +207,13 @@ const CtaSection = () => (
       }}
     >
       <h2 className="text-4xl font-extrabold text-white mb-4">
-        Ready to Level Up Your Skills?
+        Download the App Now & Start Your First Quiz
       </h2>
       <p className="text-xl text-gray-300 mb-8">
         Start your journey with thousands of real-world assessment questions
         today. No sign-up required.
       </p>
-      <a
-        href="#subjects"
-        className="inline-block py-4 px-12 text-xl font-bold rounded-full transition duration-300 
-                           bg-gradient-to-r from-teal-500 to-green-500 hover:from-teal-600 hover:to-green-600 
-                           text-white shadow-xl shadow-teal-500/50 transform hover:scale-105"
-      >
-        Start My First Quiz Now
-      </a>
+      <DownloadApp />
     </div>
   </section>
 );
@@ -229,42 +221,15 @@ const CtaSection = () => (
 const Footer = () => (
   <footer className="bg-gray-950 border-t border-gray-800 py-16">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Social Media Section */}
-      <div className="mb-12 pb-12 border-b border-gray-800">
-        <FollowUsOnSocialMedia title="Follow Us on Social Media" size="md" />
-      </div>
-
-      {/* Footer Links */}
-      <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-        <div className="mb-4 md:mb-0">
-          <div className="flex items-center justify-center md:justify-start">
-            <Zap className="h-6 w-6 text-indigo-400 mr-2" />
-            <span className="text-xl font-bold text-white">QuizzyDock</span>
-          </div>
-          <p className="text-gray-500 mt-2 text-sm">
-            © {new Date().getFullYear()} QuizzyDock. All rights reserved.
-          </p>
+      {/* Branding */}
+      <div className="flex flex-col items-center text-center">
+        <div className="flex items-center mb-2">
+          <Zap className="h-6 w-6 text-indigo-400 mr-2" />
+          <span className="text-xl font-bold text-white">QuizzyDock</span>
         </div>
-        <div className="space-x-6 text-sm">
-          <Link
-            href="/about"
-            className="text-gray-400 hover:text-indigo-400 transition duration-150"
-          >
-            About
-          </Link>
-          <Link
-            href="/contact"
-            className="text-gray-400 hover:text-indigo-400 transition duration-150"
-          >
-            Contact
-          </Link>
-          <Link
-            href="/legal"
-            className="text-gray-400 hover:text-indigo-400 transition duration-150"
-          >
-            Legal
-          </Link>
-        </div>
+        <p className="text-gray-500 text-sm">
+          © {new Date().getFullYear()} QuizzyDock. All rights reserved.
+        </p>
       </div>
     </div>
   </footer>
