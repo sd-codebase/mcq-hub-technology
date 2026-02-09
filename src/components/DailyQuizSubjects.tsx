@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { TechLogoGenerator } from "@/components/logo";
 import FollowUsOnSocialMedia from "@/components/FollowUsOnSocialMedia";
+
+const isAdminMode = process.env.NEXT_PUBLIC_ACTOR_MODE === "ADMIN";
 
 interface Subject {
   _id: string;
@@ -77,25 +78,43 @@ export default function DailyQuizSubjects() {
 
         {!loading && !error && subjects.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {subjects.map((subject) => (
-              <Link
-                key={subject._id}
-                href={`/dailyquiz/${subject.shortName}`}
-                className="transform hover:scale-105 transition duration-300 shadow-xl border cursor-pointer"
-              >
-                <div className="p-6 bg-gray-800 rounded-xl flex flex-col items-center text-center hover:shadow-xl border border-gray-700 cursor-pointer group h-full">
-                  <div>
-                    <TechLogoGenerator text={subject.name} />
-                  </div>
-                  <h4 className="mt-4 text-lg font-medium text-white group-hover:text-indigo-300">
+            {subjects.map((subject) => {
+              const card = (
+                <div className={`p-6 bg-gray-800 rounded-xl flex flex-col items-center text-center hover:shadow-xl border border-gray-700 group h-full ${
+                  isAdminMode ? 'cursor-pointer' : ''
+                }`}>
+                  <img
+                    src={`/subject-thumbnails/${subject.shortName}.svg`}
+                    alt={subject.name}
+                    width={64}
+                    height={64}
+                  />
+                  <h4 className={`mt-4 text-lg font-medium text-white ${isAdminMode ? 'group-hover:text-indigo-300' : ''}`}>
                     {subject.name}
                   </h4>
                   <span className="text-sm text-gray-500 mt-1">
                     ({subject.questions}+ Questions)
                   </span>
                 </div>
-              </Link>
-            ))}
+              );
+
+              return isAdminMode ? (
+                <Link
+                  key={subject._id}
+                  href={`/dailyquiz/${subject.shortName}`}
+                  className="transform hover:scale-105 transition duration-300 shadow-xl border cursor-pointer"
+                >
+                  {card}
+                </Link>
+              ) : (
+                <div
+                  key={subject._id}
+                  className="transform transition duration-300 shadow-xl border"
+                >
+                  {card}
+                </div>
+              );
+            })}
           </div>
         )}
 
